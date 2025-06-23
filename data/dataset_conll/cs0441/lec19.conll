@@ -5,11 +5,12 @@ Structures _ _ O
 for _ _ O
 Computer _ _ O
 Science _ _ O
+
+
+ _ _ O
 William _ _ O
 Garrison _ _ O
-bill _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+bill@cs.pitt.edu _ _ O
 6311 _ _ O
 Sennott _ _ O
 Square _ _ O
@@ -21,6 +22,9 @@ Generalized _ _ O
 Permutations _ _ B-Concept
 and _ _ O
 Combinations _ _ B-Concept
+
+
+ _ _ O
 Based _ _ O
 on _ _ O
 materials _ _ O
@@ -42,14 +46,25 @@ from _ _ O
 the _ _ O
 last _ _ O
 few _ _ O
-lectures… _ _ O
+lectures _ _ O
+… _ _ O
 For _ _ O
-example… _ _ O
+example _ _ O
+… _ _ O
+
+
+ _ _ O
 Combinations _ _ B-Concept
 with _ _ O
 repetition _ _ O
+
+
+ _ _ O
 Repeated _ _ O
 choice _ _ O
+
+
+ _ _ O
 SUCCESS _ _ O
 USSECCS _ _ O
 SCSCSEU _ _ O
@@ -63,7 +78,9 @@ with _ _ O
 repetition _ _ O
 Recall _ _ O
 : _ _ O
-r-permutations _ _ B-Concept
+r _ _ B-Concept
+- _ _ I-Concept
+permutations _ _ I-Concept
 are _ _ O
 ordered _ _ O
 collections _ _ O
@@ -76,7 +93,9 @@ some _ _ O
 set _ _ O
 If _ _ O
 an _ _ O
-r-permutation _ _ B-Concept
+r _ _ B-Concept
+- _ _ I-Concept
+permutation _ _ I-Concept
 is _ _ O
 drawn _ _ O
 from _ _ O
@@ -91,22 +110,20 @@ replacement _ _ O
 then _ _ O
 there _ _ O
 are _ _ O
-P _ _ O
-( _ _ O
-n _ _ O
+P(n _ _ O
 , _ _ O
 r _ _ O
 ) _ _ O
 = _ _ O
-n _ _ O
-! _ _ O
-/ _ _ O
-( _ _ O
-n-r _ _ O
+n!/(n _ _ O
+- _ _ O
+r _ _ O
 ) _ _ O
 ! _ _ O
 possible _ _ O
-r-permutations _ _ B-Concept
+r _ _ B-Concept
+- _ _ I-Concept
+permutations _ _ I-Concept
 If _ _ O
 we _ _ O
 select _ _ O
@@ -131,7 +148,9 @@ the _ _ O
 number _ _ O
 of _ _ O
 possible _ _ O
-r-permutations _ _ O
+r _ _ O
+- _ _ O
+permutations _ _ O
 
 How _ _ O
 many _ _ O
@@ -174,7 +193,9 @@ count _ _ O
 the _ _ O
 number _ _ O
 of _ _ O
-r-length _ _ O
+r _ _ O
+- _ _ O
+length _ _ O
 strings _ _ O
 , _ _ O
 note _ _ O
@@ -222,6 +243,9 @@ letter _ _ O
 not _ _ O
 26-r+1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 there _ _ O
@@ -232,7 +256,9 @@ ways _ _ O
 to _ _ O
 choose _ _ O
 an _ _ O
-r-length _ _ O
+r _ _ O
+- _ _ O
+length _ _ O
 string _ _ O
 from _ _ O
 the _ _ O
@@ -240,6 +266,9 @@ set _ _ O
 S _ _ O
 with _ _ O
 replacement _ _ O
+
+
+ _ _ O
 In _ _ O
 general _ _ O
 : _ _ O
@@ -327,6 +356,9 @@ TEDIOUS _ _ O
 ! _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 Solution _ _ O
 # _ _ O
 1 _ _ O
@@ -358,6 +390,9 @@ orange _ _ O
 , _ _ O
 1 _ _ O
 pear _ _ O
+
+
+ _ _ O
 4 _ _ O
 oranges _ _ O
 3 _ _ O
@@ -383,6 +418,9 @@ apple _ _ O
 , _ _ O
 1 _ _ O
 pear _ _ O
+
+
+ _ _ O
 4 _ _ O
 pears _ _ O
 3 _ _ O
@@ -408,6 +446,9 @@ apple _ _ O
 , _ _ O
 1 _ _ O
 orange _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 there _ _ O
@@ -427,16 +468,19 @@ is _ _ O
 allowed _ _ O
 
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 find _ _ O
 a _ _ O
 nice _ _ O
-closed-form _ _ O
+closed _ _ O
+- _ _ O
+form _ _ O
 expression _ _ O
 for _ _ O
 counting _ _ O
-r-combinations _ _ O
+r _ _ O
+- _ _ O
+combinations _ _ O
 with _ _ O
 repetition _ _ O
 Example _ _ O
@@ -513,6 +557,9 @@ of _ _ O
 each _ _ O
 denomination _ _ O
 . _ _ O
+
+
+ _ _ O
 Observations _ _ O
 : _ _ O
 l _ _ O
@@ -538,6 +585,9 @@ bills _ _ O
 of _ _ O
 each _ _ O
 denomination _ _ O
+
+
+ _ _ O
 Implication _ _ O
 : _ _ O
 We _ _ O
@@ -553,24 +603,46 @@ of _ _ O
 7 _ _ O
 items _ _ O
 . _ _ O
+
+
+ _ _ O
 $ _ _ O
 1 _ _ O
+
+
+ _ _ O
 $ _ _ O
 2 _ _ O
+
+
+ _ _ O
 $ _ _ O
 5 _ _ O
+
+
+ _ _ O
 $ _ _ O
 10 _ _ O
+
+
+ _ _ O
 $ _ _ O
 20 _ _ O
+
+
+ _ _ O
 $ _ _ O
 50 _ _ O
+
+
+ _ _ O
 $ _ _ O
 100 _ _ O
 
 An _ _ O
 interesting _ _ O
-insight… _ _ O
+insight _ _ O
+… _ _ O
 Note _ _ O
 : _ _ O
 l _ _ O
@@ -608,46 +680,60 @@ dividers _ _ O
 ( _ _ O
 | _ _ O
 ) _ _ O
+
+
+ _ _ O
 Examples _ _ O
 : _ _ O
 1 _ _ O
 . _ _ O
-||| _ _ O
-* _ _ O
-* _ _ O
-||| _ _ O
+|||**||| _ _ O
 * _ _ O
 * _ _ O
 * _ _ O
+
+
+ _ _ O
 $ _ _ O
 1 _ _ O
 $ _ _ O
 1 _ _ O
 $ _ _ O
 1 _ _ O
+
+
+ _ _ O
 $ _ _ O
 10 _ _ O
 $ _ _ O
 10 _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 * _ _ O
-| _ _ O
-* _ _ O
-| _ _ O
-* _ _ O
-* _ _ O
-|| _ _ O
-* _ _ O
-|| _ _ O
+|*|**||*|| _ _ O
+
+
+ _ _ O
 $ _ _ O
 5 _ _ O
+
+
+ _ _ O
 $ _ _ O
 20 _ _ O
 $ _ _ O
 20 _ _ O
+
+
+ _ _ O
 $ _ _ O
 50 _ _ O
+
+
+ _ _ O
 $ _ _ O
 100 _ _ O
 
@@ -657,7 +743,8 @@ us _ _ O
 to _ _ O
 a _ _ O
 nice _ _ O
-formula… _ _ O
+formula _ _ O
+… _ _ O
 Observation _ _ O
 : _ _ O
 Arranging _ _ O
@@ -683,27 +770,62 @@ of _ _ O
 11 _ _ O
 total _ _ O
 “ _ _ O
-places. _ _ O
+places _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 | _ _ O
+
+
+ _ _ O
 This _ _ O
 can _ _ O
 be _ _ O
 done _ _ O
 in _ _ O
-C _ _ O
-( _ _ O
-11 _ _ O
+C(11 _ _ O
 , _ _ O
 5 _ _ O
 ) _ _ O
@@ -711,18 +833,21 @@ C _ _ O
 462 _ _ O
 ways _ _ O
 . _ _ O
+
+
+ _ _ O
 General _ _ O
 Theorem _ _ O
 : _ _ O
 There _ _ O
 are _ _ O
-C _ _ O
-( _ _ O
-n+r-1 _ _ O
+C(n+r-1 _ _ O
 , _ _ O
 r _ _ O
 ) _ _ O
-r-combinations _ _ O
+r _ _ O
+- _ _ O
+combinations _ _ O
 from _ _ O
 a _ _ O
 set _ _ O
@@ -789,6 +914,9 @@ given _ _ O
 type _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 Solution _ _ O
 # _ _ O
 1 _ _ O
@@ -820,9 +948,7 @@ type _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
-C _ _ O
-( _ _ O
-9 _ _ O
+C(9 _ _ O
 , _ _ O
 6 _ _ O
 ) _ _ O
@@ -836,6 +962,9 @@ to _ _ O
 put _ _ O
 stars _ _ O
 . _ _ O
+
+
+ _ _ O
 Solution _ _ O
 # _ _ O
 2 _ _ O
@@ -862,16 +991,16 @@ n _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
-C _ _ O
-( _ _ O
-6+4-1 _ _ O
+C(6 _ _ O
++ _ _ O
+4 _ _ O
+- _ _ O
+1 _ _ O
 , _ _ O
 6 _ _ O
 ) _ _ O
 = _ _ O
-C _ _ O
-( _ _ O
-9,6 _ _ O
+C(9,6 _ _ O
 ) _ _ O
 = _ _ O
 84 _ _ O
@@ -907,9 +1036,14 @@ x2 _ _ O
 and _ _ O
 x3 _ _ O
 are _ _ O
-non-negative _ _ O
+non _ _ O
+- _ _ O
+negative _ _ O
 integers _ _ O
 ? _ _ O
+
+
+ _ _ O
 Observation _ _ O
 : _ _ O
 Solving _ _ O
@@ -955,6 +1089,9 @@ three _ _ O
 are _ _ O
 chosen _ _ O
 . _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 ln=3 _ _ O
@@ -967,14 +1104,14 @@ So _ _ O
 , _ _ O
 there _ _ O
 are _ _ O
-C _ _ O
-( _ _ O
-3+11-1,11 _ _ O
+C(3 _ _ O
++ _ _ O
+11 _ _ O
+- _ _ O
+1,11 _ _ O
 ) _ _ O
 = _ _ O
-C _ _ O
-( _ _ O
-13 _ _ O
+C(13 _ _ O
 , _ _ O
 11 _ _ O
 ) _ _ O
@@ -989,17 +1126,45 @@ equation _ _ O
 Formula _ _ O
 Summary _ _ O
 Type _ _ O
+
+
+ _ _ O
 Repetition _ _ O
 ? _ _ O
+
+
+ _ _ O
 Formula _ _ O
-r-permutation _ _ B-Concept
+
+
+ _ _ O
+r _ _ B-Concept
+- _ _ I-Concept
+permutation _ _ I-Concept
+
+
+ _ _ O
 No _ _ O
+
+
+ _ _ O
 𝑛 _ _ O
 ! _ _ O
 𝑛−𝑟 _ _ O
 ! _ _ O
-r-combination _ _ B-Concept
+
+
+ _ _ O
+r _ _ B-Concept
+- _ _ I-Concept
+combination _ _ I-Concept
+
+
+ _ _ O
 No _ _ O
+
+
+ _ _ O
 𝑛 _ _ O
 ! _ _ O
 𝑟 _ _ O
@@ -1008,12 +1173,34 @@ No _ _ O
 − _ _ O
 𝑟 _ _ O
 ! _ _ O
-r-permutation _ _ B-Concept
+
+
+ _ _ O
+r _ _ B-Concept
+- _ _ I-Concept
+permutation _ _ I-Concept
+
+
+ _ _ O
 Yes _ _ O
+
+
+ _ _ O
 𝑛 _ _ O
 ! _ _ O
-r-combination _ _ B-Concept
+
+
+ _ _ O
+r _ _ B-Concept
+- _ _ I-Concept
+combination _ _ I-Concept
+
+
+ _ _ O
 Yes _ _ O
+
+
+ _ _ O
 𝑛+𝑟−1 _ _ O
 ! _ _ O
 𝑟 _ _ O
@@ -1051,9 +1238,8 @@ MOM _ _ O
 Observation _ _ O
 : _ _ O
 We _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 simply _ _ O
 count _ _ O
 permutations _ _ O
@@ -1097,12 +1283,18 @@ M2OM1 _ _ O
 M2M1O _ _ O
 ➣ _ _ O
 OM2M1 _ _ O
+
+
+ _ _ O
 These _ _ O
 are _ _ O
 really _ _ O
 the _ _ O
 same _ _ O
 ! _ _ O
+
+
+ _ _ O
 How _ _ O
 do _ _ O
 we _ _ O
@@ -1133,8 +1325,7 @@ two _ _ O
 Ms _ _ O
 and _ _ O
 one _ _ O
-O _ _ O
-. _ _ O
+O. _ _ O
 We _ _ O
 can _ _ O
 count _ _ O
@@ -1192,26 +1383,21 @@ the _ _ O
 product _ _ O
 rule _ _ O
 ! _ _ O
-C _ _ O
-( _ _ O
-3,2 _ _ O
+
+
+ _ _ O
+C(3,2 _ _ O
 ) _ _ O
 = _ _ O
 3 _ _ O
-C _ _ O
-( _ _ O
-1,1 _ _ O
+C(1,1 _ _ O
 ) _ _ O
 = _ _ O
 1 _ _ O
-C _ _ O
-( _ _ O
-3,2 _ _ O
+C(3,2 _ _ O
 ) _ _ O
 × _ _ O
-C _ _ O
-( _ _ O
-1,1 _ _ O
+C(1,1 _ _ O
 ) _ _ O
 = _ _ O
 3 _ _ O
@@ -1261,6 +1447,9 @@ type _ _ O
 k _ _ O
 is _ _ O
 : _ _ O
+
+
+ _ _ O
 𝐶 _ _ O
 𝑛 _ _ O
 , _ _ O
@@ -1295,6 +1484,9 @@ objects _ _ O
 of _ _ O
 type _ _ O
 2 _ _ O
+
+
+ _ _ O
 𝑛 _ _ O
 ! _ _ O
 = _ _ O
@@ -1308,6 +1500,9 @@ type _ _ O
 𝑛 _ _ O
 # _ _ O
 ! _ _ O
+
+
+ _ _ O
 There _ _ O
 is _ _ O
 always _ _ O
@@ -1343,6 +1538,9 @@ lS×3 _ _ O
 lU×1 _ _ O
 lC×2 _ _ O
 lE×1 _ _ O
+
+
+ _ _ O
 Ways _ _ O
 to _ _ O
 assign _ _ O
@@ -1353,63 +1551,44 @@ group _ _ O
 l _ _ O
 S _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-7,3 _ _ O
+C(7,3 _ _ O
 ) _ _ O
 l _ _ O
 U _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-4,1 _ _ O
+C(4,1 _ _ O
 ) _ _ O
 l _ _ O
 C _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-3,2 _ _ O
+C(3,2 _ _ O
 ) _ _ O
 l _ _ O
 E _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-1,1 _ _ O
+C(1,1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 we _ _ O
 can _ _ O
 form _ _ O
-C _ _ O
-( _ _ O
-7,3 _ _ O
+C(7,3 _ _ O
 ) _ _ O
 × _ _ O
-C _ _ O
-( _ _ O
-4,1 _ _ O
+C(4,1 _ _ O
 ) _ _ O
 × _ _ O
-C _ _ O
-( _ _ O
-3,2 _ _ O
+C(3,2 _ _ O
 ) _ _ O
 × _ _ O
-C _ _ O
-( _ _ O
-1,1 _ _ O
+C(1,1 _ _ O
 ) _ _ O
 = _ _ O
-7 _ _ O
-! _ _ O
-/ _ _ O
-( _ _ O
-3 _ _ O
-! _ _ O
-2 _ _ O
+7!/(3!2 _ _ O
 ! _ _ O
 ) _ _ O
 = _ _ O
@@ -1423,7 +1602,9 @@ the _ _ O
 word _ _ O
 SUCCESS _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Top _ _ O
 Hat _ _ O
@@ -1451,6 +1632,9 @@ objects _ _ O
 : _ _ O
 1 _ _ O
 . _ _ O
+
+
+ _ _ O
 Distinguishable _ _ O
 objects _ _ O
 ( _ _ O
@@ -1465,8 +1649,14 @@ and _ _ O
 Dan _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
+
+
+ _ _ O
 Indistinguishable _ _ O
 objects _ _ O
 ( _ _ O
@@ -1477,6 +1667,9 @@ three _ _ O
 students _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 We _ _ O
 can _ _ O
 also _ _ O
@@ -1490,6 +1683,9 @@ boxes _ _ O
 : _ _ O
 1 _ _ O
 . _ _ O
+
+
+ _ _ O
 Distinguishable _ _ O
 boxes _ _ O
 ( _ _ O
@@ -1503,10 +1699,19 @@ room _ _ O
 111 _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 123 _ _ O
 2 _ _ O
 . _ _ O
+
+
+ _ _ O
 111 _ _ O
+
+
+ _ _ O
 Indistinguishable _ _ O
 boxes _ _ O
 ( _ _ O
@@ -1524,21 +1729,40 @@ to _ _ O
 four _ _ O
 classes _ _ O
 of _ _ O
-problems… _ _ O
+problems _ _ O
+… _ _ O
 Distinguishable _ _ O
 objects _ _ O
 / _ _ O
 distinguishable _ _ O
 boxes _ _ O
+
+
+ _ _ O
 123 _ _ O
+
+
+ _ _ O
 111 _ _ O
+
+
+ _ _ O
 Indistinguishable _ _ O
 objects _ _ O
 / _ _ O
 distinguishable _ _ O
 boxes _ _ O
+
+
+ _ _ O
 123 _ _ O
+
+
+ _ _ O
 111 _ _ O
+
+
+ _ _ O
 E.g. _ _ O
 , _ _ O
 How _ _ O
@@ -1561,6 +1785,9 @@ and _ _ O
 homeroom _ _ O
 111 _ _ O
 ? _ _ O
+
+
+ _ _ O
 E.g. _ _ O
 , _ _ O
 How _ _ O
@@ -1579,16 +1806,25 @@ and _ _ O
 homeroom _ _ O
 111 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Distinguishable _ _ O
 objects _ _ O
 / _ _ O
 indistinguishable _ _ O
 boxes _ _ O
+
+
+ _ _ O
 Indistinguishable _ _ O
 objects _ _ O
 / _ _ O
 indistinguishable _ _ O
 boxes _ _ O
+
+
+ _ _ O
 E.g. _ _ O
 , _ _ O
 How _ _ O
@@ -1608,6 +1844,9 @@ two _ _ O
 different _ _ O
 homerooms _ _ O
 ? _ _ O
+
+
+ _ _ O
 E.g. _ _ O
 , _ _ O
 How _ _ O
@@ -1654,15 +1893,16 @@ of _ _ O
 four _ _ O
 players _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
 Player _ _ O
 1 _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-52,5 _ _ O
+C(52,5 _ _ O
 ) _ _ O
 ways _ _ O
 to _ _ O
@@ -1671,9 +1911,7 @@ l _ _ O
 Player _ _ O
 2 _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-47,5 _ _ O
+C(47,5 _ _ O
 ) _ _ O
 ways _ _ O
 to _ _ O
@@ -1682,9 +1920,7 @@ l _ _ O
 Player _ _ O
 3 _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-42,5 _ _ O
+C(42,5 _ _ O
 ) _ _ O
 ways _ _ O
 to _ _ O
@@ -1693,13 +1929,14 @@ l _ _ O
 Player _ _ O
 4 _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-37,5 _ _ O
+C(37,5 _ _ O
 ) _ _ O
 ways _ _ O
 to _ _ O
 deal _ _ O
+
+
+ _ _ O
 Theorem _ _ O
 : _ _ O
 The _ _ O
@@ -1767,7 +2004,9 @@ same _ _ O
 as _ _ O
 counting _ _ O
 the _ _ O
-n-combinations _ _ O
+n _ _ O
+- _ _ O
+combinations _ _ O
 for _ _ O
 a _ _ O
 set _ _ O
@@ -1838,13 +2077,14 @@ placeholders _ _ O
 and _ _ O
 k-1 _ _ O
 dividers _ _ O
+
+
+ _ _ O
 Result _ _ O
 : _ _ O
 There _ _ O
 are _ _ O
-C _ _ O
-( _ _ O
-n _ _ O
+C(n _ _ O
 + _ _ O
 k _ _ O
 – _ _ O
@@ -1864,12 +2104,12 @@ distinguishable _ _ O
 boxes _ _ O
 
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 see _ _ O
 how _ _ O
 this _ _ O
-works… _ _ O
+works _ _ O
+… _ _ O
 Example _ _ O
 : _ _ O
 How _ _ O
@@ -1887,6 +2127,9 @@ into _ _ O
 distinguishable _ _ O
 bins _ _ O
 ? _ _ O
+
+
+ _ _ O
 Observation _ _ O
 : _ _ O
 1 _ _ O
@@ -1899,7 +2142,9 @@ s _ _ O
 2 _ _ O
 . _ _ O
 Use _ _ O
-8-1 _ _ O
+8 _ _ O
+- _ _ O
+1 _ _ O
 = _ _ O
 7 _ _ O
 dividers _ _ O
@@ -1928,21 +2173,46 @@ be _ _ O
 bin _ _ O
 dividers _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 We _ _ O
 have _ _ O
-C _ _ O
-( _ _ O
-10 _ _ O
+C(10 _ _ O
 + _ _ O
 8 _ _ O
 – _ _ O
@@ -1951,9 +2221,7 @@ C _ _ O
 10 _ _ O
 ) _ _ O
 = _ _ O
-C _ _ O
-( _ _ O
-17 _ _ O
+C(17 _ _ O
 , _ _ O
 10 _ _ O
 ) _ _ O
@@ -1983,11 +2251,11 @@ items _ _ O
 into _ _ O
 indistinguishable _ _ O
 boxes _ _ O
-isn _ _ O
-’ _ _ O
-t _ _ O
+is _ _ O
+n’t _ _ O
 so _ _ O
-easy… _ _ O
+easy _ _ O
+… _ _ O
 Example _ _ O
 : _ _ O
 How _ _ O
@@ -2009,12 +2277,14 @@ three _ _ O
 indistinguishable _ _ O
 homerooms _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 call _ _ O
 our _ _ O
 students _ _ O
@@ -2055,6 +2325,9 @@ the _ _ O
 same _ _ O
 homeroom _ _ O
 ➣ _ _ O
+
+
+ _ _ O
 { _ _ O
 A _ _ O
 , _ _ O
@@ -2064,6 +2337,9 @@ C _ _ O
 , _ _ O
 D _ _ O
 } _ _ O
+
+
+ _ _ O
 l _ _ O
 Seven _ _ O
 ways _ _ O
@@ -2075,6 +2351,9 @@ two _ _ O
 homerooms _ _ O
 ➣ _ _ O
 ➣ _ _ O
+
+
+ _ _ O
 { _ _ O
 { _ _ O
 A _ _ O
@@ -2171,6 +2450,9 @@ B _ _ O
 C _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 l _ _ O
 Six _ _ O
 ways _ _ O
@@ -2182,6 +2464,9 @@ three _ _ O
 homerooms _ _ O
 ➣ _ _ O
 ➣ _ _ O
+
+
+ _ _ O
 { _ _ O
 { _ _ O
 A _ _ O
@@ -2276,6 +2561,9 @@ A _ _ O
 B _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 l _ _ O
 Total _ _ O
 : _ _ O
@@ -2322,9 +2610,7 @@ a _ _ O
 complicated _ _ O
 one _ _ O
 J _ _ O
-S _ _ O
-( _ _ O
-n _ _ O
+S(n _ _ O
 , _ _ O
 j _ _ O
 ) _ _ O
@@ -2354,12 +2640,12 @@ be _ _ O
 partitioned _ _ O
 into _ _ O
 j _ _ O
-non-empty _ _ O
+non _ _ O
+- _ _ O
+empty _ _ O
 subsets _ _ O
 . _ _ O
-S _ _ O
-( _ _ O
-n _ _ O
+S(n _ _ O
 , _ _ O
 j _ _ O
 ) _ _ O
@@ -2368,14 +2654,23 @@ defined _ _ O
 as _ _ O
 follows _ _ O
 : _ _ O
+
+
+ _ _ O
 $ _ _ O
 % _ _ O
 & _ _ O
+
+
+ _ _ O
 𝑆 _ _ O
 𝑛 _ _ O
 , _ _ O
 𝑗 _ _ O
 = _ _ O
+
+
+ _ _ O
 1 _ _ O
 + _ _ O
 −1 _ _ O
@@ -2393,6 +2688,9 @@ $ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
+
+
+ _ _ O
 Result _ _ O
 : _ _ O
 The _ _ O
@@ -2411,19 +2709,37 @@ boxes _ _ O
 is _ _ O
 : _ _ O
 ( _ _ O
+
+
+ _ _ O
 ( _ _ O
+
+
+ _ _ O
 $ _ _ O
 % _ _ O
 & _ _ O
+
+
+ _ _ O
 $ _ _ O
 " _ _ O
 & _ _ O
+
+
+ _ _ O
 $ _ _ O
 " _ _ O
 & _ _ O
+
+
+ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
+
+
+ _ _ O
 1 _ _ O
 + _ _ O
 𝑆 _ _ O
@@ -2485,32 +2801,92 @@ to _ _ O
 six _ _ O
 books _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
+
+
+ _ _ O
 6 _ _ O
 5 _ _ O
+
+
+ _ _ O
+4 _ _ O
+
+
+ _ _ O
+1 _ _ O
+1 _ _ O
+
+
+ _ _ O
+3 _ _ O
+
+
+ _ _ O
 4 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
-3 _ _ O
-4 _ _ O
-1 _ _ O
-1 _ _ O
-3 _ _ O
-1 _ _ O
-1 _ _ O
-2 _ _ O
-2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 1 _ _ O
+
+
+ _ _ O
+1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
-2 _ _ O
-2 _ _ O
 1 _ _ O
-1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
+2 _ _ O
+
+
+ _ _ O
+3 _ _ O
+
+
+ _ _ O
+2 _ _ O
+
+
+ _ _ O
+2 _ _ O
+
+
+ _ _ O
+1 _ _ O
+
+
+ _ _ O
+1 _ _ O
+
+
+ _ _ O
+2 _ _ O
+
+
+ _ _ O
 Total _ _ O
 : _ _ O
 There _ _ O
@@ -2532,7 +2908,11 @@ boxes _ _ O
 
 That _ _ O
 was _ _ O
-ugly… _ _ O
+ugly _ _ O
+… _ _ O
+
+
+ _ _ O
 Is _ _ O
 there _ _ O
 a _ _ O
@@ -2546,9 +2926,11 @@ Unfortunately _ _ O
 , _ _ O
 no _ _ O
 . _ _ O
+
+
+ _ _ O
 Here _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 why _ _ O
 : _ _ O
 Placing _ _ O
@@ -2576,7 +2958,9 @@ positive _ _ O
 integers _ _ O
 arranged _ _ O
 in _ _ O
-non-increasing _ _ O
+non _ _ O
+- _ _ O
+increasing _ _ O
 order _ _ O
 . _ _ O
 l _ _ O
@@ -2623,6 +3007,9 @@ n _ _ O
 into _ _ O
 j _ _ O
 integers _ _ O
+
+
+ _ _ O
 There _ _ O
 is _ _ O
 no _ _ O
@@ -2654,7 +3041,9 @@ indistinguishable _ _ O
 boxes _ _ O
 . _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Top _ _ O
 Hat _ _ O
@@ -2691,15 +3080,11 @@ ways _ _ O
 to _ _ O
 arrange _ _ O
 ( _ _ O
-in _ _ O
-) _ _ O
-distinguishable _ _ O
+in)distinguishable _ _ O
 objects _ _ O
 into _ _ O
 ( _ _ O
-in _ _ O
-) _ _ O
-distinguishable _ _ O
+in)distinguishable _ _ O
 boxes _ _ O
 l _ _ O
 Problems _ _ O

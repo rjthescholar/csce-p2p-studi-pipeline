@@ -21,7 +21,12 @@ def extract_concepts(dataset):
 					concept = ""
 				extracting = True
 			if extracting:
-				concept += processed['sentence'][i] + " "
+				concept += processed['sentence'][i].strip()
+				if processed['sentence'][i] == "-":
+					continue
+				if i + 1 < len(processed['sentence']) and processed['sentence'][i+1] == "-":
+					continue
+				concept += " "
 	return concepts
 
 parser = argparse.ArgumentParser()

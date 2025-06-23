@@ -45,21 +45,27 @@ this _ _ O
 stuff _ _ O
 in _ _ O
 the _ _ O
-projects… _ _ O
+projects _ _ O
+… _ _ O
 o _ _ O
 so _ _ O
 we _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 kinda _ _ O
 skip _ _ O
 that _ _ O
 stuff _ _ O
 ! _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Structured _ _ B-Concept
 types _ _ I-Concept
+
+
+ _ _ O
 3 _ _ O
 
 Type _ _ B-Concept
@@ -95,7 +101,9 @@ programmer _ _ O
 a _ _ O
 lot _ _ O
 of _ _ O
-problem-solving _ _ O
+problem _ _ O
+- _ _ O
+solving _ _ O
 power _ _ O
 . _ _ O
 o _ _ O
@@ -119,7 +127,9 @@ power _ _ O
 of _ _ O
 indirection _ _ B-Concept
 and _ _ O
-dynamically-sized _ _ B-Concept
+dynamically _ _ B-Concept
+- _ _ I-Concept
+sized _ _ I-Concept
 data _ _ I-Concept
 structures _ _ I-Concept
 , _ _ O
@@ -172,11 +182,15 @@ place _ _ O
 to _ _ O
 start _ _ O
 is _ _ O
-with… _ _ O
+with _ _ O
+… _ _ O
 classes _ _ B-Concept
 structs _ _ B-Concept
 tuples _ _ O
 ! _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Tuples _ _ B-Concept
@@ -226,12 +240,15 @@ could _ _ O
 use _ _ O
 them _ _ O
 to _ _ O
-represent… _ _ O
+represent _ _ O
+… _ _ O
 o _ _ O
 coordinates _ _ O
 in _ _ O
 an _ _ O
-n-dimensional _ _ O
+n _ _ O
+- _ _ O
+dimensional _ _ O
 space _ _ O
 : _ _ O
 ( _ _ O
@@ -308,7 +325,11 @@ see _ _ O
 where _ _ O
 this _ _ O
 is _ _ O
-going… _ _ O
+going _ _ O
+… _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Operations _ _ O
@@ -328,9 +349,7 @@ their _ _ O
 values _ _ O
 : _ _ O
 o _ _ O
-t _ _ O
-[ _ _ O
-2 _ _ O
+t[2 _ _ O
 ] _ _ O
 = _ _ O
 34 _ _ O
@@ -343,7 +362,8 @@ we _ _ O
 know _ _ O
 their _ _ O
 length _ _ B-Concept
-statically… _ _ O
+statically _ _ O
+… _ _ O
 o _ _ O
 but _ _ O
 each _ _ O
@@ -408,9 +428,7 @@ Jarrett _ _ O
 35 _ _ O
 ) _ _ O
 ; _ _ O
-me _ _ O
-[ _ _ O
-AGE _ _ O
+me[AGE _ _ O
 ] _ _ O
 = _ _ O
 36 _ _ O
@@ -419,10 +437,15 @@ AGE _ _ O
 next _ _ O
 year _ _ O
 .. _ _ O
-●🤔 _ _ O
+
+
+ _ _ O
+● _ _ O
+🤔 _ _ O
 6 _ _ O
 
-…yeah _ _ O
+… _ _ O
+yeah _ _ O
 okay _ _ O
 that _ _ O
 's _ _ O
@@ -457,7 +480,8 @@ the _ _ O
 same _ _ O
 thing _ _ O
 , _ _ O
-except… _ _ O
+except _ _ O
+… _ _ O
 o _ _ O
 tuples _ _ B-Concept
 ' _ _ O
@@ -482,6 +506,9 @@ how _ _ O
 structs _ _ B-Concept
 work _ _ O
 : _ _ O
+
+
+ _ _ O
 struct _ _ O
 Point _ _ O
 { _ _ O
@@ -497,12 +524,9 @@ let _ _ O
 p _ _ O
 = _ _ O
 new _ _ O
-Point _ _ O
-( _ _ O
-3 _ _ O
+Point(3 _ _ O
 , _ _ O
-8 _ _ O
-) _ _ O
+8) _ _ O
 ; _ _ O
 p.x _ _ O
 = _ _ O
@@ -510,6 +534,9 @@ p.x _ _ O
 + _ _ O
 1 _ _ O
 ; _ _ O
+
+
+ _ _ O
 ≈ _ _ O
 ≈ _ _ O
 let _ _ O
@@ -518,17 +545,12 @@ p _ _ O
 ( _ _ O
 3 _ _ O
 , _ _ O
-8 _ _ O
-) _ _ O
+8) _ _ O
 ; _ _ O
-p _ _ O
-[ _ _ O
-0 _ _ O
+p[0 _ _ O
 ] _ _ O
 = _ _ O
-p _ _ O
-[ _ _ O
-0 _ _ O
+p[0 _ _ O
 ] _ _ O
 + _ _ O
 1 _ _ O
@@ -539,6 +561,9 @@ int _ _ O
 , _ _ O
 int _ _ O
 ) _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 One _ _ O
@@ -572,6 +597,9 @@ that _ _ O
 means _ _ O
 is _ _ O
 : _ _ O
+
+
+ _ _ O
 ( _ _ O
 int _ _ O
 , _ _ O
@@ -579,7 +607,13 @@ int _ _ O
 , _ _ O
 int _ _ O
 ) _ _ O
+
+
+ _ _ O
 ≈ _ _ O
+
+
+ _ _ O
 struct _ _ O
 Point3D _ _ O
 { _ _ O
@@ -595,12 +629,21 @@ z _ _ O
 : _ _ O
 int _ _ O
 } _ _ O
+
+
+ _ _ O
 same _ _ O
 type _ _ O
 ! _ _ O
+
+
+ _ _ O
 different _ _ O
 types _ _ O
 ! _ _ O
+
+
+ _ _ O
 ( _ _ O
 int _ _ O
 , _ _ O
@@ -608,6 +651,9 @@ int _ _ O
 , _ _ O
 int _ _ O
 ) _ _ O
+
+
+ _ _ O
 struct _ _ O
 Color _ _ O
 { _ _ O
@@ -623,7 +669,13 @@ b _ _ O
 : _ _ O
 int _ _ O
 } _ _ O
+
+
+ _ _ O
 ≈ _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Value _ _ B-Concept
@@ -758,6 +810,9 @@ only _ _ O
 one _ _ O
 Object _ _ O
 ... _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Decision _ _ O
@@ -882,8 +937,7 @@ so _ _ O
 : _ _ O
 should _ _ O
 Truss _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 structs _ _ O
 be _ _ O
 value _ _ B-Concept
@@ -925,7 +979,9 @@ just _ _ O
 sometimes _ _ O
 with _ _ O
 more _ _ O
-space/time _ _ O
+space _ _ O
+/ _ _ O
+time _ _ O
 overhead _ _ O
 . _ _ O
 ● _ _ O
@@ -938,7 +994,8 @@ references _ _ B-Concept
 then _ _ O
 we _ _ O
 probably _ _ O
-need… _ _ O
+need _ _ O
+… _ _ O
 null _ _ B-Concept
 . _ _ O
 10 _ _ O
@@ -973,7 +1030,8 @@ or _ _ O
 not _ _ O
 pointing _ _ O
 to _ _ O
-anything. _ _ O
+anything _ _ O
+. _ _ O
 ” _ _ O
 ● _ _ O
 trying _ _ O
@@ -1048,8 +1106,7 @@ program _ _ O
 ● _ _ O
 also _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 just _ _ O
 weird _ _ O
 when _ _ O
@@ -1060,8 +1117,7 @@ typechecking _ _ O
 . _ _ O
 o _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 only _ _ O
 value _ _ O
@@ -1137,6 +1193,9 @@ types _ _ O
 Struct _ _ B-Concept
 Runtime _ _ I-Concept
 Representation _ _ I-Concept
+
+
+ _ _ O
 12 _ _ O
 
 Data _ _ B-Concept
@@ -1177,6 +1236,9 @@ let _ _ O
 do _ _ O
 that _ _ O
 . _ _ O
+
+
+ _ _ O
 struct _ _ B-Concept
 Point3D _ _ O
 { _ _ O
@@ -1202,18 +1264,54 @@ bits _ _ O
 Bytes _ _ O
 ) _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 10 _ _ O
 11 _ _ O
+
+
+ _ _ O
 these _ _ O
 numbers _ _ O
 are _ _ O
@@ -1232,9 +1330,14 @@ we _ _ O
 're _ _ O
 using _ _ O
 a _ _ O
-byte-addressable _ _ O
+byte _ _ O
+- _ _ O
+addressable _ _ O
 machine _ _ O
 ) _ _ O
+
+
+ _ _ O
 they _ _ O
 say _ _ O
 how _ _ O
@@ -1285,10 +1388,25 @@ i _ _ O
 : _ _ O
 int _ _ O
 } _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 a _ _ O
@@ -1299,9 +1417,21 @@ of _ _ O
 doing _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 unfortunately _ _ O
 , _ _ O
 lots _ _ O
@@ -1311,6 +1441,9 @@ architectures _ _ O
 hate _ _ O
 this _ _ O
 . _ _ O
+
+
+ _ _ O
 CPUs _ _ O
 like _ _ O
 values _ _ O
@@ -1326,8 +1459,12 @@ memory _ _ O
 address _ _ O
 in _ _ O
 an _ _ O
-n-byte _ _ O
-load/store _ _ O
+n _ _ O
+- _ _ O
+byte _ _ O
+load _ _ O
+/ _ _ O
+store _ _ O
 must _ _ O
 be _ _ O
 a _ _ O
@@ -1356,8 +1493,13 @@ the _ _ O
 much _ _ O
 slower _ _ O
 unaligned _ _ O
-loads/stores _ _ O
+loads _ _ O
+/ _ _ O
+stores _ _ O
 ) _ _ O
+
+
+ _ _ O
 so _ _ O
 , _ _ O
 we _ _ O
@@ -1448,16 +1590,43 @@ i _ _ O
 : _ _ O
 int _ _ O
 } _ _ O
+
+
+ _ _ O
 b _ _ O
 0 _ _ O
+
+
+ _ _ O
 i _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 and _ _ O
 if _ _ O
 we _ _ O
@@ -1466,16 +1635,43 @@ b _ _ O
 and _ _ O
 i _ _ O
 : _ _ O
+
+
+ _ _ O
 i _ _ O
 0 _ _ O
+
+
+ _ _ O
 b _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 either _ _ O
 way _ _ O
 , _ _ O
@@ -1563,42 +1759,116 @@ structs _ _ B-Concept
 : _ _ O
 i _ _ O
 0 _ _ O
+
+
+ _ _ O
 b _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 i _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 b _ _ O
 9 _ _ O
+
+
+ _ _ O
 10 _ _ O
 11 _ _ O
 12 _ _ O
 13 _ _ O
 14 _ _ O
 15 _ _ O
+
+
+ _ _ O
 b _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 without _ _ O
 the _ _ O
-end-padding _ _ B-Concept
-, _ _ I-Concept
+end _ _ O
+- _ _ O
+padding _ _ B-Concept
+, _ _ O
 this _ _ O
 int _ _ O
 field _ _ O
@@ -1610,6 +1880,9 @@ is _ _ O
 now _ _ O
 misaligned _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 memory _ _ B-Concept
 allocator _ _ I-Concept
@@ -1632,7 +1905,8 @@ work _ _ O
 . _ _ O
 16 _ _ O
 
-Anyway… _ _ O
+Anyway _ _ O
+… _ _ O
 allocation _ _ B-Concept
 ● _ _ O
 now _ _ O
@@ -1664,11 +1938,7 @@ let _ _ O
 's _ _ O
 call _ _ O
 it _ _ O
-rt _ _ O
-$ _ _ O
-new _ _ O
-( _ _ O
-size _ _ O
+rt$new(size _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
@@ -1718,6 +1988,9 @@ count _ _ O
 int _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 let _ _ O
 t _ _ O
 = _ _ O
@@ -1726,6 +1999,9 @@ Thing _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 allocations _ _ B-Concept
 get _ _ O
 generated _ _ O
@@ -1748,25 +2024,22 @@ s0 _ _ O
 sw _ _ O
 s0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 # _ _ O
 size _ _ O
 jal _ _ O
-rt _ _ O
-$ _ _ O
-new _ _ O
+rt$new _ _ O
 sw _ _ O
 v0 _ _ O
 , _ _ O
--24 _ _ O
-( _ _ O
-fp _ _ O
+-24(fp _ _ O
 ) _ _ O
 # _ _ O
 t _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Accessing _ _ B-Concept
@@ -1823,6 +2096,9 @@ offs _ _ O
 : _ _ O
 8 _ _ O
 } _ _ O
+
+
+ _ _ O
 to _ _ O
 access _ _ B-Concept
 a _ _ I-Concept
@@ -1847,8 +2123,13 @@ right _ _ O
 flavor _ _ O
 " _ _ O
 of _ _ O
-load/store _ _ O
+load _ _ O
+/ _ _ O
+store _ _ O
 . _ _ O
+
+
+ _ _ O
 let _ _ O
 t _ _ O
 = _ _ O
@@ -1862,15 +2143,19 @@ t.in_use _ _ O
 true _ _ O
 ; _ _ O
 t.count _ _ O
+
+
+ _ _ O
 = _ _ O
 20 _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
--24 _ _ O
-( _ _ O
-fp _ _ O
+-24(fp _ _ O
 ) _ _ O
 # _ _ O
 t _ _ O
@@ -1883,9 +2168,7 @@ true _ _ O
 sb _ _ O
 s1 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-s0 _ _ O
+4(s0 _ _ O
 ) _ _ O
 # _ _ O
 t.in_use _ _ O
@@ -1894,9 +2177,7 @@ true _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
--24 _ _ O
-( _ _ O
-fp _ _ O
+-24(fp _ _ O
 ) _ _ O
 # _ _ O
 t _ _ O
@@ -1907,9 +2188,7 @@ s1 _ _ O
 sw _ _ O
 s1 _ _ O
 , _ _ O
-8 _ _ O
-( _ _ O
-s0 _ _ O
+8(s0 _ _ O
 ) _ _ O
 # _ _ O
 t.count _ _ O
@@ -1918,13 +2197,18 @@ t.count _ _ O
 18 _ _ O
 
 OOP _ _ B-Concept
+
+
+ _ _ O
 19 _ _ O
 
 What _ _ O
 is _ _ O
 OOP _ _ B-Concept
 ( _ _ O
-object-oriented _ _ B-Concept
+object _ _ B-Concept
+- _ _ I-Concept
+oriented _ _ I-Concept
 programming _ _ I-Concept
 ) _ _ O
 ? _ _ O
@@ -1948,14 +2232,17 @@ that _ _ O
 o _ _ O
 but _ _ O
 " _ _ O
-Java-flavored _ _ O
+Java _ _ O
+- _ _ O
+flavored _ _ O
 OOP _ _ B-Concept
 " _ _ O
 is _ _ O
 n't _ _ O
 the _ _ O
 only _ _ O
-kind… _ _ O
+kind _ _ O
+… _ _ O
 ● _ _ O
 C _ _ O
 has _ _ O
@@ -2013,7 +2300,8 @@ that _ _ O
 distinguishes _ _ O
 C++ _ _ O
 from _ _ O
-C… _ _ O
+C _ _ O
+… _ _ O
 is _ _ O
 methods _ _ B-Concept
 . _ _ O
@@ -2076,6 +2364,9 @@ runtime _ _ B-Concept
 type _ _ I-Concept
 identification _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Methods _ _ B-Concept
@@ -2134,18 +2425,14 @@ to_string _ _ O
 string _ _ O
 { _ _ O
 return _ _ O
-to_string _ _ O
-( _ _ O
-this.x _ _ O
+to_string(this.x _ _ O
 ) _ _ O
 + _ _ O
 " _ _ O
 , _ _ O
 " _ _ O
 + _ _ O
-to_string _ _ O
-( _ _ O
-this.y _ _ O
+to_string(this.y _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
@@ -2154,20 +2441,18 @@ let _ _ O
 p _ _ O
 = _ _ O
 new _ _ O
-Point _ _ O
-( _ _ O
-3 _ _ O
+Point(3 _ _ O
 , _ _ O
-8 _ _ O
-) _ _ O
+8) _ _ O
 ; _ _ O
-println_s _ _ O
-( _ _ O
-p.to_string _ _ O
+println_s(p.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 here _ _ O
 , _ _ O
 the _ _ O
@@ -2180,10 +2465,11 @@ for _ _ O
 something _ _ O
 like _ _ O
 : _ _ O
-Point.to_string _ _ O
-( _ _ O
-p _ _ O
+Point.to_string(p _ _ O
 ) _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 static _ _ B-Concept
@@ -2198,8 +2484,13 @@ method _ _ B-Concept
 to _ _ O
 call _ _ O
 at _ _ O
-compile-time _ _ B-Concept
+compile _ _ B-Concept
+- _ _ I-Concept
+time _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Constructors _ _ B-Concept
@@ -2237,13 +2528,17 @@ C _ _ O
 String _ _ O
 s _ _ O
 ; _ _ O
+
+
+ _ _ O
 C _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
 // _ _ O
 s _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 null _ _ O
 s _ _ O
 = _ _ O
@@ -2261,6 +2556,9 @@ C _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 in _ _ O
 this _ _ O
 Java _ _ O
@@ -2274,13 +2572,18 @@ does _ _ O
 the _ _ O
 following _ _ O
 : _ _ O
-1. _ _ O
+
+
+ _ _ O
+1 _ _ O
+. _ _ O
 allocates _ _ B-Concept
 an _ _ O
 instance _ _ B-Concept
 of _ _ O
 C _ _ O
-2. _ _ O
+2 _ _ O
+. _ _ O
 initializes _ _ O
 all _ _ O
 its _ _ O
@@ -2289,7 +2592,11 @@ to _ _ O
 default _ _ O
 values _ _ O
 * _ _ O
-3. _ _ O
+
+
+ _ _ O
+3 _ _ O
+. _ _ O
 calls _ _ O
 the _ _ O
 constructor _ _ B-Concept
@@ -2298,9 +2605,8 @@ that _ _ O
 instance _ _ B-Concept
 but _ _ O
 Java _ _ O
-doesn _ _ O
-’ _ _ O
-t _ _ O
+does _ _ O
+n’t _ _ O
 really _ _ O
 enforce _ _ O
 that _ _ O
@@ -2326,8 +2632,7 @@ an _ _ O
 inconsistent _ _ O
 state _ _ O
 ( _ _ O
-i.e _ _ O
-. _ _ O
+i.e. _ _ O
 calling _ _ O
 methods _ _ B-Concept
 on _ _ O
@@ -2409,9 +2714,7 @@ let _ _ O
 color _ _ O
 = _ _ O
 new _ _ O
-RGBA _ _ O
-( _ _ O
-255 _ _ O
+RGBA(255 _ _ O
 , _ _ O
 127 _ _ O
 , _ _ O
@@ -2424,6 +2727,9 @@ class _ _ O
 's _ _ O
 definition _ _ O
 . _ _ O
+
+
+ _ _ O
 we _ _ O
 represent _ _ O
 this _ _ O
@@ -2441,22 +2747,70 @@ is _ _ O
 an _ _ O
 RGB _ _ O
 . _ _ O
+
+
+ _ _ O
 RGB _ _ O
 RGBA _ _ O
+
+
+ _ _ O
 r _ _ O
+
+
+ _ _ O
 g _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 r _ _ O
+
+
+ _ _ O
 g _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 reusing _ _ O
 only _ _ O
 the _ _ O
@@ -2550,23 +2904,21 @@ let _ _ O
 c _ _ O
 = _ _ O
 new _ _ O
-Cat _ _ O
-( _ _ O
-" _ _ O
-felis _ _ O
+Cat("felis _ _ O
 cattus _ _ O
 " _ _ O
 , _ _ O
 15 _ _ O
 ) _ _ O
 ; _ _ O
-println_s _ _ O
-( _ _ O
-c.to_string _ _ O
+println_s(c.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 still _ _ O
@@ -2579,11 +2931,12 @@ call _ _ O
 is _ _ O
 sugar _ _ O
 for _ _ O
-Animal.to_string _ _ O
-( _ _ O
-c _ _ O
+Animal.to_string(c _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 now _ _ O
@@ -2596,6 +2949,9 @@ subtype _ _ B-Concept
 of _ _ O
 Animal _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Where _ _ O
@@ -2665,9 +3021,7 @@ Animal _ _ O
 it _ _ O
 should _ _ O
 call _ _ O
-Cat.toString _ _ O
-( _ _ O
-c _ _ O
+Cat.toString(c _ _ O
 ) _ _ O
 . _ _ O
 whiskers _ _ O
@@ -2698,25 +3052,21 @@ in _ _ O
 } _ _ O
 the _ _ O
 general _ _ O
-case. _ _ O
+case _ _ O
+. _ _ O
 } _ _ O
 let _ _ O
 c _ _ O
 = _ _ O
 new _ _ O
-Cat _ _ O
-( _ _ O
-" _ _ O
-felis _ _ O
+Cat("felis _ _ O
 cattus _ _ O
 " _ _ O
 , _ _ O
 15 _ _ O
 ) _ _ O
 ; _ _ O
-println_s _ _ O
-( _ _ O
-c.to_string _ _ O
+println_s(c.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
@@ -2737,7 +3087,8 @@ a _ _ O
 base _ _ B-Concept
 type _ _ I-Concept
 is _ _ O
-expected… _ _ O
+expected _ _ O
+… _ _ O
 o _ _ O
 a _ _ O
 base _ _ B-Concept
@@ -2764,7 +3115,8 @@ same _ _ O
 methods _ _ O
 as _ _ O
 the _ _ O
-supertype… _ _ O
+supertype _ _ O
+… _ _ O
 o _ _ O
 you _ _ O
 ca _ _ O
@@ -2779,9 +3131,7 @@ until _ _ O
 runtime _ _ O
 ! _ _ O
 fn _ _ O
-print _ _ O
-( _ _ O
-a _ _ O
+print(a _ _ O
 : _ _ O
 Animal _ _ O
 ) _ _ O
@@ -2801,38 +3151,33 @@ implementation _ _ O
 to _ _ O
 use _ _ O
 ? _ _ O
-println_s _ _ O
-( _ _ O
-a.to_string _ _ O
+println_s(a.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-print _ _ O
-( _ _ O
-new _ _ O
+print(new _ _ O
 Cat _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
-print _ _ O
-( _ _ O
-new _ _ O
+print(new _ _ O
 Dog _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
-print _ _ O
-( _ _ O
-new _ _ O
+print(new _ _ O
 Horse _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 the _ _ O
 problem _ _ O
 ( _ _ O
@@ -2861,7 +3206,9 @@ language _ _ O
 . _ _ O
 so _ _ O
 , _ _ O
-let's… _ _ O
+let _ _ O
+'s _ _ O
+… _ _ O
 not _ _ O
 do _ _ O
 that _ _ O
@@ -2882,11 +3229,16 @@ Methods _ _ I-Concept
 and _ _ O
 Dynamic _ _ B-Concept
 Dispatch _ _ I-Concept
+
+
+ _ _ O
 27 _ _ O
 
 RTTI _ _ B-Concept
 ( _ _ O
-Run-time _ _ B-Concept
+Run _ _ B-Concept
+- _ _ I-Concept
+time _ _ I-Concept
 Type _ _ I-Concept
 Identification _ _ I-Concept
 ) _ _ O
@@ -2939,6 +3291,9 @@ cattus _ _ O
 whiskers _ _ O
 : _ _ O
 15 _ _ O
+
+
+ _ _ O
 d _ _ O
 = _ _ O
 new _ _ O
@@ -2959,17 +3314,16 @@ lupus _ _ O
 drooly _ _ O
 : _ _ O
 true _ _ O
+
+
+ _ _ O
 fn _ _ O
-print _ _ O
-( _ _ O
-a _ _ O
+print(a _ _ O
 : _ _ O
 Animal _ _ O
 ) _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-a.to_string _ _ O
+println_s(a.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
@@ -2984,25 +3338,26 @@ implemented _ _ O
 something _ _ O
 like _ _ O
 : _ _ O
+
+
+ _ _ O
 if _ _ O
 a.type _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 Cat _ _ O
 { _ _ O
-Cat.to_string _ _ O
-( _ _ O
-a _ _ O
+Cat.to_string(a _ _ O
 ) _ _ O
 } _ _ O
 else _ _ O
 if _ _ O
 a.type _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 Dog _ _ O
 { _ _ O
-Dog.to_string _ _ O
-( _ _ O
-a _ _ O
+Dog.to_string(a _ _ O
 ) _ _ O
 } _ _ O
 but _ _ O
@@ -3058,29 +3413,62 @@ Cat _ _ O
 … _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 Cat _ _ O
 vtable _ _ B-Concept
+
+
+ _ _ O
 0 _ _ O
 vtbl _ _ O
+
+
+ _ _ O
 0 _ _ O
 breathe _ _ O
+
+
+ _ _ O
 Animal.breathe _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 4 _ _ O
 species _ _ O
+
+
+ _ _ O
 4 _ _ O
 to_string _ _ O
+
+
+ _ _ O
 Cat.to_string _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
 whiskers _ _ O
+
+
+ _ _ O
 8 _ _ O
 play_string _ _ O
+
+
+ _ _ O
 Cat.play_string _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 d _ _ O
 = _ _ O
 new _ _ O
@@ -3089,23 +3477,50 @@ Dog _ _ O
 … _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 Dog _ _ O
 vtable _ _ B-Concept
+
+
+ _ _ O
 0 _ _ O
 vtbl _ _ O
+
+
+ _ _ O
 0 _ _ O
 breathe _ _ O
+
+
+ _ _ O
 4 _ _ O
 species _ _ O
+
+
+ _ _ O
 4 _ _ O
 to_string _ _ O
+
+
+ _ _ O
 Dog.to_string _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
 drooly _ _ O
+
+
+ _ _ O
 8 _ _ O
 play_fetch _ _ O
+
+
+ _ _ O
 Dog.play_fetch _ _ O
 ( _ _ O
 ) _ _ O
@@ -3128,7 +3543,8 @@ table _ _ O
 to _ _ O
 get _ _ O
 the _ _ O
-address… _ _ O
+address _ _ O
+… _ _ O
 o _ _ O
 and _ _ O
 do _ _ O
@@ -3146,23 +3562,14 @@ call _ _ I-Concept
 becomes _ _ O
 : _ _ O
 fn _ _ O
-print _ _ O
-( _ _ O
-a _ _ O
+print(a _ _ O
 : _ _ O
 Animal _ _ O
 ) _ _ O
 { _ _ O
-a.vtbl _ _ O
-[ _ _ O
-1 _ _ O
-] _ _ O
-( _ _ O
-a _ _ O
+a.vtbl[1](a _ _ O
 ) _ _ O
-println_s _ _ O
-( _ _ O
-a.to_string _ _ O
+println_s(a.to_string _ _ O
 ( _ _ O
 ) _ _ O
 ) _ _ O
@@ -3198,6 +3605,9 @@ supertype _ _ B-Concept
 's _ _ I-Concept
 vtable _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 addi _ _ O
 sp _ _ O
 , _ _ O
@@ -3207,9 +3617,7 @@ sp _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
--16 _ _ O
-( _ _ O
-fp _ _ O
+-16(fp _ _ O
 ) _ _ O
 # _ _ O
 s0 _ _ O
@@ -3218,20 +3626,17 @@ a _ _ O
 sw _ _ O
 s0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 # _ _ O
 pass _ _ O
-'this _ _ O
+' _ _ O
+this _ _ O
 ' _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-s0 _ _ O
+0(s0 _ _ O
 ) _ _ O
 # _ _ O
 s0 _ _ O
@@ -3240,22 +3645,21 @@ a.vtbl _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-s0 _ _ O
+4(s0 _ _ O
 ) _ _ O
 # _ _ O
 s0 _ _ O
 = _ _ O
-a.vtbl _ _ O
-[ _ _ O
-1 _ _ O
+a.vtbl[1 _ _ O
 ] _ _ O
 jalr _ _ B-Concept
 s0 _ _ O
 # _ _ O
 call _ _ O
 to_string _ _ O
+
+
+ _ _ O
 jalr _ _ B-Concept
 works _ _ O
 like _ _ O
@@ -3320,17 +3724,21 @@ runtime _ _ B-Concept
 ● _ _ O
 what _ _ O
 about _ _ O
-public/protected/private _ _ B-Concept
+public _ _ B-Concept
+/ _ _ O
+protected _ _ B-Concept
+/ _ _ O
+private _ _ B-Concept
 ? _ _ O
-final _ _ O
+final _ _ B-Concept
 ? _ _ O
-override _ _ O
+override _ _ B-Concept
 ? _ _ O
 o _ _ O
 these _ _ O
 are _ _ O
 all _ _ O
-semantic _ _ O
+semantic _ _ B-Concept
 ; _ _ O
 they _ _ O
 have _ _ O
@@ -3344,7 +3752,9 @@ implementation _ _ O
 what _ _ O
 about _ _ O
 static _ _ O
-variables/methods _ _ O
+variables _ _ O
+/ _ _ O
+methods _ _ O
 ? _ _ O
 o _ _ O
 they _ _ O
@@ -3358,20 +3768,20 @@ be _ _ O
 scoped _ _ O
 inside _ _ O
 a _ _ O
-class _ _ O
+class _ _ B-Concept
 . _ _ O
 ● _ _ O
 what _ _ O
 about _ _ O
-null _ _ O
+null _ _ B-Concept
 ? _ _ O
 o _ _ O
 we _ _ O
 could _ _ O
 have _ _ O
 nullable _ _ O
-reference _ _ O
-types _ _ O
+reference _ _ B-Concept
+types _ _ I-Concept
 , _ _ O
 like _ _ O
 a _ _ O
@@ -3393,7 +3803,7 @@ references _ _ O
 ● _ _ O
 what _ _ O
 about _ _ O
-inheriting _ _ O
+inheriting _ _ B-Concept
 from _ _ O
 multiple _ _ O
 classes _ _ O

@@ -2,6 +2,7 @@
 
 import os
 import nltk
+import spacy
 from pathlib import Path
 import json
 import argparse
@@ -9,8 +10,13 @@ import sys
 from doccano_transformer.datasets import NERDataset
 from doccano_transformer.utils import read_jsonl
 
-def word_tokenize(tokens):
-    return [token.replace("''", '"').replace("``", '"') for token in nltk.word_tokenize(tokens)]
+nlp = spacy.blank("en")
+
+def word_tokenize(text):
+    tokenized = [token.text for token in nlp(text.replace("''", '"').replace("``", '"'))]
+    tokenized = list(filter(lambda x: x != "\n", tokenized))
+    print(tokenized)
+    return tokenized
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser()

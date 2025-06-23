@@ -1,14 +1,26 @@
 -DOCSTART- -X- -X- O
 
 17 _ _ O
+
+
+ _ _ O
 Files _ _ O
 and _ _ O
 Directories _ _ O
+
+
+ _ _ O
 Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 wilkie _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
 
@@ -21,8 +33,14 @@ Lord _ _ O
 of _ _ O
 the _ _ O
 Files _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Files _ _ O
@@ -50,10 +68,19 @@ a _ _ O
 text _ _ O
 file _ _ O
 ? _ _ O
+
+
+ _ _ O
 files.c _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 files.o _ _ O
+
+
+ _ _ O
 cat.gif _ _ O
 3 _ _ O
 
@@ -94,6 +121,9 @@ tell _ _ O
 them _ _ O
 apart _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Well _ _ O
 , _ _ O
@@ -113,6 +143,9 @@ inside _ _ O
 the _ _ O
 box _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -151,8 +184,12 @@ database _ _ O
 of _ _ O
 formats _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
-Ok. _ _ O
+Ok _ _ O
+. _ _ O
 How _ _ O
 do _ _ O
 we _ _ O
@@ -161,6 +198,9 @@ files _ _ O
 ? _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 C _ _ O
@@ -172,7 +212,13 @@ with _ _ O
 stdio _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 is _ _ O
@@ -203,13 +249,30 @@ print _ _ O
 it _ _ O
 out _ _ O
 . _ _ O
+
+
+ _ _ O
 Open _ _ O
 for _ _ O
 writing _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Open _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
+
+
+ _ _ O
 Opens _ _ O
 a _ _ O
 file _ _ O
@@ -239,10 +302,21 @@ file _ _ O
 “ _ _ O
 ” _ _ O
 opens _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Reads _ _ O
 to _ _ O
 the _ _ O
@@ -271,6 +345,9 @@ an _ _ O
 array _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 Seek _ _ O
 0 _ _ O
 from _ _ O
@@ -284,9 +361,18 @@ Politely _ _ O
 close _ _ O
 the _ _ O
 file _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Writes _ _ O
 from _ _ O
 the _ _ O
@@ -302,22 +388,43 @@ bytes _ _ O
 Similar _ _ O
 to _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Moves _ _ O
 the _ _ O
 current _ _ O
 file _ _ O
 position _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Returns _ _ O
 the _ _ O
 current _ _ O
 file _ _ O
 position _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 C _ _ O
@@ -329,10 +436,19 @@ with _ _ O
 syscalls _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Open _ _ O
 for _ _ O
 writing _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 is _ _ O
@@ -364,7 +480,13 @@ it _ _ O
 out _ _ O
 . _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Opens _ _ O
 a _ _ O
 file _ _ O
@@ -401,10 +523,21 @@ the _ _ O
 file _ _ O
 . _ _ O
 opens _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Reads _ _ O
 to _ _ O
 the _ _ O
@@ -416,8 +549,13 @@ number _ _ O
 of _ _ O
 bytes _ _ O
 . _ _ O
+
+
+ _ _ O
 Open _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
 Seek _ _ O
 to _ _ O
 end _ _ O
@@ -429,10 +567,22 @@ Politely _ _ O
 close _ _ O
 the _ _ O
 file _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Writes _ _ O
 from _ _ O
 the _ _ O
@@ -448,8 +598,17 @@ bytes _ _ O
 Similar _ _ O
 to _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
+
+
+ _ _ O
 Moves _ _ O
 the _ _ O
 current _ _ O
@@ -461,6 +620,9 @@ the _ _ O
 new _ _ O
 position _ _ O
 . _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Everything _ _ O
@@ -480,7 +642,9 @@ files _ _ O
 ” _ _ O
 in _ _ O
 a _ _ O
-non-traditional _ _ O
+non _ _ O
+- _ _ O
+traditional _ _ O
 sense _ _ O
 . _ _ O
 • _ _ O
@@ -530,6 +694,9 @@ streams _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 The _ _ O
 Internet _ _ O
 7 _ _ O
@@ -537,7 +704,8 @@ Internet _ _ O
 How _ _ O
 data _ _ O
 is _ _ O
-stored… _ _ O
+stored _ _ O
+… _ _ O
 • _ _ O
 Data _ _ O
 in _ _ O
@@ -557,6 +725,9 @@ off _ _ O
 your _ _ O
 computer _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -583,13 +754,18 @@ that _ _ O
 binary _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Fun _ _ O
 fact _ _ O
 : _ _ O
 there _ _ O
 are _ _ O
-non-volatile _ _ O
+non _ _ O
+- _ _ O
+volatile _ _ O
 ( _ _ O
 persistent _ _ O
 ) _ _ O
@@ -626,14 +802,20 @@ Consider _ _ O
 the _ _ O
 implications _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 dig _ _ O
-in… _ _ O
+in _ _ O
+… _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Disks _ _ O
@@ -647,15 +829,21 @@ them _ _ O
 . _ _ O
 Wait _ _ O
 .. _ _ O
-no… _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+no _ _ O
+… _ _ O
+do _ _ O
+n’t _ _ O
 do _ _ O
 that _ _ O
 . _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Floppy _ _ O
@@ -697,6 +885,9 @@ It _ _ O
 is _ _ O
 everyday _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Termed _ _ O
 “ _ _ O
@@ -724,21 +915,22 @@ How _ _ O
 do _ _ O
 you _ _ O
 store _ _ O
-data… _ _ O
+data _ _ O
+… _ _ O
 with _ _ O
 magnets _ _ O
 ? _ _ O
 ▪ _ _ O
 If _ _ O
 you _ _ O
-’ _ _ O
-re _ _ O
+’re _ _ O
 thinking _ _ O
 “ _ _ O
 they _ _ O
 have _ _ O
 two _ _ O
-poles… _ _ O
+poles _ _ O
+… _ _ O
 so _ _ O
 they _ _ O
 are _ _ O
@@ -755,11 +947,15 @@ something _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Representing _ _ O
 continuous _ _ O
-data… _ _ O
+data _ _ O
+… _ _ O
 • _ _ O
 If _ _ O
 you _ _ O
@@ -773,17 +969,21 @@ data _ _ O
 represented _ _ O
 by _ _ O
 a _ _ O
-waveform… _ _ O
+waveform _ _ O
+… _ _ O
 • _ _ O
 How _ _ O
 to _ _ O
-transmit/store _ _ O
+transmit _ _ O
+/ _ _ O
+store _ _ O
 that _ _ O
 wave _ _ O
 ? _ _ O
 • _ _ O
 Amplitude _ _ B-Concept
-modulation… _ _ I-Concept
+modulation _ _ I-Concept
+… _ _ O
 ▪ _ _ O
 Send _ _ O
 pulses _ _ O
@@ -802,12 +1002,22 @@ amplitude _ _ O
 of _ _ O
 pulse _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Frequency _ _ B-Concept
-modulation… _ _ I-Concept
+modulation _ _ I-Concept
+… _ _ O
+
+
+ _ _ O
 Different _ _ O
 waveform _ _ O
 streams _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Data _ _ O
 encoded _ _ O
@@ -839,11 +1049,15 @@ encoding _ _ O
 ! _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Data _ _ O
 and _ _ O
-magnets… _ _ O
+magnets _ _ O
+… _ _ O
 how _ _ O
 do _ _ O
 they _ _ O
@@ -855,16 +1069,24 @@ use _ _ O
 magnets _ _ O
 to _ _ O
 represent _ _ O
+
+
+ _ _ O
 and _ _ O
+
+
+ _ _ O
 ( _ _ O
 discrete _ _ O
 binary _ _ O
 ) _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 drive _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 read _ _ O
 head _ _ O
 contains _ _ O
@@ -899,26 +1121,86 @@ without _ _ O
 any _ _ O
 modulation _ _ O
 : _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 North _ _ O
 and _ _ O
 South _ _ O
@@ -926,12 +1208,16 @@ poles _ _ O
 indicate _ _ O
 stored _ _ O
 values _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 The _ _ O
 peril _ _ O
 of _ _ O
-nature… _ _ O
+nature _ _ O
+… _ _ O
 • _ _ O
 The _ _ O
 magnetic _ _ O
@@ -953,13 +1239,16 @@ difference _ _ O
 between _ _ O
 two _ _ O
 consecutive _ _ O
-magnets… _ _ O
+magnets _ _ O
+… _ _ O
 ▪ _ _ O
 This _ _ O
 is _ _ O
 also _ _ O
 because _ _ O
-co-aligned _ _ O
+co _ _ O
+- _ _ O
+aligned _ _ O
 magnets _ _ O
 HATE _ _ O
 being _ _ O
@@ -972,9 +1261,7 @@ other _ _ O
 Opposites _ _ O
 attract _ _ O
 , _ _ O
-n _ _ O
-’ _ _ O
-at _ _ O
+n’at _ _ O
 . _ _ O
 ( _ _ O
 They _ _ O
@@ -983,36 +1270,96 @@ and _ _ O
 affect _ _ O
 each _ _ O
 other _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 signal _ _ O
 ) _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 The _ _ O
 peril _ _ O
 of _ _ O
-nature… _ _ O
+nature _ _ O
+… _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -1087,44 +1434,113 @@ we _ _ O
 continue _ _ O
 . _ _ O
 ( _ _ O
-Modified-FM _ _ O
+Modified _ _ O
+- _ _ O
+FM _ _ O
 Encoding _ _ O
 ) _ _ O
+
+
+ _ _ O
 Senses _ _ O
 delay _ _ O
+
+
+ _ _ O
 Swaps _ _ O
 bit _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 N _ _ O
+
+
+ _ _ O
 S _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 Bounds _ _ O
 the _ _ O
 amount _ _ O
 of _ _ O
 “ _ _ O
-0 _ _ O
-” _ _ O
-s _ _ O
+0”s _ _ O
 physically _ _ O
 stored _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Disk _ _ O
@@ -1175,8 +1591,17 @@ stronger _ _ O
 encoding _ _ O
 scheme _ _ O
 . _ _ O
+
+
+ _ _ O
 Platter _ _ O
+
+
+ _ _ O
 Head _ _ O
+
+
+ _ _ O
 • _ _ O
 Mechanical _ _ O
 parts _ _ O
@@ -1201,17 +1626,24 @@ physical _ _ O
 order _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Bits _ _ O
 are _ _ O
-hard… _ _ O
+hard _ _ O
+… _ _ O
 let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 start _ _ O
-abstracting… _ _ O
+abstracting _ _ O
+… _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 The _ _ O
@@ -1262,8 +1694,10 @@ a _ _ O
 subdivision _ _ O
 of _ _ O
 a _ _ O
-cylinder/track _ _ B-Concept
-. _ _ B-Concept
+cylinder _ _ B-Concept
+/ _ _ O
+track _ _ B-Concept
+. _ _ O
 ▪ _ _ O
 You _ _ O
 typically _ _ O
@@ -1290,8 +1724,14 @@ sectors _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 Sector _ _ B-Concept
 Cylinder _ _ B-Concept
+
+
+ _ _ O
 16 _ _ O
 
 Making _ _ O
@@ -1301,9 +1741,8 @@ turn _ _ O
 actually _ _ O
 , _ _ O
 they _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 turn _ _ O
 at _ _ O
 all _ _ O
@@ -1352,6 +1791,9 @@ read _ _ O
 a _ _ O
 sector _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 As _ _ O
 a _ _ O
@@ -1378,6 +1820,9 @@ a _ _ O
 different _ _ O
 sector _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -1405,6 +1850,9 @@ this _ _ O
 ? _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Making _ _ O
@@ -1445,7 +1893,9 @@ is _ _ O
 located _ _ O
 at _ _ O
 a _ _ O
-two-dimensional _ _ O
+two _ _ O
+- _ _ O
+dimensional _ _ O
 coordinate _ _ O
 on _ _ O
 a _ _ O
@@ -1460,6 +1910,9 @@ is _ _ O
 not _ _ O
 trivial _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Seek _ _ B-Concept
 time _ _ I-Concept
@@ -1482,7 +1935,8 @@ bit _ _ O
 of _ _ O
 data _ _ O
 you _ _ O
-need… _ _ O
+need _ _ O
+… _ _ O
 • _ _ O
 The _ _ O
 sooner _ _ O
@@ -1491,15 +1945,20 @@ will _ _ O
 get _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
-So… _ _ O
+So _ _ O
+… _ _ O
 to _ _ O
 reduce _ _ O
 the _ _ O
 seek _ _ O
 time _ _ O
 to _ _ O
-nil… _ _ O
+nil _ _ O
+… _ _ O
 ▪ _ _ O
 We _ _ O
 position _ _ O
@@ -1522,9 +1981,8 @@ subsequent _ _ O
 sector _ _ B-Concept
 . _ _ O
 Heads _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 move _ _ O
 ; _ _ O
 the _ _ O
@@ -1533,11 +1991,13 @@ spin _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 18 _ _ O
 
-Ain _ _ O
-’ _ _ O
-t _ _ O
+Ai _ _ O
+n’t _ _ O
 no _ _ O
 platter _ _ B-Concept
 like _ _ O
@@ -1551,10 +2011,12 @@ a _ _ O
 hard _ _ O
 disk _ _ O
 platter _ _ B-Concept
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 stop _ _ O
+
+
+ _ _ O
 • _ _ O
 Seek _ _ B-Concept
 time _ _ I-Concept
@@ -1587,7 +2049,9 @@ is _ _ O
 located _ _ O
 at _ _ O
 a _ _ O
-two-dimensional _ _ O
+two _ _ O
+- _ _ O
+dimensional _ _ O
 coordinate _ _ O
 on _ _ O
 a _ _ O
@@ -1602,6 +2066,9 @@ is _ _ O
 not _ _ O
 trivial _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Seek _ _ B-Concept
 time _ _ I-Concept
@@ -1624,7 +2091,8 @@ bit _ _ O
 of _ _ O
 data _ _ O
 you _ _ O
-need… _ _ O
+need _ _ O
+… _ _ O
 • _ _ O
 The _ _ O
 sooner _ _ O
@@ -1633,6 +2101,9 @@ will _ _ O
 get _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 , _ _ O
@@ -1688,11 +2159,13 @@ loss _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 19 _ _ O
 
-Ain _ _ O
-’ _ _ O
-t _ _ O
+Ai _ _ O
+n’t _ _ O
 no _ _ O
 platter _ _ B-Concept
 like _ _ O
@@ -1706,10 +2179,12 @@ a _ _ O
 hard _ _ O
 disk _ _ O
 platter _ _ B-Concept
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 stop _ _ O
+
+
+ _ _ O
 • _ _ O
 Seek _ _ B-Concept
 time _ _ I-Concept
@@ -1742,7 +2217,9 @@ is _ _ O
 located _ _ O
 at _ _ O
 a _ _ O
-two-dimensional _ _ O
+two _ _ O
+- _ _ O
+dimensional _ _ O
 coordinate _ _ O
 on _ _ O
 a _ _ O
@@ -1757,6 +2234,9 @@ is _ _ O
 not _ _ O
 trivial _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Seek _ _ B-Concept
 time _ _ I-Concept
@@ -1779,7 +2259,8 @@ bit _ _ O
 of _ _ O
 data _ _ O
 you _ _ O
-need… _ _ O
+need _ _ O
+… _ _ O
 • _ _ O
 The _ _ O
 sooner _ _ O
@@ -1788,6 +2269,9 @@ will _ _ O
 get _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Yikes _ _ O
 ! _ _ O
@@ -1833,19 +2317,29 @@ disk _ _ O
 ? _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 File _ _ B-Concept
 Systems _ _ I-Concept
 Yet _ _ O
 another _ _ O
-abstraction… _ _ O
+abstraction _ _ O
+… _ _ O
 moving _ _ O
 toward _ _ O
 applications _ _ O
 . _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 File _ _ B-Concept
@@ -1879,7 +2373,9 @@ having _ _ O
 names _ _ O
 ! _ _ O
 ▪ _ _ O
-Directories/folders _ _ O
+Directories _ _ O
+/ _ _ O
+folders _ _ O
 for _ _ O
 organization _ _ O
 ▪ _ _ O
@@ -1888,7 +2384,14 @@ special _ _ O
 files _ _ O
 such _ _ O
 as _ _ O
-symbolic-links/shortcuts _ _ O
+symbolic _ _ O
+- _ _ O
+links _ _ O
+/ _ _ O
+shortcuts _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 file _ _ B-Concept
@@ -1942,6 +2445,9 @@ file _ _ O
 ) _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 File _ _ O
@@ -1983,6 +2489,9 @@ it _ _ O
 and _ _ O
 when _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 And _ _ O
 access _ _ O
@@ -2006,15 +2515,32 @@ can _ _ O
 run _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 23 _ _ O
 
-Linux/UNIX _ _ O
+Linux _ _ O
+/ _ _ O
+UNIX _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 metadata _ _ O
 : _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Operating _ _ O
@@ -2055,9 +2581,14 @@ shared _ _ O
 across _ _ O
 processes _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 On _ _ O
-Linux/UNIX _ _ O
+Linux _ _ O
+/ _ _ O
+UNIX _ _ O
 , _ _ O
 some _ _ O
 file _ _ B-Concept
@@ -2075,6 +2606,9 @@ shell _ _ O
 ▪ _ _ O
 ▪ _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 – _ _ O
 the _ _ O
 output _ _ O
@@ -2109,7 +2643,8 @@ be _ _ O
 a _ _ O
 file _ _ O
 on _ _ O
-disk… _ _ O
+disk _ _ O
+… _ _ O
 or _ _ O
 user _ _ O
 input _ _ O
@@ -2118,6 +2653,9 @@ the _ _ O
 terminal _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 OS _ _ O
@@ -2150,6 +2688,9 @@ file _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Processes _ _ B-Concept
@@ -2200,7 +2741,13 @@ the _ _ O
 file _ _ B-Concept
 descriptor _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 Process _ _ B-Concept
+
+
+ _ _ O
 stack _ _ O
 .bss _ _ O
 .data _ _ O
@@ -2211,6 +2758,9 @@ A _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 4356 _ _ O
@@ -2219,8 +2769,14 @@ Table _ _ O
 A _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 File _ _ O
 Table _ _ O
+
+
+ _ _ O
 • _ _ O
 Several _ _ O
 files _ _ O
@@ -2244,7 +2800,13 @@ current _ _ O
 position _ _ O
 . _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 / _ _ O
+
+
+ _ _ O
 manipulate _ _ O
 it _ _ O
 . _ _ O
@@ -2279,6 +2841,9 @@ a _ _ O
 nice _ _ O
 order _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 do _ _ O
@@ -2292,8 +2857,17 @@ to _ _ O
 virtual _ _ O
 memory _ _ O
 ! _ _ O
+
+
+ _ _ O
 main.c _ _ O
+
+
+ _ _ O
 inode _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 use _ _ O
@@ -2330,6 +2904,9 @@ by _ _ O
 the _ _ O
 table _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 An _ _ O
 index _ _ B-Concept
@@ -2349,6 +2926,9 @@ inode _ _ O
 ” _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 File _ _ O
@@ -2359,9 +2939,18 @@ organizing _ _ O
 the _ _ O
 disk _ _ O
 main.c _ _ O
+
+
+ _ _ O
 inode _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Cheap _ _ O
@@ -2395,16 +2984,34 @@ at _ _ O
 our _ _ O
 leisure _ _ O
 . _ _ O
+
+
+ _ _ O
 snapshot _ _ O
+
+
+ _ _ O
 inode _ _ O
+
+
+ _ _ O
 inode _ _ O
+
+
+ _ _ O
 The _ _ O
 prior _ _ O
 state _ _ O
 remains _ _ O
 . _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 Small _ _ O
 changes _ _ O
 overwrite _ _ O
@@ -2431,6 +3038,9 @@ the _ _ O
 current _ _ O
 inode _ _ O
 . _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Hierarchies _ _ O
@@ -2457,14 +3067,22 @@ is _ _ O
 often _ _ O
 something _ _ O
 like _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 An _ _ O
 absolute _ _ B-Concept
 path _ _ I-Concept
 is _ _ O
 a _ _ O
-fully-qualified _ _ O
+fully _ _ O
+- _ _ O
+qualified _ _ O
 name _ _ O
 for _ _ O
 a _ _ O
@@ -2493,6 +3111,9 @@ logical _ _ O
 way _ _ O
 : _ _ O
 • _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 There _ _ O
 are _ _ O
@@ -2507,18 +3128,30 @@ go _ _ O
 in _ _ O
 : _ _ O
 • _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Devices _ _ O
 go _ _ O
 in _ _ O
 : _ _ O
 • _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Use _ _ O
 the _ _ O
 Linux _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 command _ _ O
 to _ _ O
 find _ _ O
@@ -2552,7 +3185,13 @@ to _ _ O
 other _ _ O
 files _ _ O
 . _ _ O
+
+
+ _ _ O
 root _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 earliest _ _ O
@@ -2562,14 +3201,21 @@ did _ _ O
 not _ _ O
 even _ _ O
 have _ _ O
-directories… _ _ O
+directories _ _ O
+… _ _ O
 just _ _ O
 a _ _ O
 bunch _ _ O
 of _ _ O
 files _ _ O
 . _ _ O
+
+
+ _ _ O
 home _ _ O
+
+
+ _ _ O
 • _ _ O
 Groups _ _ O
 a _ _ O
@@ -2582,10 +3228,17 @@ a _ _ O
 single _ _ O
 name _ _ O
 . _ _ O
+
+
+ _ _ O
 sys _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Strictly _ _ O
-hierarchical… _ _ O
+hierarchical _ _ O
+… _ _ O
 ▪ _ _ O
 Generally _ _ O
 , _ _ O
@@ -2608,18 +3261,38 @@ also _ _ O
 be _ _ O
 within _ _ O
 a _ _ O
-directory… _ _ O
+directory _ _ O
+… _ _ O
 creating _ _ O
 a _ _ O
 cascade _ _ O
 . _ _ O
 hw1.doc _ _ O
+
+
+ _ _ O
 hw2.doc _ _ O
+
+
+ _ _ O
 main.c _ _ O
-/root/home/main.c _ _ O
+
+
+ _ _ O
+/root _ _ O
+/ _ _ O
+home _ _ O
+/ _ _ O
+main.c _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 main.h _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Implementing _ _ O
@@ -2653,6 +3326,9 @@ for _ _ O
 the _ _ O
 inode _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Obviously _ _ O
 , _ _ O
@@ -2705,6 +3381,9 @@ different _ _ O
 machine _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 a _ _ O
@@ -2770,6 +3449,9 @@ free _ _ O
 ) _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 A _ _ O
@@ -2777,7 +3459,13 @@ directory _ _ O
 Name _ _ O
 Block _ _ O
 Address _ _ O
+
+
+ _ _ O
 Type _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 directory _ _ O
@@ -2816,6 +3504,9 @@ it _ _ O
 slightly _ _ O
 differently _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 may _ _ O
@@ -2838,6 +3529,9 @@ author _ _ O
 file _ _ O
 size _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 does _ _ O
@@ -2849,6 +3543,9 @@ parent _ _ O
 ? _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Special _ _ O
 entry _ _ O
@@ -2881,7 +3578,9 @@ Margo _ _ O
 Seltzer _ _ O
 : _ _ O
 Hierarchical _ _ O
-File-Systems _ _ O
+File _ _ O
+- _ _ O
+Systems _ _ O
 are _ _ O
 Dead _ _ O
 ( _ _ O
@@ -2895,7 +3594,9 @@ this _ _ O
 paper _ _ O
 , _ _ O
 she _ _ O
-re-orients _ _ O
+re _ _ O
+- _ _ O
+orients _ _ O
 file _ _ O
 systems _ _ O
 around _ _ O
@@ -2906,6 +3607,9 @@ our _ _ O
 own _ _ O
 needs _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 She _ _ O
 asks _ _ O
@@ -2915,8 +3619,12 @@ task _ _ O
 : _ _ O
 “ _ _ O
 Group _ _ O
-these. _ _ O
+these _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 Professor _ _ O
 Margo _ _ O
 Seltzer _ _ O
@@ -2924,15 +3632,23 @@ University _ _ O
 of _ _ O
 British _ _ O
 Columbia _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 34 _ _ O
 
-Aww… _ _ O
+Aww _ _ O
+… _ _ O
 Human _ _ O
 nature _ _ O
 at _ _ O
-work… _ _ O
+work _ _ O
+… _ _ O
 • _ _ O
 How _ _ O
 did _ _ O
@@ -2940,8 +3656,14 @@ you _ _ O
 group _ _ O
 them _ _ O
 ? _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Great _ _ O
@@ -2968,6 +3690,9 @@ we _ _ O
 actually _ _ O
 think _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Organize _ _ O
 by _ _ O
@@ -3001,6 +3726,9 @@ tag _ _ O
 / _ _ O
 keyword _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 “ _ _ O
 I _ _ O
@@ -3011,7 +3739,8 @@ all _ _ O
 images _ _ O
 that _ _ O
 are _ _ O
-red. _ _ O
+red _ _ O
+. _ _ O
 ” _ _ O
 ▪ _ _ O
 “ _ _ O
@@ -3020,7 +3749,8 @@ want _ _ O
 all _ _ O
 images _ _ O
 of _ _ O
-squares… _ _ O
+squares _ _ O
+… _ _ O
 , _ _ O
 ” _ _ O
 etc _ _ O
@@ -3035,8 +3765,12 @@ all _ _ O
 music _ _ O
 that _ _ O
 is _ _ O
-135bpm. _ _ O
+135bpm _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 • _ _ O
 Draws _ _ O
 inspiration _ _ O
@@ -3052,11 +3786,15 @@ keywords _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 Files _ _ O
 with _ _ O
-tags… _ _ O
+tags _ _ O
+… _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -3071,8 +3809,7 @@ Then _ _ O
 , _ _ O
 when _ _ O
 I _ _ O
-’ _ _ O
-m _ _ O
+’m _ _ O
 feeling _ _ O
 down _ _ O
 and _ _ O
@@ -3094,9 +3831,16 @@ the _ _ O
 pictures _ _ O
 that _ _ O
 are _ _ O
-cute. _ _ O
-” _ _ O
 cute _ _ O
+. _ _ O
+” _ _ O
+
+
+ _ _ O
+cute _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 No _ _ O
 longer _ _ O
@@ -3110,7 +3854,13 @@ what _ _ O
 I _ _ O
 need _ _ O
 . _ _ O
+
+
+ _ _ O
 cat _ _ O
+
+
+ _ _ O
 food _ _ O
 Image _ _ O
 by _ _ O
@@ -3118,6 +3868,9 @@ Dimitri _ _ O
 Houtteman _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 cat.gif _ _ O
 37 _ _ O
 
@@ -3161,19 +3914,19 @@ switch _ _ O
 ” _ _ O
 • _ _ O
 You _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 want _ _ O
 to _ _ O
 completely _ _ O
 change _ _ O
 C _ _ O
-functions… _ _ O
-so… _ _ O
+functions _ _ O
+… _ _ O
+so _ _ O
+… _ _ O
 let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 make _ _ O
 use _ _ O
 of _ _ O
@@ -3186,6 +3939,9 @@ tags _ _ O
 ▪ _ _ O
 ▪ _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 can _ _ O
 still _ _ O
 list _ _ O
@@ -3212,6 +3968,9 @@ the _ _ O
 same _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 And _ _ O
 you _ _ O
@@ -3238,16 +3997,15 @@ with _ _ O
 ” _ _ O
 ▪ _ _ O
 We _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 do _ _ O
 this _ _ O
 . _ _ O
-Why… _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+Why _ _ O
+… _ _ O
+do _ _ O
+n’t _ _ O
 we _ _ O
 just _ _ O
 do _ _ O
@@ -3263,11 +4021,16 @@ hard _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 C _ _ O
 File _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 Summary _ _ O
 • _ _ O
 C _ _ O
@@ -3313,6 +4076,9 @@ Negative _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Similarly _ _ O
 writes _ _ O
@@ -3329,6 +4095,9 @@ the _ _ O
 file _ _ O
 descriptor _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Modifies _ _ O
 and _ _ O
@@ -3350,6 +4119,9 @@ the _ _ O
 reference _ _ O
 point _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Closes _ _ O
 the _ _ O
@@ -3373,6 +4145,9 @@ negative _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Opens _ _ O
 the _ _ O
@@ -3407,7 +4182,9 @@ it _ _ O
 it _ _ O
 will _ _ O
 be _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
 . _ _ O
 If _ _ O
 it _ _ O
@@ -3481,11 +4258,16 @@ file _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 C _ _ O
 File _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 Summary _ _ O
 • _ _ O
 UNIX _ _ O
@@ -3531,6 +4313,9 @@ Negative _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Similarly _ _ O
 writes _ _ O
@@ -3547,6 +4332,9 @@ the _ _ O
 file _ _ O
 descriptor _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Modifies _ _ O
 and _ _ O
@@ -3568,6 +4356,9 @@ the _ _ O
 reference _ _ O
 point _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Closes _ _ O
 the _ _ O
@@ -3591,6 +4382,9 @@ negative _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 ▪ _ _ O
 Opens _ _ O
@@ -3662,6 +4456,9 @@ occur _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 Summary _ _ O
@@ -3684,6 +4481,9 @@ specification _ _ O
 and _ _ O
 consistency _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Disks _ _ O
 are _ _ O
@@ -3725,6 +4525,9 @@ data _ _ O
 are _ _ O
 stored _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 File _ _ O
 systems _ _ O
@@ -3742,7 +4545,9 @@ on _ _ O
 disk _ _ O
 ( _ _ O
 and _ _ O
-share/discover _ _ O
+share _ _ O
+/ _ _ O
+discover _ _ O
 that _ _ O
 data _ _ O
 ) _ _ O
@@ -3784,6 +4589,9 @@ tags _ _ O
 . _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Distributed _ _ O
@@ -3791,7 +4599,8 @@ Filesystems _ _ O
 and _ _ O
 Storage _ _ O
 • _ _ O
-Now… _ _ O
+Now _ _ O
+… _ _ O
 what _ _ O
 happens _ _ O
 when _ _ O
@@ -3812,6 +4621,9 @@ and _ _ O
 storage _ _ O
 combined _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 are _ _ O
@@ -3846,7 +4658,9 @@ break _ _ O
 down _ _ O
 the _ _ O
 “ _ _ O
-client-server _ _ O
+client _ _ O
+- _ _ O
+server _ _ O
 ” _ _ O
 model _ _ O
 . _ _ O
@@ -3873,12 +4687,18 @@ information _ _ O
 , _ _ O
 then _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Stay _ _ O
 tuned _ _ O
 ! _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 

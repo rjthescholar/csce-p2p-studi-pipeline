@@ -8,11 +8,12 @@ CS _ _ O
 1550 _ _ O
 Spring _ _ O
 2022 _ _ O
+
+
+ _ _ O
 Sherif _ _ O
 Khattab _ _ O
-ksm73 _ _ O
-@ _ _ O
-pitt.edu _ _ O
+ksm73@pitt.edu _ _ O
 ( _ _ O
 Some _ _ O
 slides _ _ O
@@ -23,7 +24,8 @@ Silberschatz _ _ O
 Galvin _ _ O
 and _ _ O
 Gagne _ _ O
-©2013 _ _ O
+© _ _ O
+2013 _ _ O
 ) _ _ O
 
 Announcements _ _ O
@@ -51,6 +53,9 @@ on _ _ O
 Late _ _ O
 penalty _ _ O
 waived _ _ O
+
+
+ _ _ O
 • _ _ O
 Lab _ _ O
 4 _ _ O
@@ -98,7 +103,9 @@ on _ _ O
 5/2 _ _ O
 • _ _ O
 Course _ _ O
-Post-Test _ _ O
+Post _ _ O
+- _ _ O
+Test _ _ O
 : _ _ O
 due _ _ O
 on _ _ O
@@ -111,6 +118,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Muddiest _ _ O
@@ -178,10 +188,20 @@ time _ _ O
 delay _ _ O
 factors _ _ O
 • _ _ O
+
+
+ _ _ O
 transfer _ _ B-Concept
-time/rotating _ _ I-Concept
-time/seek _ _ B-Concept
-time _ _ B-Concept
+time _ _ I-Concept
+/ _ _ O
+rotating _ _ B-Concept
+time _ _ I-Concept
+/ _ _ O
+seek _ _ B-Concept
+time _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 I _ _ O
 feel _ _ O
@@ -240,6 +260,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Disk _ _ B-Concept
@@ -247,12 +270,27 @@ drive _ _ I-Concept
 structure _ _ O
 head _ _ B-Concept
 sector _ _ B-Concept
+
+
+ _ _ O
 platter _ _ B-Concept
 track _ _ B-Concept
 cylinder _ _ B-Concept
+
+
+ _ _ O
 surfaces _ _ B-Concept
+
+
+ _ _ O
 spindle _ _ B-Concept
-actuator _ _ O
+
+
+ _ _ O
+actuator _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -261,6 +299,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Muddiest _ _ O
@@ -320,6 +361,9 @@ are _ _ O
 RAIDs _ _ B-Concept
 for _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Does _ _ O
 RAID4 _ _ B-Concept
@@ -335,6 +379,9 @@ of _ _ O
 it _ _ O
 , _ _ O
 bro _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -343,6 +390,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Problem _ _ O
@@ -372,7 +422,12 @@ multiple _ _ O
 layers _ _ O
 of _ _ O
 error _ _ B-Concept
-detection/correction _ _ I-Concept
+detection _ _ I-Concept
+/ _ _ O
+correction _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -381,13 +436,17 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 When _ _ O
 good _ _ O
 disks _ _ B-Concept
 go _ _ O
-bad… _ _ O
+bad _ _ O
+… _ _ O
 Disks _ _ O
 have _ _ O
 defects _ _ O
@@ -396,11 +455,13 @@ In _ _ O
 sectors _ _ O
 , _ _ O
 this _ _ O
-isn _ _ O
-’ _ _ O
-t _ _ O
+is _ _ O
+n’t _ _ O
 surprising _ _ O
 ! _ _ O
+
+
+ _ _ O
 ECC _ _ O
 helps _ _ O
 with _ _ O
@@ -409,10 +470,12 @@ errors _ _ O
 but _ _ O
 sometimes _ _ O
 this _ _ O
-isn _ _ O
-’ _ _ O
-t _ _ O
+is _ _ O
+n’t _ _ O
 enough _ _ O
+
+
+ _ _ O
 Disks _ _ O
 keep _ _ O
 spare _ _ O
@@ -430,8 +493,7 @@ these _ _ O
 spares _ _ O
 If _ _ O
 there _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 time _ _ O
 , _ _ O
 the _ _ O
@@ -439,7 +501,11 @@ whole _ _ O
 track _ _ O
 could _ _ O
 be _ _ O
-reordered… _ _ O
+reordered _ _ O
+… _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -448,6 +514,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 RAIDs _ _ B-Concept
@@ -458,37 +527,55 @@ and _ _ O
 more _ _ O
 RAIDs _ _ B-Concept
 strip _ _ B-Concept
-strip _ _ O
-Stripe _ _ O
-RAID _ _ O
-0 _ _ O
+
+
+ _ _ I-Concept
+strip _ _ B-Concept
+
+
+ _ _ O
+Stripe _ _ B-Concept
+RAID _ _ B-Concept
+0 _ _ I-Concept
 ( _ _ O
-Redundant _ _ O
-Array _ _ O
-of _ _ O
-Inexpensive _ _ O
-Disks _ _ O
-RAID _ _ O
-1 _ _ O
+Redundant _ _ B-Concept
+Array _ _ I-Concept
+of _ _ I-Concept
+Inexpensive _ _ I-Concept
+Disks _ _ I-Concept
+
+
+ _ _ O
+RAID _ _ B-Concept
+1 _ _ I-Concept
 ( _ _ O
 Mirrored _ _ O
 copies _ _ O
 ) _ _ O
-RAID _ _ O
-4 _ _ O
+
+
+ _ _ O
+RAID _ _ B-Concept
+4 _ _ I-Concept
 ( _ _ O
-Striped _ _ O
+Striped _ _ B-Concept
 with _ _ O
-parity _ _ O
+parity _ _ B-Concept
 ) _ _ O
-RAID _ _ O
-5 _ _ O
+
+
+ _ _ O
+RAID _ _ B-Concept
+5 _ _ I-Concept
 ( _ _ O
-Parity _ _ O
+Parity _ _ B-Concept
 rotates _ _ O
 through _ _ O
-disks _ _ O
+disks _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -497,6 +584,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Backing _ _ O
@@ -534,13 +624,21 @@ directory _ _ B-Concept
 file _ _ B-Concept
 labeled _ _ O
 by _ _ O
-i-node _ _ B-Concept
+i _ _ B-Concept
+- _ _ I-Concept
+node _ _ I-Concept
 number _ _ I-Concept
+
+
+ _ _ O
 File _ _ B-Concept
 that _ _ O
 has _ _ O
 not _ _ O
 changed _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -549,6 +647,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Bitmaps _ _ B-Concept
@@ -558,6 +659,9 @@ a _ _ O
 file _ _ B-Concept
 system _ _ I-Concept
 dump _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -566,6 +670,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Checking _ _ O
@@ -575,6 +682,9 @@ system _ _ I-Concept
 for _ _ O
 consistency _ _ B-Concept
 Consistent _ _ B-Concept
+
+
+ _ _ O
 Missing _ _ O
 ( _ _ O
 “ _ _ O
@@ -582,16 +692,25 @@ lost _ _ O
 ” _ _ O
 ) _ _ O
 block _ _ B-Concept
+
+
+ _ _ O
 Duplicate _ _ O
 block _ _ B-Concept
 in _ _ O
 free _ _ B-Concept
 list _ _ I-Concept
+
+
+ _ _ O
 Duplicate _ _ O
 block _ _ B-Concept
 in _ _ O
 two _ _ O
 files _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -600,6 +719,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Problem _ _ O
@@ -624,6 +746,9 @@ delays _ _ I-Concept
 Answer _ _ O
 : _ _ O
 Caching _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -632,6 +757,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 File _ _ B-Concept
@@ -639,6 +767,9 @@ block _ _ B-Concept
 cache _ _ B-Concept
 data _ _ O
 structures _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -647,9 +778,14 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 13 _ _ O
 
-Log-structured _ _ B-Concept
+Log _ _ B-Concept
+- _ _ I-Concept
+structured _ _ I-Concept
 file _ _ I-Concept
 systems _ _ I-Concept
 • _ _ O
@@ -664,6 +800,9 @@ CPUs _ _ O
 • _ _ O
 Larger _ _ O
 memories _ _ O
+
+
+ _ _ O
 • _ _ O
 Result _ _ O
 • _ _ O
@@ -696,6 +835,9 @@ accesses _ _ O
 will _ _ O
 be _ _ O
 writes _ _ O
+
+
+ _ _ O
 • _ _ O
 LFS _ _ B-Concept
 structures _ _ I-Concept
@@ -728,11 +870,16 @@ file _ _ B-Concept
 opened _ _ O
 , _ _ O
 locate _ _ O
-i-node _ _ B-Concept
+i _ _ B-Concept
+- _ _ I-Concept
+node _ _ I-Concept
 , _ _ O
 then _ _ O
 find _ _ O
 blocks _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 Issue _ _ O
 : _ _ O
@@ -751,12 +898,18 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Log _ _ B-Concept
 Structured _ _ I-Concept
 File _ _ I-Concept
 System _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -765,12 +918,18 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Log _ _ B-Concept
 Structured _ _ I-Concept
 File _ _ I-Concept
 System _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -779,13 +938,22 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Flash _ _ B-Concept
 File _ _ I-Concept
 System _ _ I-Concept
+
+
+ _ _ O
 Wear _ _ B-Concept
 Leveling _ _ I-Concept
+
+
+ _ _ O
 Count _ _ O
 total _ _ O
 writes _ _ O
@@ -808,12 +976,18 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Wear _ _ B-Concept
 leveling _ _ I-Concept
 for _ _ O
 SSDs _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -822,6 +996,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Disk _ _ B-Concept
@@ -841,6 +1018,9 @@ rate _ _ O
 of _ _ O
 a _ _ O
 disk _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 Dotted _ _ O
 line _ _ O
@@ -856,9 +1036,16 @@ efficiency _ _ O
 • _ _ O
 All _ _ O
 files _ _ O
-2KB _ _ O
+2 _ _ O
+KB _ _ O
+
+
+ _ _ O
 Block _ _ O
 size _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -867,6 +1054,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Problem _ _ O
@@ -882,7 +1072,9 @@ do _ _ O
 device _ _ B-Concept
 drivers _ _ I-Concept
 program _ _ I-Concept
-I/O _ _ B-Concept
+I _ _ B-Concept
+/ _ _ I-Concept
+O _ _ I-Concept
 devices _ _ I-Concept
 ? _ _ O
 • _ _ O
@@ -896,6 +1088,9 @@ polling _ _ B-Concept
 Interrupts _ _ B-Concept
 • _ _ O
 DMA _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -904,16 +1099,23 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 How _ _ O
 are _ _ O
-I/O _ _ B-Concept
+I _ _ B-Concept
+/ _ _ I-Concept
+O _ _ I-Concept
 devices _ _ I-Concept
 connected _ _ O
 ? _ _ O
 • _ _ O
-Single-bus _ _ B-Concept
+Single _ _ B-Concept
+- _ _ I-Concept
+bus _ _ I-Concept
 • _ _ O
 All _ _ O
 memory _ _ O
@@ -924,21 +1126,50 @@ a _ _ O
 shared _ _ O
 bus _ _ B-Concept
 • _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 and _ _ O
 RAM _ _ O
 accesses _ _ O
 compete _ _ O
 for _ _ O
 bandwidth _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 Memory _ _ O
-I/O _ _ O
+
+
+ _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 Memory _ _ O
-I/O _ _ O
+
+
+ _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
+
+
+ _ _ O
 • _ _ O
-Dual-bus _ _ B-Concept
+Dual _ _ B-Concept
+- _ _ I-Concept
+bus _ _ I-Concept
 • _ _ O
 RAM _ _ O
 access _ _ O
@@ -946,10 +1177,14 @@ over _ _ O
 highspeed _ _ O
 bus _ _ O
 • _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 access _ _ O
 over _ _ O
-lower-speed _ _ O
+lower _ _ O
+- _ _ O
+speed _ _ O
 bus _ _ O
 • _ _ O
 Less _ _ O
@@ -959,16 +1194,25 @@ More _ _ O
 hardware _ _ O
 ( _ _ O
 more _ _ O
-expensive… _ _ O
+expensive _ _ O
+… _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 port _ _ O
 allows _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 devices _ _ O
 access _ _ O
 into _ _ O
 memory _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -977,25 +1221,59 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 21 _ _ O
 
-Memory-Mapped _ _ B-Concept
+Memory _ _ B-Concept
+- _ _ I-Concept
+Mapped _ _ I-Concept
 vs. _ _ O
 separate _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 Space _ _ O
+
+
+ _ _ O
 Memory _ _ O
-0xFFF… _ _ O
-I/O _ _ O
+0xFFF _ _ O
+… _ _ O
+
+
+ _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 ports _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Separate _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 & _ _ O
 memory _ _ O
 space _ _ O
-Memory-mapped _ _ B-Concept
-I/O _ _ I-Concept
+
+
+ _ _ O
+Memory _ _ B-Concept
+- _ _ I-Concept
+mapped _ _ I-Concept
+I _ _ I-Concept
+/ _ _ I-Concept
+O _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1004,13 +1282,21 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Hybrid _ _ O
 : _ _ O
 both _ _ O
-memory-mapped _ _ B-Concept
+memory _ _ B-Concept
+- _ _ I-Concept
+mapped _ _ I-Concept
 & _ _ O
 separate _ _ O
 spaces _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Example _ _ O
@@ -1019,6 +1305,9 @@ Dynamic _ _ O
 Frequency _ _ O
 on _ _ O
 XScale _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1027,28 +1316,57 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Programmed _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 example _ _ O
 : _ _ O
 printing _ _ O
 a _ _ O
 page _ _ O
+
+
+ _ _ O
 User _ _ O
+
+
+ _ _ O
 Printed _ _ O
 page _ _ O
+
+
+ _ _ O
 Kernel _ _ O
+
+
+ _ _ O
 ABCD _ _ O
 EFGH _ _ O
+
+
+ _ _ O
 Printed _ _ O
 page _ _ O
 ABCD _ _ O
 EFGH _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 ABCD _ _ O
 EFGH _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1057,16 +1375,31 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Printed _ _ O
 page _ _ O
 ABCD _ _ O
 EFGH _ _ O
+
+
+ _ _ O
 AB _ _ O
+
+
+ _ _ O
 ABCD _ _ O
 EFGH _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Polling _ _ B-Concept
+
+
+ _ _ O
 copy_from_user _ _ O
 ( _ _ O
 buffer _ _ O
@@ -1118,9 +1451,7 @@ ready _ _ O
 * _ _ O
 printer_data_reg _ _ O
 = _ _ O
-p _ _ O
-[ _ _ O
-j _ _ O
+p[j _ _ O
 ] _ _ O
 ; _ _ O
 // _ _ O
@@ -1133,6 +1464,9 @@ return_to_user _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1141,15 +1475,23 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Hardware _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 view _ _ O
 of _ _ O
 interrupts _ _ B-Concept
+
+
+ _ _ O
 Bus _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1158,10 +1500,17 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 26 _ _ O
 
-Interrupt-driven _ _ B-Concept
-I/O _ _ I-Concept
+Interrupt _ _ B-Concept
+- _ _ I-Concept
+driven _ _ I-Concept
+I _ _ I-Concept
+/ _ _ I-Concept
+O _ _ I-Concept
 copy_from_user _ _ O
 ( _ _ O
 buffer _ _ O
@@ -1191,9 +1540,7 @@ READY _ _ O
 * _ _ O
 printer_data_reg _ _ O
 = _ _ O
-p _ _ O
-[ _ _ O
-0 _ _ O
+p[0 _ _ O
 ] _ _ O
 ; _ _ O
 scheduler _ _ O
@@ -1207,7 +1554,8 @@ user _ _ O
 if _ _ O
 ( _ _ O
 count _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
@@ -1223,13 +1571,10 @@ j++ _ _ O
 * _ _ O
 printer_data_reg _ _ O
 = _ _ O
-p _ _ O
-[ _ _ O
-j _ _ O
+p[j _ _ O
 ] _ _ O
 ; _ _ O
-count _ _ O
--- _ _ O
+count-- _ _ O
 ; _ _ O
 } _ _ O
 acknowledge_interrupt _ _ O
@@ -1240,11 +1585,17 @@ return_from_interrupt _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 Code _ _ O
 run _ _ O
 by _ _ O
 system _ _ B-Concept
 call _ _ I-Concept
+
+
+ _ _ O
 Code _ _ O
 run _ _ O
 at _ _ O
@@ -1254,6 +1605,9 @@ time _ _ O
 Interrupt _ _ B-Concept
 handler _ _ I-Concept
 ) _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1262,6 +1616,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 

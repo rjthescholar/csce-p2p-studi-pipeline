@@ -11,6 +11,9 @@ Ahn _ _ O
 Solving _ _ O
 Structural _ _ B-Concept
 Hazards _ _ I-Concept
+
+
+ _ _ O
 2 _ _ O
 
 Structural _ _ B-Concept
@@ -32,58 +35,145 @@ same _ _ O
 time _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t0,0($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t1,4 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t1,4($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t2,8 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t2,8($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t3,12 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t3,12($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 3 _ _ O
 
 What _ _ O
@@ -112,12 +202,14 @@ this _ _ O
 case _ _ O
 , _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 memory _ _ B-Concept
 but _ _ O
 same _ _ O
 idea _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 We _ _ O
@@ -139,74 +231,163 @@ stall _ _ B-Concept
 ) _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t0,0($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 You _ _ O
 know _ _ O
 what _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 worse _ _ O
 ? _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t2,8 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t2,8($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t3,12 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t3,12($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 pattern _ _ O
 is _ _ O
 going _ _ O
 to _ _ O
 repeat _ _ O
+
+
+ _ _ O
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
-t1,4 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t1,4($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 5 _ _ O
 
 Or _ _ O
@@ -305,6 +486,9 @@ instruction _ _ I-Concept
 and _ _ I-Concept
 data _ _ I-Concept
 caches _ _ I-Concept
+
+
+ _ _ O
 6 _ _ O
 
 Structural _ _ B-Concept
@@ -316,10 +500,14 @@ Memories _ _ B-Concept
 ● _ _ O
 With _ _ O
 separate _ _ O
-i-cache _ _ B-Concept
+i _ _ B-Concept
+- _ _ I-Concept
+cache _ _ I-Concept
 and _ _ O
-d-cache _ _ B-Concept
-, _ _ I-Concept
+d _ _ O
+- _ _ B-Concept
+cache _ _ I-Concept
+, _ _ O
 MEM _ _ B-Concept
 and _ _ O
 IF _ _ B-Concept
@@ -328,58 +516,145 @@ work _ _ O
 in _ _ O
 parallel _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t0,0($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t1,4 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t1,4($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t2,8 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t2,8($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t3,12 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t3,12($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 7 _ _ O
 
 Structural _ _ B-Concept
@@ -400,33 +675,90 @@ going _ _ O
 on _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 Instruction _ _ B-Concept
 Memory _ _ I-Concept
+
+
+ _ _ O
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 PC _ _ B-Concept
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 dst _ _ O
 src1 _ _ O
 src2 _ _ O
+
+
+ _ _ O
 RegDataSrc _ _ O
+
+
+ _ _ O
 Data _ _ B-Concept
 Memory _ _ I-Concept
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 RegWrite _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 sxt _ _ O
+
+
+ _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Structural _ _ B-Concept
@@ -454,35 +786,92 @@ ALU _ _ B-Concept
 ! _ _ O
 EX _ _ B-Concept
 Stage _ _ O
+
+
+ _ _ O
 Instruction _ _ B-Concept
 Memory _ _ I-Concept
+
+
+ _ _ O
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 PC _ _ B-Concept
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 IF _ _ O
 Stage _ _ O
 dst _ _ O
 src1 _ _ O
 src2 _ _ O
+
+
+ _ _ O
 RegDataSrc _ _ O
+
+
+ _ _ O
 Data _ _ B-Concept
 Memory _ _ I-Concept
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 RegWrite _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 sxt _ _ O
+
+
+ _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Solving _ _ O
@@ -501,6 +890,9 @@ hardware _ _ O
 at _ _ O
 the _ _ O
 problem _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Duplicate _ _ B-Concept
@@ -598,6 +990,9 @@ structure _ _ I-Concept
 for _ _ O
 simultaneous _ _ O
 access _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Two _ _ O
@@ -617,6 +1012,9 @@ even _ _ O
 more _ _ O
 read _ _ B-Concept
 ports _ _ I-Concept
+
+
+ _ _ O
 11 _ _ O
 
 One _ _ O
@@ -635,6 +1033,9 @@ add _ _ O
 more _ _ O
 write _ _ B-Concept
 ports _ _ I-Concept
+
+
+ _ _ O
 12 _ _ O
 
 Two _ _ B-Concept
@@ -645,12 +1046,13 @@ Two _ _ I-Concept
 Register _ _ I-Concept
 Read _ _ I-Concept
 Ports _ _ I-Concept
+
+
+ _ _ O
 Dave _ _ O
 Tweed _ _ O
 ( _ _ O
-https _ _ O
-: _ _ O
-//electronics.stackexchange.com/users/11683/dave-tweed _ _ O
+https://electronics.stackexchange.com/users/11683/dave-tweed _ _ O
 ) _ _ O
 , _ _ O
 Build _ _ O
@@ -672,12 +1074,17 @@ URL _ _ O
 ( _ _ O
 version _ _ O
 : _ _ O
-2017-02-21 _ _ O
+2017 _ _ O
+- _ _ O
+02 _ _ O
+- _ _ O
+21 _ _ O
 ) _ _ O
 : _ _ O
-https _ _ O
-: _ _ O
-//electronics.stackexchange.com/q/273002 _ _ O
+https://electronics.stackexchange.com/q/273002 _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Two _ _ O
@@ -803,10 +1210,12 @@ circuitry _ _ O
 consumes _ _ O
 more _ _ O
 power _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 talk _ _ O
 more _ _ O
 about _ _ O
@@ -815,11 +1224,17 @@ when _ _ O
 we _ _ O
 discuss _ _ O
 superscalars _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Solving _ _ O
 Data _ _ B-Concept
 Hazards _ _ I-Concept
+
+
+ _ _ O
 15 _ _ O
 
 Data _ _ B-Concept
@@ -837,36 +1252,91 @@ previous _ _ O
 one _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 does _ _ O
@@ -891,6 +1361,9 @@ we _ _ O
 need _ _ O
 it _ _ O
 ? _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Solution _ _ O
@@ -940,36 +1413,91 @@ needed _ _ O
 data _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 This _ _ O
 handles _ _ O
@@ -1021,37 +1549,97 @@ to _ _ O
 do _ _ O
 ? _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t4 _ _ O
+t0,0(t4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 ● _ _ O
 This _ _ O
 kind _ _ O
@@ -1063,12 +1651,21 @@ in _ _ O
 our _ _ O
 current _ _ O
 pipeline _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Forwarding _ _ B-Concept
 Unit _ _ I-Concept
 and _ _ O
-Use-after-load-hazard _ _ B-Concept
+Use _ _ B-Concept
+- _ _ I-Concept
+after _ _ I-Concept
+- _ _ I-Concept
+load _ _ I-Concept
+- _ _ I-Concept
+hazard _ _ I-Concept
 If _ _ O
 dependent _ _ O
 on _ _ O
@@ -1081,11 +1678,13 @@ instruction _ _ O
 even _ _ O
 forwarding _ _ B-Concept
 unit _ _ I-Concept
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 avoid _ _ O
 stall _ _ B-Concept
+
+
+ _ _ O
 19 _ _ O
 
 Forwarding _ _ B-Concept
@@ -1102,6 +1701,9 @@ Unit _ _ I-Concept
 is _ _ O
 power _ _ O
 hungry _ _ O
+
+
+ _ _ O
 ● _ _ O
 Number _ _ O
 of _ _ O
@@ -1110,9 +1712,7 @@ wires _ _ O
 ∝ _ _ O
 ( _ _ O
 pipeline _ _ B-Concept
-stages _ _ I-Concept
-) _ _ O
-2 _ _ O
+stages)2 _ _ I-Concept
 o _ _ O
 Why _ _ O
 the _ _ O
@@ -1238,8 +1838,7 @@ by _ _ O
 reordering _ _ B-Concept
 ● _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 say _ _ O
 the _ _ O
 following _ _ O
@@ -1296,9 +1895,15 @@ tea _ _ O
 30 _ _ O
 minutes _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
 ● _ _ O
 Can _ _ O
@@ -1343,6 +1948,9 @@ tea _ _ O
 30 _ _ O
 minutes _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 ? _ _ O
@@ -1374,10 +1982,25 @@ reordered _ _ B-Concept
 with _ _ O
 each _ _ O
 other _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Data _ _ B-Concept
@@ -1412,36 +2035,63 @@ their _ _ O
 data _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t4 _ _ O
+t0,0(t4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t2,4 _ _ O
-( _ _ O
-t4 _ _ O
+t2,4(t4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 sub _ _ O
-s1 _ _ O
-, _ _ O
-t2 _ _ O
-, _ _ O
-t3 _ _ O
+s1,t2,t3 _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Data _ _ B-Concept
@@ -1476,56 +2126,140 @@ their _ _ O
 data _ _ O
 . _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t4 _ _ O
+t0,0(t4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t2,4 _ _ O
-( _ _ O
-t4 _ _ O
+t2,4(t4 _ _ O
 ) _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 sub _ _ O
-s1 _ _ O
-, _ _ O
-t2 _ _ O
-, _ _ O
-t3 _ _ O
+s1,t2,t3 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 23 _ _ O
 
 Limits _ _ O
@@ -1542,6 +2276,9 @@ is _ _ O
 called _ _ O
 static _ _ B-Concept
 scheduling _ _ I-Concept
+
+
+ _ _ O
 ● _ _ O
 Static _ _ B-Concept
 scheduling _ _ I-Concept
@@ -1619,14 +2356,10 @@ difficult _ _ O
 Given _ _ O
 : _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t4 _ _ O
+t0,0(t4 _ _ O
 ) _ _ O
 sw _ _ O
-s0,8 _ _ O
-( _ _ O
-t0 _ _ O
+s0,8(t0 _ _ O
 ) _ _ O
 We _ _ O
 want _ _ O
@@ -1639,27 +2372,24 @@ data _ _ O
 hazard _ _ O
 . _ _ O
 lw _ _ O
-t2,4 _ _ O
-( _ _ O
-t4 _ _ O
+t2,4(t4 _ _ O
 ) _ _ O
 But _ _ O
 what _ _ O
 if _ _ O
-8 _ _ O
-( _ _ O
-t0 _ _ O
+8(t0 _ _ O
 ) _ _ O
 and _ _ O
-4 _ _ O
-( _ _ O
-t4 _ _ O
+4(t4 _ _ O
 ) _ _ O
 are _ _ O
 the _ _ O
 same _ _ O
 addresses _ _ O
 ? _ _ O
+
+
+ _ _ O
 This _ _ O
 involves _ _ O
 pointer _ _ B-Concept
@@ -1686,11 +2416,13 @@ done _ _ O
 by _ _ O
 the _ _ O
 CPU _ _ O
+
+
+ _ _ O
 ● _ _ O
 It _ _ O
-doesn _ _ O
-’ _ _ O
-t _ _ O
+does _ _ O
+n’t _ _ O
 have _ _ O
 the _ _ O
 limitations _ _ O
@@ -1699,9 +2431,8 @@ static _ _ B-Concept
 scheduling _ _ I-Concept
 o _ _ O
 It _ _ O
-doesn _ _ O
-’ _ _ O
-t _ _ O
+does _ _ O
+n’t _ _ O
 have _ _ O
 to _ _ O
 predict _ _ O
@@ -1716,8 +2447,7 @@ things _ _ O
 unfold _ _ O
 o _ _ O
 It _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 easy _ _ O
 to _ _ O
 figure _ _ O
@@ -1734,14 +2464,10 @@ runtime _ _ O
 , _ _ O
 addresses _ _ O
 of _ _ O
-8 _ _ O
-( _ _ O
-t0 _ _ O
+8(t0 _ _ O
 ) _ _ O
 and _ _ O
-4 _ _ O
-( _ _ O
-t4 _ _ O
+4(t4 _ _ O
 ) _ _ O
 are _ _ O
 easily _ _ O
@@ -1775,11 +2501,17 @@ more _ _ O
 on _ _ O
 this _ _ O
 later _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Solving _ _ O
 Control _ _ B-Concept
 Hazards _ _ I-Concept
+
+
+ _ _ O
 26 _ _ O
 
 Loops _ _ O
@@ -1792,23 +2524,19 @@ time _ _ O
 in _ _ O
 programs _ _ O
 . _ _ O
-for _ _ O
-( _ _ O
-s0 _ _ O
+
+
+ _ _ O
+for(s0 _ _ O
 = _ _ O
 0 _ _ O
 .. _ _ O
 10 _ _ O
 ) _ _ O
-print _ _ O
-( _ _ O
-s0 _ _ O
+print(s0 _ _ O
 ) _ _ O
 ; _ _ O
-printf _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+printf("done _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -1833,10 +2561,19 @@ following _ _ O
 la _ _ O
 instruction _ _ O
 ? _ _ O
+
+
+ _ _ O
 li _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 0 _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
 move _ _ O
@@ -1859,10 +2596,16 @@ s0 _ _ O
 top _ _ O
 la _ _ O
 jal _ _ O
+
+
+ _ _ O
 a0 _ _ O
 , _ _ O
 done_msg _ _ O
 printf _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Pipeline _ _ B-Concept
@@ -1885,14 +2628,19 @@ loops _ _ O
 back _ _ O
 ! _ _ O
 Time _ _ O
+
+
+ _ _ O
 blt _ _ O
-s0,10 _ _ O
-, _ _ O
-top _ _ O
+s0,10,top _ _ O
+
+
+ _ _ O
 la _ _ O
-a0 _ _ O
-, _ _ O
-done_msg _ _ O
+a0,done_msg _ _ O
+
+
+ _ _ O
 jal _ _ O
 printf _ _ O
 s0 _ _ O
@@ -1902,30 +2650,94 @@ s0 _ _ O
 OOPS _ _ O
 ! _ _ O
 move _ _ O
-a0 _ _ O
-, _ _ O
-s0 _ _ O
+a0,s0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 28 _ _ O
 
 Performance _ _ O
@@ -1979,7 +2791,8 @@ Number _ _ O
 of _ _ O
 flushed _ _ O
 instructions _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 distance _ _ O
 from _ _ O
 IF _ _ O
@@ -2002,9 +2815,13 @@ EX _ _ O
 stages _ _ O
 ? _ _ O
 Penalty _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 10 _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 Current _ _ O
 architectures _ _ O
@@ -2035,6 +2852,9 @@ deep _ _ O
 pipelines _ _ O
 are _ _ O
 problematic _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Performance _ _ O
@@ -2052,6 +2872,9 @@ a _ _ O
 p _ _ O
 * _ _ O
 K _ _ O
+
+
+ _ _ O
 o _ _ O
 CPInch _ _ O
 : _ _ O
@@ -2087,6 +2910,9 @@ penalty _ _ O
 per _ _ O
 pipeline _ _ O
 flush _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 If _ _ O
@@ -2133,6 +2959,9 @@ CPInch _ _ O
 cycles _ _ O
 per _ _ O
 instruction _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 if _ _ O
@@ -2141,7 +2970,9 @@ had _ _ O
 a _ _ O
 compiler _ _ O
 insert _ _ O
-no-ops _ _ B-Concept
+no _ _ B-Concept
+- _ _ I-Concept
+ops _ _ I-Concept
 , _ _ O
 with _ _ O
 no _ _ O
@@ -2149,8 +2980,7 @@ HDU _ _ B-Concept
 ? _ _ O
 o _ _ O
 It _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 even _ _ O
 worse _ _ O
 , _ _ O
@@ -2160,6 +2990,9 @@ will _ _ O
 soon _ _ O
 see _ _ O
 . _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 Compiler _ _ O
@@ -2183,44 +3016,139 @@ insert _ _ O
 two _ _ O
 nops _ _ B-Concept
 Cycle _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 blt _ _ O
-s0,10 _ _ O
-, _ _ O
-top _ _ O
+s0,10,top _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 move _ _ O
-a0 _ _ O
-, _ _ O
-s0 _ _ O
+a0,s0 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 31 _ _ O
 
 Performance _ _ O
@@ -2237,6 +3165,9 @@ CPInch _ _ O
 a _ _ O
 * _ _ O
 K _ _ O
+
+
+ _ _ O
 o _ _ O
 CPInch _ _ O
 : _ _ O
@@ -2259,11 +3190,16 @@ mix _ _ O
 o _ _ O
 K _ _ O
 : _ _ O
-no-ops _ _ B-Concept
+no _ _ B-Concept
+- _ _ I-Concept
+ops _ _ I-Concept
 inserted _ _ O
 after _ _ O
 each _ _ O
 branch _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 If _ _ O
@@ -2291,7 +3227,9 @@ resolution _ _ O
 delay _ _ O
 of _ _ O
 7 _ _ O
-no-ops _ _ B-Concept
+no _ _ B-Concept
+- _ _ I-Concept
+ops _ _ I-Concept
 , _ _ O
 then _ _ O
 : _ _ O
@@ -2309,8 +3247,13 @@ CPInch _ _ O
 cycles _ _ O
 per _ _ O
 instruction _ _ O
+
+
+ _ _ O
 o _ _ O
-Branch-taken _ _ O
+Branch _ _ O
+- _ _ O
+taken _ _ O
 rate _ _ O
 is _ _ O
 irrelevant _ _ O
@@ -2331,6 +3274,9 @@ the _ _ O
 performance _ _ O
 impact _ _ O
 ? _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Solution _ _ O
@@ -2347,7 +3293,9 @@ static _ _ B-Concept
 scheduling _ _ I-Concept
 to _ _ O
 fill _ _ O
-no-ops _ _ B-Concept
+no _ _ B-Concept
+- _ _ I-Concept
+ops _ _ I-Concept
 with _ _ O
 useful _ _ O
 work _ _ O
@@ -2359,7 +3307,9 @@ did _ _ O
 the _ _ O
 same _ _ O
 for _ _ O
-no-ops _ _ B-Concept
+no _ _ B-Concept
+- _ _ I-Concept
+ops _ _ I-Concept
 due _ _ O
 to _ _ O
 data _ _ B-Concept
@@ -2405,11 +3355,9 @@ branch _ _ O
 semantic _ _ O
 o _ _ O
 It _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 compiler _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 job _ _ O
 to _ _ O
 fill _ _ O
@@ -2429,6 +3377,9 @@ dependent _ _ O
 on _ _ O
 the _ _ O
 branch _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Compiler _ _ O
@@ -2473,6 +3424,9 @@ t2 _ _ O
 t2 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 blt _ _ O
 s0 _ _ O
 , _ _ O
@@ -2508,6 +3462,9 @@ t0 _ _ O
 merge _ _ O
 : _ _ O
 … _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 addi _ _ O
@@ -2517,6 +3474,9 @@ moved _ _ O
 into _ _ O
 delay _ _ B-Concept
 slot _ _ I-Concept
+
+
+ _ _ O
 o _ _ O
 It _ _ O
 is _ _ O
@@ -2556,13 +3516,15 @@ idea _ _ O
 on _ _ O
 paper _ _ O
 but _ _ O
-didn _ _ O
-’ _ _ O
-t _ _ O
+did _ _ O
+n’t _ _ O
 work _ _ O
 well _ _ O
 in _ _ O
 practice _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Turns _ _ O
@@ -2584,9 +3546,8 @@ and _ _ O
 control _ _ O
 independent _ _ O
 instructions _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 exist _ _ O
 2 _ _ O
 . _ _ O
@@ -2636,6 +3597,9 @@ Next _ _ O
 idea _ _ O
 please _ _ O
 ! _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Solution _ _ O
@@ -2649,6 +3613,9 @@ a.k.a _ _ O
 . _ _ O
 hardware _ _ O
 ) _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 Do _ _ O
@@ -2678,14 +3645,16 @@ EX _ _ B-Concept
 stage _ _ O
 ? _ _ O
 Time _ _ O
+
+
+ _ _ O
 blt _ _ O
-s0,10 _ _ O
-, _ _ O
-top _ _ O
+s0,10,top _ _ O
+
+
+ _ _ O
 la _ _ O
-a0 _ _ O
-, _ _ O
-done_msg _ _ O
+a0,done_msg _ _ O
 s0 _ _ O
 < _ _ O
 10 _ _ O
@@ -2693,28 +3662,86 @@ s0 _ _ O
 OOPS _ _ O
 ! _ _ O
 move _ _ O
-a0 _ _ O
-, _ _ O
-s0 _ _ O
+a0,s0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ● _ _ O
 Reduced _ _ O
 penalty _ _ O
@@ -2763,6 +3790,9 @@ of _ _ O
 doing _ _ O
 it _ _ O
 here _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 Not _ _ O
@@ -2784,42 +3814,111 @@ no _ _ O
 delay _ _ O
 : _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 sub _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 we _ _ O
@@ -2833,35 +3932,77 @@ with _ _ O
 forwarding _ _ B-Concept
 : _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 sub _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 Not _ _ O
@@ -2880,43 +4021,104 @@ lw _ _ O
 also _ _ O
 : _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-t1 _ _ O
+t0,0($t1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 ID _ _ B-Concept
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 we _ _ O
@@ -2959,6 +4161,9 @@ before _ _ O
 our _ _ O
 new _ _ O
 comparator _ _ B-Concept
+
+
+ _ _ O
 40 _ _ O
 
 Textbook _ _ O
@@ -2981,6 +4186,9 @@ like _ _ O
 the _ _ O
 ALU _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 

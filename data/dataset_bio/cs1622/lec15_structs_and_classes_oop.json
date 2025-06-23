@@ -64,18 +64,17 @@
             "stuff",
             "in",
             "the",
-            "projects\u2026",
+            "projects",
+            "\u2026",
             "o",
             "so",
             "we",
-            "\u2019",
-            "ll",
+            "\u2019ll",
             "kinda",
             "skip",
             "that",
             "stuff",
-            "!",
-            "2"
+            "!"
         ],
         "word_labels": [
             0,
@@ -108,7 +107,6 @@
             0,
             1,
             2,
-            0,
             0,
             0,
             0,
@@ -128,14 +126,40 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "Structured",
-            "types",
-            "3"
+            "types"
         ],
         "word_labels": [
             1,
-            2,
+            2
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
             0
         ]
     },
@@ -174,7 +198,9 @@
             "a",
             "lot",
             "of",
-            "problem-solving",
+            "problem",
+            "-",
+            "solving",
             "power",
             ".",
             "o",
@@ -198,7 +224,9 @@
             "of",
             "indirection",
             "and",
-            "dynamically-sized",
+            "dynamically",
+            "-",
+            "sized",
             "data",
             "structures",
             ",",
@@ -251,12 +279,12 @@
             "to",
             "start",
             "is",
-            "with\u2026",
+            "with",
+            "\u2026",
             "classes",
             "structs",
             "tuples",
-            "!",
-            "4"
+            "!"
         ],
         "word_labels": [
             1,
@@ -308,15 +336,19 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
             0,
             0,
             1,
             0,
+            0,
+            0,
+            0,
+            0,
             1,
+            0,
+            1,
+            2,
+            2,
             2,
             2,
             0,
@@ -370,9 +402,23 @@
             0,
             0,
             0,
+            0,
             1,
             1,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -426,12 +472,15 @@
             "use",
             "them",
             "to",
-            "represent\u2026",
+            "represent",
+            "\u2026",
             "o",
             "coordinates",
             "in",
             "an",
-            "n-dimensional",
+            "n",
+            "-",
+            "dimensional",
             "space",
             ":",
             "(",
@@ -508,8 +557,8 @@
             "where",
             "this",
             "is",
-            "going\u2026",
-            "5"
+            "going",
+            "\u2026"
         ],
         "word_labels": [
             1,
@@ -540,6 +589,9 @@
             0,
             1,
             1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -646,6 +698,20 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "Operations",
             "on",
@@ -664,9 +730,7 @@
             "values",
             ":",
             "o",
-            "t",
-            "[",
-            "2",
+            "t[2",
             "]",
             "=",
             "34",
@@ -679,7 +743,8 @@
             "know",
             "their",
             "length",
-            "statically\u2026",
+            "statically",
+            "\u2026",
             "o",
             "but",
             "each",
@@ -744,9 +809,7 @@
             "35",
             ")",
             ";",
-            "me",
-            "[",
-            "AGE",
+            "me[AGE",
             "]",
             "=",
             "36",
@@ -754,9 +817,7 @@
             "//",
             "next",
             "year",
-            "..",
-            "\u25cf\ud83e\udd14",
-            "6"
+            ".."
         ],
         "word_labels": [
             0,
@@ -783,17 +844,12 @@
             0,
             0,
             0,
-            0,
-            0,
             1,
             0,
             0,
             0,
             0,
             1,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -872,8 +928,27 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
         "sentence": [
-            "\u2026yeah",
+            "",
+            "\u25cf",
+            "\ud83e\udd14",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [
+            "\u2026",
+            "yeah",
             "okay",
             "that",
             "'s",
@@ -908,7 +983,8 @@
             "same",
             "thing",
             ",",
-            "except\u2026",
+            "except",
+            "\u2026",
             "o",
             "tuples",
             "'",
@@ -932,67 +1008,10 @@
             "how",
             "structs",
             "work",
-            ":",
-            "struct",
-            "Point",
-            "{",
-            "x",
-            ":",
-            "int",
-            ",",
-            "y",
-            ":",
-            "int",
-            "}",
-            "let",
-            "p",
-            "=",
-            "new",
-            "Point",
-            "(",
-            "3",
-            ",",
-            "8",
-            ")",
-            ";",
-            "p.x",
-            "=",
-            "p.x",
-            "+",
-            "1",
-            ";",
-            "\u2248",
-            "\u2248",
-            "let",
-            "p",
-            "=",
-            "(",
-            "3",
-            ",",
-            "8",
-            ")",
-            ";",
-            "p",
-            "[",
-            "0",
-            "]",
-            "=",
-            "p",
-            "[",
-            "0",
-            "]",
-            "+",
-            "1",
-            ";",
-            "\u2248",
-            "(",
-            "int",
-            ",",
-            "int",
-            ")",
-            "7"
+            ":"
         ],
         "word_labels": [
+            0,
             0,
             0,
             0,
@@ -1030,11 +1049,6 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
-            1,
             0,
             1,
             0,
@@ -1042,11 +1056,7 @@
             0,
             1,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -1060,6 +1070,45 @@
             0,
             0,
             0,
+            1,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "struct",
+            "Point",
+            "{",
+            "x",
+            ":",
+            "int",
+            ",",
+            "y",
+            ":",
+            "int",
+            "}",
+            "let",
+            "p",
+            "=",
+            "new",
+            "Point(3",
+            ",",
+            "8)",
+            ";",
+            "p.x",
+            "=",
+            "p.x",
+            "+",
+            "1",
+            ";"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1085,6 +1134,42 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "\u2248",
+            "\u2248",
+            "let",
+            "p",
+            "=",
+            "(",
+            "3",
+            ",",
+            "8)",
+            ";",
+            "p[0",
+            "]",
+            "=",
+            "p[0",
+            "]",
+            "+",
+            "1",
+            ";",
+            "\u2248",
+            "(",
+            "int",
+            ",",
+            "int",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1109,6 +1194,19 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -1145,60 +1243,7 @@
             "that",
             "means",
             "is",
-            ":",
-            "(",
-            "int",
-            ",",
-            "int",
-            ",",
-            "int",
-            ")",
-            "\u2248",
-            "struct",
-            "Point3D",
-            "{",
-            "x",
-            ":",
-            "int",
-            ",",
-            "y",
-            ":",
-            "int",
-            ",",
-            "z",
-            ":",
-            "int",
-            "}",
-            "same",
-            "type",
-            "!",
-            "different",
-            "types",
-            "!",
-            "(",
-            "int",
-            ",",
-            "int",
-            ",",
-            "int",
-            ")",
-            "struct",
-            "Color",
-            "{",
-            "r",
-            ":",
-            "int",
-            ",",
-            "g",
-            ":",
-            "int",
-            ",",
-            "b",
-            ":",
-            "int",
-            "}",
-            "\u2248",
-            "8"
+            ":"
         ],
         "word_labels": [
             0,
@@ -1231,6 +1276,73 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "(",
+            "int",
+            ",",
+            "int",
+            ",",
+            "int",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "\u2248"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "struct",
+            "Point3D",
+            "{",
+            "x",
+            ":",
+            "int",
+            ",",
+            "y",
+            ":",
+            "int",
+            ",",
+            "z",
+            ":",
+            "int",
+            "}"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1246,6 +1358,95 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "same",
+            "type",
+            "!"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "different",
+            "types",
+            "!"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "(",
+            "int",
+            ",",
+            "int",
+            ",",
+            "int",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "struct",
+            "Color",
+            "{",
+            "r",
+            ":",
+            "int",
+            ",",
+            "g",
+            ":",
+            "int",
+            ",",
+            "b",
+            ":",
+            "int",
+            "}"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1261,28 +1462,33 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "\u2248"
+        ],
+        "word_labels": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -1420,8 +1626,7 @@
             "only",
             "one",
             "Object",
-            "...",
-            "9"
+            "..."
         ],
         "word_labels": [
             1,
@@ -1555,6 +1760,19 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "9"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -1683,8 +1901,7 @@
             ":",
             "should",
             "Truss",
-            "\u2019",
-            "s",
+            "\u2019s",
             "structs",
             "be",
             "value",
@@ -1726,7 +1943,9 @@
             "sometimes",
             "with",
             "more",
-            "space/time",
+            "space",
+            "/",
+            "time",
             "overhead",
             ".",
             "\u25cf",
@@ -1739,7 +1958,8 @@
             "then",
             "we",
             "probably",
-            "need\u2026",
+            "need",
+            "\u2026",
             "null",
             ".",
             "10"
@@ -1870,7 +2090,6 @@
             0,
             0,
             0,
-            0,
             1,
             2,
             0,
@@ -1918,7 +2137,10 @@
             0,
             0,
             0,
+            0,
+            0,
             1,
+            0,
             0,
             0,
             0,
@@ -1961,7 +2183,8 @@
             "not",
             "pointing",
             "to",
-            "anything.",
+            "anything",
+            ".",
             "\u201d",
             "\u25cf",
             "trying",
@@ -2036,8 +2259,7 @@
             "\u25cf",
             "also",
             "it",
-            "\u2019",
-            "s",
+            "\u2019s",
             "just",
             "weird",
             "when",
@@ -2048,8 +2270,7 @@
             ".",
             "o",
             "it",
-            "\u2019",
-            "s",
+            "\u2019s",
             "the",
             "only",
             "value",
@@ -2164,9 +2385,8 @@
             0,
             0,
             0,
+            0,
             1,
-            0,
-            0,
             0,
             0,
             0,
@@ -2319,13 +2539,25 @@
         "sentence": [
             "Struct",
             "Runtime",
-            "Representation",
-            "12"
+            "Representation"
         ],
         "word_labels": [
             1,
             2,
-            2,
+            2
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "12"
+        ],
+        "word_labels": [
+            0,
             0
         ]
     },
@@ -2368,79 +2600,7 @@
             "'s",
             "do",
             "that",
-            ".",
-            "struct",
-            "Point3D",
-            "{",
-            "x",
-            ":",
-            "int",
-            ",",
-            "y",
-            ":",
-            "int",
-            ",",
-            "z",
-            ":",
-            "int",
-            "}",
-            "assuming",
-            "int",
-            "is",
-            "32",
-            "bits",
-            "(",
-            "4",
-            "Bytes",
-            ")",
-            "\u2026",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "these",
-            "numbers",
-            "are",
-            "the",
-            "offsets",
-            "from",
-            "the",
-            "beginning",
-            "of",
-            "the",
-            "struct",
-            ".",
-            "(",
-            "assuming",
-            "we",
-            "'re",
-            "using",
-            "a",
-            "byte-addressable",
-            "machine",
-            ")",
-            "they",
-            "say",
-            "how",
-            "far",
-            "\"",
-            "into",
-            "the",
-            "struct",
-            "\"",
-            "each",
-            "field",
-            "is",
-            ".",
-            "13"
+            "."
         ],
         "word_labels": [
             1,
@@ -2480,6 +2640,43 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "struct",
+            "Point3D",
+            "{",
+            "x",
+            ":",
+            "int",
+            ",",
+            "y",
+            ":",
+            "int",
+            ",",
+            "z",
+            ":",
+            "int",
+            "}",
+            "assuming",
+            "int",
+            "is",
+            "32",
+            "bits",
+            "(",
+            "4",
+            "Bytes",
+            ")",
+            "\u2026"
+        ],
+        "word_labels": [
             0,
             1,
             0,
@@ -2505,18 +2702,197 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "9"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "10",
+            "11"
+        ],
+        "word_labels": [
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "these",
+            "numbers",
+            "are",
+            "the",
+            "offsets",
+            "from",
+            "the",
+            "beginning",
+            "of",
+            "the",
+            "struct",
+            ".",
+            "(",
+            "assuming",
+            "we",
+            "'re",
+            "using",
+            "a",
+            "byte",
+            "-",
+            "addressable",
+            "machine",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2538,6 +2914,34 @@
             0,
             0,
             0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "they",
+            "say",
+            "how",
+            "far",
+            "\"",
+            "into",
+            "the",
+            "struct",
+            "\"",
+            "each",
+            "field",
+            "is",
+            ".",
+            "13"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2591,104 +2995,7 @@
             "i",
             ":",
             "int",
-            "}",
-            "b",
-            "i",
-            "0",
-            "1",
-            "this",
-            "is",
-            "a",
-            "totally",
-            "valid",
-            "way",
-            "of",
-            "doing",
-            "it",
-            ".",
-            "2",
-            "3",
-            "4",
-            "unfortunately",
-            ",",
-            "lots",
-            "of",
-            "CPU",
-            "architectures",
-            "hate",
-            "this",
-            ".",
-            "CPUs",
-            "like",
-            "values",
-            "to",
-            "be",
-            "aligned",
-            ".",
-            "that",
-            "means",
-            ":",
-            "the",
-            "memory",
-            "address",
-            "in",
-            "an",
-            "n-byte",
-            "load/store",
-            "must",
-            "be",
-            "a",
-            "multiple",
-            "of",
-            "n.",
-            "x86",
-            "CPUs",
-            "will",
-            "access",
-            "unaligned",
-            "values",
-            "very",
-            "slowly",
-            ".",
-            "MIPS",
-            "CPUs",
-            "will",
-            "crash",
-            ".",
-            "(",
-            "unless",
-            "you",
-            "use",
-            "the",
-            "much",
-            "slower",
-            "unaligned",
-            "loads/stores",
-            ")",
-            "so",
-            ",",
-            "we",
-            "need",
-            "to",
-            "insert",
-            "padding",
-            "(",
-            "extra",
-            "unused",
-            "bytes",
-            ")",
-            "into",
-            "our",
-            "structs",
-            "to",
-            "ensure",
-            "each",
-            "field",
-            "is",
-            "properly",
-            "aligned",
-            ".",
-            "14"
+            "}"
         ],
         "word_labels": [
             0,
@@ -2725,6 +3032,84 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "is",
+            "a",
+            "totally",
+            "valid",
+            "way",
+            "of",
+            "doing",
+            "it",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2732,6 +3117,153 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "unfortunately",
+            ",",
+            "lots",
+            "of",
+            "CPU",
+            "architectures",
+            "hate",
+            "this",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "CPUs",
+            "like",
+            "values",
+            "to",
+            "be",
+            "aligned",
+            ".",
+            "that",
+            "means",
+            ":",
+            "the",
+            "memory",
+            "address",
+            "in",
+            "an",
+            "n",
+            "-",
+            "byte",
+            "load",
+            "/",
+            "store",
+            "must",
+            "be",
+            "a",
+            "multiple",
+            "of",
+            "n.",
+            "x86",
+            "CPUs",
+            "will",
+            "access",
+            "unaligned",
+            "values",
+            "very",
+            "slowly",
+            ".",
+            "MIPS",
+            "CPUs",
+            "will",
+            "crash",
+            ".",
+            "(",
+            "unless",
+            "you",
+            "use",
+            "the",
+            "much",
+            "slower",
+            "unaligned",
+            "loads",
+            "/",
+            "stores",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -2778,26 +3310,42 @@
             0,
             0,
             0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "so",
+            ",",
+            "we",
+            "need",
+            "to",
+            "insert",
+            "padding",
+            "(",
+            "extra",
+            "unused",
+            "bytes",
+            ")",
+            "into",
+            "our",
+            "structs",
+            "to",
+            "ensure",
+            "each",
+            "field",
+            "is",
+            "properly",
+            "aligned",
+            ".",
+            "14"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2891,56 +3439,7 @@
             "i",
             ":",
             "int",
-            "}",
-            "b",
-            "0",
-            "i",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "and",
-            "if",
-            "we",
-            "swapped",
-            "b",
-            "and",
-            "i",
-            ":",
-            "i",
-            "0",
-            "b",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "either",
-            "way",
-            ",",
-            "the",
-            "struct",
-            "is",
-            "8",
-            "bytes",
-            ",",
-            "and",
-            "it",
-            "must",
-            "be",
-            "4-byte",
-            "aligned",
-            "because",
-            "of",
-            "the",
-            "int",
-            ".",
-            "15"
+            "}"
         ],
         "word_labels": [
             1,
@@ -3007,6 +3506,142 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "and",
+            "if",
+            "we",
+            "swapped",
+            "b",
+            "and",
+            "i",
+            ":"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -3015,26 +3650,155 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i",
+            "0"
+        ],
+        "word_labels": [
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b",
+            "1"
+        ],
+        "word_labels": [
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "6"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "either",
+            "way",
+            ",",
+            "the",
+            "struct",
+            "is",
+            "8",
+            "bytes",
+            ",",
+            "and",
+            "it",
+            "must",
+            "be",
+            "4-byte",
+            "aligned",
+            "because",
+            "of",
+            "the",
+            "int",
+            ".",
+            "15"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -3125,75 +3889,7 @@
             "structs",
             ":",
             "i",
-            "0",
-            "b",
-            "1",
-            "2",
-            "3",
-            "i",
-            "0",
-            "1",
-            "2",
-            "3",
-            "i",
-            "4",
-            "5",
-            "b",
-            "i",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "b",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "b",
-            "6",
-            "7",
-            "8",
-            "9",
-            "without",
-            "the",
-            "end-padding",
-            ",",
-            "this",
-            "int",
-            "field",
-            "of",
-            "the",
-            "second",
-            "item",
-            "is",
-            "now",
-            "misaligned",
-            ".",
-            "the",
-            "memory",
-            "allocator",
-            "will",
-            "have",
-            "to",
-            "allocate",
-            "things",
-            "at",
-            "aligned",
-            "memory",
-            "addresses",
-            "as",
-            "well",
-            ",",
-            "for",
-            "this",
-            "to",
-            "work",
-            ".",
-            "16"
+            "0"
         ],
         "word_labels": [
             0,
@@ -3260,31 +3956,381 @@
             1,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "i"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b",
+            "9"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "7"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "9"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "without",
+            "the",
+            "end",
+            "-",
+            "padding",
+            ",",
+            "this",
+            "int",
+            "field",
+            "of",
+            "the",
+            "second",
+            "item",
+            "is",
+            "now",
+            "misaligned",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0,
             0,
@@ -3296,17 +4342,39 @@
             0,
             0,
             1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "the",
+            "memory",
+            "allocator",
+            "will",
+            "have",
+            "to",
+            "allocate",
+            "things",
+            "at",
+            "aligned",
+            "memory",
+            "addresses",
+            "as",
+            "well",
+            ",",
+            "for",
+            "this",
+            "to",
+            "work",
+            ".",
+            "16"
+        ],
+        "word_labels": [
             0,
             0,
             1,
@@ -3333,7 +4401,8 @@
     },
     {
         "sentence": [
-            "Anyway\u2026",
+            "Anyway",
+            "\u2026",
             "allocation",
             "\u25cf",
             "now",
@@ -3365,11 +4434,7 @@
             "'s",
             "call",
             "it",
-            "rt",
-            "$",
-            "new",
-            "(",
-            "size",
+            "rt$new(size",
             ":",
             "int",
             ")",
@@ -3418,7 +4483,101 @@
             ":",
             "int",
             ",",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "let",
             "t",
             "=",
@@ -3426,7 +4585,27 @@
             "Thing",
             "(",
             ")",
-            ";",
+            ";"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "allocations",
             "get",
             "generated",
@@ -3449,26 +4628,19 @@
             "sw",
             "s0",
             ",",
-            "0",
-            "(",
-            "sp",
+            "0(sp",
             ")",
             "#",
             "size",
             "jal",
-            "rt",
-            "$",
-            "new",
+            "rt$new",
             "sw",
             "v0",
             ",",
-            "-24",
-            "(",
-            "fp",
+            "-24(fp",
             ")",
             "#",
-            "t",
-            "17"
+            "t"
         ],
         "word_labels": [
             0,
@@ -3478,25 +4650,17 @@
             0,
             0,
             0,
-            1,
             0,
-            1,
             0,
             0,
-            1,
             0,
             0,
             0,
             0,
             0,
             0,
-            1,
-            2,
             0,
             0,
-            1,
-            2,
-            1,
             0,
             0,
             0,
@@ -3514,97 +4678,19 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "17"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -3664,7 +4750,72 @@
             "offs",
             ":",
             "8",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "to",
             "access",
             "a",
@@ -3689,8 +4840,50 @@
             "flavor",
             "\"",
             "of",
-            "load/store",
-            ".",
+            "load",
+            "/",
+            "store",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "let",
             "t",
             "=",
@@ -3703,16 +4896,54 @@
             "=",
             "true",
             ";",
-            "t.count",
+            "t.count"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "=",
             "20",
-            ";",
+            ";"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "lw",
             "s0",
             ",",
-            "-24",
-            "(",
-            "fp",
+            "-24(fp",
             ")",
             "#",
             "t",
@@ -3725,9 +4956,7 @@
             "sb",
             "s1",
             ",",
-            "4",
-            "(",
-            "s0",
+            "4(s0",
             ")",
             "#",
             "t.in_use",
@@ -3736,9 +4965,7 @@
             "lw",
             "s0",
             ",",
-            "-24",
-            "(",
-            "fp",
+            "-24(fp",
             ")",
             "#",
             "t",
@@ -3749,9 +4976,7 @@
             "sw",
             "s1",
             ",",
-            "8",
-            "(",
-            "s0",
+            "8(s0",
             ")",
             "#",
             "t.count",
@@ -3760,109 +4985,6 @@
             "18"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            1,
-            2,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3911,11 +5033,23 @@
     },
     {
         "sentence": [
-            "OOP",
+            "OOP"
+        ],
+        "word_labels": [
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "19"
         ],
         "word_labels": [
-            1,
+            0,
             0
         ]
     },
@@ -3925,7 +5059,9 @@
             "is",
             "OOP",
             "(",
-            "object-oriented",
+            "object",
+            "-",
+            "oriented",
             "programming",
             ")",
             "?",
@@ -3949,14 +5085,17 @@
             "o",
             "but",
             "\"",
-            "Java-flavored",
+            "Java",
+            "-",
+            "flavored",
             "OOP",
             "\"",
             "is",
             "n't",
             "the",
             "only",
-            "kind\u2026",
+            "kind",
+            "\u2026",
             "\u25cf",
             "C",
             "has",
@@ -4014,7 +5153,8 @@
             "distinguishes",
             "C++",
             "from",
-            "C\u2026",
+            "C",
+            "\u2026",
             "is",
             "methods",
             ".",
@@ -4076,8 +5216,7 @@
             "runtime",
             "type",
             "identification",
-            ".",
-            "20"
+            "."
         ],
         "word_labels": [
             0,
@@ -4086,6 +5225,10 @@
             0,
             1,
             2,
+            2,
+            2,
+            0,
+            0,
             0,
             0,
             0,
@@ -4110,6 +5253,7 @@
             0,
             0,
             1,
+            0,
             0,
             0,
             0,
@@ -4175,22 +5319,8 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
             0,
             1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
             0,
             0,
             0,
@@ -4204,6 +5334,21 @@
             0,
             0,
             0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -4235,6 +5380,19 @@
             1,
             2,
             2,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "20"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -4297,18 +5455,14 @@
             "string",
             "{",
             "return",
-            "to_string",
-            "(",
-            "this.x",
+            "to_string(this.x",
             ")",
             "+",
             "\"",
             ",",
             "\"",
             "+",
-            "to_string",
-            "(",
-            "this.y",
+            "to_string(this.y",
             ")",
             ";",
             "}",
@@ -4317,53 +5471,15 @@
             "p",
             "=",
             "new",
-            "Point",
-            "(",
-            "3",
+            "Point(3",
             ",",
-            "8",
-            ")",
+            "8)",
             ";",
-            "println_s",
-            "(",
-            "p.to_string",
+            "println_s(p.to_string",
             "(",
             ")",
             ")",
-            ";",
-            "here",
-            ",",
-            "the",
-            "method",
-            "call",
-            "is",
-            "syntactic",
-            "sugar",
-            "for",
-            "something",
-            "like",
-            ":",
-            "Point.to_string",
-            "(",
-            "p",
-            ")",
-            "this",
-            "is",
-            "static",
-            "dispatch",
-            ",",
-            "because",
-            "we",
-            "can",
-            "determine",
-            "which",
-            "method",
-            "to",
-            "call",
-            "at",
-            "compile-time",
-            ".",
-            "21"
+            ";"
         ],
         "word_labels": [
             1,
@@ -4446,15 +5562,32 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "here",
+            ",",
+            "the",
+            "method",
+            "call",
+            "is",
+            "syntactic",
+            "sugar",
+            "for",
+            "something",
+            "like",
+            ":",
+            "Point.to_string(p",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4469,8 +5602,36 @@
             0,
             0,
             0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "is",
+            "static",
+            "dispatch",
+            ",",
+            "because",
+            "we",
+            "can",
+            "determine",
+            "which",
+            "method",
+            "to",
+            "call",
+            "at",
+            "compile",
+            "-",
+            "time",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4487,6 +5648,21 @@
             0,
             0,
             1,
+            2,
+            2,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "21"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -4527,110 +5703,7 @@
             "{",
             "String",
             "s",
-            ";",
-            "C",
-            "(",
-            ")",
-            "{",
-            "//",
-            "s",
-            "==",
-            "null",
-            "s",
-            "=",
-            "\"",
-            "hi",
-            "\"",
-            ";",
-            "}",
-            "}",
-            "C",
-            "c",
-            "=",
-            "new",
-            "C",
-            "(",
-            ")",
-            ";",
-            "in",
-            "this",
-            "Java",
-            "code",
-            ",",
-            "new",
-            "C",
-            "(",
-            ")",
-            "does",
-            "the",
-            "following",
-            ":",
-            "1.",
-            "allocates",
-            "an",
-            "instance",
-            "of",
-            "C",
-            "2.",
-            "initializes",
-            "all",
-            "its",
-            "fields",
-            "to",
-            "default",
-            "values",
-            "*",
-            "3.",
-            "calls",
-            "the",
-            "constructor",
-            "on",
-            "that",
-            "instance",
-            "but",
-            "Java",
-            "doesn",
-            "\u2019",
-            "t",
-            "really",
-            "enforce",
-            "that",
-            "you",
-            "do",
-            "anything",
-            "useful",
-            "in",
-            "the",
-            "constructor",
-            ",",
-            "and",
-            "before",
-            "it",
-            "completes",
-            ",",
-            "the",
-            "object",
-            "may",
-            "be",
-            "in",
-            "an",
-            "inconsistent",
-            "state",
-            "(",
-            "i.e",
-            ".",
-            "calling",
-            "methods",
-            "on",
-            "this",
-            "may",
-            "behave",
-            "erratically",
-            "or",
-            "crash",
-            ")",
-            ".",
-            "22"
+            ";"
         ],
         "word_labels": [
             1,
@@ -4667,6 +5740,43 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "C",
+            "(",
+            ")",
+            "{",
+            "//",
+            "s",
+            "=",
+            "=",
+            "null",
+            "s",
+            "=",
+            "\"",
+            "hi",
+            "\"",
+            ";",
+            "}",
+            "}",
+            "C",
+            "c",
+            "=",
+            "new",
+            "C",
+            "(",
+            ")",
+            ";"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4692,7 +5802,161 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "in",
+            "this",
+            "Java",
+            "code",
+            ",",
+            "new",
+            "C",
+            "(",
+            ")",
+            "does",
+            "the",
+            "following",
+            ":"
+        ],
+        "word_labels": [
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1",
+            ".",
+            "allocates",
+            "an",
+            "instance",
+            "of",
+            "C",
+            "2",
+            ".",
+            "initializes",
+            "all",
+            "its",
+            "fields",
+            "to",
+            "default",
+            "values",
+            "*"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3",
+            ".",
+            "calls",
+            "the",
+            "constructor",
+            "on",
+            "that",
+            "instance",
+            "but",
+            "Java",
+            "does",
+            "n\u2019t",
+            "really",
+            "enforce",
+            "that",
+            "you",
+            "do",
+            "anything",
+            "useful",
+            "in",
+            "the",
+            "constructor",
+            ",",
+            "and",
+            "before",
+            "it",
+            "completes",
+            ",",
+            "the",
+            "object",
+            "may",
+            "be",
+            "in",
+            "an",
+            "inconsistent",
+            "state",
+            "(",
+            "i.e.",
+            "calling",
+            "methods",
+            "on",
+            "this",
+            "may",
+            "behave",
+            "erratically",
+            "or",
+            "crash",
+            ")",
+            ".",
+            "22"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -4708,7 +5972,6 @@
             0,
             1,
             0,
-            1,
             0,
             0,
             0,
@@ -4716,41 +5979,6 @@
             0,
             0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
             0,
             0,
             0,
@@ -4843,9 +6071,7 @@
             "color",
             "=",
             "new",
-            "RGBA",
-            "(",
-            "255",
+            "RGBA(255",
             ",",
             "127",
             ",",
@@ -4857,57 +6083,7 @@
             "class",
             "'s",
             "definition",
-            ".",
-            "we",
-            "represent",
-            "this",
-            "in",
-            "memory",
-            "by",
-            "prefixing",
-            ":",
-            "the",
-            "beginning",
-            "of",
-            "an",
-            "RGBA",
-            "is",
-            "an",
-            "RGB",
-            ".",
-            "RGB",
-            "RGBA",
-            "r",
-            "g",
-            "b",
-            "0",
-            "4",
-            "8",
-            "r",
-            "g",
-            "b",
-            "a",
-            "0",
-            "4",
-            "8",
-            "12",
-            "reusing",
-            "only",
-            "the",
-            "data",
-            "is",
-            "limited",
-            "in",
-            "usefulness",
-            ".",
-            "reusing",
-            "methods",
-            "is",
-            "much",
-            "more",
-            "useful",
-            ".",
-            "23"
+            "."
         ],
         "word_labels": [
             1,
@@ -4990,8 +6166,35 @@
             0,
             0,
             0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "we",
+            "represent",
+            "this",
+            "in",
+            "memory",
+            "by",
+            "prefixing",
+            ":",
+            "the",
+            "beginning",
+            "of",
+            "an",
+            "RGBA",
+            "is",
+            "an",
+            "RGB",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5009,22 +6212,247 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "RGB",
+            "RGBA"
+        ],
+        "word_labels": [
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "r"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "g"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "r"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "g"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "12"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "reusing",
+            "only",
+            "the",
+            "data",
+            "is",
+            "limited",
+            "in",
+            "usefulness",
+            ".",
+            "reusing",
+            "methods",
+            "is",
+            "much",
+            "more",
+            "useful",
+            ".",
+            "23"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5122,53 +6550,18 @@
             "c",
             "=",
             "new",
-            "Cat",
-            "(",
-            "\"",
-            "felis",
+            "Cat(\"felis",
             "cattus",
             "\"",
             ",",
             "15",
             ")",
             ";",
-            "println_s",
-            "(",
-            "c.to_string",
+            "println_s(c.to_string",
             "(",
             ")",
             ")",
-            ";",
-            "this",
-            "is",
-            "still",
-            "static",
-            "dispatch",
-            ":",
-            "the",
-            "method",
-            "call",
-            "is",
-            "sugar",
-            "for",
-            "Animal.to_string",
-            "(",
-            "c",
-            ")",
-            ".",
-            "we",
-            "can",
-            "now",
-            "say",
-            "that",
-            "Cat",
-            "is",
-            "a",
-            "subtype",
-            "of",
-            "Animal",
-            ".",
-            "24"
+            ";"
         ],
         "word_labels": [
             1,
@@ -5257,11 +6650,33 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "is",
+            "still",
+            "static",
+            "dispatch",
+            ":",
+            "the",
+            "method",
+            "call",
+            "is",
+            "sugar",
+            "for",
+            "Animal.to_string(c",
+            ")",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5277,8 +6692,30 @@
             0,
             0,
             0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "we",
+            "can",
+            "now",
+            "say",
+            "that",
+            "Cat",
+            "is",
+            "a",
+            "subtype",
+            "of",
+            "Animal",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5291,6 +6728,19 @@
             1,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "24"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -5364,9 +6814,7 @@
             "it",
             "should",
             "call",
-            "Cat.toString",
-            "(",
-            "c",
+            "Cat.toString(c",
             ")",
             ".",
             "whiskers",
@@ -5397,25 +6845,21 @@
             "}",
             "the",
             "general",
-            "case.",
+            "case",
+            ".",
             "}",
             "let",
             "c",
             "=",
             "new",
-            "Cat",
-            "(",
-            "\"",
-            "felis",
+            "Cat(\"felis",
             "cattus",
             "\"",
             ",",
             "15",
             ")",
             ";",
-            "println_s",
-            "(",
-            "c.to_string",
+            "println_s(c.to_string",
             "(",
             ")",
             ")",
@@ -5540,12 +6984,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
         ]
     },
@@ -5565,7 +7003,8 @@
             "base",
             "type",
             "is",
-            "expected\u2026",
+            "expected",
+            "\u2026",
             "o",
             "a",
             "base",
@@ -5592,7 +7031,8 @@
             "methods",
             "as",
             "the",
-            "supertype\u2026",
+            "supertype",
+            "\u2026",
             "o",
             "you",
             "ca",
@@ -5607,9 +7047,7 @@
             "runtime",
             "!",
             "fn",
-            "print",
-            "(",
-            "a",
+            "print(a",
             ":",
             "Animal",
             ")",
@@ -5629,38 +7067,143 @@
             "to",
             "use",
             "?",
-            "println_s",
-            "(",
-            "a.to_string",
+            "println_s(a.to_string",
             "(",
             ")",
             ")",
             ";",
             "}",
-            "print",
-            "(",
-            "new",
+            "print(new",
             "Cat",
             "(",
             ")",
             ")",
             ";",
-            "print",
-            "(",
-            "new",
+            "print(new",
             "Dog",
             "(",
             ")",
             ")",
             ";",
-            "print",
-            "(",
-            "new",
+            "print(new",
             "Horse",
             "(",
             ")",
             ")",
-            ";",
+            ";"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "the",
             "problem",
             "(",
@@ -5689,7 +7232,9 @@
             ".",
             "so",
             ",",
-            "let's\u2026",
+            "let",
+            "'s",
+            "\u2026",
             "not",
             "do",
             "that",
@@ -5706,113 +7251,6 @@
             "26"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -5867,15 +7305,27 @@
             "Methods",
             "and",
             "Dynamic",
-            "Dispatch",
-            "27"
+            "Dispatch"
         ],
         "word_labels": [
             1,
             2,
             0,
             1,
-            2,
+            2
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "27"
+        ],
+        "word_labels": [
+            0,
             0
         ]
     },
@@ -5883,7 +7333,9 @@
         "sentence": [
             "RTTI",
             "(",
-            "Run-time",
+            "Run",
+            "-",
+            "time",
             "Type",
             "Identification",
             ")",
@@ -5935,7 +7387,75 @@
             "\"",
             "whiskers",
             ":",
-            "15",
+            "15"
+        ],
+        "word_labels": [
+            1,
+            0,
+            1,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "d",
             "=",
             "new",
@@ -5955,18 +7475,46 @@
             "\"",
             "drooly",
             ":",
-            "true",
+            "true"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "fn",
-            "print",
-            "(",
-            "a",
+            "print(a",
             ":",
             "Animal",
             ")",
             "{",
-            "println_s",
-            "(",
-            "a.to_string",
+            "println_s(a.to_string",
             "(",
             ")",
             ")",
@@ -5980,26 +7528,57 @@
             "implemented",
             "something",
             "like",
-            ":",
+            ":"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "if",
             "a.type",
-            "==",
+            "=",
+            "=",
             "Cat",
             "{",
-            "Cat.to_string",
-            "(",
-            "a",
+            "Cat.to_string(a",
             ")",
             "}",
             "else",
             "if",
             "a.type",
-            "==",
+            "=",
+            "=",
             "Dog",
             "{",
-            "Dog.to_string",
-            "(",
-            "a",
+            "Dog.to_string(a",
             ")",
             "}",
             "but",
@@ -6012,107 +7591,6 @@
             "28"
         ],
         "word_labels": [
-            1,
-            0,
-            1,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -6188,59 +7666,7 @@
             "(",
             "\u2026",
             ")",
-            ";",
-            "Cat",
-            "vtable",
-            "0",
-            "vtbl",
-            "0",
-            "breathe",
-            "Animal.breathe",
-            "(",
-            ")",
-            "4",
-            "species",
-            "4",
-            "to_string",
-            "Cat.to_string",
-            "(",
-            ")",
-            "8",
-            "whiskers",
-            "8",
-            "play_string",
-            "Cat.play_string",
-            "(",
-            ")",
-            "d",
-            "=",
-            "new",
-            "Dog",
-            "(",
-            "\u2026",
-            ")",
-            ";",
-            "Dog",
-            "vtable",
-            "0",
-            "vtbl",
-            "0",
-            "breathe",
-            "4",
-            "species",
-            "4",
-            "to_string",
-            "Dog.to_string",
-            "(",
-            ")",
-            "8",
-            "drooly",
-            "8",
-            "play_fetch",
-            "Dog.play_fetch",
-            "(",
-            ")",
-            "29"
+            ";"
         ],
         "word_labels": [
             1,
@@ -6286,9 +7712,192 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Cat",
+            "vtable"
+        ],
+        "word_labels": [
             0,
             0,
-            1,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0",
+            "vtbl"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0",
+            "breathe"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Animal.breathe",
+            "(",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4",
+            "species"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4",
+            "to_string"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Cat.to_string",
+            "(",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8",
+            "whiskers"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8",
+            "play_string"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Cat.play_string",
+            "(",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "d",
+            "=",
+            "new",
+            "Dog",
+            "(",
+            "\u2026",
+            ")",
+            ";"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6297,43 +7906,152 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Dog",
+            "vtable"
+        ],
+        "word_labels": [
+            0,
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0",
+            "vtbl"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0",
+            "breathe"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4",
+            "species"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "4",
+            "to_string"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Dog.to_string",
+            "(",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8",
+            "drooly"
+        ],
+        "word_labels": [
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "8",
+            "play_fetch"
+        ],
+        "word_labels": [
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Dog.play_fetch",
+            "(",
+            ")",
+            "29"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6360,7 +8078,8 @@
             "to",
             "get",
             "the",
-            "address\u2026",
+            "address",
+            "\u2026",
             "o",
             "and",
             "do",
@@ -6378,23 +8097,14 @@
             "becomes",
             ":",
             "fn",
-            "print",
-            "(",
-            "a",
+            "print(a",
             ":",
             "Animal",
             ")",
             "{",
-            "a.vtbl",
-            "[",
-            "1",
-            "]",
-            "(",
-            "a",
+            "a.vtbl[1](a",
             ")",
-            "println_s",
-            "(",
-            "a.to_string",
+            "println_s(a.to_string",
             "(",
             ")",
             ")",
@@ -6429,84 +8139,7 @@
             "supertype",
             "'s",
             "vtable",
-            ".",
-            "addi",
-            "sp",
-            ",",
-            "sp",
-            ",",
-            "-4",
-            "lw",
-            "s0",
-            ",",
-            "-16",
-            "(",
-            "fp",
-            ")",
-            "#",
-            "s0",
-            "=",
-            "a",
-            "sw",
-            "s0",
-            ",",
-            "0",
-            "(",
-            "sp",
-            ")",
-            "#",
-            "pass",
-            "'this",
-            "'",
-            "lw",
-            "s0",
-            ",",
-            "0",
-            "(",
-            "s0",
-            ")",
-            "#",
-            "s0",
-            "=",
-            "a.vtbl",
-            "lw",
-            "s0",
-            ",",
-            "4",
-            "(",
-            "s0",
-            ")",
-            "#",
-            "s0",
-            "=",
-            "a.vtbl",
-            "[",
-            "1",
-            "]",
-            "jalr",
-            "s0",
-            "#",
-            "call",
-            "to_string",
-            "jalr",
-            "works",
-            "like",
-            "jal",
-            ",",
-            "but",
-            "uses",
-            "a",
-            "register",
-            "as",
-            "the",
-            "address",
-            "of",
-            "the",
-            "function",
-            "to",
-            "call",
-            ".",
-            "30"
+            "."
         ],
         "word_labels": [
             1,
@@ -6531,25 +8164,17 @@
             0,
             0,
             0,
-            1,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
             0,
             1,
             2,
+            2,
             0,
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
+            1,
+            2,
             0,
             0,
             0,
@@ -6595,15 +8220,67 @@
             1,
             2,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "addi",
+            "sp",
+            ",",
+            "sp",
+            ",",
+            "-4",
+            "lw",
+            "s0",
+            ",",
+            "-16(fp",
+            ")",
+            "#",
+            "s0",
+            "=",
+            "a",
+            "sw",
+            "s0",
+            ",",
+            "0(sp",
+            ")",
+            "#",
+            "pass",
+            "'",
+            "this",
+            "'",
+            "lw",
+            "s0",
+            ",",
+            "0(s0",
+            ")",
+            "#",
+            "s0",
+            "=",
+            "a.vtbl",
+            "lw",
+            "s0",
+            ",",
+            "4(s0",
+            ")",
+            "#",
+            "s0",
+            "=",
+            "a.vtbl[1",
+            "]",
+            "jalr",
+            "s0",
+            "#",
+            "call",
+            "to_string"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6653,6 +8330,37 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "jalr",
+            "works",
+            "like",
+            "jal",
+            ",",
+            "but",
+            "uses",
+            "a",
+            "register",
+            "as",
+            "the",
+            "address",
+            "of",
+            "the",
+            "function",
+            "to",
+            "call",
+            ".",
+            "30"
+        ],
+        "word_labels": [
             0,
             1,
             0,
@@ -6721,7 +8429,11 @@
             "\u25cf",
             "what",
             "about",
-            "public/protected/private",
+            "public",
+            "/",
+            "protected",
+            "/",
+            "private",
             "?",
             "final",
             "?",
@@ -6745,7 +8457,9 @@
             "what",
             "about",
             "static",
-            "variables/methods",
+            "variables",
+            "/",
+            "methods",
             "?",
             "o",
             "they",
@@ -6858,14 +8572,19 @@
             0,
             1,
             0,
+            1,
             0,
+            1,
             0,
+            1,
             0,
+            1,
             0,
             0,
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
@@ -6895,16 +8614,20 @@
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
             0,
             0,
             0,
+            1,
+            2,
             0,
             0,
             0,
@@ -6926,10 +8649,7 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
+            1,
             0,
             0,
             0,

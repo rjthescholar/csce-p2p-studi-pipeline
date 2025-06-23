@@ -5,20 +5,25 @@ Automata _ _ O
 05 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
 
 Regular _ _ B-Concept
 Language _ _ I-Concept
+
+
+ _ _ O
 Question _ _ O
 : _ _ O
 Given _ _ O
@@ -57,11 +62,16 @@ of _ _ O
 them _ _ O
 has _ _ O
 some _ _ O
-finite-state _ _ O
+finite _ _ O
+- _ _ O
+state _ _ O
 machines _ _ O
 that _ _ O
 recognize _ _ O
 it _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 to _ _ O
@@ -81,7 +91,9 @@ way _ _ O
 to _ _ O
 convert _ _ O
 a _ _ O
-finite-state _ _ O
+finite _ _ O
+- _ _ O
+state _ _ O
 machine _ _ O
 into _ _ O
 a _ _ O
@@ -94,11 +106,15 @@ language _ _ O
 of _ _ O
 the _ _ O
 machine _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -125,14 +141,10 @@ a _ _ O
 special _ _ O
 NFA _ _ O
 where _ _ O
-L _ _ O
-( _ _ O
-N _ _ O
+L(N _ _ O
 ) _ _ O
 = _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 N _ _ O
 has _ _ O
@@ -171,14 +183,26 @@ instead _ _ O
 of _ _ O
 a _ _ O
 symbol _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 q2 _ _ O
+
+
+ _ _ O
 0∗ _ _ O
 ∪ _ _ O
 11∗ _ _ O
 0 _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 At _ _ O
 q2 _ _ O
 , _ _ O
@@ -227,11 +251,15 @@ q5 _ _ O
 . _ _ O
 . _ _ O
 } _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -244,7 +272,13 @@ a _ _ O
 GNFA _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Start _ _ O
 with _ _ O
 a _ _ O
@@ -297,10 +331,21 @@ states _ _ O
 of _ _ O
 M _ _ O
 to _ _ O
-non-accept _ _ O
+non _ _ O
+- _ _ O
+accept _ _ O
 states _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 Turn _ _ O
 transition _ _ O
 labels _ _ O
@@ -344,11 +389,15 @@ b _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 0∪1 _ _ O
 Finite _ _ O
 Automata _ _ O
@@ -363,22 +412,38 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 A _ _ O
 DFA _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 a _ _ O
 b _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -392,6 +457,9 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 Add _ _ O
 a _ _ O
 new _ _ O
@@ -399,20 +467,39 @@ start _ _ O
 state _ _ O
 s _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -426,6 +513,9 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 ε _ _ O
 from _ _ O
 s _ _ O
@@ -435,21 +525,46 @@ original _ _ O
 start _ _ O
 state _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -463,6 +578,9 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 Add _ _ O
 a _ _ O
 new _ _ O
@@ -470,24 +588,52 @@ accept _ _ O
 state _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 a _ _ O
 
 Converting _ _ O
@@ -499,6 +645,9 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 ε _ _ O
 from _ _ O
 all _ _ O
@@ -507,24 +656,61 @@ state _ _ O
 to _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -538,32 +724,74 @@ GNFA _ _ O
 ( _ _ O
 Example _ _ O
 ) _ _ O
+
+
+ _ _ O
 All _ _ O
 original _ _ O
 accept _ _ O
 states _ _ O
 to _ _ O
-non-accept _ _ O
+non _ _ O
+- _ _ O
+accept _ _ O
 state _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -643,20 +871,41 @@ new _ _ O
 accept _ _ O
 state _ _ O
 a _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 3−state _ _ O
 DFA _ _ O
+
+
+ _ _ O
 5−state _ _ O
 GNFA _ _ O
+
+
+ _ _ O
 4−state _ _ O
 GNFA _ _ O
+
+
+ _ _ O
 regular _ _ O
 expression _ _ O
+
+
+ _ _ O
 2−state _ _ O
 GNFA _ _ O
+
+
+ _ _ O
 3−state _ _ O
 GNFA _ _ O
+
+
+ _ _ O
 The _ _ O
 transition _ _ O
 from _ _ O
@@ -677,9 +926,10 @@ original _ _ O
 DFA _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -693,12 +943,30 @@ GNFA _ _ O
 Removing _ _ O
 qrip _ _ O
 qi _ _ O
+
+
+ _ _ O
 R4 _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 qj _ _ O
 R3 _ _ O
+
+
+ _ _ O
 qrip _ _ O
+
+
+ _ _ O
 R2 _ _ O
+
+
+ _ _ O
 How _ _ O
 to _ _ O
 go _ _ O
@@ -751,6 +1019,9 @@ a _ _ O
 string _ _ O
 in _ _ O
 R3 _ _ O
+
+
+ _ _ O
 From _ _ O
 qi _ _ O
 to _ _ O
@@ -766,9 +1037,10 @@ R3 _ _ O
 R4 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -782,24 +1054,54 @@ GNFA _ _ O
 Removing _ _ O
 qrip _ _ O
 qi _ _ O
+
+
+ _ _ O
 R4 _ _ O
+
+
+ _ _ O
 qj _ _ O
 R3 _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 qi _ _ O
+
+
+ _ _ O
 R1 _ _ O
 R2 _ _ O
 ∗ _ _ O
 R3 _ _ O
 ∪ _ _ O
 R4 _ _ O
+
+
+ _ _ O
 qj _ _ O
+
+
+ _ _ O
 qrip _ _ O
+
+
+ _ _ O
 R2 _ _ O
+
+
+ _ _ O
 To _ _ O
 remove _ _ O
 qrip _ _ O
 1 _ _ O
+
+
+ _ _ O
 Search _ _ O
 for _ _ O
 all _ _ O
@@ -821,7 +1123,13 @@ q _ _ O
 qrip _ _ O
 → _ _ O
 r _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Turn _ _ O
 all _ _ O
 paths _ _ O
@@ -849,13 +1157,20 @@ with _ _ O
 their _ _ O
 regular _ _ O
 expressions _ _ O
+
+
+ _ _ O
 3 _ _ O
 4 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -863,12 +1178,27 @@ Automata _ _ O
 Example _ _ O
 DFA _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 { _ _ O
 w _ _ O
 | _ _ O
@@ -881,9 +1211,10 @@ b _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -894,19 +1225,52 @@ to _ _ O
 GNFA _ _ O
 ε _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 ε _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 { _ _ O
 w _ _ O
 | _ _ O
@@ -919,12 +1283,16 @@ b _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 aUb _ _ O
 
 Example _ _ O
@@ -935,31 +1303,71 @@ state _ _ O
 2 _ _ O
 ε _ _ O
 1 _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 b _ _ O
 ε _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
 s _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
-b _ _ O
-( _ _ O
-a _ _ O
+
+
+ _ _ O
+b(a _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 a _ _ O
+
+
+ _ _ O
 { _ _ O
 w _ _ O
 | _ _ O
@@ -972,12 +1380,16 @@ b _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 aUb _ _ O
 
 Example _ _ O
@@ -988,42 +1400,87 @@ state _ _ O
 1 _ _ O
 ε _ _ O
 1 _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 ε _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
 s _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 s _ _ O
-a _ _ O
-* _ _ O
-b _ _ O
-( _ _ O
-a _ _ O
+
+
+ _ _ O
+a*b(a _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
-b _ _ O
-( _ _ O
-a _ _ O
+
+
+ _ _ O
+b(a _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 { _ _ O
 w _ _ O
 | _ _ O
@@ -1036,48 +1493,119 @@ b _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 aUb _ _ O
 
 Example _ _ O
+
+
+ _ _ O
 DFA _ _ O
 to _ _ O
 GNFA _ _ O
 b _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 b _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 ε _ _ O
 
 Example _ _ O
@@ -1089,31 +1617,91 @@ state _ _ O
 aa _ _ O
 U _ _ O
 b _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
 3 _ _ O
+
+
+ _ _ O
 ε _ _ O
 ab _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 ba _ _ O
 U _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 bb _ _ O
+
+
+ _ _ O
 Paths _ _ O
 that _ _ O
 go _ _ O
@@ -1133,6 +1721,9 @@ s→1→3 _ _ O
 2→1→3 _ _ O
 3→1→2 _ _ O
 3→1→3 _ _ O
+
+
+ _ _ O
 εa _ _ O
 = _ _ O
 a _ _ O
@@ -1143,15 +1734,25 @@ aa _ _ O
 ab _ _ O
 ba _ _ O
 bb _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
+
+
+ _ _ O
 ε _ _ O
+
+
+ _ _ O
 a _ _ O
 
 Example _ _ O
@@ -1163,66 +1764,86 @@ state _ _ O
 aa _ _ O
 U _ _ O
 b _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+
+
+ _ _ O
+a(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 s _ _ O
+
+
+ _ _ O
 2 _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 ε _ _ O
 ab _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 ba _ _ O
 U _ _ O
 a _ _ O
 b _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 a _ _ O
 ( _ _ O
 ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 U _ _ O
 ε _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+
+
+ _ _ O
+a(aa _ _ O
+U _ _ O
+b)*ab _ _ O
 U _ _ O
 b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
-U _ _ O
-b _ _ O
+
+
+ _ _ O
 ε _ _ O
 3 _ _ O
+
+
+ _ _ O
 bb _ _ O
 ( _ _ O
 ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
-b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
+b)*ab _ _ O
 U _ _ O
 bb _ _ O
+
+
+ _ _ O
 Paths _ _ O
 that _ _ O
 go _ _ O
@@ -1240,153 +1861,121 @@ s→2→a _ _ O
 s→2→3 _ _ O
 3→2→a _ _ O
 3→2→3 _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+
+
+ _ _ O
+a(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
+b)∗ _ _ O
 ε _ _ O
 = _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+a(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+b)∗ _ _ O
+a(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
+b)∗ _ _ O
 ab _ _ O
 ( _ _ O
 ba _ _ O
 ∪ _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
+b)∗ _ _ O
 ε _ _ O
 = _ _ O
 ( _ _ O
 ba _ _ O
 ∪ _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
+b)∗ _ _ O
 ( _ _ O
 ba _ _ O
 ∪ _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 ∪ _ _ O
-b _ _ O
-) _ _ O
-∗ _ _ O
+b)∗ _ _ O
 ab _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
 
 Example _ _ O
+
+
+ _ _ O
 Get _ _ O
 rid _ _ O
 of _ _ O
 state _ _ O
 3 _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+a(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+
+
+ _ _ O
+a(aa _ _ O
+U _ _ O
+b)*ab _ _ O
 U _ _ O
 b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
-U _ _ O
-b _ _ O
+
+
+ _ _ O
 ( _ _ O
 ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
 U _ _ O
 ε _ _ O
+
+
+ _ _ O
 s _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 3 _ _ O
 ( _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+a(aa _ _ O
 U _ _ O
-b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
+b)*ab _ _ O
 U _ _ O
-b _ _ O
-) _ _ O
-( _ _ O
-( _ _ O
-ba _ _ O
+b)((ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
-b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
+b)*ab _ _ O
 U _ _ O
-bb _ _ O
-) _ _ O
-* _ _ O
-( _ _ O
-( _ _ O
-ba _ _ O
+bb)*((ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
@@ -1395,27 +1984,25 @@ U _ _ O
 ε _ _ O
 ) _ _ O
 U _ _ O
-a _ _ O
-( _ _ O
-aa _ _ O
+a(aa _ _ O
 U _ _ O
 b _ _ O
 ) _ _ O
 * _ _ O
+
+
+ _ _ O
 ( _ _ O
 ba _ _ O
 U _ _ O
-a _ _ O
-) _ _ O
-( _ _ O
-aa _ _ O
+a)(aa _ _ O
 U _ _ O
-b _ _ O
-) _ _ O
-* _ _ O
-ab _ _ O
+b)*ab _ _ O
 U _ _ O
 bb _ _ O
+
+
+ _ _ O
 Paths _ _ O
 that _ _ O
 go _ _ O
@@ -1431,45 +2018,32 @@ r _ _ O
 ) _ _ O
 s→3→a _ _ O
 ( _ _ O
-a _ _ O
-( _ _ O
-aa∪b _ _ O
-) _ _ O
-∗ _ _ O
-ab∪b _ _ O
-) _ _ O
+a(aa∪b)∗ _ _ O
+ab∪b)((ba∪a)(aa∪b)∗ _ _ O
+ab∪bb)∗ _ _ O
 ( _ _ O
 ( _ _ O
-ba∪a _ _ O
-) _ _ O
-( _ _ O
-aa∪b _ _ O
-) _ _ O
-∗ _ _ O
-ab∪bb _ _ O
-) _ _ O
-∗ _ _ O
-( _ _ O
-( _ _ O
-ba∪a _ _ O
-) _ _ O
-( _ _ O
-aa∪b _ _ O
-) _ _ O
-∗ _ _ O
+ba∪a)(aa∪b)∗ _ _ O
 ∪ε _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
 
 Theorem _ _ O
 1.54 _ _ O
+
+
+ _ _ O
 Earlier _ _ O
 , _ _ O
 we _ _ O
@@ -1555,11 +2129,15 @@ and _ _ O
 complicate _ _ O
 regular _ _ O
 expression _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -1568,6 +2146,9 @@ Finite _ _ B-Concept
 Automaton _ _ I-Concept
 and _ _ O
 Algorithm _ _ B-Concept
+
+
+ _ _ O
 For _ _ O
 every _ _ O
 finite _ _ B-Concept
@@ -1607,11 +2188,26 @@ of _ _ O
 1s _ _ O
 . _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 q0 _ _ O
+
+
+ _ _ O
 q1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 The _ _ O
 above _ _ O
 machine _ _ O
@@ -1658,11 +2254,15 @@ false _ _ O
 reject _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -1673,9 +2273,7 @@ and _ _ O
 Algorithm _ _ O
 public _ _ O
 boolean _ _ O
-isAccepted _ _ O
-( _ _ O
-String _ _ O
+isAccepted(String _ _ O
 input _ _ O
 ) _ _ O
 { _ _ O
@@ -1693,9 +2291,7 @@ input.length _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
-for _ _ O
-( _ _ O
-int _ _ O
+for(int _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
@@ -1710,23 +2306,17 @@ i++ _ _ O
 char _ _ O
 c _ _ O
 = _ _ O
-input.charAt _ _ O
-( _ _ O
-i _ _ O
+input.charAt(i _ _ O
 ) _ _ O
 ; _ _ O
-if _ _ O
-( _ _ O
-state.equals _ _ O
-( _ _ O
-" _ _ O
-q0 _ _ O
+if(state.equals("q0 _ _ O
 " _ _ O
 ) _ _ O
 & _ _ O
 & _ _ O
 c _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 ’ _ _ O
 0 _ _ O
 ’ _ _ O
@@ -1738,18 +2328,14 @@ q0 _ _ O
 " _ _ O
 ; _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-state.equals _ _ O
-( _ _ O
-" _ _ O
-q0 _ _ O
+if(state.equals("q0 _ _ O
 " _ _ O
 ) _ _ O
 & _ _ O
 & _ _ O
 c _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 ’ _ _ O
 1 _ _ O
 ’ _ _ O
@@ -1761,18 +2347,14 @@ q1 _ _ O
 " _ _ O
 ; _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-state.equals _ _ O
-( _ _ O
-" _ _ O
-q1 _ _ O
+if(state.equals("q1 _ _ O
 " _ _ O
 ) _ _ O
 & _ _ O
 & _ _ O
 c _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 ’ _ _ O
 0 _ _ O
 ’ _ _ O
@@ -1784,18 +2366,14 @@ q1 _ _ O
 " _ _ O
 ; _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-state.equals _ _ O
-( _ _ O
-" _ _ O
-q1 _ _ O
+if(state.equals("q1 _ _ O
 " _ _ O
 ) _ _ O
 & _ _ O
 & _ _ O
 c _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 ’ _ _ O
 1 _ _ O
 ’ _ _ O
@@ -1807,12 +2385,7 @@ q0 _ _ O
 " _ _ O
 ; _ _ O
 } _ _ O
-if _ _ O
-( _ _ O
-state.equals _ _ O
-( _ _ O
-" _ _ O
-q1 _ _ O
+if(state.equals("q1 _ _ O
 " _ _ O
 ) _ _ O
 ) _ _ O
@@ -1826,9 +2399,10 @@ false _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O
@@ -1852,6 +2426,9 @@ associated _ _ O
 with _ _ O
 Regular _ _ B-Concept
 languages _ _ I-Concept
+
+
+ _ _ O
 Not _ _ O
 all _ _ O
 language _ _ O
@@ -1869,6 +2446,9 @@ is _ _ O
 called _ _ O
 Nonregular _ _ B-Concept
 Languages _ _ I-Concept
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 B _ _ O
@@ -1922,6 +2502,9 @@ infinite _ _ O
 number _ _ O
 of _ _ O
 states _ _ O
+
+
+ _ _ O
 If _ _ O
 you _ _ O
 can _ _ O
@@ -1952,6 +2535,9 @@ huge _ _ O
 number _ _ O
 of _ _ O
 states _ _ O
+
+
+ _ _ O
 We _ _ O
 need _ _ O
 a _ _ O
@@ -1965,11 +2551,15 @@ is _ _ O
 not _ _ O
 regular _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 05 _ _ O

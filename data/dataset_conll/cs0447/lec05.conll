@@ -8,6 +8,9 @@ Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Arrays _ _ B-Concept
 Original _ _ O
 slides _ _ O
@@ -25,21 +28,31 @@ Childers _ _ O
 , _ _ O
 David _ _ O
 Wilkinson _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
 Arrays _ _ B-Concept
 and _ _ O
 Addresses _ _ B-Concept
+
+
+ _ _ O
 2 _ _ O
 
 Strings _ _ O
 , _ _ O
 arrays _ _ O
 , _ _ O
-objects… _ _ O
+objects _ _ O
+… _ _ O
 ● _ _ O
 When _ _ O
 we _ _ O
@@ -47,7 +60,8 @@ wanted _ _ O
 to _ _ O
 store _ _ O
 4-byte _ _ O
-values… _ _ O
+values _ _ O
+… _ _ O
 o _ _ O
 We _ _ O
 split _ _ O
@@ -122,35 +136,123 @@ in _ _ O
 registers _ _ O
 ! _ _ O
 – _ _ O
-ssssssssooooooooooooooooooooooooooo… _ _ O
+ssssssssooooooooooooooooooooooooooo _ _ O
+… _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Val _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 04 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 DE _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 C0 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 EF _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 BE _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 6C _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 34 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 What _ _ O
@@ -168,6 +270,9 @@ C _ _ O
 or _ _ O
 Java _ _ O
 : _ _ O
+
+
+ _ _ O
 byte _ _ O
 [ _ _ O
 ] _ _ O
@@ -200,34 +305,26 @@ What _ _ O
 memory _ _ B-Concept
 address _ _ I-Concept
 is _ _ O
-arr _ _ O
-[ _ _ O
-0 _ _ O
+arr[0 _ _ O
 ] _ _ O
 at _ _ O
 ? _ _ O
 o _ _ O
 What _ _ O
 about _ _ O
-arr _ _ O
-[ _ _ O
-1 _ _ O
+arr[1 _ _ O
 ] _ _ O
 ? _ _ O
 o _ _ O
 What _ _ O
 about _ _ O
-arr _ _ O
-[ _ _ O
-2 _ _ O
+arr[2 _ _ O
 ] _ _ O
 ? _ _ O
 o _ _ O
 What _ _ O
 about _ _ O
-arr _ _ O
-[ _ _ O
-3 _ _ O
+arr[3 _ _ O
 ] _ _ O
 ? _ _ O
 ● _ _ O
@@ -238,9 +335,11 @@ starts _ _ O
 at _ _ O
 memory _ _ O
 address _ _ O
-A… _ _ O
+A _ _ O
+… _ _ O
 o _ _ O
-…then _ _ O
+… _ _ O
+then _ _ O
 item _ _ O
 n _ _ O
 is _ _ O
@@ -260,22 +359,73 @@ about _ _ O
 last _ _ O
 class _ _ O
 ? _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Val _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 F405 _ _ O
+
+
+ _ _ O
 06 _ _ O
+
+
+ _ _ O
 F404 _ _ O
+
+
+ _ _ O
 05 _ _ O
+
+
+ _ _ O
 F403 _ _ O
+
+
+ _ _ O
 04 _ _ O
+
+
+ _ _ O
 F402 _ _ O
+
+
+ _ _ O
 03 _ _ O
+
+
+ _ _ O
 F401 _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 F400 _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 What _ _ O
@@ -291,6 +441,9 @@ we _ _ O
 did _ _ O
 this _ _ O
 : _ _ O
+
+
+ _ _ O
 int _ _ O
 [ _ _ O
 ] _ _ O
@@ -304,6 +457,9 @@ arr _ _ O
 3 _ _ O
 } _ _ O
 ; _ _ O
+
+
+ _ _ O
 ● _ _ O
 In _ _ O
 memory _ _ O
@@ -331,9 +487,9 @@ here _ _ O
 ▪ _ _ O
 Is _ _ O
 the _ _ O
-End-byte _ _ O
-( _ _ O
-LSB _ _ O
+End _ _ O
+- _ _ O
+byte(LSB _ _ O
 ) _ _ O
 in _ _ O
 the _ _ O
@@ -350,15 +506,11 @@ What _ _ O
 memory _ _ O
 address _ _ O
 is _ _ O
-arr _ _ O
-[ _ _ O
-1 _ _ O
+arr[1 _ _ O
 ] _ _ O
 at _ _ O
 ? _ _ O
-arr _ _ O
-[ _ _ O
-2 _ _ O
+arr[2 _ _ O
 ] _ _ O
 ? _ _ O
 ● _ _ O
@@ -369,17 +521,21 @@ starts _ _ O
 at _ _ O
 memory _ _ O
 address _ _ O
-A… _ _ O
+A _ _ O
+… _ _ O
 o _ _ O
-…and _ _ O
+… _ _ O
+and _ _ O
 each _ _ O
 item _ _ O
 is _ _ O
 b _ _ O
 bytes _ _ O
-long… _ _ O
+long _ _ O
+… _ _ O
 o _ _ O
-…then _ _ O
+… _ _ O
+then _ _ O
 item _ _ O
 n _ _ O
 is _ _ O
@@ -406,31 +562,109 @@ be _ _ O
 – _ _ O
 Tricky _ _ O
 tricky _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Val _ _ O
+
+
+ _ _ O
 F40B _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F40A _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F409 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F408 _ _ O
+
+
+ _ _ O
 03 _ _ O
+
+
+ _ _ O
 F407 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F406 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F405 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F404 _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 F403 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F402 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F401 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F400 _ _ O
+
+
+ _ _ O
 01 _ _ O
 5 _ _ O
 
@@ -439,8 +673,7 @@ arrays _ _ B-Concept
 ● _ _ O
 If _ _ O
 you _ _ O
-wan _ _ O
-na _ _ O
+wanna _ _ O
 print _ _ O
 all _ _ O
 the _ _ O
@@ -453,9 +686,10 @@ how _ _ O
 do _ _ O
 ? _ _ O
 ? _ _ O
-for _ _ O
-( _ _ O
-int _ _ O
+
+
+ _ _ O
+for(int _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
@@ -466,14 +700,13 @@ length _ _ O
 ; _ _ O
 i++ _ _ O
 ) _ _ O
-print _ _ O
-( _ _ O
-data _ _ O
-[ _ _ O
-i _ _ O
+print(data[i _ _ O
 ] _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 ● _ _ O
 Let _ _ O
 's _ _ O
@@ -551,7 +784,8 @@ n't _ _ O
 done _ _ O
 the _ _ O
 loop _ _ O
-yet… _ _ O
+yet _ _ O
+… _ _ O
 » _ _ O
 But _ _ O
 we _ _ O
@@ -559,12 +793,18 @@ we _ _ O
 get _ _ O
 to _ _ O
 that _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Accessing _ _ O
 arrays _ _ B-Concept
 in _ _ O
 MIPS _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Making _ _ O
@@ -592,6 +832,9 @@ write _ _ O
 that _ _ O
 variable _ _ O
 ? _ _ O
+
+
+ _ _ O
 x _ _ O
 : _ _ O
 .word _ _ O
@@ -601,6 +844,9 @@ static _ _ O
 int _ _ O
 x=4 _ _ O
 ; _ _ O
+
+
+ _ _ O
 ● _ _ O
 For _ _ O
 a _ _ O
@@ -613,6 +859,9 @@ all _ _ O
 the _ _ O
 values _ _ O
 : _ _ O
+
+
+ _ _ O
 little_array _ _ O
 : _ _ O
 .word _ _ O
@@ -623,6 +872,9 @@ little_array _ _ O
 3 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 But _ _ O
 for _ _ O
@@ -640,10 +892,19 @@ you _ _ O
 can _ _ O
 write _ _ O
 : _ _ O
+
+
+ _ _ O
 big_array _ _ O
 : _ _ O
+
+
+ _ _ O
 .word _ _ O
 0xBEEFC0DE:100 _ _ O
+
+
+ _ _ O
 ● _ _ O
 This _ _ O
 fills _ _ O
@@ -674,6 +935,9 @@ really _ _ O
 any _ _ O
 difference _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 MIPS _ _ O
@@ -697,7 +961,8 @@ the _ _ O
 address _ _ O
 of _ _ O
 the _ _ O
-array… _ _ O
+array _ _ O
+… _ _ O
 o _ _ O
 We _ _ O
 've _ _ O
@@ -729,6 +994,9 @@ la _ _ O
 instruction _ _ O
 does _ _ O
 ? _ _ O
+
+
+ _ _ O
 la _ _ B-Concept
 t0 _ _ O
 , _ _ O
@@ -738,6 +1006,9 @@ la _ _ B-Concept
 means _ _ O
 load _ _ O
 address _ _ O
+
+
+ _ _ O
 o _ _ O
 it _ _ O
 does _ _ O
@@ -747,9 +1018,20 @@ anything _ _ O
 from _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 o _ _ O
 Only _ _ O
-lw/lh/lhu/lb/lbu _ _ O
+lw _ _ O
+/ _ _ O
+lh _ _ O
+/ _ _ O
+lhu _ _ O
+/ _ _ O
+lb _ _ O
+/ _ _ O
+lbu _ _ O
 load _ _ O
 from _ _ O
 memory _ _ O
@@ -807,11 +1089,12 @@ out _ _ O
 the _ _ O
 value _ _ O
 in _ _ O
-my_array _ _ O
-[ _ _ O
-3 _ _ O
+my_array[3 _ _ O
 ] _ _ O
 . _ _ O
+
+
+ _ _ O
 my_array _ _ O
 : _ _ O
 .word _ _ O
@@ -822,6 +1105,9 @@ my_array _ _ O
 3 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 's _ _ O
@@ -903,7 +1189,8 @@ a _ _ O
 value _ _ O
 into _ _ O
 the _ _ O
-array… _ _ O
+array _ _ O
+… _ _ O
 o _ _ O
 We _ _ O
 just _ _ O
@@ -939,9 +1226,7 @@ YOU _ _ O
 THINK _ _ O
 o _ _ O
 IT _ _ O
-DOESN _ _ O
-’ _ _ O
-T _ _ O
+DOESN’T _ _ O
 ● _ _ O
 Addresses _ _ O
 are _ _ O
@@ -1012,8 +1297,13 @@ la _ _ O
 * _ _ O
 is _ _ O
 like _ _ O
-lw/sw _ _ O
+lw _ _ O
+/ _ _ O
+sw _ _ O
 ) _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Watch _ _ O
@@ -1056,7 +1346,9 @@ the _ _ O
 address _ _ O
 of _ _ O
 a _ _ O
-n-byte _ _ O
+n _ _ O
+- _ _ O
+byte _ _ O
 value _ _ O
 must _ _ O
 be _ _ O
@@ -1068,7 +1360,8 @@ o _ _ O
 so _ _ O
 for _ _ O
 4-byte _ _ O
-words… _ _ O
+words _ _ O
+… _ _ O
 ● _ _ O
 that _ _ O
 's _ _ O
@@ -1089,31 +1382,109 @@ it _ _ O
 's _ _ O
 not _ _ O
 scary _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Val _ _ O
+
+
+ _ _ O
 F40B _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F40A _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F409 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F408 _ _ O
+
+
+ _ _ O
 03 _ _ O
+
+
+ _ _ O
 F407 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F406 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F405 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F404 _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 F403 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F402 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F401 _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 F400 _ _ O
+
+
+ _ _ O
 01 _ _ O
 12 _ _ O
 
@@ -1127,12 +1498,18 @@ are _ _ O
 also _ _ O
 arrays _ _ O
 : _ _ O
+
+
+ _ _ O
 string _ _ O
 : _ _ O
 .asciiz _ _ O
 “ _ _ O
 Test _ _ O
 ” _ _ O
+
+
+ _ _ O
 o _ _ O
 The _ _ O
 z _ _ O
@@ -1147,6 +1524,9 @@ The _ _ O
 same _ _ O
 as _ _ O
 : _ _ O
+
+
+ _ _ O
 string _ _ O
 : _ _ O
 .byte _ _ O
@@ -1164,12 +1544,18 @@ Be _ _ O
 careful _ _ O
 with _ _ O
 : _ _ O
+
+
+ _ _ O
 string _ _ O
 : _ _ O
 .ascii _ _ O
 “ _ _ O
 Test _ _ O
 ” _ _ O
+
+
+ _ _ O
 o _ _ O
 If _ _ O
 you _ _ O
@@ -1187,6 +1573,9 @@ The _ _ O
 same _ _ O
 as _ _ O
 : _ _ O
+
+
+ _ _ O
 string _ _ O
 : _ _ O
 .byte _ _ O
@@ -1197,10 +1586,16 @@ string _ _ O
 115 _ _ O
 , _ _ O
 116 _ _ O
+
+
+ _ _ O
 Check _ _ O
 code _ _ O
 example _ _ O
 arrays_ex3.asm _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Questions _ _ O
@@ -1215,14 +1610,22 @@ for _ _ O
 a _ _ O
 word _ _ O
 ? _ _ O
+
+
+ _ _ O
 0x0800 _ _ O
 0001 _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 about _ _ O
 for _ _ O
 a _ _ O
-half-word _ _ O
+half _ _ O
+- _ _ O
+word _ _ O
 ? _ _ O
 ● _ _ O
 How _ _ O
@@ -1269,6 +1672,9 @@ a _ _ O
 string _ _ O
 terminated _ _ O
 ? _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 

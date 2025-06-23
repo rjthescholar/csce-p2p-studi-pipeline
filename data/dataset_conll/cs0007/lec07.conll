@@ -31,9 +31,7 @@ its _ _ O
 mathematical _ _ O
 counterpart _ _ O
 • _ _ O
-f _ _ O
-( _ _ O
-x _ _ O
+f(x _ _ O
 ) _ _ O
 = _ _ O
 x2 _ _ O
@@ -129,19 +127,15 @@ functions _ _ B-Concept
 ! _ _ O
 Static _ _ B-Concept
 : _ _ O
-ClassName.functionName _ _ O
-( _ _ O
-< _ _ O
-parameters _ _ O
+ClassName.functionName(<parameters _ _ O
 > _ _ O
 ) _ _ O
 ; _ _ O
-Non-static _ _ O
+Non _ _ O
+- _ _ O
+static _ _ O
 : _ _ O
-objectName.functionName _ _ O
-( _ _ O
-< _ _ O
-parameter _ _ O
+objectName.functionName(<parameter _ _ O
 s _ _ O
 > _ _ O
 ) _ _ O
@@ -157,6 +151,9 @@ own _ _ O
 
 Function _ _ B-Concept
 Components _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 2 _ _ O
@@ -169,25 +166,35 @@ Function _ _ B-Concept
 Header _ _ B-Concept
 5 _ _ O
 . _ _ O
+
+
+ _ _ O
 Function _ _ B-Concept
 Body _ _ I-Concept
 6 _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 Visibility _ _ O
 type _ _ O
 ( _ _ O
-public/protected/private _ _ B-Concept
+public _ _ B-Concept
+/ _ _ O
+protected _ _ B-Concept
+/ _ _ O
+private _ _ B-Concept
 ) _ _ O
-static _ _ O
+static _ _ B-Concept
 ( _ _ O
 For _ _ O
 now _ _ O
 , _ _ O
 required _ _ O
 ) _ _ O
-Return _ _ O
-Type _ _ O
-functionName _ _ O
+Return _ _ B-Concept
+Type _ _ I-Concept
+functionName _ _ B-Concept
 Parentheses _ _ O
 “ _ _ O
 ( _ _ O
@@ -200,20 +207,31 @@ b _ _ O
 ) _ _ O
 c _ _ O
 ) _ _ O
-Parameters _ _ O
+
+
+ _ _ O
+Parameters _ _ B-Concept
 Type1 _ _ O
 parameterName1 _ _ O
 Type2 _ _ O
 parameterName2 _ _ O
 … _ _ O
+
+
+ _ _ O
 Curly _ _ O
-Brackets/Braces _ _ O
+Brackets _ _ O
+/ _ _ O
+Braces _ _ O
 “ _ _ O
 { _ _ O
 } _ _ O
 ” _ _ O
 – _ _ O
-return _ _ O
+
+
+ _ _ O
+return _ _ B-Concept
 a _ _ O
 value _ _ O
 
@@ -266,9 +284,11 @@ Components _ _ O
 . _ _ O
 5 _ _ O
 . _ _ O
+
+
+ _ _ O
 We _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 just _ _ O
 use _ _ O
 public _ _ B-Concept
@@ -300,21 +320,32 @@ Parentheses _ _ O
 ) _ _ O
 ” _ _ O
 – _ _ O
+
+
+ _ _ O
 What _ _ O
 are _ _ O
 the _ _ O
 parameters _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 6 _ _ O
 . _ _ O
 Curly _ _ O
-Brackets/Braces _ _ O
+Brackets _ _ O
+/ _ _ O
+Braces _ _ O
 “ _ _ O
 { _ _ O
 } _ _ O
 ” _ _ O
 – _ _ O
 – _ _ O
+
+
+ _ _ O
 What _ _ O
 do _ _ O
 we _ _ O
@@ -361,7 +392,8 @@ doubles _ _ O
 and _ _ O
 return _ _ O
 their _ _ O
-sum. _ _ O
+sum _ _ O
+. _ _ O
 ” _ _ O
 • _ _ O
 The _ _ O
@@ -402,7 +434,8 @@ doubles _ _ O
 and _ _ O
 return _ _ O
 their _ _ O
-sum. _ _ O
+sum _ _ O
+. _ _ O
 ” _ _ O
 • _ _ O
 “ _ _ O
@@ -464,7 +497,8 @@ doubles _ _ O
 and _ _ O
 return _ _ O
 their _ _ O
-sum. _ _ O
+sum _ _ O
+. _ _ O
 ” _ _ O
 • _ _ O
 Two _ _ O
@@ -476,6 +510,9 @@ Names _ _ O
 
 Function _ _ B-Concept
 Header _ _ I-Concept
+
+
+ _ _ O
 //sums _ _ O
 two _ _ O
 doubles _ _ O
@@ -525,9 +562,7 @@ sum _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-method _ _ O
-( _ _ O
-double _ _ O
+method(double _ _ O
 , _ _ O
 double _ _ O
 ) _ _ O
@@ -547,9 +582,7 @@ addend2 _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-method _ _ O
-( _ _ O
-double _ _ O
+method(double _ _ O
 , _ _ O
 double _ _ O
 ) _ _ O
@@ -567,9 +600,7 @@ Function _ _ B-Concept
 public _ _ B-Concept
 static _ _ B-Concept
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 args _ _ O
@@ -578,14 +609,10 @@ args _ _ O
 double _ _ O
 sum _ _ O
 = _ _ O
-sumDoubles _ _ O
-( _ _ O
-2.5,3.9 _ _ O
+sumDoubles(2.5,3.9 _ _ O
 ) _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-sum _ _ O
+System.out.println(sum _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
@@ -598,7 +625,9 @@ class _ _ O
 Functions _ _ B-Concept
 
 import _ _ O
-java.util.Scanner _ _ O
+java.util _ _ O
+. _ _ O
+Scanner _ _ O
 ; _ _ O
 public _ _ O
 class _ _ O
@@ -611,9 +640,7 @@ Function _ _ B-Concept
 public _ _ B-Concept
 static _ _ B-Concept
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 args _ _ O
@@ -623,15 +650,10 @@ Scanner _ _ O
 scan _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
-( _ _ O
-System.in _ _ O
+Scanner(System.in _ _ O
 ) _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Please _ _ O
+System.out.println("Please _ _ O
 enter _ _ O
 a _ _ O
 number _ _ O
@@ -646,10 +668,7 @@ scan.nextDouble _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Please _ _ O
+System.out.println("Please _ _ O
 enter _ _ O
 a _ _ O
 second _ _ O
@@ -668,17 +687,12 @@ scan.nextDouble _ _ O
 double _ _ O
 sum _ _ O
 = _ _ O
-sumDoubles _ _ O
-( _ _ O
-firstNum _ _ O
+sumDoubles(firstNum _ _ O
 , _ _ O
 secondNum _ _ O
 ) _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-The _ _ O
+System.out.println("The _ _ O
 sum _ _ O
 of _ _ O
 " _ _ O
@@ -723,9 +737,8 @@ sumDoubles _ _ O
 ? _ _ O
 • _ _ O
 Why _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 sumDoubles _ _ O
 just _ _ O
 use _ _ O
@@ -755,13 +768,18 @@ public _ _ B-Concept
 static _ _ B-Concept
 void _ _ O
 main _ _ O
+
+
+ _ _ O
 public _ _ B-Concept
 static _ _ B-Concept
 double _ _ O
 sumDoubl _ _ O
 es _ _ O
 
-Passing-in _ _ O
+Passing _ _ O
+- _ _ O
+in _ _ O
 Parameters _ _ B-Concept
 • _ _ O
 The _ _ O
@@ -775,7 +793,9 @@ function _ _ B-Concept
 call _ _ I-Concept
 is _ _ O
 called _ _ O
-Passing-in _ _ B-Concept
+Passing _ _ B-Concept
+- _ _ I-Concept
+in _ _ I-Concept
 . _ _ O
 • _ _ O
 Java _ _ O
@@ -783,12 +803,20 @@ has _ _ O
 two _ _ O
 kinds _ _ O
 of _ _ O
-passing-in _ _ B-Concept
+passing _ _ B-Concept
+- _ _ I-Concept
+in _ _ I-Concept
 . _ _ I-Concept
 
-Pass-by-Value _ _ B-Concept
+Pass _ _ B-Concept
+- _ _ I-Concept
+by _ _ I-Concept
+- _ _ I-Concept
+Value _ _ I-Concept
 • _ _ O
-Passing-in _ _ B-Concept
+Passing _ _ B-Concept
+- _ _ I-Concept
+in _ _ I-Concept
 a _ _ O
 copy _ _ O
 of _ _ O
@@ -819,12 +847,20 @@ primitive _ _ O
 type _ _ O
 parameters _ _ O
 are _ _ O
-passby-value _ _ B-Concept
+passby _ _ B-Concept
+- _ _ I-Concept
+value _ _ I-Concept
 . _ _ O
 
-Pass-by-Reference _ _ B-Concept
+Pass _ _ B-Concept
+- _ _ I-Concept
+by _ _ I-Concept
+- _ _ I-Concept
+Reference _ _ I-Concept
 • _ _ O
-Passing-in _ _ B-Concept
+Passing _ _ B-Concept
+- _ _ I-Concept
+in _ _ I-Concept
 the _ _ I-Concept
 actual _ _ O
 variable _ _ O
@@ -852,11 +888,17 @@ REASSIGNED _ _ O
 . _ _ O
 • _ _ O
 All _ _ O
-non-primitive _ _ O
+non _ _ O
+- _ _ O
+primitive _ _ O
 type _ _ O
 parameters _ _ B-Concept
 are _ _ O
-pass-by-reference _ _ B-Concept
+pass _ _ B-Concept
+- _ _ I-Concept
+by _ _ I-Concept
+- _ _ I-Concept
+reference _ _ I-Concept
 . _ _ O
 
 Another _ _ O
@@ -878,17 +920,26 @@ complete _ _ O
 with _ _ O
 the _ _ O
 person _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 full _ _ O
 name _ _ O
 . _ _ O
 Source _ _ O
 : _ _ O
-http _ _ O
-: _ _ O
-//www.bbcamerica.com/anglophen _ _ O
-ia/2011/07/five-slang-ways-to-say-hello/ _ _ O
+http://www.bbcamerica.com/anglophen _ _ O
+ia/2011/07 _ _ O
+/ _ _ O
+five _ _ O
+- _ _ O
+slang _ _ O
+- _ _ O
+ways _ _ O
+- _ _ O
+to _ _ O
+- _ _ O
+say _ _ O
+- _ _ O
+hello/ _ _ O
 
 Function _ _ B-Concept
 Components _ _ O
@@ -900,7 +951,11 @@ Components _ _ O
 . _ _ O
 4 _ _ O
 . _ _ O
-5. _ _ O
+5 _ _ O
+. _ _ O
+
+
+ _ _ O
 public _ _ B-Concept
 static _ _ B-Concept
 What _ _ O
@@ -921,21 +976,32 @@ Parentheses _ _ O
 ) _ _ O
 ” _ _ O
 – _ _ O
+
+
+ _ _ O
 What _ _ O
 are _ _ O
 the _ _ O
 parameters _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 6 _ _ O
 . _ _ O
 Curly _ _ O
-Brackets/Braces _ _ O
+Brackets _ _ O
+/ _ _ O
+Braces _ _ O
 “ _ _ O
 { _ _ O
 } _ _ O
 ” _ _ O
 – _ _ O
 – _ _ O
+
+
+ _ _ O
 What _ _ O
 do _ _ O
 we _ _ O
@@ -982,6 +1048,9 @@ type _ _ I-Concept
 
 Function _ _ B-Concept
 Header _ _ I-Concept
+
+
+ _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
@@ -999,10 +1068,7 @@ Function _ _ B-Concept
 Header _ _ I-Concept
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Wotcha _ _ O
+System.out.println("Wotcha _ _ O
 " _ _ O
 + _ _ O
 fullName _ _ O
@@ -1018,9 +1084,7 @@ cuppa _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-method _ _ O
-( _ _ O
-String _ _ O
+method(String _ _ O
 ) _ _ O
 //Note _ _ O
 no _ _ O

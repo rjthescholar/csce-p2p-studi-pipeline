@@ -8,6 +8,9 @@ Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Multicycle _ _ B-Concept
 Design _ _ I-Concept
 Original _ _ O
@@ -27,12 +30,21 @@ Childers _ _ O
 and _ _ O
 Jarrett _ _ O
 Billingsley _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
 Multicycle _ _ B-Concept
+
+
+ _ _ O
 2 _ _ O
 
 Multicycle _ _ B-Concept
@@ -52,14 +64,26 @@ cycle _ _ O
 to _ _ O
 complete _ _ O
 . _ _ O
-Single-cycle _ _ B-Concept
+
+
+ _ _ O
+Single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
+
+
+ _ _ O
 PHOTO _ _ O
 : _ _ O
-https _ _ O
-: _ _ O
-//www.straitstimes.com/asia/east-asia/china-scrambles-to-tame-rental-bike-chaos _ _ O
+https://www.straitstimes.com/asia/east-asia/china-scrambles-to-tame-rental-bike-chaos _ _ O
+
+
+ _ _ O
 Multicycle _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Chop _ _ O
@@ -75,7 +99,8 @@ amount _ _ O
 of _ _ O
 time _ _ O
 , _ _ O
-so… _ _ O
+so _ _ O
+… _ _ O
 ● _ _ O
 Make _ _ O
 different _ _ O
@@ -98,34 +123,103 @@ numbers _ _ O
 of _ _ O
 clock _ _ O
 cycles _ _ O
+
+
+ _ _ O
 3 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
 4 _ _ O
 cycles _ _ O
+
+
+ _ _ O
+or _ _ O
+
+
+ _ _ O
 or _ _ O
 or _ _ O
 or _ _ O
+
+
+ _ _ O
 or _ _ O
-or _ _ O
+
+
+ _ _ O
 100 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
+lw _ _ O
+
+
+ _ _ O
+lw _ _ O
+
+
+ _ _ O
+lw _ _ O
+
+
+ _ _ O
 lw _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 lw _ _ O
-lw _ _ O
-lw _ _ O
-lw _ _ O
+
+
+ _ _ O
 l _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 The _ _ O
@@ -164,11 +258,12 @@ only _ _ O
 some _ _ O
 write _ _ O
 to _ _ O
-memory/regs _ _ O
+memory _ _ O
+/ _ _ O
+regs _ _ O
 o _ _ O
 We _ _ O
-’ _ _ O
-re _ _ O
+’re _ _ O
 managing _ _ O
 their _ _ O
 complexity _ _ O
@@ -177,28 +272,93 @@ respect _ _ O
 to _ _ O
 time _ _ O
 . _ _ O
-beq/j _ _ O
+
+
+ _ _ O
+beq _ _ O
+/ _ _ O
+j _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 X _ _ O
-add/sub _ _ O
+
+
+ _ _ O
+add _ _ O
+/ _ _ O
+sub _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 W _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 M _ _ O
-…… _ _ O
+
+
+ _ _ O
+… _ _ O
+… _ _ O
 .. _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 W _ _ O
+
+
+ _ _ O
 Memory _ _ O
 is _ _ O
 slooooooow _ _ O
@@ -240,11 +400,12 @@ only _ _ O
 some _ _ O
 write _ _ O
 to _ _ O
-memory/regs _ _ O
+memory _ _ O
+/ _ _ O
+regs _ _ O
 o _ _ O
 We _ _ O
-’ _ _ O
-re _ _ O
+’re _ _ O
 managing _ _ O
 their _ _ O
 complexity _ _ O
@@ -253,23 +414,75 @@ respect _ _ O
 to _ _ O
 time _ _ O
 . _ _ O
-beq/j _ _ O
+
+
+ _ _ O
+beq _ _ O
+/ _ _ O
+j _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
-add/sub _ _ O
+
+
+ _ _ O
+add _ _ O
+/ _ _ O
+sub _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 ( _ _ O
 let _ _ O
 's _ _ O
@@ -279,11 +492,12 @@ lw _ _ O
 is _ _ O
 5 _ _ O
 cycles _ _ O
-: _ _ O
-) _ _ O
+:) _ _ O
 6 _ _ O
 
-Multi-cycle _ _ B-Concept
+Multi _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 CPU _ _ I-Concept
 Calculate _ _ O
 clock _ _ O
@@ -312,34 +526,88 @@ instructions _ _ O
 → _ _ O
 Reduces _ _ O
 latency _ _ O
+
+
+ _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t1 _ _ O
+t0,0(t1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 add _ _ O
-t2 _ _ O
-, _ _ O
-t2 _ _ O
-, _ _ O
-t3 _ _ O
+t2,t2,t3 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Not _ _ O
@@ -351,7 +619,9 @@ same _ _ O
  _ _ O
 In _ _ O
 the _ _ O
-multi-cycle _ _ B-Concept
+multi _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 design _ _ I-Concept
 : _ _ O
 Slowest _ _ O
@@ -363,8 +633,7 @@ Balanced _ _ O
 stages _ _ O
 are _ _ O
 desired _ _ O
-E.g _ _ O
-. _ _ O
+E.g. _ _ O
 split _ _ O
 the _ _ O
 memory _ _ O
@@ -373,25 +642,71 @@ into _ _ O
 multiple _ _ O
 clock _ _ O
 cycles _ _ O
+
+
+ _ _ O
 Time _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-t1 _ _ O
+t0,0(t1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 Mem _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 The _ _ O
@@ -399,8 +714,13 @@ multicycle _ _ O
 datapath _ _ O
 from _ _ O
 a _ _ O
-bird's-eye _ _ O
+bird's _ _ O
+- _ _ O
+eye _ _ O
 view _ _ O
+
+
+ _ _ O
 ● _ _ O
 Each _ _ O
 phase _ _ O
@@ -435,17 +755,44 @@ registers _ _ O
 sequential _ _ O
 logic _ _ O
 ) _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 W _ _ O
 9 _ _ O
 
@@ -468,32 +815,74 @@ the _ _ O
 datapath _ _ O
 ! _ _ O
 F _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 set _ _ O
 all _ _ O
 control _ _ O
 signals _ _ O
 ... _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 add _ _ O
 ... _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 add _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 W _ _ O
 data _ _ O
 flows _ _ O
@@ -522,34 +911,79 @@ the _ _ O
 datapath _ _ O
 ! _ _ O
 F _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 set _ _ O
 all _ _ O
 control _ _ O
 signals _ _ O
 ... _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 add _ _ O
 ... _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 load _ _ O
 ... _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 lw _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 W _ _ O
 data _ _ O
 flows _ _ O
@@ -594,7 +1028,9 @@ is _ _ O
 its _ _ O
 reciprocal _ _ O
 o _ _ O
-multi-issue _ _ O
+multi _ _ O
+- _ _ O
+issue _ _ O
 CPUs _ _ O
 can _ _ O
 execute _ _ O
@@ -616,13 +1052,16 @@ the _ _ O
 CPI _ _ B-Concept
 for _ _ O
 the _ _ O
-single-cycle _ _ B-Concept
+single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 implementation _ _ I-Concept
 ? _ _ O
 o _ _ O
 uh _ _ O
 , _ _ O
-1. _ _ O
+1 _ _ O
+. _ _ O
 o _ _ O
 By _ _ O
 , _ _ O
@@ -639,13 +1078,17 @@ multicycle _ _ B-Concept
 implementation _ _ O
 ? _ _ O
 o _ _ O
-…… _ _ O
+… _ _ O
+… _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
 hmmm _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 So _ _ O
@@ -681,8 +1124,7 @@ to _ _ O
 1 _ _ O
 GHz _ _ O
 ! _ _ O
-: _ _ O
-D _ _ O
+:D _ _ O
 ● _ _ O
 ... _ _ O
 buuut _ _ O
@@ -700,13 +1142,16 @@ lot _ _ O
 o _ _ O
 with _ _ O
 the _ _ O
-single-cycle _ _ O
+single _ _ O
+- _ _ O
+cycle _ _ O
 datapath _ _ O
 , _ _ O
 CPI _ _ B-Concept
 was _ _ O
 always _ _ O
-1. _ _ O
+1 _ _ O
+. _ _ O
 o _ _ O
 now _ _ O
 the _ _ O
@@ -719,22 +1164,71 @@ uh _ _ O
 ... _ _ O
 variable _ _ O
 ? _ _ O
-beq/j _ _ O
+
+
+ _ _ O
+beq _ _ O
+/ _ _ O
+j _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
-add/sub _ _ O
+
+
+ _ _ O
+add _ _ O
+/ _ _ O
+sub _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 M _ _ O
+
+
+ _ _ O
 if _ _ O
 instructions _ _ O
 vary _ _ O
@@ -748,6 +1242,9 @@ calculate _ _ O
 CPI _ _ O
 ? _ _ O
 WB _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Calculating _ _ O
@@ -811,39 +1308,109 @@ are _ _ O
 stores _ _ O
 . _ _ O
 ALU _ _ O
+
+
+ _ _ O
 Branches _ _ O
+
+
+ _ _ O
 Loads _ _ O
+
+
+ _ _ O
 Stores _ _ O
+
+
+ _ _ O
 % _ _ O
+
+
+ _ _ O
 60 _ _ O
 % _ _ O
+
+
+ _ _ O
 20 _ _ O
 % _ _ O
+
+
+ _ _ O
 15 _ _ O
 % _ _ O
+
+
+ _ _ O
 5 _ _ O
 % _ _ O
+
+
+ _ _ O
 Cycles _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 Now _ _ O
 sum _ _ O
 the _ _ O
 CPIs _ _ B-Concept
+
+
+ _ _ O
 CPI _ _ B-Concept
+
+
+ _ _ O
 2.4 _ _ O
+
+
+ _ _ O
 0.2 _ _ O
+
+
+ _ _ O
 = _ _ O
 3.95 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 0.6 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 0.75 _ _ O
-1. _ _ O
+
+
+ _ _ O
+1 _ _ O
+. _ _ O
 for _ _ O
 each _ _ O
 category _ _ O
@@ -865,9 +1432,17 @@ category _ _ O
 to _ _ O
 get _ _ O
 the _ _ O
-per-category _ _ O
+per _ _ O
+- _ _ O
+category _ _ O
 CPI _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 the _ _ O
@@ -920,6 +1495,9 @@ all _ _ O
 the _ _ O
 instructions _ _ O
 ? _ _ O
+
+
+ _ _ O
 𝐶𝑃𝐼 _ _ B-Concept
 cycles _ _ O
 𝑡 _ _ O
@@ -963,6 +1541,9 @@ of _ _ O
 one _ _ O
 clock _ _ O
 cycle _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 So _ _ O
@@ -992,7 +1573,9 @@ instructions _ _ O
 ● _ _ O
 For _ _ O
 the _ _ O
-single-cycle _ _ O
+single _ _ O
+- _ _ O
+cycle _ _ O
 datapath _ _ O
 : _ _ O
 o _ _ O
@@ -1007,7 +1590,9 @@ time _ _ O
 ( _ _ O
 5 _ _ O
 x _ _ O
-10-9 _ _ O
+10 _ _ O
+- _ _ O
+9 _ _ O
 s _ _ O
 ) _ _ O
 o _ _ O
@@ -1035,7 +1620,9 @@ time _ _ I-Concept
 ( _ _ O
 5 _ _ O
 × _ _ O
-10-9 _ _ O
+10 _ _ O
+- _ _ O
+9 _ _ O
 ) _ _ O
 ▪ _ _ O
 = _ _ O
@@ -1095,13 +1682,18 @@ time _ _ O
 ( _ _ O
 1 _ _ O
 × _ _ O
-10-9 _ _ O
+10 _ _ O
+- _ _ O
+9 _ _ O
 ) _ _ O
 o _ _ O
 = _ _ O
 1.975 _ _ O
 seconds _ _ O
 ! _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 How _ _ O
@@ -1110,6 +1702,9 @@ it _ _ O
 look _ _ O
 like _ _ O
 ? _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Multicycle _ _ B-Concept
@@ -1132,6 +1727,9 @@ control _ _ O
 for _ _ O
 MIPS _ _ O
 : _ _ O
+
+
+ _ _ O
 o _ _ O
 Additional _ _ O
 registers _ _ O
@@ -1144,20 +1742,30 @@ direct _ _ O
 temporary _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 single _ _ O
 ALU _ _ O
+
+
+ _ _ O
 A _ _ O
 single _ _ O
 Shared _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Figure _ _ O
 5.26 _ _ O
 in _ _ O
-P _ _ O
-& _ _ O
-H _ _ O
+P&H _ _ O
 3e _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Multicycle _ _ B-Concept
@@ -1180,6 +1788,9 @@ control _ _ O
 for _ _ O
 MIPS _ _ O
 : _ _ O
+
+
+ _ _ O
 o _ _ O
 Additional _ _ O
 registers _ _ O
@@ -1192,6 +1803,9 @@ direct _ _ O
 temporary _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 Registers _ _ O
 are _ _ O
 added _ _ O
@@ -1211,13 +1825,17 @@ the _ _ O
 following _ _ O
 clock _ _ O
 cycle _ _ O
+
+
+ _ _ O
 Figure _ _ O
 5.26 _ _ O
 in _ _ O
-P _ _ O
-& _ _ O
-H _ _ O
+P&H _ _ O
 3e _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Multicycle _ _ B-Concept
@@ -1240,6 +1858,9 @@ control _ _ O
 for _ _ O
 MIPS _ _ O
 : _ _ O
+
+
+ _ _ O
 o _ _ O
 Additional _ _ O
 registers _ _ O
@@ -1263,6 +1884,9 @@ or _ _ O
 the _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Using _ _ O
 a _ _ O
 single _ _ O
@@ -1275,6 +1899,9 @@ the _ _ O
 hardware _ _ O
 design _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 larger _ _ O
 MUX _ _ O
@@ -1287,13 +1914,17 @@ adding _ _ O
 the _ _ O
 branch _ _ O
 offsets _ _ O
+
+
+ _ _ O
 Figure _ _ O
 5.26 _ _ O
 in _ _ O
-P _ _ O
-& _ _ O
-H _ _ O
+P&H _ _ O
 3e _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Multicycle _ _ B-Concept
@@ -1305,19 +1936,26 @@ with _ _ O
 control _ _ O
 flow _ _ O
 ) _ _ O
+
+
+ _ _ O
 Now _ _ O
 we _ _ O
 support _ _ O
 jump _ _ O
 instructions _ _ O
 ☺ _ _ O
+
+
+ _ _ O
 Figure _ _ O
 5.28 _ _ O
 in _ _ O
-P _ _ O
-& _ _ O
-H _ _ O
+P&H _ _ O
 3e _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Multicycle _ _ B-Concept
@@ -1329,49 +1967,72 @@ with _ _ O
 control _ _ O
 flow _ _ O
 ) _ _ O
+
+
+ _ _ O
 Figure _ _ O
 5.28 _ _ O
 in _ _ O
-P _ _ O
-& _ _ O
-H _ _ O
+P&H _ _ O
 3e _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Signals _ _ O
 Signal _ _ O
+
+
+ _ _ O
 Effect _ _ O
+
+
+ _ _ O
 MemRead _ _ O
+
+
+ _ _ O
 Read _ _ O
 from _ _ O
 memory _ _ O
 ➔ _ _ O
 0 _ _ O
 : _ _ O
-Don _ _ O
-’ _ _ O
-t _ _ O
+Do _ _ O
+n’t _ _ O
 read _ _ O
 ; _ _ O
 1 _ _ O
 : _ _ O
 Read _ _ O
+
+
+ _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 Write _ _ O
 to _ _ O
 memory _ _ O
 ➔ _ _ O
 0 _ _ O
 : _ _ O
-Don _ _ O
-’ _ _ O
-t _ _ O
+Do _ _ O
+n’t _ _ O
 write _ _ O
 ; _ _ O
 1 _ _ O
 : _ _ O
 Write _ _ O
+
+
+ _ _ O
 ALUSelA _ _ O
+
+
+ _ _ O
 Select _ _ O
 input _ _ O
 of _ _ O
@@ -1388,7 +2049,13 @@ pc _ _ O
 : _ _ O
 register _ _ O
 A _ _ O
+
+
+ _ _ O
 RegDst _ _ O
+
+
+ _ _ O
 Select _ _ O
 destination _ _ O
 register _ _ O
@@ -1398,7 +2065,9 @@ register _ _ O
 $ _ _ O
 rt _ _ O
 ( _ _ O
-I-Type _ _ O
+I _ _ O
+- _ _ O
+Type _ _ O
 ) _ _ O
 ; _ _ O
 1 _ _ O
@@ -1406,31 +2075,49 @@ I-Type _ _ O
 $ _ _ O
 rd _ _ O
 ( _ _ O
-R-Type _ _ O
+R _ _ O
+- _ _ O
+Type _ _ O
 ) _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
-Register-file _ _ O
+
+
+ _ _ O
+Register _ _ O
+- _ _ O
+file _ _ O
 write _ _ O
 enable _ _ O
 ➔ _ _ O
 0 _ _ O
 : _ _ O
-Don _ _ O
-’ _ _ O
-t _ _ O
+Do _ _ O
+n’t _ _ O
 write _ _ O
 ; _ _ O
 1 _ _ O
 : _ _ O
 Write _ _ O
+
+
+ _ _ O
 MemToReg _ _ O
+
+
+ _ _ O
 Select _ _ O
 data _ _ O
 to _ _ O
 write _ _ O
 to _ _ O
 the _ _ O
-register-file➔ _ _ O
+register _ _ O
+- _ _ O
+file _ _ O
+➔ _ _ O
 0 _ _ O
 : _ _ O
 ALU _ _ O
@@ -1438,7 +2125,13 @@ ALU _ _ O
 1 _ _ O
 : _ _ O
 Memory _ _ O
+
+
+ _ _ O
 IorD _ _ O
+
+
+ _ _ O
 Select _ _ O
 the _ _ O
 source _ _ O
@@ -1461,9 +2154,29 @@ instruction _ _ O
 : _ _ O
 ALU _ _ O
 ( _ _ O
-lw/sw/lh/lhu/sh/lb/lbu/sb _ _ O
+lw _ _ O
+/ _ _ O
+sw _ _ O
+/ _ _ O
+lh _ _ O
+/ _ _ O
+lhu _ _ O
+/ _ _ O
+sh _ _ O
+/ _ _ O
+lb _ _ O
+/ _ _ O
+lbu _ _ O
+/ _ _ O
+sb _ _ O
 ) _ _ O
+
+
+ _ _ O
 IRWrite _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 register _ _ O
 write _ _ O
@@ -1471,21 +2184,30 @@ enable _ _ O
 ➔ _ _ O
 0 _ _ O
 : _ _ O
-Don _ _ O
-’ _ _ O
-t _ _ O
+Do _ _ O
+n’t _ _ O
 write _ _ O
 ; _ _ O
 1 _ _ O
 : _ _ O
 Write _ _ O
+
+
+ _ _ O
 PCWrite _ _ O
+
+
+ _ _ O
 PC _ _ O
 unconditional _ _ O
 write _ _ O
 enable _ _ O
 ( _ _ O
-jumps/PC=PC+4 _ _ O
+jumps _ _ O
+/ _ _ O
+PC _ _ O
+= _ _ O
+PC+4 _ _ O
 ) _ _ O
 ➔ _ _ O
 0 _ _ O
@@ -1496,7 +2218,13 @@ effect _ _ O
 1 _ _ O
 : _ _ O
 Jump _ _ O
+
+
+ _ _ O
 PCWriteCond _ _ O
+
+
+ _ _ O
 PC _ _ O
 conditional _ _ O
 write _ _ O
@@ -1522,10 +2250,22 @@ More _ _ O
 signals _ _ O
 Signal _ _ O
 ALUSelB _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
+
+
+ _ _ O
 PCSource _ _ O
+
+
+ _ _ O
 Effect _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 input _ _ O
 B _ _ O
@@ -1533,7 +2273,13 @@ comes _ _ O
 from _ _ O
 $ _ _ O
 rt _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 input _ _ O
 B _ _ O
@@ -1541,7 +2287,13 @@ is _ _ O
 the _ _ O
 constant _ _ O
 4 _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 input _ _ O
 B _ _ O
@@ -1550,7 +2302,13 @@ from _ _ O
 the _ _ O
 Immediate _ _ O
 field _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 input _ _ O
 B _ _ O
@@ -1565,17 +2323,35 @@ left _ _ O
 ( _ _ O
 branch _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 does _ _ O
 an _ _ O
 addition _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 does _ _ O
 an _ _ O
 subtraction _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 behaviour _ _ O
 depends _ _ O
@@ -1584,9 +2360,17 @@ the _ _ O
 function _ _ O
 field _ _ O
 ( _ _ O
-R-Type _ _ O
+R _ _ O
+- _ _ O
+Type _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 PC _ _ O
 is _ _ O
 updated _ _ O
@@ -1601,7 +2385,13 @@ Fetch _ _ O
 : _ _ O
 PC+4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 PC _ _ O
 is _ _ O
 updated _ _ O
@@ -1619,7 +2409,13 @@ PC _ _ O
 branch _ _ O
 offset _ _ O
 ) _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 PC _ _ O
 is _ _ O
 updated _ _ O
@@ -1635,18 +2431,33 @@ jump _ _ O
 Fetch _ _ O
 and _ _ O
 decode _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Fetch _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 Increment _ _ O
 PC _ _ O
 Read _ _ O
 instruction _ _ O
 from _ _ O
 memory _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 00 _ _ O
 26 _ _ O
 
@@ -1656,15 +2467,26 @@ Controller _ _ O
 does _ _ O
 its _ _ O
 thing _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 Maybe _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 a _ _ O
 branch _ _ O
 ? _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 adds _ _ O
 PC _ _ O
@@ -1682,34 +2504,66 @@ Just _ _ O
 in _ _ O
 case _ _ O
 ! _ _ O
+
+
+ _ _ O
 00 _ _ O
 27 _ _ O
 
-R-Type _ _ O
+R _ _ O
+- _ _ O
+Type _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Execute _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 adds _ _ O
 registers _ _ O
 A _ _ O
 and _ _ O
 B _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 add _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 s1 _ _ O
 , _ _ O
 s2 _ _ O
+
+
+ _ _ O
 10 _ _ O
 29 _ _ O
 
 Write _ _ O
 Back _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 result _ _ O
 is _ _ O
@@ -1719,23 +2573,46 @@ into _ _ O
 the _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 add _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 s1 _ _ O
 , _ _ O
 s2 _ _ O
+
+
+ _ _ O
 00 _ _ O
 30 _ _ O
 
-I-Type _ _ O
+I _ _ O
+- _ _ O
+Type _ _ O
 lw _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Execute _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 adds _ _ O
 registers _ _ O
@@ -1746,20 +2623,36 @@ to _ _ O
 calculate _ _ O
 effective _ _ O
 address _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-s1 _ _ O
+4(s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
 32 _ _ O
 
 Memory _ _ O
 access _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 result _ _ O
 is _ _ O
@@ -1772,20 +2665,36 @@ Memory _ _ O
 is _ _ O
 read _ _ O
 . _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-s1 _ _ O
+4(s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
 33 _ _ O
 
 Write _ _ O
 back _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 Data _ _ O
 read _ _ O
 from _ _ O
@@ -1796,19 +2705,34 @@ into _ _ O
 the _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-s1 _ _ O
+4(s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 00 _ _ O
 34 _ _ O
 
-I-Type _ _ O
+I _ _ O
+- _ _ O
+Type _ _ O
 beq _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Execute _ _ O
@@ -1816,7 +2740,13 @@ Instruction _ _ O
 – _ _ O
 Branch _ _ O
 conclusion _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 subtracts _ _ O
 registers _ _ O
@@ -1831,29 +2761,64 @@ zero _ _ O
 , _ _ O
 then _ _ O
 branch _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 beq _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 s1 _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 01 _ _ O
 36 _ _ O
 
-J-Type _ _ O
+J _ _ O
+- _ _ O
+Type _ _ O
 jump _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Execute _ _ O
 Instruction _ _ O
 – _ _ O
 Jump _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 Jump _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
 target _ _ O
+
+
+ _ _ O
 00 _ _ O
 38 _ _ O
 
@@ -1870,12 +2835,13 @@ each _ _ O
 cycle _ _ O
 ? _ _ O
 o _ _ O
-Single-cycle _ _ O
+Single _ _ O
+- _ _ O
+cycle _ _ O
 : _ _ O
 Signals _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 change _ _ O
 during _ _ O
 each _ _ O
@@ -1884,7 +2850,9 @@ instruction _ _ O
 Combinational _ _ O
 circuit _ _ O
 o _ _ O
-Multi-cycle _ _ O
+Multi _ _ O
+- _ _ O
+cycle _ _ O
 : _ _ O
 Signals _ _ O
 change _ _ O
@@ -1935,23 +2903,52 @@ o _ _ O
 State _ _ O
 machine _ _ O
 ! _ _ O
+
+
+ _ _ O
 39 _ _ O
 
-Tick-tock _ _ O
+Tick _ _ O
+- _ _ O
+tock _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 opcode _ _ O
+
+
+ _ _ O
 transition _ _ O
 logic _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
 … _ _ O
 . _ _ O
 IRWrite _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 state _ _ O
 register _ _ O
+
+
+ _ _ O
 ALUSrcA _ _ O
 output _ _ O
 logic _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 Multicycle _ _ O
@@ -1986,14 +2983,30 @@ is _ _ O
 different _ _ O
 after _ _ O
 Decode _ _ O
+
+
+ _ _ O
 DECODE _ _ O
 / _ _ O
 REG _ _ O
 . _ _ O
 READ _ _ O
+
+
+ _ _ O
 FETCH _ _ O
-R-Type _ _ O
-load/store _ _ O
+
+
+ _ _ O
+R _ _ O
+- _ _ O
+Type _ _ O
+
+
+ _ _ O
+load _ _ O
+/ _ _ O
+store _ _ O
 CALC _ _ O
 . _ _ O
 ADDR _ _ O
@@ -2001,26 +3014,47 @@ ADDR _ _ O
 load _ _ O
 READ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 WRITE _ _ O
 BACK _ _ O
 MEM _ _ O
+
+
+ _ _ O
 EXEC _ _ O
 . _ _ O
 ALU _ _ O
+
+
+ _ _ O
 branch _ _ O
 BRANCH _ _ O
 COMPL _ _ O
 . _ _ O
+
+
+ _ _ O
 jump _ _ O
 JUMP _ _ O
 COMPL _ _ O
 . _ _ O
+
+
+ _ _ O
 store _ _ O
 WRITE _ _ O
 MEM _ _ O
+
+
+ _ _ O
 WRITE _ _ O
 BACK _ _ O
 ALU _ _ O
+
+
+ _ _ O
 MIPS _ _ O
 has _ _ O
 > _ _ O
@@ -2044,9 +3078,15 @@ bit _ _ O
 more _ _ O
 complex _ _ O
 ☺ _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Performance _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 The _ _ O
@@ -2085,6 +3125,9 @@ computer _ _ O
 is _ _ O
 faster _ _ O
 ? _ _ O
+
+
+ _ _ O
 yeah _ _ O
 but _ _ O
 this _ _ O
@@ -2104,8 +3147,7 @@ stuff _ _ O
 ! _ _ O
 ● _ _ O
 you _ _ O
-wan _ _ O
-na _ _ O
+wanna _ _ O
 copy _ _ O
 a _ _ O
 CD _ _ O
@@ -2152,10 +3194,15 @@ we _ _ O
 're _ _ O
 getting _ _ O
 more _ _ O
-science-y _ _ O
+science _ _ O
+- _ _ O
+y _ _ O
 , _ _ O
 right _ _ O
 ? _ _ O
+
+
+ _ _ O
 44 _ _ O
 
 Response _ _ O
@@ -2189,6 +3236,9 @@ a _ _ O
 span _ _ O
 of _ _ O
 time _ _ O
+
+
+ _ _ O
 response _ _ O
 time _ _ O
 ( _ _ O
@@ -2197,8 +3247,14 @@ per _ _ O
 task _ _ O
 ) _ _ O
 3s _ _ O
+
+
+ _ _ O
 30 _ _ O
 seconds _ _ O
+
+
+ _ _ O
 they _ _ O
 're _ _ O
 not _ _ O
@@ -2215,12 +3271,18 @@ a _ _ O
 little _ _ O
 more _ _ O
 complex _ _ O
+
+
+ _ _ O
 throughput _ _ O
 ( _ _ O
 tasks _ _ O
 per _ _ O
 time _ _ O
 ) _ _ O
+
+
+ _ _ O
 12 _ _ O
 minutes _ _ O
 45 _ _ O
@@ -2255,14 +3317,26 @@ only _ _ O
 minutes _ _ O
 . _ _ O
 4min _ _ O
+
+
+ _ _ O
 4min _ _ O
+
+
+ _ _ O
 4min _ _ O
+
+
+ _ _ O
 2min _ _ O
 2min _ _ O
 2min _ _ O
 2min _ _ O
 2min _ _ O
 2min _ _ O
+
+
+ _ _ O
 ● _ _ O
 the _ _ O
 response _ _ O
@@ -2297,6 +3371,9 @@ same _ _ O
 ( _ _ O
 12min _ _ O
 ) _ _ O
+
+
+ _ _ O
 46 _ _ O
 
 Throughput _ _ O
@@ -2345,15 +3422,24 @@ two _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
+
+
+ _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
+
+
+ _ _ O
 with _ _ O
 one _ _ O
 : _ _ O
 20min _ _ O
+
+
+ _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
@@ -2361,16 +3447,25 @@ one _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
+
+
+ _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
 4min _ _ O
+
+
+ _ _ O
 with _ _ O
 two _ _ O
 : _ _ O
 12min _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 because _ _ O
@@ -2402,15 +3497,15 @@ instructions _ _ O
 . _ _ O
 so _ _ O
 we _ _ O
-could… _ _ O
+could _ _ O
+… _ _ O
 o _ _ O
 do _ _ O
 each _ _ O
 instruction _ _ O
 faster _ _ O
 ( _ _ O
-i.e _ _ O
-. _ _ O
+i.e. _ _ O
 reduce _ _ O
 latency _ _ O
 ) _ _ O
@@ -2421,8 +3516,7 @@ instructions _ _ O
 at _ _ O
 once _ _ O
 ( _ _ O
-i.e _ _ O
-. _ _ O
+i.e. _ _ O
 increase _ _ O
 throughput _ _ O
 ) _ _ O
@@ -2435,7 +3529,8 @@ time _ _ O
 we _ _ O
 did _ _ O
 the _ _ O
-former… _ _ O
+former _ _ O
+… _ _ O
 o _ _ O
 clock _ _ O
 speeds _ _ O
@@ -2468,11 +3563,16 @@ and _ _ O
 that _ _ O
 's _ _ O
 when _ _ O
-multi-core _ _ O
+multi _ _ O
+- _ _ O
+core _ _ O
 CPUs _ _ O
 became _ _ O
 common _ _ O
 . _ _ O
+
+
+ _ _ O
 48 _ _ O
 
 Reducing _ _ O
@@ -2501,7 +3601,13 @@ nanoseconds _ _ O
 . _ _ O
 1.6ns _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 if _ _ O
 each _ _ O
 instruction _ _ O
@@ -2523,17 +3629,38 @@ the _ _ O
 clock _ _ O
 running _ _ O
 ? _ _ O
+
+
+ _ _ O
 1.6ns _ _ O
+
+
+ _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 1 _ _ O
 0.8 _ _ O
 × _ _ O
 10−9 _ _ O
 𝑠 _ _ O
+
+
+ _ _ O
 1.6ns _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 .8ns _ _ O
+
+
+ _ _ O
 = _ _ O
 1.25 _ _ O
 × _ _ O
@@ -2542,6 +3669,9 @@ running _ _ O
 = _ _ O
 1.25 _ _ O
 𝐺𝐻𝑧 _ _ O
+
+
+ _ _ O
 49 _ _ O
 
 But _ _ O
@@ -2549,9 +3679,14 @@ is _ _ O
 this _ _ O
 efficient _ _ O
 ? _ _ O
+
+
+ _ _ O
 50 _ _ O
 
-Multi-cycle _ _ O
+Multi _ _ O
+- _ _ O
+cycle _ _ O
 lw _ _ O
 ( _ _ O
 animated _ _ O
@@ -2568,12 +3703,24 @@ through _ _ O
 the _ _ O
 datapath _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 R _ _ O
 e _ _ O
 g _ _ O
@@ -2583,17 +3730,35 @@ t _ _ O
 e _ _ O
 r _ _ O
 s _ _ O
+
+
+ _ _ O
 set _ _ O
 all _ _ O
 control _ _ O
 signals _ _ O
 ... _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 R _ _ O
 e _ _ O
 g _ _ O
@@ -2603,6 +3768,9 @@ t _ _ O
 e _ _ O
 r _ _ O
 s _ _ O
+
+
+ _ _ O
 Clock _ _ O
 count _ _ O
 : _ _ O
@@ -2612,17 +3780,32 @@ count _ _ O
 0 _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 Calculate _ _ O
 eff _ _ O
 addr _ _ O
 ... _ _ O
 R _ _ O
+
+
+ _ _ O
 M _ _ O
 load _ _ O
 ... _ _ O
+
+
+ _ _ O
 e _ _ O
 g _ _ O
 i _ _ O
@@ -2631,10 +3814,19 @@ t _ _ O
 e _ _ O
 r _ _ O
 s _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 R _ _ O
 e _ _ O
 g _ _ O
@@ -2644,7 +3836,13 @@ t _ _ O
 e _ _ O
 r _ _ O
 s _ _ O
+
+
+ _ _ O
 W _ _ O
+
+
+ _ _ O
 data _ _ O
 flows _ _ O
 back _ _ O
@@ -2653,8 +3851,13 @@ registers _ _ O
 ... _ _ O
 51 _ _ O
 
-Real-World _ _ O
+Real _ _ O
+- _ _ O
+World _ _ O
 Analysis _ _ O
+
+
+ _ _ O
 52 _ _ O
 
 Another _ _ O
@@ -2665,17 +3868,21 @@ A _ _ O
 B _ _ O
 : _ _ O
 .text _ _ O
+
+
+ _ _ O
 loop _ _ O
 : _ _ O
+
+
+ _ _ O
 .word _ _ O
 10,20,30,40,50,60,70,80,90,100 _ _ O
 .word _ _ O
 0,0,0,0,0,0,0,0,0,0 _ _ O
 la _ _ O
 $ _ _ O
-s0 _ _ O
-, _ _ O
-A _ _ O
+s0,A _ _ O
 li _ _ O
 $ _ _ O
 s1,10 _ _ O
@@ -2684,61 +3891,37 @@ $ _ _ O
 s2,10 _ _ O
 lw _ _ O
 $ _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-s0 _ _ O
+t0,0($s0 _ _ O
 ) _ _ O
 mul _ _ O
 $ _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-s1 _ _ O
+t0,$t0,$s1 _ _ O
 sw _ _ O
 $ _ _ O
-t0,40 _ _ O
-( _ _ O
-$ _ _ O
-s0 _ _ O
+t0,40($s0 _ _ O
 ) _ _ O
 addi _ _ O
 $ _ _ O
-s0 _ _ O
-, _ _ O
-$ _ _ O
-s0,4 _ _ O
+s0,$s0,4 _ _ O
 addi _ _ O
 $ _ _ O
-s2 _ _ O
-, _ _ O
-$ _ _ O
-s2 _ _ O
-, _ _ O
--1 _ _ O
+s2,$s2,-1 _ _ O
 bne _ _ O
 $ _ _ O
-s2 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-loop _ _ O
+s2,$0,loop _ _ O
 li _ _ O
 $ _ _ O
 v0,10 _ _ O
 syscall _ _ O
+
+
+ _ _ O
 # _ _ O
 address _ _ O
 of _ _ O
 A _ _ O
 # _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 * _ _ O
 10 _ _ O
@@ -2746,23 +3929,16 @@ i _ _ O
 iteration _ _ O
 # _ _ O
 read _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 # _ _ O
 $ _ _ O
-t0=A _ _ O
-[ _ _ O
-i _ _ O
-] _ _ O
-* _ _ O
-10 _ _ O
+t0 _ _ O
+= _ _ O
+A[i]*10 _ _ O
 # _ _ O
 update _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 # _ _ O
 next _ _ O
@@ -2788,8 +3964,14 @@ A _ _ O
 B _ _ O
 : _ _ O
 .text _ _ O
+
+
+ _ _ O
 loop _ _ O
 : _ _ O
+
+
+ _ _ O
 .word _ _ O
 10,20,30,40,50,60,70,80,90,100 _ _ O
 .word _ _ O
@@ -2797,9 +3979,7 @@ loop _ _ O
 # _ _ O
 la _ _ O
 $ _ _ O
-s0 _ _ O
-, _ _ O
-A _ _ O
+s0,A _ _ O
 # _ _ O
 address _ _ O
 of _ _ O
@@ -2808,9 +3988,7 @@ li _ _ O
 $ _ _ O
 s1,10 _ _ O
 # _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 * _ _ O
 10 _ _ O
@@ -2821,75 +3999,43 @@ s2,10 _ _ O
 iteration _ _ O
 lw _ _ O
 $ _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-s0 _ _ O
+t0,0($s0 _ _ O
 ) _ _ O
 # _ _ O
 read _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 mul _ _ O
 $ _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-s1 _ _ O
+t0,$t0,$s1 _ _ O
 # _ _ O
 $ _ _ O
-t0=A _ _ O
-[ _ _ O
-i _ _ O
-] _ _ O
-* _ _ O
-10 _ _ O
+t0 _ _ O
+= _ _ O
+A[i]*10 _ _ O
 sw _ _ O
 $ _ _ O
-t0,40 _ _ O
-( _ _ O
-$ _ _ O
-s0 _ _ O
+t0,40($s0 _ _ O
 ) _ _ O
 # _ _ O
 update _ _ O
-A _ _ O
-[ _ _ O
-i _ _ O
+A[i _ _ O
 ] _ _ O
 addi _ _ O
 $ _ _ O
-s0 _ _ O
-, _ _ O
-$ _ _ O
-s0,4 _ _ O
+s0,$s0,4 _ _ O
 # _ _ O
 next _ _ O
 element _ _ O
 addi _ _ O
 $ _ _ O
-s2 _ _ O
-, _ _ O
-$ _ _ O
-s2 _ _ O
-, _ _ O
--1 _ _ O
+s2,$s2,-1 _ _ O
 # _ _ O
 dec _ _ O
 iteration _ _ O
 bne _ _ O
 $ _ _ O
-s2 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-loop _ _ O
+s2,$0,loop _ _ O
 # _ _ O
 done _ _ O
 ? _ _ O
@@ -2902,6 +4048,9 @@ syscall _ _ O
 syscall _ _ O
 # _ _ O
 syscall _ _ O
+
+
+ _ _ O
 instr _ _ O
 . _ _ O
 count _ _ O
@@ -2922,8 +4071,7 @@ Another _ _ O
 example _ _ O
 ● _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 analyze _ _ O
 the _ _ O
 program _ _ O
@@ -2934,14 +4082,15 @@ much _ _ O
 time _ _ O
 with _ _ O
 a _ _ O
-Single-Cycle _ _ O
+Single _ _ O
+- _ _ O
+Cycle _ _ O
 design _ _ O
 ? _ _ O
 1 _ _ O
 . _ _ O
 What _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 clock _ _ O
 length _ _ O
@@ -2966,8 +4115,7 @@ or _ _ O
 2 _ _ O
 . _ _ O
 What _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 cycles _ _ O
 per _ _ O
@@ -2978,11 +4126,16 @@ CPI _ _ O
 : _ _ O
 1 _ _ O
 ( _ _ O
-single-cycle _ _ O
+single _ _ O
+- _ _ O
+cycle _ _ O
 ! _ _ O
 yay _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Thus _ _ O
 this _ _ O
@@ -3004,6 +4157,9 @@ CPI _ _ O
 ns _ _ O
 = _ _ O
 660ns _ _ O
+
+
+ _ _ O
 55 _ _ O
 
 Another _ _ O
@@ -3035,8 +4191,7 @@ speed _ _ O
 ? _ _ O
 ) _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 just _ _ O
 assume _ _ O
 the _ _ O
@@ -3092,11 +4247,13 @@ is _ _ O
 5 _ _ O
 = _ _ O
 2ns _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 What _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 CPI _ _ O
 ? _ _ O
@@ -3136,8 +4293,7 @@ Stores _ _ O
 10 _ _ O
 ▪ _ _ O
 There _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 a _ _ O
 different _ _ O
 # _ _ O
@@ -3199,8 +4355,7 @@ Multicycle _ _ O
 here _ _ O
 , _ _ O
 let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 us _ _ O
 improve _ _ O
 our _ _ O
@@ -3218,8 +4373,20 @@ reduction _ _ O
 ) _ _ O
 56 _ _ O
 
-doo-doo-doo _ _ O
-doo-doo-doo-doo-doo _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
+- _ _ O
+doo _ _ O
 ● _ _ O
 not _ _ O
 bad _ _ O
@@ -3269,7 +4436,9 @@ as _ _ O
 fast _ _ O
 as _ _ O
 the _ _ O
-single-cycle _ _ B-Concept
+single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 machine _ _ O
 ... _ _ O
 ▪ _ _ O
@@ -3277,9 +4446,14 @@ How _ _ O
 do _ _ O
 we _ _ O
 increase _ _ O
-throughput… _ _ O
+throughput _ _ O
+… _ _ O
 ▪ _ _ O
-HMMMMMMMMMMMMMMMMMMMMMM… _ _ O
+HMMMMMMMMMMMMMMMMMMMMMM _ _ O
+… _ _ O
+
+
+ _ _ O
 57 _ _ O
 
 

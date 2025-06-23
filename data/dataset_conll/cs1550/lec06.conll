@@ -4,15 +4,18 @@ Introduction _ _ O
 to _ _ O
 Operating _ _ O
 Systems _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 Spring _ _ O
 2022 _ _ O
+
+
+ _ _ O
 Sherif _ _ O
 Khattab _ _ O
-ksm73 _ _ O
-@ _ _ O
-pitt.edu _ _ O
+ksm73@pitt.edu _ _ O
 ( _ _ O
 Some _ _ O
 slides _ _ O
@@ -23,7 +26,8 @@ Silberschatz _ _ O
 Galvin _ _ O
 and _ _ O
 Gagne _ _ O
-©2013 _ _ O
+© _ _ O
+2013 _ _ O
 ) _ _ O
 
 Announcements _ _ O
@@ -51,6 +55,9 @@ Project _ _ O
 due _ _ O
 on _ _ O
 2/18 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -73,6 +80,9 @@ are _ _ O
 created _ _ O
 and _ _ O
 terminated _ _ O
+
+
+ _ _ O
 • _ _ O
 Tracing _ _ O
 programs _ _ O
@@ -81,6 +91,9 @@ fork _ _ B-Concept
 ( _ _ I-Concept
 ) _ _ I-Concept
 calls _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -99,7 +112,11 @@ fork _ _ B-Concept
 can _ _ O
 you _ _ O
 clarify _ _ O
-copy-and-write _ _ B-Concept
+copy _ _ B-Concept
+- _ _ I-Concept
+and _ _ I-Concept
+- _ _ I-Concept
+write _ _ I-Concept
 ? _ _ O
 does _ _ O
 the _ _ O
@@ -140,10 +157,7 @@ tracing _ _ I-Concept
 example _ _ O
 • _ _ O
 fork _ _ B-Concept
-tracing _ _ I-Concept
-! _ _ O
-! _ _ O
-$ _ _ O
+tracing!!$ _ _ I-Concept
 • _ _ O
 How _ _ O
 can _ _ O
@@ -190,6 +204,9 @@ wait _ _ B-Concept
 ) _ _ I-Concept
 ) _ _ O
 • _ _ O
+
+
+ _ _ O
 Why _ _ O
 can _ _ O
 a _ _ O
@@ -210,7 +227,13 @@ other _ _ O
 way _ _ O
 around _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Does _ _ O
 most _ _ O
 of _ _ O
@@ -262,7 +285,13 @@ wait _ _ B-Concept
 or _ _ O
 not _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 does _ _ O
 a _ _ O
 process _ _ O
@@ -278,12 +307,24 @@ called _ _ O
 like _ _ O
 stops _ _ O
 running _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Zombie _ _ B-Concept
 vs _ _ O
 Orphan _ _ B-Concept
 processes _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 What _ _ O
 are _ _ O
 the _ _ O
@@ -297,14 +338,21 @@ process _ _ I-Concept
 ? _ _ O
 The _ _ O
 parent _ _ B-Concept
-doesnt _ _ O
+does _ _ O
+nt _ _ O
 invoke _ _ O
 wait _ _ O
 in _ _ O
 either _ _ O
 instance _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Implementation _ _ O
 of _ _ O
 how _ _ O
@@ -313,7 +361,13 @@ adopts _ _ O
 orphaned _ _ B-Concept
 processes _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Can _ _ O
 a _ _ O
 process _ _ O
@@ -326,7 +380,13 @@ the _ _ O
 same _ _ O
 time _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Orphan _ _ B-Concept
 versus _ _ O
 zombie _ _ B-Concept
@@ -343,7 +403,13 @@ calls _ _ O
 exit _ _ B-Concept
 ( _ _ I-Concept
 ) _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 In _ _ O
 what _ _ O
 situation _ _ O
@@ -380,6 +446,9 @@ between _ _ O
 forks _ _ B-Concept
 and _ _ O
 threads _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 difference _ _ O
@@ -425,6 +494,9 @@ transitions _ _ O
 as _ _ O
 processes _ _ O
 ? _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -497,6 +569,9 @@ abort _ _ B-Concept
 ( _ _ I-Concept
 ) _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -519,10 +594,15 @@ aka _ _ O
 Producers _ _ B-Concept
 Consumers _ _ I-Concept
 Problem _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 shared _ _ B-Concept
-circular-array _ _ I-Concept
+circular _ _ I-Concept
+- _ _ I-Concept
+array _ _ I-Concept
 buffer _ _ I-Concept
 with _ _ O
 capacity _ _ O
@@ -532,13 +612,20 @@ A _ _ O
 set _ _ O
 of _ _ O
 producer _ _ B-Concept
-processes/threads _ _ I-Concept
+processes _ _ I-Concept
+/ _ _ I-Concept
+threads _ _ I-Concept
 • _ _ O
 As _ _ O
 set _ _ O
 of _ _ O
 consumer _ _ B-Concept
-processes/threads _ _ I-Concept
+processes _ _ I-Concept
+/ _ _ I-Concept
+threads _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Requirements _ _ O
 : _ _ O
@@ -564,6 +651,9 @@ the _ _ O
 buffer _ _ B-Concept
 is _ _ O
 empty _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -576,6 +666,9 @@ Khattab _ _ O
 Produces _ _ B-Concept
 Consumers _ _ I-Concept
 Problem _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -618,6 +711,9 @@ email _ _ O
 on _ _ O
 mail _ _ O
 server _ _ O
+
+
+ _ _ O
 • _ _ O
 Background _ _ B-Concept
 threads _ _ I-Concept
@@ -653,6 +749,9 @@ are _ _ O
 the _ _ O
 consumers _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -672,8 +771,12 @@ everywhere _ _ O
 Web _ _ O
 Server _ _ O
 • _ _ O
-front-end _ _ O
-processes/threads _ _ B-Concept
+front _ _ O
+- _ _ O
+end _ _ O
+processes _ _ O
+/ _ _ O
+threads _ _ B-Concept
 that _ _ O
 interact _ _ O
 with _ _ O
@@ -689,8 +792,12 @@ e.g. _ _ O
 browser _ _ O
 ) _ _ O
 • _ _ O
-Back-end _ _ B-Concept
-processes/threads _ _ I-Concept
+Back _ _ B-Concept
+- _ _ I-Concept
+end _ _ I-Concept
+processes _ _ I-Concept
+/ _ _ I-Concept
+threads _ _ I-Concept
 that _ _ O
 execute _ _ O
 database _ _ O
@@ -700,7 +807,9 @@ Queries _ _ O
 are _ _ O
 inserted _ _ O
 by _ _ O
-front-end _ _ B-Concept
+front _ _ B-Concept
+- _ _ I-Concept
+end _ _ I-Concept
 processes _ _ I-Concept
 into _ _ O
 a _ _ O
@@ -720,6 +829,9 @@ are _ _ O
 the _ _ O
 consumers _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -734,6 +846,9 @@ Producers _ _ B-Concept
 Consumers _ _ I-Concept
 using _ _ O
 Semaphores _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -749,13 +864,18 @@ trace _ _ O
 the _ _ O
 solution _ _ O
 ? _ _ O
+
+
+ _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 define _ _ O
 some _ _ O
 events _ _ O
 . _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -776,6 +896,9 @@ until _ _ O
 the _ _ O
 solid _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -801,6 +924,9 @@ until _ _ O
 the _ _ O
 dashed _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -821,6 +947,9 @@ until _ _ O
 the _ _ O
 dotted _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -841,6 +970,9 @@ until _ _ O
 the _ _ O
 solid _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -866,6 +998,9 @@ until _ _ O
 the _ _ O
 dashed _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -891,6 +1026,9 @@ until _ _ O
 the _ _ O
 dotted _ _ O
 line _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -901,6 +1039,9 @@ Sherif _ _ O
 Khattab _ _ O
 
 Tracing _ _ O
+
+
+ _ _ O
 Given _ _ O
 a _ _ O
 sequence _ _ O
@@ -927,6 +1068,9 @@ of _ _ O
 the _ _ O
 sequence _ _ O
 ? _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -938,6 +1082,9 @@ Khattab _ _ O
 
 System _ _ O
 State _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -949,6 +1096,9 @@ Khattab _ _ O
 
 Example _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -960,10 +1110,19 @@ Khattab _ _ O
 
 Initial _ _ O
 state _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 3 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -975,10 +1134,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -990,10 +1158,19 @@ Khattab _ _ O
 
 P0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1005,10 +1182,19 @@ Khattab _ _ O
 
 P1 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1020,10 +1206,19 @@ Khattab _ _ O
 
 P2 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1035,10 +1230,19 @@ Khattab _ _ O
 
 C0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1050,10 +1254,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1065,10 +1278,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1080,10 +1302,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1095,10 +1326,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1110,10 +1350,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1125,10 +1374,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1140,10 +1398,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1157,10 +1424,19 @@ Can _ _ O
 C0 _ _ O
 enter _ _ O
 ? _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 -2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1172,6 +1448,9 @@ Khattab _ _ O
 
 Example _ _ O
 2 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1183,10 +1462,19 @@ Khattab _ _ O
 
 Initial _ _ O
 state _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1198,10 +1486,19 @@ Khattab _ _ O
 
 C0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1213,10 +1510,19 @@ Khattab _ _ O
 
 C0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1228,10 +1534,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1243,10 +1558,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1258,10 +1582,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1273,10 +1606,19 @@ Khattab _ _ O
 
 P0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1288,10 +1630,19 @@ Khattab _ _ O
 
 P0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1303,10 +1654,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1318,10 +1678,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1333,10 +1702,19 @@ Khattab _ _ O
 
 P0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1348,10 +1726,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1363,10 +1750,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1380,10 +1776,19 @@ Can _ _ O
 C0 _ _ O
 enter _ _ O
 ? _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1395,10 +1800,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1410,10 +1824,19 @@ Khattab _ _ O
 
 C0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1425,10 +1848,19 @@ Khattab _ _ O
 
 C0 _ _ O
 leaves _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1440,6 +1872,9 @@ Khattab _ _ O
 
 Example _ _ O
 3 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1451,10 +1886,19 @@ Khattab _ _ O
 
 Initial _ _ O
 state _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1466,10 +1910,19 @@ Khattab _ _ O
 
 C0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1481,10 +1934,19 @@ Khattab _ _ O
 
 C0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1496,10 +1958,19 @@ Khattab _ _ O
 
 C1 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1511,10 +1982,19 @@ Khattab _ _ O
 
 C1 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -2 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1526,10 +2006,19 @@ Khattab _ _ O
 
 C2 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -2 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1541,10 +2030,19 @@ Khattab _ _ O
 
 C2 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1556,10 +2054,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1571,10 +2078,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1586,10 +2102,19 @@ Khattab _ _ O
 
 P0 _ _ O
 arrives _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1601,10 +2126,19 @@ Khattab _ _ O
 
 P0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1616,10 +2150,19 @@ Khattab _ _ O
 
 P0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1631,10 +2174,19 @@ Khattab _ _ O
 
 C0 _ _ O
 enters _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -1648,10 +2200,19 @@ Can _ _ O
 C0 _ _ O
 enter _ _ O
 ? _ _ O
+
+
+ _ _ O
 -3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O

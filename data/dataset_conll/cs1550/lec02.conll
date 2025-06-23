@@ -4,7 +4,9 @@ Introduction _ _ O
 to _ _ O
 Operating _ _ B-Concept
 Systems _ _ I-Concept
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 Process _ _ B-Concept
 Synchronization _ _ I-Concept
@@ -12,11 +14,12 @@ Synchronization _ _ I-Concept
 1 _ _ O
 Spring _ _ O
 2022 _ _ O
+
+
+ _ _ O
 Sherif _ _ O
 Khattab _ _ O
-ksm73 _ _ O
-@ _ _ O
-pitt.edu _ _ O
+ksm73@pitt.edu _ _ O
 ( _ _ O
 Some _ _ O
 slides _ _ O
@@ -27,7 +30,8 @@ Silberschatz _ _ O
 Galvin _ _ O
 and _ _ O
 Gagne _ _ O
-©2013 _ _ O
+© _ _ O
+2013 _ _ O
 ) _ _ O
 
 Announcements _ _ O
@@ -41,6 +45,9 @@ Monday _ _ O
 at _ _ O
 11:59 _ _ O
 pm _ _ O
+
+
+ _ _ O
 • _ _ O
 Recitations _ _ O
 started _ _ O
@@ -51,6 +58,9 @@ Please _ _ O
 watch _ _ O
 the _ _ O
 videos _ _ O
+
+
+ _ _ O
 • _ _ O
 Lab _ _ O
 1 _ _ O
@@ -66,14 +76,19 @@ Distributed _ _ O
 using _ _ O
 GitHub _ _ O
 Classroom _ _ O
+
+
+ _ _ O
 • _ _ O
 Explained _ _ O
 in _ _ O
 this _ _ O
 week _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 recitations _ _ O
+
+
+ _ _ O
 • _ _ O
 Steps _ _ O
 of _ _ O
@@ -102,7 +117,9 @@ not _ _ O
 seen _ _ O
 to _ _ O
 students _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -110,12 +127,17 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Muddiest _ _ O
 Points _ _ O
 • _ _ O
-storage/access _ _ O
+storage _ _ O
+/ _ _ O
+access _ _ O
 of _ _ O
 the _ _ O
 mode _ _ B-Concept
@@ -123,44 +145,77 @@ bits _ _ I-Concept
 • _ _ O
 syscalls _ _ B-Concept
 • _ _ O
-idt/isr _ _ B-Concept
+
+
+ _ _ O
+idt _ _ B-Concept
+/ _ _ O
+isr _ _ B-Concept
 vs _ _ O
-syscall _ _ O
+syscall _ _ B-Concept
 table _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Difference _ _ O
 between _ _ O
-f1~f7 _ _ O
-( _ _ O
-what _ _ O
+f1~f7(what _ _ O
 to _ _ O
 call _ _ O
 them _ _ O
 ? _ _ O
 ) _ _ O
 and _ _ O
-f8~f10 _ _ O
-( _ _ O
-syscall _ _ O
+f8~f10(syscall _ _ O
 functions _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 the _ _ O
 beginning _ _ O
 of _ _ O
 the _ _ O
 syscall _ _ O
 process _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 syscall _ _ O
 steps _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 eax _ _ O
 register _ _ O
 relevance _ _ O
 to _ _ O
-interrupts/syscall _ _ O
+interrupts _ _ O
+/ _ _ O
+syscall _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 How _ _ O
 user _ _ O
 programs _ _ O
@@ -171,7 +226,13 @@ changed _ _ O
 for _ _ O
 new _ _ O
 syscalls _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 How _ _ O
 high _ _ O
 level _ _ O
@@ -179,21 +240,32 @@ code _ _ O
 interacts _ _ O
 with _ _ O
 syscalls _ _ O
+
+
+ _ _ O
 • _ _ O
 xv6 _ _ O
 walkthrough _ _ O
 • _ _ O
+
+
+ _ _ O
 Array _ _ O
 of _ _ O
 functions _ _ O
 syntax _ _ O
 in _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 monolithic _ _ O
 vs _ _ O
 micro _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ O
@@ -201,6 +273,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Problem _ _ O
@@ -213,6 +288,9 @@ is _ _ O
 a _ _ O
 CPU _ _ B-Concept
 register _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 X _ _ O
 is _ _ O
@@ -221,11 +299,20 @@ variable _ _ O
 stored _ _ O
 in _ _ O
 memory _ _ B-Concept
+
+
+ _ _ O
 P1 _ _ O
 x++ _ _ O
+
+
+ _ _ O
 P2 _ _ O
 x++ _ _ O
 x=3 _ _ O
+
+
+ _ _ O
 R _ _ O
 < _ _ O
 = _ _ O
@@ -237,6 +324,9 @@ R _ _ O
 = _ _ O
 > _ _ O
 x _ _ O
+
+
+ _ _ O
 R _ _ O
 < _ _ O
 = _ _ O
@@ -248,11 +338,17 @@ R _ _ O
 = _ _ O
 > _ _ O
 x _ _ O
+
+
+ _ _ O
 x=5 _ _ O
 R _ _ O
 < _ _ O
 = _ _ O
 x _ _ O
+
+
+ _ _ O
 R _ _ O
 < _ _ O
 = _ _ O
@@ -271,9 +367,17 @@ R _ _ O
 = _ _ O
 > _ _ O
 x _ _ O
+
+
+ _ _ O
 x=6 _ _ O
 ! _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -281,11 +385,17 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Race _ _ B-Concept
 conditions _ _ I-Concept
 • _ _ O
+
+
+ _ _ O
 Cooperating _ _ O
 processes _ _ B-Concept
 share _ _ O
@@ -293,7 +403,13 @@ storage _ _ O
 ( _ _ O
 memory _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Both _ _ O
 may _ _ O
 read _ _ O
@@ -302,12 +418,17 @@ write _ _ O
 the _ _ O
 shared _ _ B-Concept
 memory _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Problem _ _ O
 : _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 guarantee _ _ O
 that _ _ O
 read _ _ O
@@ -317,14 +438,29 @@ write _ _ O
 is _ _ O
 atomic _ _ B-Concept
 • _ _ O
+
+
+ _ _ O
 Atomic _ _ B-Concept
 means _ _ O
 uninterruptible _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Ordering _ _ O
 matters _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 This _ _ O
 can _ _ O
 result _ _ O
@@ -332,14 +468,26 @@ in _ _ O
 erroneous _ _ O
 results _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 We _ _ O
 need _ _ O
 to _ _ O
 eliminate _ _ O
 race _ _ B-Concept
-conditions… _ _ I-Concept
-CS/COE _ _ O
+conditions _ _ I-Concept
+… _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -347,6 +495,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Atomic _ _ B-Concept
@@ -361,7 +512,12 @@ instruction _ _ O
 then _ _ O
 not _ _ O
 interruptible _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -369,6 +525,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Context _ _ B-Concept
@@ -391,7 +550,12 @@ P2 _ _ O
 again _ _ O
 … _ _ O
 ? _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -399,6 +563,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Process _ _ B-Concept
@@ -449,7 +616,9 @@ registers _ _ O
 contents _ _ O
 of _ _ O
 all _ _ O
-process-centric _ _ O
+process _ _ O
+- _ _ O
+centric _ _ O
 registers _ _ O
 • _ _ O
 CPU _ _ O
@@ -461,7 +630,9 @@ scheduling _ _ O
 queue _ _ O
 pointers _ _ O
 • _ _ O
-Memory-management _ _ O
+Memory _ _ O
+- _ _ O
+management _ _ O
 information _ _ O
 – _ _ O
 memory _ _ O
@@ -485,11 +656,15 @@ start _ _ O
 time _ _ O
 limits _ _ O
 • _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 status _ _ O
 information _ _ O
 – _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 devices _ _ O
 allocated _ _ O
 to _ _ O
@@ -499,7 +674,9 @@ list _ _ O
 of _ _ O
 open _ _ O
 files _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ O
@@ -507,6 +684,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Process _ _ B-Concept
@@ -557,8 +737,7 @@ parent _ _ O
 * _ _ O
 this _ _ O
 process _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 parent _ _ O
 * _ _ O
 / _ _ O
@@ -570,8 +749,7 @@ children _ _ O
 * _ _ O
 this _ _ O
 process _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 children _ _ O
 * _ _ O
 / _ _ O
@@ -602,7 +780,12 @@ this _ _ O
 process _ _ O
 * _ _ O
 / _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -610,6 +793,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Context _ _ B-Concept
@@ -655,7 +841,9 @@ in _ _ O
 the _ _ O
 PCB _ _ B-Concept
 • _ _ O
-Context-switch _ _ B-Concept
+Context _ _ B-Concept
+- _ _ I-Concept
+switch _ _ I-Concept
 time _ _ I-Concept
 is _ _ O
 overhead _ _ B-Concept
@@ -683,6 +871,9 @@ longer _ _ O
 the _ _ O
 context _ _ B-Concept
 switch _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Time _ _ O
 dependent _ _ O
@@ -705,7 +896,9 @@ contexts _ _ B-Concept
 loaded _ _ O
 at _ _ O
 once _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -713,11 +906,19 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Context _ _ B-Concept
 Switching _ _ I-Concept
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -725,6 +926,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 Xv6 _ _ B-Concept
@@ -735,6 +939,9 @@ PCB _ _ B-Concept
 and _ _ O
 process _ _ B-Concept
 table _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Context _ _ B-Concept
 switching _ _ I-Concept
@@ -744,7 +951,12 @@ of _ _ O
 the _ _ O
 swtch _ _ O
 routine _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -752,6 +964,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Context _ _ B-Concept
@@ -762,37 +977,66 @@ Xv6 _ _ B-Concept
 eax _ _ I-Concept
 % _ _ B-Concept
 edx _ _ I-Concept
+
+
+ _ _ O
 context _ _ B-Concept
+
+
+ _ _ O
 PCB _ _ B-Concept
 of _ _ O
 Process _ _ B-Concept
 𝑃0 _ _ O
+
+
+ _ _ O
 Return _ _ O
 address _ _ O
+
+
+ _ _ O
 % _ _ B-Concept
 esp _ _ I-Concept
 % _ _ B-Concept
 eip _ _ I-Concept
+
+
+ _ _ O
 Stack _ _ O
 of _ _ O
 Process _ _ B-Concept
 𝑃0 _ _ O
+
+
+ _ _ O
 CPU _ _ B-Concept
 Return _ _ O
 Return _ _ O
 address _ _ O
 address _ _ O
+
+
+ _ _ O
 context _ _ B-Concept
+
+
+ _ _ O
 PCB _ _ B-Concept
 of _ _ O
 Process _ _ B-Concept
 𝑃1 _ _ O
+
+
+ _ _ O
 Stack _ _ O
 of _ _ O
 Process _ _ B-Concept
 𝑃1 _ _ O
 Memory _ _ B-Concept
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -800,18 +1044,30 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Critical _ _ B-Concept
 regions _ _ I-Concept
 • _ _ O
+
+
+ _ _ O
 Back _ _ O
 to _ _ O
 the _ _ O
 race _ _ B-Concept
 conditions _ _ I-Concept
 problem _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 critical _ _ B-Concept
 regions _ _ I-Concept
@@ -824,10 +1080,15 @@ help _ _ O
 fix _ _ O
 race _ _ B-Concept
 conditions _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 put _ _ O
 the _ _ O
 statement _ _ O
@@ -840,10 +1101,16 @@ P1 _ _ O
 enters _ _ O
 critical _ _ B-Concept
 region _ _ I-Concept
+
+
+ _ _ O
 P1 _ _ O
 leaves _ _ O
 critical _ _ B-Concept
 region _ _ I-Concept
+
+
+ _ _ O
 Process _ _ B-Concept
 P1 _ _ O
 P2 _ _ O
@@ -852,20 +1119,37 @@ to _ _ O
 enter _ _ O
 critical _ _ B-Concept
 region _ _ I-Concept
+
+
+ _ _ O
 Process _ _ B-Concept
 P2 _ _ O
+
+
+ _ _ O
 P2 _ _ O
 enters _ _ O
 critical _ _ B-Concept
 region _ _ I-Concept
+
+
+ _ _ O
 P2 _ _ O
 leaves _ _ O
 critical _ _ B-Concept
 region _ _ I-Concept
+
+
+ _ _ O
 P2 _ _ O
 blocked _ _ O
 Time _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -873,6 +1157,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 How _ _ O
@@ -882,15 +1169,25 @@ critical _ _ B-Concept
 regions _ _ I-Concept
 ? _ _ O
 • _ _ O
-Turn-based _ _ B-Concept
+Turn _ _ B-Concept
+- _ _ I-Concept
+based _ _ I-Concept
 solutions _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Spinlocks _ _ B-Concept
 • _ _ O
 Semaphores _ _ B-Concept
 • _ _ O
 Monitors _ _ B-Concept
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -898,6 +1195,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Using _ _ O
@@ -905,25 +1205,25 @@ Spinlocks _ _ B-Concept
 Spinlock _ _ B-Concept
 lock _ _ O
 ; _ _ O
+
+
+ _ _ O
 Code _ _ O
 for _ _ O
 process _ _ B-Concept
 Pi _ _ O
-While _ _ O
-( _ _ O
-1 _ _ O
+
+
+ _ _ O
+While(1 _ _ O
 ) _ _ O
 { _ _ O
-Lock _ _ O
-( _ _ O
-lock _ _ O
+Lock(lock _ _ O
 ) _ _ O
 // _ _ O
 critical _ _ O
 section _ _ O
-Unlock _ _ O
-( _ _ O
-lock _ _ O
+Unlock(lock _ _ O
 ) _ _ O
 ; _ _ O
 // _ _ O
@@ -932,7 +1232,12 @@ of _ _ O
 code _ _ O
 } _ _ O
 } _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -940,6 +1245,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Spinlock _ _ B-Concept
@@ -952,6 +1260,9 @@ Solution _ _ O
 : _ _ O
 use _ _ O
 hardware _ _ O
+
+
+ _ _ O
 • _ _ O
 Several _ _ O
 hardware _ _ O
@@ -987,9 +1298,8 @@ off _ _ O
 interrupts _ _ B-Concept
 : _ _ O
 process _ _ B-Concept
-won _ _ O
-’ _ _ O
-t _ _ O
+wo _ _ O
+n’t _ _ O
 be _ _ O
 switched _ _ O
 out _ _ O
@@ -999,6 +1309,9 @@ asks _ _ O
 to _ _ O
 be _ _ O
 suspended _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 first _ _ O
@@ -1012,9 +1325,8 @@ user _ _ B-Concept
 land _ _ I-Concept
 • _ _ O
 Why _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 we _ _ O
 implement _ _ O
 the _ _ O
@@ -1024,7 +1336,12 @@ in _ _ O
 user _ _ B-Concept
 land _ _ I-Concept
 ? _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 1550 _ _ O
 – _ _ O
 Operating _ _ B-Concept
@@ -1032,6 +1349,9 @@ Systems _ _ I-Concept
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 

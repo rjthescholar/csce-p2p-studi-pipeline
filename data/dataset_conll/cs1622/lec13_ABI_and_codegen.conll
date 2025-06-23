@@ -25,6 +25,9 @@ be _ _ O
 posted _ _ O
 today _ _ O
 ! _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Application _ _ B-Concept
@@ -33,6 +36,9 @@ Interfaces _ _ I-Concept
 ( _ _ O
 ABIs _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Like _ _ O
@@ -124,6 +130,9 @@ layers _ _ O
 of _ _ O
 rules _ _ O
 . _ _ O
+
+
+ _ _ O
 things _ _ O
 can _ _ O
 get _ _ O
@@ -134,13 +143,20 @@ the _ _ O
 boundaries _ _ O
 between _ _ O
 these _ _ O
-layers… _ _ O
+layers _ _ O
+… _ _ O
+
+
+ _ _ O
 Language _ _ B-Concept
 ABI _ _ I-Concept
 OS _ _ B-Concept
 ABI _ _ I-Concept
 Architectural _ _ B-Concept
 ABI _ _ I-Concept
+
+
+ _ _ O
 4 _ _ O
 
 The _ _ O
@@ -177,8 +193,7 @@ included _ _ O
 special _ _ O
 features _ _ O
 for _ _ O
-e.g _ _ O
-. _ _ O
+e.g. _ _ O
 making _ _ O
 function _ _ O
 calls _ _ O
@@ -195,7 +210,9 @@ intended _ _ O
 these _ _ O
 may _ _ O
 be _ _ O
-bare-bones _ _ O
+bare _ _ O
+- _ _ O
+bones _ _ O
 , _ _ O
 including _ _ O
 rules _ _ O
@@ -238,6 +255,9 @@ bare _ _ O
 metal _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 But _ _ O
@@ -375,6 +395,9 @@ of _ _ O
 the _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 The _ _ O
@@ -422,10 +445,16 @@ like _ _ O
 : _ _ O
 exceptions _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 dynamic _ _ B-Concept
 method _ _ I-Concept
 dispatch _ _ I-Concept
 ! _ _ I-Concept
+
+
+ _ _ O
 try _ _ O
 { _ _ O
 ... _ _ O
@@ -443,6 +472,9 @@ finally _ _ O
 { _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 String _ _ O
 s _ _ O
 = _ _ O
@@ -450,6 +482,9 @@ obj.toString _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 function _ _ O
 closures _ _ O
 ! _ _ O
@@ -466,13 +501,14 @@ cout _ _ O
 < _ _ O
 < _ _ O
 " _ _ O
-wheee _ _ O
-! _ _ O
-\n _ _ O
+wheee!\n _ _ O
 " _ _ O
 ; _ _ O
 } _ _ O
 ; _ _ O
+
+
+ _ _ O
 however _ _ O
 , _ _ O
 if _ _ O
@@ -493,7 +529,8 @@ language _ _ O
 can _ _ O
 use _ _ O
 different _ _ O
-ABIs… _ _ B-Concept
+ABIs _ _ B-Concept
+… _ _ O
 7 _ _ O
 
 When _ _ O
@@ -544,6 +581,9 @@ compiled _ _ B-Concept
 with _ _ O
 Compiler _ _ B-Concept
 A. _ _ O
+
+
+ _ _ O
 you _ _ O
 wrote _ _ O
 a _ _ O
@@ -557,13 +597,24 @@ but _ _ O
 you _ _ O
 used _ _ O
 Compiler _ _ B-Concept
-B _ _ O
-. _ _ O
+B. _ _ O
+
+
+ _ _ O
 Program _ _ O
+
+
+ _ _ O
 Plugin _ _ O
+
+
+ _ _ O
 plugin.getName _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 the _ _ O
 program _ _ O
 tries _ _ O
@@ -575,10 +626,14 @@ in _ _ O
 your _ _ O
 plugin _ _ O
 , _ _ O
-and… _ _ O
+and _ _ O
+… _ _ O
 what _ _ O
 happens _ _ O
 ? _ _ O
+
+
+ _ _ O
 who _ _ O
 knows _ _ O
 ? _ _ O
@@ -625,7 +680,8 @@ of _ _ O
 code _ _ O
 use _ _ O
 different _ _ O
-ABIs… _ _ B-Concept
+ABIs _ _ B-Concept
+… _ _ O
 ● _ _ O
 or _ _ O
 if _ _ O
@@ -638,7 +694,8 @@ does _ _ O
 n't _ _ O
 follow _ _ O
 the _ _ O
-ABI… _ _ B-Concept
+ABI _ _ B-Concept
+… _ _ O
 ● _ _ O
 you _ _ O
 lose _ _ O
@@ -661,7 +718,8 @@ were _ _ O
 writing _ _ O
 MIPS _ _ O
 in _ _ O
-447. _ _ O
+447 _ _ O
+. _ _ O
 o _ _ O
 do _ _ O
 you _ _ O
@@ -738,7 +796,8 @@ does _ _ O
 n't _ _ O
 support _ _ O
 advanced _ _ O
-features… _ _ O
+features _ _ O
+… _ _ O
 o _ _ O
 so _ _ O
 it _ _ O
@@ -780,6 +839,9 @@ Parts _ _ O
 of _ _ O
 an _ _ O
 ABI _ _ B-Concept
+
+
+ _ _ O
 10 _ _ O
 
 The _ _ O
@@ -804,11 +866,17 @@ stack _ _ B-Concept
 . _ _ O
 Stack _ _ B-Concept
 16 _ _ O
+
+
+ _ _ O
 0 _ _ O
 48580372 _ _ O
 0 _ _ O
 0 _ _ O
 5 _ _ O
+
+
+ _ _ O
 it _ _ O
 'll _ _ O
 have _ _ O
@@ -827,7 +895,8 @@ the _ _ O
 top _ _ O
 of _ _ O
 the _ _ O
-stack… _ _ B-Concept
+stack _ _ B-Concept
+… _ _ O
 a _ _ O
 stack _ _ B-Concept
 pointer _ _ I-Concept
@@ -852,6 +921,9 @@ to _ _ O
 that _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 sp _ _ B-Concept
 it _ _ O
 might _ _ O
@@ -874,11 +946,23 @@ not _ _ O
 . _ _ O
 push _ _ O
 eax _ _ O
+
+
+ _ _ O
 pop _ _ O
 ecx _ _ O
+
+
+ _ _ O
 call _ _ O
 func _ _ O
+
+
+ _ _ O
 ret _ _ O
+
+
+ _ _ O
 the _ _ O
 ABI _ _ B-Concept
 defines _ _ O
@@ -928,7 +1012,8 @@ n't _ _ O
 stack _ _ B-Concept
 things _ _ O
 up _ _ O
-forever… _ _ O
+forever _ _ O
+… _ _ O
 ● _ _ O
 statistically _ _ O
 , _ _ O
@@ -972,7 +1057,9 @@ only _ _ O
 allocate _ _ O
 something _ _ O
 like _ _ O
-4-16 _ _ O
+4 _ _ O
+- _ _ O
+16 _ _ O
 MB _ _ O
 of _ _ O
 memory _ _ O
@@ -1040,6 +1127,9 @@ within _ _ O
 this _ _ O
 limit _ _ O
 . _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 The _ _ O
@@ -1071,6 +1161,9 @@ arguments _ _ B-Concept
 are _ _ O
 passed _ _ O
 ; _ _ O
+
+
+ _ _ O
 how _ _ O
 the _ _ O
 return _ _ B-Concept
@@ -1083,10 +1176,11 @@ it _ _ O
 's _ _ O
 stored _ _ O
 ; _ _ O
+
+
+ _ _ O
 fn _ _ O
-add _ _ O
-( _ _ O
-x _ _ O
+add(x _ _ O
 : _ _ O
 int _ _ O
 , _ _ O
@@ -1104,9 +1198,7 @@ x _ _ O
 + _ _ O
 y _ _ O
 ; _ _ O
-println_i _ _ O
-( _ _ O
-sum _ _ O
+println_i(sum _ _ O
 ) _ _ O
 ; _ _ O
 return _ _ O
@@ -1118,6 +1210,9 @@ values _ _ O
 are _ _ O
 returned _ _ O
 ; _ _ O
+
+
+ _ _ O
 which _ _ O
 CPU _ _ O
 registers _ _ O
@@ -1132,12 +1227,30 @@ be _ _ O
 used _ _ O
 freely _ _ O
 . _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 v0 _ _ O
+
+
+ _ _ O
 s0 _ _ O
 t0 _ _ O
+
+
+ _ _ O
 a0 _ _ O
+
+
+ _ _ O
 f0 _ _ O
+
+
+ _ _ O
 fp _ _ O
 13 _ _ O
 
@@ -1186,14 +1299,38 @@ tricky _ _ O
 . _ _ O
 Your _ _ O
 Language _ _ O
+
+
+ _ _ O
 main _ _ O
+
+
+ _ _ O
 init _ _ O
+
+
+ _ _ O
 OS _ _ O
 API _ _ O
+
+
+ _ _ O
 prompt _ _ O
+
+
+ _ _ O
 read _ _ O
+
+
+ _ _ O
 println _ _ O
+
+
+ _ _ O
 write _ _ O
+
+
+ _ _ O
 functions _ _ O
 from _ _ O
 outside _ _ O
@@ -1242,7 +1379,8 @@ or _ _ O
 we _ _ O
 could _ _ O
 punt _ _ O
-it… _ _ O
+it _ _ O
+… _ _ O
 14 _ _ O
 
 If _ _ O
@@ -1267,7 +1405,9 @@ call _ _ O
 functions _ _ O
 from _ _ O
 other _ _ O
-languages/which _ _ O
+languages _ _ O
+/ _ _ O
+which _ _ O
 use _ _ O
 different _ _ O
 ABIs _ _ B-Concept
@@ -1342,7 +1482,9 @@ and _ _ O
 " _ _ O
 the _ _ O
 scary _ _ O
-non-Java _ _ O
+non _ _ O
+- _ _ O
+Java _ _ O
 world _ _ O
 , _ _ O
 " _ _ O
@@ -1432,13 +1574,16 @@ program _ _ O
 's _ _ O
 behalf _ _ O
 : _ _ O
-I/O _ _ O
+I _ _ O
+/ _ _ O
+O _ _ O
 , _ _ O
 resource _ _ O
 management _ _ O
 , _ _ O
 even _ _ O
-exiting… _ _ O
+exiting _ _ O
+… _ _ O
 o _ _ O
 without _ _ O
 syscalls _ _ B-Concept
@@ -1465,7 +1610,8 @@ call _ _ I-Concept
 ( _ _ O
 syscall _ _ B-Concept
 ) _ _ O
-mechanism… _ _ O
+mechanism _ _ O
+… _ _ O
 o _ _ O
 which _ _ O
 usually _ _ O
@@ -1490,7 +1636,9 @@ how _ _ O
 values _ _ O
 are _ _ O
 passed _ _ O
-into/out _ _ O
+into _ _ O
+/ _ _ O
+out _ _ O
 of _ _ O
 them _ _ O
 . _ _ O
@@ -1558,7 +1706,8 @@ to _ _ O
 have _ _ O
 to _ _ O
 be _ _ O
-somewhat… _ _ O
+somewhat _ _ O
+… _ _ O
 substantial _ _ O
 . _ _ O
 so _ _ O
@@ -1568,12 +1717,18 @@ talk _ _ O
 about _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Standard _ _ B-Concept
 and _ _ I-Concept
 Runtime _ _ I-Concept
 Libraries _ _ I-Concept
+
+
+ _ _ O
 17 _ _ O
 
 std _ _ O
@@ -1602,7 +1757,8 @@ and _ _ O
 classes _ _ O
 that _ _ O
 are _ _ O
-just… _ _ O
+just _ _ O
+… _ _ O
 there _ _ O
 ! _ _ O
 o _ _ O
@@ -1656,7 +1812,8 @@ of _ _ O
 this _ _ O
 course _ _ O
 , _ _ O
-but… _ _ O
+but _ _ O
+… _ _ O
 o _ _ O
 the _ _ O
 standard _ _ B-Concept
@@ -1714,6 +1871,9 @@ code _ _ O
 as _ _ O
 well _ _ O
 ! _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 core _ _ O
@@ -1751,6 +1911,9 @@ for _ _ O
 string _ _ O
 concatenation _ _ O
 ? _ _ O
+
+
+ _ _ O
 how _ _ O
 about _ _ O
 for _ _ O
@@ -1760,6 +1923,9 @@ on _ _ O
 the _ _ O
 heap _ _ O
 ? _ _ O
+
+
+ _ _ O
 " _ _ O
 hi _ _ O
 " _ _ O
@@ -1767,21 +1933,34 @@ hi _ _ O
 " _ _ O
 bye _ _ O
 " _ _ O
+
+
+ _ _ O
 new _ _ O
 Cat _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 checking _ _ O
 array _ _ O
 bounds _ _ O
 ? _ _ O
+
+
+ _ _ O
 throwing _ _ O
 exceptions _ _ O
 ? _ _ O
-A _ _ O
-[ _ _ O
-1000000000 _ _ O
+
+
+ _ _ O
+A[1000000000 _ _ O
 ] _ _ O
+
+
+ _ _ O
 throw _ _ O
 new _ _ O
 OhMyGodWhyAreAllTheExcept _ _ O
@@ -1789,6 +1968,9 @@ ionNamesSoLongException _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 there _ _ O
 are _ _ O
 a _ _ O
@@ -1958,6 +2140,9 @@ functions _ _ O
 lol _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 The _ _ O
@@ -2018,12 +2203,7 @@ as _ _ O
 let _ _ O
 msg _ _ O
 = _ _ O
-rt _ _ O
-$ _ _ O
-concat _ _ O
-( _ _ O
-" _ _ O
-hello _ _ O
+rt$concat("hello _ _ O
 , _ _ O
 " _ _ O
 , _ _ O
@@ -2046,38 +2226,32 @@ lw _ _ O
 sw _ _ O
 jal _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
-STRLIT _ _ O
-$ _ _ O
-3 _ _ O
+STRLIT$3 _ _ O
 t0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 t0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-fp _ _ O
+0(fp _ _ O
 ) _ _ O
 t0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-sp _ _ O
+4(sp _ _ O
 ) _ _ O
-rt _ _ O
-$ _ _ O
-concat _ _ O
+rt$concat _ _ O
 v0 _ _ O
 , _ _ O
--20 _ _ O
-( _ _ O
-fp _ _ O
+-20(fp _ _ O
 ) _ _ O
+
+
+ _ _ O
 fp _ _ O
 ? _ _ O
 what _ _ O
@@ -2091,6 +2265,9 @@ Truss _ _ B-Concept
 's _ _ I-Concept
 MIPS _ _ O
 ABI _ _ B-Concept
+
+
+ _ _ O
 22 _ _ O
 
 Kind _ _ O
@@ -2102,8 +2279,7 @@ of _ _ O
 not _ _ O
 ● _ _ O
 Truss _ _ B-Concept
-’ _ _ I-Concept
-s _ _ I-Concept
+’s _ _ I-Concept
 MIPS _ _ O
 ABI _ _ B-Concept
 is _ _ O
@@ -2131,8 +2307,7 @@ simpler _ _ O
 . _ _ O
 ● _ _ O
 we _ _ O
-’ _ _ O
-re _ _ O
+’re _ _ O
 generating _ _ O
 code _ _ O
 for _ _ O
@@ -2188,7 +2363,11 @@ first _ _ O
 we _ _ O
 have _ _ O
 to _ _ O
-specify… _ _ O
+specify _ _ O
+… _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Memory _ _ B-Concept
@@ -2213,6 +2392,9 @@ g2 _ _ O
 world _ _ O
 " _ _ O
 ; _ _ O
+
+
+ _ _ O
 the _ _ O
 .data _ _ B-Concept
 segment _ _ I-Concept
@@ -2225,14 +2407,15 @@ any _ _ O
 string _ _ O
 literals _ _ O
 . _ _ O
+
+
+ _ _ O
 fn _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-println_i _ _ B-Concept
-( _ _ O
-g1 _ _ O
+println_i(g1 _ _ B-Concept
 ) _ _ O
 ; _ _ O
 the _ _ O
@@ -2261,9 +2444,7 @@ Cat _ _ O
 ) _ _ O
 ) _ _ O
 . _ _ O
-println_s _ _ O
-( _ _ O
-msg _ _ O
+println_s(msg _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
@@ -2328,10 +2509,17 @@ bvar _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 strings _ _ O
 are _ _ O
 more _ _ O
-subtle… _ _ O
+subtle _ _ O
+… _ _ O
+
+
+ _ _ O
 let _ _ O
 svar _ _ O
 = _ _ O
@@ -2339,6 +2527,9 @@ svar _ _ O
 hi _ _ O
 " _ _ O
 ; _ _ O
+
+
+ _ _ O
 .data _ _ O
 ivar _ _ O
 : _ _ O
@@ -2348,10 +2539,11 @@ bvar _ _ O
 : _ _ O
 .byte _ _ O
 1 _ _ O
+
+
+ _ _ O
 .data _ _ O
-STRLIT _ _ O
-$ _ _ O
-0 _ _ O
+STRLIT$0 _ _ O
 : _ _ O
 .asciiz _ _ O
 " _ _ O
@@ -2360,9 +2552,10 @@ hi _ _ O
 svar _ _ O
 : _ _ O
 .word _ _ O
-STRLIT _ _ O
-$ _ _ O
-0 _ _ O
+STRLIT$0 _ _ O
+
+
+ _ _ O
 bools _ _ O
 are _ _ O
 represented _ _ O
@@ -2375,6 +2568,9 @@ and _ _ O
 for _ _ O
 false _ _ O
 . _ _ O
+
+
+ _ _ O
 every _ _ O
 string _ _ O
 literal _ _ O
@@ -2383,7 +2579,9 @@ the _ _ O
 program _ _ O
 gets _ _ O
 a _ _ O
-uniquely-named _ _ O
+uniquely _ _ O
+- _ _ O
+named _ _ O
 STRLIT _ _ O
 label _ _ O
 ; _ _ O
@@ -2421,9 +2619,8 @@ runtime _ _ B-Concept
 fortunately _ _ O
 , _ _ O
 Truss _ _ B-Concept
-doesn _ _ O
-’ _ _ O
-t _ _ O
+does _ _ O
+n’t _ _ O
 have _ _ O
 many _ _ O
 ! _ _ O
@@ -2475,7 +2672,9 @@ string _ _ O
 is _ _ O
 defined _ _ O
 as _ _ O
-zero-terminated _ _ O
+zero _ _ O
+- _ _ O
+terminated _ _ O
 ASCII _ _ O
 , _ _ O
 which _ _ O
@@ -2501,11 +2700,12 @@ data _ _ O
 of _ _ O
 a _ _ O
 struct _ _ O
-is… _ _ O
-well… _ _ O
+is _ _ O
+… _ _ O
+well _ _ O
+… _ _ O
 we _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 come _ _ O
 back _ _ O
 to _ _ O
@@ -2513,6 +2713,9 @@ structs _ _ O
 . _ _ O
 ; _ _ O
 o _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Function _ _ B-Concept
@@ -2568,9 +2771,7 @@ in _ _ O
 the _ _ O
 source _ _ O
 . _ _ O
-f _ _ O
-( _ _ O
-1 _ _ O
+f(1 _ _ O
 , _ _ O
 2 _ _ O
 ) _ _ O
@@ -2602,9 +2803,7 @@ t0 _ _ O
 sw _ _ O
 t0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ B-Concept
+0(sp _ _ B-Concept
 ) _ _ O
 li _ _ O
 t0 _ _ O
@@ -2613,12 +2812,13 @@ t0 _ _ O
 sw _ _ O
 t0 _ _ O
 , _ _ O
-4 _ _ O
-( _ _ O
-sp _ _ B-Concept
+4(sp _ _ B-Concept
 ) _ _ O
 jal _ _ O
 f _ _ O
+
+
+ _ _ O
 recall _ _ O
 this _ _ O
 means _ _ O
@@ -2648,7 +2848,8 @@ etc _ _ O
 After _ _ O
 the _ _ O
 call _ _ O
-completes… _ _ O
+completes _ _ O
+… _ _ O
 ● _ _ O
 return _ _ B-Concept
 values _ _ I-Concept
@@ -2668,14 +2869,16 @@ glob _ _ O
 is _ _ O
 a _ _ O
 global _ _ B-Concept
-variable… _ _ I-Concept
+variable _ _ I-Concept
+… _ _ O
 glob _ _ O
 = _ _ O
-f _ _ O
-( _ _ O
-1 _ _ O
+f(1 _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 addi _ _ O
 sp _ _ B-Concept
 , _ _ O
@@ -2689,9 +2892,7 @@ t0 _ _ O
 sw _ _ O
 t0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ B-Concept
+0(sp _ _ B-Concept
 ) _ _ O
 jal _ _ O
 f _ _ O
@@ -2699,6 +2900,9 @@ sw _ _ O
 v0 _ _ O
 , _ _ O
 glob _ _ O
+
+
+ _ _ O
 notice _ _ O
 : _ _ O
 the _ _ O
@@ -2732,6 +2936,9 @@ we _ _ O
 see _ _ O
 shortly _ _ O
 ) _ _ O
+
+
+ _ _ O
 important _ _ O
 : _ _ O
 there _ _ O
@@ -2765,6 +2972,9 @@ before _ _ O
 the _ _ O
 jal _ _ O
 . _ _ O
+
+
+ _ _ O
 however _ _ O
 , _ _ O
 the _ _ O
@@ -2784,6 +2994,9 @@ before _ _ O
 the _ _ O
 jal _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Stack _ _ B-Concept
@@ -2831,21 +3044,20 @@ frame _ _ I-Concept
 first _ _ O
 . _ _ O
 fn _ _ O
-simple _ _ O
-( _ _ O
-x _ _ O
+simple(x _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-x _ _ O
+println_i(x _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 x _ _ O
 ra _ _ O
+
+
+ _ _ O
 there _ _ O
 's _ _ O
 the _ _ O
@@ -2913,9 +3125,7 @@ the _ _ O
 locals _ _ O
 . _ _ O
 fn _ _ O
-more_complex _ _ O
-( _ _ O
-x _ _ O
+more_complex(x _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
@@ -2936,9 +3146,7 @@ in _ _ O
 , _ _ O
 y _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 ; _ _ O
 i _ _ O
@@ -2954,18 +3162,21 @@ own _ _ O
 stack _ _ B-Concept
 slot _ _ O
 . _ _ O
-12 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+12(sp _ _ B-Concept
 ) _ _ O
-4 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+4(sp _ _ B-Concept
 ) _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ B-Concept
+0(sp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 since _ _ O
 the _ _ O
 stack _ _ B-Concept
@@ -3005,7 +3216,8 @@ want _ _ O
 to _ _ O
 actually _ _ O
 call _ _ O
-println_i… _ _ O
+println_i _ _ O
+… _ _ O
 30 _ _ O
 
 Shifting _ _ O
@@ -3022,15 +3234,11 @@ we _ _ O
 generating _ _ B-Concept
 code _ _ I-Concept
 for _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 . _ _ O
 fn _ _ O
-more_complex _ _ O
-( _ _ O
-x _ _ O
+more_complex(x _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
@@ -3049,46 +3257,55 @@ in _ _ O
 , _ _ O
 y _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
 x _ _ O
-12 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+12(sp _ _ B-Concept
 ) _ _ O
-16 _ _ O
-( _ _ O
-sp _ _ B-Concept
+16(sp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 ra _ _ O
 i _ _ O
-4 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+4(sp _ _ B-Concept
 ) _ _ O
-8 _ _ O
-( _ _ O
-sp _ _ B-Concept
+8(sp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 y _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+0(sp _ _ B-Concept
 ) _ _ O
-4 _ _ O
-( _ _ O
-sp _ _ B-Concept
+4(sp _ _ B-Concept
 ) _ _ O
-__ _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ B-Concept
+
+
+ _ _ O
+_ _ _ O
+_ _ _ O
+
+
+ _ _ O
+0(sp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 the _ _ O
 first _ _ O
 thing _ _ O
@@ -3119,6 +3336,9 @@ from _ _ O
 sp _ _ B-Concept
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 it _ _ O
 's _ _ O
 absolutely _ _ O
@@ -3211,26 +3431,38 @@ to _ _ O
 the _ _ O
 super _ _ O
 simple _ _ O
-function… _ _ O
+function _ _ O
+… _ _ O
 fn _ _ O
-simple _ _ O
-( _ _ O
-x _ _ O
+simple(x _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-x _ _ O
+println_i(x _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 fp _ _ O
+
+
+ _ _ O
 fp _ _ O
 ra _ _ O
+
+
+ _ _ O
 sp _ _ O
+
+
+ _ _ O
 we _ _ O
 're _ _ O
 going _ _ O
@@ -3284,13 +3516,13 @@ positive _ _ O
 offsets _ _ O
 from _ _ O
 the _ _ O
-stack/frame _ _ B-Concept
+stack _ _ B-Concept
+/ _ _ I-Concept
+frame _ _ I-Concept
 pointers _ _ I-Concept
 ! _ _ O
 fn _ _ O
-more_complex _ _ O
-( _ _ O
-x _ _ O
+more_complex(x _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
@@ -3309,32 +3541,46 @@ in _ _ O
 , _ _ O
 y _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
 sp _ _ B-Concept
+
+
+ _ _ O
 x _ _ O
-0 _ _ O
-( _ _ O
-fp _ _ B-Concept
+
+
+ _ _ O
+0(fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 fp _ _ B-Concept
 ra _ _ O
 i _ _ O
--12 _ _ O
-( _ _ O
-fp _ _ B-Concept
+
+
+ _ _ O
+-12(fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 y _ _ O
--16 _ _ O
-( _ _ O
-fp _ _ B-Concept
+
+
+ _ _ O
+-16(fp _ _ B-Concept
 ) _ _ O
-__ _ _ O
+
+
+ _ _ O
+_ _ _ O
+_ _ _ O
 now _ _ O
 , _ _ O
 even _ _ O
@@ -3353,6 +3599,9 @@ fp _ _ B-Concept
 never _ _ O
 change _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Function _ _ B-Concept
@@ -3391,9 +3640,7 @@ this _ _ O
 sw _ _ O
 fp _ _ B-Concept
 , _ _ O
--4 _ _ O
-( _ _ O
-sp _ _ B-Concept
+-4(sp _ _ B-Concept
 ) _ _ O
 this _ _ O
 pushes _ _ O
@@ -3412,12 +3659,16 @@ back _ _ O
 later _ _ O
 . _ _ O
 sw _ _ O
+
+
+ _ _ O
 ra _ _ O
 , _ _ O
--8 _ _ O
-( _ _ O
-sp _ _ B-Concept
+-8(sp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 move _ _ O
 fp _ _ B-Concept
 , _ _ O
@@ -3428,6 +3679,9 @@ sp _ _ B-Concept
 sp _ _ B-Concept
 , _ _ O
 -n _ _ O
+
+
+ _ _ O
 this _ _ O
 pushes _ _ O
 the _ _ O
@@ -3436,6 +3690,9 @@ callee _ _ B-Concept
 return _ _ B-Concept
 address _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 sets _ _ O
 up _ _ O
@@ -3477,6 +3734,9 @@ for _ _ O
 the _ _ O
 locals _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 here _ _ O
 , _ _ O
 n _ _ O
@@ -3530,25 +3790,36 @@ function _ _ O
 began _ _ O
 . _ _ O
 lw _ _ O
+
+
+ _ _ O
 ra _ _ O
 , _ _ O
--8 _ _ O
-( _ _ O
-fp _ _ O
+-8(fp _ _ O
 ) _ _ O
+
+
+ _ _ O
 this _ _ O
 restores _ _ O
 our _ _ O
 return _ _ O
 address _ _ O
 . _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 fp _ _ O
 , _ _ O
--4 _ _ O
-( _ _ O
-fp _ _ O
+-4(fp _ _ O
 ) _ _ O
+
+
+ _ _ O
 this _ _ O
 restores _ _ O
 the _ _ O
@@ -3557,12 +3828,18 @@ caller _ _ O
 frame _ _ O
 pointer _ _ O
 . _ _ O
+
+
+ _ _ O
 addi _ _ O
 sp _ _ O
 , _ _ O
 sp _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 this _ _ O
 completely _ _ O
 cleans _ _ O
@@ -3580,12 +3857,24 @@ and _ _ O
 all _ _ O
 arguments _ _ O
 . _ _ O
+
+
+ _ _ O
 jr _ _ O
+
+
+ _ _ O
 and _ _ O
 this _ _ O
 returns _ _ O
 ! _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 What _ _ O
@@ -3609,7 +3898,8 @@ handful _ _ O
 of _ _ O
 instructions _ _ O
 , _ _ O
-but… _ _ O
+but _ _ O
+… _ _ O
 o _ _ O
 this _ _ O
 shit _ _ O
@@ -3669,6 +3959,9 @@ about _ _ O
 next _ _ O
 time _ _ O
 ! _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 

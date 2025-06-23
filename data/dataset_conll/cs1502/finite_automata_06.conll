@@ -5,14 +5,16 @@ Automata _ _ O
 06 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -48,6 +50,9 @@ infinite _ _ O
 number _ _ O
 of _ _ O
 elements _ _ O
+
+
+ _ _ O
 Regular _ _ O
 or _ _ O
 not _ _ O
@@ -73,6 +78,9 @@ the _ _ O
 regular _ _ O
 expression _ _ O
 ∅ _ _ O
+
+
+ _ _ O
 If _ _ O
 L _ _ O
 is _ _ O
@@ -127,10 +135,15 @@ s3 _ _ O
 · _ _ O
 ∪ _ _ O
 sn _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 a _ _ O
-non-regular _ _ O
+non _ _ O
+- _ _ O
+regular _ _ O
 language _ _ O
 must _ _ O
 be _ _ O
@@ -139,9 +152,10 @@ infinite _ _ B-Concept
 language _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -186,6 +200,9 @@ ends _ _ O
 with _ _ O
 0110 _ _ O
 } _ _ O
+
+
+ _ _ O
 Technically _ _ O
 , _ _ O
 there _ _ O
@@ -215,7 +232,9 @@ between _ _ O
 regular _ _ O
 languages _ _ O
 and _ _ O
-non-regular _ _ O
+non _ _ O
+- _ _ O
+regular _ _ O
 languages _ _ O
 By _ _ O
 definition _ _ O
@@ -260,11 +279,15 @@ infinite _ _ O
 number _ _ O
 of _ _ O
 strings _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -300,18 +323,37 @@ an _ _ O
 accept _ _ O
 state _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Let _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 be _ _ O
 the _ _ O
@@ -325,9 +367,7 @@ M _ _ O
 10∗ _ _ O
 1 _ _ O
 ⊆ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 10∗ _ _ O
 1 _ _ O
@@ -346,9 +386,7 @@ M _ _ O
 . _ _ O
 } _ _ O
 ⊆ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 In _ _ O
 other _ _ O
@@ -357,31 +395,19 @@ words _ _ O
 10i _ _ O
 1 _ _ O
 ∈ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 for _ _ O
 any _ _ O
 i _ _ O
 ≥ _ _ O
 0 _ _ O
-00 _ _ O
-( _ _ O
-1010 _ _ O
-) _ _ O
-∗ _ _ O
+00(1010)∗ _ _ O
 0 _ _ O
 ⊆ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
-00 _ _ O
-( _ _ O
-1010 _ _ O
-) _ _ O
-∗ _ _ O
+00(1010)∗ _ _ O
 0 _ _ O
 = _ _ O
 { _ _ O
@@ -396,24 +422,16 @@ M _ _ O
 . _ _ O
 } _ _ O
 ⊆ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 In _ _ O
 other _ _ O
 words _ _ O
 , _ _ O
-00 _ _ O
-( _ _ O
-1010 _ _ O
-) _ _ O
-i _ _ O
+00(1010)i _ _ O
 0 _ _ O
 ∈ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 for _ _ O
 any _ _ O
@@ -422,9 +440,10 @@ i _ _ O
 0 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -476,10 +495,25 @@ of _ _ O
 length _ _ O
 5 _ _ O
 w1 _ _ O
+
+
+ _ _ O
 w2 _ _ O
+
+
+ _ _ O
 w3 _ _ O
+
+
+ _ _ O
 w4 _ _ O
+
+
+ _ _ O
 w5 _ _ O
+
+
+ _ _ O
 There _ _ O
 are _ _ O
 the _ _ O
@@ -507,6 +541,9 @@ same _ _ O
 Pigeonhole _ _ O
 principle _ _ O
 ) _ _ O
+
+
+ _ _ O
 Suppose _ _ O
 the _ _ O
 third _ _ O
@@ -517,10 +554,22 @@ are _ _ O
 the _ _ O
 same _ _ O
 state _ _ O
+
+
+ _ _ O
 w4 _ _ O
 w1 _ _ O
+
+
+ _ _ O
 w3 _ _ O
+
+
+ _ _ O
 w2 _ _ O
+
+
+ _ _ O
 w1 _ _ O
 w2 _ _ O
 ( _ _ O
@@ -530,9 +579,7 @@ w4 _ _ O
 i _ _ O
 w5 _ _ O
 ∈ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 for _ _ O
 any _ _ O
@@ -541,12 +588,16 @@ i _ _ O
 0 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
+
+
+ _ _ O
 w5 _ _ O
 
 Regular _ _ O
@@ -598,15 +649,16 @@ xy _ _ O
 i _ _ O
 z _ _ O
 ∈ _ _ O
-L _ _ O
-( _ _ O
-M _ _ O
+L(M _ _ O
 ) _ _ O
 for _ _ O
 any _ _ O
 i _ _ O
 ≥ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Given _ _ O
 an _ _ O
 infinite _ _ O
@@ -689,11 +741,15 @@ you _ _ O
 around _ _ O
 a _ _ O
 loop _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -726,8 +782,7 @@ to _ _ O
 recognize _ _ O
 A _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 find _ _ O
 a _ _ O
 string _ _ O
@@ -792,6 +847,9 @@ for _ _ O
 i _ _ O
 ≥ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -857,15 +915,19 @@ i _ _ O
 0 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
 
 Pumping _ _ B-Concept
 Lemma _ _ I-Concept
+
+
+ _ _ O
 The _ _ O
 pumping _ _ B-Concept
 lemma _ _ I-Concept
@@ -975,11 +1037,15 @@ still _ _ O
 in _ _ O
 the _ _ O
 language _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1039,6 +1105,9 @@ following _ _ O
 conditions _ _ O
 : _ _ O
 1 _ _ O
+
+
+ _ _ O
 for _ _ O
 each _ _ O
 i _ _ O
@@ -1051,16 +1120,31 @@ z _ _ O
 ∈ _ _ O
 A _ _ O
 , _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 |y| _ _ O
 > _ _ O
 0 _ _ O
 , _ _ O
 and _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 |xy| _ _ O
 ≤ _ _ O
 p. _ _ O
+
+
+ _ _ O
 where _ _ O
 |s| _ _ O
 represents _ _ O
@@ -1095,15 +1179,16 @@ y _ _ O
 = _ _ O
 ε _ _ O
 ( _ _ O
-010 _ _ O
-) _ _ O
-0 _ _ O
+010)0 _ _ O
 = _ _ O
 ε _ _ O
 but _ _ O
 010 _ _ O
 6= _ _ O
 ε _ _ O
+
+
+ _ _ O
 xy _ _ O
 0 _ _ O
 z _ _ O
@@ -1133,9 +1218,10 @@ so _ _ O
 on _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1193,6 +1279,9 @@ and _ _ O
 n _ _ O
 ≥ _ _ O
 p. _ _ O
+
+
+ _ _ O
 Let _ _ O
 r1 _ _ O
 , _ _ O
@@ -1238,17 +1327,13 @@ and _ _ O
 so _ _ O
 on _ _ O
 . _ _ O
-δ _ _ O
-( _ _ O
-r1 _ _ O
+δ(r1 _ _ O
 , _ _ O
 s1 _ _ O
 ) _ _ O
 = _ _ O
 r2 _ _ O
-δ _ _ O
-( _ _ O
-r2 _ _ O
+δ(r2 _ _ O
 , _ _ O
 s2 _ _ O
 ) _ _ O
@@ -1256,9 +1341,7 @@ s2 _ _ O
 r3 _ _ O
 .. _ _ O
 . _ _ O
-δ _ _ O
-( _ _ O
-ri _ _ O
+δ(ri _ _ O
 , _ _ O
 si _ _ O
 ) _ _ O
@@ -1272,14 +1355,15 @@ i _ _ O
 n. _ _ O
 .. _ _ O
 . _ _ O
-δ _ _ O
-( _ _ O
-rn _ _ O
+δ(rn _ _ O
 , _ _ O
 sn _ _ O
 ) _ _ O
 = _ _ O
 rn+1 _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 there _ _ O
@@ -1299,9 +1383,10 @@ state _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1344,6 +1429,9 @@ p _ _ O
 1 _ _ O
 states _ _ O
 . _ _ O
+
+
+ _ _ O
 Since _ _ O
 the _ _ O
 machine _ _ O
@@ -1407,6 +1495,9 @@ that _ _ O
 j _ _ O
 < _ _ O
 l. _ _ O
+
+
+ _ _ O
 Since _ _ O
 rl _ _ O
 is _ _ O
@@ -1448,11 +1539,15 @@ sl _ _ O
 . _ _ O
 . _ _ O
 sn _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1462,6 +1557,9 @@ of _ _ O
 the _ _ O
 Pumping _ _ O
 Lemma _ _ O
+
+
+ _ _ O
 If _ _ O
 M _ _ O
 accepts _ _ O
@@ -1502,6 +1600,9 @@ from _ _ O
 rl _ _ O
 to _ _ O
 rn+1 _ _ O
+
+
+ _ _ O
 where _ _ O
 rn+1 _ _ O
 is _ _ O
@@ -1510,8 +1611,7 @@ accept _ _ O
 state _ _ O
 . _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 check _ _ O
 all _ _ O
 conditions _ _ O
@@ -1522,6 +1622,9 @@ lemma _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 Thus _ _ O
 M _ _ O
 accept _ _ O
@@ -1552,11 +1655,15 @@ p _ _ O
 |xy| _ _ O
 ≤ _ _ O
 p. _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1602,6 +1709,9 @@ states _ _ O
 that _ _ O
 recognizes _ _ O
 B _ _ O
+
+
+ _ _ O
 Select _ _ O
 a _ _ O
 string _ _ O
@@ -1631,6 +1741,9 @@ lead _ _ O
 to _ _ O
 a _ _ O
 contradiction _ _ O
+
+
+ _ _ O
 Notes _ _ O
 The _ _ O
 choice _ _ O
@@ -1750,9 +1863,10 @@ and _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -1794,8 +1908,7 @@ p _ _ O
 states _ _ O
 that _ _ O
 recognizes _ _ O
-B _ _ O
-. _ _ O
+B. _ _ O
 There _ _ O
 are _ _ O
 infinite _ _ O
@@ -1816,6 +1929,9 @@ one _ _ O
 for _ _ O
 now _ _ O
 ) _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -1860,6 +1976,9 @@ conditions _ _ O
 , _ _ O
 and _ _ O
 3 _ _ O
+
+
+ _ _ O
 Recall _ _ O
 that _ _ O
 there _ _ O
@@ -1954,11 +2073,15 @@ xyz _ _ O
 = _ _ O
 0p _ _ O
 1p _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2021,6 +2144,9 @@ from _ _ O
 the _ _ O
 first _ _ O
 condition _ _ O
+
+
+ _ _ O
 The _ _ O
 condition _ _ O
 3 _ _ O
@@ -2105,6 +2231,9 @@ already _ _ O
 p _ _ O
 + _ _ O
 1 _ _ O
+
+
+ _ _ O
 Formally _ _ O
 , _ _ O
 to _ _ O
@@ -2139,11 +2268,15 @@ satisfying _ _ O
 condition _ _ O
 2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2180,6 +2313,9 @@ some _ _ O
 k _ _ O
 > _ _ O
 0 _ _ O
+
+
+ _ _ O
 To _ _ O
 make _ _ O
 xyz _ _ O
@@ -2192,24 +2328,18 @@ s _ _ O
 z _ _ O
 must _ _ O
 be _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 xyz _ _ O
 = _ _ O
 0j _ _ O
 0k _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
-0j+k+p− _ _ O
-( _ _ O
-j+k _ _ O
+0j+k+p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
@@ -2256,16 +2386,12 @@ z _ _ O
 0k _ _ O
 ) _ _ O
 0 _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
 0j _ _ O
-0p− _ _ O
-( _ _ O
-j+1 _ _ O
+0p−(j+1 _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
@@ -2319,9 +2445,10 @@ not _ _ O
 regular _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2364,6 +2491,9 @@ xyz _ _ O
 s _ _ O
 ∈ _ _ O
 B _ _ O
+
+
+ _ _ O
 Let _ _ O
 i _ _ O
 = _ _ O
@@ -2377,18 +2507,14 @@ z _ _ O
 0k _ _ O
 ) _ _ O
 2 _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
 0j _ _ O
 0k _ _ O
 0k _ _ O
-0p− _ _ O
-( _ _ O
-j+1 _ _ O
+0p−(j+1 _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
@@ -2431,6 +2557,9 @@ B _ _ O
 is _ _ O
 not _ _ O
 regular _ _ O
+
+
+ _ _ O
 In _ _ O
 this _ _ O
 example _ _ O
@@ -2444,11 +2573,15 @@ give _ _ O
 you _ _ O
 a _ _ O
 contradiction _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2517,13 +2650,17 @@ k _ _ O
 and _ _ O
 z _ _ O
 = _ _ O
-02p− _ _ O
-( _ _ O
-j+k _ _ O
+02p−(j+k _ _ O
 ) _ _ O
 12p _ _ O
 p _ _ O
+
+
+ _ _ O
 p _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 s _ _ O
@@ -2532,6 +2669,9 @@ s _ _ O
 2 _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 This _ _ O
 one _ _ O
 is _ _ O
@@ -2590,7 +2730,8 @@ and _ _ O
 y _ _ O
 = _ _ O
 0k _ _ O
-1m _ _ O
+1 _ _ O
+m _ _ O
 for _ _ O
 some _ _ O
 k _ _ O
@@ -2608,9 +2749,11 @@ z _ _ O
 = _ _ O
 0j _ _ O
 0k _ _ O
-1m _ _ O
+1 _ _ O
+m _ _ O
 0k _ _ O
-1m _ _ O
+1 _ _ O
+m _ _ O
 1 _ _ O
 2 _ _ O
 −m _ _ O
@@ -2643,11 +2786,15 @@ more _ _ O
 1s _ _ O
 than _ _ O
 0s _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2655,6 +2802,9 @@ Automata _ _ O
 Rule _ _ O
 of _ _ O
 Thumb _ _ O
+
+
+ _ _ O
 Pick _ _ O
 a _ _ O
 string _ _ O
@@ -2697,11 +2847,15 @@ you _ _ O
 have _ _ O
 to _ _ O
 do _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2740,6 +2894,9 @@ any _ _ O
 positive _ _ O
 number _ _ O
 ) _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -2755,6 +2912,9 @@ use _ _ O
 the _ _ O
 Pumping _ _ O
 lemma _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -2813,6 +2973,9 @@ e.g. _ _ O
 , _ _ O
 etc _ _ O
 ) _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -2882,9 +3045,10 @@ as _ _ O
 well _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O
@@ -2946,6 +3110,9 @@ following _ _ O
 conditions _ _ O
 : _ _ O
 1 _ _ O
+
+
+ _ _ O
 xy _ _ O
 i _ _ O
 z _ _ O
@@ -2956,14 +3123,29 @@ any _ _ O
 i _ _ O
 ≥ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 |y| _ _ O
 > _ _ O
 0 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 |xy| _ _ O
 ≤ _ _ O
 p _ _ O
+
+
+ _ _ O
 Let _ _ O
 s _ _ O
 = _ _ O
@@ -3054,9 +3236,7 @@ y _ _ O
 , _ _ O
 z _ _ O
 = _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 . _ _ O
@@ -3078,9 +3258,7 @@ z _ _ O
 xz _ _ O
 = _ _ O
 0j _ _ O
-0p− _ _ O
-( _ _ O
-j+k _ _ O
+0p−(j+k _ _ O
 ) _ _ O
 1p _ _ O
 = _ _ O
@@ -3154,9 +3332,10 @@ regular _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Finite _ _ O
 Automata _ _ O
 06 _ _ O

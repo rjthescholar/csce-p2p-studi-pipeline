@@ -4,14 +4,16 @@ Launch _ _ B-Concept
 File _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -49,6 +51,9 @@ Terminal _ _ O
 ROS _ _ O
 Master _ _ O
 roscore _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 2 _ _ O
 : _ _ O
@@ -57,6 +62,9 @@ Node _ _ O
 roslaunch _ _ O
 kobuki_node _ _ O
 minimal.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 3 _ _ O
 : _ _ O
@@ -65,6 +73,9 @@ Node _ _ O
 roslaunch _ _ O
 gscam _ _ O
 v4l.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 4 _ _ O
 : _ _ O
@@ -73,6 +84,9 @@ Node _ _ O
 roslaunch _ _ O
 mypackage _ _ O
 cmvision.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 5 _ _ O
 : _ _ O
@@ -81,6 +95,9 @@ command _ _ O
 rosrun _ _ O
 mypackage _ _ O
 constant_command.py _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 6 _ _ O
 : _ _ O
@@ -94,9 +111,10 @@ mypackage _ _ O
 project2.py _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -105,6 +123,9 @@ Processes _ _ O
 for _ _ O
 One _ _ O
 Application _ _ O
+
+
+ _ _ O
 ROS _ _ O
 allows _ _ O
 you _ _ O
@@ -153,7 +174,20 @@ directory _ _ O
 under _ _ O
 your _ _ O
 package _ _ O
-/home/student/cs1567/src/mypackage/launch _ _ O
+/home _ _ O
+/ _ _ O
+student _ _ O
+/ _ _ O
+cs1567 _ _ O
+/ _ _ O
+src _ _ O
+/ _ _ O
+mypackage _ _ O
+/ _ _ O
+launch _ _ O
+
+
+ _ _ O
 But _ _ O
 it _ _ O
 can _ _ O
@@ -167,11 +201,15 @@ package _ _ O
 mypackage _ _ O
 ) _ _ O
 directory _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -180,6 +218,9 @@ The _ _ O
 launch _ _ I-Concept
 > _ _ I-Concept
 Tag _ _ O
+
+
+ _ _ O
 All _ _ O
 content _ _ O
 of _ _ O
@@ -208,9 +249,15 @@ a _ _ O
 comment _ _ O
 -- _ _ O
 > _ _ O
+
+
+ _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 A _ _ O
 comment _ _ O
 must _ _ O
@@ -226,11 +273,15 @@ and _ _ I-Concept
 as _ _ O
 shown _ _ O
 above _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -239,6 +290,9 @@ The _ _ O
 include _ _ I-Concept
 > _ _ I-Concept
 Tag _ _ O
+
+
+ _ _ O
 To _ _ O
 let _ _ O
 the _ _ O
@@ -269,21 +323,18 @@ minimal.launch _ _ O
 > _ _ O
 < _ _ O
 include _ _ O
-file= _ _ O
-" _ _ O
-$ _ _ O
-( _ _ O
-find _ _ O
-kobuki_node _ _ O
-) _ _ O
-/launch/minimal.launch _ _ O
-" _ _ O
+file="$(find _ _ O
+kobuki_node)/launch _ _ O
 / _ _ O
+minimal.launch"/ _ _ O
 > _ _ O
 : _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 The _ _ O
 $ _ _ B-Concept
 ( _ _ I-Concept
@@ -321,11 +372,15 @@ under _ _ O
 the _ _ O
 launch _ _ B-Concept
 directory _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -343,8 +398,7 @@ navigate _ _ O
 to _ _ O
 the _ _ O
 package _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 directory _ _ O
 using _ _ O
 roscd _ _ B-Concept
@@ -357,20 +411,20 @@ example _ _ O
 , _ _ O
 gscam _ _ O
 : _ _ O
-student _ _ O
-@ _ _ O
-robot _ _ O
-: _ _ O
-/home/student _ _ O
-$ _ _ O
+student@robot:/home _ _ O
+/ _ _ O
+student$ _ _ O
 roscd _ _ O
 gscam _ _ O
-student _ _ O
-@ _ _ O
-robot _ _ O
-: _ _ O
-/opt/ros/kinetic/share/gscam _ _ O
-$ _ _ O
+student@robot:/opt _ _ O
+/ _ _ O
+ros _ _ O
+/ _ _ O
+kinetic _ _ O
+/ _ _ O
+share _ _ O
+/ _ _ O
+gscam$ _ _ O
 ls _ _ O
 cmake _ _ O
 gscam_nodeletlaunch _ _ O
@@ -378,7 +432,13 @@ nodelet_plugins.xml _ _ O
 examples _ _ O
 nodelet_pipeline.launch _ _ O
 package.xml _ _ O
+
+
+ _ _ O
 v4l.launch _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 launch _ _ B-Concept
@@ -413,26 +473,22 @@ v4l.launch _ _ O
 > _ _ O
 < _ _ O
 include _ _ O
-file= _ _ O
-" _ _ O
-$ _ _ O
-( _ _ O
-find _ _ O
-gscam _ _ O
-) _ _ O
-/v4l.launch _ _ O
-" _ _ O
-/ _ _ O
+file="$(find _ _ O
+gscam)/v4l.launch"/ _ _ O
 > _ _ O
 : _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -470,24 +526,19 @@ constant_command.py _ _ O
 > _ _ O
 < _ _ O
 node _ _ O
-name= _ _ O
+name="constant_command _ _ O
 " _ _ O
-constant_command _ _ O
+pkg="mypackage _ _ O
 " _ _ O
-pkg= _ _ O
-" _ _ O
-mypackage _ _ O
-" _ _ O
-type= _ _ O
-" _ _ O
-constant_command.py _ _ O
-" _ _ O
-/ _ _ O
+type="constant_command.py"/ _ _ O
 > _ _ O
 : _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 The _ _ O
 name _ _ O
 indicates _ _ O
@@ -523,6 +574,9 @@ when _ _ O
 it _ _ O
 is _ _ O
 initialized _ _ O
+
+
+ _ _ O
 The _ _ O
 pkg _ _ B-Concept
 indicates _ _ O
@@ -540,11 +594,15 @@ of _ _ O
 the _ _ O
 executable _ _ O
 file _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
@@ -554,8 +612,7 @@ node _ _ I-Concept
 > _ _ I-Concept
 Tag _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 put _ _ O
 them _ _ O
 all _ _ O
@@ -579,16 +636,10 @@ minimal.launch _ _ O
 > _ _ O
 < _ _ O
 include _ _ O
-file= _ _ O
-" _ _ O
-$ _ _ O
-( _ _ O
-find _ _ O
-kobuki_node _ _ O
-) _ _ O
-/launch/minimal.launch _ _ O
-" _ _ O
+file="$(find _ _ O
+kobuki_node)/launch _ _ O
 / _ _ O
+minimal.launch"/ _ _ O
 > _ _ O
 < _ _ O
 ! _ _ O
@@ -600,16 +651,8 @@ v4l.launch _ _ O
 > _ _ O
 < _ _ O
 include _ _ O
-file= _ _ O
-" _ _ O
-$ _ _ O
-( _ _ O
-find _ _ O
-gscam _ _ O
-) _ _ O
-/v4l.launch _ _ O
-" _ _ O
-/ _ _ O
+file="$(find _ _ O
+gscam)/v4l.launch"/ _ _ O
 > _ _ O
 < _ _ O
 ! _ _ O
@@ -621,16 +664,8 @@ cmvision.launch _ _ O
 > _ _ O
 < _ _ O
 include _ _ O
-file= _ _ O
-" _ _ O
-$ _ _ O
-( _ _ O
-find _ _ O
-mypackage _ _ O
-) _ _ O
-/cmvision.launch _ _ O
-" _ _ O
-/ _ _ O
+file="$(find _ _ O
+mypackage)/cmvision.launch"/ _ _ O
 > _ _ O
 < _ _ O
 ! _ _ O
@@ -642,19 +677,11 @@ constant_command.py _ _ O
 > _ _ O
 < _ _ O
 node _ _ O
-name= _ _ O
+name="constant_command _ _ O
 " _ _ O
-constant_command _ _ O
+pkg="mypackage _ _ O
 " _ _ O
-pkg= _ _ O
-" _ _ O
-mypackage _ _ O
-" _ _ O
-type= _ _ O
-" _ _ O
-constant_command.py _ _ O
-" _ _ O
-/ _ _ O
+type="constant_command.py"/ _ _ O
 > _ _ O
 < _ _ O
 ! _ _ O
@@ -666,31 +693,22 @@ project2.py _ _ O
 > _ _ O
 < _ _ O
 node _ _ O
-name= _ _ O
+name="project2 _ _ O
 " _ _ O
-project2 _ _ O
+pkg="mypackage _ _ O
 " _ _ O
-pkg= _ _ O
+type="project2.py _ _ O
 " _ _ O
-mypackage _ _ O
+output="screen _ _ O
 " _ _ O
-type= _ _ O
-" _ _ O
-project2.py _ _ O
-" _ _ O
-output= _ _ O
-" _ _ O
-screen _ _ O
-" _ _ O
-cwd= _ _ O
-" _ _ O
-node _ _ O
-" _ _ O
-/ _ _ O
+cwd="node"/ _ _ O
 > _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 Notes _ _ O
 : _ _ O
 If _ _ O
@@ -709,17 +727,13 @@ you _ _ O
 need _ _ O
 to _ _ O
 add _ _ O
-output= _ _ B-Concept
-" _ _ I-Concept
-screen _ _ I-Concept
+output="screen _ _ B-Concept
 " _ _ I-Concept
 as _ _ O
 shown _ _ O
 above _ _ O
 The _ _ O
-cwd= _ _ B-Concept
-" _ _ I-Concept
-node _ _ I-Concept
+cwd="node _ _ B-Concept
 " _ _ I-Concept
 specifies _ _ O
 the _ _ O
@@ -735,15 +749,19 @@ executable _ _ O
 file _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 
 The _ _ O
 launch _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 To _ _ O
 use _ _ O
 the _ _ O
@@ -754,6 +772,9 @@ file _ _ I-Concept
 roslaunch _ _ O
 mypackage _ _ O
 p2.launch _ _ O
+
+
+ _ _ O
 You _ _ O
 do _ _ O
 not _ _ O
@@ -780,6 +801,9 @@ execute _ _ O
 the _ _ O
 roscore _ _ B-Concept
 command _ _ O
+
+
+ _ _ O
 You _ _ O
 only _ _ O
 need _ _ O
@@ -791,11 +815,15 @@ all _ _ O
 your _ _ O
 nodes _ _ O
 support _ _ O
-Ctrl-C _ _ B-Concept
+Ctrl _ _ B-Concept
+- _ _ I-Concept
+C _ _ I-Concept
 , _ _ O
 by _ _ O
 pressing _ _ O
-Ctrl-C _ _ B-Concept
+Ctrl _ _ B-Concept
+- _ _ I-Concept
+C _ _ I-Concept
 , _ _ O
 it _ _ O
 will _ _ O
@@ -807,11 +835,15 @@ by _ _ O
 the _ _ O
 launch _ _ B-Concept
 file _ _ I-Concept
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-Concept
 File _ _ I-Concept
 

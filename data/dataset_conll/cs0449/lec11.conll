@@ -1,16 +1,30 @@
 -DOCSTART- -X- -X- O
 
 11 _ _ O
+
+
+ _ _ O
 How _ _ O
 Programs _ _ O
+
+
+ _ _ O
 Are _ _ O
 Managed _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 0449 _ _ O
 Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,8 +39,7 @@ Petrucci _ _ O
 ) _ _ O
 
 Where _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 Lie _ _ O
 ? _ _ O
@@ -36,12 +49,16 @@ operating _ _ O
 systems _ _ O
 questions _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 On _ _ O
 the _ _ O
 last _ _ O
-episode… _ _ O
+episode _ _ O
+… _ _ O
 • _ _ O
 Programs _ _ O
 are _ _ O
@@ -66,13 +83,22 @@ can _ _ O
 be _ _ O
 executed _ _ O
 . _ _ O
+
+
+ _ _ O
 Kernel _ _ B-Concept
 Memory _ _ I-Concept
 stack _ _ B-Concept
 libz.so _ _ B-Concept
 .data _ _ I-Concept
-libz.so _ _ O
-.text _ _ O
+
+
+ _ _ B-Concept
+libz.so _ _ B-Concept
+.text _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 Programs _ _ O
 go _ _ O
@@ -85,14 +111,28 @@ to _ _ O
 have _ _ O
 all _ _ O
 their _ _ O
-data/code _ _ O
+data _ _ O
+/ _ _ O
+code _ _ O
 in _ _ O
 memory _ _ O
 . _ _ O
-.bss _ _ O
-.data _ _ O
-.text _ _ O
+
+
+ _ _ O
+.bss _ _ B-Concept
+.data _ _ B-Concept
+
+
+ _ _ O
+.text _ _ B-Concept
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 The _ _ O
@@ -107,13 +147,15 @@ are _ _ O
 the _ _ O
 only _ _ O
 things _ _ O
-running… _ _ O
+running _ _ O
+… _ _ O
 • _ _ O
 The _ _ O
 only _ _ O
 things _ _ O
 in _ _ O
-memory… _ _ O
+memory _ _ O
+… _ _ O
 • _ _ O
 We _ _ O
 know _ _ O
@@ -132,6 +174,9 @@ liars _ _ O
 crafting _ _ O
 illusions _ _ O
 . _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 The _ _ O
@@ -179,6 +224,9 @@ supports _ _ O
 concurrent _ _ B-Concept
 processes _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 OS _ _ O
@@ -234,7 +282,8 @@ process _ _ B-Concept
 is _ _ O
 one _ _ O
 of _ _ O
-method… _ _ O
+method _ _ O
+… _ _ O
 • _ _ O
 A _ _ O
 process _ _ B-Concept
@@ -283,7 +332,8 @@ would _ _ O
 be _ _ O
 a _ _ O
 separate _ _ O
-process… _ _ B-Concept
+process _ _ B-Concept
+… _ _ O
 of _ _ O
 the _ _ O
 same _ _ O
@@ -309,6 +359,9 @@ sense _ _ O
 ! _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 Operating _ _ O
@@ -343,6 +396,9 @@ two _ _ O
 key _ _ O
 lies _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 control _ _ B-Concept
@@ -376,11 +432,16 @@ memory _ _ O
 : _ _ O
 defined _ _ O
 by _ _ O
-executable/code _ _ O
+executable _ _ O
+/ _ _ O
+code _ _ O
 ( _ _ O
 next _ _ O
 lecture _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 are _ _ O
@@ -392,6 +453,9 @@ flow _ _ I-Concept
 , _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 How _ _ O
 do _ _ O
@@ -405,7 +469,8 @@ runs _ _ O
 When _ _ O
 does _ _ O
 the _ _ O
-lie… _ _ O
+lie _ _ O
+… _ _ O
 break _ _ O
 down _ _ O
 ? _ _ O
@@ -417,6 +482,9 @@ Eeny _ _ O
 Meeny _ _ O
 Miney _ _ O
 Moe _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 The _ _ O
@@ -458,26 +526,53 @@ the _ _ O
 fifth _ _ O
 ? _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Multiplexing _ _ B-Concept
@@ -505,6 +600,9 @@ is _ _ O
 called _ _ O
 multiplexing _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Now _ _ O
 , _ _ O
@@ -516,9 +614,18 @@ a _ _ O
 single _ _ O
 CPU _ _ O
 . _ _ O
+
+
+ _ _ O
 Process _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
-.bss _ _ O
+.bss _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 often _ _ O
@@ -530,6 +637,9 @@ in _ _ O
 the _ _ O
 foreground _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Word _ _ O
 processor _ _ O
@@ -537,10 +647,17 @@ processor _ _ O
 web _ _ O
 browser _ _ O
 , _ _ O
-minesweeper… _ _ O
+minesweeper _ _ O
+… _ _ O
 whatever _ _ O
 . _ _ O
-.data _ _ O
+
+
+ _ _ O
+.data _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 still _ _ O
@@ -549,27 +666,40 @@ some _ _ O
 things _ _ O
 running _ _ O
 the _ _ O
-background… _ _ O
-.text _ _ O
+background _ _ O
+… _ _ O
+
+
+ _ _ O
+.text _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 need _ _ O
 to _ _ O
-switch _ _ O
+switch _ _ B-Concept
 from _ _ O
 one _ _ O
-process _ _ O
+process _ _ B-Concept
 to _ _ O
 another _ _ O
 at _ _ O
 particular _ _ O
 times _ _ O
 . _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 : _ _ O
-Registers _ _ O
+Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Music _ _ O
 player _ _ O
@@ -580,8 +710,12 @@ scanner _ _ O
 chat _ _ O
 client _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
-Yet… _ _ O
+Yet _ _ O
+… _ _ O
 we _ _ O
 have _ _ O
 to _ _ O
@@ -592,8 +726,15 @@ that _ _ O
 the _ _ O
 program _ _ O
 is _ _ O
-uninterrupted… _ _ O
+uninterrupted _ _ B-Concept
+… _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Naïve _ _ O
@@ -623,7 +764,8 @@ solution _ _ O
 When _ _ O
 one _ _ O
 process _ _ B-Concept
-ends… _ _ O
+ends _ _ O
+… _ _ O
 run _ _ O
 the _ _ O
 next _ _ O
@@ -631,8 +773,7 @@ next _ _ O
 ▪ _ _ O
 Yet _ _ O
 that _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 not _ _ O
 very _ _ O
 flexible _ _ O
@@ -663,24 +804,54 @@ useful _ _ O
 to _ _ O
 us _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 Memory _ _ O
 CPU _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 The _ _ O
@@ -705,7 +876,9 @@ process _ _ B-Concept
 • _ _ O
 The _ _ O
 OS _ _ O
-retains/restores _ _ O
+retains _ _ O
+/ _ _ O
+restores _ _ O
 the _ _ O
 state _ _ O
 ( _ _ O
@@ -731,47 +904,86 @@ in _ _ O
 memory _ _ O
 . _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 C _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 D _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 Memory _ _ O
 CPU _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 The _ _ O
@@ -852,31 +1064,61 @@ see _ _ O
 next _ _ O
 lecture _ _ O
 : _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 Context _ _ B-Concept
+
+
+ _ _ O
 Context _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 virtual _ _ B-Concept
 memory _ _ I-Concept
 ) _ _ O
+
+
+ _ _ O
 4 _ _ O
 . _ _ O
 Jump _ _ O
@@ -887,7 +1129,13 @@ counter _ _ I-Concept
 . _ _ O
 Go _ _ O
 ! _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 A _ _ O
@@ -898,7 +1146,8 @@ When _ _ O
 we _ _ O
 pause _ _ O
 a _ _ O
-process… _ _ B-Concept
+process _ _ B-Concept
+… _ _ O
 we _ _ O
 store _ _ O
 the _ _ O
@@ -908,36 +1157,48 @@ registers _ _ B-Concept
 ( _ _ O
 context _ _ B-Concept
 ) _ _ O
-x86-64 _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 – _ _ O
 Process _ _ B-Concept
 A _ _ O
+
+
+ _ _ O
 Context _ _ B-Concept
 ( _ _ O
 A _ _ O
 ) _ _ O
-x86-64 _ _ O
+
+
+ _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 – _ _ O
 Process _ _ B-Concept
 B _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 When _ _ O
@@ -987,6 +1248,9 @@ as _ _ O
 system _ _ B-Concept
 calls _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 often _ _ O
@@ -1030,6 +1294,9 @@ does _ _ O
 this _ _ O
 work _ _ O
 ? _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Round _ _ B-Concept
@@ -1066,51 +1333,102 @@ equal _ _ O
 stake _ _ O
 . _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
-stack _ _ O
-stack _ _ O
-stack _ _ O
-.bss _ _ O
-.data _ _ O
-.text _ _ O
-.bss _ _ O
-.data _ _ O
-.text _ _ O
-.bss _ _ O
-.data _ _ O
-.text _ _ O
-.bss _ _ O
-.data _ _ O
-.text _ _ O
+
+
+ _ _ O
+stack _ _ B-Concept
+
+
+ _ _ O
+stack _ _ B-Concept
+
+
+ _ _ O
+stack _ _ B-Concept
+
+
+ _ _ O
+.bss _ _ B-Concept
+.data _ _ B-Concept
+.text _ _ B-Concept
+
+
+ _ _ O
+.bss _ _ B-Concept
+.data _ _ B-Concept
+.text _ _ B-Concept
+
+
+ _ _ O
+.bss _ _ B-Concept
+.data _ _ B-Concept
+.text _ _ B-Concept
+
+
+ _ _ O
+.bss _ _ B-Concept
+.data _ _ B-Concept
+.text _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
-Registers _ _ O
+Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
-Registers _ _ O
+Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 C _ _ O
 : _ _ O
-Registers _ _ O
+Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 D _ _ O
 : _ _ O
-Registers _ _ O
+Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 Memory _ _ O
 CPU _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Problems _ _ O
@@ -1120,8 +1438,7 @@ fairness _ _ O
 ” _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 say _ _ O
 I _ _ O
 want _ _ O
@@ -1131,7 +1448,9 @@ Doom _ _ O
 Eternal _ _ O
 ▪ _ _ O
 In _ _ O
-round-robin _ _ B-Concept
+round _ _ B-Concept
+- _ _ I-Concept
+robin _ _ I-Concept
 , _ _ O
 I _ _ O
 give _ _ O
@@ -1145,56 +1464,110 @@ my _ _ O
 resources _ _ O
 . _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ B-Concept
 .data _ _ B-Concept
 .text _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 C _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 D _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 This _ _ O
 should _ _ O
 get _ _ O
 more _ _ O
 priority _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 I _ _ O
@@ -1202,7 +1575,9 @@ have _ _ O
 priorities _ _ B-Concept
 ! _ _ O
 • _ _ O
-Round-Robin _ _ B-Concept
+Round _ _ B-Concept
+- _ _ I-Concept
+Robin _ _ I-Concept
 schedulers _ _ I-Concept
 are _ _ O
 fair _ _ O
@@ -1229,10 +1604,12 @@ to _ _ O
 the _ _ O
 scheduler _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 look _ _ O
 at _ _ O
 a _ _ O
@@ -1245,7 +1622,9 @@ currently _ _ O
 scheduled _ _ B-Concept
 with _ _ O
 a _ _ O
-round-robin _ _ B-Concept
+round _ _ B-Concept
+- _ _ I-Concept
+robin _ _ I-Concept
 scheme _ _ O
 : _ _ O
 ( _ _ O
@@ -1260,15 +1639,42 @@ resources _ _ O
 ) _ _ O
  _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
 50ms _ _ O
 / _ _ O
@@ -1276,6 +1682,9 @@ C _ _ O
 = _ _ O
 25 _ _ O
 % _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 I _ _ O
@@ -1283,7 +1692,9 @@ have _ _ O
 priorities _ _ B-Concept
 ! _ _ O
 • _ _ O
-Round-Robin _ _ B-Concept
+Round _ _ B-Concept
+- _ _ I-Concept
+Robin _ _ I-Concept
 schedulers _ _ I-Concept
 are _ _ O
 fair _ _ O
@@ -1310,6 +1721,9 @@ to _ _ O
 the _ _ O
 scheduler _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 could _ _ O
@@ -1336,12 +1750,30 @@ to _ _ O
 run _ _ O
 . _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 100ms _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
 100ms _ _ O
 / _ _ O
@@ -1349,6 +1781,9 @@ C _ _ O
 = _ _ O
 40 _ _ O
 % _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 I _ _ O
@@ -1356,7 +1791,9 @@ have _ _ O
 priorities _ _ B-Concept
 ! _ _ O
 • _ _ O
-Round-Robin _ _ B-Concept
+Round _ _ B-Concept
+- _ _ I-Concept
+Robin _ _ I-Concept
 schedulers _ _ I-Concept
 are _ _ O
 fair _ _ O
@@ -1383,6 +1820,9 @@ to _ _ O
 the _ _ O
 scheduler _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 could _ _ O
@@ -1396,7 +1836,9 @@ is _ _ O
 scheduled _ _ B-Concept
 . _ _ I-Concept
 ▪ _ _ O
-Round-robin _ _ B-Concept
+Round _ _ B-Concept
+- _ _ I-Concept
+robin _ _ I-Concept
 + _ _ O
 priority _ _ B-Concept
 : _ _ O
@@ -1408,18 +1850,41 @@ back _ _ O
 and _ _ O
 forth _ _ O
 and _ _ O
-round-robin _ _ B-Concept
+round _ _ B-Concept
+- _ _ I-Concept
+robin _ _ I-Concept
 within _ _ O
 them _ _ O
 . _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
 100ms _ _ O
 / _ _ O
@@ -1427,6 +1892,9 @@ C _ _ O
 = _ _ O
 50 _ _ O
 % _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 I _ _ O
@@ -1434,7 +1902,9 @@ have _ _ O
 priorities _ _ B-Concept
 ! _ _ O
 • _ _ O
-Round-Robin _ _ B-Concept
+Round _ _ B-Concept
+- _ _ I-Concept
+Robin _ _ I-Concept
 schedulers _ _ I-Concept
 are _ _ O
 fair _ _ O
@@ -1461,6 +1931,9 @@ to _ _ O
 the _ _ O
 scheduler _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -1485,12 +1958,26 @@ Hmm _ _ O
 The _ _ O
 power _ _ O
 of _ _ O
-trade-offs _ _ O
+trade _ _ O
+- _ _ O
+offs _ _ O
 . _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 200ms _ _ O
@@ -1499,6 +1986,9 @@ B _ _ O
 = _ _ O
 67 _ _ O
 % _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Ideal _ _ O
@@ -1516,11 +2006,26 @@ quickly _ _ O
 switching _ _ O
 ) _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 illusion _ _ O
@@ -1530,17 +2035,33 @@ an _ _ O
 ideal _ _ O
 : _ _ O
 perceived _ _ O
-concurrency… _ _ B-Concept
+concurrency _ _ B-Concept
+… _ _ O
 no _ _ O
 delay _ _ O
 noticed _ _ O
 ) _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 100ms _ _ O
+
+
+ _ _ O
 50ms _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 There _ _ O
@@ -1580,6 +2101,9 @@ schedule _ _ B-Concept
 general _ _ O
 processes _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Consider _ _ O
 : _ _ O
@@ -1630,6 +2154,9 @@ pressed _ _ O
 What _ _ O
 luck _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 : _ _ O
@@ -1667,6 +2194,9 @@ IMPORTANT _ _ O
 and _ _ O
 yet _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Moral _ _ O
 of _ _ O
@@ -1681,6 +2211,9 @@ things _ _ O
 very _ _ O
 hard _ _ O
 . _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Again _ _ O
@@ -1691,8 +2224,10 @@ not _ _ O
 magic _ _ O
 . _ _ O
 • _ _ O
-But… _ _ O
-wait… _ _ O
+But _ _ O
+… _ _ O
+wait _ _ O
+… _ _ O
 how _ _ O
 does _ _ O
 hardware _ _ O
@@ -1722,6 +2257,9 @@ the _ _ O
 context _ _ B-Concept
 switch _ _ I-Concept
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Ah _ _ O
 , _ _ O
@@ -1760,24 +2298,32 @@ signal _ _ O
 is _ _ O
 noticed _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 take _ _ O
 a _ _ O
 look _ _ O
 . _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Interrupts _ _ B-Concept
 It _ _ O
-’ _ _ O
-s _ _ O
-rude… _ _ O
+’s _ _ O
+rude _ _ O
+… _ _ O
 but _ _ O
 necessary _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 How _ _ O
@@ -1825,6 +2371,9 @@ by _ _ O
 a _ _ O
 sensor _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 When _ _ O
 caused _ _ O
@@ -1841,16 +2390,25 @@ a _ _ O
 software _ _ O
 trap _ _ O
 • _ _ O
-Divide-by-zero _ _ O
+Divide _ _ O
+- _ _ O
+by _ _ O
+- _ _ O
+zero _ _ O
 error _ _ O
 , _ _ O
 some _ _ O
-floating-point _ _ O
+floating _ _ O
+- _ _ O
+point _ _ O
 exceptions _ _ O
 , _ _ O
 system _ _ O
 calls _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 have _ _ O
@@ -1898,6 +2456,9 @@ performs _ _ O
 a _ _ O
 task _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 have _ _ O
@@ -1945,14 +2506,28 @@ Here _ _ O
 are _ _ O
 some _ _ O
 typical _ _ O
-UNIX/Linux _ _ O
+UNIX _ _ O
+/ _ _ O
+Linux _ _ O
 system _ _ B-Concept
 calls _ _ I-Concept
 : _ _ O
 Number _ _ O
+
+
+ _ _ O
 Name _ _ O
+
+
+ _ _ O
 Description _ _ O
+
+
+ _ _ O
 read _ _ O
+
+
+ _ _ O
 Reads _ _ O
 bytes _ _ O
 from _ _ O
@@ -1960,7 +2535,13 @@ an _ _ O
 open _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 write _ _ O
+
+
+ _ _ O
 Writes _ _ O
 bytes _ _ O
 to _ _ O
@@ -1968,7 +2549,13 @@ an _ _ O
 open _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 open _ _ O
+
+
+ _ _ O
 Opens _ _ O
 a _ _ O
 file _ _ O
@@ -1978,20 +2565,38 @@ the _ _ O
 file _ _ O
 handle _ _ O
 . _ _ O
+
+
+ _ _ O
 close _ _ O
+
+
+ _ _ O
 Closes _ _ O
 an _ _ O
 open _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 stat _ _ O
+
+
+ _ _ O
 Returns _ _ O
 metadata _ _ O
 about _ _ O
 a _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 fork _ _ O
+
+
+ _ _ O
 Spawns _ _ O
 a _ _ O
 copy _ _ O
@@ -2000,7 +2605,13 @@ the _ _ O
 current _ _ O
 process _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 execve _ _ O
+
+
+ _ _ O
 Loads _ _ O
 and _ _ O
 then _ _ O
@@ -2008,6 +2619,9 @@ executes _ _ O
 a _ _ O
 program _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 System _ _ B-Concept
@@ -2034,9 +2648,14 @@ are _ _ O
 synchronous _ _ B-Concept
 interrupts _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
-x86-64 _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 , _ _ O
 the _ _ O
 program _ _ O
@@ -2065,12 +2684,17 @@ the _ _ O
 OS _ _ O
 calls _ _ O
 the _ _ O
+
+
+ _ _ O
 instruction _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 take _ _ O
 a _ _ O
 deeper _ _ O
@@ -2082,24 +2706,27 @@ Hello _ _ O
 , _ _ O
 Hello _ _ O
 World _ _ O
-x86-64 _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 - _ _ O
 Application _ _ O
-x86-64 _ _ O
+
+
+ _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 - _ _ O
@@ -2109,7 +2736,12 @@ main _ _ O
 OS _ _ O
 program _ _ O
 ) _ _ O
-Pre-registered _ _ O
+
+
+ _ _ O
+Pre _ _ O
+- _ _ O
+registered _ _ O
 to _ _ O
 be _ _ O
 called _ _ O
@@ -2118,18 +2750,30 @@ syscall _ _ B-Concept
 Saves _ _ O
 CPU _ _ O
 state _ _ O
+
+
+ _ _ O
 A _ _ O
 jump _ _ O
 to _ _ O
 the _ _ O
 kernel _ _ B-Concept
+
+
+ _ _ O
 Performs _ _ O
 action _ _ O
 Restores _ _ O
 state _ _ O
+
+
+ _ _ O
 Returns _ _ O
 to _ _ O
 process _ _ B-Concept
+
+
+ _ _ O
 28 _ _ O
 
 Tick _ _ O
@@ -2167,6 +2811,9 @@ are _ _ O
 asynchronous _ _ B-Concept
 interrupts _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 a _ _ O
@@ -2246,10 +2893,12 @@ or _ _ O
 starting _ _ O
 another _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 look _ _ O
 at _ _ O
 the _ _ O
@@ -2367,7 +3016,13 @@ The _ _ O
 Interrupt _ _ B-Concept
 Table _ _ O
 # _ _ O
+
+
+ _ _ O
 Value _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 interrupt _ _ B-Concept
@@ -2377,10 +3032,16 @@ a _ _ O
 simple _ _ O
 table _ _ O
 . _ _ O
+
+
+ _ _ O
 Description _ _ O
 Divide _ _ O
 by _ _ O
 zero _ _ O
+
+
+ _ _ O
 • _ _ O
 Fun _ _ O
 Fact _ _ O
@@ -2395,6 +3056,9 @@ address _ _ O
 in _ _ O
 memory _ _ O
 ! _ _ O
+
+
+ _ _ O
 Overflow _ _ O
 Double _ _ O
 Fault _ _ O
@@ -2413,15 +3077,17 @@ Signal _ _ O
 Network _ _ O
 Device _ _ O
 Signal _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 So _ _ O
 , _ _ O
 operating _ _ O
 system _ _ O
 kernels _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 exactly _ _ O
 always _ _ O
 treat _ _ O
@@ -2429,7 +3095,11 @@ zero _ _ O
 as _ _ O
 an _ _ O
 invalid _ _ O
-address… _ _ O
+address _ _ O
+… _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 a _ _ O
@@ -2447,7 +3117,8 @@ signal _ _ O
 to _ _ O
 the _ _ O
 interrupt _ _ O
-controller… _ _ O
+controller _ _ O
+… _ _ O
 ▪ _ _ O
 the _ _ O
 CPU _ _ O
@@ -2457,9 +3128,15 @@ the _ _ O
 given _ _ O
 address _ _ O
 . _ _ O
+
+
+ _ _ O
 Audio _ _ O
 Device _ _ O
 Signal _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Ah _ _ O
@@ -2467,50 +3144,61 @@ Ah _ _ O
 There _ _ O
 art _ _ O
 thee _ _ O
-ol _ _ O
-’ _ _ O
+ol’ _ _ O
 interrupt _ _ B-Concept
 ! _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 take _ _ O
 a _ _ O
 look _ _ O
 at _ _ O
 interrupt _ _ B-Concept
-handling… _ _ I-Concept
-x86-64 _ _ O
+handling _ _ I-Concept
+… _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 – _ _ O
 Process _ _ O
 B _ _ O
 A _ _ O
+
+
+ _ _ O
 Context _ _ B-Concept
 ( _ _ O
 A _ _ O
 ) _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
-x86-64 _ _ O
+
+
+ _ _ O
+x86 _ _ O
+- _ _ O
+64 _ _ O
 ( _ _ O
 gas _ _ O
 / _ _ O
-AT _ _ O
-& _ _ O
-T _ _ O
+AT&T _ _ O
 syntax _ _ O
 ) _ _ O
 – _ _ O
 Kernel _ _ O
+
+
+ _ _ O
 • _ _ O
 An _ _ O
 interrupt _ _ B-Concept
@@ -2592,6 +3280,9 @@ times _ _ O
 : _ _ O
 synchronous _ _ O
 interrupts _ _ O
+
+
+ _ _ O
 • _ _ O
 Interrupts _ _ O
 are _ _ O
@@ -2639,7 +3330,8 @@ When _ _ O
 you _ _ O
 divide _ _ O
 by _ _ O
-zero… _ _ O
+zero _ _ O
+… _ _ O
 • _ _ O
 To _ _ O
 then _ _ O
@@ -2648,6 +3340,9 @@ murder _ _ O
 your _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 

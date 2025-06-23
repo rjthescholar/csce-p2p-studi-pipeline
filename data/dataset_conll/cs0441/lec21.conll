@@ -5,11 +5,12 @@ Structures _ _ O
 for _ _ O
 Computer _ _ O
 Science _ _ O
+
+
+ _ _ O
 William _ _ O
 Garrison _ _ O
-bill _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+bill@cs.pitt.edu _ _ O
 6311 _ _ O
 Sennott _ _ O
 Square _ _ O
@@ -19,6 +20,9 @@ Lecture _ _ O
 : _ _ O
 Probability _ _ O
 Theory _ _ O
+
+
+ _ _ O
 Based _ _ O
 on _ _ O
 materials _ _ O
@@ -35,13 +39,26 @@ are _ _ O
 equally _ _ O
 likely _ _ O
 to _ _ O
-occur… _ _ O
+occur _ _ O
+… _ _ O
+
+
+ _ _ O
 Sporting _ _ O
 events _ _ O
+
+
+ _ _ O
 Games _ _ O
 of _ _ O
 strategy _ _ O
+
+
+ _ _ O
 Nature _ _ O
+
+
+ _ _ O
 Investments _ _ O
 
 We _ _ O
@@ -50,7 +67,9 @@ model _ _ O
 these _ _ O
 types _ _ O
 of _ _ O
-real-life _ _ O
+real _ _ O
+- _ _ O
+life _ _ O
 situations _ _ O
 by _ _ O
 relaxing _ _ O
@@ -95,9 +114,7 @@ hold _ _ O
 . _ _ O
 0 _ _ O
 ≤ _ _ O
-p _ _ O
-( _ _ O
-s _ _ O
+p(s _ _ O
 ) _ _ O
 ≤ _ _ O
 1 _ _ O
@@ -108,6 +125,9 @@ s _ _ O
 S _ _ O
 2 _ _ O
 . _ _ O
+
+
+ _ _ O
 No _ _ O
 event _ _ O
 can _ _ O
@@ -127,6 +147,9 @@ a _ _ O
 chance _ _ O
 of _ _ O
 occurence _ _ O
+
+
+ _ _ O
 In _ _ O
 any _ _ O
 given _ _ O
@@ -136,6 +159,9 @@ some _ _ O
 event _ _ O
 will _ _ O
 occur _ _ O
+
+
+ _ _ O
 The _ _ O
 function _ _ O
 p _ _ O
@@ -164,19 +190,24 @@ events _ _ O
 Property _ _ O
 1 _ _ O
 : _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 1 _ _ O
 – _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
+
+
+ _ _ O
 S= _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 l _ _ O
 Recall _ _ O
 that _ _ O
@@ -192,9 +223,7 @@ E _ _ O
 l _ _ O
 Further _ _ O
 , _ _ O
-∑ _ _ O
-! _ _ O
-∈ _ _ O
+∑!∈ _ _ O
 # _ _ O
 𝑝 _ _ O
 𝑠 _ _ O
@@ -203,60 +232,48 @@ Further _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-S _ _ O
+p(S _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 + _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 1 _ _ O
 l _ _ O
 Thus _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 1 _ _ O
 – _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 Property _ _ O
 2 _ _ O
 : _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∪ _ _ O
 E2 _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ) _ _ O
 + _ _ O
-p _ _ O
-( _ _ O
-E2 _ _ O
+p(E2 _ _ O
 ) _ _ O
 – _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∩ _ _ O
 E2 _ _ O
 ) _ _ O
@@ -266,10 +283,7 @@ that _ _ O
 𝑝 _ _ O
 𝐸 _ _ O
 = _ _ O
-∑ _ _ O
-! _ _ O
-∈ _ _ O
-$ _ _ O
+∑!∈$ _ _ O
 𝑝 _ _ O
 𝑠 _ _ O
 S= _ _ O
@@ -295,9 +309,7 @@ or _ _ O
 E2 _ _ O
 , _ _ O
 then _ _ O
-p _ _ O
-( _ _ O
-x _ _ O
+p(x _ _ O
 ) _ _ O
 is _ _ O
 counted _ _ O
@@ -319,9 +331,7 @@ or _ _ O
 E2 _ _ O
 , _ _ O
 then _ _ O
-p _ _ O
-( _ _ O
-x _ _ O
+p(x _ _ O
 ) _ _ O
 is _ _ O
 counted _ _ O
@@ -339,7 +349,13 @@ RHS _ _ O
 of _ _ O
 the _ _ O
 equation _ _ O
+
+
+ _ _ O
 E1 _ _ O
+
+
+ _ _ O
 E2 _ _ O
 
 A _ _ O
@@ -379,7 +395,13 @@ we _ _ O
 have _ _ O
 : _ _ O
 $ _ _ O
+
+
+ _ _ O
 $ _ _ O
+
+
+ _ _ O
 𝑝 _ _ O
 # _ _ O
 𝐸 _ _ O
@@ -392,9 +414,15 @@ $ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
+
+
+ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
+
+
+ _ _ O
 Recall _ _ O
 : _ _ O
 E1 _ _ O
@@ -423,9 +451,21 @@ j _ _ O
 n _ _ O
 S= _ _ O
 E1 _ _ O
+
+
+ _ _ O
 E2 _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 En _ _ O
+
+
+ _ _ O
 We _ _ O
 can _ _ O
 prove _ _ O
@@ -460,6 +500,9 @@ event _ _ O
 has _ _ O
 occurred _ _ O
 . _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 A _ _ O
@@ -497,6 +540,9 @@ the _ _ O
 three _ _ O
 flips _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -554,33 +600,23 @@ We _ _ O
 know _ _ O
 : _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 |E|/|S| _ _ O
 l _ _ O
 = _ _ O
-| _ _ O
-{ _ _ O
-THH _ _ O
+|{THH _ _ O
 , _ _ O
-TTT _ _ O
-} _ _ O
-| _ _ O
+TTT}| _ _ O
 / _ _ O
-| _ _ O
-{ _ _ O
-THH _ _ O
+|{THH _ _ O
 , _ _ O
 THT _ _ O
 , _ _ O
 TTH _ _ O
 , _ _ O
-TTT _ _ O
-} _ _ O
-| _ _ O
+TTT}| _ _ O
 l _ _ O
 = _ _ O
 2/4 _ _ O
@@ -599,9 +635,7 @@ F _ _ O
 be _ _ O
 events _ _ O
 with _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(F _ _ O
 ) _ _ O
 > _ _ O
 0 _ _ O
@@ -615,9 +649,7 @@ given _ _ O
 F _ _ O
 , _ _ O
 denoted _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 | _ _ O
 F _ _ O
 ) _ _ O
@@ -626,6 +658,9 @@ is _ _ O
 defined _ _ O
 as _ _ O
 : _ _ O
+
+
+ _ _ O
 𝑝 _ _ O
 𝐸∩𝐹 _ _ O
 𝑝 _ _ O
@@ -634,6 +669,9 @@ as _ _ O
 = _ _ O
 𝑝 _ _ O
 𝐹 _ _ O
+
+
+ _ _ O
 Intuition _ _ O
 : _ _ O
 l _ _ O
@@ -744,6 +782,9 @@ is _ _ O
 a _ _ O
 0 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -781,22 +822,14 @@ l _ _ O
 Want _ _ O
 to _ _ O
 calculate _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 | _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
-F _ _ O
-) _ _ O
-/p _ _ O
-( _ _ O
-F _ _ O
+F)/p(F _ _ O
 ) _ _ O
 l _ _ O
 E _ _ O
@@ -817,9 +850,7 @@ F _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
@@ -836,9 +867,7 @@ likely _ _ O
 to _ _ O
 occur _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(F _ _ O
 ) _ _ O
 = _ _ O
 8/16 _ _ O
@@ -846,19 +875,13 @@ F _ _ O
 1/2 _ _ O
 l _ _ O
 So _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 | _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
 ( _ _ O
-5/16 _ _ O
-) _ _ O
-/ _ _ O
-( _ _ O
-1/2 _ _ O
+5/16)/(1/2 _ _ O
 ) _ _ O
 = _ _ O
 10/16 _ _ O
@@ -914,6 +937,9 @@ occur _ _ O
 Boy _ _ O
 is _ _ O
 older _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -972,25 +998,20 @@ BB _ _ O
 } _ _ O
 l _ _ O
 So _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 | _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
-F _ _ O
-) _ _ O
-/p _ _ O
-( _ _ O
-F _ _ O
+F)/p(F _ _ O
 ) _ _ O
 l _ _ O
 l _ _ O
+
+
+ _ _ O
 = _ _ O
 ( _ _ O
 1/4 _ _ O
@@ -1001,6 +1022,9 @@ l _ _ O
 ) _ _ O
 = _ _ O
 1/3 _ _ O
+
+
+ _ _ O
 Girl _ _ O
 is _ _ O
 older _ _ O
@@ -1048,6 +1072,9 @@ the _ _ O
 second _ _ O
 flip _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -1099,31 +1126,21 @@ TT _ _ O
 HT _ _ O
 } _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 2/4 _ _ O
 = _ _ O
 1/2 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 | _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
-F _ _ O
-) _ _ O
-/p _ _ O
-( _ _ O
-F _ _ O
+F)/p(F _ _ O
 ) _ _ O
 l _ _ O
 = _ _ O
@@ -1169,28 +1186,24 @@ if _ _ O
 and _ _ O
 only _ _ O
 if _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
-) _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(E)p(F _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 Recall _ _ O
 : _ _ O
 In _ _ O
 our _ _ O
 last _ _ O
-example… _ _ O
+example _ _ O
+… _ _ O
 l _ _ O
 S _ _ O
 = _ _ O
@@ -1227,12 +1240,13 @@ F _ _ O
 { _ _ O
 TT _ _ O
 } _ _ O
+
+
+ _ _ O
 So _ _ O
 : _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
@@ -1244,13 +1258,7 @@ l _ _ O
 = _ _ O
 1/4 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
-) _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(E)p(F _ _ O
 ) _ _ O
 = _ _ O
 1/2 _ _ O
@@ -1259,6 +1267,9 @@ F _ _ O
 l _ _ O
 = _ _ O
 1/4 _ _ O
+
+
+ _ _ O
 This _ _ O
 checks _ _ O
 out _ _ O
@@ -1321,6 +1332,9 @@ likely _ _ O
 to _ _ O
 occur _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -1376,27 +1390,17 @@ F _ _ O
 } _ _ O
 l _ _ O
 So _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(F _ _ O
 ) _ _ O
 = _ _ O
 8/16 _ _ O
 = _ _ O
 1/2 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
-) _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(E)p(F _ _ O
 ) _ _ O
 = _ _ O
 1/4 _ _ O
@@ -1415,9 +1419,7 @@ F _ _ O
 1001 _ _ O
 } _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
@@ -1427,20 +1429,12 @@ F _ _ O
 1/4 _ _ O
 l _ _ O
 Since _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
-) _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(E)p(F _ _ O
 ) _ _ O
 , _ _ O
 E _ _ O
@@ -1504,6 +1498,9 @@ one _ _ O
 boy _ _ O
 independent _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -1523,27 +1520,17 @@ BG _ _ O
 GB _ _ O
 } _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
 1/4 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(F _ _ O
 ) _ _ O
 = _ _ O
 3/4 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
-) _ _ O
-p _ _ O
-( _ _ O
-F _ _ O
+p(E)p(F _ _ O
 ) _ _ O
 = _ _ O
 3/16 _ _ O
@@ -1556,9 +1543,7 @@ F _ _ O
 BB _ _ O
 } _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ∩ _ _ O
 F _ _ O
 ) _ _ O
@@ -1615,27 +1600,27 @@ a _ _ O
 fair _ _ O
 coin _ _ O
 ? _ _ O
+
+
+ _ _ O
 Answer _ _ O
 : _ _ O
-p _ _ O
-( _ _ O
-H _ _ O
+p(H _ _ O
 ) _ _ O
 = _ _ O
 1/2 _ _ O
 , _ _ O
 so _ _ O
-p _ _ O
-( _ _ O
-HHHH _ _ O
+p(HHHH _ _ O
 ) _ _ O
 = _ _ O
 ( _ _ O
-1/2 _ _ O
-) _ _ O
-4 _ _ O
+1/2)4 _ _ O
 = _ _ O
 1/16 _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 What _ _ O
@@ -1658,12 +1643,18 @@ unbiased _ _ O
 6-sided _ _ O
 die _ _ O
 ? _ _ O
+
+
+ _ _ O
 Answer _ _ O
 : _ _ O
 l _ _ O
 l _ _ O
 l _ _ O
 l _ _ O
+
+
+ _ _ O
 First _ _ O
 roll _ _ O
 agrees _ _ O
@@ -1707,7 +1698,9 @@ is _ _ O
 = _ _ O
 1/36 _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Top _ _ O
 Hat _ _ O
@@ -1718,9 +1711,10 @@ only _ _ O
 have _ _ O
 two _ _ O
 outcomes _ _ O
-P _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+P(x _ _ O
 ) _ _ O
 Coin _ _ O
 flips _ _ O
@@ -1729,6 +1723,9 @@ Heads _ _ O
 or _ _ O
 tails _ _ O
 ? _ _ O
+
+
+ _ _ O
 Bit _ _ O
 strings _ _ O
 : _ _ O
@@ -1736,12 +1733,18 @@ strings _ _ O
 or _ _ O
 1 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Predicates _ _ O
 : _ _ O
 T _ _ O
 or _ _ O
 F _ _ O
 ? _ _ O
+
+
+ _ _ O
 These _ _ O
 types _ _ O
 of _ _ O
@@ -1757,6 +1760,9 @@ l _ _ O
 Success _ _ O
 l _ _ O
 Failure _ _ O
+
+
+ _ _ O
 Probability _ _ O
 p _ _ O
 Probability _ _ O
@@ -1765,6 +1771,9 @@ q _ _ O
 1 _ _ O
 – _ _ O
 p _ _ O
+
+
+ _ _ O
 Many _ _ O
 problems _ _ O
 can _ _ O
@@ -1830,6 +1839,9 @@ flip _ _ O
 is _ _ O
 independent _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -1844,9 +1856,7 @@ flips _ _ O
 l _ _ O
 There _ _ O
 are _ _ O
-C _ _ O
-( _ _ O
-7,4 _ _ O
+C(7,4 _ _ O
 ) _ _ O
 ways _ _ O
 that _ _ O
@@ -1872,13 +1882,7 @@ these _ _ O
 outcomes _ _ O
 is _ _ O
 ( _ _ O
-2/3 _ _ O
-) _ _ O
-4 _ _ O
-( _ _ O
-1/3 _ _ O
-) _ _ O
-3 _ _ O
+2/3)4(1/3)3 _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
@@ -1897,20 +1901,12 @@ this _ _ O
 biased _ _ O
 coin _ _ O
 is _ _ O
-C _ _ O
-( _ _ O
-7,4 _ _ O
-) _ _ O
-( _ _ O
-2/3 _ _ O
-) _ _ O
-4 _ _ O
-( _ _ O
-1/3 _ _ O
-) _ _ O
-3 _ _ O
+C(7,4)(2/3)4(1/3)3 _ _ O
 = _ _ O
 560/2187 _ _ O
+
+
+ _ _ O
 7 _ _ O
 Choose _ _ O
 4 _ _ O
@@ -1918,6 +1914,9 @@ outcomes _ _ O
 to _ _ O
 make _ _ O
 heads _ _ O
+
+
+ _ _ O
 Probability _ _ O
 of _ _ O
 each _ _ O
@@ -1943,7 +1942,8 @@ us _ _ O
 with _ _ O
 a _ _ O
 nice _ _ O
-formula… _ _ O
+formula _ _ O
+… _ _ O
 Theorem _ _ O
 : _ _ O
 The _ _ O
@@ -1972,14 +1972,15 @@ q _ _ O
 1-p _ _ O
 , _ _ O
 is _ _ O
-C _ _ O
-( _ _ O
-n _ _ O
+C(n _ _ O
 , _ _ O
+k)pkqn _ _ O
+- _ _ O
 k _ _ O
-) _ _ O
-pkqn-k _ _ O
 . _ _ O
+
+
+ _ _ O
 Proof _ _ O
 : _ _ O
 l _ _ O
@@ -1991,7 +1992,9 @@ Bernoulli _ _ O
 trials _ _ O
 is _ _ O
 an _ _ O
-n-tuple _ _ O
+n _ _ O
+- _ _ O
+tuple _ _ O
 ( _ _ O
 t1 _ _ O
 , _ _ O
@@ -2018,9 +2021,7 @@ for _ _ O
 failure _ _ O
 ) _ _ O
 l _ _ O
-C _ _ O
-( _ _ O
-n _ _ O
+C(n _ _ O
 , _ _ O
 k _ _ O
 ) _ _ O
@@ -2048,10 +2049,14 @@ with _ _ O
 k _ _ O
 successes _ _ O
 and _ _ O
-n-k _ _ O
+n _ _ O
+- _ _ O
+k _ _ O
 failures _ _ O
 is _ _ O
-pkqn-k _ _ O
+pkqn _ _ O
+- _ _ O
+k _ _ O
 l _ _ O
 So _ _ O
 , _ _ O
@@ -2062,14 +2067,16 @@ exactly _ _ O
 k _ _ O
 successes _ _ O
 is _ _ O
-C _ _ O
-( _ _ O
-n _ _ O
+C(n _ _ O
 , _ _ O
+k)pkqn _ _ O
+- _ _ O
 k _ _ O
-) _ _ O
-pkqn-k. _ _ O
+. _ _ O
 ❏ _ _ O
+
+
+ _ _ O
 Notation _ _ O
 : _ _ O
 We _ _ O
@@ -2090,9 +2097,7 @@ of _ _ O
 success _ _ O
 p _ _ O
 as _ _ O
-b _ _ O
-( _ _ O
-k _ _ O
+b(k _ _ O
 ; _ _ O
 n _ _ O
 , _ _ O
@@ -2156,6 +2161,9 @@ bits _ _ O
 are _ _ O
 generated _ _ O
 ? _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 l _ _ O
@@ -2178,9 +2186,7 @@ l _ _ O
 Want _ _ O
 to _ _ O
 compute _ _ O
-b _ _ O
-( _ _ O
-k _ _ O
+b(k _ _ O
 ; _ _ O
 10 _ _ O
 , _ _ O
@@ -2188,16 +2194,15 @@ k _ _ O
 ) _ _ O
 l _ _ O
 = _ _ O
-C _ _ O
-( _ _ O
-10 _ _ O
+C(10 _ _ O
 , _ _ O
-8 _ _ O
-) _ _ O
-0.980.12 _ _ O
+8)0.980.12 _ _ O
 l _ _ O
 = _ _ O
 0.1937102445 _ _ O
+
+
+ _ _ O
 n _ _ O
 = _ _ O
 10 _ _ O
@@ -2226,6 +2231,9 @@ associated _ _ O
 with _ _ O
 an _ _ O
 experiment _ _ O
+
+
+ _ _ O
 Number _ _ O
 of _ _ O
 boys _ _ O
@@ -2237,16 +2245,25 @@ of _ _ O
 1 _ _ O
 bits _ _ O
 generated _ _ O
+
+
+ _ _ O
 Beats _ _ O
 per _ _ O
 minute _ _ O
 of _ _ O
 a _ _ O
 heart _ _ O
+
+
+ _ _ O
 Longevity _ _ O
 of _ _ O
 a _ _ O
 chicken _ _ O
+
+
+ _ _ O
 Number _ _ O
 of _ _ O
 “ _ _ O
@@ -2298,6 +2315,9 @@ each _ _ O
 possible _ _ O
 outcome _ _ O
 . _ _ O
+
+
+ _ _ O
 Note _ _ O
 : _ _ O
 Despite _ _ O
@@ -2320,6 +2340,9 @@ is _ _ O
 a _ _ O
 function _ _ O
 ! _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Suppose _ _ O
@@ -2332,9 +2355,7 @@ three _ _ O
 times _ _ O
 . _ _ O
 Let _ _ O
-X _ _ O
-( _ _ O
-s _ _ O
+X(s _ _ O
 ) _ _ O
 be _ _ O
 the _ _ O
@@ -2355,9 +2376,7 @@ the _ _ O
 outcome _ _ O
 . _ _ O
 Then _ _ O
-X _ _ O
-( _ _ O
-s _ _ O
+X(s _ _ O
 ) _ _ O
 takes _ _ O
 the _ _ O
@@ -2365,50 +2384,34 @@ following _ _ O
 values _ _ O
 : _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-HHH _ _ O
+X(HHH _ _ O
 ) _ _ O
 = _ _ O
 3 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-HHT _ _ O
+X(HHT _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-HTH _ _ O
+X(HTH _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-THH _ _ O
+X(THH _ _ O
 ) _ _ O
 = _ _ O
 2 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-TTH _ _ O
+X(TTH _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-THT _ _ O
+X(THT _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-HTT _ _ O
+X(HTT _ _ O
 ) _ _ O
 = _ _ O
 1 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-TTT _ _ O
+X(TTT _ _ O
 ) _ _ O
 = _ _ O
 0 _ _ O
@@ -2439,24 +2442,22 @@ pairs _ _ O
 ( _ _ O
 r _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-X=r _ _ O
+p(X _ _ O
+= _ _ O
+r _ _ O
 ) _ _ O
 ) _ _ O
 for _ _ O
 all _ _ O
 r _ _ O
 ∈ _ _ O
-X _ _ O
-( _ _ O
-S _ _ O
+X(S _ _ O
 ) _ _ O
 , _ _ O
 where _ _ O
-p _ _ O
-( _ _ O
-X=r _ _ O
+p(X _ _ O
+= _ _ O
+r _ _ O
 ) _ _ O
 is _ _ O
 the _ _ O
@@ -2476,18 +2477,19 @@ usually _ _ O
 described _ _ O
 by _ _ O
 specifying _ _ O
-p _ _ O
-( _ _ O
-X=r _ _ O
+p(X _ _ O
+= _ _ O
+r _ _ O
 ) _ _ O
 for _ _ O
 each _ _ O
 r _ _ O
 ∈ _ _ O
-X _ _ O
-( _ _ O
-S _ _ O
+X(S _ _ O
 ) _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Assume _ _ O
@@ -2519,30 +2521,22 @@ variable _ _ O
 X _ _ O
 : _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-X=0 _ _ O
+p(X=0 _ _ O
 ) _ _ O
 = _ _ O
 1/8 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-X=1 _ _ O
+p(X=1 _ _ O
 ) _ _ O
 = _ _ O
 3/8 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-X=2 _ _ O
+p(X=2 _ _ O
 ) _ _ O
 = _ _ O
 3/8 _ _ O
 l _ _ O
-p _ _ O
-( _ _ O
-X=3 _ _ O
+p(X=3 _ _ O
 ) _ _ O
 = _ _ O
 1/8 _ _ O
@@ -2606,275 +2600,187 @@ die _ _ O
 , _ _ O
 respectively _ _ O
 ? _ _ O
+
+
+ _ _ O
 Answer _ _ O
 : _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,1 _ _ O
+X(1,1 _ _ O
 ) _ _ O
 = _ _ O
 2 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,2 _ _ O
+X(1,2 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-2 _ _ O
+X(2 _ _ O
 , _ _ O
 1 _ _ O
 ) _ _ O
 = _ _ O
 3 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,3 _ _ O
+X(1,3 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-2,2 _ _ O
+X(2,2 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-3,1 _ _ O
+X(3,1 _ _ O
 ) _ _ O
 = _ _ O
 4 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,4 _ _ O
+X(1,4 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-2,3 _ _ O
+X(2,3 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-3,2 _ _ O
+X(3,2 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-4,1 _ _ O
+X(4,1 _ _ O
 ) _ _ O
 = _ _ O
 5 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,5 _ _ O
+X(1,5 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-2,4 _ _ O
+X(2,4 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-3,3 _ _ O
+X(3,3 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-4,2 _ _ O
+X(4,2 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-5,1 _ _ O
+X(5,1 _ _ O
 ) _ _ O
 = _ _ O
 6 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-1,6 _ _ O
+X(1,6 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-2,5 _ _ O
+X(2,5 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-3,4 _ _ O
+X(3,4 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-4,3 _ _ O
+X(4,3 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-5,2 _ _ O
+X(5,2 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-6,1 _ _ O
+X(6,1 _ _ O
 ) _ _ O
 = _ _ O
 7 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-2,6 _ _ O
+X(2,6 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-3,5 _ _ O
+X(3,5 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-4,4 _ _ O
+X(4,4 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-5,3 _ _ O
+X(5,3 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-6,2 _ _ O
+X(6,2 _ _ O
 ) _ _ O
 = _ _ O
 8 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-3,6 _ _ O
+X(3,6 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-4,5 _ _ O
+X(4,5 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-5,4 _ _ O
+X(5,4 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-6,3 _ _ O
+X(6,3 _ _ O
 ) _ _ O
 = _ _ O
 9 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-4,6 _ _ O
+X(4,6 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-5,5 _ _ O
+X(5,5 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-6,4 _ _ O
+X(6,4 _ _ O
 ) _ _ O
 = _ _ O
 10 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-5,6 _ _ O
+X(5,6 _ _ O
 ) _ _ O
 = _ _ O
-X _ _ O
-( _ _ O
-6,5 _ _ O
+X(6,5 _ _ O
 ) _ _ O
 = _ _ O
 11 _ _ O
 l _ _ O
-X _ _ O
-( _ _ O
-6,6 _ _ O
+X(6,6 _ _ O
 ) _ _ O
 = _ _ O
 12 _ _ O
-p _ _ O
-( _ _ O
-X=2 _ _ O
+
+
+ _ _ O
+p(X=2 _ _ O
 ) _ _ O
 = _ _ O
 1/36 _ _ O
-p _ _ O
-( _ _ O
-X=3 _ _ O
+p(X=3 _ _ O
 ) _ _ O
 = _ _ O
 2/36 _ _ O
-p _ _ O
-( _ _ O
-X=4 _ _ O
+p(X=4 _ _ O
 ) _ _ O
 = _ _ O
 3/36 _ _ O
-p _ _ O
-( _ _ O
-X=5 _ _ O
+p(X=5 _ _ O
 ) _ _ O
 = _ _ O
 4/36 _ _ O
-p _ _ O
-( _ _ O
-X=6 _ _ O
+p(X=6 _ _ O
 ) _ _ O
 = _ _ O
 5/36 _ _ O
-p _ _ O
-( _ _ O
-X=7 _ _ O
+p(X=7 _ _ O
 ) _ _ O
 = _ _ O
 6/36 _ _ O
-p _ _ O
-( _ _ O
-X=8 _ _ O
+p(X=8 _ _ O
 ) _ _ O
 = _ _ O
 5/36 _ _ O
-p _ _ O
-( _ _ O
-X=9 _ _ O
+p(X=9 _ _ O
 ) _ _ O
 = _ _ O
 4/36 _ _ O
-p _ _ O
-( _ _ O
-X=10 _ _ O
+p(X=10 _ _ O
 ) _ _ O
 = _ _ O
 3/36 _ _ O
-p _ _ O
-( _ _ O
-X=11 _ _ O
+p(X=11 _ _ O
 ) _ _ O
 = _ _ O
 2/36 _ _ O
-p _ _ O
-( _ _ O
-X=12 _ _ O
+p(X=12 _ _ O
 ) _ _ O
 = _ _ O
 1/36 _ _ O
@@ -2890,7 +2796,8 @@ some _ _ O
 interesting _ _ O
 and _ _ O
 unexpected _ _ O
-conclusions… _ _ O
+conclusions _ _ O
+… _ _ O
 Question _ _ O
 : _ _ O
 How _ _ O
@@ -2919,6 +2826,9 @@ greater _ _ O
 than _ _ O
 1/2 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Assumptions _ _ O
 : _ _ O
 1 _ _ O
@@ -2942,6 +2852,9 @@ occur _ _ O
 Birthdays _ _ O
 are _ _ O
 independent _ _ O
+
+
+ _ _ O
 Solution _ _ O
 tactic _ _ O
 : _ _ O
@@ -2981,14 +2894,13 @@ same _ _ O
 birthday _ _ O
 
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 figure _ _ O
 this _ _ O
-out… _ _ O
+out _ _ O
+… _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 assess _ _ O
 probabilities _ _ O
 as _ _ O
@@ -3000,9 +2912,8 @@ l _ _ O
 Person _ _ O
 1 _ _ O
 clearly _ _ O
-doesn _ _ O
-’ _ _ O
-t _ _ O
+does _ _ O
+n’t _ _ O
 have _ _ O
 the _ _ O
 same _ _ O
@@ -3039,6 +2950,9 @@ probability _ _ O
 364/366 _ _ O
 l _ _ O
 … _ _ O
+
+
+ _ _ O
 In _ _ O
 general _ _ O
 , _ _ O
@@ -3058,17 +2972,10 @@ Pj-1 _ _ O
 with _ _ O
 probability _ _ O
 [ _ _ O
-366- _ _ O
-( _ _ O
-j-1 _ _ O
-) _ _ O
-] _ _ O
-/366 _ _ O
+366-(j-1)]/366 _ _ O
 = _ _ O
 ( _ _ O
-367-j _ _ O
-) _ _ O
-/366 _ _ O
+367-j)/366 _ _ O
 Recall _ _ O
 that _ _ O
 pn _ _ O
@@ -3097,12 +3004,14 @@ means _ _ O
 
 But _ _ O
 we _ _ O
-’ _ _ O
-re _ _ O
+’re _ _ O
 interested _ _ O
 in _ _ O
 1-pn _ _ O
 … _ _ O
+
+
+ _ _ O
 To _ _ O
 check _ _ O
 the _ _ O
@@ -3122,8 +3031,7 @@ pn _ _ O
 1/2 _ _ O
 , _ _ O
 we _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 use _ _ O
 trial _ _ O
 and _ _ O
@@ -3153,6 +3061,9 @@ then _ _ O
 pn _ _ O
 ≈ _ _ O
 0.506 _ _ O
+
+
+ _ _ O
 So _ _ O
 , _ _ O
 you _ _ O
@@ -3180,7 +3091,9 @@ same _ _ O
 birthday _ _ O
 ! _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Problem _ _ O
 3 _ _ O
@@ -3262,7 +3175,9 @@ Problem _ _ O
 Consider _ _ O
 generating _ _ O
 a _ _ O
-uniformly-random _ _ O
+uniformly _ _ O
+- _ _ O
+random _ _ O
 4-character _ _ O
 bit _ _ O
 string _ _ O
@@ -3291,8 +3206,7 @@ Determine _ _ O
 the _ _ O
 distribution _ _ O
 of _ _ O
-R _ _ O
-. _ _ O
+R. _ _ O
 
 Final _ _ O
 Thoughts _ _ O
@@ -3314,6 +3228,9 @@ variables _ _ I-Concept
 l _ _ O
 Probabilistic _ _ B-Concept
 analysis _ _ I-Concept
+
+
+ _ _ O
 n _ _ O
 Next _ _ O
 time _ _ O
@@ -3328,23 +3245,20 @@ Section _ _ O
 ) _ _ O
 
 The _ _ O
-proof… _ _ O
-P _ _ O
-( _ _ O
-n _ _ O
+proof _ _ O
+… _ _ O
+P(n _ _ O
 ) _ _ O
 ≡ _ _ O
 𝑝 _ _ O
-⋃ _ _ O
-$ _ _ O
+⋃$ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
 𝐸 _ _ O
 ! _ _ O
 = _ _ O
-∑ _ _ O
-$ _ _ O
+∑$ _ _ O
 ! _ _ O
 " _ _ O
 # _ _ O
@@ -3354,9 +3268,7 @@ $ _ _ O
 Base _ _ O
 case _ _ O
 : _ _ O
-P _ _ O
-( _ _ O
-2 _ _ O
+P(2 _ _ O
 ) _ _ O
 : _ _ O
 Let _ _ O
@@ -3370,26 +3282,18 @@ events _ _ O
 By _ _ O
 definition _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∪ _ _ O
 E2 _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ) _ _ O
 + _ _ O
-p _ _ O
-( _ _ O
-E2 _ _ O
+p(E2 _ _ O
 ) _ _ O
 – _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∩ _ _ O
 E2 _ _ O
 ) _ _ O
@@ -3401,30 +3305,21 @@ E2 _ _ O
 = _ _ O
 ∅ _ _ O
 , _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∪ _ _ O
 E2 _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ) _ _ O
 + _ _ O
-p _ _ O
-( _ _ O
-E2 _ _ O
+p(E2 _ _ O
 ) _ _ O
-I.H _ _ O
-. _ _ O
+I.H. _ _ O
 : _ _ O
 Assume _ _ O
 that _ _ O
-P _ _ O
-( _ _ O
-k _ _ O
+P(k _ _ O
 ) _ _ O
 holds _ _ O
 for _ _ O
@@ -3440,14 +3335,10 @@ will _ _ O
 now _ _ O
 show _ _ O
 that _ _ O
-P _ _ O
-( _ _ O
-k _ _ O
+P(k _ _ O
 ) _ _ O
 → _ _ O
-P _ _ O
-( _ _ O
-k+1 _ _ O
+P(k+1 _ _ O
 ) _ _ O
 n _ _ O
 Consider _ _ O
@@ -3481,33 +3372,23 @@ J _ _ O
 ∪ _ _ O
 Ek+1 _ _ O
 n _ _ O
-p _ _ O
-( _ _ O
-E _ _ O
+p(E _ _ O
 ) _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-J _ _ O
+p(J _ _ O
 ∪ _ _ O
 Ek+1 _ _ O
 ) _ _ O
 n _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-J _ _ O
+p(J _ _ O
 ) _ _ O
 ∪ _ _ O
-p _ _ O
-( _ _ O
-Ek+1 _ _ O
+p(Ek+1 _ _ O
 ) _ _ O
 n _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ∪ _ _ O
 E2 _ _ O
 ∪ _ _ O
@@ -3516,47 +3397,41 @@ E2 _ _ O
 Ek _ _ O
 ) _ _ O
 ∪ _ _ O
-p _ _ O
-( _ _ O
-Ek+1 _ _ O
+p(Ek+1 _ _ O
 ) _ _ O
 n _ _ O
 = _ _ O
-p _ _ O
-( _ _ O
-E1 _ _ O
+p(E1 _ _ O
 ) _ _ O
 ∪ _ _ O
-p _ _ O
-( _ _ O
-E2 _ _ O
+p(E2 _ _ O
 ) _ _ O
 ∪ _ _ O
 … _ _ O
 ∪ _ _ O
-p _ _ O
-( _ _ O
-Ek _ _ O
+p(Ek _ _ O
 ) _ _ O
 ∪ _ _ O
-p _ _ O
-( _ _ O
-Ek+1 _ _ O
+p(Ek+1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 by _ _ O
 definition _ _ O
 of _ _ O
 E _ _ O
 by _ _ O
-I.H _ _ O
-. _ _ O
+I.H. _ _ O
 by _ _ O
 definition _ _ O
 of _ _ O
 J _ _ O
 by _ _ O
-I.H _ _ O
-. _ _ O
+I.H. _ _ O
+
+
+ _ _ O
 Conclusion _ _ O
 : _ _ O
 Since _ _ O

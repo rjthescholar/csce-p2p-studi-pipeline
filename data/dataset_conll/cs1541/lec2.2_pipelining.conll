@@ -9,6 +9,9 @@ Ahn _ _ O
 
 Pipelining _ _ B-Concept
 Basics _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Improving _ _ O
@@ -18,6 +21,9 @@ Dryer _ _ O
 / _ _ O
 Closet _ _ O
 Utilization _ _ O
+
+
+ _ _ O
 ● _ _ O
 If _ _ O
 you _ _ O
@@ -52,9 +58,14 @@ achieve _ _ O
 % _ _ O
 utilization _ _ O
 ! _ _ O
+
+
+ _ _ O
 3 _ _ O
 
-Multi-cycle _ _ O
+Multi _ _ O
+- _ _ O
+cycle _ _ O
 instruction _ _ O
 execution _ _ O
 ● _ _ O
@@ -69,32 +80,74 @@ through _ _ O
 the _ _ O
 datapath _ _ O
 . _ _ O
+
+
+ _ _ O
 add _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 Clock _ _ O
 ! _ _ O
+
+
+ _ _ O
 ID _ _ B-Concept
 Set _ _ O
 all _ _ O
 control _ _ O
 signals _ _ O
 ... _ _ O
+
+
+ _ _ O
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 Clock _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 Clock _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 Add _ _ O
 ... _ _ O
+
+
+ _ _ O
 ALU _ _ B-Concept
+
+
+ _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 Clock _ _ B-Concept
 ! _ _ O
 Data _ _ O
@@ -103,6 +156,9 @@ back _ _ O
 to _ _ O
 registers _ _ O
 ... _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
 4 _ _ O
 
@@ -120,22 +176,49 @@ fetched _ _ O
 each _ _ O
 cycle _ _ O
 ! _ _ O
+
+
+ _ _ O
 add _ _ O
 sub _ _ O
 sw _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 ALU _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 Memory _ _ B-Concept
-WB _ _ O
+
+
+ _ _ O
+WB _ _ B-Concept
 5 _ _ O
 
 Pipelining _ _ B-Concept
@@ -151,58 +234,141 @@ pipelined _ _ B-Concept
 parallelism _ _ I-Concept
 . _ _ O
 Cycle _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 add _ _ O
-t3 _ _ O
-, _ _ O
-t4 _ _ O
-, _ _ O
-t5 _ _ O
+t3,t4,t5 _ _ O
+
+
+ _ _ O
 add _ _ O
-s0 _ _ O
-, _ _ O
-s1 _ _ O
-, _ _ O
-s2 _ _ O
+s0,s1,s2 _ _ O
+
+
+ _ _ O
 add _ _ O
-s3 _ _ O
-, _ _ O
-s4 _ _ O
-, _ _ O
-s5 _ _ O
+s3,s4,s5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 6 _ _ O
 
 A _ _ O
@@ -229,14 +395,28 @@ takes _ _ O
 5 _ _ O
 cycles _ _ B-Concept
 : _ _ O
-IF/ID/EX/MEM/WB _ _ B-Concept
+IF _ _ B-Concept
+/ _ _ O
+ID _ _ B-Concept
+/ _ _ O
+EX _ _ B-Concept
+/ _ _ O
+MEM _ _ B-Concept
+/ _ _ O
+WB _ _ B-Concept
 o _ _ O
 add _ _ O
 takes _ _ O
 4 _ _ O
-cycles _ _ O
+cycles _ _ B-Concept
 : _ _ O
-IF/ID/EX/WB _ _ O
+IF _ _ B-Concept
+/ _ _ O
+ID _ _ B-Concept
+/ _ _ O
+EX _ _ B-Concept
+/ _ _ O
+WB _ _ B-Concept
 ● _ _ O
 If _ _ O
 each _ _ O
@@ -304,13 +484,20 @@ from _ _ O
 single _ _ O
 cycle _ _ O
 ! _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Pipelined _ _ B-Concept
 vs. _ _ O
-Multi-cycle _ _ B-Concept
+Multi _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 vs. _ _ O
-Single-cycle _ _ B-Concept
+Single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 ● _ _ O
 What _ _ O
 happened _ _ O
@@ -324,38 +511,106 @@ performance _ _ B-Concept
 instructions _ _ O
 X _ _ O
 program _ _ O
+
+
+ _ _ O
 cycles _ _ O
 instruction _ _ O
+
+
+ _ _ O
 Architecture _ _ O
+
+
+ _ _ O
 Instructions _ _ O
+
+
+ _ _ O
 CPI _ _ B-Concept
+
+
+ _ _ O
 Cycle _ _ B-Concept
 Time _ _ I-Concept
 ( _ _ O
-1/F _ _ O
-) _ _ O
-Single-cycle _ _ B-Concept
-Same _ _ O
 1 _ _ O
+/ _ _ O
+F _ _ O
+) _ _ O
+
+
+ _ _ O
+Single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
+
+
+ _ _ O
+Same _ _ O
+
+
+ _ _ O
+1 _ _ O
+
+
+ _ _ O
 5 _ _ O
 ns _ _ O
-Multi-cycle _ _ B-Concept
+
+
+ _ _ O
+Multi _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
+
+
+ _ _ O
 Same _ _ O
+
+
+ _ _ O
 4~5 _ _ O
+
+
+ _ _ O
 1 _ _ O
 ns _ _ O
+
+
+ _ _ O
 Pipelined _ _ B-Concept
+
+
+ _ _ O
 Same _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 ns _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 seconds _ _ O
 cycle _ _ O
+
+
+ _ _ O
 ● _ _ O
 Compared _ _ O
 to _ _ O
-single-cycle _ _ B-Concept
+single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
 , _ _ O
 pipelining _ _ B-Concept
 improves _ _ O
@@ -402,33 +657,72 @@ the _ _ O
 control _ _ B-Concept
 signals _ _ I-Concept
 ? _ _ O
+
+
+ _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 ALU _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
-MEM/WB _ _ B-Concept
-ID _ _ O
-Ins _ _ O
-. _ _ O
-Decoder _ _ O
-IF _ _ O
-EX/MEM/WB _ _ O
+
+
+ _ _ O
+MEM _ _ B-Concept
+/ _ _ O
+WB _ _ B-Concept
+
+
+ _ _ O
+ID _ _ B-Concept
+Ins _ _ B-Concept
+. _ _ I-Concept
+Decoder _ _ I-Concept
+
+
+ _ _ O
+IF _ _ B-Concept
+
+
+ _ _ O
+EX _ _ B-Concept
+/ _ _ O
+MEM _ _ B-Concept
+/ _ _ O
+WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 A _ _ O
 new _ _ O
 instruction _ _ O
 is _ _ O
-decoded _ _ O
+decoded _ _ B-Concept
 at _ _ O
 every _ _ O
-cycle _ _ O
+cycle _ _ B-Concept
 ! _ _ O
 ● _ _ O
-Control _ _ O
-signals _ _ O
+Control _ _ B-Concept
+signals _ _ I-Concept
 must _ _ O
 be _ _ O
 passed _ _ O
@@ -439,12 +733,21 @@ data _ _ O
 at _ _ O
 each _ _ O
 stage _ _ O
-Memory _ _ O
-WB _ _ O
+
+
+ _ _ O
+Memory _ _ B-Concept
+
+
+ _ _ O
+WB _ _ B-Concept
 9 _ _ O
 
 Pipeline _ _ B-Concept
 Hazards _ _ I-Concept
+
+
+ _ _ O
 10 _ _ O
 
 Pipeline _ _ B-Concept
@@ -524,8 +827,7 @@ hazards _ _ B-Concept
 But _ _ O
 first _ _ O
 let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 briefly _ _ O
 talk _ _ O
 about _ _ O
@@ -543,6 +845,9 @@ hazard _ _ I-Concept
 , _ _ O
 Control _ _ B-Concept
 Hazard _ _ I-Concept
+
+
+ _ _ O
 11 _ _ O
 
 Structural _ _ B-Concept
@@ -562,58 +867,145 @@ same _ _ O
 time _ _ O
 . _ _ O
 Cycle _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 lw _ _ O
-t0,0 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t0,0($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 lw _ _ O
-t1,4 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t1,4($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t2,8 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t2,8($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
-t3,12 _ _ O
-( _ _ O
-$ _ _ O
-0 _ _ O
+t3,12($0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 12 _ _ O
 
 Data _ _ B-Concept
@@ -631,36 +1023,91 @@ previous _ _ O
 one _ _ O
 . _ _ O
 Cycle _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 sub _ _ O
 must _ _ O
@@ -678,28 +1125,59 @@ its _ _ O
 ID _ _ B-Concept
 phase _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
 13 _ _ O
 
@@ -718,45 +1196,98 @@ conditional _ _ O
 branch _ _ O
 . _ _ O
 Cycle _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 add _ _ O
 must _ _ O
 wait _ _ O
 until _ _ O
 beq _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 EX _ _ B-Concept
 phase _ _ O
 is _ _ O
@@ -766,28 +1297,55 @@ its _ _ O
 IF _ _ B-Concept
 phase _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
 14 _ _ O
 
@@ -802,9 +1360,8 @@ controlled _ _ O
 so _ _ O
 that _ _ O
 hazards _ _ B-Concept
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 cause _ _ O
 malfunction _ _ O
 ● _ _ O
@@ -854,8 +1411,10 @@ detection _ _ I-Concept
 unit _ _ I-Concept
 § _ _ O
 If _ _ O
-structural/data _ _ B-Concept
-hazard _ _ B-Concept
+structural _ _ B-Concept
+/ _ _ O
+data _ _ B-Concept
+hazard _ _ I-Concept
 , _ _ O
 pipeline _ _ B-Concept
 stalled _ _ B-Concept
@@ -872,6 +1431,9 @@ of _ _ O
 wrong _ _ O
 path _ _ O
 instructions _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Compiler _ _ O
@@ -891,53 +1453,159 @@ doing _ _ O
 any _ _ O
 work _ _ O
 Cycle _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 sub _ _ O
-s0 _ _ O
-, _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
+s0,t0,t1 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Compiler _ _ O
@@ -958,49 +1626,139 @@ before _ _ O
 instruction _ _ B-Concept
 fetch _ _ I-Concept
 Cycle _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 beq _ _ O
-t0 _ _ O
-, _ _ O
-$ _ _ O
-0 _ _ O
-, _ _ O
-end _ _ O
+t0,$0,end _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 bubble _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
+
+
+ _ _ O
 add _ _ O
-t0 _ _ O
-, _ _ O
-t1 _ _ O
-, _ _ O
-t2 _ _ O
+t0,t1,t2 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 17 _ _ O
 
 Hazard _ _ B-Concept
@@ -1019,6 +1777,9 @@ creating _ _ O
 a _ _ O
 nop _ _ B-Concept
 instruction _ _ O
+
+
+ _ _ O
 Freezes _ _ O
 IF _ _ B-Concept
 and _ _ O
@@ -1048,23 +1809,56 @@ on _ _ O
 an _ _ O
 lw _ _ O
 . _ _ O
+
+
+ _ _ O
 sub _ _ O
 add _ _ O
 lw _ _ O
+
+
+ _ _ O
 ID _ _ B-Concept
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WAIT _ _ O
 ! _ _ O
+
+
+ _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 ALU _ _ B-Concept
+
+
+ _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
 19 _ _ O
 
@@ -1202,30 +1996,23 @@ for _ _ O
 loop _ _ O
 followed _ _ O
 by _ _ O
-printf _ _ O
-( _ _ O
-“ _ _ O
-done _ _ O
+printf(“done _ _ O
 ” _ _ O
 ) _ _ O
 : _ _ O
-for _ _ O
-( _ _ O
-s0 _ _ O
+
+
+ _ _ O
+for(s0 _ _ O
 = _ _ O
 0 _ _ O
 .. _ _ O
 10 _ _ O
 ) _ _ O
-print _ _ O
-( _ _ O
-s0 _ _ O
+print(s0 _ _ O
 ) _ _ O
 ; _ _ O
-printf _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+printf("done _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -1252,10 +2039,19 @@ la _ _ O
 and _ _ O
 jal _ _ O
 ! _ _ O
+
+
+ _ _ O
 li _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 0 _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
 move _ _ O
@@ -1278,10 +2074,16 @@ s0 _ _ O
 top _ _ O
 la _ _ O
 jal _ _ O
+
+
+ _ _ O
 a0 _ _ O
 , _ _ O
 done_msg _ _ O
 printf _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 What _ _ O
@@ -1301,30 +2103,80 @@ instructions _ _ O
 from _ _ O
 pipeline _ _ B-Concept
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 blt _ _ O
-s0,10 _ _ O
-, _ _ O
-top _ _ O
+s0,10,top _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 P _ _ O
 OW _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 BO _ _ O
+
+
+ _ _ O
 la _ _ O
-a0 _ _ O
-, _ _ O
-done_msg _ _ O
+a0,done_msg _ _ O
+
+
+ _ _ O
 jal _ _ O
 printf _ _ O
 s0 _ _ O
@@ -1334,18 +2186,46 @@ s0 _ _ O
 OOPS _ _ O
 ! _ _ O
 move _ _ O
-a0 _ _ O
-, _ _ O
-s0 _ _ O
+a0,s0 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
+
+
+ _ _ O
 OM _ _ O
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
+
+
+ _ _ O
 22 _ _ O
 
 Hazard _ _ B-Concept
@@ -1363,24 +2243,54 @@ the _ _ O
 previous _ _ O
 example _ _ O
 . _ _ O
+
+
+ _ _ O
 move _ _ O
 blt _ _ O
 jal _ _ O
 la _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 ID _ _ B-Concept
 nop _ _ B-Concept
+
+
+ _ _ O
 Ins _ _ B-Concept
 . _ _ I-Concept
 Decoder _ _ I-Concept
+
+
+ _ _ O
 IF _ _ B-Concept
+
+
+ _ _ O
 EX _ _ B-Concept
+
+
+ _ _ O
 MEM _ _ B-Concept
+
+
+ _ _ O
 nop _ _ B-Concept
 Register _ _ B-Concept
 File _ _ I-Concept
+
+
+ _ _ O
 ALU _ _ B-Concept
+
+
+ _ _ O
 Memory _ _ B-Concept
+
+
+ _ _ O
 WB _ _ B-Concept
 23 _ _ O
 
@@ -1442,6 +2352,9 @@ executing _ _ O
 as _ _ O
 normal _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Performance _ _ O
@@ -1460,38 +2373,102 @@ performance _ _ O
 instructions _ _ O
 X _ _ O
 program _ _ O
+
+
+ _ _ O
 cycles _ _ B-Concept
 instruction _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 seconds _ _ O
 cycle _ _ O
+
+
+ _ _ O
 Architecture _ _ O
+
+
+ _ _ O
 Instructions _ _ O
+
+
+ _ _ O
 CPI _ _ B-Concept
+
+
+ _ _ O
 Cycle _ _ O
 Time _ _ O
 ( _ _ O
-1/F _ _ O
-) _ _ O
-Single-cycle _ _ B-Concept
-Same _ _ O
 1 _ _ O
+/ _ _ O
+F _ _ O
+) _ _ O
+
+
+ _ _ O
+Single _ _ B-Concept
+- _ _ I-Concept
+cycle _ _ I-Concept
+
+
+ _ _ O
+Same _ _ O
+
+
+ _ _ O
+1 _ _ O
+
+
+ _ _ O
 5 _ _ O
 ns _ _ O
+
+
+ _ _ O
 Ideal _ _ B-Concept
 5-stage _ _ I-Concept
 pipeline _ _ I-Concept
+
+
+ _ _ O
 Same _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 ns _ _ O
+
+
+ _ _ O
 Pipeline _ _ B-Concept
 w/ _ _ O
 stalls _ _ B-Concept
+
+
+ _ _ O
 Same _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
 ns _ _ O
+
+
+ _ _ O
 ● _ _ O
 Pipelining _ _ B-Concept
 increases _ _ O
@@ -1543,8 +2520,7 @@ of _ _ O
 ) _ _ O
 ● _ _ O
 We _ _ O
-’ _ _ O
-d _ _ O
+’d _ _ O
 like _ _ O
 to _ _ O
 avoid _ _ O
@@ -1635,9 +2611,8 @@ Wall _ _ I-Concept
 ? _ _ O
 § _ _ O
 MEM _ _ B-Concept
-isn _ _ O
-’ _ _ O
-t _ _ O
+is _ _ O
+n’t _ _ O
 uniform _ _ O
 really _ _ O
 and _ _ O
@@ -1651,7 +2626,9 @@ compiler _ _ O
 nops _ _ B-Concept
 is _ _ O
 very _ _ O
-energy-efficient _ _ O
+energy _ _ O
+- _ _ O
+efficient _ _ O
 o _ _ O
 Hazard _ _ B-Concept
 Detection _ _ I-Concept

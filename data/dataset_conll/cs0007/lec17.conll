@@ -28,23 +28,29 @@ a _ _ O
 class _ _ B-Concept
 • _ _ O
 Determining _ _ O
-inter-class _ _ B-Concept
+inter _ _ B-Concept
+- _ _ I-Concept
+class _ _ I-Concept
 relationships _ _ I-Concept
 
 Class _ _ B-Concept
 Components _ _ O
 • _ _ O
-Class-level/Instance _ _ B-Concept
+Class _ _ B-Concept
+- _ _ I-Concept
+level _ _ I-Concept
+/ _ _ I-Concept
+Instance _ _ I-Concept
 Variables _ _ I-Concept
 • _ _ O
 Methods _ _ B-Concept
 • _ _ O
-Constructor _ _ B-Concept
-( _ _ O
-s _ _ O
+Constructor(s _ _ B-Concept
 ) _ _ O
 
-Inter-class _ _ B-Concept
+Inter _ _ B-Concept
+- _ _ I-Concept
+class _ _ I-Concept
 Relationships _ _ I-Concept
 • _ _ O
 Building _ _ O
@@ -71,8 +77,10 @@ relationships _ _ O
 between _ _ O
 classes _ _ B-Concept
 – _ _ O
-Sub/Super _ _ B-Concept
-class _ _ B-Concept
+Sub _ _ B-Concept
+/ _ _ O
+Super _ _ B-Concept
+class _ _ I-Concept
 – _ _ O
 Ownership _ _ B-Concept
 
@@ -190,8 +198,7 @@ to _ _ O
 declare _ _ O
 a _ _ O
 class _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 parent _ _ B-Concept
 , _ _ O
 use _ _ O
@@ -221,7 +228,9 @@ A _ _ O
 subclass _ _ B-Concept
 inherits _ _ B-Concept
 all _ _ O
-non-private _ _ O
+non _ _ O
+- _ _ O
+private _ _ O
 fields _ _ B-Concept
 and _ _ O
 methods _ _ O
@@ -253,8 +262,7 @@ with _ _ O
 the _ _ O
 parent _ _ B-Concept
 class _ _ I-Concept
-’ _ _ O
-s _ _ O
+’s _ _ O
 getters _ _ B-Concept
 and _ _ O
 setters _ _ B-Concept
@@ -344,8 +352,7 @@ them _ _ O
 from _ _ O
 the _ _ O
 subclass _ _ B-Concept
-’ _ _ I-Concept
-s _ _ I-Concept
+’s _ _ I-Concept
 constructor _ _ B-Concept
 , _ _ O
 to _ _ O
@@ -358,8 +365,7 @@ can _ _ O
 call _ _ O
 the _ _ O
 parent _ _ B-Concept
-’ _ _ O
-s _ _ O
+’s _ _ O
 constructor _ _ B-Concept
 by _ _ O
 using _ _ O
@@ -423,9 +429,7 @@ numWheels _ _ O
 ; _ _ O
 … _ _ O
 public _ _ O
-Vehicle _ _ O
-( _ _ O
-int _ _ O
+Vehicle(int _ _ O
 numWheels _ _ O
 ) _ _ O
 { _ _ O
@@ -436,9 +440,7 @@ numWheels _ _ O
 … _ _ O
 } _ _ O
 //end _ _ O
-function _ _ O
-( _ _ O
-double _ _ O
+function(double _ _ O
 ) _ _ O
 … _ _ O
 } _ _ O
@@ -463,18 +465,14 @@ gasRemaining _ _ O
 ; _ _ O
 … _ _ O
 public _ _ O
-Car _ _ O
-( _ _ O
-int _ _ O
+Car(int _ _ O
 numPassengers _ _ O
 , _ _ O
 double _ _ O
 gasRemaining _ _ O
 ) _ _ O
 { _ _ O
-super _ _ O
-( _ _ O
-4 _ _ O
+super(4 _ _ O
 ) _ _ O
 ; _ _ O
 this.numPassengers _ _ O
@@ -487,9 +485,7 @@ gasRemaining _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-constructor _ _ O
-( _ _ O
-int _ _ O
+constructor(int _ _ O
 , _ _ O
 double _ _ O
 ) _ _ O
@@ -503,8 +499,7 @@ What _ _ O
 If _ _ O
 the _ _ O
 Superclass _ _ B-Concept
-’ _ _ I-Concept
-s _ _ O
+’s _ _ I-Concept
 Method _ _ O
 Definition _ _ O
 Does _ _ O
@@ -512,8 +507,7 @@ Not _ _ O
 Fit _ _ O
 the _ _ O
 Class _ _ B-Concept
-’ _ _ I-Concept
-s _ _ O
+’s _ _ I-Concept
 ? _ _ O
 • _ _ O
 We _ _ O
@@ -538,8 +532,7 @@ header _ _ O
 must _ _ O
 have _ _ O
 “ _ _ O
-@ _ _ B-Concept
-Override _ _ I-Concept
+@Override _ _ B-Concept
 ” _ _ O
 only _ _ O
 • _ _ O
@@ -591,22 +584,15 @@ double _ _ O
 gasRemaining _ _ O
 ; _ _ O
 … _ _ O
-@ _ _ B-Concept
-Override _ _ I-Concept
+@Override _ _ B-Concept
 public _ _ O
 boolean _ _ O
-move _ _ O
-( _ _ O
-double _ _ O
+move(double _ _ O
 dist _ _ O
 ) _ _ O
 { _ _ O
 return _ _ O
-super.move _ _ O
-( _ _ O
-dist _ _ O
-* _ _ O
-10.0 _ _ O
+super.move(dist*10.0 _ _ O
 ) _ _ O
 & _ _ O
 & _ _ O
@@ -618,9 +604,7 @@ this.gasRemaining _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-function _ _ O
-( _ _ O
-double _ _ O
+function(double _ _ O
 ) _ _ O
 … _ _ O
 } _ _ O
@@ -653,8 +637,7 @@ functionality _ _ O
 of _ _ O
 the _ _ O
 superclass _ _ B-Concept
-’ _ _ O
-s _ _ O
+’s _ _ O
 method _ _ B-Concept
 , _ _ O
 you _ _ O
@@ -662,8 +645,7 @@ should _ _ O
 call _ _ O
 the _ _ O
 superclass _ _ B-Concept
-’ _ _ O
-s _ _ O
+’s _ _ O
 method _ _ B-Concept
 at _ _ O
 least _ _ O
@@ -712,8 +694,7 @@ need _ _ O
 • _ _ O
 A _ _ O
 Car _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 superclass _ _ B-Concept
 and _ _ O
 subclasses _ _ O
@@ -742,23 +723,17 @@ vehicles _ _ O
 ; _ _ O
 … _ _ O
 public _ _ O
-Garage _ _ O
-( _ _ O
-int _ _ O
+Garage(int _ _ O
 capacity _ _ O
 ) _ _ O
 { _ _ O
 this.vehicles _ _ O
 = _ _ O
 new _ _ O
-Vehicle _ _ O
-[ _ _ O
-capacity _ _ O
+Vehicle[capacity _ _ O
 ] _ _ O
 ; _ _ O
-for _ _ O
-( _ _ O
-int _ _ O
+for(int _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
@@ -770,9 +745,7 @@ vehicles.length _ _ O
 i++ _ _ O
 ) _ _ O
 { _ _ O
-vehicles _ _ O
-[ _ _ O
-i _ _ O
+vehicles[i _ _ O
 ] _ _ O
 = _ _ O
 null _ _ O
@@ -781,9 +754,7 @@ null _ _ O
 … _ _ O
 } _ _ O
 //end _ _ O
-constructor _ _ B-Concept
-( _ _ O
-int _ _ O
+constructor(int _ _ B-Concept
 ) _ _ O
 … _ _ O
 } _ _ O
@@ -801,9 +772,7 @@ Garage _ _ O
 … _ _ O
 public _ _ O
 boolean _ _ O
-addVehicle _ _ O
-( _ _ O
-Vehicle _ _ O
+addVehicle(Vehicle _ _ O
 vehicle _ _ O
 ) _ _ O
 { _ _ O
@@ -815,9 +784,7 @@ a _ _ O
 better _ _ O
 way _ _ O
 ! _ _ O
-for _ _ O
-( _ _ O
-int _ _ O
+for(int _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
@@ -829,19 +796,14 @@ vehicles.length _ _ O
 i++ _ _ O
 ) _ _ O
 { _ _ O
-if _ _ O
-( _ _ O
-vehicles _ _ O
-[ _ _ O
-i _ _ O
+if(vehicles[i _ _ O
 ] _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 null _ _ O
 ) _ _ O
 { _ _ O
-vehicles _ _ O
-[ _ _ O
-i _ _ O
+vehicles[i _ _ O
 ] _ _ O
 = _ _ O
 vehicle _ _ O
@@ -856,9 +818,7 @@ false _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
-method _ _ O
-( _ _ O
-Vehicle _ _ O
+method(Vehicle _ _ O
 ) _ _ O
 } _ _ O
 //End _ _ O
@@ -873,8 +833,7 @@ a _ _ I-Concept
 Problem _ _ I-Concept
 “ _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 services _ _ O
@@ -910,8 +869,7 @@ manager _ _ O
 gets _ _ O
 the _ _ O
 customer _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 name _ _ O
 , _ _ O
 address _ _ O
@@ -962,7 +920,8 @@ tax _ _ O
 and _ _ O
 total _ _ O
 estimated _ _ O
-charges. _ _ O
+charges _ _ O
+. _ _ O
 ” _ _ O
 Source _ _ O
 : _ _ O
@@ -985,8 +944,7 @@ the _ _ O
 Nouns _ _ O
 “ _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 services _ _ O
@@ -1022,8 +980,7 @@ manager _ _ O
 gets _ _ O
 the _ _ O
 customer _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 name _ _ O
 , _ _ O
 address _ _ O
@@ -1092,12 +1049,14 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Porsche _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 sales _ _ O
@@ -1107,12 +1066,21 @@ service _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 shop _ _ O
 telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
 
 Noun _ _ O
@@ -1131,17 +1099,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1152,7 +1125,13 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
 
 Subtypes _ _ B-Concept
@@ -1167,11 +1146,13 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
@@ -1179,6 +1160,9 @@ manager _ _ O
 Mercedes _ _ O
 model _ _ O
 name _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1191,6 +1175,9 @@ total _ _ O
 estimated _ _ O
 charges _ _ O
 year _ _ O
+
+
+ _ _ O
 Whether _ _ O
 these _ _ O
 subtypes _ _ B-Concept
@@ -1237,8 +1224,7 @@ foreign _ _ O
 cars _ _ O
 BMW _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 car _ _ O
@@ -1257,6 +1243,9 @@ estimated _ _ O
 parts _ _ O
 charges _ _ O
 name _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1267,6 +1256,9 @@ total _ _ O
 estimated _ _ O
 charges _ _ O
 year _ _ O
+
+
+ _ _ O
 Simple _ _ B-Concept
 properties _ _ I-Concept
 can _ _ O
@@ -1302,17 +1294,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1323,8 +1320,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 car _ _ O
 had _ _ O
@@ -1356,17 +1362,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1377,8 +1388,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 car _ _ O
 had _ _ O
@@ -1410,17 +1430,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1431,8 +1456,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 customer _ _ O
 had _ _ O
@@ -1464,17 +1498,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1485,8 +1524,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 customer _ _ O
 had _ _ O
@@ -1518,17 +1566,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1539,8 +1592,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 service _ _ O
 quote _ _ O
@@ -1573,17 +1635,22 @@ charges _ _ O
 estimated _ _ O
 parts _ _ O
 charges _ _ O
+
+
+ _ _ O
 foreign _ _ O
 cars _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 make _ _ O
 manager _ _ O
 Mercedes _ _ O
 model _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1594,8 +1661,17 @@ telephone _ _ O
 number _ _ O
 total _ _ O
 estimated _ _ O
+
+
+ _ _ O
 name _ _ O
+
+
+ _ _ O
 year _ _ O
+
+
+ _ _ O
 A _ _ O
 service _ _ O
 quote _ _ O
@@ -1623,8 +1699,7 @@ foreign _ _ O
 cars _ _ O
 BMW _ _ O
 Joe _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 Automotive _ _ O
 Shop _ _ O
 car _ _ O
@@ -1643,6 +1718,9 @@ estimated _ _ O
 parts _ _ O
 charges _ _ O
 name _ _ O
+
+
+ _ _ O
 Porsche _ _ O
 sales _ _ O
 tax _ _ O
@@ -1653,6 +1731,9 @@ total _ _ O
 estimated _ _ O
 charges _ _ O
 year _ _ O
+
+
+ _ _ O
 Our _ _ O
 scenario _ _ O
 revolves _ _ O

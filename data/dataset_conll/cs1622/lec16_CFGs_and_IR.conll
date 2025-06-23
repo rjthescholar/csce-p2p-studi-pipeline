@@ -38,12 +38,18 @@ is _ _ O
 new _ _ O
 ; _ _ O
 O _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 We _ _ O
 have _ _ O
 a _ _ O
 problem _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Our _ _ O
@@ -74,9 +80,7 @@ main _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-5 _ _ O
+println_i(5 _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
@@ -85,16 +89,12 @@ main _ _ O
 sw _ _ O
 fp _ _ O
 , _ _ O
--4 _ _ O
-( _ _ O
-sp _ _ O
+-4(sp _ _ O
 ) _ _ O
 sw _ _ O
 ra _ _ O
 , _ _ O
--8 _ _ O
-( _ _ O
-sp _ _ O
+-8(sp _ _ O
 ) _ _ O
 move _ _ O
 fp _ _ O
@@ -109,9 +109,7 @@ sp _ _ O
 sw _ _ O
 s0 _ _ O
 , _ _ O
--12 _ _ O
-( _ _ O
-fp _ _ O
+-12(fp _ _ O
 ) _ _ O
 addi _ _ O
 sp _ _ O
@@ -126,32 +124,24 @@ s0 _ _ O
 sw _ _ O
 s0 _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 jal _ _ O
 println_i _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
--12 _ _ O
-( _ _ O
-fp _ _ O
+-12(fp _ _ O
 ) _ _ O
 lw _ _ O
 ra _ _ O
 , _ _ O
--8 _ _ O
-( _ _ O
-fp _ _ O
+-8(fp _ _ O
 ) _ _ O
 lw _ _ O
 fp _ _ O
 , _ _ O
--4 _ _ O
-( _ _ O
-fp _ _ O
+-4(fp _ _ O
 ) _ _ O
 addi _ _ O
 sp _ _ O
@@ -161,6 +151,9 @@ sp _ _ O
 12 _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 it _ _ O
 's _ _ O
 a _ _ O
@@ -192,9 +185,7 @@ sp _ _ O
 sw _ _ O
 ra _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 li _ _ O
 a0 _ _ O
@@ -205,9 +196,7 @@ println_i _ _ O
 lw _ _ O
 ra _ _ O
 , _ _ O
-0 _ _ O
-( _ _ O
-sp _ _ O
+0(sp _ _ O
 ) _ _ O
 addi _ _ O
 sp _ _ O
@@ -217,7 +206,11 @@ sp _ _ O
 4 _ _ O
 jr _ _ O
 ra _ _ O
-so… _ _ O
+
+
+ _ _ O
+so _ _ O
+… _ _ O
 how _ _ O
 do _ _ O
 we _ _ O
@@ -253,7 +246,9 @@ from _ _ O
 the _ _ O
 AST _ _ B-Concept
 to _ _ O
-machine/assembly _ _ B-Concept
+machine _ _ B-Concept
+/ _ _ I-Concept
+assembly _ _ I-Concept
 code _ _ I-Concept
 . _ _ O
 o _ _ O
@@ -319,8 +314,7 @@ code _ _ O
 are _ _ O
 run _ _ O
 ( _ _ O
-i.e _ _ O
-. _ _ O
+i.e. _ _ O
 " _ _ O
 this _ _ O
 runs _ _ O
@@ -378,6 +372,9 @@ doing _ _ O
 these _ _ O
 analyses _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 What _ _ O
@@ -411,46 +408,47 @@ x _ _ O
 < _ _ O
 10 _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+println_s("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 Let _ _ O
-Id _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+Id(x _ _ O
 ) _ _ O
-IntLit _ _ O
-( _ _ O
-0 _ _ O
+IntLit(0 _ _ O
 ) _ _ O
 < _ _ O
+
+
+ _ _ O
 { _ _ O
 } _ _ O
+
+
+ _ _ O
 If _ _ O
 Call _ _ O
 Call _ _ O
-Id _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+Id(x _ _ O
 ) _ _ O
-IntLit _ _ O
-( _ _ O
-10 _ _ O
+IntLit(10 _ _ O
 ) _ _ O
+
+
+ _ _ O
 do _ _ O
 these _ _ O
 two _ _ O
@@ -476,35 +474,38 @@ at _ _ O
 the _ _ O
 AST _ _ B-Concept
 ? _ _ O
-Id _ _ O
-( _ _ O
-println_s _ _ O
+
+
+ _ _ O
+Id(println_s _ _ O
 ) _ _ O
 [ _ _ O
-StrLit _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+StrLit("hi _ _ O
 " _ _ O
 ) _ _ O
 ] _ _ O
-Id _ _ O
-( _ _ O
-println_s _ _ O
+
+
+ _ _ O
+Id(println_s _ _ O
 ) _ _ O
 [ _ _ O
-StrLit _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+StrLit("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
 ] _ _ O
+
+
+ _ _ O
 not _ _ O
-really… _ _ O
+really _ _ O
+… _ _ O
 { _ _ O
 } _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
@@ -515,69 +516,60 @@ x _ _ O
 < _ _ O
 10 _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+println_s("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 Let _ _ O
-Id _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+Id(x _ _ O
 ) _ _ O
-IntLit _ _ O
-( _ _ O
-0 _ _ O
+IntLit(0 _ _ O
 ) _ _ O
 < _ _ O
+
+
+ _ _ O
 While _ _ O
 Call _ _ O
 Call _ _ O
-Id _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+Id(x _ _ O
 ) _ _ O
-IntLit _ _ O
-( _ _ O
-10 _ _ O
+IntLit(10 _ _ O
 ) _ _ O
-Id _ _ O
-( _ _ O
-println_s _ _ O
+Id(println_s _ _ O
 ) _ _ O
 [ _ _ O
-StrLit _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+StrLit("hi _ _ O
 " _ _ O
 ) _ _ O
 ] _ _ O
-Id _ _ O
-( _ _ O
-println_s _ _ O
+
+
+ _ _ O
+Id(println_s _ _ O
 ) _ _ O
 [ _ _ O
-StrLit _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+StrLit("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
 ] _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Sufficiently _ _ O
@@ -611,23 +603,20 @@ x _ _ O
 < _ _ O
 10 _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+println_s("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 this _ _ O
 loop _ _ O
 never _ _ O
@@ -636,6 +625,9 @@ terminates _ _ O
 does _ _ O
 it _ _ O
 ? _ _ O
+
+
+ _ _ O
 think _ _ O
 about _ _ O
 how _ _ O
@@ -643,7 +635,11 @@ you _ _ O
 determined _ _ O
 that _ _ O
 . _ _ O
-1. _ _ O
+
+
+ _ _ O
+1 _ _ O
+. _ _ O
 x _ _ O
 is _ _ O
 assigned _ _ O
@@ -651,7 +647,8 @@ a _ _ O
 constant _ _ O
 0 _ _ O
 . _ _ O
-2. _ _ O
+2 _ _ O
+. _ _ O
 x _ _ O
 is _ _ O
 never _ _ O
@@ -665,7 +662,8 @@ in _ _ O
 the _ _ O
 loop _ _ O
 . _ _ O
-3. _ _ O
+3 _ _ O
+. _ _ O
 so _ _ O
 , _ _ O
 x _ _ O
@@ -676,8 +674,10 @@ be _ _ O
 in _ _ O
 the _ _ O
 loop _ _ O
-condition… _ _ O
-4. _ _ O
+condition _ _ O
+… _ _ O
+4 _ _ O
+. _ _ O
 and _ _ O
 0 _ _ O
 < _ _ O
@@ -756,19 +756,13 @@ x _ _ O
 < _ _ O
 10 _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+println_s("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
@@ -776,17 +770,23 @@ done _ _ O
 x _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 < _ _ O
 10 _ _ O
 ? _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+
+
+ _ _ O
+p("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 flowcharts _ _ B-Concept
 make _ _ O
 it _ _ O
@@ -802,13 +802,16 @@ programs _ _ O
 is _ _ O
 different _ _ O
 . _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+
+
+ _ _ O
+p("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
@@ -819,19 +822,13 @@ x _ _ O
 < _ _ O
 10 _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+println_s("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
@@ -839,21 +836,24 @@ done _ _ O
 x _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 < _ _ O
 10 _ _ O
 ? _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+
+
+ _ _ O
+p("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+
+
+ _ _ O
+p("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
@@ -885,28 +885,38 @@ take _ _ O
 us _ _ O
 to _ _ O
 the _ _ O
-condition… _ _ O
+condition _ _ O
+… _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 < _ _ O
 10 _ _ O
 ? _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+
+
+ _ _ O
+p("done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
-p _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+
+
+ _ _ O
+p("hi _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 then _ _ O
 we _ _ O
 can _ _ O
@@ -921,7 +931,11 @@ x _ _ O
 is _ _ O
 the _ _ O
 constant _ _ O
-0. _ _ O
+0 _ _ O
+. _ _ O
+
+
+ _ _ O
 we _ _ O
 could _ _ O
 give _ _ O
@@ -947,6 +961,9 @@ code _ _ O
 is _ _ O
 unreachable _ _ O
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 sort _ _ O
 of _ _ O
@@ -977,6 +994,9 @@ Representation _ _ I-Concept
 ( _ _ O
 IR _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Real _ _ O
@@ -1004,10 +1024,17 @@ the _ _ O
 source _ _ B-Concept
 language _ _ I-Concept
 can _ _ O
-be… _ _ O
+be _ _ O
+… _ _ O
 complicated _ _ O
 . _ _ O
+
+
+ _ _ O
 shhhHHHHHHHHHH _ _ O
+
+
+ _ _ O
 there _ _ O
 are _ _ O
 so _ _ O
@@ -1051,9 +1078,18 @@ not _ _ O
 very _ _ O
 flexible _ _ O
 . _ _ O
+
+
+ _ _ O
 Truss _ _ B-Concept
 AST _ _ B-Concept
+
+
+ _ _ O
 Codegen _ _ B-Concept
+
+
+ _ _ O
 what _ _ O
 if _ _ O
 you _ _ O
@@ -1070,6 +1106,9 @@ the _ _ O
 AST _ _ B-Concept
 representation _ _ O
 ? _ _ O
+
+
+ _ _ O
 MIPS _ _ O
 Code _ _ O
 what _ _ O
@@ -1083,6 +1122,9 @@ different _ _ O
 target _ _ B-Concept
 language _ _ I-Concept
 ? _ _ O
+
+
+ _ _ O
 this _ _ O
 algorithm _ _ O
 tightly _ _ O
@@ -1142,11 +1184,17 @@ cond _ _ O
 { _ _ O
 code _ _ O
 } _ _ O
+
+
+ _ _ O
 while _ _ O
 cond _ _ O
 { _ _ O
 code _ _ O
 } _ _ O
+
+
+ _ _ O
 for _ _ O
 i _ _ O
 in _ _ O
@@ -1156,6 +1204,9 @@ hi _ _ O
 { _ _ O
 code _ _ O
 } _ _ O
+
+
+ _ _ O
 if _ _ O
 ! _ _ O
 < _ _ O
@@ -1204,20 +1255,40 @@ end _ _ O
 code _ _ O
 > _ _ O
 i _ _ O
-+= _ _ O
++ _ _ O
+= _ _ O
 1 _ _ O
 goto _ _ O
 top _ _ O
 end _ _ O
 : _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 So _ _ O
-instead… _ _ O
+instead _ _ O
+… _ _ O
+
+
+ _ _ O
 Frontend _ _ B-Concept
+
+
+ _ _ O
 Semantic _ _ B-Concept
+
+
+ _ _ O
 AST _ _ B-Concept
+
+
+ _ _ O
 Lowering _ _ B-Concept
+
+
+ _ _ O
 ● _ _ O
 an _ _ O
 intermediate _ _ B-Concept
@@ -1244,15 +1315,33 @@ languages _ _ I-Concept
 . _ _ O
 MIPS _ _ O
 Backend _ _ B-Concept
+
+
+ _ _ O
 Codegen _ _ B-Concept
+
+
+ _ _ O
 MIPS _ _ O
 code _ _ O
+
+
+ _ _ O
 IR _ _ B-Concept
 x86 _ _ O
 Backend _ _ O
+
+
+ _ _ O
 Codegen _ _ B-Concept
+
+
+ _ _ O
 x86 _ _ O
 code _ _ O
+
+
+ _ _ O
 now _ _ O
 we _ _ O
 can _ _ O
@@ -1281,7 +1370,11 @@ change _ _ O
 the _ _ O
 codegen _ _ B-Concept
 , _ _ O
-etc… _ _ O
+etc _ _ O
+… _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 IR _ _ B-Concept
@@ -1299,13 +1392,16 @@ of _ _ O
 simple _ _ O
 operations _ _ O
 o _ _ O
-…which _ _ O
+… _ _ O
+which _ _ O
 can _ _ O
 be _ _ O
 efficiently _ _ O
 implemented _ _ O
 on _ _ O
-most/all _ _ O
+most _ _ O
+/ _ _ O
+all _ _ O
 targets _ _ O
 ● _ _ O
 so _ _ O
@@ -1314,7 +1410,8 @@ something _ _ O
 similar _ _ O
 to _ _ O
 assembly _ _ B-Concept
-language… _ _ I-Concept
+language _ _ I-Concept
+… _ _ O
 o _ _ O
 but _ _ O
 without _ _ O
@@ -1334,7 +1431,8 @@ optimization _ _ B-Concept
 would _ _ O
 also _ _ O
 be _ _ O
-nice… _ _ O
+nice _ _ O
+… _ _ O
 o _ _ O
 optimization _ _ O
 rewrites _ _ O
@@ -1424,10 +1522,16 @@ goals _ _ O
 and _ _ O
 structure _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Our _ _ O
 IR _ _ B-Concept
+
+
+ _ _ O
 16 _ _ O
 
 The _ _ O
@@ -1465,16 +1569,15 @@ main _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-5 _ _ O
+println_i(5 _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 fn _ _ O
-test _ _ O
-( _ _ O
-x _ _ O
+test(x _ _ O
 : _ _ O
 bool _ _ O
 ) _ _ O
@@ -1482,25 +1585,22 @@ bool _ _ O
 if _ _ O
 x _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-y _ _ O
+println_s("y _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 else _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-n _ _ O
+println_s("n _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 each _ _ O
 node _ _ B-Concept
 in _ _ O
@@ -1547,7 +1647,11 @@ successors _ _ B-Concept
 are _ _ O
 clearly _ _ O
 making _ _ O
-decisions… _ _ O
+decisions _ _ O
+… _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 The _ _ O
@@ -1575,6 +1679,9 @@ does _ _ O
 one _ _ O
 thing _ _ O
 . _ _ O
+
+
+ _ _ O
 d _ _ O
 = _ _ O
 ( _ _ O
@@ -1597,6 +1704,9 @@ asm _ _ O
 , _ _ O
 good _ _ O
 . _ _ O
+
+
+ _ _ O
 $ _ _ O
 t1 _ _ O
 = _ _ O
@@ -1626,10 +1736,16 @@ destination _ _ O
 source _ _ O
 , _ _ O
 operation _ _ O
+
+
+ _ _ O
 add _ _ O
 neg _ _ O
 div _ _ O
 mul _ _ O
+
+
+ _ _ O
 $ _ _ O
 t1 _ _ O
 , _ _ O
@@ -1654,6 +1770,9 @@ t1 _ _ O
 , _ _ O
 $ _ _ O
 t3 _ _ O
+
+
+ _ _ O
 it _ _ O
 's _ _ O
 kind _ _ O
@@ -1661,7 +1780,9 @@ of _ _ O
 like _ _ O
 asm _ _ O
 without _ _ O
-loads/stores _ _ O
+loads _ _ O
+/ _ _ O
+stores _ _ O
 , _ _ O
 and _ _ O
 with _ _ O
@@ -1671,7 +1792,9 @@ registers _ _ O
 . _ _ O
 18 _ _ O
 
-Locals/temporaries _ _ B-Concept
+Locals _ _ B-Concept
+/ _ _ O
+temporaries _ _ B-Concept
 ● _ _ O
 each _ _ O
 function _ _ O
@@ -1679,7 +1802,7 @@ has _ _ O
 a _ _ O
 list _ _ O
 of _ _ O
-locals _ _ O
+locals _ _ B-Concept
 : _ _ O
 places _ _ O
 where _ _ O
@@ -1693,8 +1816,8 @@ some _ _ O
 of _ _ O
 these _ _ O
 are _ _ O
-local _ _ O
-variables _ _ O
+local _ _ B-Concept
+variables _ _ I-Concept
 that _ _ O
 the _ _ O
 user _ _ O
@@ -1702,17 +1825,15 @@ declared _ _ O
 ; _ _ O
 others _ _ O
 are _ _ O
-temporaries _ _ O
+temporaries _ _ B-Concept
 created _ _ O
 by _ _ O
 the _ _ O
-code _ _ O
-generation _ _ O
+code _ _ B-Concept
+generation _ _ I-Concept
 . _ _ O
 fn _ _ O
-func _ _ O
-( _ _ O
-a _ _ O
+func(a _ _ O
 : _ _ O
 int _ _ O
 , _ _ O
@@ -1732,17 +1853,18 @@ b _ _ O
 * _ _ O
 3 _ _ O
 ; _ _ O
-println_i _ _ O
-( _ _ O
-x _ _ O
+println_i(x _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 each _ _ O
-local _ _ O
+local _ _ B-Concept
 has _ _ O
 a _ _ O
-type _ _ O
+type _ _ B-Concept
 and _ _ O
 optionally _ _ O
 a _ _ O
@@ -1753,11 +1875,23 @@ the _ _ O
 code _ _ O
 ) _ _ O
 . _ _ O
-Locals _ _ O
+
+
+ _ _ O
+Locals _ _ B-Concept
+
+
+ _ _ O
 Code _ _ O
+
+
+ _ _ O
 Idx _ _ O
 Name _ _ O
 Type _ _ O
+
+
+ _ _ O
 $ _ _ O
 t3 _ _ O
 = _ _ O
@@ -1770,25 +1904,53 @@ $ _ _ O
 t3 _ _ O
 * _ _ O
 3 _ _ O
-println_i _ _ O
-( _ _ O
-x _ _ O
+println_i(x _ _ O
 ) _ _ O
 return _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 int _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 int _ _ O
+
+
+ _ _ O
 3 _ _ O
 4 _ _ O
+
+
+ _ _ O
 if _ _ O
 a _ _ O
-local _ _ O
+local _ _ B-Concept
 has _ _ O
 no _ _ O
 name _ _ O
@@ -1816,10 +1978,20 @@ back _ _ O
 to _ _ O
 $ _ _ O
 t0 _ _ O
-shortly… _ _ O
+shortly _ _ O
+… _ _ O
+
+
+ _ _ O
 int _ _ O
 x _ _ O
+
+
+ _ _ O
 int _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Places _ _ B-Concept
@@ -1841,6 +2013,9 @@ than _ _ O
 in _ _ O
 assembly _ _ O
 . _ _ O
+
+
+ _ _ O
 Sources _ _ B-Concept
 Places _ _ B-Concept
 Locals _ _ B-Concept
@@ -1856,6 +2031,9 @@ Fields _ _ O
 ( _ _ O
 x.y _ _ O
 ) _ _ O
+
+
+ _ _ O
 a _ _ O
 place _ _ B-Concept
 is _ _ O
@@ -1869,6 +2047,9 @@ of _ _ O
 an _ _ O
 assignment _ _ O
 . _ _ O
+
+
+ _ _ O
 Constants _ _ B-Concept
 Int _ _ O
 Literals _ _ O
@@ -1878,6 +2059,9 @@ Bool _ _ O
 Literals _ _ O
 Function _ _ B-Concept
 Addresses _ _ I-Concept
+
+
+ _ _ O
 a _ _ O
 constant _ _ B-Concept
 is _ _ O
@@ -1895,6 +2079,9 @@ in _ _ O
 function _ _ O
 calls _ _ O
 . _ _ O
+
+
+ _ _ O
 both _ _ O
 places _ _ B-Concept
 and _ _ O
@@ -1939,6 +2126,9 @@ language _ _ O
 x _ _ O
 = _ _ O
 1 _ _ O
+
+
+ _ _ O
 simple _ _ O
 assignment _ _ O
 of _ _ O
@@ -1948,10 +2138,16 @@ to _ _ O
 a _ _ O
 local _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 $ _ _ O
 t5.y _ _ O
 = _ _ O
 x.y _ _ O
+
+
+ _ _ O
 field _ _ O
 access _ _ O
 can _ _ O
@@ -1962,14 +2158,15 @@ either _ _ O
 or _ _ O
 both _ _ O
 ) _ _ O
-side _ _ O
-( _ _ O
-s _ _ O
+side(s _ _ O
 ) _ _ O
 of _ _ O
 an _ _ O
 assignment _ _ O
 . _ _ O
+
+
+ _ _ O
 x.y _ _ O
 = _ _ O
 a.b.c _ _ O
@@ -1996,12 +2193,13 @@ operation _ _ O
 + _ _ O
 does _ _ O
 . _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
-f _ _ O
-( _ _ O
-1 _ _ O
+f(1 _ _ O
 , _ _ O
 $ _ _ O
 t1 _ _ O
@@ -2024,6 +2222,9 @@ p _ _ O
 = _ _ O
 & _ _ O
 println_s _ _ O
+
+
+ _ _ O
 a _ _ O
 function _ _ B-Concept
 's _ _ I-Concept
@@ -2033,14 +2234,19 @@ be _ _ O
 put _ _ O
 in _ _ O
 a _ _ O
-place… _ _ B-Concept
-p _ _ O
-( _ _ O
-" _ _ O
-hi _ _ O
+place _ _ B-Concept
+… _ _ O
+
+
+ _ _ O
+p("hi _ _ O
 " _ _ O
 ) _ _ O
-…and _ _ O
+
+
+ _ _ O
+… _ _ O
+and _ _ O
 then _ _ O
 that _ _ O
 place _ _ B-Concept
@@ -2086,6 +2292,9 @@ from _ _ O
 the _ _ O
 function _ _ O
 . _ _ O
+
+
+ _ _ O
 a _ _ O
 goto _ _ B-Concept
 terminator _ _ I-Concept
@@ -2095,11 +2304,20 @@ to _ _ O
 another _ _ O
 BB _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 ... _ _ O
 return _ _ B-Concept
+
+
+ _ _ O
 ... _ _ O
 goto _ _ B-Concept
 bb7 _ _ O
+
+
+ _ _ O
 and _ _ O
 a _ _ O
 conditional _ _ B-Concept
@@ -2178,9 +2396,7 @@ to _ _ O
 it _ _ O
 . _ _ O
 fn _ _ O
-f _ _ O
-( _ _ O
-x _ _ O
+f(x _ _ O
 : _ _ O
 bool _ _ O
 , _ _ O
@@ -2198,10 +2414,7 @@ y _ _ O
 return _ _ B-Concept
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-just _ _ O
+println_s("just _ _ O
 x _ _ O
 " _ _ O
 ) _ _ O
@@ -2209,10 +2422,7 @@ x _ _ O
 } _ _ O
 else _ _ O
 { _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-not _ _ O
+println_s("not _ _ O
 x _ _ O
 " _ _ O
 ) _ _ O
@@ -2220,14 +2430,14 @@ x _ _ O
 return _ _ B-Concept
 ; _ _ O
 } _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-done _ _ O
+println_s("done _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 notice _ _ O
 how _ _ O
 both _ _ O
@@ -2246,12 +2456,21 @@ return _ _ B-Concept
 terminator _ _ I-Concept
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 not _ _ O
 x _ _ O
+
+
+ _ _ O
 just _ _ O
 x _ _ O
 done _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 going _ _ O
@@ -2324,9 +2543,7 @@ return _ _ B-Concept
 terminator _ _ I-Concept
 . _ _ O
 fn _ _ O
-ret _ _ O
-( _ _ O
-x _ _ O
+ret(x _ _ O
 : _ _ O
 bool _ _ O
 ) _ _ O
@@ -2347,15 +2564,30 @@ return _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Locals _ _ B-Concept
+
+
+ _ _ O
 Idx _ _ O
 Name _ _ O
 Type _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 int _ _ O
 x _ _ O
+
+
+ _ _ O
 bool _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 if _ _ O
@@ -2363,6 +2595,9 @@ x _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb1 _ _ O
 : _ _ O
 $ _ _ O
@@ -2371,6 +2606,9 @@ t0 _ _ O
 5 _ _ O
 goto _ _ B-Concept
 bb3 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 $ _ _ O
@@ -2382,6 +2620,9 @@ bb3 _ _ O
 bb3 _ _ O
 : _ _ O
 return _ _ B-Concept
+
+
+ _ _ O
 the _ _ O
 special _ _ O
 parsing _ _ B-Concept
@@ -2416,6 +2657,9 @@ Codegen _ _ B-Concept
 , _ _ O
 but _ _ O
 different _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Lowering _ _ B-Concept
@@ -2427,14 +2671,18 @@ process _ _ O
 of _ _ O
 converting _ _ O
 the _ _ O
-high-level _ _ O
+high _ _ O
+- _ _ O
+level _ _ O
 , _ _ O
 abstract _ _ B-Concept
 syntax _ _ I-Concept
 tree _ _ I-Concept
 into _ _ O
 the _ _ O
-mid-level _ _ O
+mid _ _ O
+- _ _ O
+level _ _ O
 IR _ _ B-Concept
 that _ _ O
 we _ _ O
@@ -2522,8 +2770,7 @@ are _ _ O
 left _ _ O
 out _ _ O
 ( _ _ O
-e.g _ _ O
-. _ _ O
+e.g. _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
@@ -2574,7 +2821,9 @@ Building _ _ O
 the _ _ O
 CFG _ _ B-Concept
 : _ _ O
-straight-line _ _ O
+straight _ _ O
+- _ _ O
+line _ _ O
 code _ _ O
 ( _ _ O
 animated _ _ O
@@ -2594,9 +2843,7 @@ super _ _ O
 simple _ _ O
 . _ _ O
 fn _ _ O
-do_gravity _ _ O
-( _ _ O
-vy _ _ O
+do_gravity(vy _ _ O
 : _ _ O
 int _ _ O
 ) _ _ O
@@ -2613,9 +2860,7 @@ and _ _ O
 let _ _ O
 ret _ _ O
 = _ _ O
-min _ _ O
-( _ _ O
-vy _ _ O
+min(vy _ _ O
 + _ _ O
 98 _ _ O
 , _ _ O
@@ -2628,9 +2873,7 @@ instructions _ _ O
 into _ _ O
 it _ _ O
 . _ _ O
-println_i _ _ O
-( _ _ O
-ret _ _ O
+println_i(ret _ _ O
 ) _ _ O
 ; _ _ O
 bb0 _ _ O
@@ -2646,18 +2889,13 @@ ret _ _ O
 ; _ _ O
 ret _ _ O
 = _ _ O
-min _ _ O
-( _ _ O
-$ _ _ O
-t2 _ _ O
+min($t2 _ _ O
 , _ _ O
 800 _ _ O
 ) _ _ O
 } _ _ O
 Locals _ _ B-Concept
-println_i _ _ O
-( _ _ O
-ret _ _ O
+println_i(ret _ _ O
 ) _ _ O
 $ _ _ O
 t0 _ _ O
@@ -2671,16 +2909,40 @@ bb1 _ _ O
 0 _ _ O
 int _ _ O
 1 _ _ O
+
+
+ _ _ O
 vy _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 int _ _ O
 int _ _ O
+
+
+ _ _ O
 ret _ _ O
+
+
+ _ _ O
 int _ _ O
+
+
+ _ _ O
 bb1 _ _ O
 : _ _ O
 return _ _ B-Concept
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 make _ _ O
@@ -2694,7 +2956,9 @@ like _ _ O
 here _ _ O
 , _ _ O
 or _ _ O
-special-case _ _ O
+special _ _ O
+- _ _ O
+case _ _ O
 it _ _ O
 if _ _ O
 we _ _ O
@@ -2726,12 +2990,11 @@ where _ _ O
 BBs _ _ B-Concept
 need _ _ O
 to _ _ O
-begin/end _ _ O
+begin _ _ O
+/ _ _ O
+end _ _ O
 . _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-nums _ _ O
+println_s("nums _ _ O
 : _ _ O
 " _ _ O
 ) _ _ O
@@ -2746,9 +3009,7 @@ i _ _ O
 > _ _ O
 0 _ _ O
 { _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 ; _ _ O
 i _ _ O
@@ -2758,6 +3019,9 @@ i _ _ O
 2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 the _ _ O
 loop _ _ O
 needs _ _ O
@@ -2793,12 +3057,12 @@ BB _ _ B-Concept
 after _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
-println_s _ _ O
-( _ _ O
-" _ _ O
-nums _ _ O
+println_s("nums _ _ O
 : _ _ O
 " _ _ O
 ) _ _ O
@@ -2821,13 +3085,15 @@ t2 _ _ O
 then _ _ O
 bb2 _ _ O
 else _ _ O
-bb_ _ _ O
+bb _ _ O
+_ _ _ O
 3 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
-println_i _ _ O
-( _ _ O
-i _ _ O
+println_i(i _ _ O
 ) _ _ O
 i _ _ O
 = _ _ O
@@ -2857,18 +3123,27 @@ make _ _ O
 each _ _ O
 CFG _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 while _ _ O
 true _ _ O
+
+
+ _ _ O
 if _ _ O
+
+
+ _ _ O
 if _ _ O
 … _ _ O
 else _ _ O
 if _ _ O
 … _ _ O
 else _ _ O
-for _ _ O
-( _ _ O
-i=a _ _ O
+for(i _ _ O
+= _ _ O
+a _ _ O
 ; _ _ O
 i _ _ O
 < _ _ O
@@ -2883,8 +3158,13 @@ while _ _ O
 29 _ _ O
 
 Some _ _ O
-graph-related _ _ O
+graph _ _ O
+- _ _ O
+related _ _ O
 stuff _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 How _ _ O
@@ -2917,6 +3197,9 @@ point _ _ O
 to _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 a _ _ O
 BB _ _ B-Concept
 's _ _ I-Concept
@@ -2929,6 +3212,9 @@ it _ _ O
 points _ _ O
 to _ _ O
 . _ _ O
+
+
+ _ _ O
 a _ _ O
 BB _ _ O
 can _ _ O
@@ -2947,6 +3233,9 @@ its _ _ O
 own _ _ O
 predecessor _ _ O
 ! _ _ O
+
+
+ _ _ O
 a _ _ O
 back _ _ O
 edge _ _ O
@@ -3011,15 +3300,14 @@ trouble _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 fn _ _ O
-visit_node _ _ B-Concept
-( _ _ B-Concept
-n _ _ O
+visit_node(n _ _ B-Concept
 ) _ _ O
 { _ _ O
-print _ _ O
-( _ _ O
-n _ _ O
+print(n _ _ O
 's _ _ O
 number _ _ O
 ) _ _ O
@@ -3031,13 +3319,14 @@ n.successors _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-visit_node _ _ B-Concept
-( _ _ B-Concept
-s _ _ O
+visit_node(s _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 if _ _ O
 we _ _ O
 run _ _ O
@@ -3045,24 +3334,32 @@ this _ _ O
 code _ _ O
 on _ _ O
 this _ _ O
-graph _ _ B-Concept
+graph _ _ O
 , _ _ O
 what _ _ O
 happens _ _ O
 ? _ _ O
+
+
+ _ _ O
 we _ _ O
 'll _ _ O
 visit _ _ O
-node _ _ B-Concept
-1… _ _ O
+node _ _ O
+1 _ _ O
+… _ _ O
 then _ _ O
-2… _ _ O
+2 _ _ O
+… _ _ O
 then _ _ O
-1… _ _ O
+1 _ _ O
+… _ _ O
 then _ _ O
-2… _ _ O
+2 _ _ O
+… _ _ O
 then _ _ O
-1… _ _ O
+1 _ _ O
+… _ _ O
 clearly _ _ O
 this _ _ O
 is _ _ O
@@ -3070,10 +3367,10 @@ n't _ _ O
 sufficient _ _ O
 . _ _ O
 when _ _ O
-visiting _ _ B-Concept
+visiting _ _ O
 an _ _ O
 arbitrary _ _ O
-graph _ _ B-Concept
+graph _ _ O
 , _ _ O
 you _ _ O
 must _ _ O
@@ -3082,7 +3379,7 @@ keep _ _ O
 track _ _ O
 of _ _ O
 which _ _ O
-nodes _ _ B-Concept
+nodes _ _ O
 have _ _ O
 already _ _ O
 been _ _ O
@@ -3092,7 +3389,9 @@ visited _ _ O
 
 Postorder _ _ B-Concept
 using _ _ O
-depth-first _ _ B-Concept
+depth _ _ B-Concept
+- _ _ I-Concept
+first _ _ I-Concept
 traversal _ _ I-Concept
 ● _ _ O
 a _ _ O
@@ -3119,25 +3418,19 @@ been _ _ O
 visited _ _ O
 . _ _ O
 fn _ _ O
-visit_node _ _ O
-( _ _ O
-n _ _ O
+visit_node(n _ _ O
 , _ _ O
 visited _ _ O
 ) _ _ O
 { _ _ O
 if _ _ O
-visited _ _ O
-[ _ _ O
-n _ _ O
+visited[n _ _ O
 ] _ _ O
 { _ _ O
 return _ _ O
 ; _ _ O
 } _ _ O
-visited _ _ O
-[ _ _ O
-n _ _ O
+visited[n _ _ O
 ] _ _ O
 = _ _ O
 true _ _ O
@@ -3149,9 +3442,7 @@ n.successors _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-visit_node _ _ O
-( _ _ O
-s _ _ O
+visit_node(s _ _ O
 , _ _ O
 visited _ _ O
 ) _ _ O
@@ -3165,6 +3456,9 @@ n _ _ O
 here _ _ O
 ! _ _ O
 } _ _ O
+
+
+ _ _ O
 this _ _ O
 bit _ _ O
 is _ _ O
@@ -3175,6 +3469,9 @@ from _ _ O
 looping _ _ O
 infinitely _ _ O
 . _ _ O
+
+
+ _ _ O
 and _ _ O
 this _ _ O
 is _ _ O
@@ -3198,6 +3495,9 @@ visited _ _ O
 its _ _ O
 successors _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 we _ _ O
 say _ _ O
@@ -3207,7 +3507,9 @@ out _ _ O
 the _ _ O
 node _ _ O
 's _ _ O
-name/number _ _ O
+name _ _ O
+/ _ _ O
+number _ _ O
 there _ _ O
 , _ _ O
 this _ _ O

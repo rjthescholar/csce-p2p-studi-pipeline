@@ -56,8 +56,7 @@
             "is",
             "new",
             ";",
-            "O",
-            "2"
+            "O"
         ],
         "word_labels": [
             0,
@@ -87,6 +86,19 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -96,13 +108,25 @@
             "We",
             "have",
             "a",
-            "problem",
-            "3"
+            "problem"
         ],
         "word_labels": [
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -137,9 +161,7 @@
             "(",
             ")",
             "{",
-            "println_i",
-            "(",
-            "5",
+            "println_i(5",
             ")",
             ";",
             "}",
@@ -148,16 +170,12 @@
             "sw",
             "fp",
             ",",
-            "-4",
-            "(",
-            "sp",
+            "-4(sp",
             ")",
             "sw",
             "ra",
             ",",
-            "-8",
-            "(",
-            "sp",
+            "-8(sp",
             ")",
             "move",
             "fp",
@@ -172,9 +190,7 @@
             "sw",
             "s0",
             ",",
-            "-12",
-            "(",
-            "fp",
+            "-12(fp",
             ")",
             "addi",
             "sp",
@@ -189,32 +205,24 @@
             "sw",
             "s0",
             ",",
-            "0",
-            "(",
-            "sp",
+            "0(sp",
             ")",
             "jal",
             "println_i",
             "lw",
             "s0",
             ",",
-            "-12",
-            "(",
-            "fp",
+            "-12(fp",
             ")",
             "lw",
             "ra",
             ",",
-            "-8",
-            "(",
-            "fp",
+            "-8(fp",
             ")",
             "lw",
             "fp",
             ",",
-            "-4",
-            "(",
-            "fp",
+            "-4(fp",
             ")",
             "addi",
             "sp",
@@ -223,73 +231,7 @@
             ",",
             "12",
             "jr",
-            "ra",
-            "it",
-            "'s",
-            "a",
-            "little",
-            "excessive",
-            ".",
-            "a",
-            "better",
-            "compiler",
-            "might",
-            "produce",
-            "this",
-            "(",
-            "using",
-            "the",
-            "real",
-            "MIPS",
-            "ABI",
-            ")",
-            ":",
-            "main",
-            ":",
-            "addi",
-            "sp",
-            ",",
-            "sp",
-            ",",
-            "-4",
-            "sw",
-            "ra",
-            ",",
-            "0",
-            "(",
-            "sp",
-            ")",
-            "li",
-            "a0",
-            ",",
-            "5",
-            "jal",
-            "println_i",
-            "lw",
-            "ra",
-            ",",
-            "0",
-            "(",
-            "sp",
-            ")",
-            "addi",
-            "sp",
-            ",",
-            "sp",
-            ",",
-            "4",
-            "jr",
-            "ra",
-            "so\u2026",
-            "how",
-            "do",
-            "we",
-            "get",
-            "closer",
-            "to",
-            "that",
-            "?",
-            "4"
+            "ra"
         ],
         "word_labels": [
             0,
@@ -390,22 +332,70 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "it",
+            "'s",
+            "a",
+            "little",
+            "excessive",
+            ".",
+            "a",
+            "better",
+            "compiler",
+            "might",
+            "produce",
+            "this",
+            "(",
+            "using",
+            "the",
+            "real",
+            "MIPS",
+            "ABI",
+            ")",
+            ":",
+            "main",
+            ":",
+            "addi",
+            "sp",
+            ",",
+            "sp",
+            ",",
+            "-4",
+            "sw",
+            "ra",
+            ",",
+            "0(sp",
+            ")",
+            "li",
+            "a0",
+            ",",
+            "5",
+            "jal",
+            "println_i",
+            "lw",
+            "ra",
+            ",",
+            "0(sp",
+            ")",
+            "addi",
+            "sp",
+            ",",
+            "sp",
+            ",",
+            "4",
+            "jr",
+            "ra"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -458,9 +448,29 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "so",
+            "\u2026",
+            "how",
+            "do",
+            "we",
+            "get",
+            "closer",
+            "to",
+            "that",
+            "?",
+            "4"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -502,7 +512,9 @@
             "the",
             "AST",
             "to",
-            "machine/assembly",
+            "machine",
+            "/",
+            "assembly",
             "code",
             ".",
             "o",
@@ -568,8 +580,7 @@
             "are",
             "run",
             "(",
-            "i.e",
-            ".",
+            "i.e.",
             "\"",
             "this",
             "runs",
@@ -626,8 +637,7 @@
             "doing",
             "these",
             "analyses",
-            ".",
-            "5"
+            "."
         ],
         "word_labels": [
             0,
@@ -657,6 +667,8 @@
             0,
             1,
             2,
+            2,
+            2,
             0,
             0,
             0,
@@ -737,7 +749,6 @@
             0,
             0,
             0,
-            0,
             1,
             2,
             2,
@@ -779,6 +790,19 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "5"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -816,174 +840,18 @@
             "<",
             "10",
             "{",
-            "println_s",
-            "(",
-            "\"",
-            "hi",
+            "println_s(\"hi",
             "!",
             "\"",
             ")",
             ";",
             "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
+            "println_s(\"done",
             ".",
             "\"",
             ")",
             ";",
-            "Let",
-            "Id",
-            "(",
-            "x",
-            ")",
-            "IntLit",
-            "(",
-            "0",
-            ")",
-            "<",
-            "{",
-            "}",
-            "If",
-            "Call",
-            "Call",
-            "Id",
-            "(",
-            "x",
-            ")",
-            "IntLit",
-            "(",
-            "10",
-            ")",
-            "do",
-            "these",
-            "two",
-            "pieces",
-            "of",
-            "code",
-            "behave",
-            "similarly",
-            "?",
-            "not",
-            "at",
-            "all",
-            ".",
-            "is",
-            "it",
-            "easy",
-            "to",
-            "tell",
-            "that",
-            "by",
-            "looking",
-            "at",
-            "the",
-            "AST",
-            "?",
-            "Id",
-            "(",
-            "println_s",
-            ")",
-            "[",
-            "StrLit",
-            "(",
-            "\"",
-            "hi",
-            "\"",
-            ")",
-            "]",
-            "Id",
-            "(",
-            "println_s",
-            ")",
-            "[",
-            "StrLit",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            "]",
-            "not",
-            "really\u2026",
-            "{",
-            "}",
-            "let",
-            "x",
-            "=",
-            "0",
-            ";",
-            "while",
-            "x",
-            "<",
-            "10",
-            "{",
-            "println_s",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            ";",
-            "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            ";",
-            "Let",
-            "Id",
-            "(",
-            "x",
-            ")",
-            "IntLit",
-            "(",
-            "0",
-            ")",
-            "<",
-            "While",
-            "Call",
-            "Call",
-            "Id",
-            "(",
-            "x",
-            ")",
-            "IntLit",
-            "(",
-            "10",
-            ")",
-            "Id",
-            "(",
-            "println_s",
-            ")",
-            "[",
-            "StrLit",
-            "(",
-            "\"",
-            "hi",
-            "\"",
-            ")",
-            "]",
-            "Id",
-            "(",
-            "println_s",
-            ")",
-            "[",
-            "StrLit",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            "]",
-            "6"
+            "Let"
         ],
         "word_labels": [
             0,
@@ -1028,34 +896,119 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(x",
+            ")",
+            "IntLit(0",
+            ")",
+            "<"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "{",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "If",
+            "Call",
+            "Call"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(x",
+            ")",
+            "IntLit(10",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "do",
+            "these",
+            "two",
+            "pieces",
+            "of",
+            "code",
+            "behave",
+            "similarly",
+            "?",
+            "not",
+            "at",
+            "all",
+            ".",
+            "is",
+            "it",
+            "easy",
+            "to",
+            "tell",
+            "that",
+            "by",
+            "looking",
+            "at",
+            "the",
+            "AST",
+            "?"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1081,12 +1034,52 @@
             0,
             0,
             1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(println_s",
+            ")",
+            "[",
+            "StrLit(\"hi",
+            "\"",
+            ")",
+            "]"
+        ],
+        "word_labels": [
+            0,
             0,
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(println_s",
+            ")",
+            "[",
+            "StrLit(\"done",
+            ".",
+            "\"",
+            ")",
+            "]"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1095,11 +1088,62 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "not",
+            "really",
+            "\u2026",
+            "{",
+            "}"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "let",
+            "x",
+            "=",
+            "0",
+            ";",
+            "while",
+            "x",
+            "<",
+            "10",
+            "{",
+            "println_s(\"hi",
+            "!",
+            "\"",
+            ")",
+            ";",
+            "}",
+            "println_s(\"done",
+            ".",
+            "\"",
+            ")",
+            ";",
+            "Let"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1122,14 +1166,69 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(x",
+            ")",
+            "IntLit(0",
+            ")",
+            "<"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "While",
+            "Call",
+            "Call"
+        ],
+        "word_labels": [
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(x",
+            ")",
+            "IntLit(10",
+            ")",
+            "Id(println_s",
+            ")",
+            "[",
+            "StrLit(\"hi",
+            "\"",
+            ")",
+            "]"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1141,11 +1240,100 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Id(println_s",
+            ")",
+            "[",
+            "StrLit(\"done",
+            ".",
+            "\"",
+            ")",
+            "]"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "6"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [
+            "Sufficiently",
+            "Smart",
+            "Compilers",
+            "\u25cf",
+            "there",
+            "'s",
+            "a",
+            "(",
+            "possible",
+            ")",
+            "mistake",
+            "in",
+            "this",
+            "code",
+            "that",
+            "we",
+            "humans",
+            "can",
+            "see",
+            "easily",
+            ".",
+            "let",
+            "x",
+            "=",
+            "0",
+            ";",
+            "while",
+            "x",
+            "<",
+            "10",
+            "{",
+            "println_s(\"hi",
+            "!",
+            "\"",
+            ")",
+            ";",
+            "}",
+            "println_s(\"done",
+            ".",
+            "\"",
+            ")",
+            ";"
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -1188,55 +1376,12 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
         "sentence": [
-            "Sufficiently",
-            "Smart",
-            "Compilers",
-            "\u25cf",
-            "there",
-            "'s",
-            "a",
-            "(",
-            "possible",
-            ")",
-            "mistake",
-            "in",
-            "this",
-            "code",
-            "that",
-            "we",
-            "humans",
-            "can",
-            "see",
-            "easily",
-            ".",
-            "let",
-            "x",
-            "=",
-            "0",
-            ";",
-            "while",
-            "x",
-            "<",
-            "10",
-            "{",
-            "println_s",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            ";",
-            "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            ";",
+            "",
             "this",
             "loop",
             "never",
@@ -1244,15 +1389,55 @@
             ",",
             "does",
             "it",
-            "?",
+            "?"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "think",
             "about",
             "how",
             "you",
             "determined",
             "that",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1",
             ".",
-            "1.",
             "x",
             "is",
             "assigned",
@@ -1260,7 +1445,8 @@
             "constant",
             "0",
             ".",
-            "2.",
+            "2",
+            ".",
             "x",
             "is",
             "never",
@@ -1274,7 +1460,8 @@
             "the",
             "loop",
             ".",
-            "3.",
+            "3",
+            ".",
             "so",
             ",",
             "x",
@@ -1285,8 +1472,10 @@
             "in",
             "the",
             "loop",
-            "condition\u2026",
-            "4.",
+            "condition",
+            "\u2026",
+            "4",
+            ".",
             "and",
             "0",
             "<",
@@ -1326,63 +1515,6 @@
             "7"
         ],
         "word_labels": [
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1505,108 +1637,20 @@
             "<",
             "10",
             "{",
-            "println_s",
-            "(",
-            "\"",
-            "hi",
+            "println_s(\"hi",
             "!",
             "\"",
             ")",
             ";",
             "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
+            "println_s(\"done",
             ".",
             "\"",
             ")",
             ";",
             "x",
             "=",
-            "0",
-            "x",
-            "<",
-            "10",
-            "?",
-            "p",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            "flowcharts",
-            "make",
-            "it",
-            "immediately",
-            "obvious",
-            "that",
-            "the",
-            "structure",
-            "of",
-            "these",
-            "two",
-            "programs",
-            "is",
-            "different",
-            ".",
-            "p",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            "let",
-            "x",
-            "=",
-            "0",
-            ";",
-            "while",
-            "x",
-            "<",
-            "10",
-            "{",
-            "println_s",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            ";",
-            "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            ";",
-            "x",
-            "=",
-            "0",
-            "x",
-            "<",
-            "10",
-            "?",
-            "p",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            "p",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            "8"
+            "0"
         ],
         "word_labels": [
             0,
@@ -1662,23 +1706,73 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "x",
+            "<",
+            "10",
+            "?"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"done",
+            ".",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "flowcharts",
+            "make",
+            "it",
+            "immediately",
+            "obvious",
+            "that",
+            "the",
+            "structure",
+            "of",
+            "these",
+            "two",
+            "programs",
+            "is",
+            "different",
+            "."
+        ],
+        "word_labels": [
             0,
             1,
             0,
@@ -1694,6 +1788,62 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"hi",
+            "!",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "let",
+            "x",
+            "=",
+            "0",
+            ";",
+            "while",
+            "x",
+            "<",
+            "10",
+            "{",
+            "println_s(\"hi",
+            "!",
+            "\"",
+            ")",
+            ";",
+            "}",
+            "println_s(\"done",
+            ".",
+            "\"",
+            ")",
+            ";",
+            "x",
+            "=",
+            "0"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1718,33 +1868,63 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "x",
+            "<",
+            "10",
+            "?"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"hi",
+            "!",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"done",
+            ".",
+            "\"",
+            ")",
+            "8"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1781,92 +1961,8 @@
             "us",
             "to",
             "the",
-            "condition\u2026",
-            "x",
-            "=",
-            "0",
-            "x",
-            "<",
-            "10",
-            "?",
-            "p",
-            "(",
-            "\"",
-            "done",
-            ".",
-            "\"",
-            ")",
-            "p",
-            "(",
-            "\"",
-            "hi",
-            "!",
-            "\"",
-            ")",
-            "then",
-            "we",
-            "can",
-            "see",
-            "that",
-            "the",
-            "only",
-            "possible",
-            "value",
-            "for",
-            "x",
-            "is",
-            "the",
-            "constant",
-            "0.",
-            "we",
-            "could",
-            "give",
-            "an",
-            "error",
-            "(",
-            "or",
-            "warning",
-            ")",
-            "about",
-            "the",
             "condition",
-            ",",
-            "or",
-            "tell",
-            "them",
-            "that",
-            "this",
-            "last",
-            "piece",
-            "of",
-            "code",
-            "is",
-            "unreachable",
-            ".",
-            "this",
-            "sort",
-            "of",
-            "algorithm",
-            "is",
-            "crucial",
-            "for",
-            "detecting",
-            "subtle",
-            "bugs",
-            ",",
-            "doing",
-            "certain",
-            "kinds",
-            "of",
-            "semantic",
-            "analysis",
-            ",",
-            "and",
-            "generating",
-            "better",
-            "code",
-            ".",
-            "9"
+            "\u2026"
         ],
         "word_labels": [
             0,
@@ -1896,6 +1992,165 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "x",
+            "=",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "x",
+            "<",
+            "10",
+            "?"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"done",
+            ".",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"hi",
+            "!",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "then",
+            "we",
+            "can",
+            "see",
+            "that",
+            "the",
+            "only",
+            "possible",
+            "value",
+            "for",
+            "x",
+            "is",
+            "the",
+            "constant",
+            "0",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "we",
+            "could",
+            "give",
+            "an",
+            "error",
+            "(",
+            "or",
+            "warning",
+            ")",
+            "about",
+            "the",
+            "condition",
+            ",",
+            "or",
+            "tell",
+            "them",
+            "that",
+            "this",
+            "last",
+            "piece",
+            "of",
+            "code",
+            "is",
+            "unreachable",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1921,41 +2176,42 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "sort",
+            "of",
+            "algorithm",
+            "is",
+            "crucial",
+            "for",
+            "detecting",
+            "subtle",
+            "bugs",
+            ",",
+            "doing",
+            "certain",
+            "kinds",
+            "of",
+            "semantic",
+            "analysis",
+            ",",
+            "and",
+            "generating",
+            "better",
+            "code",
+            ".",
+            "9"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -1989,14 +2245,26 @@
             "Representation",
             "(",
             "IR",
-            ")",
-            "10"
+            ")"
         ],
         "word_labels": [
             1,
             2,
             0,
             1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "10"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -2028,27 +2296,10 @@
             "source",
             "language",
             "can",
-            "be\u2026",
+            "be",
+            "\u2026",
             "complicated",
-            ".",
-            "shhhHHHHHHHHHH",
-            "there",
-            "are",
-            "so",
-            "many",
-            "pieces",
-            "of",
-            "syntax",
-            "!",
-            "so",
-            "many",
-            "kinds",
-            "of",
-            "AST",
-            "nodes",
-            "!",
-            "aaaHHH",
-            "11"
+            "."
         ],
         "word_labels": [
             0,
@@ -2079,6 +2330,49 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "shhhHHHHHHHHHH"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "there",
+            "are",
+            "so",
+            "many",
+            "pieces",
+            "of",
+            "syntax",
+            "!",
+            "so",
+            "many",
+            "kinds",
+            "of",
+            "AST",
+            "nodes",
+            "!",
+            "aaaHHH",
+            "11"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2125,10 +2419,73 @@
             "not",
             "very",
             "flexible",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Truss",
-            "AST",
-            "Codegen",
+            "AST"
+        ],
+        "word_labels": [
+            0,
+            1,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Codegen"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "what",
             "if",
             "you",
@@ -2144,7 +2501,35 @@
             "the",
             "AST",
             "representation",
-            "?",
+            "?"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "MIPS",
             "Code",
             "what",
@@ -2157,7 +2542,32 @@
             "different",
             "target",
             "language",
-            "?",
+            "?"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "this",
             "algorithm",
             "tightly",
@@ -2186,62 +2596,6 @@
             "12"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
             0,
             0,
             0,
@@ -2304,76 +2658,7 @@
             "cond",
             "{",
             "code",
-            "}",
-            "while",
-            "cond",
-            "{",
-            "code",
-            "}",
-            "for",
-            "i",
-            "in",
-            "lo",
-            ",",
-            "hi",
-            "{",
-            "code",
-            "}",
-            "if",
-            "!",
-            "<",
-            "cond",
-            ">",
-            "goto",
-            "end",
-            "<",
-            "code",
-            ">",
-            "end",
-            ":",
-            "top",
-            ":",
-            "if",
-            "!",
-            "<",
-            "cond",
-            ">",
-            "goto",
-            "end",
-            "<",
-            "code",
-            ">",
-            "goto",
-            "top",
-            "end",
-            ":",
-            "i",
-            "=",
-            "<",
-            "lo",
-            ">",
-            "top",
-            ":",
-            "if",
-            "i",
-            ">",
-            "=",
-            "<",
-            "hi",
-            ">",
-            "goto",
-            "end",
-            "<",
-            "code",
-            ">",
-            "i",
-            "+=",
-            "1",
-            "goto",
-            "top",
-            "end",
-            ":",
-            "13"
+            "}"
         ],
         "word_labels": [
             0,
@@ -2407,6 +2692,49 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "while",
+            "cond",
+            "{",
+            "code",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "for",
+            "i",
+            "in",
+            "lo",
+            ",",
+            "hi",
+            "{",
+            "code",
+            "}"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2416,11 +2744,73 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "if",
+            "!",
+            "<",
+            "cond",
+            ">",
+            "goto",
+            "end",
+            "<",
+            "code",
+            ">",
+            "end",
+            ":",
+            "top",
+            ":",
+            "if",
+            "!",
+            "<",
+            "cond",
+            ">",
+            "goto",
+            "end",
+            "<",
+            "code",
+            ">",
+            "goto",
+            "top",
+            "end",
+            ":",
+            "i",
+            "=",
+            "<",
+            "lo",
+            ">",
+            "top",
+            ":",
+            "if",
+            "i",
+            ">",
+            "=",
+            "<",
+            "hi",
+            ">",
+            "goto",
+            "end",
+            "<",
+            "code",
+            ">",
+            "i",
+            "+",
+            "=",
+            "1",
+            "goto",
+            "top",
+            "end",
+            ":"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -2480,13 +2870,94 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "13"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "So",
-            "instead\u2026",
-            "Frontend",
-            "Semantic",
-            "AST",
-            "Lowering",
+            "instead",
+            "\u2026"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Frontend"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Semantic"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "AST"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Lowering"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "\u25cf",
             "an",
             "intermediate",
@@ -2512,16 +2983,123 @@
             "languages",
             ".",
             "MIPS",
-            "Backend",
-            "Codegen",
+            "Backend"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Codegen"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "MIPS",
-            "code",
+            "code"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "IR",
             "x86",
-            "Backend",
-            "Codegen",
+            "Backend"
+        ],
+        "word_labels": [
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Codegen"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "x86",
-            "code",
+            "code"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "now",
             "we",
             "can",
@@ -2550,50 +3128,10 @@
             "the",
             "codegen",
             ",",
-            "etc\u2026",
-            "14"
+            "etc",
+            "\u2026"
         ],
         "word_labels": [
-            0,
-            0,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            1,
-            2,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            2,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
             0,
             0,
             0,
@@ -2628,6 +3166,20 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "14"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "IR",
             "Goals",
@@ -2644,13 +3196,16 @@
             "simple",
             "operations",
             "o",
-            "\u2026which",
+            "\u2026",
+            "which",
             "can",
             "be",
             "efficiently",
             "implemented",
             "on",
-            "most/all",
+            "most",
+            "/",
+            "all",
             "targets",
             "\u25cf",
             "so",
@@ -2659,7 +3214,8 @@
             "similar",
             "to",
             "assembly",
-            "language\u2026",
+            "language",
+            "\u2026",
             "o",
             "but",
             "without",
@@ -2679,7 +3235,8 @@
             "would",
             "also",
             "be",
-            "nice\u2026",
+            "nice",
+            "\u2026",
             "o",
             "optimization",
             "rewrites",
@@ -2768,8 +3325,7 @@
             "goals",
             "and",
             "structure",
-            ".",
-            "15"
+            "."
         ],
         "word_labels": [
             1,
@@ -2801,8 +3357,12 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
             1,
             2,
+            0,
             0,
             0,
             0,
@@ -2916,14 +3476,40 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "15"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "Our",
-            "IR",
+            "IR"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "16"
         ],
         "word_labels": [
             0,
-            1,
             0
         ]
     },
@@ -2964,16 +3550,62 @@
             "(",
             ")",
             "{",
-            "println_i",
-            "(",
-            "5",
+            "println_i(5",
             ")",
             ";",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "fn",
-            "test",
-            "(",
-            "x",
+            "test(x",
             ":",
             "bool",
             ")",
@@ -2981,25 +3613,53 @@
             "if",
             "x",
             "{",
-            "println_s",
-            "(",
-            "\"",
-            "y",
+            "println_s(\"y",
             "\"",
             ")",
             ";",
             "}",
             "else",
             "{",
-            "println_s",
-            "(",
-            "\"",
-            "n",
+            "println_s(\"n",
             "\"",
             ")",
             ";",
             "}",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "each",
             "node",
             "in",
@@ -3046,82 +3706,12 @@
             "are",
             "clearly",
             "making",
-            "decisions\u2026",
-            "17"
+            "decisions",
+            "\u2026"
         ],
         "word_labels": [
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
             0,
             0,
@@ -3167,6 +3757,20 @@
             0,
             0,
             0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "17"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -3197,7 +3801,43 @@
             "does",
             "one",
             "thing",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "d",
             "=",
             "(",
@@ -3219,7 +3859,41 @@
             "asm",
             ",",
             "good",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "$",
             "t1",
             "=",
@@ -3248,143 +3922,9 @@
             ",",
             "source",
             ",",
-            "operation",
-            "add",
-            "neg",
-            "div",
-            "mul",
-            "$",
-            "t1",
-            ",",
-            "x",
-            ",",
-            "y",
-            "$",
-            "t2",
-            ",",
-            "z",
-            "$",
-            "t3",
-            ",",
-            "$",
-            "t2",
-            ",",
-            "w",
-            "d",
-            ",",
-            "$",
-            "t1",
-            ",",
-            "$",
-            "t3",
-            "it",
-            "'s",
-            "kind",
-            "of",
-            "like",
-            "asm",
-            "without",
-            "loads/stores",
-            ",",
-            "and",
-            "with",
-            "infinite",
-            "temporary",
-            "registers",
-            ".",
-            "18"
+            "operation"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3418,8 +3958,138 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
         "sentence": [
-            "Locals/temporaries",
+            "",
+            "add",
+            "neg",
+            "div",
+            "mul"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "$",
+            "t1",
+            ",",
+            "x",
+            ",",
+            "y",
+            "$",
+            "t2",
+            ",",
+            "z",
+            "$",
+            "t3",
+            ",",
+            "$",
+            "t2",
+            ",",
+            "w",
+            "d",
+            ",",
+            "$",
+            "t1",
+            ",",
+            "$",
+            "t3"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "it",
+            "'s",
+            "kind",
+            "of",
+            "like",
+            "asm",
+            "without",
+            "loads",
+            "/",
+            "stores",
+            ",",
+            "and",
+            "with",
+            "infinite",
+            "temporary",
+            "registers",
+            ".",
+            "18"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [
+            "Locals",
+            "/",
+            "temporaries",
             "\u25cf",
             "each",
             "function",
@@ -3458,9 +4128,7 @@
             "generation",
             ".",
             "fn",
-            "func",
-            "(",
-            "a",
+            "func(a",
             ":",
             "int",
             ",",
@@ -3480,12 +4148,86 @@
             "*",
             "3",
             ";",
-            "println_i",
-            "(",
-            "x",
+            "println_i(x",
             ")",
             ";",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "each",
             "local",
             "has",
@@ -3500,12 +4242,80 @@
             "the",
             "code",
             ")",
-            ".",
-            "Locals",
-            "Code",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Locals"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Code"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Idx",
             "Name",
-            "Type",
+            "Type"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "$",
             "t3",
             "=",
@@ -3518,22 +4328,166 @@
             "t3",
             "*",
             "3",
-            "println_i",
-            "(",
-            "x",
+            "println_i(x",
             ")",
-            "return",
-            "0",
+            "return"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "0"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "(",
-            ")",
-            "1",
-            "a",
-            "int",
-            "2",
-            "b",
-            "int",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "b"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "3",
-            "4",
+            "4"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "if",
             "a",
             "local",
@@ -3564,134 +4518,14 @@
             "to",
             "$",
             "t0",
-            "shortly\u2026",
-            "int",
-            "x",
-            "int",
-            "19"
+            "shortly",
+            "\u2026"
         ],
         "word_labels": [
+            0,
+            0,
+            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3724,6 +4558,50 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int",
+            "x"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "19"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "Places",
             ",",
@@ -3743,7 +4621,37 @@
             "than",
             "in",
             "assembly",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Sources",
             "Places",
             "Locals",
@@ -3758,7 +4666,34 @@
             "Fields",
             "(",
             "x.y",
-            ")",
+            ")"
+        ],
+        "word_labels": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "a",
             "place",
             "is",
@@ -3771,7 +4706,32 @@
             "of",
             "an",
             "assignment",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Constants",
             "Int",
             "Literals",
@@ -3780,7 +4740,28 @@
             "Bool",
             "Literals",
             "Function",
-            "Addresses",
+            "Addresses"
+        ],
+        "word_labels": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "a",
             "constant",
             "is",
@@ -3797,7 +4778,36 @@
             "in",
             "function",
             "calls",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "both",
             "places",
             "and",
@@ -3825,78 +4835,6 @@
             "20"
         ],
         "word_labels": [
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             1,
@@ -3944,7 +4882,36 @@
             ".",
             "x",
             "=",
-            "1",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "simple",
             "assignment",
             "of",
@@ -3953,11 +4920,48 @@
             "to",
             "a",
             "local",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "$",
             "t5.y",
             "=",
-            "x.y",
+            "x.y"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "field",
             "access",
             "can",
@@ -3968,14 +4972,40 @@
             "or",
             "both",
             ")",
-            "side",
-            "(",
-            "s",
+            "side(s",
             ")",
             "of",
             "an",
             "assignment",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "x.y",
             "=",
             "a.b.c",
@@ -4001,13 +5031,49 @@
             "\"",
             "+",
             "does",
-            ".",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "$",
             "t0",
             "=",
-            "f",
-            "(",
-            "1",
+            "f(1",
             ",",
             "$",
             "t1",
@@ -4029,32 +5095,7 @@
             "p",
             "=",
             "&",
-            "println_s",
-            "a",
-            "function",
-            "'s",
-            "address",
-            "can",
-            "be",
-            "put",
-            "in",
-            "a",
-            "place\u2026",
-            "p",
-            "(",
-            "\"",
-            "hi",
-            "\"",
-            ")",
-            "\u2026and",
-            "then",
-            "that",
-            "place",
-            "can",
-            "be",
-            "called",
-            ".",
-            "21"
+            "println_s"
         ],
         "word_labels": [
             0,
@@ -4066,82 +5107,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
             2,
             0,
@@ -4159,6 +5124,29 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a",
+            "function",
+            "'s",
+            "address",
+            "can",
+            "be",
+            "put",
+            "in",
+            "a",
+            "place",
+            "\u2026"
+        ],
+        "word_labels": [
             0,
             0,
             1,
@@ -4170,10 +5158,46 @@
             0,
             0,
             1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "p(\"hi",
+            "\"",
+            ")"
+        ],
+        "word_labels": [
             0,
             0,
             0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "\u2026",
+            "and",
+            "then",
+            "that",
+            "place",
+            "can",
+            "be",
+            "called",
+            ".",
+            "21"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4224,45 +5248,7 @@
             "from",
             "the",
             "function",
-            ".",
-            "a",
-            "goto",
-            "terminator",
-            "unconditionally",
-            "goes",
-            "to",
-            "another",
-            "BB",
-            ".",
-            "...",
-            "return",
-            "...",
-            "goto",
-            "bb7",
-            "and",
-            "a",
-            "conditional",
-            "terminator",
-            "goes",
-            "to",
-            "one",
-            "of",
-            "two",
-            "BBs",
-            ",",
-            "based",
-            "on",
-            "the",
-            "condition",
-            ".",
-            "...",
-            "if",
-            "$",
-            "t4",
-            "bb9",
-            "else",
-            "bb12",
-            "22"
+            "."
         ],
         "word_labels": [
             1,
@@ -4300,6 +5286,27 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a",
+            "goto",
+            "terminator",
+            "unconditionally",
+            "goes",
+            "to",
+            "another",
+            "BB",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             1,
@@ -4309,11 +5316,76 @@
             0,
             0,
             1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "...",
+            "return"
+        ],
+        "word_labels": [
+            0,
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "...",
+            "goto",
+            "bb7"
+        ],
+        "word_labels": [
             0,
             0,
             1,
-            0,
-            1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "and",
+            "a",
+            "conditional",
+            "terminator",
+            "goes",
+            "to",
+            "one",
+            "of",
+            "two",
+            "BBs",
+            ",",
+            "based",
+            "on",
+            "the",
+            "condition",
+            ".",
+            "...",
+            "if",
+            "$",
+            "t4",
+            "bb9",
+            "else",
+            "bb12",
+            "22"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4396,9 +5468,7 @@
             "it",
             ".",
             "fn",
-            "f",
-            "(",
-            "x",
+            "f(x",
             ":",
             "bool",
             ",",
@@ -4416,10 +5486,7 @@
             "return",
             ";",
             "}",
-            "println_s",
-            "(",
-            "\"",
-            "just",
+            "println_s(\"just",
             "x",
             "\"",
             ")",
@@ -4427,10 +5494,7 @@
             "}",
             "else",
             "{",
-            "println_s",
-            "(",
-            "\"",
-            "not",
+            "println_s(\"not",
             "x",
             "\"",
             ")",
@@ -4438,61 +5502,11 @@
             "return",
             ";",
             "}",
-            "println_s",
-            "(",
-            "\"",
-            "done",
+            "println_s(\"done",
             "\"",
             ")",
             ";",
-            "}",
-            "notice",
-            "how",
-            "both",
-            "returns",
-            "become",
-            "arrows",
-            "to",
-            "the",
-            "red",
-            "BB",
-            "(",
-            "which",
-            "has",
-            "a",
-            "return",
-            "terminator",
-            ")",
-            ".",
-            "bb0",
-            "not",
-            "x",
-            "just",
-            "x",
-            "done",
-            "this",
-            "is",
-            "going",
-            "to",
-            "make",
-            "certain",
-            "analyses",
-            "much",
-            "easier",
-            ",",
-            "since",
-            "some",
-            "of",
-            "them",
-            "start",
-            "at",
-            "the",
-            "end",
-            "and",
-            "go",
-            "backwards",
-            ".",
-            "23"
+            "}"
         ],
         "word_labels": [
             0,
@@ -4563,15 +5577,7 @@
             0,
             0,
             0,
-            0,
-            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -4594,9 +5600,36 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "notice",
+            "how",
+            "both",
+            "returns",
+            "become",
+            "arrows",
+            "to",
+            "the",
+            "red",
+            "BB",
+            "(",
+            "which",
+            "has",
+            "a",
+            "return",
+            "terminator",
+            ")",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4615,12 +5648,77 @@
             1,
             2,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb0",
+            "not",
+            "x"
+        ],
+        "word_labels": [
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "just",
+            "x",
+            "done"
+        ],
+        "word_labels": [
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "is",
+            "going",
+            "to",
+            "make",
+            "certain",
+            "analyses",
+            "much",
+            "easier",
+            ",",
+            "since",
+            "some",
+            "of",
+            "them",
+            "start",
+            "at",
+            "the",
+            "end",
+            "and",
+            "go",
+            "backwards",
+            ".",
+            "23"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -4697,9 +5795,7 @@
             "terminator",
             ".",
             "fn",
-            "ret",
-            "(",
-            "x",
+            "ret(x",
             ":",
             "bool",
             ")",
@@ -4719,71 +5815,7 @@
             "10",
             ";",
             "}",
-            "}",
-            "Locals",
-            "Idx",
-            "Name",
-            "Type",
-            "0",
-            "1",
-            "int",
-            "x",
-            "bool",
-            "bb0",
-            ":",
-            "if",
-            "x",
-            "bb1",
-            "else",
-            "bb2",
-            "bb1",
-            ":",
-            "$",
-            "t0",
-            "=",
-            "5",
-            "goto",
-            "bb3",
-            "bb2",
-            ":",
-            "$",
-            "t0",
-            "=",
-            "10",
-            "goto",
-            "bb3",
-            "bb3",
-            ":",
-            "return",
-            "the",
-            "special",
-            "parsing",
-            "rule",
-            "about",
-            "returning",
-            "statements",
-            "(",
-            "remember",
-            "that",
-            "?",
-            ")",
-            "along",
-            "with",
-            "the",
-            "typechecking",
-            "pass",
-            "will",
-            "ensure",
-            "that",
-            "this",
-            "location",
-            "is",
-            "always",
-            "assigned",
-            "a",
-            "value",
-            ".",
-            "24"
+            "}"
         ],
         "word_labels": [
             1,
@@ -4854,6 +5886,153 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Locals"
+        ],
+        "word_labels": [
+            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Idx",
+            "Name",
+            "Type",
+            "0",
+            "1"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int",
+            "x"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bool"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb0",
+            ":",
+            "if",
+            "x",
+            "bb1",
+            "else",
+            "bb2"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb1",
+            ":",
+            "$",
+            "t0",
+            "=",
+            "5",
+            "goto",
+            "bb3"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb2",
+            ":",
+            "$",
+            "t0",
+            "=",
+            "10",
+            "goto",
+            "bb3",
+            "bb3",
+            ":",
+            "return"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -4861,37 +6040,48 @@
             0,
             0,
             0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "the",
+            "special",
+            "parsing",
+            "rule",
+            "about",
+            "returning",
+            "statements",
+            "(",
+            "remember",
+            "that",
+            "?",
+            ")",
+            "along",
+            "with",
+            "the",
+            "typechecking",
+            "pass",
+            "will",
+            "ensure",
+            "that",
+            "this",
+            "location",
+            "is",
+            "always",
+            "assigned",
+            "a",
+            "value",
+            ".",
+            "24"
+        ],
+        "word_labels": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             1,
@@ -4928,13 +6118,25 @@
             "Codegen",
             ",",
             "but",
-            "different",
-            "25"
+            "different"
         ],
         "word_labels": [
             1,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "25"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -4950,14 +6152,18 @@
             "of",
             "converting",
             "the",
-            "high-level",
+            "high",
+            "-",
+            "level",
             ",",
             "abstract",
             "syntax",
             "tree",
             "into",
             "the",
-            "mid-level",
+            "mid",
+            "-",
+            "level",
             "IR",
             "that",
             "we",
@@ -5045,8 +6251,7 @@
             "left",
             "out",
             "(",
-            "e.g",
-            ".",
+            "e.g.",
             "a",
             "+",
             "b",
@@ -5105,67 +6310,19 @@
             0,
             0,
             0,
-            1,
-            2,
-            2,
-            0,
             0,
             0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            2,
+            2,
             0,
             0,
             0,
             0,
             0,
             1,
-            2,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            2,
             0,
             0,
             0,
@@ -5188,8 +6345,59 @@
             0,
             0,
             0,
-            1,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -5253,7 +6461,9 @@
             "the",
             "CFG",
             ":",
-            "straight-line",
+            "straight",
+            "-",
+            "line",
             "code",
             "(",
             "animated",
@@ -5273,9 +6483,7 @@
             "simple",
             ".",
             "fn",
-            "do_gravity",
-            "(",
-            "vy",
+            "do_gravity(vy",
             ":",
             "int",
             ")",
@@ -5292,9 +6500,7 @@
             "let",
             "ret",
             "=",
-            "min",
-            "(",
-            "vy",
+            "min(vy",
             "+",
             "98",
             ",",
@@ -5307,9 +6513,7 @@
             "into",
             "it",
             ".",
-            "println_i",
-            "(",
-            "ret",
+            "println_i(ret",
             ")",
             ";",
             "bb0",
@@ -5325,18 +6529,13 @@
             ";",
             "ret",
             "=",
-            "min",
-            "(",
-            "$",
-            "t2",
+            "min($t2",
             ",",
             "800",
             ")",
             "}",
             "Locals",
-            "println_i",
-            "(",
-            "ret",
+            "println_i(ret",
             ")",
             "$",
             "t0",
@@ -5349,45 +6548,14 @@
             "bb1",
             "0",
             "int",
-            "1",
-            "vy",
-            "2",
-            "3",
-            "int",
-            "int",
-            "ret",
-            "int",
-            "bb1",
-            ":",
-            "return",
-            "we",
-            "can",
-            "make",
-            "a",
-            "new",
-            "BB",
-            "for",
-            "the",
-            "return",
-            "like",
-            "here",
-            ",",
-            "or",
-            "special-case",
-            "it",
-            "if",
-            "we",
-            "want",
-            "a",
-            "simpler",
-            "CFG",
-            ".",
-            "27"
+            "1"
         ],
         "word_labels": [
             0,
             0,
             1,
+            0,
+            0,
             0,
             0,
             0,
@@ -5420,6 +6588,18 @@
             0,
             0,
             0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             1,
@@ -5448,27 +6628,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
             0,
             0,
@@ -5483,12 +6642,147 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "vy"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "2"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "3"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int",
+            "int"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "ret"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "int"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb1",
+            ":",
+            "return"
+        ],
+        "word_labels": [
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            1
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "we",
+            "can",
+            "make",
+            "a",
+            "new",
+            "BB",
+            "for",
+            "the",
+            "return",
+            "like",
+            "here",
+            ",",
+            "or",
+            "special",
+            "-",
+            "case",
+            "it",
+            "if",
+            "we",
+            "want",
+            "a",
+            "simpler",
+            "CFG",
+            ".",
+            "27"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5498,13 +6792,9 @@
             1,
             0,
             0,
-            0,
-            0,
-            0,
             1,
             0,
             0,
-            1,
             0,
             0,
             0,
@@ -5544,12 +6834,11 @@
             "BBs",
             "need",
             "to",
-            "begin/end",
+            "begin",
+            "/",
+            "end",
             ".",
-            "println_s",
-            "(",
-            "\"",
-            "nums",
+            "println_s(\"nums",
             ":",
             "\"",
             ")",
@@ -5564,9 +6853,7 @@
             ">",
             "0",
             "{",
-            "println_i",
-            "(",
-            "i",
+            "println_i(i",
             ")",
             ";",
             "i",
@@ -5575,88 +6862,7 @@
             "\u2013",
             "2",
             ";",
-            "}",
-            "the",
-            "loop",
-            "needs",
-            "a",
-            "new",
-            "BB",
-            ".",
-            "when",
-            "we",
-            "start",
-            "a",
-            "new",
-            "BB",
-            ",",
-            "the",
-            "previous",
-            "one",
-            "must",
-            "goto",
-            "the",
-            "new",
-            "one",
-            ".",
-            "done",
-            "with",
-            "the",
-            "body",
-            ";",
-            "make",
-            "a",
-            "new",
-            "BB",
-            "after",
-            "it",
-            ".",
-            "bb0",
-            ":",
-            "println_s",
-            "(",
-            "\"",
-            "nums",
-            ":",
-            "\"",
-            ")",
-            "i",
-            "=",
-            "10",
-            "goto",
-            "bb1",
-            "bb1",
-            ":",
-            "$",
-            "t2",
-            "=",
-            "i",
-            ">",
-            "0",
-            "if",
-            "$",
-            "t2",
-            "then",
-            "bb2",
-            "else",
-            "bb_",
-            "3",
-            "bb2",
-            ":",
-            "println_i",
-            "(",
-            "i",
-            ")",
-            "i",
-            "=",
-            "i",
-            "-",
-            "2",
-            "goto",
-            "bb1",
-            "bb3",
-            ":",
-            "28"
+            "}"
         ],
         "word_labels": [
             0,
@@ -5708,9 +6914,53 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "the",
+            "loop",
+            "needs",
+            "a",
+            "new",
+            "BB",
+            ".",
+            "when",
+            "we",
+            "start",
+            "a",
+            "new",
+            "BB",
+            ",",
+            "the",
+            "previous",
+            "one",
+            "must",
+            "goto",
+            "the",
+            "new",
+            "one",
+            ".",
+            "done",
+            "with",
+            "the",
+            "body",
+            ";",
+            "make",
+            "a",
+            "new",
+            "BB",
+            "after",
+            "it",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5746,9 +6996,46 @@
             1,
             0,
             0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb0",
+            ":",
+            "println_s(\"nums",
+            ":",
+            "\"",
+            ")",
+            "i",
+            "=",
+            "10",
+            "goto",
+            "bb1",
+            "bb1",
+            ":",
+            "$",
+            "t2",
+            "=",
+            "i",
+            ">",
+            "0",
+            "if",
+            "$",
+            "t2",
+            "then",
+            "bb2",
+            "else",
+            "bb",
+            "_",
+            "3"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5777,7 +7064,32 @@
             0,
             0,
             0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "bb2",
+            ":",
+            "println_i(i",
+            ")",
+            "i",
+            "=",
+            "i",
+            "-",
+            "2",
+            "goto",
+            "bb1",
+            "bb3",
+            ":",
+            "28"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5813,31 +7125,7 @@
             "make",
             "each",
             "CFG",
-            "?",
-            "while",
-            "true",
-            "if",
-            "if",
-            "\u2026",
-            "else",
-            "if",
-            "\u2026",
-            "else",
-            "for",
-            "(",
-            "i=a",
-            ";",
-            "i",
-            "<",
-            "b",
-            ";",
-            "i++",
-            ")",
-            "{",
-            "\u2026",
-            "}",
-            "while",
-            "29"
+            "?"
         ],
         "word_labels": [
             0,
@@ -5856,9 +7144,69 @@
             0,
             0,
             1,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "while",
+            "true"
+        ],
+        "word_labels": [
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "if"
+        ],
+        "word_labels": [
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "if",
+            "\u2026",
+            "else",
+            "if",
+            "\u2026",
+            "else",
+            "for(i",
+            "=",
+            "a",
+            ";",
+            "i",
+            "<",
+            "b",
+            ";",
+            "i++",
+            ")",
+            "{",
+            "\u2026",
+            "}",
+            "while",
+            "29"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -5886,13 +7234,29 @@
     {
         "sentence": [
             "Some",
-            "graph-related",
-            "stuff",
-            "30"
+            "graph",
+            "-",
+            "related",
+            "stuff"
         ],
         "word_labels": [
             0,
             0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "30"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -5928,66 +7292,7 @@
             "point",
             "to",
             "it",
-            ".",
-            "a",
-            "BB",
-            "'s",
-            "successors",
-            "are",
-            "the",
-            "BBs",
-            "which",
-            "it",
-            "points",
-            "to",
-            ".",
-            "a",
-            "BB",
-            "can",
-            "be",
-            "its",
-            "own",
-            "successor",
-            ",",
-            "in",
-            "which",
-            "case",
-            "it",
-            "is",
-            "also",
-            "its",
-            "own",
-            "predecessor",
-            "!",
-            "a",
-            "back",
-            "edge",
-            "is",
-            "one",
-            "that",
-            "goes",
-            "back",
-            "to",
-            "an",
-            "earlier",
-            "BB",
-            ".",
-            "remember",
-            ":",
-            "whenever",
-            "you",
-            "see",
-            "cyclic",
-            "graphs",
-            ",",
-            "things",
-            "are",
-            "gon",
-            "na",
-            "get",
-            "weird",
-            ".",
-            "31"
+            "."
         ],
         "word_labels": [
             0,
@@ -6019,6 +7324,30 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a",
+            "BB",
+            "'s",
+            "successors",
+            "are",
+            "the",
+            "BBs",
+            "which",
+            "it",
+            "points",
+            "to",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             1,
@@ -6031,6 +7360,36 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a",
+            "BB",
+            "can",
+            "be",
+            "its",
+            "own",
+            "successor",
+            ",",
+            "in",
+            "which",
+            "case",
+            "it",
+            "is",
+            "also",
+            "its",
+            "own",
+            "predecessor",
+            "!"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6049,6 +7408,47 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "a",
+            "back",
+            "edge",
+            "is",
+            "one",
+            "that",
+            "goes",
+            "back",
+            "to",
+            "an",
+            "earlier",
+            "BB",
+            ".",
+            "remember",
+            ":",
+            "whenever",
+            "you",
+            "see",
+            "cyclic",
+            "graphs",
+            ",",
+            "things",
+            "are",
+            "gon",
+            "na",
+            "get",
+            "weird",
+            ".",
+            "31"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6116,16 +7516,57 @@
             ".",
             "1",
             "2",
-            "3",
+            "3"
+        ],
+        "word_labels": [
+            1,
+            2,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "fn",
-            "visit_node",
-            "(",
-            "n",
+            "visit_node(n",
             ")",
             "{",
-            "print",
-            "(",
-            "n",
+            "print(n",
             "'s",
             "number",
             ")",
@@ -6137,13 +7578,44 @@
             "(",
             ")",
             "{",
-            "visit_node",
-            "(",
-            "s",
+            "visit_node(s",
             ")",
             ";",
             "}",
-            "}",
+            "}"
+        ],
+        "word_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "if",
             "we",
             "run",
@@ -6155,20 +7627,49 @@
             ",",
             "what",
             "happens",
-            "?",
+            "?"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "we",
             "'ll",
             "visit",
             "node",
-            "1\u2026",
+            "1",
+            "\u2026",
             "then",
-            "2\u2026",
+            "2",
+            "\u2026",
             "then",
-            "1\u2026",
+            "1",
+            "\u2026",
             "then",
-            "2\u2026",
+            "2",
+            "\u2026",
             "then",
-            "1\u2026",
+            "1",
+            "\u2026",
             "clearly",
             "this",
             "is",
@@ -6197,13 +7698,8 @@
             "32"
         ],
         "word_labels": [
-            1,
-            2,
-            2,
             0,
-            1,
             0,
-            1,
             0,
             0,
             0,
@@ -6221,7 +7717,6 @@
             0,
             0,
             0,
-            1,
             0,
             0,
             0,
@@ -6232,8 +7727,6 @@
             0,
             0,
             0,
-            1,
-            1,
             0,
             0,
             0,
@@ -6244,65 +7737,6 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             0,
@@ -6315,7 +7749,9 @@
         "sentence": [
             "Postorder",
             "using",
-            "depth-first",
+            "depth",
+            "-",
+            "first",
             "traversal",
             "\u25cf",
             "a",
@@ -6342,25 +7778,19 @@
             "visited",
             ".",
             "fn",
-            "visit_node",
-            "(",
-            "n",
+            "visit_node(n",
             ",",
             "visited",
             ")",
             "{",
             "if",
-            "visited",
-            "[",
-            "n",
+            "visited[n",
             "]",
             "{",
             "return",
             ";",
             "}",
-            "visited",
-            "[",
-            "n",
+            "visited[n",
             "]",
             "=",
             "true",
@@ -6372,9 +7802,7 @@
             "(",
             ")",
             "{",
-            "visit_node",
-            "(",
-            "s",
+            "visit_node(s",
             ",",
             "visited",
             ")",
@@ -6387,68 +7815,14 @@
             "n",
             "here",
             "!",
-            "}",
-            "this",
-            "bit",
-            "is",
-            "what",
-            "prevents",
-            "us",
-            "from",
-            "looping",
-            "infinitely",
-            ".",
-            "and",
-            "this",
-            "is",
-            "where",
-            "we",
-            "do",
-            "whatever",
-            "work",
-            "is",
-            "needed",
-            "to",
-            "\"",
-            "visit",
-            "\"",
-            "n",
-            ",",
-            "after",
-            "we",
-            "'ve",
-            "visited",
-            "its",
-            "successors",
-            ".",
-            "if",
-            "we",
-            "say",
-            ",",
-            "printed",
-            "out",
-            "the",
-            "node",
-            "'s",
-            "name/number",
-            "there",
-            ",",
-            "this",
-            "would",
-            "print",
-            "out",
-            "the",
-            "postorder",
-            "of",
-            "the",
-            "graph",
-            ".",
-            "33"
+            "}"
         ],
         "word_labels": [
             1,
             0,
             1,
+            2,
+            2,
             2,
             0,
             0,
@@ -6512,6 +7886,73 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "this",
+            "bit",
+            "is",
+            "what",
+            "prevents",
+            "us",
+            "from",
+            "looping",
+            "infinitely",
+            "."
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "and",
+            "this",
+            "is",
+            "where",
+            "we",
+            "do",
+            "whatever",
+            "work",
+            "is",
+            "needed",
+            "to",
+            "\"",
+            "visit",
+            "\"",
+            "n",
+            ",",
+            "after",
+            "we",
+            "'ve",
+            "visited",
+            "its",
+            "successors",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -6535,22 +7976,43 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "if",
+            "we",
+            "say",
+            ",",
+            "printed",
+            "out",
+            "the",
+            "node",
+            "'s",
+            "name",
+            "/",
+            "number",
+            "there",
+            ",",
+            "this",
+            "would",
+            "print",
+            "out",
+            "the",
+            "postorder",
+            "of",
+            "the",
+            "graph",
+            ".",
+            "33"
+        ],
+        "word_labels": [
             0,
             0,
             0,

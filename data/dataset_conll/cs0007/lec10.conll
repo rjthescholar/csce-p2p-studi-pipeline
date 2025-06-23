@@ -26,9 +26,7 @@ recap _ _ O
 run _ _ O
 this _ _ O
 code _ _ O
-if _ _ O
-( _ _ O
-condition1 _ _ O
+if(condition1 _ _ O
 is _ _ O
 true _ _ O
 ) _ _ O
@@ -38,9 +36,7 @@ this _ _ O
 code _ _ O
 } _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-condition2 _ _ O
+if(condition2 _ _ O
 is _ _ O
 true _ _ O
 ) _ _ O
@@ -50,9 +46,7 @@ this _ _ O
 code _ _ O
 } _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-condition3 _ _ O
+if(condition3 _ _ O
 is _ _ O
 true _ _ O
 ) _ _ O
@@ -63,7 +57,9 @@ true _ _ O
 else _ _ O
 //if _ _ O
 conditions _ _ O
-1…n _ _ O
+1 _ _ O
+… _ _ O
+n _ _ O
 were _ _ O
 not _ _ O
 satisfied _ _ O
@@ -121,15 +117,30 @@ public _ _ O
 static _ _ O
 void _ _ O
 main _ _ O
+
+
+ _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
 func _ _ O
+
+
+ _ _ O
+if _ _ O
+
+
+ _ _ O
 if _ _ O
 if _ _ O
-if _ _ O
+
+
+ _ _ O
 else _ _ O
 if _ _ O
+
+
+ _ _ O
 Darker _ _ O
 shades _ _ O
 can _ _ O
@@ -152,9 +163,7 @@ Name _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 args _ _ O
@@ -166,16 +175,16 @@ x _ _ O
 0 _ _ O
 ; _ _ O
 //x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 0 _ _ O
 , _ _ O
 y _ _ O
 is _ _ O
 undefined _ _ O
-if _ _ O
-( _ _ O
-x _ _ O
-== _ _ O
+if(x _ _ O
+= _ _ O
+= _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
@@ -189,15 +198,18 @@ x _ _ O
 15 _ _ O
 ; _ _ O
 //x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 15 _ _ O
 , _ _ O
 y _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 10 _ _ O
 } _ _ O
 //x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 15 _ _ O
 , _ _ O
 y _ _ O
@@ -220,9 +232,7 @@ Scanner _ _ O
 scanner _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
-( _ _ O
-System.in _ _ O
+Scanner(System.in _ _ O
 ) _ _ O
 ; _ _ O
 int _ _ O
@@ -232,84 +242,69 @@ scanner.nextInt _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
-if _ _ O
-( _ _ O
-numTrees _ _ O
-== _ _ O
+if(numTrees _ _ O
+= _ _ O
+= _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Desert _ _ O
+System.out.println("Desert _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-numTrees _ _ O
-== _ _ O
+if(numTrees _ _ O
+= _ _ O
+= _ _ O
 1 _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Island _ _ O
+System.out.println("Island _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-numTrees _ _ O
-== _ _ O
+if(numTrees _ _ O
+= _ _ O
+= _ _ O
 2 _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Beach _ _ O
+System.out.println("Beach _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 else _ _ O
-if _ _ O
-( _ _ O
-numTrees _ _ O
-== _ _ O
+if(numTrees _ _ O
+= _ _ O
+= _ _ O
 3 _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Forest _ _ O
+System.out.println("Forest _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 else _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Jungle _ _ O
+System.out.println("Jungle _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 
-Switch-Case _ _ B-Concept
+Switch _ _ B-Concept
+- _ _ I-Concept
+Case _ _ I-Concept
 • _ _ O
 A _ _ O
-Switch-Case _ _ B-Concept
+Switch _ _ B-Concept
+- _ _ I-Concept
+Case _ _ I-Concept
 statement _ _ O
 is _ _ O
 like _ _ O
@@ -396,9 +391,7 @@ Scanner _ _ O
 scanner _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
-( _ _ O
-System.in _ _ O
+Scanner(System.in _ _ O
 ) _ _ O
 ; _ _ O
 int _ _ O
@@ -408,18 +401,13 @@ scanner.nextInt _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
-switch _ _ O
-( _ _ O
-numTrees _ _ O
+switch(numTrees _ _ O
 ) _ _ O
 { _ _ O
 case _ _ O
 0 _ _ O
 : _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Desert _ _ O
+System.out.println("Desert _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -428,10 +416,7 @@ break _ _ O
 case _ _ O
 1 _ _ O
 : _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Island _ _ O
+System.out.println("Island _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -440,10 +425,7 @@ break _ _ O
 case _ _ O
 2 _ _ O
 : _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Beach _ _ O
+System.out.println("Beach _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -452,10 +434,7 @@ break _ _ O
 case _ _ O
 3 _ _ O
 : _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Forest _ _ O
+System.out.println("Forest _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -463,10 +442,7 @@ break _ _ O
 ; _ _ O
 default _ _ O
 : _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Jungle _ _ O
+System.out.println("Jungle _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
@@ -502,12 +478,13 @@ series _ _ O
 . _ _ O
 • _ _ O
 Harmonic _ _ O
-series _ _ O
-: _ _ O
- _ _ O
+series: _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
  _ _ O
 n _ _ O
 1 _ _ O
@@ -526,9 +503,7 @@ Way _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 args _ _ O
@@ -626,9 +601,7 @@ Type _ _ O
 name _ _ O
 = _ _ O
 new _ _ O
-Type _ _ O
-[ _ _ O
-size _ _ O
+Type[size _ _ O
 ] _ _ O
 ; _ _ O
 
@@ -638,9 +611,7 @@ int _ _ O
 empty _ _ O
 = _ _ O
 new _ _ O
-int _ _ O
-[ _ _ O
-10 _ _ O
+int[10 _ _ O
 ] _ _ O
 ; _ _ O
 
@@ -672,9 +643,7 @@ the _ _ O
 first _ _ O
 element _ _ O
 • _ _ O
-list _ _ O
-[ _ _ O
-0 _ _ O
+list[0 _ _ O
 ] _ _ O
 • _ _ O
 I _ _ O
@@ -683,9 +652,7 @@ the _ _ O
 last _ _ O
 element _ _ O
 • _ _ O
-list _ _ O
-[ _ _ O
-3 _ _ O
+list[3 _ _ O
 ] _ _ O
 • _ _ O
 I _ _ O
@@ -694,7 +661,8 @@ the _ _ O
 length _ _ O
 • _ _ O
 list.length _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 4 _ _ O
 • _ _ O
 All _ _ O
@@ -708,19 +676,14 @@ an _ _ O
 individual _ _ O
 element _ _ O
 • _ _ O
-list _ _ O
-[ _ _ O
-0 _ _ O
+list[0 _ _ O
 ] _ _ O
 + _ _ O
-list _ _ O
-[ _ _ O
-2 _ _ O
+list[2 _ _ O
 ] _ _ O
-== _ _ O
-list _ _ O
-[ _ _ O
-3 _ _ O
+= _ _ O
+= _ _ O
+list[3 _ _ O
 ] _ _ O
 
 How _ _ O
@@ -799,27 +762,21 @@ out _ _ O
 the _ _ O
 next _ _ O
 element _ _ O
-while _ _ B-Concept
-( _ _ O
-not _ _ O
+while(not _ _ B-Concept
 at _ _ O
 end _ _ O
 of _ _ O
 list _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-next _ _ O
+System.out.println(next _ _ O
 element _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
 //end _ _ O
 loop _ _ O
-while _ _ O
-( _ _ O
-not _ _ O
+while(not _ _ O
 at _ _ O
 end _ _ O
 of _ _ O
@@ -864,11 +821,17 @@ need _ _ O
 to _ _ O
 keep _ _ O
 track _ _ O
+
+
+ _ _ O
 int _ _ O
 currElement _ _ O
 = _ _ O
 0 _ _ O
 ; _ _ O
+
+
+ _ _ O
 – _ _ O
 starts _ _ O
 at _ _ O
@@ -880,6 +843,9 @@ to _ _ O
 the _ _ O
 end _ _ O
 ! _ _ O
+
+
+ _ _ O
 currElement _ _ O
 ! _ _ O
 = _ _ O
@@ -911,18 +877,13 @@ currElement _ _ O
 = _ _ O
 0 _ _ O
 ; _ _ O
-while _ _ O
-( _ _ O
-currElement _ _ O
+while(currElement _ _ O
 ! _ _ O
 = _ _ O
 list.length _ _ O
 ) _ _ O
 { _ _ O
-System.out.println _ _ O
-( _ _ O
-< _ _ O
-next _ _ O
+System.out.println(<next _ _ O
 element _ _ O
 > _ _ O
 ) _ _ O
@@ -930,11 +891,7 @@ element _ _ O
 } _ _ O
 //end _ _ O
 loop _ _ O
-while _ _ O
-( _ _ O
-currElement _ _ O
-! _ _ O
-=list.length _ _ O
+while(currElement!=list.length _ _ O
 ) _ _ O
 
 

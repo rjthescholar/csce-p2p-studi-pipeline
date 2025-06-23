@@ -1,20 +1,20 @@
-roscore
-< launch >
-type
-< ! -- and -- >
-< node >
-roscd
 kobuki node
-.launch
-launch files
-output= " screen "
-launch directory
-cwd= " node "
-launch
-p2.launch
-rospy.init node ( )
-ctrl-c
-$ ( find kobuki node )
+< launch >
 pkg
-launch file
+launch
+$ ( find kobuki node )
+launch directory
+output="screen "
+< ! -- and -- >
+ctrl-c
+.launch
+roscore
+launch files
+roscd
 < include >
+type
+rospy.init node ( )
+p2.launch
+launch file
+< node >
+cwd="node "

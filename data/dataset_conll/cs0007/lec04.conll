@@ -28,6 +28,9 @@ only _ _ O
 true _ _ O
 – _ _ O
 false _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -48,6 +51,9 @@ Operators _ _ O
 & _ _ O
 || _ _ O
 ! _ _ O
+
+
+ _ _ O
 – _ _ O
 Logical _ _ B-Concept
 AND _ _ I-Concept
@@ -57,6 +63,9 @@ OR _ _ I-Concept
 – _ _ O
 Logical _ _ B-Concept
 NOT _ _ I-Concept
+
+
+ _ _ O
 boolean _ _ B-Concept
 needUmb _ _ O
 = _ _ O
@@ -78,49 +87,115 @@ Truth _ _ B-Concept
 Tables _ _ I-Concept
 A _ _ O
 B _ _ O
-A _ _ O
-& _ _ O
-& _ _ O
-B _ _ O
+
+
+ _ _ O
+A&&B _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
+F _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
-F _ _ O
+
+
+ _ _ O
 F _ _ O
 
 Truth _ _ B-Concept
 Tables _ _ I-Concept
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 A||B _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 
 Truth _ _ B-Concept
 Tables _ _ I-Concept
 A _ _ O
+
+
+ _ _ O
 ! _ _ O
 A _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
 
 Order _ _ O
@@ -130,11 +205,18 @@ Operators _ _ O
 . _ _ O
 2 _ _ O
 . _ _ O
-3. _ _ O
+3 _ _ O
+. _ _ O
+
+
+ _ _ O
 ! _ _ O
 & _ _ O
 & _ _ O
 || _ _ O
+
+
+ _ _ O
 – _ _ O
 Logical _ _ B-Concept
 NOT _ _ I-Concept
@@ -144,6 +226,9 @@ AND _ _ I-Concept
 – _ _ O
 Logical _ _ B-Concept
 OR _ _ I-Concept
+
+
+ _ _ O
 boolean _ _ O
 needUmb _ _ O
 = _ _ O
@@ -170,20 +255,50 @@ an _ _ O
 operator _ _ O
 in _ _ O
 Java _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 AB _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
 
 Conditional _ _ B-Concept
@@ -202,20 +317,50 @@ result _ _ O
 we _ _ O
 want _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 AB _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
 
 Conditional _ _ B-Concept
@@ -234,20 +379,50 @@ result _ _ O
 we _ _ O
 want _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 AB _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
 
 Conditional _ _ B-Concept
@@ -266,21 +441,51 @@ result _ _ O
 we _ _ O
 want _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 ! _ _ O
 A||B _ _ O
+
+
+ _ _ O
 T _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 F _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
 F _ _ O
+
+
+ _ _ O
 T _ _ O
 
 Order _ _ O
@@ -292,17 +497,35 @@ Operators _ _ O
 . _ _ O
 3 _ _ O
 . _ _ O
-4. _ _ O
+4 _ _ O
+. _ _ O
+
+
+ _ _ O
 equality _ _ O
-==/ _ _ O
-! _ _ O
+
+
+ _ _ O
 = _ _ O
+= _ _ O
+/!= _ _ O
+
+
+ _ _ O
 – _ _ O
-Equality/Non- _ _ O
+Equality _ _ O
+/ _ _ O
+Non- _ _ O
+
+
+ _ _ O
 ! _ _ O
 & _ _ O
 & _ _ O
 || _ _ O
+
+
+ _ _ O
 – _ _ O
 Logical _ _ B-Concept
 NOT _ _ I-Concept
@@ -312,11 +535,15 @@ AND _ _ I-Concept
 – _ _ O
 Logical _ _ B-Concept
 OR _ _ I-Concept
+
+
+ _ _ O
 boolean _ _ B-Concept
 same _ _ O
 = _ _ O
 bool1 _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 bool2 _ _ O
 ; _ _ O
 
@@ -327,7 +554,8 @@ boolean _ _ B-Concept
 isTrue _ _ O
 = _ _ O
 bool1 _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 true _ _ O
 ; _ _ O
 
@@ -419,9 +647,7 @@ equals _ _ O
 2 _ _ O
 remainder _ _ O
 1 _ _ O
-5 _ _ O
-% _ _ O
-21 _ _ O
+5%21 _ _ O
 20 _ _ O
 divided _ _ O
 by _ _ O
@@ -455,9 +681,7 @@ equals _ _ O
 remainder _ _ O
 1 _ _ O
 5/22 _ _ O
-5 _ _ O
-% _ _ O
-21 _ _ O
+5%21 _ _ O
 20 _ _ O
 divided _ _ O
 by _ _ O
@@ -491,13 +715,16 @@ boolean _ _ B-Concept
 by _ _ O
 comparing _ _ O
 them _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 – _ _ O
 Equality _ _ B-Concept
 ! _ _ O
 = _ _ O
 – _ _ O
-Non-Equality _ _ B-Concept
+Non _ _ B-Concept
+- _ _ I-Concept
+Equality _ _ I-Concept
 > _ _ O
 – _ _ O
 Greater _ _ B-Concept
@@ -530,7 +757,8 @@ More _ _ O
 int _ _ B-Concept
 Operators _ _ O
 5 _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 0 _ _ O
 ? _ _ O
 6 _ _ O
@@ -635,8 +863,7 @@ char _ _ B-Concept
 Single _ _ O
 characters _ _ O
 • _ _ O
-CAN _ _ O
-NOT _ _ O
+CANNOT _ _ O
 use _ _ O
 + _ _ O
 to _ _ O
@@ -682,7 +909,8 @@ boolean _ _ O
 by _ _ O
 comparing _ _ O
 them _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 – _ _ O
 Equality _ _ B-Concept
 > _ _ O
@@ -745,7 +973,9 @@ answer _ _ O
 the _ _ O
 expression _ _ O
 • _ _ O
-2+3 _ _ O
+2 _ _ O
++ _ _ O
+3 _ _ O
 • _ _ O
 Hmm _ _ O
 , _ _ O
@@ -806,6 +1036,9 @@ print _ _ O
 the _ _ O
 boolean _ _ B-Concept
 value _ _ O
+
+
+ _ _ O
 • _ _ O
 Why _ _ O
 would _ _ O
@@ -821,7 +1054,9 @@ Depends _ _ O
 on _ _ O
 what _ _ O
 you _ _ O
-want/need _ _ O
+want _ _ O
+/ _ _ O
+need _ _ O
 
 Test _ _ O
 1 _ _ O
@@ -832,9 +1067,7 @@ Test _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 { _ _ O
@@ -845,10 +1078,7 @@ x _ _ O
 + _ _ O
 3 _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-Value _ _ O
+System.out.println("Value _ _ O
 expected _ _ O
 : _ _ O
 5 _ _ O
@@ -875,6 +1105,9 @@ the _ _ O
 expected _ _ O
 output _ _ O
 ? _ _ O
+
+
+ _ _ O
 args _ _ O
 ) _ _ O
 
@@ -897,9 +1130,7 @@ Test _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
+main(String _ _ O
 [ _ _ O
 ] _ _ O
 { _ _ O
@@ -910,11 +1141,9 @@ x _ _ O
 + _ _ O
 3 _ _ O
 ; _ _ O
-System.out.println _ _ O
-( _ _ O
-" _ _ O
-x _ _ O
-== _ _ O
+System.out.println("x _ _ O
+= _ _ O
+= _ _ O
 5 _ _ O
 is _ _ O
 " _ _ O
@@ -936,12 +1165,19 @@ the _ _ O
 expected _ _ O
 output _ _ O
 ? _ _ O
+
+
+ _ _ O
 args _ _ O
 ) _ _ O
+
+
+ _ _ O
 + _ _ O
 ( _ _ O
 x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 
 It _ _ O
 's _ _ O
@@ -959,14 +1195,17 @@ primitives _ _ O
 allow _ _ O
 you _ _ O
 to _ _ O
-declare/replace _ _ O
+declare _ _ O
+/ _ _ O
+replace _ _ O
 • _ _ O
 boolean _ _ O
 b _ _ O
 = _ _ O
 ( _ _ O
 x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 5 _ _ O
 ) _ _ O
 ; _ _ O
@@ -975,7 +1214,8 @@ b _ _ O
 = _ _ O
 ( _ _ O
 x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 6 _ _ O
 ) _ _ O
 ; _ _ O
@@ -1006,7 +1246,9 @@ words _ _ O
 in _ _ O
 Java _ _ O
 , _ _ O
-2^3 _ _ O
+2 _ _ O
+^ _ _ O
+3 _ _ O
 does _ _ O
 not _ _ O
 equal _ _ O

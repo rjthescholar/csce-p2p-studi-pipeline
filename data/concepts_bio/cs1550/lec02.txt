@@ -1,47 +1,47 @@
-process synchronization
-state
-spinlock
-cpu register
-context switch
-overhead
-memory
-context-switch time
 os
-process
-spinlocks
-task_struct
-idt/isr
+shared memory
+process table
+syscalls
+process state
+atomic operations
+context switch
+mode bits
+pcb
+processes
+cpu
+race conditions
+atomic
+spinlock
+isr
+xv6
 % eax
 atomic swap
-monitors
-% esp
-context switching
-critical regions
-user land
-% eip
-race conditions…
-mode bits
-registers
-interrupts
-pcb
-contexts
-context
-atomic operations
-atomic
-turn-based solutions
-race conditions
-syscalls
-cpu
-shared memory
-% edx
-process table
-task control block
-xv6
-operating systems
-syscall
-register
-processes
-process state
-critical region
-semaphores
+process synchronization
 process control block
+context switching
+cpu register
+task_struct
+syscall
+overhead
+% esp
+critical region
+context
+monitors
+% eip
+registers
+spinlocks
+idt
+register
+process
+critical regions
+semaphores
+operating systems
+contexts
+user land
+interrupts
+turn-based solutions
+task control block
+% edx
+memory
+context-switch time
+state

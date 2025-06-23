@@ -5,11 +5,12 @@ Structures _ _ O
 for _ _ O
 Computer _ _ O
 Science _ _ O
+
+
+ _ _ O
 William _ _ O
 Garrison _ _ O
-bill _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+bill@cs.pitt.edu _ _ O
 6311 _ _ O
 Sennott _ _ O
 Square _ _ O
@@ -32,8 +33,7 @@ Adam _ _ O
 Lee _ _ O
 
 Today _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 topics _ _ O
 n _ _ O
 Applications _ _ O
@@ -62,6 +62,9 @@ the _ _ O
 for _ _ O
 AI _ _ O
 purposes _ _ O
+
+
+ _ _ O
 Datalog _ _ O
 l _ _ O
 Logical _ _ O
@@ -73,6 +76,9 @@ Developed _ _ O
 in _ _ O
 the _ _ O
 1980s _ _ O
+
+
+ _ _ O
 For _ _ O
 our _ _ O
 purposes _ _ O
@@ -97,20 +103,27 @@ very _ _ O
 important _ _ O
 differences _ _ O
 . _ _ O
+
+
+ _ _ O
 Two _ _ O
 main _ _ O
 constructs _ _ O
 : _ _ O
+
+
+ _ _ O
 Lower _ _ O
 case _ _ O
 = _ _ O
 constant _ _ O
+
+
+ _ _ O
 l _ _ O
 Facts _ _ O
 ² _ _ O
-instructor _ _ O
-( _ _ O
-bill _ _ O
+instructor(bill _ _ O
 , _ _ O
 cs441 _ _ O
 ) _ _ O
@@ -119,33 +132,25 @@ case _ _ O
 = _ _ O
 variable _ _ O
 ² _ _ O
-student _ _ O
-( _ _ O
-smith _ _ O
+student(smith _ _ O
 , _ _ O
 cs441 _ _ O
 ) _ _ O
 l _ _ O
 Rules _ _ O
 ² _ _ O
-teaches _ _ O
-( _ _ O
-P _ _ O
+teaches(P _ _ O
 , _ _ O
 S _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-instructor _ _ O
-( _ _ O
-P _ _ O
+instructor(P _ _ O
 , _ _ O
 C _ _ O
 ) _ _ O
 , _ _ O
-student _ _ O
-( _ _ O
-S _ _ O
+student(S _ _ O
 , _ _ O
 C _ _ O
 ) _ _ O
@@ -168,8 +173,7 @@ those _ _ O
 predicates _ _ O
 l _ _ O
 “ _ _ O
-Dr _ _ O
-. _ _ O
+Dr. _ _ O
 Garrison _ _ O
 is _ _ O
 the _ _ O
@@ -178,12 +182,13 @@ for _ _ O
 CS441 _ _ O
 ” _ _ O
 º _ _ O
-instructor _ _ O
-( _ _ O
-bill _ _ O
+instructor(bill _ _ O
 , _ _ O
 cs441 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Rules _ _ O
 define _ _ O
 predicates _ _ O
@@ -210,27 +215,24 @@ the _ _ O
 instructor _ _ O
 ” _ _ O
 º _ _ O
-teaches _ _ O
-( _ _ O
-P _ _ O
+teaches(P _ _ O
 , _ _ O
 S _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-instructor _ _ O
-( _ _ O
-P _ _ O
+instructor(P _ _ O
 , _ _ O
 C _ _ O
 ) _ _ O
 , _ _ O
-student _ _ O
-( _ _ O
-S _ _ O
+student(S _ _ O
 , _ _ O
 C _ _ O
 ) _ _ O
+
+
+ _ _ O
 Prolog _ _ O
 is _ _ O
 an _ _ O
@@ -251,96 +253,74 @@ true _ _ O
 A _ _ O
 Security _ _ O
 Example _ _ O
-grant _ _ O
-( _ _ O
-U _ _ O
+grant(U _ _ O
 , _ _ O
 projector _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-located _ _ O
-( _ _ O
-U _ _ O
+located(U _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
 , _ _ O
-role _ _ O
-( _ _ O
-U _ _ O
+role(U _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-located _ _ O
-( _ _ O
-U _ _ O
+located(U _ _ O
 , _ _ O
 R _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-owns _ _ O
-( _ _ O
-U _ _ O
+owns(U _ _ O
 , _ _ O
 D _ _ O
 ) _ _ O
 , _ _ O
-dev_loc _ _ O
-( _ _ O
-D _ _ O
+dev_loc(D _ _ O
 , _ _ O
 R _ _ O
 ) _ _ O
-role _ _ O
-( _ _ O
-bob _ _ O
+role(bob _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-alice _ _ O
+owns(alice _ _ O
 , _ _ O
 laptop12 _ _ O
 ) _ _ O
-role _ _ O
-( _ _ O
-carol _ _ O
+role(carol _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-bob _ _ O
+owns(bob _ _ O
 , _ _ O
 tablet23 _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-carol _ _ O
+owns(carol _ _ O
 , _ _ O
 cell42 _ _ O
 ) _ _ O
-dev_loc _ _ O
-( _ _ O
-laptop12 _ _ O
+
+
+ _ _ O
+dev_loc(laptop12 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
-dev_loc _ _ O
-( _ _ O
-tablet23 _ _ O
+dev_loc(tablet23 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
-dev_loc _ _ O
-( _ _ O
-cell42 _ _ O
+dev_loc(cell42 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Can _ _ O
 Bob _ _ O
 run _ _ O
@@ -351,9 +331,7 @@ l _ _ O
 Query _ _ O
 : _ _ O
 ? _ _ O
-grant _ _ O
-( _ _ O
-bob _ _ O
+grant(bob _ _ O
 , _ _ O
 projector _ _ O
 ) _ _ O
@@ -363,6 +341,9 @@ Solution _ _ O
 true _ _ O
 Knowledge _ _ O
 base _ _ O
+
+
+ _ _ O
 Who _ _ O
 is _ _ O
 in _ _ O
@@ -373,9 +354,7 @@ l _ _ O
 Query _ _ O
 : _ _ O
 ? _ _ O
-located _ _ O
-( _ _ O
-X _ _ O
+located(X _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
@@ -394,78 +373,59 @@ evaluate _ _ O
 the _ _ O
 following _ _ O
 queries _ _ O
-grant _ _ O
-( _ _ O
-U _ _ O
+grant(U _ _ O
 , _ _ O
 projector _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-located _ _ O
-( _ _ O
-U _ _ O
+located(U _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
 , _ _ O
-role _ _ O
-( _ _ O
-U _ _ O
+role(U _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-located _ _ O
-( _ _ O
-U _ _ O
+located(U _ _ O
 , _ _ O
 R _ _ O
 ) _ _ O
 : _ _ O
 - _ _ O
-owns _ _ O
-( _ _ O
-U _ _ O
+owns(U _ _ O
 , _ _ O
 D _ _ O
 ) _ _ O
 , _ _ O
-dev_loc _ _ O
-( _ _ O
-D _ _ O
+dev_loc(D _ _ O
 , _ _ O
 R _ _ O
 ) _ _ O
-role _ _ O
-( _ _ O
-bob _ _ O
+role(bob _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-alice _ _ O
+owns(alice _ _ O
 , _ _ O
 laptop12 _ _ O
 ) _ _ O
-role _ _ O
-( _ _ O
-carol _ _ O
+role(carol _ _ O
 , _ _ O
 presenter _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-bob _ _ O
+owns(bob _ _ O
 , _ _ O
 tablet23 _ _ O
 ) _ _ O
-owns _ _ O
-( _ _ O
-carol _ _ O
+owns(carol _ _ O
 , _ _ O
 cell42 _ _ O
 ) _ _ O
+
+
+ _ _ O
 n _ _ O
 Can _ _ O
 Alice _ _ O
@@ -475,14 +435,15 @@ projector _ _ O
 ? _ _ O
 l _ _ O
 ? _ _ O
-grant _ _ O
-( _ _ O
-alice _ _ O
+grant(alice _ _ O
 , _ _ O
 projector _ _ O
 ) _ _ O
 l _ _ O
 false _ _ O
+
+
+ _ _ O
 n _ _ O
 Can _ _ O
 Carol _ _ O
@@ -491,32 +452,30 @@ the _ _ O
 projector _ _ O
 l _ _ O
 ? _ _ O
-grant _ _ O
-( _ _ O
-carol _ _ O
+grant(carol _ _ O
 , _ _ O
 projector _ _ O
 ) _ _ O
 l _ _ O
 true _ _ O
-dev_loc _ _ O
-( _ _ O
-laptop12 _ _ O
+
+
+ _ _ O
+dev_loc(laptop12 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
-dev_loc _ _ O
-( _ _ O
-tablet23 _ _ O
+dev_loc(tablet23 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
-dev_loc _ _ O
-( _ _ O
-cell42 _ _ O
+dev_loc(cell42 _ _ O
 , _ _ O
 105 _ _ O
 ) _ _ O
+
+
+ _ _ O
 n _ _ O
 Which _ _ O
 devices _ _ O
@@ -526,9 +485,7 @@ own _ _ O
 ? _ _ O
 l _ _ O
 ? _ _ O
-owns _ _ O
-( _ _ O
-alice _ _ O
+owns(alice _ _ O
 , _ _ O
 X _ _ O
 ) _ _ O
@@ -543,30 +500,93 @@ useful _ _ O
 tool _ _ O
 ! _ _ O
 Name _ _ O
+
+
+ _ _ O
 Age _ _ O
+
+
+ _ _ O
 Phone _ _ O
+
+
+ _ _ O
 Alice _ _ O
+
+
+ _ _ O
 19 _ _ O
-555-1234 _ _ O
+
+
+ _ _ O
+555 _ _ O
+- _ _ O
+1234 _ _ O
+
+
+ _ _ O
 Danielle _ _ O
+
+
+ _ _ O
 33 _ _ O
-555-5353 _ _ O
+
+
+ _ _ O
+555 _ _ O
+- _ _ O
+5353 _ _ O
+
+
+ _ _ O
 Zach _ _ O
+
+
+ _ _ O
 27 _ _ O
-555-3217 _ _ O
+
+
+ _ _ O
+555 _ _ O
+- _ _ O
+3217 _ _ O
+
+
+ _ _ O
 Charlie _ _ O
+
+
+ _ _ O
 21 _ _ O
-555-2335 _ _ O
+
+
+ _ _ O
+555 _ _ O
+- _ _ O
+2335 _ _ O
+
+
+ _ _ O
 Artificial _ _ O
 Intelligence _ _ O
+
+
+ _ _ O
 Databases _ _ O
+
+
+ _ _ O
 Route _ _ O
 planning _ _ O
+
+
+ _ _ O
 Security _ _ O
 
 Just _ _ O
 for _ _ O
-grins… _ _ O
+grins _ _ O
+… _ _ O
 If _ _ O
 you _ _ O
 are _ _ O
@@ -579,13 +599,16 @@ logic _ _ O
 programming _ _ O
 , _ _ O
 download _ _ O
-SWI-Prolog _ _ O
+SWI _ _ O
+- _ _ O
+Prolog _ _ O
 l _ _ O
 URL _ _ O
 : _ _ O
-http _ _ O
-: _ _ O
-//www.swi-prolog.org/ _ _ O
+http://www.swi-prolog.org/ _ _ O
+
+
+ _ _ O
 This _ _ O
 ( _ _ O
 free _ _ O
@@ -607,13 +630,31 @@ evaluate _ _ O
 queries _ _ O
 . _ _ O
 Dave _ _ O
+
+
+ _ _ O
 Charlie _ _ O
 Alice _ _ O
+
+
+ _ _ O
 Elise _ _ O
+
+
+ _ _ O
 Bob _ _ O
+
+
+ _ _ O
 Becky _ _ O
+
+
+ _ _ O
 Frank _ _ O
 Sarah _ _ O
+
+
+ _ _ O
 Tommy _ _ O
 
 Nested _ _ B-Concept
@@ -639,6 +680,9 @@ scope _ _ O
 of _ _ O
 another _ _ O
 quantifier _ _ B-Concept
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 All _ _ O
@@ -673,6 +717,9 @@ y _ _ O
 is _ _ O
 zero _ _ O
 . _ _ O
+
+
+ _ _ O
 " _ _ O
 x _ _ O
 $ _ _ O
@@ -702,14 +749,14 @@ quantifier _ _ O
 Deciphering _ _ O
 nested _ _ B-Concept
 quantifiers _ _ I-Concept
-isn _ _ O
-’ _ _ O
-t _ _ O
+is _ _ O
+n’t _ _ O
 as _ _ O
 scary _ _ O
 as _ _ O
 it _ _ O
-looks… _ _ O
+looks _ _ O
+… _ _ O
 … _ _ O
 if _ _ O
 you _ _ O
@@ -721,6 +768,9 @@ left _ _ O
 to _ _ O
 right _ _ O
 ! _ _ O
+
+
+ _ _ O
 " _ _ O
 x _ _ O
 $ _ _ O
@@ -731,26 +781,30 @@ z _ _ O
 ( _ _ O
 x _ _ O
 + _ _ O
-y _ _ O
-) _ _ O
-×z _ _ O
+y)×z _ _ O
 = _ _ O
 0 _ _ O
 ] _ _ O
 For _ _ O
 all _ _ O
-x… _ _ O
+x _ _ O
+… _ _ O
 … _ _ O
 there _ _ O
 exists _ _ O
 a _ _ O
 y _ _ O
 such _ _ O
-that… _ _ O
+that _ _ O
+… _ _ O
 … _ _ O
 for _ _ O
 all _ _ O
-z… _ _ O
+z _ _ O
+… _ _ O
+
+
+ _ _ O
 And _ _ O
 think _ _ O
 about _ _ O
@@ -761,13 +815,14 @@ like _ _ O
 with _ _ O
 programming _ _ O
 ! _ _ O
+
+
+ _ _ O
 … _ _ O
 ( _ _ O
 x _ _ O
 + _ _ O
-y _ _ O
-) _ _ O
-× _ _ O
+y)× _ _ O
 z _ _ O
 = _ _ O
 0 _ _ O
@@ -775,7 +830,8 @@ z _ _ O
 A _ _ O
 few _ _ O
 more _ _ O
-examples… _ _ O
+examples _ _ O
+… _ _ O
 " _ _ O
 x _ _ O
 " _ _ O
@@ -789,6 +845,9 @@ y _ _ O
 + _ _ O
 x _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 the _ _ O
@@ -797,6 +856,9 @@ law _ _ I-Concept
 for _ _ O
 addition _ _ O
 ! _ _ O
+
+
+ _ _ O
 l _ _ O
 For _ _ O
 all _ _ O
@@ -815,6 +877,9 @@ y _ _ O
 y _ _ O
 + _ _ O
 x _ _ O
+
+
+ _ _ O
 " _ _ O
 x _ _ O
 " _ _ O
@@ -823,15 +888,14 @@ y _ _ O
 z _ _ O
 [ _ _ O
 ( _ _ O
-x+y _ _ O
-) _ _ O
-+z _ _ O
+x+y)+z _ _ O
 = _ _ O
-x+ _ _ O
-( _ _ O
-y+z _ _ O
+x+(y+z _ _ O
 ) _ _ O
 ] _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 the _ _ O
@@ -840,6 +904,9 @@ law _ _ I-Concept
 for _ _ O
 addition _ _ O
 ! _ _ O
+
+
+ _ _ O
 l _ _ O
 For _ _ O
 all _ _ O
@@ -858,14 +925,13 @@ integers _ _ O
 z _ _ O
 , _ _ O
 ( _ _ O
-x+y _ _ O
-) _ _ O
-+z _ _ O
+x+y)+z _ _ O
 = _ _ O
-x+ _ _ O
-( _ _ O
-y+z _ _ O
+x+(y+z _ _ O
 ) _ _ O
+
+
+ _ _ O
 $ _ _ O
 x _ _ O
 " _ _ O
@@ -920,6 +986,9 @@ y _ _ O
 = _ _ O
 0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Clearly _ _ O
 true _ _ O
 ! _ _ O
@@ -928,6 +997,9 @@ set _ _ O
 y _ _ O
 = _ _ O
 -x _ _ O
+
+
+ _ _ O
 ➣ _ _ O
 Every _ _ O
 integer _ _ O
@@ -936,7 +1008,11 @@ an _ _ O
 additive _ _ O
 inverse _ _ O
 Not _ _ O
-true… _ _ O
+true _ _ O
+… _ _ O
+
+
+ _ _ O
 Transpose _ _ O
 : _ _ O
 $ _ _ O
@@ -974,6 +1050,9 @@ and _ _ O
 y _ _ O
 is _ _ O
 0 _ _ O
+
+
+ _ _ O
 Remember _ _ O
 : _ _ O
 As _ _ O
@@ -987,9 +1066,8 @@ to _ _ O
 right _ _ O
 , _ _ O
 you _ _ O
-won _ _ O
-’ _ _ O
-t _ _ O
+wo _ _ O
+n’t _ _ O
 have _ _ O
 any _ _ O
 problems _ _ O
@@ -1049,13 +1127,16 @@ logical _ _ O
 expression _ _ O
 
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 try _ _ O
 a _ _ O
-translation… _ _ O
+translation _ _ O
+… _ _ O
 Universal _ _ O
 quantifier _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 Every _ _ O
@@ -1068,11 +1149,19 @@ a _ _ O
 multiplicative _ _ O
 inverse _ _ O
 x×y=1 _ _ O
-Singular—suggestive _ _ O
+
+
+ _ _ O
+Singular _ _ O
+— _ _ O
+suggestive _ _ O
 of _ _ O
 an _ _ O
 existential _ _ O
 quantifier _ _ O
+
+
+ _ _ O
 " _ _ O
 x _ _ O
 Rewrite _ _ O
@@ -1111,6 +1200,9 @@ y _ _ O
 = _ _ O
 1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 ≠ _ _ O
@@ -1118,6 +1210,9 @@ x _ _ O
 ) _ _ O
 → _ _ O
 … _ _ O
+
+
+ _ _ O
 Translation _ _ O
 : _ _ O
 " _ _ O
@@ -1161,7 +1256,11 @@ y _ _ O
 ] _ _ O
 
 More _ _ O
-examples… _ _ O
+examples _ _ O
+… _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 The _ _ O
@@ -1221,6 +1320,9 @@ y _ _ O
 0 _ _ O
 ) _ _ O
 ] _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 For _ _ O
@@ -1298,9 +1400,7 @@ sentence _ _ O
 Let _ _ O
 : _ _ O
 l _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -1309,9 +1409,7 @@ enrolled _ _ O
 in _ _ O
 CS441 _ _ O
 l _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -1320,9 +1418,7 @@ an _ _ O
 MP3 _ _ O
 player _ _ O
 l _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1343,40 +1439,36 @@ is _ _ O
 all _ _ O
 students _ _ O
 ” _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 ∀x _ _ O
 [ _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 → _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ( _ _ O
 ∃y _ _ O
 ( _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ∧ _ _ O
-M _ _ O
-( _ _ O
-y _ _ O
+M(y _ _ O
 ) _ _ O
 ) _ _ O
 ] _ _ O
 For _ _ O
 every _ _ O
 student _ _ O
-x… _ _ O
+x _ _ O
+… _ _ O
 … _ _ O
 if _ _ O
 x _ _ O
@@ -1385,13 +1477,15 @@ enrolled _ _ O
 in _ _ O
 CS441 _ _ O
 , _ _ O
-then… _ _ O
+then _ _ O
+… _ _ O
 … _ _ O
 x _ _ O
 has _ _ O
 an _ _ O
 MP3 _ _ O
-player… _ _ O
+player _ _ O
+… _ _ O
 … _ _ O
 or _ _ O
 there _ _ O
@@ -1400,13 +1494,15 @@ another _ _ O
 student _ _ O
 y _ _ O
 such _ _ O
-that… _ _ O
+that _ _ O
+… _ _ O
 … _ _ O
 x _ _ O
 and _ _ O
 y _ _ O
 are _ _ O
-friends… _ _ O
+friends _ _ O
+… _ _ O
 … _ _ O
 and _ _ O
 y _ _ O
@@ -1425,9 +1521,7 @@ English _ _ O
 Let _ _ O
 : _ _ O
 l _ _ O
-O _ _ O
-( _ _ O
-x _ _ O
+O(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1438,9 +1532,7 @@ older _ _ O
 than _ _ O
 y _ _ O
 l _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1463,13 +1555,14 @@ is _ _ O
 all _ _ O
 students _ _ O
 ” _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 ∃x _ _ O
 ∀y _ _ O
-O _ _ O
-( _ _ O
-x _ _ O
+O(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1501,14 +1594,15 @@ an _ _ O
 oldest _ _ O
 student _ _ O
 . _ _ O
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 ∃x _ _ O
 ∃y _ _ O
 [ _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1519,9 +1613,7 @@ y _ _ O
 y≠z _ _ O
 ) _ _ O
 → _ _ O
-¬F _ _ O
-( _ _ O
-x _ _ O
+¬F(x _ _ O
 , _ _ O
 z _ _ O
 ) _ _ O
@@ -1574,7 +1666,9 @@ one _ _ O
 friend _ _ O
 L _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Problem _ _ O
 1 _ _ O
@@ -1601,17 +1695,19 @@ Assume _ _ O
 that _ _ O
 the _ _ O
 predicate _ _ O
-E _ _ O
-( _ _ O
-x _ _ O
+E(x _ _ O
 ) _ _ O
 means _ _ O
 “ _ _ O
 x _ _ O
 is _ _ O
-even. _ _ O
+even _ _ O
+. _ _ O
 ” _ _ O
 l _ _ O
+
+
+ _ _ O
 Hint _ _ O
 : _ _ O
 What _ _ O
@@ -1632,8 +1728,12 @@ not _ _ O
 to _ _ O
 use _ _ O
 “ _ _ O
-mod. _ _ O
+mod _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 Problem _ _ O
 2 _ _ O
 : _ _ O
@@ -1646,9 +1746,7 @@ English _ _ O
 . _ _ O
 Assume _ _ O
 that _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 means _ _ O
 “ _ _ O
@@ -1658,9 +1756,7 @@ a _ _ O
 car _ _ O
 ” _ _ O
 , _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1674,43 +1770,37 @@ friends _ _ O
 ” _ _ O
 , _ _ O
 and _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 means _ _ O
 “ _ _ O
 x _ _ O
 is _ _ O
 a _ _ O
-student. _ _ O
+student _ _ O
+. _ _ O
 ” _ _ O
 l _ _ O
 l _ _ O
+
+
+ _ _ O
 ∀x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 → _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ∃y _ _ O
 [ _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ∧ _ _ O
-C _ _ O
-( _ _ O
-y _ _ O
+C(y _ _ O
 ) _ _ O
 ] _ _ O
 ) _ _ O
@@ -1718,43 +1808,31 @@ y _ _ O
 ∃y _ _ O
 ∃z _ _ O
 [ _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ( _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ∧ _ _ O
-C _ _ O
-( _ _ O
-y _ _ O
+C(y _ _ O
 ) _ _ O
 ) _ _ O
 ∨ _ _ O
 ( _ _ O
-F _ _ O
-( _ _ O
-x _ _ O
+F(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ∧ _ _ O
-F _ _ O
-( _ _ O
-y _ _ O
+F(y _ _ O
 , _ _ O
 z _ _ O
 ) _ _ O
 ∧ _ _ O
-C _ _ O
-( _ _ O
-z _ _ O
+C(z _ _ O
 ) _ _ O
 ) _ _ O
 ] _ _ O
@@ -1774,7 +1852,11 @@ a _ _ O
 little _ _ O
 bit _ _ O
 more _ _ O
-work… _ _ O
+work _ _ O
+… _ _ O
+
+
+ _ _ O
 Steps _ _ O
 : _ _ O
 1 _ _ O
@@ -1831,13 +1913,16 @@ logical _ _ O
 expression _ _ O
 
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 try _ _ O
 an _ _ O
-example… _ _ O
+example _ _ O
+… _ _ O
 Universal _ _ B-Concept
 quantifier _ _ I-Concept
+
+
+ _ _ O
 Statement _ _ O
 : _ _ O
 Every _ _ O
@@ -1853,6 +1938,9 @@ question _ _ O
 . _ _ O
 Existential _ _ B-Concept
 quantifier _ _ I-Concept
+
+
+ _ _ O
 Rewrite _ _ O
 : _ _ O
 For _ _ O
@@ -1878,12 +1966,13 @@ asked _ _ O
 a _ _ O
 question _ _ O
 . _ _ O
+
+
+ _ _ O
 Let _ _ O
 : _ _ O
 l _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -1891,9 +1980,7 @@ is _ _ O
 a _ _ O
 student _ _ O
 l _ _ O
-P _ _ O
-( _ _ O
-x _ _ O
+P(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -1901,9 +1988,7 @@ is _ _ O
 a _ _ O
 professor _ _ O
 l _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1914,6 +1999,9 @@ asked _ _ O
 y _ _ O
 a _ _ O
 question _ _ O
+
+
+ _ _ O
 Domains _ _ O
 for _ _ O
 x _ _ O
@@ -1924,25 +2012,22 @@ are _ _ O
 all _ _ O
 people _ _ O
 ” _ _ O
+
+
+ _ _ O
 Translation _ _ O
 : _ _ O
 ∀x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 → _ _ O
 ∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -1968,6 +2053,9 @@ type _ _ O
 of _ _ O
 beer _ _ O
 . _ _ O
+
+
+ _ _ O
 Rewrite _ _ O
 : _ _ O
 There _ _ O
@@ -2002,12 +2090,13 @@ Domain _ _ O
 : _ _ O
 all _ _ O
 people _ _ O
+
+
+ _ _ O
 Let _ _ O
 : _ _ O
 l _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -2015,9 +2104,7 @@ is _ _ O
 a _ _ O
 man _ _ O
 l _ _ O
-B _ _ O
-( _ _ O
-x _ _ O
+B(x _ _ O
 ) _ _ O
 ≡ _ _ O
 x _ _ O
@@ -2025,9 +2112,7 @@ is _ _ O
 a _ _ O
 beer _ _ O
 l _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2036,6 +2121,9 @@ x _ _ O
 has _ _ O
 tasted _ _ O
 y _ _ O
+
+
+ _ _ O
 Domain _ _ O
 : _ _ O
 all _ _ O
@@ -2051,25 +2139,22 @@ y _ _ O
 = _ _ O
 all _ _ O
 drinks _ _ O
+
+
+ _ _ O
 Translation _ _ O
 : _ _ O
 ∃x _ _ O
 ( _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 → _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2084,36 +2169,28 @@ quantifiers _ _ O
 is _ _ O
 actually _ _ O
 pretty _ _ O
-straightforward… _ _ O
+straightforward _ _ O
+… _ _ O
 … _ _ O
 you _ _ O
 just _ _ O
 repeatedly _ _ O
 apply _ _ O
 DeMorgan _ _ B-Concept
-’ _ _ I-Concept
-s _ _ I-Concept
+’s _ _ I-Concept
 laws _ _ I-Concept
 ! _ _ O
-¬ _ _ O
-[ _ _ O
-∃x _ _ O
+¬[∃x _ _ O
 ( _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 → _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2122,23 +2199,15 @@ y _ _ O
 ] _ _ O
 ≡ _ _ O
 ∀x _ _ O
-¬ _ _ O
-( _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+¬(M(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 → _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2147,21 +2216,15 @@ y _ _ O
 ≡ _ _ O
 ∀x _ _ O
 ( _ _ O
-¬M _ _ O
-( _ _ O
-x _ _ O
+¬M(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ¬∀y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 → _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2170,22 +2233,14 @@ y _ _ O
 ≡ _ _ O
 ∀x _ _ O
 ( _ _ O
-¬M _ _ O
-( _ _ O
-x _ _ O
+¬M(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ∃y _ _ O
-¬ _ _ O
-[ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+¬[B(y _ _ O
 ) _ _ O
 → _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2194,22 +2249,14 @@ y _ _ O
 ≡ _ _ O
 ∀x _ _ O
 ( _ _ O
-¬M _ _ O
-( _ _ O
-x _ _ O
+¬M(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ∃y _ _ O
-¬ _ _ O
-[ _ _ O
-¬B _ _ O
-( _ _ O
-y _ _ O
+¬[¬B(y _ _ O
 ) _ _ O
 ∨ _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2218,21 +2265,15 @@ y _ _ O
 ≡ _ _ O
 ∀x _ _ O
 ( _ _ O
-¬M _ _ O
-( _ _ O
-x _ _ O
+¬M(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ∃y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 ∧ _ _ O
-¬T _ _ O
-( _ _ O
-x _ _ O
+¬T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2241,26 +2282,23 @@ y _ _ O
 ≡ _ _ O
 ∀x _ _ O
 ( _ _ O
-M _ _ O
-( _ _ O
-x _ _ O
+M(x _ _ O
 ) _ _ O
 → _ _ O
 ∃y _ _ O
 [ _ _ O
-B _ _ O
-( _ _ O
-y _ _ O
+B(y _ _ O
 ) _ _ O
 ∧ _ _ O
-¬T _ _ O
-( _ _ O
-x _ _ O
+¬T(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ] _ _ O
 ) _ _ O
+
+
+ _ _ O
 a _ _ O
 → _ _ O
 b _ _ O
@@ -2268,6 +2306,9 @@ b _ _ O
 ¬a _ _ O
 ∨ _ _ O
 b _ _ O
+
+
+ _ _ O
 In _ _ O
 English _ _ O
 : _ _ O
@@ -2294,6 +2335,9 @@ has _ _ O
 not _ _ O
 tasted _ _ O
 . _ _ O
+
+
+ _ _ O
 Alternatively _ _ O
 : _ _ O
 No _ _ O
@@ -2309,7 +2353,8 @@ beer _ _ O
 A _ _ O
 few _ _ O
 stumbling _ _ O
-blocks… _ _ O
+blocks _ _ O
+… _ _ O
 Whether _ _ O
 the _ _ O
 negation _ _ O
@@ -2330,12 +2375,13 @@ a _ _ O
 big _ _ O
 difference _ _ O
 ! _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Let _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 ) _ _ O
 ≡ _ _ O
 “ _ _ O
@@ -2350,9 +2396,7 @@ following _ _ O
 : _ _ O
 l _ _ O
 ¬∀x _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 ) _ _ O
 ➣ _ _ O
 “ _ _ O
@@ -2365,13 +2409,15 @@ that _ _ O
 all _ _ O
 people _ _ O
 are _ _ O
-tall. _ _ O
+tall _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 l _ _ O
 ∀x _ _ O
-¬T _ _ O
-( _ _ O
-x _ _ O
+¬T(x _ _ O
 ) _ _ O
 ➣ _ _ O
 “ _ _ O
@@ -2388,26 +2434,24 @@ case _ _ O
 that _ _ O
 x _ _ O
 is _ _ O
-tall. _ _ O
+tall _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 Note _ _ O
 : _ _ O
 ¬∀x _ _ O
-T _ _ O
-( _ _ O
-x _ _ O
+T(x _ _ O
 ) _ _ O
 = _ _ O
 ∃x _ _ O
-¬T _ _ O
-( _ _ O
-x _ _ O
+¬T(x _ _ O
 ) _ _ O
 ≠ _ _ O
 ∀x _ _ O
-¬T _ _ O
-( _ _ O
-x _ _ O
+¬T(x _ _ O
 ) _ _ O
 Recall _ _ O
 : _ _ O
@@ -2419,9 +2463,11 @@ into _ _ O
 a _ _ O
 quantifier _ _ O
 , _ _ O
+
+
+ _ _ O
 DeMorgan _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 law _ _ O
 says _ _ O
 that _ _ O
@@ -2436,12 +2482,14 @@ quantifier _ _ O
 A _ _ O
 few _ _ O
 stumbling _ _ O
-blocks… _ _ O
+blocks _ _ O
+… _ _ O
 Let _ _ O
 : _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+
+
+ _ _ O
+C(x _ _ O
 ) _ _ O
 ≡ _ _ O
 “ _ _ O
@@ -2451,16 +2499,18 @@ enrolled _ _ O
 in _ _ O
 CS441 _ _ O
 ” _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ≡ _ _ O
 “ _ _ O
 x _ _ O
 is _ _ O
-smart. _ _ O
+smart _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 Question _ _ O
 : _ _ O
 The _ _ O
@@ -2472,37 +2522,31 @@ the _ _ O
 same _ _ O
 , _ _ O
 what _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 the _ _ O
 difference _ _ O
 ? _ _ O
 l _ _ O
 ∃x _ _ O
 [ _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 ∧ _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ] _ _ O
 l _ _ O
 ∃x _ _ O
 [ _ _ O
-C _ _ O
-( _ _ O
-x _ _ O
+C(x _ _ O
 ) _ _ O
 → _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ] _ _ O
+
+
+ _ _ O
 There _ _ O
 is _ _ O
 a _ _ O
@@ -2511,6 +2555,9 @@ student _ _ O
 in _ _ O
 CS441 _ _ O
 . _ _ O
+
+
+ _ _ O
 There _ _ O
 exists _ _ O
 a _ _ O
@@ -2529,6 +2576,9 @@ x _ _ O
 is _ _ O
 smart _ _ O
 . _ _ O
+
+
+ _ _ O
 Subtle _ _ O
 note _ _ O
 : _ _ O
@@ -2549,27 +2599,20 @@ CS441 _ _ O
 because _ _ O
 F→F _ _ O
 or _ _ O
-F→T _ _ O
-. _ _ O
+F→T. _ _ O
 
 Negate _ _ O
 ∀x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 → _ _ O
 ∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2577,21 +2620,15 @@ y _ _ O
 ) _ _ O
 ¬∀x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 → _ _ O
 ∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2599,23 +2636,15 @@ y _ _ O
 ) _ _ O
 ≡ _ _ O
 ∃x _ _ O
-¬ _ _ O
-( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+¬(S(x _ _ O
 ) _ _ O
 → _ _ O
 ∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2623,23 +2652,15 @@ y _ _ O
 ) _ _ O
 ≡ _ _ O
 ∃x _ _ O
-¬ _ _ O
-( _ _ O
-¬S _ _ O
-( _ _ O
-x _ _ O
+¬(¬S(x _ _ O
 ) _ _ O
 ∨ _ _ O
 ∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2648,21 +2669,15 @@ y _ _ O
 ≡ _ _ O
 ∃x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ¬∃y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2671,22 +2686,14 @@ y _ _ O
 ≡ _ _ O
 ∃x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
-¬ _ _ O
-[ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+¬[P(y _ _ O
 ) _ _ O
 ∧ _ _ O
-Q _ _ O
-( _ _ O
-x _ _ O
+Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2695,21 +2702,15 @@ y _ _ O
 ≡ _ _ O
 ∃x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
 [ _ _ O
-¬P _ _ O
-( _ _ O
-y _ _ O
+¬P(y _ _ O
 ) _ _ O
 ∨ _ _ O
-¬Q _ _ O
-( _ _ O
-x _ _ O
+¬Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
@@ -2718,26 +2719,23 @@ y _ _ O
 ≡ _ _ O
 ∃x _ _ O
 ( _ _ O
-S _ _ O
-( _ _ O
-x _ _ O
+S(x _ _ O
 ) _ _ O
 ∧ _ _ O
 ∀y _ _ O
 [ _ _ O
-P _ _ O
-( _ _ O
-y _ _ O
+P(y _ _ O
 ) _ _ O
 → _ _ O
-¬Q _ _ O
-( _ _ O
-x _ _ O
+¬Q(x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
 ] _ _ O
 ) _ _ O
+
+
+ _ _ O
 In _ _ O
 English _ _ O
 : _ _ O
@@ -2767,6 +2765,9 @@ y _ _ O
 a _ _ O
 question _ _ O
 . _ _ O
+
+
+ _ _ O
 Alternatively _ _ O
 : _ _ O
 There _ _ O
@@ -2783,7 +2784,9 @@ a _ _ O
 question _ _ O
 . _ _ O
 
-In-class _ _ O
+In _ _ O
+- _ _ O
+class _ _ O
 exercises _ _ O
 Problem _ _ O
 3 _ _ O
@@ -2834,6 +2837,9 @@ of _ _ O
 some _ _ O
 child _ _ O
 . _ _ O
+
+
+ _ _ O
 Problem _ _ O
 4 _ _ O
 : _ _ O
@@ -2901,6 +2907,9 @@ they _ _ O
 did _ _ O
 before _ _ O
 ! _ _ O
+
+
+ _ _ O
 n _ _ O
 Next _ _ O
 lecture _ _ O

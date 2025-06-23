@@ -1,14 +1,25 @@
 -DOCSTART- -X- -X- O
 
 6 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Management _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 0449 _ _ O
 Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -40,6 +51,9 @@ is _ _ O
 a _ _ O
 Lie _ _ O
 ” _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Reallocating _ _ O
@@ -61,6 +75,9 @@ data _ _ O
 Stack _ _ O
 • _ _ O
 Heap _ _ O
+
+
+ _ _ O
 • _ _ O
 Today _ _ O
 , _ _ O
@@ -79,21 +96,33 @@ in _ _ O
 the _ _ O
 heap _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ O
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
+
+
+ _ _ O
 code _ _ O
 3 _ _ O
 
@@ -105,8 +134,17 @@ We _ _ O
 have _ _ O
 looked _ _ O
 at _ _ O
+
+
+ _ _ O
 and _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 They _ _ O
 stake _ _ O
@@ -153,6 +191,9 @@ memory _ _ O
 Muhahahaha _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 OS _ _ O
@@ -165,7 +206,8 @@ program _ _ O
 • _ _ O
 This _ _ O
 memory _ _ O
-is… _ _ O
+is _ _ O
+… _ _ O
 virtual _ _ O
 ... _ _ O
 reality _ _ O
@@ -181,21 +223,33 @@ in _ _ O
 the _ _ O
 course _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ O
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
+
+
+ _ _ O
 code _ _ O
 4 _ _ O
 
@@ -216,6 +270,9 @@ Welcome _ _ O
 to _ _ O
 computers _ _ O
 ! _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 A _ _ O
@@ -231,12 +288,18 @@ not _ _ O
 deviate _ _ O
 much _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 allocate _ _ O
@@ -257,6 +320,9 @@ memory _ _ O
 VERY _ _ O
 often _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
 • _ _ O
 Heap _ _ O
@@ -314,6 +380,9 @@ bit _ _ O
 of _ _ O
 everything _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Often _ _ O
 , _ _ O
@@ -339,14 +408,23 @@ A _ _ O
 small _ _ O
 file _ _ O
 ? _ _ O
+
+
+ _ _ O
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
+
+
+ _ _ O
 code _ _ O
 6 _ _ O
 
@@ -379,13 +457,22 @@ after _ _ O
 everything _ _ O
 else _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
 available _ _ O
 memory _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 freed _ _ O
@@ -397,6 +484,9 @@ for _ _ O
 new _ _ O
 things _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 IF _ _ O
 ONLY _ _ O
@@ -406,11 +496,12 @@ I _ _ O
 mean _ _ O
 , _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
-possible… _ _ O
+’s _ _ O
+possible _ _ O
+… _ _ O
 but _ _ O
-like… _ _ O
+like _ _ O
+… _ _ O
 • _ _ O
 the _ _ O
 heap _ _ O
@@ -423,6 +514,9 @@ for _ _ O
 a _ _ O
 reason _ _ O
 . _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
@@ -430,7 +524,8 @@ code _ _ O
 7 _ _ O
 
 Digital _ _ O
-potholes… _ _ O
+potholes _ _ O
+… _ _ O
 as _ _ O
 annoying _ _ O
 as _ _ O
@@ -457,6 +552,9 @@ is _ _ O
 called _ _ O
 fragmentation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
 available _ _ O
 memory _ _ O
@@ -468,9 +566,18 @@ memory _ _ O
 memory _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 Next _ _ O
 Allocation _ _ O
+
+
+ _ _ O
 Ugh _ _ O
+
+
+ _ _ O
 ? _ _ O
 if _ _ O
 we _ _ O
@@ -483,17 +590,20 @@ allocations _ _ O
 we _ _ O
 could _ _ O
 avoid _ _ O
-this… _ _ O
+this _ _ O
+… _ _ O
 but _ _ O
 we _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 know _ _ O
 ahead _ _ O
 of _ _ O
 time _ _ O
 ! _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
@@ -504,6 +614,9 @@ The _ _ O
 worst _ _ O
 case _ _ O
 stack _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 you _ _ O
@@ -512,12 +625,14 @@ a _ _ O
 lot _ _ O
 of _ _ O
 small _ _ O
-things… _ _ O
+things _ _ O
+… _ _ O
 • _ _ O
 Free _ _ O
 every _ _ O
 other _ _ O
-one… _ _ O
+one _ _ O
+… _ _ O
 • _ _ O
 And _ _ O
 then _ _ O
@@ -526,7 +641,11 @@ to _ _ O
 allocate _ _ O
 a _ _ O
 bigger _ _ O
-thing… _ _ O
+thing _ _ O
+… _ _ O
+
+
+ _ _ O
 • _ _ O
 Even _ _ O
 though _ _ O
@@ -534,7 +653,8 @@ there _ _ O
 is _ _ O
 technically _ _ O
 enough _ _ O
-memory… _ _ O
+memory _ _ O
+… _ _ O
 • _ _ O
 There _ _ O
 is _ _ O
@@ -550,6 +670,9 @@ naïve _ _ O
 will _ _ O
 fail _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 have _ _ O
@@ -560,9 +683,15 @@ with _ _ O
 some _ _ O
 strategy _ _ O
 . _ _ O
+
+
+ _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
@@ -574,6 +703,9 @@ is _ _ O
 never _ _ O
 easy _ _ O
 stack _ _ O
+
+
+ _ _ O
 • _ _ O
 Why _ _ O
 not _ _ O
@@ -585,7 +717,12 @@ around _ _ O
 • _ _ O
 A _ _ O
 defragmentation _ _ O
-process/algorithm _ _ O
+process _ _ O
+/ _ _ O
+algorithm _ _ O
+
+
+ _ _ O
 • _ _ O
 Moving _ _ O
 around _ _ O
@@ -622,6 +759,9 @@ as _ _ O
 garbage _ _ O
 collection _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Because _ _ O
 of _ _ O
@@ -645,6 +785,9 @@ way _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
@@ -658,6 +801,9 @@ easy _ _ O
 stack _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 blocks _ _ O
@@ -690,6 +836,9 @@ validity _ _ O
 of _ _ O
 pointers _ _ O
 after _ _ O
+
+
+ _ _ O
 heap _ _ O
 static _ _ O
 data _ _ O
@@ -731,14 +880,24 @@ above _ _ O
 that _ _ O
 array _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-200 _ _ O
+arr[200 _ _ O
 ] _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 happens _ _ O
@@ -762,15 +921,14 @@ old _ _ O
 data _ _ O
 : _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 will _ _ O
@@ -801,7 +959,13 @@ does _ _ O
 that _ _ O
 take _ _ O
 ? _ _ O
+
+
+ _ _ O
 fragmentation _ _ B-Concept
+
+
+ _ _ O
 heap _ _ O
 12 _ _ O
 
@@ -851,9 +1015,18 @@ be _ _ O
 a _ _ O
 problem _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 affects _ _ O
@@ -869,9 +1042,7 @@ writes _ _ O
 • _ _ O
 Appending _ _ O
 item _ _ O
-arr _ _ O
-[ _ _ O
-0 _ _ O
+arr[0 _ _ O
 ] _ _ O
 : _ _ O
 𝑂 _ _ O
@@ -879,9 +1050,7 @@ arr _ _ O
 • _ _ O
 Appending _ _ O
 item _ _ O
-arr _ _ O
-[ _ _ O
-1 _ _ O
+arr[1 _ _ O
 ] _ _ O
 : _ _ O
 𝑂 _ _ O
@@ -891,9 +1060,7 @@ arr _ _ O
 • _ _ O
 Appending _ _ O
 item _ _ O
-arr _ _ O
-[ _ _ O
-99 _ _ O
+arr[99 _ _ O
 ] _ _ O
 : _ _ O
 𝑂 _ _ O
@@ -901,9 +1068,7 @@ arr _ _ O
 • _ _ O
 Appending _ _ O
 item _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
 : _ _ O
 𝑂 _ _ O
@@ -913,13 +1078,17 @@ arr _ _ O
 oh _ _ O
 no _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 you _ _ O
 would _ _ O
 overflow _ _ O
 the _ _ O
-buffer… _ _ O
+buffer _ _ O
+… _ _ O
 • _ _ O
 You _ _ O
 then _ _ O
@@ -932,19 +1101,21 @@ values _ _ O
 as _ _ O
 well _ _ O
 . _ _ O
+
+
+ _ _ O
 old _ _ O
 data _ _ O
 : _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
+
+
+ _ _ O
 heap _ _ O
 13 _ _ O
 
@@ -980,6 +1151,9 @@ will _ _ O
 ultimately _ _ O
 need _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -989,9 +1163,18 @@ linked _ _ O
 lists _ _ O
 exist _ _ O
 ! _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Since _ _ O
 a _ _ O
@@ -1012,13 +1195,18 @@ amount _ _ O
 of _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
 everything _ _ O
 is _ _ O
 a _ _ O
-trade-off _ _ O
+trade _ _ O
+- _ _ O
+off _ _ O
 . _ _ O
 • _ _ O
 Dang _ _ O
@@ -1064,19 +1252,21 @@ this _ _ O
 for _ _ O
 now _ _ O
 . _ _ O
+
+
+ _ _ O
 old _ _ O
 data _ _ O
 : _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
 int _ _ O
-arr _ _ O
-[ _ _ O
-100 _ _ O
+arr[100 _ _ O
 ] _ _ O
+
+
+ _ _ O
 heap _ _ O
 14 _ _ O
 
@@ -1086,8 +1276,13 @@ List _ _ O
 A _ _ O
 story _ _ O
 about _ _ O
-trade-offs _ _ O
+trade _ _ O
+- _ _ O
+offs _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 What _ _ O
@@ -1102,7 +1297,9 @@ linked _ _ O
 list _ _ O
 is _ _ O
 a _ _ O
-non-continuous _ _ O
+non _ _ O
+- _ _ O
+continuous _ _ O
 data _ _ O
 structure _ _ O
 representing _ _ O
@@ -1151,7 +1348,13 @@ in _ _ O
 the _ _ O
 list _ _ O
 . _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 “ _ _ O
 struct _ _ O
 ” _ _ O
@@ -1168,6 +1371,9 @@ it _ _ O
 is _ _ O
 defined _ _ O
 ! _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Keeping _ _ O
@@ -1207,7 +1413,13 @@ first _ _ O
 element _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Adding _ _ O
@@ -1232,12 +1444,21 @@ a _ _ O
 node _ _ O
 anywhere _ _ O
 ! _ _ O
+
+
+ _ _ O
 “ _ _ O
 tail _ _ O
 ” _ _ O
+
+
+ _ _ O
 “ _ _ O
 node _ _ O
 ” _ _ O
+
+
+ _ _ O
 Remember _ _ O
 the _ _ O
 ‘ _ _ O
@@ -1245,6 +1466,9 @@ the _ _ O
 ’ _ _ O
 sentinel _ _ O
 ! _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 We _ _ O
@@ -1268,13 +1492,25 @@ take _ _ O
 any _ _ O
 Node _ _ O
 : _ _ O
+
+
+ _ _ O
 “ _ _ O
 curNode _ _ O
 ” _ _ O
+
+
+ _ _ O
 “ _ _ O
 node _ _ O
 ” _ _ O
+
+
+ _ _ O
 Tail _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 We _ _ O
@@ -1296,6 +1532,9 @@ constant _ _ O
 time _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 append _ _ O
@@ -1334,11 +1573,13 @@ something _ _ O
 new _ _ O
 ! _ _ O
 
-Traversal… _ _ O
+Traversal _ _ O
+… _ _ O
 on _ _ O
 the _ _ O
 other _ _ O
-hand… _ _ O
+hand _ _ O
+… _ _ O
 • _ _ O
 Accessing _ _ O
 an _ _ O
@@ -1359,7 +1600,9 @@ its _ _ O
 location _ _ O
 is _ _ O
 very _ _ O
-well-known _ _ O
+well _ _ O
+- _ _ O
+known _ _ O
 ! _ _ O
 • _ _ O
 This _ _ O
@@ -1378,6 +1621,9 @@ for _ _ O
 linked _ _ O
 lists _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 is _ _ O
@@ -1391,6 +1637,9 @@ for _ _ O
 linked _ _ O
 lists _ _ O
 : _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 How _ _ O
@@ -1405,9 +1654,13 @@ the _ _ O
 requested _ _ O
 index _ _ O
 ? _ _ O
+
+
+ _ _ O
 21 _ _ O
 
-Removing… _ _ O
+Removing _ _ O
+… _ _ O
 on _ _ O
 the _ _ O
 other _ _ O
@@ -1452,9 +1705,8 @@ my _ _ O
 . _ _ O
 Alas _ _ O
 . _ _ O
-Can _ _ O
-’ _ _ O
-t _ _ O
+Ca _ _ O
+n’t _ _ O
 find _ _ O
 item _ _ O
 at _ _ O
@@ -1466,12 +1718,14 @@ deleting _ _ O
 the _ _ O
 head _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Since _ _ O
 we _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 have _ _ O
 a _ _ O
 way _ _ O
@@ -1508,6 +1762,9 @@ to _ _ O
 cut _ _ O
 out _ _ O
 . _ _ O
+
+
+ _ _ O
 Returns _ _ O
 new _ _ O
 head _ _ O
@@ -1519,9 +1776,13 @@ if _ _ O
 unchanged _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 22 _ _ O
 
-Removing… _ _ O
+Removing _ _ O
+… _ _ O
 on _ _ O
 the _ _ O
 other _ _ O
@@ -1568,6 +1829,9 @@ quick _ _ O
 to _ _ O
 do _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 big _ _ O
@@ -1623,6 +1887,9 @@ On _ _ O
 your _ _ O
 own _ _ O
 ! _ _ O
+
+
+ _ _ O
 Think _ _ O
 about _ _ O
 the _ _ O
@@ -1638,7 +1905,9 @@ the _ _ O
 following _ _ O
 : _ _ O
 • _ _ O
-Delete/free _ _ O
+Delete _ _ O
+/ _ _ O
+free _ _ O
 the _ _ O
 entire _ _ O
 linked _ _ O
@@ -1748,7 +2017,9 @@ This _ _ O
 is _ _ O
 typically _ _ O
 “ _ _ O
-double-ended _ _ O
+double _ _ O
+- _ _ O
+ended _ _ O
 ” _ _ O
 as _ _ O
 well _ _ O
@@ -1761,9 +2032,21 @@ head _ _ O
 and _ _ O
 tail _ _ O
 . _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Seeing _ _ O
@@ -1808,6 +2091,9 @@ and _ _ O
 prev _ _ O
 . _ _ O
 Node _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 operations _ _ O
@@ -1817,12 +2103,26 @@ different _ _ O
 , _ _ O
 though _ _ O
 . _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 Node _ _ O
+
+
+ _ _ O
 26 _ _ O
 
-De-Stressing _ _ O
+De _ _ O
+- _ _ O
+Stressing _ _ O
 it _ _ O
 out _ _ O
 : _ _ O
@@ -1858,6 +2158,9 @@ will _ _ O
 ultimately _ _ O
 need _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Linked _ _ O
 lists _ _ O
@@ -1875,7 +2178,9 @@ can _ _ O
 be _ _ O
 allocated _ _ O
 easily _ _ O
-on-demand _ _ O
+on _ _ O
+- _ _ O
+demand _ _ O
 . _ _ O
 • _ _ O
 And _ _ O
@@ -1886,9 +2191,18 @@ creating _ _ O
 wide _ _ O
 gaps _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 reduces _ _ O
@@ -1945,9 +2259,15 @@ with _ _ O
 that _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 some _ _ O
 other _ _ O
 data _ _ O
+
+
+ _ _ O
 heap _ _ O
 27 _ _ O
 
@@ -1960,14 +2280,21 @@ like _ _ O
 some _ _ O
 kind _ _ O
 of _ _ O
-He-Man _ _ O
+He _ _ O
+- _ _ O
+Man _ _ O
 or _ _ O
-She-Ra _ _ O
+She _ _ O
+- _ _ O
+Ra _ _ O
 villain _ _ O
 of _ _ O
 the _ _ O
 week _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 The _ _ O
@@ -1977,10 +2304,19 @@ essentials _ _ O
 The _ _ O
 following _ _ O
 : _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 function _ _ O
 does _ _ O
 the _ _ O
+
+
+ _ _ O
 • _ _ O
 Allocates _ _ O
 memory _ _ O
@@ -2002,9 +2338,18 @@ memory _ _ O
 or _ _ O
 error _ _ O
 ) _ _ O
+
+
+ _ _ O
 on _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Essentially _ _ O
 , _ _ O
@@ -2082,11 +2427,17 @@ off _ _ O
 a _ _ O
 chunk _ _ O
 ? _ _ O
+
+
+ _ _ O
 is _ _ O
 called _ _ O
 , _ _ O
 where _ _ O
 do _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -2097,7 +2448,9 @@ simple _ _ O
 things _ _ O
 : _ _ O
 • _ _ O
-First-Fit _ _ B-Concept
+First _ _ B-Concept
+- _ _ I-Concept
+Fit _ _ I-Concept
 : _ _ O
 start _ _ O
 at _ _ O
@@ -2109,9 +2462,15 @@ first _ _ O
 available _ _ O
 section _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Fast _ _ O
 , _ _ O
@@ -2123,12 +2482,19 @@ up _ _ O
 the _ _ O
 works _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
-Next-fit _ _ B-Concept
+Next _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 : _ _ O
 Do _ _ O
 “ _ _ O
-First-Fit _ _ O
+First _ _ O
+- _ _ O
+Fit _ _ O
 ” _ _ O
 but _ _ O
 start _ _ O
@@ -2148,8 +2514,13 @@ a _ _ O
 little _ _ O
 better _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
-Best-Fit _ _ B-Concept
+Best _ _ B-Concept
+- _ _ I-Concept
+Fit _ _ I-Concept
 : _ _ O
 laboriously _ _ O
 look _ _ O
@@ -2162,8 +2533,14 @@ to _ _ O
 divide _ _ O
 up _ _ O
 . _ _ O
+
+
+ _ _ O
 Last _ _ O
 Allocated _ _ O
+
+
+ _ _ O
 • _ _ O
 Slow _ _ O
 , _ _ O
@@ -2171,6 +2548,9 @@ but _ _ O
 limits _ _ O
 fragmentation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
@@ -2219,8 +2599,10 @@ doing _ _ O
 so _ _ O
 is _ _ O
 to _ _ O
-use… _ _ O
-hmm… _ _ O
+use _ _ O
+… _ _ O
+hmm _ _ O
+… _ _ O
 • _ _ O
 A _ _ O
 linked _ _ O
@@ -2239,6 +2621,9 @@ do _ _ O
 this _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -2272,6 +2657,9 @@ to _ _ O
 our _ _ O
 list _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 trick _ _ O
@@ -2291,6 +2679,9 @@ representing _ _ O
 available _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Tracking _ _ O
@@ -2303,8 +2694,7 @@ world _ _ O
 . _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 orient _ _ O
 our _ _ O
 memory _ _ O
@@ -2327,8 +2717,14 @@ place _ _ O
 metadata _ _ O
 ANYWHERE _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Every _ _ O
+
+
+ _ _ O
 is _ _ O
 responsible _ _ O
 for _ _ O
@@ -2338,6 +2734,9 @@ block _ _ O
 of _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 , _ _ O
@@ -2374,8 +2773,14 @@ a _ _ O
 linked _ _ O
 list _ _ O
 . _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 We _ _ O
 have _ _ O
 the _ _ O
@@ -2393,6 +2798,9 @@ list _ _ O
 nodes _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Linked _ _ O
@@ -2461,7 +2869,9 @@ is _ _ O
 how _ _ O
 much _ _ O
 is _ _ O
-used/available _ _ O
+used _ _ O
+/ _ _ O
+available _ _ O
 . _ _ O
 ) _ _ O
 • _ _ O
@@ -2482,7 +2892,8 @@ is _ _ O
 free _ _ O
 . _ _ O
 • _ _ O
-Hmm… _ _ O
+Hmm _ _ O
+… _ _ O
 we _ _ O
 could _ _ O
 use _ _ O
@@ -2493,24 +2904,43 @@ to _ _ O
 denote _ _ O
 that _ _ O
 . _ _ O
-Or… _ _ O
+Or _ _ O
+… _ _ O
 negativity _ _ O
 ! _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 is _ _ O
 NEVER _ _ O
+
+
+ _ _ O
 . _ _ O
 In _ _ O
 fact _ _ O
 , _ _ O
+
+
+ _ _ O
 fails _ _ O
 when _ _ O
 requesting _ _ O
 size _ _ O
 of _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 AllocNode _ _ O
+
+
+ _ _ O
 We _ _ O
 can _ _ O
 make _ _ O
@@ -2526,6 +2956,9 @@ start _ _ O
 with _ _ O
 this _ _ O
 . _ _ O
+
+
+ _ _ O
 Signed _ _ O
 ! _ _ O
 Negative _ _ O
@@ -2535,6 +2968,9 @@ a _ _ O
 free _ _ O
 block _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Tracking _ _ O
@@ -2549,7 +2985,9 @@ can _ _ O
 keep _ _ O
 track _ _ O
 of _ _ O
-used/empty _ _ O
+used _ _ O
+/ _ _ O
+empty _ _ O
 spaces _ _ O
 cheaply _ _ O
 by _ _ O
@@ -2603,8 +3041,14 @@ the _ _ O
 block _ _ O
 itself _ _ O
 . _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 What _ _ O
@@ -2617,6 +3061,9 @@ the _ _ O
 block _ _ O
 boundary _ _ O
 ? _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Implementing _ _ O
@@ -2649,7 +3096,9 @@ one _ _ O
 ? _ _ O
 Well _ _ O
 , _ _ O
-first-fit _ _ B-Concept
+first _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 and _ _ O
 friends _ _ O
 apply _ _ O
@@ -2667,16 +3116,31 @@ free _ _ O
 block _ _ O
 . _ _ O
 x _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Implementing _ _ O
 Carefully _ _ O
 negate _ _ O
 size _ _ O
+
+
+ _ _ O
 • _ _ O
 Allocating _ _ O
 means _ _ O
@@ -2693,6 +3157,9 @@ the _ _ O
 metadata _ _ O
 size _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Then _ _ O
 splitting _ _ O
@@ -2711,10 +3178,11 @@ Linked _ _ O
 list _ _ O
 traversal _ _ O
 ; _ _ O
-𝑂 _ _ O
-( _ _ O
-𝑛 _ _ O
+𝑂(𝑛 _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -2724,23 +3192,29 @@ incomplete _ _ O
 Why _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 Linked _ _ O
 list _ _ O
 append _ _ O
 ; _ _ O
-𝑂 _ _ O
-( _ _ O
-1 _ _ O
+𝑂(1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 ( _ _ O
 you _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 always _ _ O
 split _ _ O
 ) _ _ O
+
+
+ _ _ O
 Recall _ _ O
 that _ _ O
 we _ _ O
@@ -2754,7 +3228,9 @@ block _ _ O
 . _ _ O
 Positive _ _ O
 means _ _ O
-non-free _ _ O
+non _ _ O
+- _ _ O
+free _ _ O
 . _ _ O
 is _ _ O
 negative _ _ O
@@ -2767,7 +3243,9 @@ Q _ _ O
 : _ _ O
 This _ _ O
 is _ _ O
-first-fit _ _ O
+first _ _ O
+- _ _ O
+fit _ _ O
 . _ _ O
 What _ _ O
 should _ _ O
@@ -2775,9 +3253,13 @@ be _ _ O
 added _ _ O
 to _ _ O
 implement _ _ O
-next-fit _ _ B-Concept
+next _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 ? _ _ O
-Best-fit _ _ B-Concept
+Best _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 ? _ _ O
 36 _ _ O
 
@@ -2797,10 +3279,10 @@ space _ _ O
 . _ _ O
 • _ _ O
 Consider _ _ O
-allocations… _ _ O
+allocations _ _ O
+… _ _ O
 it _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 somewhat _ _ O
 difficult _ _ O
 to _ _ O
@@ -2827,8 +3309,14 @@ adjacent _ _ O
 free _ _ O
 blocks _ _ O
 . _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Implementing _ _ O
@@ -2867,7 +3355,8 @@ blocks _ _ O
 . _ _ O
 • _ _ O
 First _ _ O
-one… _ _ O
+one _ _ O
+… _ _ O
 • _ _ O
 Then _ _ O
 the _ _ O
@@ -2888,8 +3377,14 @@ time _ _ O
 operation _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 Implementing _ _ O
@@ -2898,6 +3393,9 @@ is _ _ O
 just _ _ O
 before _ _ O
 ptr _ _ O
+
+
+ _ _ O
 • _ _ O
 Finding _ _ O
 the _ _ O
@@ -2911,10 +3409,21 @@ simple _ _ O
 Look _ _ O
 at _ _ O
 our _ _ O
+
+
+ _ _ O
 • _ _ O
-’ _ _ O
-s _ _ O
+
+
+ _ _ O
+’s _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 is _ _ O
 slightly _ _ O
 less _ _ O
@@ -2928,23 +3437,33 @@ have _ _ O
 to _ _ O
 search _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Where _ _ O
 • _ _ O
+
+
+ _ _ O
 Resembles _ _ O
 linked _ _ O
 list _ _ O
 delete _ _ O
 ; _ _ O
-𝑂 _ _ O
-( _ _ O
-1 _ _ O
+𝑂(1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 splits _ _ O
 nodes _ _ O
 merges _ _ O
 them _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Whenever _ _ O
 a _ _ O
@@ -2955,13 +3474,17 @@ next _ _ O
 to _ _ O
 an _ _ O
 existing _ _ O
-one… _ _ O
+one _ _ O
+… _ _ O
 • _ _ O
 It _ _ O
 should _ _ O
 merge _ _ O
 them _ _ O
 ! _ _ O
+
+
+ _ _ O
 However _ _ O
 it _ _ O
 subtracts _ _ O
@@ -2975,6 +3498,9 @@ a _ _ O
 larger _ _ O
 space _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Consider _ _ O
 how _ _ O
@@ -2993,23 +3519,36 @@ changes _ _ O
 required _ _ O
 here _ _ O
 for _ _ O
-best-fit _ _ B-Concept
+best _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 ? _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 Thinking _ _ O
 about _ _ O
-next-fit _ _ B-Concept
+next _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 With _ _ O
 a _ _ O
 typical _ _ O
-first-fit _ _ B-Concept
+first _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 version _ _ O
 of _ _ O
 the _ _ O
 malloc _ _ O
-function… _ _ O
+function _ _ O
+… _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -3028,8 +3567,13 @@ expensive _ _ O
 𝑂 _ _ O
 𝑛 _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
-Next-fit _ _ B-Concept
+Next _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 helps _ _ O
 because _ _ O
 we _ _ O
@@ -3058,7 +3602,8 @@ item _ _ O
 Consider _ _ O
 the _ _ O
 normal _ _ O
-operation… _ _ O
+operation _ _ O
+… _ _ O
 • _ _ O
 It _ _ O
 splits _ _ O
@@ -3069,6 +3614,9 @@ creates _ _ O
 free _ _ O
 space _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Therefore _ _ O
 , _ _ O
@@ -3095,9 +3643,7 @@ to _ _ O
 bias _ _ O
 itself _ _ O
 toward _ _ O
-𝑂 _ _ O
-( _ _ O
-1 _ _ O
+𝑂(1 _ _ O
 ) _ _ O
 • _ _ O
 However _ _ O
@@ -3107,7 +3653,9 @@ strategies _ _ O
 have _ _ O
 their _ _ O
 own _ _ O
-worst-case _ _ O
+worst _ _ O
+- _ _ O
+case _ _ O
 ! _ _ O
 ! _ _ O
 • _ _ O
@@ -3118,13 +3666,20 @@ that _ _ O
 might _ _ O
 be _ _ O
 . _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 Thinking _ _ O
 about _ _ O
-best-fit _ _ B-Concept
+best _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 • _ _ O
-Best-fit _ _ B-Concept
+Best _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 , _ _ O
 on _ _ O
 the _ _ O
@@ -3145,11 +3700,16 @@ focus _ _ O
 on _ _ O
 fragmentation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Allocating _ _ O
 anywhere _ _ O
 means _ _ O
-worst-case _ _ O
+worst _ _ O
+- _ _ O
+case _ _ O
 behavior _ _ O
 splits _ _ O
 nodes _ _ O
@@ -3167,11 +3727,15 @@ we _ _ O
 remove _ _ O
 fragmentation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Traversal _ _ O
 is _ _ O
 still _ _ O
-bad… _ _ O
+bad _ _ O
+… _ _ O
 and _ _ O
 we _ _ O
 brute _ _ O
@@ -3192,8 +3756,7 @@ cause _ _ O
 another _ _ O
 . _ _ O
 That _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 systems _ _ O
 ! _ _ O
 • _ _ O
@@ -3209,6 +3772,9 @@ small _ _ O
 memory _ _ O
 systems _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 is _ _ O
@@ -3218,9 +3784,13 @@ of _ _ O
 both _ _ O
 worlds _ _ O
 ? _ _ O
-Next-fit _ _ B-Concept
+Next _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 + _ _ O
-Best-fit _ _ B-Concept
+Best _ _ B-Concept
+- _ _ I-Concept
+fit _ _ I-Concept
 ? _ _ O
 • _ _ O
 Hmm _ _ O
@@ -3235,19 +3805,23 @@ large _ _ O
 areas _ _ O
 open _ _ O
 . _ _ O
-CS/COE _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 0449 _ _ O
 – _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Other _ _ O
 thoughts _ _ O
 • _ _ O
-Don _ _ O
-’ _ _ O
-t _ _ O
+Do _ _ O
+n’t _ _ O
 need _ _ O
 pointers _ _ O
 since _ _ O
@@ -3256,8 +3830,7 @@ size _ _ O
 to _ _ O
 the _ _ O
 block _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 address _ _ O
 will _ _ O
 also _ _ O
@@ -3277,9 +3850,8 @@ ordered _ _ O
 ) _ _ O
 • _ _ O
 You _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 need _ _ O
 to _ _ O
 keep _ _ O
@@ -3330,10 +3902,11 @@ free _ _ O
 nodes _ _ O
 ; _ _ O
 still _ _ O
-𝑂 _ _ O
-( _ _ O
-𝑛 _ _ O
+𝑂(𝑛 _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 idea _ _ O
@@ -3373,16 +3946,23 @@ when _ _ O
 that _ _ O
 condition _ _ O
 is _ _ O
-met… _ _ O
+met _ _ O
+… _ _ O
 • _ _ O
 just _ _ O
 see _ _ O
 if _ _ O
+
+
+ _ _ O
 is _ _ O
 the _ _ O
 same _ _ O
 address _ _ O
 as _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 only _ _ O
@@ -3410,6 +3990,9 @@ have _ _ O
 normal _ _ O
 pointers _ _ O
 . _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 Explicit _ _ O
@@ -3434,14 +4017,16 @@ list _ _ O
 . _ _ O
 • _ _ O
 You _ _ O
-don _ _ O
-’ _ _ O
-t _ _ O
+do _ _ O
+n’t _ _ O
 care _ _ O
 about _ _ O
 allocated _ _ O
 nodes _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 you _ _ O
@@ -3454,8 +4039,14 @@ about _ _ O
 coalescing _ _ B-Concept
 neighbors _ _ O
 . _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 Do _ _ O
@@ -3463,14 +4054,23 @@ free _ _ O
 nodes _ _ O
 need _ _ O
 a _ _ O
+
+
+ _ _ O
 pointer _ _ O
 ? _ _ O
+
+
+ _ _ O
 43 _ _ O
 
 Trees _ _ O
 are _ _ O
 your _ _ O
 buddy _ _ O
+
+
+ _ _ O
 • _ _ O
 Recall _ _ O
 that _ _ O
@@ -3499,6 +4099,9 @@ tree _ _ O
 as _ _ O
 well _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -3507,6 +4110,9 @@ a _ _ O
 buddy _ _ B-Concept
 allocator _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 45 _ _ O
 
 Divide _ _ O
@@ -3530,6 +4136,9 @@ Can _ _ O
 cause _ _ O
 internal _ _ B-Concept
 fragmentation _ _ I-Concept
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 total _ _ O
@@ -3555,6 +4164,9 @@ power _ _ O
 of _ _ O
 two _ _ O
 . _ _ O
+
+
+ _ _ O
 Allocation _ _ O
 is _ _ O
 not _ _ O
@@ -3565,6 +4177,9 @@ two _ _ O
 : _ _ O
 internal _ _ B-Concept
 fragmentation _ _ I-Concept
+
+
+ _ _ O
 46 _ _ O
 
 Allocating _ _ O
@@ -3572,13 +4187,22 @@ with _ _ O
 trees _ _ O
 • _ _ O
 Assuming _ _ O
+
+
+ _ _ O
 is _ _ O
+
+
+ _ _ O
 , _ _ O
 and _ _ O
 we _ _ O
 allocate _ _ O
 242MiB _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 travel _ _ O
@@ -3591,6 +4215,9 @@ block _ _ O
 that _ _ O
 fits _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 We _ _ O
 travel _ _ O
@@ -3598,9 +4225,8 @@ back _ _ O
 up _ _ O
 when _ _ O
 we _ _ O
-can _ _ O
-’ _ _ O
-t _ _ O
+ca _ _ O
+n’t _ _ O
 go _ _ O
 further _ _ O
 left _ _ O
@@ -3622,6 +4248,9 @@ we _ _ O
 allocate _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 47 _ _ O
 
 Burying _ _ O
@@ -3633,11 +4262,9 @@ the _ _ O
 trees _ _ O
 • _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 allocate _ _ O
-64MiB _ _ O
-. _ _ O
+64MiB. _ _ O
 So _ _ O
 nice _ _ O
 , _ _ O
@@ -3650,7 +4277,9 @@ twice _ _ O
 • _ _ O
 Again _ _ O
 a _ _ O
-depth-first _ _ O
+depth _ _ O
+- _ _ O
+first _ _ O
 search _ _ O
 to _ _ O
 find _ _ O
@@ -3662,6 +4291,9 @@ that _ _ O
 fits _ _ O
 us _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 This _ _ O
 node _ _ O
@@ -3696,11 +4328,19 @@ and _ _ O
 keep _ _ O
 going _ _ O
 . _ _ O
-CS/COE _ _ O
+
+
+ _ _ O
+CS _ _ O
+/ _ _ O
+COE _ _ O
 0449 _ _ O
 – _ _ O
 Spring _ _ O
 2019/2020 _ _ O
+
+
+ _ _ O
 48 _ _ O
 
 Coalescing _ _ B-Concept
@@ -3732,6 +4372,9 @@ free _ _ O
 coalesce _ _ B-Concept
 them _ _ O
 ! _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 If _ _ O
 this _ _ O
@@ -3751,8 +4394,17 @@ much _ _ O
 as _ _ O
 necessary _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 x _ _ O
 49 _ _ O
 
@@ -3773,7 +4425,9 @@ listless _ _ O
 How _ _ O
 does _ _ O
 a _ _ O
-tree-based _ _ O
+tree _ _ O
+- _ _ O
+based _ _ O
 allocation _ _ O
 system _ _ O
 deal _ _ O
@@ -3792,8 +4446,14 @@ a _ _ O
 tree _ _ O
 scheme _ _ O
 ? _ _ O
+
+
+ _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Can _ _ O
 you _ _ O
@@ -3832,6 +4492,9 @@ absolutely _ _ O
 heckin _ _ O
 not _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Your _ _ O
 program _ _ O
@@ -3882,7 +4545,13 @@ memory _ _ O
 pages _ _ O
 with _ _ O
 . _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 is _ _ O
@@ -3921,7 +4590,9 @@ allow _ _ O
 ( _ _ O
 write _ _ O
 to _ _ O
-read-only _ _ O
+read _ _ O
+- _ _ O
+only _ _ O
 memory _ _ O
 ) _ _ O
 • _ _ O
@@ -3938,6 +4609,9 @@ not _ _ O
 segmented _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 is _ _ O
@@ -3978,6 +4652,9 @@ on _ _ O
 this _ _ O
 later _ _ O
 ! _ _ O
+
+
+ _ _ O
 51 _ _ O
 
 I _ _ O
@@ -4028,6 +4705,9 @@ the _ _ O
 need _ _ O
 arises _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 Linux _ _ O
@@ -4039,9 +4719,10 @@ a _ _ O
 Slab _ _ O
 Allocator _ _ O
 • _ _ O
-https _ _ O
-: _ _ O
-//en.wikipedia.org/wiki/Slab_allocation _ _ O
+https://en.wikipedia.org/wiki/Slab_allocation _ _ O
+
+
+ _ _ O
 • _ _ O
 Modern _ _ O
 C _ _ O
@@ -4054,9 +4735,10 @@ hybrid _ _ O
 malloc _ _ O
 : _ _ O
 • _ _ O
-https _ _ O
-: _ _ O
-//www.gnu.org/software/libc/manual/html_node/The-GNU-Allocator.html _ _ O
+https://www.gnu.org/software/libc/manual/html_node/The-GNU-Allocator.html _ _ O
+
+
+ _ _ O
 • _ _ O
 Professor _ _ O
 Knuth _ _ O

@@ -1,6 +1,8 @@
 -DOCSTART- -X- -X- O
 
-Top-down _ _ B-Concept
+Top _ _ B-Concept
+- _ _ I-Concept
+down _ _ I-Concept
 Parsing _ _ I-Concept
 CS _ _ O
 1622 _ _ O
@@ -24,16 +26,21 @@ this _ _ O
 weekend _ _ O
 so _ _ O
 you _ _ O
-’ _ _ O
-ll _ _ O
+’ll _ _ O
 have _ _ O
 2 _ _ O
 weeks _ _ O
 for _ _ O
 it _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Parsing _ _ B-Concept
+
+
+ _ _ O
 3 _ _ O
 
 A _ _ O
@@ -56,7 +63,8 @@ language _ _ O
 . _ _ O
 Exp _ _ O
 : _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 | _ _ O
 Num _ _ O
 | _ _ O
@@ -70,10 +78,12 @@ Exp+ _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 : _ _ O
 < _ _ O
-id _ _ O
+i _ _ O
+d _ _ O
 token _ _ O
 > _ _ O
 Num _ _ O
@@ -83,6 +93,9 @@ int _ _ O
 literal _ _ O
 token _ _ O
 > _ _ O
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 produce _ _ O
@@ -100,9 +113,14 @@ replacing _ _ O
 nonterminals _ _ B-Concept
 with _ _ O
 their _ _ O
-right-hand _ _ O
+right _ _ O
+- _ _ O
+hand _ _ O
 sides _ _ O
 . _ _ O
+
+
+ _ _ O
 Exp _ _ O
 = _ _ O
 > _ _ O
@@ -127,13 +145,18 @@ Exp _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
+
+
+ _ _ O
 = _ _ O
 > _ _ O
 ' _ _ O
 ( _ _ O
 ' _ _ O
-Id _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
+I _ _ O
+d _ _ O
 Num _ _ O
 ' _ _ O
 ) _ _ O
@@ -143,9 +166,11 @@ Num _ _ O
 ' _ _ O
 ( _ _ O
 ' _ _ O
-'add _ _ O
 ' _ _ O
-Id _ _ O
+add _ _ O
+' _ _ O
+I _ _ O
+d _ _ O
 Num _ _ O
 ' _ _ O
 ) _ _ O
@@ -155,7 +180,8 @@ Num _ _ O
 ' _ _ O
 ( _ _ O
 ' _ _ O
-'add _ _ O
+' _ _ O
+add _ _ O
 ' _ _ O
 ' _ _ O
 x _ _ O
@@ -169,7 +195,8 @@ Num _ _ O
 ' _ _ O
 ( _ _ O
 ' _ _ O
-'add _ _ O
+' _ _ O
+add _ _ O
 ' _ _ O
 ' _ _ O
 x _ _ O
@@ -180,6 +207,9 @@ x _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
+
+
+ _ _ O
 this _ _ O
 sequence _ _ O
 is _ _ O
@@ -187,6 +217,9 @@ called _ _ O
 a _ _ O
 derivation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 now _ _ O
 suppose _ _ O
 we _ _ O
@@ -214,6 +247,9 @@ get _ _ O
 to _ _ O
 Exp _ _ O
 ? _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 That _ _ O
@@ -229,7 +265,8 @@ grammar _ _ B-Concept
 and _ _ O
 an _ _ O
 input _ _ O
-string… _ _ O
+string _ _ O
+… _ _ O
 ● _ _ O
 parsing _ _ B-Concept
 is _ _ O
@@ -275,7 +312,8 @@ tree _ _ I-Concept
 ! _ _ O
 Exp _ _ O
 : _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 | _ _ O
 Num _ _ O
 | _ _ O
@@ -289,10 +327,12 @@ Exp+ _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 : _ _ O
 < _ _ O
-id _ _ O
+i _ _ O
+d _ _ O
 token _ _ O
 > _ _ O
 Num _ _ O
@@ -301,6 +341,9 @@ Num _ _ O
 int _ _ O
 token _ _ O
 > _ _ O
+
+
+ _ _ O
 Input _ _ O
 e _ _ O
 ( _ _ O
@@ -316,33 +359,22 @@ e _ _ O
 ) _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Output _ _ O
 AST _ _ B-Concept
-Id _ _ O
-( _ _ O
-" _ _ O
-e _ _ O
+Id("e _ _ O
 " _ _ O
 ) _ _ O
-Parens _ _ O
-( _ _ O
-Id _ _ O
-( _ _ O
-" _ _ O
-e _ _ O
+Parens(Id("e _ _ O
 " _ _ O
 ) _ _ O
 ) _ _ O
-Parens _ _ O
-( _ _ O
-Num _ _ O
-( _ _ O
-1 _ _ O
+Parens(Num(1 _ _ O
 ) _ _ O
 , _ _ O
-Num _ _ O
-( _ _ O
-2 _ _ O
+Num(2 _ _ O
 ) _ _ O
 ) _ _ O
 error _ _ B-Concept
@@ -351,6 +383,9 @@ error _ _ B-Concept
 ! _ _ O
 error _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 the _ _ O
 last _ _ O
 three _ _ O
@@ -365,6 +400,9 @@ help _ _ O
 the _ _ O
 programmer _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Okay _ _ O
@@ -406,12 +444,17 @@ it _ _ O
 's _ _ O
 a _ _ O
 very _ _ O
-easy-toparse _ _ B-Concept
+easy _ _ O
+- _ _ O
+toparse _ _ B-Concept
 example _ _ O
 language _ _ O
 . _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 ( _ _ O
 defun _ _ O
 fact _ _ O
@@ -441,7 +484,13 @@ x _ _ O
 ) _ _ O
 ) _ _ O
 ) _ _ O
+
+
+ _ _ O
 fact _ _ O
+
+
+ _ _ O
 Lisp _ _ O
 code _ _ O
 is _ _ O
@@ -454,17 +503,32 @@ parentheses _ _ O
 group _ _ O
 children _ _ O
 . _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
 x _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
 if _ _ O
 eq _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
 x _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 going _ _ O
@@ -477,18 +541,39 @@ parsing _ _ B-Concept
 much _ _ O
 easier _ _ O
 . _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
 mul _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 fact _ _ O
 ( _ _ O
 ) _ _ O
 sub _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 1 _ _ O
 6 _ _ O
 
@@ -518,7 +603,11 @@ beginning _ _ O
 looking _ _ O
 at _ _ O
 tokens _ _ B-Concept
-one-by-one _ _ O
+one _ _ O
+- _ _ O
+by _ _ O
+- _ _ O
+one _ _ O
 . _ _ O
 o _ _ O
 based _ _ O
@@ -562,7 +651,11 @@ error _ _ O
 ● _ _ O
 speaking _ _ O
 of _ _ O
-which… _ _ O
+which _ _ O
+… _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Error _ _ B-Concept
@@ -574,6 +667,9 @@ check _ _ O
 : _ _ O
 ≤ _ _ O
 17 _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 The _ _ O
@@ -603,6 +699,9 @@ returns _ _ O
 a _ _ O
 Result _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 Result _ _ B-Concept
 < _ _ O
 T _ _ O
@@ -619,6 +718,9 @@ returned _ _ O
 on _ _ O
 success _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 the _ _ O
 function _ _ O
@@ -642,6 +744,9 @@ Rust _ _ B-Concept
 's _ _ I-Concept
 void _ _ O
 . _ _ O
+
+
+ _ _ O
 E _ _ O
 is _ _ O
 the _ _ O
@@ -667,6 +772,9 @@ it _ _ O
 an _ _ O
 enum _ _ O
 . _ _ O
+
+
+ _ _ O
 Result _ _ B-Concept
 < _ _ O
 Box _ _ O
@@ -710,7 +818,8 @@ ParseError _ _ O
 
 Err _ _ B-Concept
 , _ _ O
-ok… _ _ O
+ok _ _ O
+… _ _ O
 ● _ _ O
 you _ _ O
 create _ _ O
@@ -735,7 +844,8 @@ thing.is_bad _ _ O
 common _ _ O
 to _ _ O
 use _ _ O
-'return _ _ O
+' _ _ O
+return _ _ O
 ' _ _ O
 to _ _ O
 immediately _ _ O
@@ -748,11 +858,7 @@ kinda _ _ O
 like _ _ O
 throwing _ _ O
 return _ _ O
-Err _ _ B-Concept
-( _ _ O
-ParseError _ _ O
-: _ _ O
-:whatever _ _ O
+Err(ParseError::whatever _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ) _ _ O
@@ -774,15 +880,11 @@ Err _ _ B-Concept
 ) _ _ O
 : _ _ O
 match _ _ B-Concept
-parse_thing _ _ B-Concept
-( _ _ O
-input _ _ O
+parse_thing(input _ _ B-Concept
 ) _ _ O
 { _ _ O
-Ok _ _ B-Concept
-( _ _ O
-ast _ _ B-Concept
-) _ _ O
+Ok(ast _ _ B-Concept
+) _ _ B-Concept
 = _ _ O
 > _ _ O
 { _ _ O
@@ -800,18 +902,12 @@ ast _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
-println _ _ O
-! _ _ O
-( _ _ O
-" _ _ O
-o _ _ O
+println!("o _ _ O
 no _ _ O
 : _ _ O
 { _ _ O
@@ -852,7 +948,9 @@ before _ _ O
 ● _ _ O
 when _ _ O
 using _ _ O
-Result-returning _ _ B-Concept
+Result _ _ B-Concept
+- _ _ O
+returning _ _ O
 functions _ _ O
 , _ _ O
 a _ _ O
@@ -862,100 +960,77 @@ pattern _ _ O
 appears _ _ O
 : _ _ O
 match _ _ B-Concept
-step_one _ _ O
-( _ _ O
-input _ _ O
+step_one(input _ _ O
 ) _ _ O
 { _ _ O
-Ok _ _ B-Concept
-( _ _ O
-a _ _ O
+Ok(a _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 match _ _ B-Concept
-step_two _ _ O
-( _ _ O
-a _ _ O
+step_two(a _ _ O
 ) _ _ O
 { _ _ O
-Ok _ _ B-Concept
-( _ _ O
-b _ _ O
+Ok(b _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 match _ _ B-Concept
-step_three _ _ O
-( _ _ O
-b _ _ O
+step_three(b _ _ O
 ) _ _ O
 { _ _ O
-Ok _ _ B-Concept
-( _ _ O
-c _ _ O
+Ok(c _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 return _ _ O
-Ok _ _ B-Concept
-( _ _ O
-c.to_string _ _ O
+Ok(c.to_string _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 return _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
 } _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 return _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
 } _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 = _ _ O
 > _ _ O
 { _ _ O
 return _ _ O
-Err _ _ B-Concept
-( _ _ O
-e _ _ O
+Err(e _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 terrible _ _ O
@@ -965,36 +1040,31 @@ instead _ _ O
 let _ _ O
 a _ _ O
 = _ _ O
-step_one _ _ O
-( _ _ O
-input _ _ O
+step_one(input _ _ O
 ) _ _ O
 ? _ _ O
 ; _ _ O
 let _ _ O
 b _ _ O
 = _ _ O
-step_two _ _ O
-( _ _ O
-a _ _ O
+step_two(a _ _ O
 ) _ _ O
 ? _ _ O
 ; _ _ O
 let _ _ O
 c _ _ O
 = _ _ O
-step_three _ _ O
-( _ _ O
-b _ _ O
+step_three(b _ _ O
 ) _ _ O
 ? _ _ O
 ; _ _ O
-Ok _ _ B-Concept
-( _ _ O
-c.to_string _ _ O
+Ok(c.to_string _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ B-Concept
 ? _ _ I-Concept
 means _ _ O
@@ -1037,6 +1107,9 @@ check _ _ O
 : _ _ O
 ≤ _ _ O
 34 _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 Can _ _ O
@@ -1059,7 +1132,11 @@ of _ _ O
 tokens _ _ B-Concept
 as _ _ O
 our _ _ O
-input… _ _ O
+input _ _ O
+… _ _ O
+
+
+ _ _ O
 ' _ _ O
 ( _ _ O
 ' _ _ O
@@ -1068,7 +1145,8 @@ input… _ _ O
 ( _ _ O
 ' _ _ O
 , _ _ O
-'hi _ _ O
+' _ _ O
+hi _ _ O
 ' _ _ O
 , _ _ O
 ' _ _ O
@@ -1082,9 +1160,13 @@ input… _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
+
+
+ _ _ O
 Exp _ _ O
 : _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 | _ _ O
 Num _ _ O
 | _ _ O
@@ -1098,10 +1180,12 @@ Exp+ _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 : _ _ O
 < _ _ O
-id _ _ O
+i _ _ O
+d _ _ O
 token _ _ O
 > _ _ O
 Num _ _ O
@@ -1111,6 +1195,9 @@ int _ _ O
 literal _ _ O
 token _ _ O
 > _ _ O
+
+
+ _ _ O
 we _ _ O
 are _ _ O
 here _ _ O
@@ -1128,7 +1215,9 @@ this _ _ O
 token _ _ O
 is _ _ O
 a _ _ O
-left-paren _ _ O
+left _ _ O
+- _ _ O
+paren _ _ O
 , _ _ O
 so _ _ O
 which _ _ O
@@ -1143,7 +1232,9 @@ Parens _ _ O
 ! _ _ O
 after _ _ O
 the _ _ O
-left-paren _ _ O
+left _ _ O
+- _ _ O
+paren _ _ O
 , _ _ O
 we _ _ O
 should _ _ O
@@ -1156,8 +1247,13 @@ Exps _ _ O
 followed _ _ O
 by _ _ O
 a _ _ O
-right-paren _ _ O
+right _ _ O
+- _ _ O
+paren _ _ O
 . _ _ O
+
+
+ _ _ O
 but _ _ O
 we _ _ O
 're _ _ O
@@ -1187,7 +1283,8 @@ rules _ _ O
 are _ _ O
 recursive _ _ B-Concept
 , _ _ O
-so… _ _ O
+so _ _ O
+… _ _ O
 ● _ _ O
 recall _ _ O
 that _ _ O
@@ -1208,7 +1305,8 @@ between _ _ O
 the _ _ O
 rules _ _ B-Concept
 are _ _ O
-recursive… _ _ B-Concept
+recursive _ _ B-Concept
+… _ _ O
 o _ _ O
 why _ _ O
 not _ _ O
@@ -1222,7 +1320,8 @@ rules _ _ O
 ? _ _ O
 Exp _ _ O
 : _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 | _ _ O
 Num _ _ O
 | _ _ O
@@ -1236,10 +1335,12 @@ Exp+ _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 : _ _ O
 < _ _ O
-id _ _ O
+i _ _ O
+d _ _ O
 token _ _ O
 > _ _ O
 Num _ _ O
@@ -1248,6 +1349,9 @@ Num _ _ O
 int _ _ O
 token _ _ O
 > _ _ O
+
+
+ _ _ O
 let _ _ O
 's _ _ O
 write _ _ O
@@ -1259,6 +1363,9 @@ our _ _ O
 thoughts _ _ O
 down _ _ O
 . _ _ O
+
+
+ _ _ O
 fn _ _ O
 parse_exp _ _ O
 ( _ _ O
@@ -1269,7 +1376,8 @@ self.cur _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
-Id _ _ O
+I _ _ O
+d _ _ O
 = _ _ O
 > _ _ O
 parse_id _ _ O
@@ -1292,6 +1400,9 @@ parse_parens _ _ O
 , _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 fn _ _ O
 parse_parens _ _ O
 ( _ _ O
@@ -1304,7 +1415,8 @@ eat_an_lparen _ _ O
 let _ _ O
 exps _ _ O
 = _ _ O
-…parse_exp _ _ O
+… _ _ O
+parse_exp _ _ O
 ( _ _ O
 ) _ _ O
 … _ _ O
@@ -1313,9 +1425,7 @@ eat_an_rparen _ _ O
 ) _ _ O
 ; _ _ O
 return _ _ O
-Parens _ _ O
-( _ _ O
-exps _ _ O
+Parens(exps _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
@@ -1324,6 +1434,9 @@ looping _ _ O
 happens _ _ O
 here _ _ O
 ) _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Believe _ _ O
@@ -1343,9 +1456,7 @@ we _ _ O
 've _ _ O
 just _ _ O
 ( _ _ O
-pseudo- _ _ O
-) _ _ O
-written _ _ O
+pseudo-)written _ _ O
 is _ _ O
 a _ _ O
 recursive _ _ B-Concept
@@ -1459,6 +1570,9 @@ about _ _ O
 this _ _ O
 code _ _ O
 ? _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 From _ _ O
@@ -1486,6 +1600,9 @@ is _ _ O
 relatively _ _ O
 straightforward _ _ O
 : _ _ O
+
+
+ _ _ O
 Parens _ _ O
 : _ _ O
 ' _ _ O
@@ -1503,7 +1620,8 @@ parse _ _ O
 a _ _ O
 Parens _ _ O
 : _ _ O
-1. _ _ O
+1 _ _ O
+. _ _ O
 expect _ _ O
 a _ _ O
 ' _ _ O
@@ -1514,7 +1632,8 @@ and _ _ O
 skip _ _ O
 it _ _ O
 . _ _ O
-2. _ _ O
+2 _ _ O
+. _ _ O
 parse _ _ O
 one _ _ O
 Exp _ _ O
@@ -1526,7 +1645,8 @@ the _ _ O
 minimum _ _ O
 number _ _ O
 . _ _ O
-3. _ _ O
+3 _ _ O
+. _ _ O
 while _ _ O
 we _ _ O
 do _ _ O
@@ -1549,7 +1669,8 @@ into _ _ O
 a _ _ O
 list _ _ O
 . _ _ O
-4. _ _ O
+4 _ _ O
+. _ _ O
 expect _ _ O
 a _ _ O
 ' _ _ O
@@ -1560,6 +1681,9 @@ and _ _ O
 skip _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 all _ _ O
 of _ _ O
@@ -1608,11 +1732,17 @@ in _ _ O
 our _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 A _ _ O
 | _ _ O
 B _ _ O
+
+
+ _ _ O
 sequencing _ _ B-Concept
 : _ _ O
 parse _ _ B-Concept
@@ -1630,7 +1760,9 @@ B. _ _ O
 alternation _ _ B-Concept
 : _ _ O
 an _ _ O
-if-else _ _ O
+if _ _ O
+- _ _ O
+else _ _ O
 ( _ _ O
 or _ _ O
 a _ _ O
@@ -1644,11 +1776,17 @@ A _ _ O
 or _ _ O
 parse _ _ B-Concept
 a _ _ O
-B _ _ O
-. _ _ O
+B. _ _ O
+
+
+ _ _ O
 A _ _ O
 * _ _ O
-0+ _ _ B-Concept
+
+
+ _ _ O
+0 _ _ B-Concept
++ _ _ I-Concept
 repetition _ _ I-Concept
 : _ _ O
 while _ _ O
@@ -1664,8 +1802,15 @@ keep _ _ O
 parsing _ _ B-Concept
 As _ _ O
 . _ _ O
+
+
+ _ _ O
 A+ _ _ O
-1+ _ _ O
+
+
+ _ _ O
+1 _ _ O
++ _ _ O
 repetition _ _ O
 : _ _ O
 parse _ _ O
@@ -1679,10 +1824,17 @@ while _ _ O
 loop _ _ O
 like _ _ O
 for _ _ O
-0+ _ _ O
+0 _ _ O
++ _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 ? _ _ O
+
+
+ _ _ O
 optional _ _ O
 : _ _ O
 if _ _ O
@@ -1722,11 +1874,17 @@ different _ _ O
 data _ _ O
 structures _ _ O
 : _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 A _ _ O
 | _ _ O
 B _ _ O
+
+
+ _ _ O
 a _ _ O
 struct _ _ B-Concept
 , _ _ O
@@ -1750,11 +1908,19 @@ are _ _ O
 two _ _ O
 variants _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 * _ _ O
 A+ _ _ O
+
+
+ _ _ O
 an _ _ B-Concept
-array/vector _ _ I-Concept
+array _ _ I-Concept
+/ _ _ I-Concept
+vector _ _ I-Concept
 , _ _ O
 whose _ _ O
 length _ _ O
@@ -1764,8 +1930,14 @@ number _ _ O
 of _ _ O
 repetitions _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 ? _ _ O
+
+
+ _ _ O
 an _ _ O
 Option _ _ B-Concept
 < _ _ I-Concept
@@ -1799,7 +1971,9 @@ I _ _ O
 added _ _ O
 . _ _ O
 o _ _ O
-src/lib.rs _ _ O
+src _ _ O
+/ _ _ O
+lib.rs _ _ O
 is _ _ O
 where _ _ O
 all _ _ O
@@ -1851,7 +2025,8 @@ like _ _ O
 Lexer _ _ B-Concept
 from _ _ O
 your _ _ O
-project… _ _ O
+project _ _ O
+… _ _ O
 ▪ _ _ O
 except _ _ O
 it _ _ O
@@ -1931,6 +2106,9 @@ example _ _ O
 . _ _ O
 : _ _ O
 B _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Limits _ _ B-Concept
@@ -1942,6 +2120,9 @@ check _ _ O
 : _ _ O
 ≤ _ _ O
 68 _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 If _ _ O
@@ -1971,13 +2152,13 @@ great _ _ O
 ! _ _ O
 o _ _ O
 import _ _ O
-java.util.Arrays _ _ O
+java.util _ _ O
+. _ _ O
+Arrays _ _ O
 ; _ _ O
 o _ _ O
 use _ _ O
-std _ _ O
-: _ _ O
-:blah _ _ O
+std::blah _ _ O
 ; _ _ O
 o _ _ O
 fn _ _ O
@@ -1996,7 +2177,8 @@ A _ _ O
 o _ _ O
 if _ _ O
 x _ _ O
-== _ _ O
+= _ _ O
+= _ _ O
 y _ _ O
 { _ _ O
 … _ _ O
@@ -2067,6 +2249,9 @@ looks _ _ O
 like _ _ O
 that _ _ O
 ? _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Expressions _ _ B-Concept
@@ -2111,13 +2296,25 @@ a _ _ O
 few _ _ O
 problems _ _ O
 . _ _ O
+
+
+ _ _ O
 Input _ _ O
+
+
+ _ _ O
 Output _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
 + _ _ O
 z _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 + _ _ O
@@ -2150,11 +2347,17 @@ were _ _ O
 or _ _ O
 / _ _ O
 ? _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 4 _ _ O
 * _ _ O
 y _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 + _ _ O
@@ -2171,12 +2374,18 @@ x _ _ O
 y _ _ O
 ) _ _ O
 ? _ _ O
+
+
+ _ _ O
 the _ _ O
 second _ _ O
 one _ _ O
 is _ _ O
 right _ _ O
 . _ _ O
+
+
+ _ _ O
 and _ _ O
 if _ _ O
 we _ _ O
@@ -2189,6 +2398,9 @@ exponents _ _ O
 like _ _ O
 Python _ _ O
 : _ _ O
+
+
+ _ _ O
 2 _ _ O
 * _ _ O
 * _ _ O
@@ -2196,6 +2408,9 @@ x _ _ O
 * _ _ O
 * _ _ O
 2 _ _ O
+
+
+ _ _ O
 ( _ _ O
 2 _ _ O
 * _ _ O
@@ -2216,6 +2431,9 @@ x _ _ O
 2 _ _ O
 ) _ _ O
 ? _ _ O
+
+
+ _ _ O
 the _ _ O
 second _ _ O
 one _ _ O
@@ -2225,7 +2443,8 @@ right _ _ O
 22 _ _ O
 
 Even _ _ O
-worse… _ _ O
+worse _ _ O
+… _ _ O
 ● _ _ O
 how _ _ O
 do _ _ O
@@ -2240,6 +2459,9 @@ we _ _ O
 looking _ _ O
 at _ _ O
 ? _ _ O
+
+
+ _ _ O
 ( _ _ O
 3 _ _ O
 + _ _ O
@@ -2260,9 +2482,14 @@ is _ _ O
 looking _ _ O
 at _ _ O
 this _ _ O
-token… _ _ B-Concept
+token _ _ B-Concept
+… _ _ O
 . _ _ O
-…how _ _ O
+
+
+ _ _ O
+… _ _ O
+how _ _ O
 will _ _ O
 it _ _ O
 know _ _ O
@@ -2275,6 +2502,9 @@ it _ _ O
 gets _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 so _ _ O
 what _ _ O
 do _ _ O
@@ -2330,9 +2560,7 @@ an _ _ O
 exponential _ _ B-Concept
 time _ _ I-Concept
 ( _ _ O
-O _ _ O
-( _ _ O
-2n _ _ O
+O(2n _ _ O
 ) _ _ O
 ) _ _ O
 algorithm _ _ O
@@ -2392,7 +2620,9 @@ that _ _ O
 a _ _ O
 little _ _ O
 more _ _ O
-mind-bending _ _ O
+mind _ _ O
+- _ _ O
+bending _ _ O
 , _ _ O
 but _ _ O
 more _ _ O
@@ -2405,6 +2635,9 @@ for _ _ O
 next _ _ O
 time _ _ O
 ! _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Error _ _ B-Concept
@@ -2414,6 +2647,9 @@ check _ _ O
 : _ _ O
 ≤ _ _ O
 85 _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Compilers _ _ B-Concept
@@ -2440,7 +2676,9 @@ totally _ _ O
 confused _ _ O
 by _ _ O
 very _ _ O
-simple/common _ _ O
+simple _ _ O
+/ _ _ O
+common _ _ O
 typos _ _ O
 , _ _ O
 like _ _ O
@@ -2471,7 +2709,11 @@ terminology _ _ O
 , _ _ O
 like _ _ O
 " _ _ O
-specifier-qualifier-list _ _ O
+specifier _ _ O
+- _ _ O
+qualifier _ _ O
+- _ _ O
+list _ _ O
 " _ _ O
 ? _ _ O
 o _ _ O
@@ -2510,6 +2752,9 @@ right _ _ O
 , _ _ O
 okay _ _ O
 , _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Who _ _ O
@@ -2542,7 +2787,8 @@ errors _ _ B-Concept
 , _ _ O
 they _ _ O
 should _ _ O
-be… _ _ O
+be _ _ O
+… _ _ O
 for _ _ O
 humans _ _ O
 ! _ _ O
@@ -2570,14 +2816,13 @@ understand _ _ O
 our _ _ O
 human _ _ O
 mistakes _ _ O
-f _ _ O
-( _ _ O
-3 _ _ O
+
+
+ _ _ O
+f(3 _ _ O
 4 _ _ O
 ) _ _ O
--- _ _ O
--- _ _ O
-^ _ _ O
+----^ _ _ O
 expected _ _ O
 ` _ _ O
 ) _ _ O
@@ -2587,12 +2832,17 @@ or _ _ O
 , _ _ O
 ' _ _ O
 in _ _ O
-argument-list _ _ O
+argument _ _ O
+- _ _ O
+list _ _ O
 , _ _ O
 not _ _ O
 ` _ _ O
 4 _ _ O
 ' _ _ O
+
+
+ _ _ O
 people _ _ O
 who _ _ O
 write _ _ O
@@ -2609,6 +2859,9 @@ know _ _ O
 how _ _ O
 they _ _ O
 work _ _ O
+
+
+ _ _ O
 ( _ _ O
 substitution _ _ O
 of _ _ O
@@ -2684,6 +2937,9 @@ Y _ _ O
 uh _ _ O
 oh _ _ O
 . _ _ O
+
+
+ _ _ O
 but _ _ O
 how _ _ O
 would _ _ O
@@ -2697,6 +2953,9 @@ brace _ _ O
 should _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 fn _ _ O
 func _ _ O
 ( _ _ O
@@ -2705,19 +2964,18 @@ func _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
-E _ _ O
-: _ _ O
-:X _ _ O
+E::X _ _ O
 // _ _ O
 oops _ _ O
 ( _ _ O
-blah _ _ O
-) _ _ O
-.y _ _ O
+blah).y _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 this _ _ O
 could _ _ O
 even _ _ O
@@ -2824,6 +3082,9 @@ do _ _ O
 n't _ _ O
 already _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 so _ _ O
 maybe _ _ O
@@ -2877,11 +3138,16 @@ annoying _ _ O
 : _ _ O
 ^ _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 personally _ _ O
 I _ _ O
 think _ _ O
-lexing/parsing _ _ O
+lexing _ _ O
+/ _ _ O
+parsing _ _ O
 error _ _ O
 recovery _ _ O
 is _ _ O
@@ -2916,20 +3182,24 @@ improve _ _ O
 error _ _ B-Concept
 messages _ _ I-Concept
 . _ _ O
-1. _ _ O
+1 _ _ O
+. _ _ O
 say _ _ O
 where _ _ O
 it _ _ O
 is _ _ O
-test.foo _ _ O
-( _ _ O
-9:17 _ _ O
+test.foo(9:17 _ _ O
 ) _ _ O
+
+
+ _ _ O
 bare _ _ O
-minimum… _ _ O
-test.foo _ _ O
-( _ _ O
-9:17 _ _ O
+minimum _ _ O
+… _ _ O
+
+
+ _ _ O
+test.foo(9:17 _ _ O
 ) _ _ O
 : _ _ O
 for _ _ O
@@ -2941,7 +3211,11 @@ in _ _ O
 here _ _ O
 better _ _ O
 ! _ _ O
-2. _ _ O
+
+
+ _ _ O
+2 _ _ O
+. _ _ O
 give _ _ O
 a _ _ O
 unique _ _ O
@@ -2959,14 +3233,24 @@ not _ _ O
 ' _ _ O
 { _ _ O
 ' _ _ O
-ehh… _ _ O
-for-loop _ _ O
+ehh _ _ O
+… _ _ O
+
+
+ _ _ O
+for _ _ O
+- _ _ O
+loop _ _ O
 missing _ _ O
 upper _ _ O
 bound _ _ O
 better _ _ O
 ! _ _ O
-3. _ _ O
+
+
+ _ _ O
+3 _ _ O
+. _ _ O
 extra _ _ O
 credit _ _ O
 : _ _ O
@@ -2978,6 +3262,9 @@ they _ _ O
 might _ _ O
 fix _ _ O
 it _ _ O
+
+
+ _ _ O
 help _ _ O
 : _ _ O
 maybe _ _ O
@@ -3021,7 +3308,8 @@ span _ _ O
 more _ _ O
 than _ _ O
 one _ _ O
-column… _ _ B-Concept
+column _ _ B-Concept
+… _ _ O
 o _ _ O
 or _ _ O
 even _ _ O
@@ -3033,7 +3321,9 @@ line _ _ B-Concept
 if _ _ O
 you _ _ O
 allow _ _ O
-multi-line _ _ O
+multi _ _ O
+- _ _ O
+line _ _ O
 strings _ _ O
 ! _ _ O
 o _ _ O
@@ -3089,7 +3379,8 @@ to _ _ O
 the _ _ O
 token _ _ B-Concept
 list _ _ O
-somehow… _ _ O
+somehow _ _ O
+… _ _ O
 ? _ _ O
 ▪ _ _ O
 there _ _ O
@@ -3101,6 +3392,9 @@ to _ _ O
 implement _ _ O
 this _ _ O
 ! _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Second _ _ O
@@ -3350,6 +3644,9 @@ it _ _ O
 's _ _ O
 amazing _ _ O
 ! _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 

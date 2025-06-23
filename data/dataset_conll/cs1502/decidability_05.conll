@@ -4,14 +4,16 @@ Decidability _ _ O
 05 _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
@@ -89,10 +91,11 @@ wi _ _ O
 ATM _ _ O
 or _ _ O
 not _ _ O
+
+
+ _ _ O
 Let _ _ O
-H _ _ O
-( _ _ O
-hM _ _ O
+H(hM _ _ O
 , _ _ O
 wi _ _ O
 ) _ _ O
@@ -117,14 +120,15 @@ we _ _ O
 have _ _ O
 ( _ _ O
 accept _ _ O
-H _ _ O
-( _ _ O
-hM _ _ O
+H(hM _ _ O
 , _ _ O
 wi _ _ O
 ) _ _ O
 = _ _ O
 reject _ _ O
+
+
+ _ _ O
 if _ _ O
 hM _ _ O
 , _ _ O
@@ -137,6 +141,9 @@ hM _ _ O
 wi _ _ O
 6∈ _ _ O
 ATM _ _ O
+
+
+ _ _ O
 M _ _ O
 accepts _ _ O
 w _ _ O
@@ -145,6 +152,9 @@ does _ _ O
 not _ _ O
 accept _ _ O
 w _ _ O
+
+
+ _ _ O
 where _ _ O
 M _ _ O
 is _ _ O
@@ -167,15 +177,19 @@ a _ _ O
 decider _ _ B-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
 An _ _ O
 Undecidable _ _ B-Concept
 Language _ _ I-Concept
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 an _ _ O
@@ -206,6 +220,9 @@ if _ _ O
 we _ _ O
 want _ _ O
 to _ _ O
+
+
+ _ _ O
 Suppose _ _ O
 we _ _ O
 want _ _ O
@@ -239,6 +256,9 @@ we _ _ O
 may _ _ O
 not _ _ O
 know _ _ O
+
+
+ _ _ O
 But _ _ O
 now _ _ O
 we _ _ O
@@ -285,17 +305,24 @@ not _ _ O
 accept _ _ O
 hM _ _ O
 i _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
 An _ _ O
 Undecidable _ _ O
 Language _ _ O
+
+
+ _ _ O
 Now _ _ O
 , _ _ O
 create _ _ O
@@ -321,6 +348,9 @@ TM _ _ O
 : _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 Run _ _ O
 H _ _ O
 on _ _ O
@@ -352,23 +382,29 @@ if _ _ O
 H _ _ O
 rejects _ _ O
 , _ _ O
-accept. _ _ O
+accept _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 That _ _ O
 is _ _ O
 ( _ _ O
-D _ _ O
-( _ _ O
-hM _ _ O
+D(hM _ _ O
 i _ _ O
 ) _ _ O
 = _ _ O
+
+
+ _ _ O
 accept _ _ O
 reject _ _ O
+
+
+ _ _ O
 if _ _ O
-H _ _ O
-( _ _ O
-hM _ _ O
+H(hM _ _ O
 , _ _ O
 hM _ _ O
 ii _ _ O
@@ -376,22 +412,27 @@ ii _ _ O
 = _ _ O
 reject _ _ O
 if _ _ O
-H _ _ O
-( _ _ O
-hM _ _ O
+H(hM _ _ O
 , _ _ O
 hM _ _ O
 ii _ _ O
 ) _ _ O
 = _ _ O
 accept _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
+
+
+ _ _ O
 M _ _ O
 does _ _ O
 not _ _ O
@@ -430,9 +471,11 @@ D _ _ O
 on _ _ O
 input _ _ O
 hDi _ _ O
+
+
+ _ _ O
 Let _ _ O
-’ _ _ O
-s _ _ O
+’s _ _ O
 substitute _ _ O
 M _ _ O
 by _ _ O
@@ -447,32 +490,35 @@ on _ _ O
 the _ _ O
 previous _ _ O
 slide _ _ O
-D _ _ O
-( _ _ O
-hDi _ _ O
+D(hDi _ _ O
 ) _ _ O
 = _ _ O
+
+
+ _ _ O
 ( _ _ O
 accept _ _ O
 reject _ _ O
+
+
+ _ _ O
 if _ _ O
-H _ _ O
-( _ _ O
-hD _ _ O
+H(hD _ _ O
 , _ _ O
 hDii _ _ O
 ) _ _ O
 = _ _ O
 reject _ _ O
 if _ _ O
-H _ _ O
-( _ _ O
-hD _ _ O
+H(hD _ _ O
 , _ _ O
 hDii _ _ O
 ) _ _ O
 = _ _ O
 accept _ _ O
+
+
+ _ _ O
 D _ _ O
 does _ _ O
 not _ _ O
@@ -481,6 +527,9 @@ hDi _ _ O
 D _ _ O
 accepts _ _ O
 hDi _ _ O
+
+
+ _ _ O
 The _ _ O
 above _ _ O
 equation _ _ O
@@ -506,6 +555,9 @@ if _ _ O
 D _ _ O
 accepts _ _ O
 hDi _ _ O
+
+
+ _ _ O
 which _ _ O
 is _ _ O
 contradict _ _ O
@@ -516,16 +568,23 @@ Therefore _ _ O
 ATM _ _ O
 is _ _ O
 undecidable _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
 Unrecognizable _ _ B-Concept
 Language _ _ I-Concept
+
+
+ _ _ O
 Consider _ _ O
 a _ _ O
 recognizable _ _ B-Concept
@@ -562,6 +621,9 @@ indefinitely _ _ O
 on _ _ O
 input _ _ O
 s _ _ O
+
+
+ _ _ O
 Consider _ _ O
 a _ _ O
 recognizable _ _ B-Concept
@@ -604,6 +666,9 @@ indefinitely _ _ O
 on _ _ O
 input _ _ O
 s _ _ O
+
+
+ _ _ O
 Both _ _ O
 A _ _ O
 and _ _ O
@@ -662,11 +727,15 @@ strings _ _ O
 not _ _ O
 in _ _ O
 A _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
@@ -693,6 +762,9 @@ s _ _ O
 : _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 Run _ _ O
 both _ _ O
 MA _ _ O
@@ -716,8 +788,12 @@ MA _ _ O
 accepts _ _ O
 s _ _ O
 , _ _ O
-reject. _ _ O
+reject _ _ O
+. _ _ O
 ” _ _ O
+
+
+ _ _ O
 Case _ _ O
 1 _ _ O
 : _ _ O
@@ -725,8 +801,7 @@ Assume _ _ O
 that _ _ O
 s _ _ O
 ∈ _ _ O
-A _ _ O
-. _ _ O
+A. _ _ O
 Since _ _ O
 s _ _ O
 ∈ _ _ O
@@ -784,8 +859,7 @@ Assume _ _ O
 that _ _ O
 s _ _ O
 6∈ _ _ O
-A _ _ O
-. _ _ O
+A. _ _ O
 Since _ _ O
 s _ _ O
 6∈ _ _ O
@@ -853,9 +927,10 @@ is _ _ O
 decidable _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
@@ -901,6 +976,9 @@ R _ _ O
 A _ _ O
 is _ _ O
 decidable _ _ O
+
+
+ _ _ O
 The _ _ O
 above _ _ O
 statement _ _ O
@@ -925,9 +1003,7 @@ Q _ _ O
 → _ _ O
 R _ _ O
 ≡ _ _ O
-¬ _ _ O
-( _ _ O
-P _ _ O
+¬(P _ _ O
 ∧ _ _ O
 Q _ _ O
 ) _ _ O
@@ -950,9 +1026,7 @@ R _ _ O
 ∨ _ _ O
 ¬Q _ _ O
 ≡ _ _ O
-¬ _ _ O
-( _ _ O
-P _ _ O
+¬(P _ _ O
 ∧ _ _ O
 ¬R _ _ O
 ) _ _ O
@@ -968,14 +1042,18 @@ P _ _ O
 ¬Q _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
 Unrecognizable _ _ O
 Language _ _ O
+
+
+ _ _ O
 From _ _ O
 previous _ _ O
 slide _ _ O
@@ -1038,6 +1116,9 @@ recognizable _ _ B-Concept
 ATM _ _ O
 is _ _ O
 undecidable _ _ B-Concept
+
+
+ _ _ O
 From _ _ O
 the _ _ O
 above _ _ O
@@ -1046,11 +1127,15 @@ statement _ _ O
 ATM _ _ O
 is _ _ O
 unrecognizable _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
@@ -1094,6 +1179,9 @@ strings _ _ O
 not _ _ O
 in _ _ O
 A _ _ O
+
+
+ _ _ O
 The _ _ O
 following _ _ O
 TMs _ _ O
@@ -1180,9 +1268,7 @@ is _ _ O
 a _ _ O
 DFA _ _ O
 and _ _ O
-L _ _ O
-( _ _ O
-B _ _ O
+L(B _ _ O
 ) _ _ O
 = _ _ O
 ∅ _ _ O
@@ -1205,21 +1291,18 @@ B _ _ O
 are _ _ O
 DFAs _ _ O
 and _ _ O
-L _ _ O
-( _ _ O
-A _ _ O
+L(A _ _ O
 ) _ _ O
 = _ _ O
-L _ _ O
-( _ _ O
-B _ _ O
+L(B _ _ O
 ) _ _ O
 } _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 
@@ -1245,7 +1328,11 @@ A _ _ O
 correspondence _ _ O
 must _ _ O
 be _ _ O
-one-to-one _ _ O
+one _ _ O
+- _ _ O
+to _ _ O
+- _ _ O
+one _ _ O
 and _ _ O
 onto _ _ O
 Can _ _ O
@@ -1265,6 +1352,9 @@ table _ _ O
 skip _ _ O
 duplicate _ _ O
 ) _ _ O
+
+
+ _ _ O
 To _ _ O
 show _ _ O
 that _ _ O
@@ -1313,6 +1403,9 @@ a _ _ O
 known _ _ O
 uncountable _ _ O
 set _ _ O
+
+
+ _ _ O
 ATM _ _ O
 = _ _ O
 { _ _ O
@@ -1350,11 +1443,15 @@ whether _ _ O
 M _ _ O
 accepts _ _ O
 w _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
-tkosiyat _ _ O
-@ _ _ O
-cs.pitt.edu _ _ O
+tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Decidability _ _ O
 05 _ _ O
 

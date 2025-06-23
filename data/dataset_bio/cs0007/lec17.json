@@ -55,7 +55,9 @@
             "class",
             "\u2022",
             "Determining",
-            "inter-class",
+            "inter",
+            "-",
+            "class",
             "relationships"
         ],
         "word_labels": [
@@ -70,6 +72,8 @@
             0,
             0,
             1,
+            2,
+            2,
             2
         ]
     },
@@ -78,14 +82,16 @@
             "Class",
             "Components",
             "\u2022",
-            "Class-level/Instance",
+            "Class",
+            "-",
+            "level",
+            "/",
+            "Instance",
             "Variables",
             "\u2022",
             "Methods",
             "\u2022",
-            "Constructor",
-            "(",
-            "s",
+            "Constructor(s",
             ")"
         ],
         "word_labels": [
@@ -94,18 +100,22 @@
             0,
             1,
             2,
+            2,
+            2,
+            2,
+            2,
             0,
             1,
             0,
             1,
-            0,
-            0,
             0
         ]
     },
     {
         "sentence": [
-            "Inter-class",
+            "Inter",
+            "-",
+            "class",
             "Relationships",
             "\u2022",
             "Building",
@@ -132,13 +142,17 @@
             "between",
             "classes",
             "\u2013",
-            "Sub/Super",
+            "Sub",
+            "/",
+            "Super",
             "class",
             "\u2013",
             "Ownership"
         ],
         "word_labels": [
             1,
+            2,
+            2,
             2,
             0,
             0,
@@ -166,7 +180,9 @@
             1,
             0,
             1,
+            0,
             1,
+            2,
             0,
             1
         ]
@@ -395,8 +411,7 @@
             "declare",
             "a",
             "class",
-            "\u2019",
-            "s",
+            "\u2019s",
             "parent",
             ",",
             "use",
@@ -428,7 +443,6 @@
             0,
             0,
             1,
-            0,
             0,
             0,
             0,
@@ -469,7 +483,9 @@
             "subclass",
             "inherits",
             "all",
-            "non-private",
+            "non",
+            "-",
+            "private",
             "fields",
             "and",
             "methods",
@@ -501,8 +517,7 @@
             "the",
             "parent",
             "class",
-            "\u2019",
-            "s",
+            "\u2019s",
             "getters",
             "and",
             "setters",
@@ -519,6 +534,8 @@
             0,
             1,
             1,
+            0,
+            0,
             0,
             0,
             1,
@@ -552,7 +569,6 @@
             0,
             1,
             2,
-            0,
             0,
             1,
             0,
@@ -701,8 +717,7 @@
             "from",
             "the",
             "subclass",
-            "\u2019",
-            "s",
+            "\u2019s",
             "constructor",
             ",",
             "to",
@@ -715,8 +730,7 @@
             "call",
             "the",
             "parent",
-            "\u2019",
-            "s",
+            "\u2019s",
             "constructor",
             "by",
             "using",
@@ -754,7 +768,6 @@
             0,
             1,
             2,
-            2,
             1,
             0,
             0,
@@ -767,7 +780,6 @@
             0,
             0,
             1,
-            0,
             0,
             1,
             0,
@@ -883,9 +895,7 @@
             ";",
             "\u2026",
             "public",
-            "Vehicle",
-            "(",
-            "int",
+            "Vehicle(int",
             "numWheels",
             ")",
             "{",
@@ -896,9 +906,7 @@
             "\u2026",
             "}",
             "//end",
-            "function",
-            "(",
-            "double",
+            "function(double",
             ")",
             "\u2026",
             "}",
@@ -907,10 +915,6 @@
             "Vehicle"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -962,18 +966,14 @@
             ";",
             "\u2026",
             "public",
-            "Car",
-            "(",
-            "int",
+            "Car(int",
             "numPassengers",
             ",",
             "double",
             "gasRemaining",
             ")",
             "{",
-            "super",
-            "(",
-            "4",
+            "super(4",
             ")",
             ";",
             "this.numPassengers",
@@ -986,9 +986,7 @@
             ";",
             "}",
             "//end",
-            "constructor",
-            "(",
-            "int",
+            "constructor(int",
             ",",
             "double",
             ")",
@@ -999,12 +997,6 @@
             "Plant"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1059,8 +1051,7 @@
             "If",
             "the",
             "Superclass",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Method",
             "Definition",
             "Does",
@@ -1068,8 +1059,7 @@
             "Fit",
             "the",
             "Class",
-            "\u2019",
-            "s",
+            "\u2019s",
             "?",
             "\u2022",
             "We",
@@ -1094,8 +1084,7 @@
             "must",
             "have",
             "\u201c",
-            "@",
-            "Override",
+            "@Override",
             "\u201d",
             "only",
             "\u2022",
@@ -1143,14 +1132,12 @@
             0,
             0,
             0,
-            0,
             1,
             2,
             0,
             0,
             0,
             0,
-            0,
             1,
             0,
             0,
@@ -1172,7 +1159,6 @@
             0,
             0,
             1,
-            2,
             0,
             0,
             0,
@@ -1227,22 +1213,15 @@
             "gasRemaining",
             ";",
             "\u2026",
-            "@",
-            "Override",
+            "@Override",
             "public",
             "boolean",
-            "move",
-            "(",
-            "double",
+            "move(double",
             "dist",
             ")",
             "{",
             "return",
-            "super.move",
-            "(",
-            "dist",
-            "*",
-            "10.0",
+            "super.move(dist*10.0",
             ")",
             "&",
             "&",
@@ -1254,9 +1233,7 @@
             ";",
             "}",
             "//end",
-            "function",
-            "(",
-            "double",
+            "function(double",
             ")",
             "\u2026",
             "}",
@@ -1282,15 +1259,6 @@
             0,
             0,
             1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1346,8 +1314,7 @@
             "of",
             "the",
             "superclass",
-            "\u2019",
-            "s",
+            "\u2019s",
             "method",
             ",",
             "you",
@@ -1355,8 +1322,7 @@
             "call",
             "the",
             "superclass",
-            "\u2019",
-            "s",
+            "\u2019s",
             "method",
             "at",
             "least",
@@ -1389,7 +1355,6 @@
             0,
             1,
             0,
-            0,
             1,
             0,
             0,
@@ -1397,7 +1362,6 @@
             0,
             0,
             1,
-            0,
             0,
             1,
             0,
@@ -1462,8 +1426,7 @@
             "\u2022",
             "A",
             "Car",
-            "\u2019",
-            "s",
+            "\u2019s",
             "superclass",
             "and",
             "subclasses",
@@ -1485,7 +1448,6 @@
             0,
             0,
             1,
-            0,
             0,
             0,
             0,
@@ -1546,23 +1508,17 @@
             ";",
             "\u2026",
             "public",
-            "Garage",
-            "(",
-            "int",
+            "Garage(int",
             "capacity",
             ")",
             "{",
             "this.vehicles",
             "=",
             "new",
-            "Vehicle",
-            "[",
-            "capacity",
+            "Vehicle[capacity",
             "]",
             ";",
-            "for",
-            "(",
-            "int",
+            "for(int",
             "i",
             "=",
             "0",
@@ -1574,9 +1530,7 @@
             "i++",
             ")",
             "{",
-            "vehicles",
-            "[",
-            "i",
+            "vehicles[i",
             "]",
             "=",
             "null",
@@ -1585,9 +1539,7 @@
             "\u2026",
             "}",
             "//end",
-            "constructor",
-            "(",
-            "int",
+            "constructor(int",
             ")",
             "\u2026",
             "}",
@@ -1642,17 +1594,7 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
-            0,
-            0,
             0,
             0,
             0,
@@ -1673,9 +1615,7 @@
             "\u2026",
             "public",
             "boolean",
-            "addVehicle",
-            "(",
-            "Vehicle",
+            "addVehicle(Vehicle",
             "vehicle",
             ")",
             "{",
@@ -1687,9 +1627,7 @@
             "better",
             "way",
             "!",
-            "for",
-            "(",
-            "int",
+            "for(int",
             "i",
             "=",
             "0",
@@ -1701,19 +1639,14 @@
             "i++",
             ")",
             "{",
-            "if",
-            "(",
-            "vehicles",
-            "[",
-            "i",
+            "if(vehicles[i",
             "]",
-            "==",
+            "=",
+            "=",
             "null",
             ")",
             "{",
-            "vehicles",
-            "[",
-            "i",
+            "vehicles[i",
             "]",
             "=",
             "vehicle",
@@ -1728,9 +1661,7 @@
             ";",
             "}",
             "//end",
-            "method",
-            "(",
-            "Vehicle",
+            "method(Vehicle",
             ")",
             "}",
             "//End",
@@ -1741,17 +1672,6 @@
             0,
             0,
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -1830,8 +1750,7 @@
             "Problem",
             "\u201c",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "services",
@@ -1867,8 +1786,7 @@
             "gets",
             "the",
             "customer",
-            "\u2019",
-            "s",
+            "\u2019s",
             "name",
             ",",
             "address",
@@ -1919,7 +1837,8 @@
             "and",
             "total",
             "estimated",
-            "charges.",
+            "charges",
+            ".",
             "\u201d",
             "Source",
             ":",
@@ -2047,7 +1966,6 @@
             0,
             0,
             0,
-            0,
             0
         ]
     },
@@ -2058,8 +1976,7 @@
             "Nouns",
             "\u201c",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "services",
@@ -2095,8 +2012,7 @@
             "gets",
             "the",
             "customer",
-            "\u2019",
-            "s",
+            "\u2019s",
             "name",
             ",",
             "address",
@@ -2246,8 +2162,6 @@
             0,
             0,
             0,
-            0,
-            0,
             0
         ]
     },
@@ -2266,13 +2180,37 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Porsche",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "sales",
@@ -2281,14 +2219,7 @@
             "service",
             "manager",
             "Mercedes",
-            "model",
-            "shop",
-            "telephone",
-            "number",
-            "total",
-            "estimated",
-            "name",
-            "year"
+            "model"
         ],
         "word_labels": [
             0,
@@ -2305,26 +2236,55 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "shop",
+            "telephone",
+            "number",
+            "total",
+            "estimated"
+        ],
+        "word_labels": [
             0,
             0,
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
             0,
             0
         ]
@@ -2346,55 +2306,9 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
-            "foreign",
-            "cars",
-            "Joe",
-            "\u2019",
-            "s",
-            "Automotive",
-            "Shop",
-            "make",
-            "manager",
-            "Mercedes",
-            "model",
-            "Porsche",
-            "sales",
-            "tax",
-            "service",
-            "quote",
-            "shop",
-            "telephone",
-            "number",
-            "total",
-            "estimated",
-            "name",
-            "year"
+            "charges"
         ],
         "word_labels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2414,6 +2328,98 @@
         ]
     },
     {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "foreign",
+            "cars",
+            "Joe",
+            "\u2019s",
+            "Automotive",
+            "Shop",
+            "make",
+            "manager",
+            "Mercedes",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Porsche",
+            "sales",
+            "tax",
+            "service",
+            "quote",
+            "shop",
+            "telephone",
+            "number",
+            "total",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
         "sentence": [
             "Subtypes",
             "address",
@@ -2426,19 +2432,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
             "model",
-            "name",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -2450,7 +2501,31 @@
             "total",
             "estimated",
             "charges",
-            "year",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Whether",
             "these",
             "subtypes",
@@ -2491,41 +2566,6 @@
             "."
         ],
         "word_labels": [
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2576,8 +2616,7 @@
             "cars",
             "BMW",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "car",
@@ -2595,7 +2634,44 @@
             "estimated",
             "parts",
             "charges",
-            "name",
+            "name"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -2605,7 +2681,29 @@
             "total",
             "estimated",
             "charges",
-            "year",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Simple",
             "properties",
             "can",
@@ -2628,42 +2726,6 @@
             "."
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             1,
             2,
@@ -2702,18 +2764,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -2723,9 +2831,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "car",
             "had",
@@ -2744,42 +2900,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2814,18 +2934,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -2835,9 +3001,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "car",
             "had",
@@ -2856,42 +3070,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -2926,18 +3104,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -2947,9 +3171,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "customer",
             "had",
@@ -2968,42 +3240,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3038,18 +3274,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -3059,9 +3341,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "customer",
             "had",
@@ -3080,42 +3410,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3150,18 +3444,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -3171,9 +3511,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "service",
             "quote",
@@ -3193,42 +3581,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3264,18 +3616,64 @@
             "charges",
             "estimated",
             "parts",
-            "charges",
+            "charges"
+        ],
+        "word_labels": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "foreign",
             "cars",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "make",
             "manager",
             "Mercedes",
-            "model",
+            "model"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "Porsche",
             "sales",
             "tax",
@@ -3285,9 +3683,57 @@
             "telephone",
             "number",
             "total",
-            "estimated",
-            "name",
-            "year",
+            "estimated"
+        ],
+        "word_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "name"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "year"
+        ],
+        "word_labels": [
+            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
             "A",
             "service",
             "quote",
@@ -3307,42 +3753,6 @@
             "?"
         ],
         "word_labels": [
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -3374,8 +3784,7 @@
             "cars",
             "BMW",
             "Joe",
-            "\u2019",
-            "s",
+            "\u2019s",
             "Automotive",
             "Shop",
             "car",
@@ -3393,39 +3802,7 @@
             "estimated",
             "parts",
             "charges",
-            "name",
-            "Porsche",
-            "sales",
-            "tax",
-            "shop",
-            "telephone",
-            "number",
-            "total",
-            "estimated",
-            "charges",
-            "year",
-            "Our",
-            "scenario",
-            "revolves",
-            "around",
-            "the",
-            "automotive",
-            "shop",
-            ",",
-            "so",
-            "this",
-            "will",
-            "hold",
-            "the",
-            "main",
-            "method",
-            "and",
-            "will",
-            "be",
-            "the",
-            "overarching",
-            "class",
-            "."
+            "name"
         ],
         "word_labels": [
             0,
@@ -3455,6 +3832,28 @@
             0,
             0,
             0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Porsche",
+            "sales",
+            "tax",
+            "shop",
+            "telephone",
+            "number",
+            "total",
+            "estimated",
+            "charges",
+            "year"
+        ],
+        "word_labels": [
             0,
             0,
             0,
@@ -3465,7 +3864,40 @@
             0,
             0,
             0,
-            0,
+            0
+        ]
+    },
+    {
+        "sentence": [],
+        "word_labels": []
+    },
+    {
+        "sentence": [
+            "",
+            "Our",
+            "scenario",
+            "revolves",
+            "around",
+            "the",
+            "automotive",
+            "shop",
+            ",",
+            "so",
+            "this",
+            "will",
+            "hold",
+            "the",
+            "main",
+            "method",
+            "and",
+            "will",
+            "be",
+            "the",
+            "overarching",
+            "class",
+            "."
+        ],
+        "word_labels": [
             0,
             0,
             0,

@@ -1,46 +1,46 @@
+exit
+parent processes
+process termination
 producer
-fork
-parent process
-abort ( )
-bounded buffer problem
-wait ( )
-producers consumers problem
-threads
-exit ( )
+abort
 ui thread
-producers consumers
-front-end processes
-init
-exec ( )
+wait ( )
+threads
+orphaned processes
 consumers
+producer processes / threads
+exit ( )
+consumer
+orphan
+zombie
+fork tracing
+fork ( )
+fork
 orphan process
+producers consumers
+child process
+producers
+consumer processes / threads
+parent
+buffer
+shared circular-array buffer
+back-end processes / threads
+copy-and-write
 zombie processes
+child
+kill
+exec ( )
+fork tracing!!$
+abort ( )
+forks
+bounded buffer problem
+parent process
 kill ( )
 semaphores
-abort
-fork ( )
-buffer
-zombie
-forks
-exit
-processes/threads
-child process
-fork tracing
-parent processes
-parent
 orphan processes
-consumer processes/threads
-child
-shared circular-array buffer
-bounded buffer
-orphan
-kill
-consumer
-copy-and-write
-background threads
-back-end processes/threads
-producers
-orphaned processes
-process termination
-producer processes/threads
+producers consumers problem
 produces consumers problem
+background threads
+front-end processes
+bounded buffer
+init
