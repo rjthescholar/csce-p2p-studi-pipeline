@@ -10,18 +10,18 @@ def extract_concepts(dataset):
 	concept=""
 	extracting = False
 	for processed in dataset:
-		for i in range(len(processed['words'])):
-			if processed['labels'][i] == "O" and extracting:
-				concepts.add(concept.strip().lower())
+		for i in range(len(processed['sentence'])):
+			if processed['word_labels'][i] == 0 and extracting:
+				concepts.add(concept.strip().lower() + "\n")
 				concept = ""
 				extracting = False
-			if processed['labels'][i] == "B":
+			if processed['word_labels'][i] == 1:
 				if extracting:
-					concepts.add(concept.strip().lower())
+					concepts.add(concept.strip().lower() + "\n")
 					concept = ""
 				extracting = True
 			if extracting:
-				concept += processed['words'][i] + " "
+				concept += processed['sentence'][i] + " "
 	return concepts
 
 parser = argparse.ArgumentParser()
@@ -37,4 +37,4 @@ concepts = extract_concepts(processed)
 print(concepts)
 if args.output:
 	with open(args.output, 'w') as f2:
-		f2.write(json.dumps(list(concepts), indent=4))
+		f2.writelines(concepts)
