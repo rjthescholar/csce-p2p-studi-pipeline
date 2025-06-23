@@ -1,0 +1,402 @@
+Pipeline Hazards
+Structural Hazards
+Structural Hazard
+Memory
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+memory
+stall
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+IF
+WB
+IF
+stalling
+memory
+Memory's
+contention
+memories
+separate instruction and data caches
+Structural Hazard
+Memories
+i-cache
+d-cache
+MEM
+IF
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+Structural Hazard
+Memories
+hardware duplication
+Instruction
+Memory
+Ins. Decoder
+PC
+Data
+Memory
+Register
+File
+Structural Hazards
+stalls
+contention
+ALU
+EX
+Instruction
+Memory
+Ins. Decoder
+PC
+Data
+Memory
+Register
+File
+Structural Hazards
+Duplicate contentious resource
+memory
+MEM
+IF
+cycle
+instruction memory
+data memory
+ALU
+IF
+EX
+ALU
+ports
+Port
+memory
+ports
+cycle
+ports
+memory structure
+Read Ports
+MUXes
+read ports
+Write Port
+decoders
+write ports
+Two Register Write + Two Register Read Ports
+Port
+Port
+read ports
+write port
+read ports
+write port
+ID
+WB
+CPI
+superscalar processor
+ID
+WB
+cycle
+read ports
+write ports
+cache
+memory
+ports
+Muxes
+decoders
+critical path
+frequency
+power
+Data Hazards
+Data Hazards
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+Data Forwarding
+pipelined
+control signals
+pipeline
+dependencies
+forward
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+data forwarding
+Memory
+Data Forwarding
+Memory
+cycle
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+stall
+Forwarding Unit
+Use-after-load-hazard
+forwarding unit
+stall
+Forwarding Unit
+HDU
+Forwarding Unit
+pipeline stages
+pipeline stage
+stages
+forwarded
+MUX
+ALU
+stages
+EX
+stage
+stages
+MUXes
+stages
+Deep pipelining
+Cycle time
+Power consumption
+deep pipelining
+stalls
+reordering
+reordering
+reordered
+Data Hazard
+Compiler Reordering
+pipeline
+reorder
+Data Hazard
+Compiler Reordering
+pipeline
+reorder
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+Static Scheduling
+Reordering
+compiler
+static scheduling
+Static scheduling
+pipeline
+MEM
+Memory Wall
+Data dependencies
+pointer analysis
+Dynamic scheduling
+Dynamic scheduling
+static scheduling
+data dependencies
+Power Wall
+Control Hazards
+Pipeline
+Flushes
+pipeline
+flushed
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+IF
+ID
+EX
+MEM
+WB
+IF
+Control Hazards
+Frequency
+flushes
+flush
+pipeline
+flushed
+flushing
+deep pipelines
+Control Hazards
+no-ops
+HDU
+control hazard
+HDU
+nops
+IF
+ID
+EX
+MEM
+WB
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+IF
+ID
+EX
+MEM
+nop
+nop
+WB
+Hazard Detection Unit
+CPI
+CPI
+control hazard
+no-ops
+no-ops
+nops
+Delay Slots
+static scheduling
+no-ops
+no-ops
+data hazards
+Delay slot
+delay slots
+static scheduling
+delay slot
+Delay slots
+delay slots
+Delay slots
+delay slots
+bubbles
+Delays slots
+EX
+ID
+EX
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+comparator
+ID
+comparator
+data hazards
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+MEM
+WB
+WB
+bubble
+forwarding
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+ID
+EX
+data forwarded
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+ID
+ID
+EX
+MEM
+WB
+bubbles
+forwarding paths
+EX
+ID
+MEM
+ID
+MUXes
+comparator
+MUXes
+forwarding lines
+ALU
