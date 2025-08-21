@@ -1,0 +1,70 @@
+lower_bound
+u
+colors
+(miny:maxy,minu:maxu,minv:maxv)
+param name="cmvision/debug_on"
+masked image
+cmvision node,
+simpleblobdetector ()
+blob
+image message
+opencv
+gscam node
+contour
+brightgreen
+detector
+.. /mypackage directory
+node name="cmvision"
+(r,g,b)
+hierarchy
+gaussian blur
+0
+blob detection
+cvtcolor ()
+(left,right,top,bottom)
+width
+findcontours ()
+r
+height
+is_bigendian
+gscam
+blobs
+inrange ()
+keypoints
+colorgui node
+colors.txt
+v
+(b,g,r)
+b
+yuv
+luminance
+𝐵
+step
+roscore
+param name="cmvision/color_file
+encoding
+upper_bound
+g
+1
+blobs.msgs
+blob.msgs
+data
+drawkeypoints ()
+contours
+opencv format
+cmvision.launch
+cmvision
+𝐺
+cmvision node
+gaussianblur ()
+intensity
+rgb
+colorgui
+0.000000
+thresholds
+𝑅
+chrominance
+y
+header
+drawcontours ()
+image_view node

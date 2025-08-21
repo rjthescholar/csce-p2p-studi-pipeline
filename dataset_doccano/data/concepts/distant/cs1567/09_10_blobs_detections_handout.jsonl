@@ -1,0 +1,63 @@
+Blob Detection
+Blob
+color
+brightness
+width
+height
+pixel
+center
+RGB
+red
+green
+blue
+filter
+connected regions
+foreground
+background
+YUV
+Y
+U
+V
+luminance
+chrominance
+gscam
+/v4l/camera/image_raw
+roslaunch
+image_view
+rosrun
+roscore
+sensor_msgs/Image
+Image message
+OpenCV
+CvBridge
+cv2
+cmvision
+/blobs
+colorgui
+colors.txt
+[colors]
+[thresholds]
+cmvision.launch
+cmvision/color_file
+cmvision/debug_on
+cmvision/color_cal_on
+cmvision/mean_shift_on
+cmvision/spatial_radius_pix
+cmvision/color_radius_pix
+Blobs
+Blob
+Gaussian blur
+GaussianBlur()
+cvtColor()
+inRange()
+mask
+SimpleBlobDetector
+SimpleBlobDetector_Params
+SimpleBlobDetector_create
+keypoints
+drawKeypoints()
+contour
+findContours()
+drawContours()
+bounding box
+boundingRect()

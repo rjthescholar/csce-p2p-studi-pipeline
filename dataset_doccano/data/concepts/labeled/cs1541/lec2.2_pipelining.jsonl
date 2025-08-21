@@ -1,0 +1,373 @@
+Processor Pipelining
+Pipelining
+Memory
+ID
+Ins. Decoder
+IF
+Clock
+Register
+File
+EX
+Clock
+MEM
+ALU
+Memory
+Clock
+WB
+Pipelined
+Pipelining
+Memory
+ID
+Ins. Decoder
+IF
+Register
+File
+EX
+ALU
+MEM
+Memory
+WB
+Pipelining
+parallelism
+pipelined parallelism
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+Pipelined
+cycles
+cycles
+IF
+ID
+EX
+MEM
+WB
+cycles
+IF
+ID
+EX
+WB
+Pipelined
+Multi-cycle
+Single-cycle
+performance
+CPI
+Cycle Time
+Single-cycle
+Multi-cycle
+Pipelined
+single-cycle
+pipelining
+clock cycle time
+clock frequency
+pipeline
+frequency
+control signals
+Memory
+Register
+File
+ALU
+MEM
+WB
+EX
+MEM
+WB
+ID
+Ins. Decoder
+IF
+EX
+MEM
+WB
+decoded
+cycle
+Control signals
+Memory
+WB
+Pipeline Hazards
+Pipeline Hazards
+pipelined
+pipeline
+hazards
+Pipeline Hazard
+cycle
+Hazards
+bubbles
+delays
+pipeline
+hazards
+hazards
+Structural hazard
+Data hazard
+Control Hazard
+Structural Hazards
+Cycle
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+Data Hazards
+Cycle
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+WB
+ID
+IF
+ID
+EX
+MEM
+WB
+IF
+bubble
+bubble
+bubble
+ID
+EX
+MEM
+Control Hazards
+Cycle
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+EX
+MEM
+WB
+EX
+IF
+IF
+ID
+EX
+MEM
+WB
+bubble
+bubble
+IF
+ID
+EX
+WB
+Hazards
+Pipeline
+hazards
+Compiler
+hazards
+nops
+nop
+hazard
+hazards
+hazard detection unit
+structural
+data hazard
+pipeline
+stalled
+control hazard
+pipeline
+flushed
+data hazard
+nops
+pipeline
+Cycle
+IF
+ID
+EX
+MEM
+WB
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+IF
+ID
+EX
+MEM
+nop
+nop
+nop
+control hazard
+nops
+instruction fetch
+Cycle
+IF
+ID
+EX
+MEM
+WB
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+bubble
+IF
+ID
+EX
+MEM
+nop
+nop
+WB
+Hazard Detection Unit
+bubbles
+control signals
+nop
+IF
+ID
+hazard
+Hazard Detection Unit
+data hazard
+ID
+Ins. Decoder
+IF
+EX
+MEM
+Memory
+Register
+File
+ALU
+Memory
+WB
+Structural / Data Hazards
+stalls
+HDU
+structural or data hazard
+fetching
+PC
+clocking
+pipeline
+stalled
+stalled
+nops
+control signals
+stalled
+structural or data hazard
+HDU
+fetching
+clocking
+stalled
+control hazards
+pipeline
+flush
+Control Hazard
+EX
+fetched
+flush
+pipeline flush
+pipeline
+IF
+ID
+EX
+MEM
+WB
+IF
+ID
+IF
+EX
+MEM
+WB
+IF
+ID
+Hazard Detection Unit
+control hazard
+Memory
+ID
+nop
+Ins. Decoder
+IF
+EX
+MEM
+nop
+Register
+File
+ALU
+Memory
+WB
+Control Hazards
+flushes
+control hazard
+pipeline
+nops
+Performance penalty of pipeline stalls
+cycles
+CPI
+Single-cycle
+Ideal 5-stage pipeline
+Pipeline
+stalls
+Pipelining
+clock frequency
+stalls
+CPI
+cycles per instruction
+stalls
+fetched
+CPI
+nops
+Hazard Detection Unit
+nops
+MEM
+MEM
+cycle
+Memory Wall
+MEM
+cycles
+nops
+Hazard Detection Unit
+Power Wall
+nops
+HDU
