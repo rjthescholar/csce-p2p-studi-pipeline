@@ -1,0 +1,12317 @@
+-DOCSTART- -X- -X- O
+
+Introduction _ _ O
+to _ _ O
+Operating _ _ O
+Systems _ _ O
+
+CS _ _ O
+1550 _ _ O
+
+Spring _ _ O
+2022 _ _ O
+
+
+Sherif _ _ O
+Khattab _ _ O
+
+ksm73 _ _ O
+@ _ _ O
+pitt.edu _ _ O
+
+( _ _ O
+Some _ _ O
+slides _ _ O
+are _ _ O
+from _ _ O
+Silberschatz _ _ O
+, _ _ O
+Galvin _ _ O
+and _ _ O
+Gagne _ _ O
+©2013 _ _ O
+) _ _ O
+
+
+Announcements _ _ O
+
+• _ _ O
+Upcoming _ _ O
+deadlines _ _ O
+: _ _ O
+
+• _ _ O
+Homework _ _ O
+11 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+4/18 _ _ O
+
+• _ _ O
+Project _ _ O
+3 _ _ O
+: _ _ O
+Late _ _ O
+due _ _ O
+date _ _ O
+on _ _ O
+4/13 _ _ O
+
+• _ _ O
+Late _ _ O
+penalty _ _ O
+waived _ _ O
+
+
+• _ _ O
+Lab _ _ O
+4 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+4/15 _ _ O
+
+• _ _ O
+Quiz _ _ O
+3 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+4/15 _ _ O
+
+• _ _ O
+Homework _ _ O
+12 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+4/25 _ _ O
+
+• _ _ O
+Lab _ _ O
+5 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+5/2 _ _ O
+
+• _ _ O
+Project _ _ O
+4 _ _ O
+and _ _ O
+Quiz _ _ O
+4 _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+5/2 _ _ O
+
+• _ _ O
+Bonus _ _ O
+Homework _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+5/2 _ _ O
+
+• _ _ O
+Course _ _ O
+Post-Test _ _ O
+: _ _ O
+due _ _ O
+on _ _ O
+5/2 _ _ O
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ B-Concept
+Systems _ _ I-Concept
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+2 _ _ O
+
+
+Muddiest _ _ O
+Points _ _ B-Concept
+( _ _ O
+1/2 _ _ O
+) _ _ O
+
+• _ _ O
+when _ _ B-Concept
+is _ _ O
+the _ _ O
+parity _ _ O
+checked _ _ O
+to _ _ O
+see _ _ O
+if _ _ O
+there _ _ O
+is _ _ O
+a _ _ O
+bit _ _ O
+error _ _ O
+
+• _ _ O
+a _ _ O
+little _ _ O
+confused _ _ O
+about _ _ O
+parity _ _ O
+example _ _ O
+
+• _ _ O
+How _ _ B-Concept
+to _ _ I-Concept
+flip _ _ I-Concept
+the _ _ I-Concept
+correct _ _ I-Concept
+bits _ _ O
+back _ _ O
+that _ _ O
+were _ _ O
+changed _ _ O
+with _ _ O
+
+parity _ _ O
+? _ _ O
+
+• _ _ B-Concept
+What _ _ I-Concept
+is _ _ I-Concept
+parity _ _ I-Concept
+used _ _ B-Concept
+for _ _ I-Concept
+
+• _ _ O
+ECC _ _ O
+
+• _ _ O
+What _ _ O
+things _ _ O
+move _ _ B-Concept
+how _ _ I-Concept
+using _ _ O
+what _ _ O
+in _ _ O
+the _ _ O
+disk _ _ O
+
+• _ _ B-Concept
+disk _ _ I-Concept
+request _ _ O
+time _ _ O
+delay _ _ O
+factors _ _ B-Concept
+
+• _ _ O
+
+
+transfer _ _ O
+time/rotating _ _ O
+time/seek _ _ O
+time _ _ O
+
+
+• _ _ B-Concept
+I _ _ I-Concept
+feel _ _ I-Concept
+like _ _ I-Concept
+rotational _ _ I-Concept
+delay _ _ O
+and _ _ O
+actual _ _ O
+transfer _ _ O
+time _ _ O
+are _ _ O
+
+overlapped _ _ B-Concept
+. _ _ O
+The _ _ O
+sector _ _ O
+is _ _ O
+spending _ _ O
+time _ _ O
+to _ _ O
+rotate _ _ O
+to _ _ O
+the _ _ O
+
+head _ _ B-Concept
+, _ _ I-Concept
+and _ _ I-Concept
+at _ _ O
+the _ _ O
+same _ _ O
+time _ _ O
+, _ _ O
+the _ _ O
+head _ _ O
+is _ _ O
+rotating _ _ O
+to _ _ O
+find _ _ O
+
+that _ _ B-Concept
+sector _ _ I-Concept
+. _ _ O
+Are _ _ O
+they _ _ O
+moving _ _ O
+towards _ _ O
+each _ _ O
+other _ _ O
+at _ _ O
+the _ _ O
+
+same _ _ B-Concept
+time _ _ I-Concept
+? _ _ O
+
+CS _ _ B-Concept
+1550 _ _ I-Concept
+– _ _ I-Concept
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+3 _ _ B-Concept
+
+
+Disk _ _ O
+drive _ _ O
+structure _ _ O
+
+head _ _ O
+
+sector _ _ O
+
+
+platter _ _ O
+
+track _ _ O
+
+cylinder _ _ O
+
+
+surfaces _ _ O
+
+
+spindle _ _ O
+
+
+actuator _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ B-Concept
+Systems _ _ I-Concept
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+4 _ _ O
+
+
+Muddiest _ _ O
+Points _ _ O
+( _ _ O
+2/2 _ _ O
+) _ _ O
+
+• _ _ O
+In _ _ O
+the _ _ O
+last _ _ B-Concept
+top _ _ I-Concept
+hat _ _ O
+question _ _ O
+, _ _ O
+why _ _ O
+the _ _ O
+page _ _ O
+table _ _ O
+gets _ _ O
+
+smaller _ _ B-Concept
+if _ _ O
+the _ _ O
+page _ _ O
+frames _ _ O
+are _ _ O
+larger _ _ O
+. _ _ O
+I _ _ O
+understand _ _ O
+
+that _ _ O
+would _ _ B-Concept
+mean _ _ I-Concept
+less _ _ O
+entries _ _ O
+, _ _ O
+but _ _ O
+would _ _ O
+n't _ _ O
+each _ _ O
+entry _ _ O
+
+would _ _ B-Concept
+be _ _ O
+larger _ _ O
+, _ _ O
+making _ _ O
+the _ _ O
+overall _ _ O
+table _ _ O
+the _ _ O
+same _ _ O
+
+size _ _ B-Concept
+? _ _ I-Concept
+
+• _ _ O
+What _ _ O
+are _ _ O
+RAIDs _ _ O
+for _ _ O
+? _ _ O
+
+
+• _ _ O
+Does _ _ O
+RAID4 _ _ O
+have _ _ O
+any _ _ O
+advantages _ _ O
+over _ _ O
+RAID5 _ _ O
+? _ _ O
+
+• _ _ O
+All _ _ O
+of _ _ O
+it _ _ O
+, _ _ O
+bro _ _ O
+
+
+CS _ _ B-Concept
+1550 _ _ I-Concept
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+5 _ _ B-Concept
+
+
+Problem _ _ B-Concept
+of _ _ I-Concept
+the _ _ I-Concept
+Day _ _ I-Concept
+– _ _ I-Concept
+Part _ _ I-Concept
+1 _ _ I-Concept
+
+• _ _ B-Concept
+How _ _ I-Concept
+does _ _ I-Concept
+a _ _ O
+file _ _ O
+system _ _ O
+handle _ _ O
+errors _ _ O
+? _ _ O
+
+• _ _ O
+Answer _ _ O
+: _ _ O
+Defense _ _ O
+in _ _ O
+Depth _ _ O
+
+• _ _ B-Concept
+multiple _ _ I-Concept
+layers _ _ O
+of _ _ O
+error _ _ O
+detection/correction _ _ O
+
+
+CS _ _ B-Concept
+1550 _ _ I-Concept
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+6 _ _ O
+
+
+When _ _ O
+good _ _ O
+disks _ _ B-Concept
+go _ _ I-Concept
+bad… _ _ I-Concept
+
+Disks _ _ B-Concept
+have _ _ I-Concept
+defects _ _ I-Concept
+
+In _ _ O
+3M+ _ _ O
+sectors _ _ O
+, _ _ O
+this _ _ O
+isn _ _ O
+’ _ _ O
+t _ _ O
+surprising _ _ O
+! _ _ O
+
+
+ECC _ _ O
+helps _ _ O
+with _ _ O
+errors _ _ O
+, _ _ O
+but _ _ O
+sometimes _ _ B-Concept
+this _ _ I-Concept
+isn _ _ O
+’ _ _ O
+t _ _ O
+enough _ _ O
+
+
+Disks _ _ O
+keep _ _ O
+spare _ _ O
+sectors _ _ O
+( _ _ O
+normally _ _ O
+unused _ _ O
+) _ _ O
+and _ _ O
+remap _ _ O
+bad _ _ O
+
+sectors _ _ O
+into _ _ O
+these _ _ O
+spares _ _ O
+
+If _ _ O
+there _ _ O
+’ _ _ O
+s _ _ O
+time _ _ O
+, _ _ O
+the _ _ O
+whole _ _ O
+track _ _ O
+could _ _ O
+be _ _ O
+reordered… _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+7 _ _ O
+
+
+RAIDs _ _ O
+, _ _ O
+RAIDs _ _ O
+, _ _ O
+and _ _ O
+more _ _ O
+RAIDs _ _ O
+
+strip _ _ O
+
+
+strip _ _ O
+
+
+Stripe _ _ O
+
+RAID _ _ O
+0 _ _ O
+
+( _ _ O
+Redundant _ _ B-Concept
+Array _ _ I-Concept
+of _ _ I-Concept
+Inexpensive _ _ O
+Disks _ _ O
+
+
+RAID _ _ O
+1 _ _ O
+
+( _ _ B-Concept
+Mirrored _ _ I-Concept
+copies _ _ I-Concept
+) _ _ I-Concept
+
+
+RAID _ _ O
+4 _ _ O
+
+( _ _ B-Concept
+Striped _ _ I-Concept
+with _ _ I-Concept
+parity _ _ I-Concept
+) _ _ I-Concept
+
+
+RAID _ _ O
+5 _ _ O
+
+( _ _ O
+Parity _ _ O
+rotates _ _ O
+through _ _ O
+disks _ _ O
+) _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ B-Concept
+Systems _ _ I-Concept
+– _ _ I-Concept
+Sherif _ _ O
+Khattab _ _ O
+
+
+8 _ _ O
+
+
+Backing _ _ B-Concept
+up _ _ I-Concept
+a _ _ I-Concept
+file _ _ O
+system _ _ B-Concept
+
+• _ _ O
+A _ _ O
+file _ _ O
+system _ _ O
+to _ _ O
+be _ _ O
+dumped _ _ O
+
+• _ _ O
+Squares _ _ O
+are _ _ O
+directories _ _ O
+, _ _ O
+circles _ _ B-Concept
+are _ _ O
+files _ _ O
+
+• _ _ O
+Shaded _ _ O
+items _ _ O
+, _ _ O
+modified _ _ O
+since _ _ O
+last _ _ O
+dump _ _ O
+
+• _ _ O
+Each _ _ O
+directory _ _ O
+& _ _ O
+file _ _ O
+labeled _ _ O
+by _ _ O
+i-node _ _ O
+number _ _ O
+
+
+File _ _ B-Concept
+that _ _ I-Concept
+has _ _ I-Concept
+
+not _ _ O
+changed _ _ O
+
+
+CS _ _ B-Concept
+1550 _ _ I-Concept
+– _ _ I-Concept
+Operating _ _ I-Concept
+Systems _ _ I-Concept
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+9 _ _ O
+
+
+Bitmaps _ _ B-Concept
+used _ _ I-Concept
+in _ _ O
+a _ _ O
+file _ _ O
+system _ _ O
+dump _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ B-Concept
+– _ _ I-Concept
+Sherif _ _ O
+Khattab _ _ O
+
+
+10 _ _ O
+
+
+Checking _ _ O
+the _ _ O
+file _ _ O
+system _ _ O
+for _ _ O
+consistency _ _ O
+
+Consistent _ _ O
+
+
+Missing _ _ O
+( _ _ O
+“ _ _ O
+lost _ _ O
+” _ _ O
+) _ _ O
+block _ _ O
+
+
+Duplicate _ _ O
+block _ _ O
+in _ _ O
+free _ _ O
+list _ _ O
+
+
+Duplicate _ _ O
+block _ _ O
+in _ _ O
+two _ _ O
+files _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+11 _ _ O
+
+
+Problem _ _ B-Concept
+of _ _ I-Concept
+the _ _ O
+Day _ _ O
+– _ _ O
+Part _ _ O
+2 _ _ O
+
+• _ _ O
+How _ _ B-Concept
+does _ _ I-Concept
+a _ _ I-Concept
+file _ _ O
+system _ _ O
+hide _ _ O
+disk _ _ O
+access _ _ O
+delays _ _ O
+? _ _ O
+
+• _ _ O
+Answer _ _ B-Concept
+: _ _ O
+Caching _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+12 _ _ B-Concept
+
+
+File _ _ O
+block _ _ B-Concept
+cache _ _ I-Concept
+data _ _ O
+structures _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+13 _ _ O
+
+
+Log-structured _ _ O
+file _ _ O
+systems _ _ O
+
+• _ _ O
+Trends _ _ O
+in _ _ O
+disk _ _ O
+& _ _ O
+memory _ _ O
+
+• _ _ O
+Faster _ _ O
+CPUs _ _ O
+
+• _ _ O
+Larger _ _ B-Concept
+memories _ _ I-Concept
+
+
+• _ _ O
+Result _ _ O
+
+• _ _ O
+More _ _ O
+memory _ _ O
+- _ _ O
+> _ _ O
+disk _ _ O
+caches _ _ O
+can _ _ O
+also _ _ O
+be _ _ O
+larger _ _ O
+
+• _ _ O
+Increasing _ _ O
+number _ _ O
+of _ _ O
+read _ _ O
+requests _ _ O
+can _ _ O
+come _ _ O
+from _ _ O
+cache _ _ O
+
+• _ _ O
+Thus _ _ O
+, _ _ O
+most _ _ O
+disk _ _ O
+accesses _ _ O
+will _ _ O
+be _ _ O
+writes _ _ O
+
+
+• _ _ O
+LFS _ _ O
+structures _ _ O
+entire _ _ O
+disk _ _ O
+as _ _ O
+a _ _ O
+log _ _ O
+
+• _ _ O
+All _ _ O
+writes _ _ O
+initially _ _ O
+buffered _ _ O
+in _ _ O
+memory _ _ O
+
+• _ _ O
+Periodically _ _ O
+write _ _ O
+these _ _ O
+to _ _ O
+the _ _ O
+end _ _ O
+of _ _ O
+the _ _ O
+disk _ _ O
+log _ _ O
+
+• _ _ O
+When _ _ O
+file _ _ O
+opened _ _ O
+, _ _ O
+locate _ _ O
+i-node _ _ O
+, _ _ O
+then _ _ O
+find _ _ O
+blocks _ _ O
+
+
+• _ _ O
+Issue _ _ O
+: _ _ O
+what _ _ O
+happens _ _ O
+when _ _ O
+blocks _ _ O
+are _ _ O
+deleted _ _ O
+? _ _ O
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+14 _ _ O
+
+
+Log _ _ O
+Structured _ _ O
+File _ _ O
+System _ _ O
+
+
+CS _ _ B-Concept
+1550 _ _ I-Concept
+– _ _ I-Concept
+Operating _ _ I-Concept
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+15 _ _ O
+
+
+Log _ _ O
+Structured _ _ O
+File _ _ O
+System _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ B-Concept
+Systems _ _ I-Concept
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+16 _ _ O
+
+
+Flash _ _ O
+File _ _ O
+System _ _ O
+
+
+Wear _ _ O
+Leveling _ _ O
+
+
+Count _ _ O
+total _ _ O
+writes _ _ O
+per _ _ O
+flash _ _ O
+sector _ _ O
+and _ _ O
+attempt _ _ O
+to _ _ O
+
+balance _ _ O
+across _ _ O
+the _ _ O
+whole _ _ O
+disk _ _ O
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+17 _ _ O
+
+
+Wear _ _ O
+leveling _ _ O
+for _ _ O
+SSDs _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+18 _ _ O
+
+
+Disk _ _ O
+block _ _ O
+size _ _ O
+
+• _ _ O
+Dark _ _ O
+line _ _ O
+( _ _ O
+left _ _ O
+hand _ _ O
+scale _ _ O
+) _ _ O
+gives _ _ O
+data _ _ O
+rate _ _ O
+of _ _ O
+a _ _ O
+disk _ _ O
+
+
+• _ _ O
+Dotted _ _ O
+line _ _ O
+( _ _ O
+right _ _ O
+hand _ _ O
+scale _ _ O
+) _ _ O
+gives _ _ O
+disk _ _ O
+space _ _ O
+
+efficiency _ _ O
+
+• _ _ O
+All _ _ O
+files _ _ O
+2KB _ _ O
+
+
+Block _ _ O
+size _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+19 _ _ O
+
+
+Problem _ _ O
+of _ _ O
+the _ _ O
+Day _ _ O
+– _ _ O
+Part _ _ O
+3 _ _ O
+
+• _ _ O
+How _ _ O
+do _ _ O
+device _ _ O
+drivers _ _ O
+program _ _ O
+I/O _ _ O
+devices _ _ O
+? _ _ O
+
+• _ _ O
+Answer _ _ O
+: _ _ O
+three _ _ O
+methods _ _ O
+
+• _ _ O
+polling _ _ O
+
+• _ _ O
+Interrupts _ _ O
+
+• _ _ O
+DMA _ _ O
+
+
+CS _ _ O
+1550 _ _ O
+– _ _ O
+Operating _ _ O
+Systems _ _ O
+– _ _ O
+Sherif _ _ O
+Khattab _ _ O
+
+
+20 _ _ B-Concept
+
+
+How _ _ O
+are _ _ O
+I/O _ _ O
+devices _ _ O
+connected _ _ O
+? _ _ O
+
+• _ _ O
+Single-bus _ _ O
+
+• _ _ O
+All _ _ O
+memory _ _ O
+accesses _ _ O
+go _ _ O
+
+over _ _ O
+a _ _ O
+shared _ _ O
+bus _ _ O
+
+• _ _ O
+I/O _ _ O
+and _ _ O
+RAM _ _ O
+accesses _ _ O
+
+compete _ _ O
+for _ _ O
+bandwidth _ _ O
+
+
+CPU _ _ O
+
+
+Memory _ _ O
+
+
+I/O _ _ O
+
+
+CPU _ _ O
+
+
+Memory _ _ O
+
+
+I/O _ _ B-Concept
+
+
+• _ _ O
+Dual-bus _ _ O
+
+• _ _ O
+RAM _ _ O
+access _ _ O
+over _ _ O
+highspeed _ _ O
+bus _ _ O
+
+• _ _ O
+I/O _ _ O
+access _ _ O
+over _ _ O
+lower-speed _ _ O
+
+
+-DOCSTART- -X- -X- O
+
+CS _ _ O
+0007 _ _ O
+: _ _ O
+Introduction _ _ O
+to _ _ O
+Java _ _ O
+
+Lecture _ _ O
+7 _ _ O
+
+Nathan _ _ O
+Ong _ _ O
+
+University _ _ O
+of _ _ O
+Pittsburgh _ _ O
+
+September _ _ O
+22 _ _ O
+, _ _ O
+2016 _ _ O
+
+
+FUNCTIONS _ _ B-Concept
+
+
+Functions _ _ O
+
+• _ _ O
+A _ _ O
+function _ _ O
+is _ _ O
+similar _ _ O
+to _ _ O
+its _ _ O
+mathematical _ _ O
+
+counterpart _ _ O
+
+• _ _ O
+f _ _ O
+( _ _ O
+x _ _ O
+) _ _ B-Concept
+= _ _ I-Concept
+x2 _ _ I-Concept
+, _ _ I-Concept
+plug _ _ I-Concept
+in _ _ O
+3 _ _ O
+, _ _ O
+get _ _ O
+9 _ _ O
+
+• _ _ O
+Contains _ _ O
+several _ _ O
+more _ _ O
+parts _ _ B-Concept
+
+
+Java _ _ B-Concept
+Functions _ _ I-Concept
+
+• _ _ O
+Takes _ _ O
+in _ _ O
+zero _ _ O
+or _ _ O
+more _ _ O
+parameters _ _ O
+, _ _ O
+
+processes _ _ O
+them _ _ O
+in _ _ O
+the _ _ O
+function _ _ O
+body _ _ O
+, _ _ O
+
+and _ _ O
+returns _ _ O
+a _ _ O
+result _ _ O
+
+• _ _ B-Concept
+Imagine _ _ I-Concept
+going _ _ O
+to _ _ O
+BestBuyTM _ _ O
+and _ _ O
+telling _ _ O
+
+them _ _ B-Concept
+you _ _ I-Concept
+want _ _ I-Concept
+your _ _ O
+computer _ _ O
+fixed _ _ O
+. _ _ O
+
+You _ _ O
+are _ _ O
+telling _ _ O
+them _ _ O
+to _ _ O
+run _ _ O
+a _ _ O
+fixing _ _ O
+
+function _ _ O
+, _ _ O
+with _ _ O
+your _ _ O
+computer _ _ O
+being _ _ O
+a _ _ O
+
+parameter _ _ O
+. _ _ O
+What _ _ O
+you _ _ O
+get _ _ O
+back _ _ O
+is _ _ B-Concept
+your _ _ I-Concept
+
+fixed _ _ B-Concept
+computer _ _ I-Concept
+. _ _ O
+
+
+You _ _ O
+Already _ _ O
+Have _ _ O
+the _ _ O
+Power _ _ O
+! _ _ O
+
+• _ _ B-Concept
+You _ _ I-Concept
+already _ _ I-Concept
+know _ _ O
+how _ _ O
+to _ _ O
+call _ _ O
+functions _ _ O
+! _ _ O
+
+Static _ _ O
+: _ _ O
+
+ClassName.functionName _ _ O
+( _ _ O
+< _ _ O
+parameters _ _ O
+
+> _ _ O
+) _ _ O
+; _ _ O
+
+Non-static _ _ B-Concept
+: _ _ O
+
+objectName.functionName _ _ O
+( _ _ O
+< _ _ O
+parameter _ _ O
+
+s _ _ O
+> _ _ O
+) _ _ O
+; _ _ O
+
+• _ _ O
+How _ _ O
+do _ _ O
+I _ _ O
+make _ _ O
+my _ _ O
+own _ _ O
+? _ _ O
+
+
+Function _ _ O
+Components _ _ O
+
+
+1 _ _ O
+. _ _ O
+
+2 _ _ B-Concept
+. _ _ I-Concept
+
+3 _ _ B-Concept
+. _ _ I-Concept
+
+Function _ _ B-Concept
+4 _ _ I-Concept
+. _ _ I-Concept
+
+Header _ _ B-Concept
+5 _ _ I-Concept
+. _ _ I-Concept
+
+
+Function _ _ O
+
+Body _ _ O
+6 _ _ O
+. _ _ O
+
+
+Visibility _ _ O
+type _ _ O
+( _ _ O
+public/protected/private _ _ O
+) _ _ O
+
+static _ _ B-Concept
+( _ _ I-Concept
+For _ _ I-Concept
+now _ _ O
+, _ _ O
+required _ _ O
+) _ _ O
+
+Return _ _ O
+Type _ _ O
+
+functionName _ _ O
+
+Parentheses _ _ O
+“ _ _ O
+( _ _ O
+) _ _ O
+” _ _ O
+
+– _ _ B-Concept
+
+a _ _ O
+) _ _ O
+
+b _ _ B-Concept
+) _ _ I-Concept
+
+c _ _ O
+) _ _ O
+
+
+Parameters _ _ O
+
+Type1 _ _ B-Concept
+parameterName1 _ _ I-Concept
+
+Type2 _ _ O
+parameterName2 _ _ O
+
+… _ _ O
+
+
+Curly _ _ B-Concept
+Brackets/Braces _ _ I-Concept
+“ _ _ O
+{ _ _ O
+} _ _ O
+” _ _ O
+
+– _ _ O
+
+
+return _ _ O
+a _ _ O
+value _ _ O
+
+
+A _ _ O
+Simple _ _ O
+Unnecessary _ _ O
+
+Function _ _ O
+
+• _ _ B-Concept
+I _ _ I-Concept
+want _ _ I-Concept
+this _ _ O
+function _ _ O
+to _ _ O
+take _ _ O
+two _ _ O
+doubles _ _ O
+
+and _ _ O
+return _ _ O
+their _ _ B-Concept
+sum _ _ I-Concept
+. _ _ I-Concept
+
+• _ _ O
+Let _ _ O
+us _ _ O
+go _ _ O
+through _ _ O
+the _ _ B-Concept
+list _ _ I-Concept
+and _ _ I-Concept
+see _ _ I-Concept
+what _ _ O
+
+needs _ _ B-Concept
+to _ _ I-Concept
+be _ _ I-Concept
+incorporated _ _ I-Concept
+for _ _ O
+the _ _ O
+
+function _ _ O
+. _ _ O
+
+
+Function _ _ B-Concept
+Components _ _ I-Concept
+
+1 _ _ O
+. _ _ O
+
+2 _ _ O
+. _ _ O
+
+3 _ _ O
+. _ _ O
+
+4 _ _ O
+. _ _ O
+
+5 _ _ B-Concept
+. _ _ I-Concept
+
+
+We _ _ O
+’ _ _ O
+ll _ _ O
+just _ _ O
+use _ _ B-Concept
+public _ _ I-Concept
+for _ _ I-Concept
+now _ _ I-Concept
+. _ _ O
+
+static _ _ O
+( _ _ O
+For _ _ O
+now _ _ B-Concept
+, _ _ I-Concept
+required _ _ I-Concept
+) _ _ O
+
+What _ _ B-Concept
+is _ _ I-Concept
+the _ _ O
+Return _ _ B-Concept
+Type _ _ O
+? _ _ O
+
+What _ _ O
+is _ _ O
+an _ _ O
+appropriate _ _ B-Concept
+functionName _ _ I-Concept
+? _ _ O
+
+Parentheses _ _ B-Concept
+“ _ _ O
+( _ _ O
+) _ _ O
+” _ _ O
+
+– _ _ B-Concept
+
+
+What _ _ O
+are _ _ O
+the _ _ O
+parameters _ _ B-Concept
+? _ _ I-Concept
+
+
+6 _ _ B-Concept
+. _ _ I-Concept
+Curly _ _ I-Concept
+Brackets/Braces _ _ B-Concept
+“ _ _ O
+{ _ _ O
+} _ _ O
+” _ _ O
+
+– _ _ O
+
+– _ _ O
+
+
+What _ _ O
+do _ _ O
+we _ _ O
+do _ _ O
+in _ _ O
+the _ _ O
+Function _ _ O
+Body _ _ O
+? _ _ O
+
+What _ _ B-Concept
+do _ _ I-Concept
+we _ _ I-Concept
+return _ _ I-Concept
+? _ _ O
+
+
+Return _ _ O
+Type _ _ O
+
+• _ _ O
+What _ _ O
+kind _ _ O
+of _ _ O
+thing _ _ O
+are _ _ O
+we _ _ O
+going _ _ O
+to _ _ O
+give _ _ O
+
+back _ _ O
+to _ _ O
+the _ _ O
+function _ _ B-Concept
+caller _ _ I-Concept
+? _ _ O
+
+• _ _ B-Concept
+“ _ _ I-Concept
+I _ _ I-Concept
+want _ _ I-Concept
+this _ _ B-Concept
+function _ _ I-Concept
+to _ _ O
+take _ _ O
+two _ _ O
+
+doubles _ _ B-Concept
+and _ _ I-Concept
+return _ _ I-Concept
+their _ _ O
+sum _ _ O
+. _ _ O
+” _ _ O
+
+• _ _ O
+The _ _ O
+sum _ _ O
+of _ _ O
+two _ _ O
+doubles _ _ O
+better _ _ O
+be _ _ O
+a _ _ O
+
+double _ _ B-Concept
+. _ _ I-Concept
+
+
+Function _ _ B-Concept
+Name _ _ B-Concept
+
+• _ _ B-Concept
+The _ _ I-Concept
+function _ _ I-Concept
+name _ _ B-Concept
+should _ _ I-Concept
+easily _ _ O
+
+describe _ _ B-Concept
+what _ _ I-Concept
+the _ _ I-Concept
+function _ _ O
+does _ _ O
+. _ _ O
+
+• _ _ O
+“ _ _ B-Concept
+I _ _ I-Concept
+want _ _ I-Concept
+this _ _ I-Concept
+function _ _ I-Concept
+to _ _ O
+take _ _ O
+two _ _ O
+
+doubles _ _ O
+and _ _ O
+return _ _ O
+their _ _ O
+sum _ _ O
+. _ _ O
+” _ _ O
+
+• _ _ O
+“ _ _ O
+sum _ _ O
+” _ _ O
+? _ _ O
+Probably _ _ O
+not _ _ O
+enough _ _ O
+detail _ _ O
+, _ _ O
+
+since _ _ O
+there _ _ O
+are _ _ O
+many _ _ O
+types _ _ O
+that _ _ O
+can _ _ O
+be _ _ O
+
+summed _ _ B-Concept
+. _ _ I-Concept
+
+• _ _ O
+sumDoubles _ _ B-Concept
+
+
+Parameters _ _ B-Concept
+
+• _ _ B-Concept
+The _ _ I-Concept
+required _ _ I-Concept
+input _ _ O
+to _ _ O
+the _ _ O
+function _ _ O
+. _ _ O
+
+• _ _ O
+The _ _ O
+data _ _ B-Concept
+that _ _ I-Concept
+the _ _ B-Concept
+function _ _ I-Concept
+needs _ _ O
+in _ _ O
+
+order _ _ B-Concept
+to _ _ I-Concept
+properly _ _ I-Concept
+execute _ _ O
+its _ _ O
+duties _ _ O
+. _ _ O
+
+• _ _ O
+“ _ _ B-Concept
+I _ _ I-Concept
+want _ _ I-Concept
+this _ _ I-Concept
+function _ _ I-Concept
+to _ _ O
+take _ _ O
+two _ _ O
+
+doubles _ _ O
+and _ _ O
+return _ _ O
+their _ _ O
+sum _ _ O
+. _ _ O
+” _ _ O
+
+• _ _ B-Concept
+Two _ _ I-Concept
+doubles _ _ I-Concept
+. _ _ O
+
+• _ _ O
+Names _ _ B-Concept
+? _ _ I-Concept
+
+
+Function _ _ B-Concept
+Header _ _ B-Concept
+
+
+//sums _ _ B-Concept
+two _ _ I-Concept
+doubles _ _ O
+together _ _ O
+
+public _ _ B-Concept
+static _ _ B-Concept
+double _ _ B-Concept
+sumDoubles _ _ B-Concept
+
+( _ _ O
+double _ _ O
+addend1 _ _ O
+, _ _ O
+double _ _ O
+addend2 _ _ O
+) _ _ O
+
+
+Function _ _ B-Concept
+Body _ _ I-Concept
+
+… _ _ O
+( _ _ O
+Function _ _ B-Concept
+Header _ _ I-Concept
+) _ _ I-Concept
+
+{ _ _ O
+
+? _ _ B-Concept
+? _ _ I-Concept
+? _ _ I-Concept
+
+} _ _ B-Concept
+
+
+Function _ _ B-Concept
+Body _ _ I-Concept
+
+… _ _ B-Concept
+( _ _ I-Concept
+Function _ _ I-Concept
+Header _ _ B-Concept
+) _ _ B-Concept
+
+{ _ _ O
+
+double _ _ B-Concept
+sum _ _ I-Concept
+= _ _ O
+addend1 _ _ B-Concept
++ _ _ I-Concept
+addend2 _ _ I-Concept
+; _ _ I-Concept
+
+return _ _ B-Concept
+sum _ _ I-Concept
+; _ _ I-Concept
+
+} _ _ B-Concept
+//end _ _ I-Concept
+method _ _ O
+( _ _ O
+double _ _ B-Concept
+, _ _ I-Concept
+double _ _ I-Concept
+) _ _ I-Concept
+
+
+Function _ _ O
+Body _ _ O
+
+… _ _ B-Concept
+( _ _ I-Concept
+Function _ _ I-Concept
+Header _ _ O
+) _ _ O
+
+{ _ _ B-Concept
+
+return _ _ B-Concept
+addend1 _ _ I-Concept
++ _ _ I-Concept
+addend2 _ _ I-Concept
+; _ _ O
+
+} _ _ O
+//end _ _ O
+method _ _ O
+( _ _ O
+double _ _ O
+, _ _ O
+double _ _ O
+) _ _ O
+
+
+Function _ _ B-Concept
+Body _ _ I-Concept
+
+public _ _ O
+class _ _ B-Concept
+Functions _ _ O
+
+{ _ _ B-Concept
+
+… _ _ O
+( _ _ O
+Function _ _ O
+) _ _ O
+
+public _ _ O
+static _ _ O
+void _ _ O
+main _ _ O
+( _ _ O
+String _ _ O
+[ _ _ O
+] _ _ O
+args _ _ O
+) _ _ O
+
+{ _ _ O
+
+double _ _ O
+sum _ _ O
+= _ _ O
+sumDoubles _ _ B-Concept
+( _ _ I-Concept
+2.5,3.9 _ _ I-Concept
+) _ _ O
+; _ _ O
+
+System.out.println _ _ B-Concept
+( _ _ I-Concept
+sum _ _ I-Concept
+) _ _ I-Concept
+; _ _ O
+
+} _ _ B-Concept
+//end _ _ I-Concept
+method _ _ O
+main _ _ O
+
+} _ _ O
+//End _ _ O
+class _ _ O
+Functions _ _ O
+
+
+import _ _ O
+java.util.Scanner _ _ O
+; _ _ O
+
+public _ _ B-Concept
+class _ _ O
+AddingMachine _ _ O
+
+{ _ _ B-Concept
+
+… _ _ O
+( _ _ O
+Function _ _ O
+) _ _ O
+
+public _ _ B-Concept
+static _ _ O
+void _ _ O
+main _ _ O
+( _ _ O
+String _ _ O
+[ _ _ O
+] _ _ O
+args _ _ O
+) _ _ O
+
+{ _ _ B-Concept
+
+Scanner _ _ B-Concept
+scan _ _ O
+= _ _ O
+new _ _ O
+Scanner _ _ O
+( _ _ O
+System.in _ _ O
+) _ _ O
+; _ _ O
+
+System.out.println _ _ B-Concept
+( _ _ O
+" _ _ O
+Please _ _ O
+enter _ _ O
+a _ _ O
+number _ _ O
+: _ _ O
+" _ _ O
+) _ _ O
+; _ _ O
+
+double _ _ B-Concept
+firstNum _ _ O
+= _ _ O
+scan.nextDouble _ _ O
+( _ _ O
+) _ _ O
+; _ _ O
+
+System.out.println _ _ B-Concept
+( _ _ O
+" _ _ O
+Please _ _ O
+enter _ _ O
+a _ _ O
+second _ _ O
+
+number _ _ O
+: _ _ O
+" _ _ O
+) _ _ O
+; _ _ O
+
+double _ _ O
+secondNum _ _ O
+= _ _ O
+scan.nextDouble _ _ O
+( _ _ O
+) _ _ O
+; _ _ O
+
+double _ _ B-Concept
+sum _ _ I-Concept
+= _ _ I-Concept
+sumDoubles _ _ I-Concept
+( _ _ O
+firstNum _ _ O
+, _ _ O
+secondNum _ _ O
+) _ _ O
+; _ _ O
+
+System.out.println _ _ O
+( _ _ O
+" _ _ O
+The _ _ B-Concept
+sum _ _ I-Concept
+of _ _ I-Concept
+" _ _ I-Concept
++ _ _ I-Concept
+firstNum _ _ O
++ _ _ O
+
+" _ _ B-Concept
+and _ _ I-Concept
+" _ _ I-Concept
++ _ _ I-Concept
+secondNum _ _ I-Concept
++ _ _ O
+" _ _ O
+equals _ _ B-Concept
+" _ _ I-Concept
++ _ _ I-Concept
+
+sum _ _ O
+) _ _ O
+; _ _ O
+
+} _ _ B-Concept
+//end _ _ I-Concept
+method _ _ I-Concept
+main _ _ I-Concept
+
+} _ _ O
+//End _ _ B-Concept
+class _ _ I-Concept
+AddingMachine _ _ O
+
+
+Scope _ _ O
+
+• _ _ O
+Why _ _ O
+did _ _ O
+we _ _ O
+need _ _ O
+to _ _ B-Concept
+submit _ _ I-Concept
+firstNum _ _ B-Concept
+
+and _ _ O
+secondNum _ _ B-Concept
+to _ _ I-Concept
+sumDoubles _ _ I-Concept
+? _ _ I-Concept
+
+• _ _ B-Concept
+Why _ _ I-Concept
+can _ _ I-Concept
+’ _ _ I-Concept
+t _ _ I-Concept
+sumDoubles _ _ I-Concept
+just _ _ O
+use _ _ O
+the _ _ O
+
+already _ _ B-Concept
+created _ _ I-Concept
+variables _ _ B-Concept
+? _ _ I-Concept
+
+• _ _ O
+This _ _ O
+relates _ _ O
+to _ _ O
+scope _ _ O
+. _ _ O
+
+
+Scope _ _ O
+
+Confidential _ _ O
+
+Secret _ _ B-Concept
+
+Top _ _ B-Concept
+Secret _ _ I-Concept
+
+
+Scope _ _ O
+
+public _ _ O
+class _ _ O
+
+AddingMachine _ _ O
+
+public _ _ O
+
+static _ _ O
+void _ _ O
+
+main _ _ O
+
+
+public _ _ O
+
+static _ _ O
+
+double _ _ O
+
+sumDoubl _ _ O
+
+es _ _ O
+
+
+Passing-in _ _ B-Concept
+Parameters _ _ O
+
+• _ _ O
+The _ _ O
+act _ _ O
+of _ _ B-Concept
+providing _ _ I-Concept
+parameters _ _ I-Concept
+in _ _ O
+a _ _ O
+
+function _ _ O
+call _ _ O
+is _ _ O
+called _ _ B-Concept
+Passing-in _ _ I-Concept
+. _ _ I-Concept
+
+• _ _ B-Concept
+Java _ _ I-Concept
+has _ _ I-Concept
+two _ _ I-Concept
+kinds _ _ I-Concept
+of _ _ O
+passing-in _ _ O
+. _ _ O
+
+
+Pass-by-Value _ _ B-Concept
+
+• _ _ O
+Passing-in _ _ B-Concept
+a _ _ I-Concept
+copy _ _ I-Concept
+of _ _ I-Concept
+the _ _ I-Concept
+value _ _ I-Concept
+of _ _ O
+the _ _ O
+
+variable _ _ O
+. _ _ O
+
+• _ _ O
+Any _ _ O
+change _ _ O
+made _ _ O
+to _ _ O
+the _ _ O
+variable _ _ O
+is _ _ O
+not _ _ O
+
+reflected _ _ O
+when _ _ O
+the _ _ O
+function _ _ B-Concept
+returns _ _ I-Concept
+. _ _ O
+
+• _ _ O
+All _ _ O
+primitive _ _ B-Concept
+type _ _ I-Concept
+parameters _ _ O
+are _ _ O
+passby-value _ _ O
+. _ _ O
+
+
+Pass-by-Reference _ _ B-Concept
+
+• _ _ O
+Passing-in _ _ O
+the _ _ O
+actual _ _ O
+variable _ _ O
+. _ _ O
+
+• _ _ O
+Any _ _ O
+change _ _ O
+made _ _ O
+to _ _ O
+the _ _ B-Concept
+variable _ _ I-Concept
+IS _ _ O
+
+reflected _ _ B-Concept
+when _ _ I-Concept
+the _ _ O
+function _ _ O
+returns _ _ O
+, _ _ O
+
+UNLESS _ _ B-Concept
+the _ _ I-Concept
+parameter _ _ I-Concept
+name _ _ O
+is _ _ O
+
+REASSIGNED _ _ B-Concept
+. _ _ B-Concept
+
+• _ _ B-Concept
+All _ _ I-Concept
+non-primitive _ _ I-Concept
+type _ _ O
+parameters _ _ O
+are _ _ O
+
+pass-by-reference _ _ B-Concept
+. _ _ O
+
+
+Another _ _ O
+Simple _ _ O
+Function _ _ O
+
+• _ _ B-Concept
+I _ _ I-Concept
+want _ _ I-Concept
+a _ _ I-Concept
+function _ _ I-Concept
+that _ _ O
+prints _ _ O
+a _ _ O
+nice _ _ O
+
+British _ _ O
+greeting _ _ O
+, _ _ O
+complete _ _ O
+with _ _ O
+the _ _ O
+
+person _ _ O
+’ _ _ O
+s _ _ O
+full _ _ O
+name _ _ O
+. _ _ O
+
+Source _ _ O
+: _ _ B-Concept
+
+http _ _ O
+: _ _ O
+//www.bbcamerica.com/anglophen _ _ B-Concept
+
+ia/2011/07/five-slang-ways-to-say-hello/ _ _ O
+
+
+
+-DOCSTART- -X- -X- O
+
+CS _ _ O
+0007 _ _ O
+: _ _ O
+Introduction _ _ O
+to _ _ O
+Java _ _ O
+
+Lecture _ _ O
+17 _ _ O
+
+Nathan _ _ O
+Ong _ _ O
+
+University _ _ O
+of _ _ O
+Pittsburgh _ _ O
+
+November _ _ O
+8 _ _ O
+, _ _ O
+2016 _ _ O
+
+
+Main _ _ O
+Portions _ _ B-Concept
+of _ _ I-Concept
+OOP _ _ I-Concept
+
+• _ _ O
+Building _ _ O
+a _ _ O
+class _ _ B-Concept
+
+• _ _ B-Concept
+Determining _ _ I-Concept
+inter-class _ _ O
+relationships _ _ O
+
+
+Class _ _ B-Concept
+Components _ _ I-Concept
+
+• _ _ O
+Class-level/Instance _ _ B-Concept
+Variables _ _ O
+
+• _ _ B-Concept
+Methods _ _ I-Concept
+
+• _ _ O
+Constructor _ _ O
+( _ _ O
+s _ _ O
+) _ _ O
+
+
+Inter-class _ _ O
+Relationships _ _ O
+
+• _ _ O
+Building _ _ B-Concept
+a _ _ I-Concept
+single _ _ I-Concept
+class _ _ O
+is _ _ O
+useless _ _ O
+. _ _ O
+It _ _ O
+
+needs _ _ B-Concept
+to _ _ I-Concept
+be _ _ I-Concept
+used _ _ I-Concept
+in _ _ I-Concept
+context _ _ O
+. _ _ O
+
+• _ _ O
+There _ _ B-Concept
+are _ _ I-Concept
+two _ _ O
+main _ _ O
+relationships _ _ O
+
+between _ _ B-Concept
+classes _ _ I-Concept
+
+– _ _ O
+Sub/Super _ _ B-Concept
+class _ _ I-Concept
+
+– _ _ B-Concept
+Ownership _ _ I-Concept
+
+
+Subclasses _ _ O
+
+• _ _ O
+A _ _ O
+subclass _ _ O
+of _ _ O
+a _ _ O
+class _ _ O
+is _ _ O
+a _ _ O
+more _ _ O
+specific _ _ O
+
+type _ _ B-Concept
+of _ _ I-Concept
+a _ _ I-Concept
+class _ _ I-Concept
+
+• _ _ O
+Also _ _ O
+known _ _ O
+as _ _ O
+the _ _ O
+child _ _ O
+of _ _ O
+a _ _ O
+class _ _ O
+
+• _ _ B-Concept
+For _ _ I-Concept
+example _ _ I-Concept
+, _ _ O
+a _ _ O
+tree _ _ O
+would _ _ O
+be _ _ O
+a _ _ O
+subclass _ _ O
+
+of _ _ O
+plant _ _ O
+
+• _ _ B-Concept
+Subclasses _ _ I-Concept
+are _ _ I-Concept
+meant _ _ O
+to _ _ O
+expand _ _ O
+upon _ _ O
+
+the _ _ O
+behavior _ _ O
+of _ _ O
+their _ _ B-Concept
+more _ _ I-Concept
+general _ _ I-Concept
+
+parent _ _ O
+class _ _ O
+
+• _ _ O
+You _ _ O
+can _ _ O
+have _ _ O
+several _ _ B-Concept
+subclasses _ _ I-Concept
+
+
+Superclasses _ _ O
+
+• _ _ O
+On _ _ O
+the _ _ O
+converse _ _ B-Concept
+, _ _ I-Concept
+a _ _ O
+superclass _ _ O
+is _ _ O
+a _ _ O
+more _ _ O
+
+abstract _ _ B-Concept
+and _ _ O
+general _ _ O
+version _ _ O
+of _ _ O
+a _ _ O
+class _ _ O
+
+• _ _ O
+Also _ _ O
+known _ _ O
+as _ _ O
+the _ _ O
+parent _ _ B-Concept
+of _ _ I-Concept
+a _ _ I-Concept
+class _ _ I-Concept
+
+• _ _ O
+Plant _ _ O
+is _ _ O
+the _ _ B-Concept
+superclass _ _ I-Concept
+of _ _ O
+Tree _ _ O
+
+• _ _ O
+You _ _ B-Concept
+can _ _ I-Concept
+only _ _ I-Concept
+have _ _ O
+one _ _ O
+superclass _ _ B-Concept
+
+
+Declaring _ _ B-Concept
+a _ _ I-Concept
+Class _ _ O
+to _ _ O
+be _ _ O
+a _ _ O
+
+Subtype _ _ B-Concept
+
+• _ _ O
+In _ _ O
+order _ _ O
+to _ _ O
+declare _ _ O
+a _ _ O
+class _ _ O
+’ _ _ O
+s _ _ O
+parent _ _ O
+, _ _ O
+use _ _ O
+
+the _ _ O
+keyword _ _ O
+extends _ _ B-Concept
+
+• _ _ O
+( _ _ O
+Classes _ _ O
+that _ _ O
+do _ _ O
+not _ _ B-Concept
+have _ _ I-Concept
+a _ _ O
+parent _ _ O
+class _ _ O
+
+implicitly _ _ O
+extend _ _ O
+the _ _ O
+Object _ _ O
+class _ _ O
+) _ _ O
+
+
+Inheritance _ _ O
+
+• _ _ O
+A _ _ O
+subclass _ _ O
+inherits _ _ O
+all _ _ O
+non-private _ _ O
+fields _ _ O
+
+and _ _ O
+methods _ _ O
+
+• _ _ B-Concept
+Accessing _ _ I-Concept
+these _ _ O
+fields _ _ O
+and _ _ O
+methods _ _ O
+
+requires _ _ O
+the _ _ O
+keyword _ _ O
+super _ _ O
+. _ _ O
+
+• _ _ O
+( _ _ O
+Note _ _ O
+: _ _ O
+you _ _ O
+may _ _ O
+also _ _ B-Concept
+be _ _ I-Concept
+able _ _ I-Concept
+to _ _ O
+access _ _ O
+
+private _ _ O
+fields _ _ O
+with _ _ O
+the _ _ O
+parent _ _ O
+class _ _ O
+’ _ _ O
+s _ _ O
+
+getters _ _ B-Concept
+and _ _ I-Concept
+setters _ _ I-Concept
+, _ _ B-Concept
+which _ _ I-Concept
+may _ _ O
+be _ _ O
+safer _ _ O
+) _ _ O
+
+
+Restricting _ _ B-Concept
+Access _ _ I-Concept
+
+• _ _ O
+What _ _ B-Concept
+if _ _ I-Concept
+you _ _ I-Concept
+want _ _ I-Concept
+a _ _ O
+field _ _ B-Concept
+or _ _ I-Concept
+method _ _ I-Concept
+to _ _ O
+be _ _ O
+
+inherited _ _ O
+, _ _ O
+but _ _ O
+still _ _ B-Concept
+do _ _ I-Concept
+not _ _ O
+necessarily _ _ O
+
+want _ _ O
+it _ _ O
+to _ _ O
+be _ _ O
+accessed _ _ O
+by _ _ O
+anyone _ _ O
+? _ _ O
+
+• _ _ O
+Use _ _ O
+the _ _ B-Concept
+keyword _ _ I-Concept
+protected _ _ I-Concept
+
+• _ _ O
+Remember _ _ O
+, _ _ O
+releasing _ _ B-Concept
+your _ _ I-Concept
+access _ _ I-Concept
+to _ _ O
+
+these _ _ O
+fields _ _ O
+and _ _ O
+methods _ _ B-Concept
+should _ _ I-Concept
+only _ _ I-Concept
+
+be _ _ O
+done _ _ O
+when _ _ O
+necessary _ _ B-Concept
+
+
+Regarding _ _ O
+Constructors _ _ O
+
+• _ _ O
+Constructors _ _ O
+can _ _ O
+not _ _ O
+be _ _ B-Concept
+inherited _ _ I-Concept
+, _ _ O
+even _ _ O
+
+though _ _ B-Concept
+they _ _ I-Concept
+are _ _ I-Concept
+public _ _ I-Concept
+
+• _ _ O
+However _ _ O
+, _ _ O
+you _ _ O
+can _ _ O
+, _ _ O
+and _ _ O
+should _ _ O
+, _ _ O
+use _ _ O
+them _ _ O
+
+from _ _ O
+the _ _ O
+subclass _ _ O
+’ _ _ O
+s _ _ O
+constructor _ _ O
+, _ _ O
+to _ _ O
+
+ensure _ _ O
+complete _ _ B-Concept
+initialization _ _ I-Concept
+
+• _ _ O
+You _ _ O
+can _ _ O
+call _ _ O
+the _ _ O
+parent _ _ O
+’ _ _ O
+s _ _ O
+constructor _ _ O
+by _ _ O
+
+using _ _ O
+the _ _ B-Concept
+keyword _ _ I-Concept
+super _ _ O
+
+
+Calling _ _ B-Concept
+Superclass _ _ B-Concept
+Constructor _ _ O
+
+• _ _ O
+Unlike _ _ O
+calling _ _ O
+an _ _ O
+overloaded _ _ O
+
+constructor _ _ B-Concept
+of _ _ O
+the _ _ O
+same _ _ O
+class _ _ O
+, _ _ O
+calling _ _ O
+a _ _ O
+
+superclass _ _ O
+constructor _ _ O
+does _ _ O
+not _ _ O
+need _ _ O
+to _ _ O
+
+be _ _ B-Concept
+the _ _ I-Concept
+only _ _ O
+line _ _ O
+of _ _ O
+code _ _ O
+
+• _ _ O
+However _ _ O
+, _ _ O
+it _ _ O
+must _ _ O
+still _ _ O
+be _ _ O
+the _ _ O
+first _ _ O
+line _ _ O
+of _ _ O
+
+code _ _ O
+in _ _ O
+the _ _ O
+constructor _ _ O
+
+
+Example _ _ B-Concept
+
+public _ _ O
+class _ _ O
+Vehicle _ _ O
+
+{ _ _ B-Concept
+
+private _ _ O
+final _ _ O
+int _ _ O
+numWheels _ _ O
+; _ _ O
+
+… _ _ B-Concept
+
+public _ _ B-Concept
+Vehicle _ _ I-Concept
+( _ _ O
+int _ _ O
+numWheels _ _ O
+) _ _ O
+
+{ _ _ O
+
+this.numWheels _ _ B-Concept
+= _ _ O
+numWheels _ _ O
+; _ _ O
+
+… _ _ O
+
+} _ _ B-Concept
+//end _ _ I-Concept
+function _ _ O
+( _ _ O
+double _ _ O
+) _ _ O
+
+… _ _ B-Concept
+
+} _ _ B-Concept
+//End _ _ I-Concept
+class _ _ O
+Vehicle _ _ O
+
+
+Example _ _ O
+
+public _ _ O
+class _ _ B-Concept
+Car _ _ O
+extends _ _ O
+Vehicle _ _ O
+
+{ _ _ O
+
+private _ _ O
+int _ _ O
+numPassengers _ _ O
+; _ _ O
+
+private _ _ O
+double _ _ B-Concept
+gasRemaining _ _ I-Concept
+; _ _ O
+
+… _ _ O
+
+public _ _ O
+Car _ _ O
+( _ _ O
+int _ _ O
+numPassengers _ _ B-Concept
+, _ _ I-Concept
+double _ _ I-Concept
+gasRemaining _ _ I-Concept
+) _ _ O
+
+{ _ _ O
+
+super _ _ O
+( _ _ O
+4 _ _ O
+) _ _ O
+; _ _ O
+
+this.numPassengers _ _ O
+= _ _ O
+numPassengers _ _ O
+; _ _ O
+
+this.gasRemaining _ _ B-Concept
+= _ _ O
+gasRemaining _ _ O
+; _ _ O
+
+} _ _ O
+//end _ _ O
+constructor _ _ B-Concept
+( _ _ O
+int _ _ O
+, _ _ O
+double _ _ O
+) _ _ O
+
+… _ _ O
+
+} _ _ B-Concept
+//End _ _ I-Concept
+class _ _ I-Concept
+Plant _ _ O
+
+
+What _ _ O
+If _ _ O
+the _ _ O
+Superclass _ _ O
+’ _ _ O
+s _ _ O
+Method _ _ O
+
+Definition _ _ B-Concept
+Does _ _ O
+Not _ _ O
+Fit _ _ O
+the _ _ O
+Class _ _ O
+’ _ _ O
+s _ _ O
+? _ _ O
+
+• _ _ B-Concept
+We _ _ I-Concept
+can _ _ I-Concept
+override _ _ O
+the _ _ O
+definition _ _ O
+by _ _ O
+using _ _ O
+
+the _ _ O
+exact _ _ O
+same _ _ O
+function _ _ O
+header _ _ O
+
+• _ _ B-Concept
+The _ _ I-Concept
+line _ _ I-Concept
+directly _ _ O
+above _ _ O
+function _ _ O
+header _ _ O
+
+must _ _ B-Concept
+have _ _ I-Concept
+“ _ _ O
+@ _ _ O
+Override _ _ O
+” _ _ O
+only _ _ O
+
+• _ _ O
+As _ _ O
+an _ _ O
+example _ _ O
+, _ _ O
+our _ _ O
+Car _ _ O
+class _ _ O
+should _ _ O
+
+probably _ _ B-Concept
+use _ _ I-Concept
+the _ _ O
+original _ _ O
+“ _ _ O
+move _ _ O
+” _ _ O
+
+method _ _ O
+, _ _ O
+rather _ _ O
+than _ _ O
+creating _ _ O
+an _ _ O
+entirely _ _ O
+
+new _ _ O
+“ _ _ O
+drive _ _ O
+” _ _ O
+method _ _ O
+that _ _ O
+does _ _ O
+
+something _ _ O
+similar _ _ O
+
+
+Override _ _ B-Concept
+
+public _ _ O
+class _ _ O
+Car _ _ B-Concept
+extends _ _ I-Concept
+Vehicle _ _ O
+
+{ _ _ O
+
+private _ _ O
+int _ _ O
+numPassengers _ _ B-Concept
+; _ _ I-Concept
+
+private _ _ O
+double _ _ O
+gasRemaining _ _ O
+; _ _ O
+
+… _ _ B-Concept
+
+@ _ _ B-Concept
+Override _ _ I-Concept
+
+public _ _ O
+boolean _ _ O
+move _ _ O
+( _ _ O
+double _ _ O
+dist _ _ O
+) _ _ O
+
+{ _ _ O
+
+return _ _ B-Concept
+super.move _ _ I-Concept
+( _ _ O
+dist _ _ O
+* _ _ O
+10.0 _ _ O
+) _ _ O
+& _ _ O
+& _ _ O
+
+( _ _ O
+this.gasRemaining _ _ B-Concept
+> _ _ O
+0 _ _ O
+) _ _ O
+; _ _ O
+
+} _ _ O
+//end _ _ O
+function _ _ B-Concept
+( _ _ I-Concept
+double _ _ I-Concept
+) _ _ O
+
+… _ _ O
+
+} _ _ O
+//End _ _ O
+class _ _ O
+Plant _ _ O
+
+
+Overriding _ _ O
+
+• _ _ O
+I _ _ O
+can _ _ O
+still _ _ O
+reference _ _ O
+the _ _ O
+original _ _ O
+method _ _ O
+
+using _ _ O
+the _ _ O
+super _ _ B-Concept
+keyword _ _ I-Concept
+
+• _ _ B-Concept
+Unless _ _ I-Concept
+your _ _ B-Concept
+overridden _ _ O
+method _ _ O
+totally _ _ O
+
+discards _ _ O
+the _ _ O
+functionality _ _ O
+of _ _ O
+the _ _ O
+
+superclass _ _ B-Concept
+’ _ _ O
+s _ _ O
+method _ _ O
+, _ _ O
+you _ _ O
+should _ _ O
+call _ _ O
+the _ _ O
+
+superclass _ _ O
+’ _ _ O
+s _ _ O
+method _ _ O
+at _ _ O
+least _ _ O
+once _ _ O
+
+
+Note _ _ O
+
+• _ _ B-Concept
+You _ _ I-Concept
+can _ _ O
+not _ _ O
+override _ _ B-Concept
+constructors _ _ O
+
+
+Ownership _ _ O
+
+• _ _ O
+Ownership _ _ O
+is _ _ O
+simply _ _ O
+one _ _ O
+class _ _ O
+using _ _ O
+
+another _ _ O
+as _ _ O
+a _ _ O
+property _ _ O
+
+• _ _ O
+A _ _ O
+Car _ _ O
+may _ _ O
+have _ _ O
+an _ _ O
+Engine _ _ O
+, _ _ O
+a _ _ O
+Radio _ _ O
+, _ _ O
+and _ _ O
+
+an _ _ O
+Owner _ _ B-Concept
+, _ _ I-Concept
+depending _ _ I-Concept
+on _ _ O
+what _ _ O
+you _ _ O
+need _ _ O
+
+• _ _ O
+A _ _ O
+Car _ _ O
+’ _ _ O
+s _ _ O
+superclass _ _ O
+and _ _ O
+subclasses _ _ O
+
+certainly _ _ B-Concept
+are _ _ I-Concept
+not _ _ O
+Engine _ _ O
+, _ _ O
+Radio _ _ O
+, _ _ O
+and _ _ O
+
+Owner _ _ O
+
+
+Using _ _ O
+the _ _ O
+Classes _ _ O
+
+public _ _ O
+class _ _ O
+Garage _ _ O
+
+{ _ _ B-Concept
+
+private _ _ O
+Vehicle _ _ O
+[ _ _ O
+] _ _ O
+vehicles _ _ O
+; _ _ O
+
+… _ _ O
+
+public _ _ O
+Garage _ _ O
+( _ _ O
+int _ _ O
+capacity _ _ O
+) _ _ O
+
+{ _ _ O
+
+this.vehicles _ _ O
+= _ _ O
+new _ _ O
+Vehicle _ _ O
+[ _ _ O
+capacity _ _ O
+] _ _ O
+; _ _ O
+
+for _ _ O
+( _ _ O
+int _ _ O
+i _ _ O
+= _ _ O
+0 _ _ O
+; _ _ O
+i _ _ O
+< _ _ O
+vehicles.length _ _ O
+; _ _ O
+i++ _ _ O
+) _ _ O
+
+{ _ _ O
+
+vehicles _ _ O
+[ _ _ O
+i _ _ O
+] _ _ O
+= _ _ O
+null _ _ O
+; _ _ O
+
+} _ _ O
+
+… _ _ O
+
+} _ _ O
+//end _ _ O
+constructor _ _ O
+( _ _ O
+int _ _ O
+) _ _ O
+
+… _ _ O
+
+} _ _ O
+//End _ _ O
+class _ _ B-Concept
+Garage _ _ O
+
+
+Using _ _ O
+the _ _ O
+Classes _ _ O
+
+public _ _ O
+class _ _ O
+Garage _ _ O
+
+{ _ _ O
+
+… _ _ O
+
+public _ _ O
+boolean _ _ O
+addVehicle _ _ O
+( _ _ O
+Vehicle _ _ O
+vehicle _ _ O
+) _ _ O
+
+{ _ _ O
+
+//Note _ _ O
+: _ _ O
+there _ _ O
+is _ _ O
+a _ _ O
+better _ _ O
+way _ _ O
+! _ _ O
+
+for _ _ O
+( _ _ O
+int _ _ O
+i _ _ O
+= _ _ O
+0 _ _ O
+; _ _ O
+i _ _ O
+< _ _ O
+vehicles.length _ _ O
+; _ _ O
+i++ _ _ O
+) _ _ O
+
+{ _ _ O
+
+if _ _ O
+( _ _ O
+vehicles _ _ O
+[ _ _ O
+i _ _ O
+] _ _ O
+== _ _ O
+null _ _ O
+) _ _ O
+
+{ _ _ O
+
+vehicles _ _ O
+[ _ _ O
+i _ _ O
+] _ _ O
+= _ _ O
+vehicle _ _ O
+; _ _ O
+
+return _ _ O
+true _ _ B-Concept
+; _ _ I-Concept
+
+} _ _ O
+
+} _ _ O
+
+return _ _ O
+false _ _ O
+; _ _ O
+
+} _ _ O
+//end _ _ O
+method _ _ O
+( _ _ O
+Vehicle _ _ O
+) _ _ O
+
+} _ _ O
+//End _ _ O
+class _ _ O
+Garage _ _ O
+
+
+QUESTIONS _ _ O
+? _ _ O
+
+
+Modeling _ _ O
+a _ _ O
+Problem _ _ O
+
+“ _ _ O
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+services _ _ O
+foreign _ _ O
+cars _ _ O
+, _ _ O
+and _ _ O
+
+specializes _ _ O
+in _ _ O
+servicing _ _ O
+cars _ _ O
+made _ _ O
+by _ _ O
+Mercedes _ _ O
+, _ _ O
+
+Porsche _ _ O
+, _ _ O
+and _ _ O
+BMW _ _ O
+. _ _ O
+When _ _ O
+a _ _ O
+customer _ _ O
+brings _ _ O
+a _ _ O
+car _ _ O
+to _ _ O
+
+the _ _ O
+shop _ _ O
+, _ _ O
+the _ _ O
+manager _ _ O
+gets _ _ O
+the _ _ O
+customer _ _ O
+’ _ _ O
+s _ _ O
+name _ _ O
+, _ _ O
+
+address _ _ O
+, _ _ O
+and _ _ O
+telephone _ _ O
+number _ _ O
+. _ _ O
+Then _ _ O
+the _ _ O
+manager _ _ O
+
+determines _ _ O
+the _ _ O
+make _ _ O
+, _ _ O
+model _ _ O
+, _ _ O
+and _ _ O
+year _ _ O
+of _ _ O
+the _ _ O
+car _ _ O
+, _ _ O
+and _ _ O
+
+gives _ _ O
+the _ _ O
+customer _ _ O
+a _ _ O
+service _ _ O
+quote _ _ O
+. _ _ O
+The _ _ O
+service _ _ O
+
+quote _ _ O
+shows _ _ O
+the _ _ O
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+, _ _ O
+estimated _ _ O
+
+labor _ _ O
+charges _ _ O
+, _ _ O
+sales _ _ O
+tax _ _ O
+, _ _ O
+and _ _ O
+total _ _ O
+estimated _ _ O
+
+charges _ _ O
+. _ _ O
+” _ _ O
+
+Source _ _ O
+: _ _ O
+Starting _ _ O
+Out _ _ O
+with _ _ O
+Java _ _ O
+: _ _ O
+From _ _ O
+Control _ _ O
+Structures _ _ O
+
+through _ _ O
+Objects _ _ O
+by _ _ O
+Tony _ _ O
+Gaddis _ _ O
+
+
+Find _ _ O
+the _ _ O
+Nouns _ _ O
+
+“ _ _ O
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+services _ _ O
+foreign _ _ O
+cars _ _ O
+, _ _ O
+
+and _ _ O
+specializes _ _ O
+in _ _ O
+servicing _ _ O
+cars _ _ O
+made _ _ O
+by _ _ O
+
+Mercedes _ _ O
+, _ _ O
+Porsche _ _ O
+, _ _ O
+and _ _ O
+BMW _ _ O
+. _ _ O
+When _ _ O
+a _ _ O
+
+customer _ _ O
+brings _ _ O
+a _ _ O
+car _ _ O
+to _ _ O
+the _ _ O
+shop _ _ O
+, _ _ O
+the _ _ O
+
+manager _ _ O
+gets _ _ O
+the _ _ O
+customer _ _ O
+’ _ _ O
+s _ _ O
+name _ _ O
+, _ _ O
+address _ _ O
+, _ _ O
+
+and _ _ O
+telephone _ _ O
+number _ _ O
+. _ _ O
+Then _ _ O
+the _ _ O
+manager _ _ O
+
+determines _ _ O
+the _ _ O
+make _ _ O
+, _ _ O
+model _ _ O
+, _ _ O
+and _ _ O
+year _ _ O
+of _ _ O
+the _ _ O
+
+car _ _ O
+, _ _ O
+and _ _ O
+gives _ _ O
+the _ _ O
+customer _ _ O
+a _ _ O
+service _ _ O
+quote _ _ O
+. _ _ O
+
+The _ _ O
+service _ _ O
+quote _ _ O
+shows _ _ O
+the _ _ O
+estimated _ _ O
+parts _ _ O
+
+charges _ _ O
+, _ _ O
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+, _ _ O
+sales _ _ O
+tax _ _ O
+, _ _ O
+
+and _ _ O
+total _ _ O
+estimated _ _ O
+charges _ _ O
+. _ _ O
+” _ _ O
+
+
+Coalescing _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+quote _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Porsche _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+sales _ _ O
+tax _ _ O
+
+make _ _ O
+
+service _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+
+
+name _ _ O
+
+
+year _ _ O
+
+
+Noun _ _ O
+Out _ _ O
+of _ _ O
+Scope _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ B-Concept
+tax _ _ I-Concept
+
+service _ _ B-Concept
+quote _ _ I-Concept
+
+shop _ _ O
+
+telephone _ _ B-Concept
+number _ _ O
+
+total _ _ O
+estimated _ _ B-Concept
+
+
+name _ _ O
+
+
+year _ _ O
+
+
+Subtypes _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+name _ _ B-Concept
+
+
+Porsche _ _ B-Concept
+
+sales _ _ O
+tax _ _ B-Concept
+
+service _ _ O
+quote _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+charges _ _ O
+
+year _ _ O
+
+
+Whether _ _ O
+these _ _ O
+subtypes _ _ O
+are _ _ O
+specific _ _ O
+objects _ _ O
+
+( _ _ O
+instances _ _ O
+) _ _ O
+or _ _ O
+more _ _ O
+specific _ _ O
+types _ _ O
+of _ _ O
+cars _ _ O
+
+( _ _ O
+subclasses _ _ O
+) _ _ O
+will _ _ O
+depend _ _ O
+on _ _ O
+your _ _ O
+needs _ _ O
+. _ _ O
+In _ _ O
+this _ _ O
+
+scenario _ _ O
+, _ _ O
+there _ _ O
+is _ _ O
+no _ _ O
+need _ _ O
+to _ _ O
+represent _ _ O
+them _ _ O
+as _ _ O
+
+classes _ _ O
+. _ _ O
+
+
+Simple _ _ O
+Properties _ _ O
+
+address _ _ O
+
+foreign _ _ O
+cars _ _ O
+
+BMW _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+car _ _ O
+
+make _ _ O
+service _ _ O
+quote _ _ O
+
+cars _ _ O
+
+manager _ _ O
+
+customer _ _ O
+Mercedes _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ B-Concept
+
+model _ _ O
+
+estimated _ _ B-Concept
+parts _ _ I-Concept
+charges _ _ I-Concept
+
+name _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ O
+tax _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+charges _ _ O
+
+year _ _ O
+
+
+Simple _ _ O
+properties _ _ O
+can _ _ O
+be _ _ O
+composed _ _ O
+of _ _ O
+
+primitives _ _ O
+or _ _ O
+preexisting _ _ O
+object _ _ O
+
+definitions _ _ O
+, _ _ O
+and _ _ O
+fall _ _ O
+under _ _ O
+a _ _ O
+particular _ _ O
+
+object _ _ O
+class _ _ O
+. _ _ O
+
+
+Simple _ _ O
+Properties _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ B-Concept
+
+
+foreign _ _ O
+cars _ _ B-Concept
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ O
+tax _ _ O
+
+service _ _ O
+quote _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+
+
+name _ _ O
+
+
+year _ _ O
+
+
+A _ _ O
+car _ _ O
+had _ _ O
+three _ _ O
+simple _ _ O
+properties _ _ O
+in _ _ O
+our _ _ O
+
+scenario _ _ O
+. _ _ O
+What _ _ O
+types _ _ O
+would _ _ O
+they _ _ O
+be _ _ O
+? _ _ O
+
+
+Simple _ _ O
+Properties _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ B-Concept
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ O
+tax _ _ O
+
+service _ _ O
+quote _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+
+
+name _ _ O
+
+
+year _ _ O
+
+
+A _ _ O
+car _ _ O
+had _ _ O
+three _ _ O
+simple _ _ O
+properties _ _ B-Concept
+in _ _ I-Concept
+our _ _ I-Concept
+
+scenario _ _ O
+. _ _ O
+What _ _ O
+types _ _ O
+would _ _ B-Concept
+they _ _ I-Concept
+be _ _ O
+? _ _ O
+
+
+Simple _ _ O
+Properties _ _ B-Concept
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ O
+tax _ _ O
+
+service _ _ O
+quote _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+
+
+name _ _ B-Concept
+
+
+year _ _ O
+
+
+A _ _ O
+customer _ _ O
+had _ _ O
+three _ _ O
+simple _ _ O
+properties _ _ O
+
+in _ _ O
+our _ _ O
+scenario _ _ O
+. _ _ O
+What _ _ O
+types _ _ O
+would _ _ O
+they _ _ O
+
+be _ _ O
+? _ _ O
+
+
+Simple _ _ O
+Properties _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ O
+’ _ _ O
+s _ _ O
+Automotive _ _ O
+Shop _ _ O
+
+make _ _ O
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+Porsche _ _ O
+
+sales _ _ B-Concept
+tax _ _ I-Concept
+
+service _ _ O
+quote _ _ O
+
+shop _ _ O
+
+telephone _ _ O
+number _ _ O
+
+total _ _ O
+estimated _ _ O
+
+
+name _ _ O
+
+
+year _ _ O
+
+
+A _ _ O
+customer _ _ O
+had _ _ O
+three _ _ O
+simple _ _ O
+properties _ _ O
+
+in _ _ O
+our _ _ O
+scenario _ _ O
+. _ _ O
+What _ _ O
+types _ _ O
+would _ _ O
+they _ _ O
+
+be _ _ O
+? _ _ O
+
+
+Simple _ _ O
+Properties _ _ O
+
+address _ _ O
+
+BMW _ _ O
+
+car _ _ O
+
+cars _ _ O
+
+customer _ _ O
+
+estimated _ _ O
+labor _ _ O
+charges _ _ O
+
+charges _ _ O
+
+estimated _ _ O
+parts _ _ O
+charges _ _ O
+
+
+foreign _ _ O
+cars _ _ O
+
+Joe _ _ B-Concept
+’ _ _ I-Concept
+s _ _ I-Concept
+Automotive _ _ I-Concept
+Shop _ _ O
+
+make _ _ B-Concept
+
+manager _ _ O
+
+Mercedes _ _ O
+
+model _ _ O
+
+
+-DOCSTART- -X- -X- O
+
+Finite _ _ B-Concept
+Automata _ _ I-Concept
+03 _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Nondeterministic _ _ O
+Finite _ _ O
+Automaton _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ B-Concept
+, _ _ I-Concept
+ε _ _ I-Concept
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ B-Concept
+
+
+q4 _ _ O
+
+
+Let _ _ O
+Σ _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ B-Concept
+} _ _ I-Concept
+
+Different _ _ O
+between _ _ O
+Deterministic _ _ O
+Finite _ _ O
+Automaton _ _ O
+( _ _ O
+DFA _ _ O
+) _ _ O
+and _ _ O
+
+Nondeterministic _ _ O
+Finite _ _ O
+Automaton _ _ O
+( _ _ O
+NFA _ _ O
+) _ _ O
+: _ _ O
+
+DFA _ _ O
+always _ _ O
+has _ _ O
+exactly _ _ O
+one _ _ O
+exiting _ _ O
+transition _ _ O
+arrow _ _ O
+for _ _ O
+each _ _ O
+
+symbol _ _ O
+in _ _ O
+the _ _ O
+alphabet _ _ O
+
+NFA _ _ O
+may _ _ O
+have _ _ O
+none _ _ O
+, _ _ O
+one _ _ O
+, _ _ O
+or _ _ O
+many _ _ O
+exiting _ _ O
+arrows _ _ O
+for _ _ O
+each _ _ O
+
+symbol _ _ O
+
+
+DFA _ _ O
+have _ _ O
+no _ _ O
+arrow _ _ O
+with _ _ O
+the _ _ O
+label _ _ O
+ε _ _ O
+
+NFA _ _ O
+may _ _ O
+have _ _ O
+Zero _ _ O
+, _ _ O
+one _ _ O
+, _ _ O
+or _ _ O
+many _ _ O
+arrows _ _ O
+exiting _ _ O
+from _ _ O
+each _ _ O
+
+state _ _ O
+with _ _ O
+the _ _ O
+label _ _ O
+ε _ _ O
+. _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ B-Concept
+
+
+If _ _ O
+you _ _ O
+encounter _ _ O
+a _ _ O
+state _ _ O
+with _ _ O
+multiple _ _ O
+way _ _ O
+to _ _ O
+proceed _ _ O
+for _ _ O
+a _ _ O
+
+regular _ _ O
+input _ _ O
+: _ _ O
+
+The _ _ O
+machine _ _ O
+splits _ _ O
+into _ _ O
+multiple _ _ O
+copies _ _ O
+of _ _ O
+itself _ _ O
+
+The _ _ O
+machines _ _ O
+follow _ _ O
+all _ _ O
+the _ _ O
+possibilities _ _ O
+in _ _ O
+parallel _ _ O
+. _ _ O
+
+Each _ _ O
+copy _ _ O
+of _ _ B-Concept
+the _ _ I-Concept
+machine _ _ B-Concept
+takes _ _ I-Concept
+one _ _ I-Concept
+of _ _ I-Concept
+the _ _ O
+possible _ _ O
+ways _ _ O
+. _ _ O
+
+
+If _ _ O
+you _ _ O
+encounter _ _ O
+a _ _ O
+state _ _ O
+with _ _ O
+an _ _ O
+ε _ _ O
+symbol _ _ O
+as _ _ O
+an _ _ O
+exiting _ _ O
+arrow _ _ O
+: _ _ O
+
+Without _ _ O
+reading _ _ O
+any _ _ O
+input _ _ O
+, _ _ O
+the _ _ O
+machine _ _ O
+splits _ _ O
+into _ _ O
+multiple _ _ O
+
+copies _ _ O
+. _ _ O
+
+Each _ _ O
+follows _ _ O
+each _ _ O
+of _ _ O
+the _ _ O
+exiting _ _ O
+ε-labeled _ _ O
+arrows _ _ O
+, _ _ O
+and _ _ O
+
+One _ _ O
+stays _ _ O
+at _ _ O
+the _ _ O
+current _ _ O
+state _ _ O
+. _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ B-Concept
+of _ _ I-Concept
+the _ _ I-Concept
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+q1 _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ B-Concept
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+q1 _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ B-Concept
+
+
+q1 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ B-Concept
+03 _ _ B-Concept
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+q1 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+1 _ _ B-Concept
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+q1 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+
+q3 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+q1 _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+q1 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+
+q3 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ B-Concept
+
+
+q1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+q1 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ B-Concept
+
+
+q1 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ B-Concept
+
+
+q3 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+1 _ _ B-Concept
+
+
+q1 _ _ B-Concept
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q4 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+Compute _ _ O
+an _ _ O
+NFA _ _ O
+( _ _ O
+Computational _ _ O
+Tree _ _ O
+) _ _ O
+
+Computation _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+on _ _ O
+input _ _ O
+010110 _ _ O
+
+
+q1 _ _ O
+
+
+Symbol _ _ O
+read _ _ O
+
+
+Start _ _ O
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+
+q3 _ _ B-Concept
+
+
+0 _ _ B-Concept
+, _ _ I-Concept
+1 _ _ I-Concept
+
+
+0 _ _ B-Concept
+, _ _ I-Concept
+1 _ _ I-Concept
+
+
+0 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q4 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q4 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+If _ _ O
+there _ _ O
+is _ _ O
+at _ _ O
+least _ _ O
+one _ _ O
+copy _ _ O
+in _ _ O
+an _ _ O
+accept _ _ O
+state _ _ O
+, _ _ O
+
+the _ _ O
+machine _ _ O
+accept _ _ O
+the _ _ O
+input _ _ O
+string _ _ O
+. _ _ O
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+q4 _ _ O
+
+
+Example _ _ O
+
+Let _ _ O
+A _ _ O
+be _ _ O
+the _ _ O
+language _ _ O
+consisting _ _ O
+of _ _ O
+all _ _ O
+strings _ _ O
+over _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+containing _ _ O
+a _ _ O
+1 _ _ O
+in _ _ O
+the _ _ O
+third _ _ O
+position _ _ O
+from _ _ O
+the _ _ O
+end _ _ O
+( _ _ O
+e.g. _ _ O
+, _ _ O
+000100 _ _ O
+is _ _ O
+in _ _ O
+
+A _ _ O
+but _ _ O
+0011 _ _ O
+is _ _ O
+not _ _ O
+in _ _ O
+A _ _ O
+) _ _ O
+. _ _ O
+
+Design _ _ O
+a _ _ O
+DFA _ _ O
+for _ _ O
+this _ _ O
+problem _ _ O
+is _ _ O
+quite _ _ O
+complicate _ _ O
+
+Design _ _ O
+an _ _ O
+NFA _ _ O
+is _ _ O
+easier _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ B-Concept
+
+
+0 _ _ B-Concept
+, _ _ I-Concept
+1 _ _ I-Concept
+
+
+q2 _ _ B-Concept
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+The _ _ O
+transition _ _ O
+from _ _ O
+q1 _ _ O
+to _ _ O
+q2 _ _ O
+is _ _ O
+our _ _ O
+guess _ _ O
+that _ _ O
+this _ _ O
+is _ _ O
+the _ _ O
+1 _ _ O
+in _ _ O
+
+the _ _ O
+third _ _ O
+position _ _ O
+from _ _ O
+the _ _ O
+end _ _ O
+. _ _ O
+
+If _ _ O
+our _ _ O
+guess _ _ O
+is _ _ O
+wrong _ _ O
+: _ _ O
+
+The _ _ O
+input _ _ O
+string _ _ O
+is _ _ O
+shorter _ _ O
+, _ _ O
+it _ _ B-Concept
+will _ _ I-Concept
+end _ _ I-Concept
+at _ _ I-Concept
+reject _ _ O
+state _ _ O
+. _ _ O
+
+The _ _ O
+input _ _ O
+string _ _ O
+is _ _ O
+longer _ _ O
+, _ _ O
+the _ _ O
+machine _ _ O
+will _ _ O
+die _ _ O
+but _ _ O
+other _ _ O
+one _ _ O
+
+remains _ _ B-Concept
+alive _ _ I-Concept
+. _ _ I-Concept
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ B-Concept
+Automata _ _ I-Concept
+03 _ _ O
+
+
+Example _ _ O
+
+An _ _ O
+equivalent _ _ O
+DFA _ _ O
+machine _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+q000 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+q100 _ _ O
+
+
+q010 _ _ O
+
+
+q110 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ B-Concept
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+q001 _ _ O
+
+
+q101 _ _ O
+
+
+1 _ _ O
+
+
+q011 _ _ B-Concept
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+Name _ _ O
+states _ _ O
+according _ _ O
+to _ _ O
+the _ _ O
+last _ _ O
+three _ _ O
+symbols _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ B-Concept
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+q111 _ _ O
+
+
+1 _ _ O
+
+
+Example _ _ O
+
+Suppose _ _ O
+the _ _ O
+alphabet _ _ O
+Σ _ _ O
+is _ _ O
+{ _ _ O
+0 _ _ O
+} _ _ O
+. _ _ O
+Design _ _ O
+a _ _ O
+machine _ _ O
+that _ _ O
+recognizes _ _ O
+
+the _ _ O
+language _ _ O
+A _ _ O
+where _ _ O
+A _ _ O
+is _ _ O
+an _ _ O
+empty _ _ O
+string _ _ O
+or _ _ O
+all _ _ O
+strings _ _ O
+over _ _ O
+Σ _ _ O
+
+that _ _ O
+their _ _ O
+length _ _ O
+is _ _ O
+a _ _ O
+multiple _ _ O
+of _ _ O
+2 _ _ O
+or _ _ O
+3 _ _ O
+. _ _ O
+
+0 _ _ O
+
+
+0 _ _ B-Concept
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Suppose _ _ O
+the _ _ O
+alphabet _ _ O
+Σ _ _ O
+is _ _ O
+{ _ _ O
+0 _ _ O
+} _ _ O
+. _ _ O
+Design _ _ O
+a _ _ O
+machine _ _ O
+that _ _ O
+recognizes _ _ O
+
+the _ _ O
+language _ _ O
+A _ _ O
+where _ _ O
+A _ _ O
+is _ _ O
+an _ _ O
+empty _ _ O
+string _ _ O
+or _ _ O
+all _ _ O
+strings _ _ O
+over _ _ O
+Σ _ _ O
+
+that _ _ O
+their _ _ O
+length _ _ O
+is _ _ O
+a _ _ O
+multiple _ _ O
+of _ _ O
+2 _ _ O
+or _ _ O
+3 _ _ O
+. _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Suppose _ _ O
+the _ _ O
+alphabet _ _ O
+Σ _ _ O
+is _ _ O
+{ _ _ O
+0 _ _ O
+} _ _ O
+. _ _ O
+Design _ _ O
+a _ _ O
+machine _ _ O
+that _ _ O
+recognizes _ _ O
+
+the _ _ O
+language _ _ O
+A _ _ O
+where _ _ O
+A _ _ O
+is _ _ O
+an _ _ O
+empty _ _ O
+string _ _ O
+or _ _ O
+all _ _ O
+strings _ _ O
+over _ _ O
+Σ _ _ O
+
+that _ _ O
+their _ _ O
+length _ _ O
+is _ _ O
+a _ _ O
+multiple _ _ O
+of _ _ O
+2 _ _ O
+or _ _ O
+3 _ _ O
+. _ _ O
+
+0 _ _ O
+
+
+ε _ _ O
+
+
+0 _ _ O
+
+
+ε _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Formal _ _ O
+Definition _ _ O
+of _ _ O
+A _ _ O
+Nondeterministic _ _ O
+Finite _ _ O
+Automaton _ _ O
+
+A _ _ O
+nondeterministic _ _ O
+finite _ _ O
+automaton _ _ O
+is _ _ O
+a _ _ O
+5-tuple _ _ O
+
+( _ _ O
+Q _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+, _ _ O
+q0 _ _ O
+, _ _ O
+F _ _ O
+) _ _ O
+
+1 _ _ O
+
+2 _ _ O
+
+3 _ _ O
+
+
+Q _ _ O
+is _ _ O
+a _ _ O
+finite _ _ O
+set _ _ O
+of _ _ O
+states _ _ O
+
+Σ _ _ O
+is _ _ O
+a _ _ O
+finite _ _ O
+alphabet _ _ O
+
+δ _ _ O
+: _ _ O
+Q _ _ O
+× _ _ O
+Σε _ _ O
+→ _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+is _ _ O
+the _ _ O
+transition _ _ O
+function _ _ O
+, _ _ O
+
+Σε _ _ O
+= _ _ O
+Σ _ _ O
+∪ _ _ O
+{ _ _ O
+ε _ _ O
+} _ _ O
+and _ _ O
+
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+is _ _ O
+the _ _ O
+powerset _ _ O
+of _ _ O
+Q _ _ O
+( _ _ O
+set _ _ O
+of _ _ O
+set _ _ O
+of _ _ O
+states _ _ O
+) _ _ O
+. _ _ O
+
+
+4 _ _ O
+
+5 _ _ O
+
+
+q0 _ _ O
+∈ _ _ O
+Q _ _ O
+is _ _ O
+the _ _ O
+start _ _ O
+state _ _ O
+
+F _ _ O
+⊆ _ _ O
+Q _ _ O
+is _ _ O
+the _ _ O
+set _ _ O
+of _ _ O
+accept _ _ O
+states _ _ O
+. _ _ O
+
+
+Notes _ _ O
+
+In _ _ O
+an _ _ O
+NFA _ _ O
+, _ _ O
+one _ _ O
+input _ _ O
+symbol _ _ O
+can _ _ O
+change _ _ O
+the _ _ O
+state _ _ O
+of _ _ O
+the _ _ O
+
+machine _ _ O
+to _ _ O
+multiple _ _ O
+states _ _ O
+. _ _ O
+
+Split _ _ B-Concept
+to _ _ I-Concept
+multiple _ _ I-Concept
+copies _ _ O
+with _ _ O
+different _ _ O
+current _ _ O
+states _ _ O
+
+Example _ _ O
+: _ _ O
+δ _ _ O
+( _ _ O
+q0 _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ B-Concept
+
+
+Q _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+, _ _ O
+q4 _ _ O
+} _ _ O
+
+Σ _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+and _ _ O
+Σε _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+ε _ _ O
+} _ _ O
+
+δ _ _ O
+is _ _ O
+given _ _ O
+as _ _ O
+
+δ _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+q1 _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+} _ _ O
+
+q2 _ _ O
+{ _ _ O
+q3 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+q3 _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+q4 _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+
+q4 _ _ O
+
+
+ε _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q3 _ _ O
+} _ _ O
+
+∅ _ _ B-Concept
+
+∅ _ _ O
+
+
+We _ _ O
+treat _ _ O
+ε _ _ O
+as _ _ O
+a _ _ O
+regular _ _ O
+input _ _ O
+symbol _ _ B-Concept
+
+If _ _ B-Concept
+there _ _ I-Concept
+is _ _ I-Concept
+no _ _ B-Concept
+ε _ _ I-Concept
+transitions _ _ I-Concept
+, _ _ O
+we _ _ O
+can _ _ O
+ignore _ _ O
+the _ _ O
+ε _ _ O
+column _ _ O
+
+
+q1 _ _ O
+is _ _ O
+the _ _ O
+start _ _ O
+state _ _ O
+
+F _ _ O
+= _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+NFA _ _ O
+and _ _ O
+DFA _ _ O
+
+
+NFA _ _ O
+is _ _ O
+a _ _ O
+slightly _ _ O
+different _ _ O
+computation _ _ O
+model _ _ O
+compared _ _ O
+to _ _ O
+
+DFA _ _ O
+
+NFA _ _ O
+can _ _ O
+split _ _ O
+into _ _ O
+multiple _ _ O
+copies _ _ O
+
+NFA _ _ O
+may _ _ O
+have _ _ O
+ε _ _ O
+transitions _ _ O
+
+
+Is _ _ O
+there _ _ O
+a _ _ O
+language _ _ O
+that _ _ O
+can _ _ O
+be _ _ O
+recognized _ _ O
+by _ _ O
+an _ _ O
+NFA _ _ O
+but _ _ O
+
+can _ _ B-Concept
+not _ _ I-Concept
+be _ _ I-Concept
+recognized _ _ I-Concept
+by _ _ O
+any _ _ O
+DFAs _ _ O
+? _ _ O
+
+In _ _ O
+theory _ _ O
+of _ _ O
+computation _ _ O
+, _ _ O
+we _ _ O
+try _ _ O
+to _ _ O
+see _ _ O
+whether _ _ O
+we _ _ O
+can _ _ O
+
+capture _ _ O
+the _ _ O
+behavior _ _ O
+of _ _ B-Concept
+an _ _ I-Concept
+NFA _ _ I-Concept
+using _ _ I-Concept
+a _ _ O
+DFA _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Simulating _ _ O
+and _ _ O
+NFA _ _ O
+with _ _ O
+a _ _ O
+DFA _ _ O
+
+Simulate _ _ O
+010110 _ _ O
+
+δ _ _ O
+
+
+0 _ _ O
+
+
+ε _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q1 _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+} _ _ O
+∅ _ _ O
+
+{ _ _ O
+q3 _ _ O
+} _ _ O
+
+q2 _ _ O
+{ _ _ O
+q3 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+q3 _ _ O
+∅ _ _ O
+
+∅ _ _ O
+
+q4 _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+
+Start _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+= _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+= _ _ B-Concept
+{ _ _ I-Concept
+q1 _ _ I-Concept
+} _ _ I-Concept
+
+
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+
+
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+∪ _ _ O
+{ _ _ O
+q3 _ _ O
+} _ _ O
+∪ _ _ O
+∅ _ _ O
+
+
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+∪ _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+
+
+= _ _ O
+{ _ _ O
+q1 _ _ B-Concept
+, _ _ I-Concept
+q2 _ _ I-Concept
+, _ _ I-Concept
+q3 _ _ I-Concept
+, _ _ I-Concept
+q4 _ _ I-Concept
+} _ _ I-Concept
+
+
+0 _ _ O
+
+
+q1 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+0 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+q2 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+∪ _ _ O
+∅ _ _ O
+∪ _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+∪ _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+, _ _ O
+q4 _ _ O
+} _ _ O
+
+
+q4 _ _ O
+
+0 _ _ O
+
+
+q1 _ _ O
+
+
+q3 _ _ O
+
+
+q4 _ _ O
+
+
+q4 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+∪ _ _ O
+{ _ _ O
+q3 _ _ O
+} _ _ O
+∪ _ _ O
+∅ _ _ O
+∪ _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+∪ _ _ O
+{ _ _ O
+q4 _ _ O
+} _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q3 _ _ O
+, _ _ O
+q4 _ _ O
+} _ _ O
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Equivalence _ _ O
+of _ _ O
+NFAs _ _ O
+and _ _ O
+DFAs _ _ O
+
+
+Every _ _ O
+nondeterministic _ _ O
+finite _ _ O
+automaton _ _ O
+has _ _ O
+an _ _ O
+equivalent _ _ O
+
+deterministic _ _ O
+finite _ _ O
+automaton _ _ O
+. _ _ O
+
+Let _ _ O
+N _ _ O
+= _ _ O
+( _ _ O
+Q _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+, _ _ O
+q0 _ _ O
+, _ _ O
+F _ _ O
+) _ _ O
+be _ _ O
+the _ _ O
+NFA _ _ O
+recognizing _ _ O
+some _ _ O
+
+language _ _ O
+A _ _ O
+
+We _ _ O
+are _ _ O
+going _ _ O
+to _ _ O
+construct _ _ O
+a _ _ O
+DFA _ _ O
+M _ _ O
+= _ _ O
+( _ _ O
+Q0 _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+
+recognizing _ _ O
+A _ _ O
+
+Let _ _ O
+’ _ _ O
+s _ _ O
+consider _ _ O
+the _ _ O
+case _ _ O
+where _ _ O
+N _ _ O
+has _ _ O
+no _ _ O
+ε _ _ O
+transitions _ _ O
+. _ _ O
+
+1 _ _ O
+
+2 _ _ O
+
+
+Q0 _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+[ _ _ O
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+R _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+= _ _ O
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+
+r∈R _ _ O
+
+
+3 _ _ O
+
+4 _ _ O
+
+
+q00 _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+F _ _ O
+0 _ _ O
+= _ _ O
+{ _ _ O
+R _ _ O
+∈ _ _ O
+Q0 _ _ O
+| _ _ O
+R _ _ O
+contains _ _ O
+an _ _ O
+accept _ _ O
+state _ _ O
+of _ _ O
+N _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Let _ _ O
+Σ _ _ O
+be _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+. _ _ O
+The _ _ O
+following _ _ O
+NFA _ _ O
+N _ _ O
+recognizes _ _ O
+the _ _ O
+
+language _ _ O
+A _ _ O
+where _ _ O
+A _ _ O
+is _ _ O
+a _ _ O
+set _ _ O
+of _ _ O
+strings _ _ O
+that _ _ O
+end _ _ O
+with _ _ O
+a _ _ O
+1 _ _ O
+. _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q0 _ _ O
+
+
+q1 _ _ O
+
+
+N _ _ O
+= _ _ O
+( _ _ O
+Q _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+, _ _ O
+q0 _ _ O
+, _ _ O
+F _ _ O
+) _ _ O
+
+1 _ _ O
+
+2 _ _ O
+
+3 _ _ O
+
+
+Q _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+
+Σ _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+δ _ _ O
+is _ _ O
+given _ _ O
+as _ _ O
+
+q0 _ _ O
+
+q1 _ _ O
+
+
+4 _ _ O
+
+5 _ _ O
+
+
+0 _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+
+1 _ _ O
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+
+q0 _ _ O
+is _ _ O
+the _ _ O
+start _ _ O
+state _ _ O
+
+F _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+
+Construct _ _ O
+a _ _ O
+DFA _ _ O
+M _ _ O
+= _ _ O
+( _ _ O
+Q0 _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+
+Q0 _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+) _ _ O
+
+Q0 _ _ O
+= _ _ O
+{ _ _ O
+∅ _ _ O
+, _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+} _ _ O
+
+We _ _ O
+will _ _ O
+construct _ _ O
+δ _ _ O
+0 _ _ O
+later _ _ O
+
+q00 _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+where _ _ O
+q0 _ _ O
+is _ _ O
+the _ _ O
+start _ _ O
+state _ _ O
+of _ _ O
+the _ _ O
+NFA _ _ O
+
+F _ _ O
+0 _ _ O
+= _ _ O
+{ _ _ O
+R _ _ O
+∈ _ _ O
+Q0 _ _ O
+| _ _ O
+R _ _ O
+contains _ _ O
+an _ _ O
+accept _ _ O
+state _ _ O
+of _ _ O
+N _ _ O
+} _ _ O
+
+F _ _ O
+0 _ _ O
+= _ _ O
+{ _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+} _ _ O
+
+where _ _ O
+F _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+
+Let _ _ O
+’ _ _ O
+s _ _ O
+focus _ _ O
+on _ _ O
+transition _ _ O
+functions _ _ O
+
+The _ _ O
+transition _ _ O
+function _ _ O
+δ _ _ O
+of _ _ O
+the _ _ O
+NFA _ _ O
+is _ _ O
+as _ _ O
+follows _ _ O
+: _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+q0 _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+q1 _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+Recall _ _ O
+that _ _ O
+the _ _ O
+set _ _ O
+of _ _ O
+state _ _ O
+of _ _ O
+the _ _ O
+equivalent _ _ O
+DFA _ _ O
+is _ _ O
+the _ _ O
+power _ _ O
+
+set _ _ O
+of _ _ O
+set _ _ O
+of _ _ O
+state _ _ O
+of _ _ O
+the _ _ O
+NFA _ _ O
+
+δ0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Machine _ _ O
+M _ _ O
+= _ _ O
+( _ _ O
+Q0 _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+equivalent _ _ O
+to _ _ O
+N _ _ O
+can _ _ O
+be _ _ O
+
+defined _ _ O
+as _ _ O
+follows _ _ O
+: _ _ O
+
+Q0 _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+[ _ _ O
+
+= _ _ O
+{ _ _ O
+∅ _ _ O
+, _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+} _ _ O
+, _ _ O
+
+0 _ _ O
+
+δ _ _ O
+( _ _ O
+R _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+= _ _ O
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+
+r∈R _ _ O
+
+0 _ _ B-Concept
+
+
+δ _ _ O
+( _ _ O
+∅ _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+∅ _ _ O
+
+
+r∈∅ _ _ O
+
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+∅ _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+∅ _ _ O
+
+
+r∈∅ _ _ O
+
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+δ _ _ O
+( _ _ O
+q0 _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+δ _ _ O
+( _ _ O
+q0 _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+δ _ _ O
+( _ _ O
+q1 _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+∅ _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+δ _ _ O
+( _ _ O
+q1 _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+∅ _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ B-Concept
+Automata _ _ I-Concept
+03 _ _ O
+
+
+Example _ _ B-Concept
+
+
+Machine _ _ O
+M _ _ O
+( _ _ O
+Continue _ _ O
+) _ _ O
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+Continue _ _ O
+) _ _ O
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ B-Concept
+r _ _ I-Concept
+, _ _ I-Concept
+0 _ _ I-Concept
+) _ _ I-Concept
+= _ _ I-Concept
+δ _ _ I-Concept
+( _ _ I-Concept
+q0 _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+∪ _ _ O
+δ _ _ O
+( _ _ O
+q1 _ _ O
+, _ _ O
+0 _ _ B-Concept
+) _ _ I-Concept
+= _ _ I-Concept
+
+
+r∈ _ _ B-Concept
+{ _ _ I-Concept
+q0 _ _ I-Concept
+, _ _ I-Concept
+q1 _ _ I-Concept
+} _ _ I-Concept
+
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+∪ _ _ O
+∅ _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+0 _ _ O
+) _ _ O
+= _ _ O
+δ _ _ O
+( _ _ O
+q0 _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+∪ _ _ O
+δ _ _ O
+( _ _ O
+q1 _ _ O
+, _ _ O
+1 _ _ O
+) _ _ O
+= _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+∪ _ _ B-Concept
+∅ _ _ I-Concept
+= _ _ I-Concept
+{ _ _ I-Concept
+q0 _ _ I-Concept
+, _ _ I-Concept
+q1 _ _ I-Concept
+} _ _ O
+
+
+Thus _ _ O
+δ _ _ O
+0 _ _ O
+is _ _ O
+given _ _ O
+by _ _ O
+
+δ0 _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+1 _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+The _ _ O
+state _ _ O
+diagram _ _ O
+of _ _ O
+the _ _ O
+machine _ _ O
+M _ _ O
+= _ _ O
+( _ _ O
+Q0 _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+
+equivalent _ _ O
+to _ _ O
+N _ _ O
+( _ _ O
+L _ _ O
+( _ _ O
+M _ _ O
+) _ _ O
+= _ _ O
+L _ _ O
+( _ _ O
+N _ _ O
+) _ _ O
+) _ _ O
+is _ _ O
+shown _ _ O
+below _ _ O
+: _ _ O
+
+0 _ _ O
+
+
+1 _ _ B-Concept
+
+
+1 _ _ O
+
+
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+{ _ _ O
+q0 _ _ O
+, _ _ O
+q1 _ _ O
+} _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+
+∅ _ _ B-Concept
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+Without _ _ B-Concept
+bottom _ _ I-Concept
+part _ _ I-Concept
+, _ _ I-Concept
+it _ _ I-Concept
+is _ _ I-Concept
+the _ _ I-Concept
+same _ _ O
+as _ _ O
+one _ _ O
+of _ _ O
+our _ _ O
+previous _ _ O
+
+example _ _ O
+
+It _ _ O
+is _ _ O
+okay _ _ O
+for _ _ O
+a _ _ O
+DFA _ _ O
+to _ _ O
+have _ _ O
+unreachable _ _ O
+states _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ B-Concept
+Automata _ _ I-Concept
+03 _ _ I-Concept
+
+
+NFA _ _ O
+to _ _ O
+DFA _ _ O
+with _ _ O
+ε _ _ O
+Symbol _ _ O
+
+Let _ _ O
+E _ _ O
+( _ _ O
+R _ _ O
+) _ _ O
+be _ _ O
+the _ _ O
+collection _ _ O
+of _ _ O
+states _ _ O
+that _ _ O
+can _ _ O
+be _ _ O
+reached _ _ O
+from _ _ O
+
+members _ _ O
+of _ _ O
+R _ _ O
+by _ _ O
+going _ _ O
+only _ _ O
+along _ _ O
+ε _ _ O
+arrows _ _ O
+, _ _ O
+including _ _ O
+the _ _ O
+
+members _ _ B-Concept
+of _ _ I-Concept
+R _ _ I-Concept
+themselves _ _ I-Concept
+. _ _ O
+
+E _ _ B-Concept
+( _ _ I-Concept
+R _ _ I-Concept
+) _ _ I-Concept
+= _ _ I-Concept
+{ _ _ I-Concept
+q _ _ I-Concept
+| _ _ I-Concept
+q _ _ I-Concept
+can _ _ I-Concept
+be _ _ I-Concept
+reached _ _ I-Concept
+from _ _ I-Concept
+R _ _ O
+by _ _ O
+travel _ _ O
+along _ _ O
+
+0 _ _ O
+or _ _ B-Concept
+more _ _ I-Concept
+ε _ _ I-Concept
+arrows _ _ I-Concept
+} _ _ O
+
+Note _ _ O
+that _ _ O
+a _ _ O
+state _ _ O
+q _ _ O
+can _ _ O
+be _ _ O
+reached _ _ O
+from _ _ O
+its _ _ O
+own _ _ O
+state _ _ O
+q _ _ O
+by _ _ O
+
+travel _ _ O
+along _ _ O
+no _ _ O
+ε _ _ O
+arrow _ _ O
+( _ _ O
+R _ _ O
+⊆ _ _ O
+E _ _ O
+( _ _ O
+R _ _ O
+) _ _ O
+) _ _ O
+
+Example _ _ O
+: _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+
+
+1 _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+ε _ _ O
+
+
+q2 _ _ O
+
+
+1 _ _ O
+
+
+q3 _ _ O
+
+
+E _ _ O
+( _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+} _ _ O
+
+E _ _ O
+( _ _ O
+{ _ _ O
+q2 _ _ O
+} _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q2 _ _ O
+, _ _ B-Concept
+q3 _ _ I-Concept
+} _ _ I-Concept
+
+E _ _ O
+( _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+} _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q2 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+
+E _ _ O
+( _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+q1 _ _ O
+, _ _ O
+q3 _ _ O
+} _ _ O
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+q4 _ _ O
+
+
+NFA _ _ O
+to _ _ O
+DFA _ _ O
+with _ _ O
+ε _ _ O
+Symbol _ _ O
+
+
+Let _ _ B-Concept
+NFA _ _ I-Concept
+N _ _ I-Concept
+= _ _ I-Concept
+( _ _ I-Concept
+Q _ _ O
+, _ _ O
+Σ _ _ B-Concept
+, _ _ I-Concept
+δ _ _ I-Concept
+, _ _ I-Concept
+q0 _ _ I-Concept
+, _ _ I-Concept
+F _ _ I-Concept
+) _ _ I-Concept
+with _ _ I-Concept
+ε _ _ O
+transitions _ _ O
+that _ _ O
+
+recognizes _ _ B-Concept
+a _ _ I-Concept
+language _ _ I-Concept
+A _ _ B-Concept
+
+We _ _ B-Concept
+can _ _ I-Concept
+construct _ _ I-Concept
+a _ _ O
+DFA _ _ O
+M _ _ B-Concept
+= _ _ I-Concept
+( _ _ I-Concept
+Q0 _ _ I-Concept
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+as _ _ O
+
+1 _ _ O
+
+2 _ _ B-Concept
+
+
+Q0 _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+
+δ _ _ O
+0 _ _ O
+is _ _ O
+given _ _ O
+by _ _ O
+
+δ _ _ O
+0 _ _ O
+( _ _ O
+R _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+) _ _ O
+
+
+r∈R _ _ O
+
+3 _ _ O
+
+
+q00 _ _ O
+= _ _ O
+E _ _ O
+( _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+) _ _ O
+
+If _ _ O
+q0 _ _ O
+has _ _ O
+no _ _ O
+exiting _ _ O
+arrow _ _ O
+for _ _ O
+ε _ _ O
+, _ _ O
+q00 _ _ O
+= _ _ O
+{ _ _ O
+q0 _ _ O
+} _ _ O
+
+
+4 _ _ O
+
+
+F _ _ O
+0 _ _ O
+= _ _ O
+{ _ _ O
+R _ _ O
+∈ _ _ O
+Q0 _ _ O
+| _ _ O
+R _ _ O
+contains _ _ O
+an _ _ O
+accept _ _ O
+state _ _ O
+of _ _ O
+N _ _ O
+} _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Consider _ _ O
+the _ _ O
+following _ _ O
+NFA _ _ O
+machine _ _ O
+: _ _ O
+
+1 _ _ O
+
+b _ _ O
+
+
+a _ _ O
+
+
+ε _ _ O
+
+2 _ _ B-Concept
+
+
+a _ _ O
+
+
+3 _ _ O
+
+a _ _ O
+, _ _ O
+b _ _ O
+
+
+N _ _ O
+= _ _ O
+( _ _ O
+Q _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+, _ _ O
+q0 _ _ O
+, _ _ O
+F _ _ O
+) _ _ O
+
+Q _ _ O
+= _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+Σ _ _ O
+= _ _ O
+{ _ _ O
+a _ _ O
+, _ _ O
+b _ _ B-Concept
+} _ _ I-Concept
+
+δ _ _ O
+is _ _ O
+given _ _ B-Concept
+by _ _ I-Concept
+
+1 _ _ O
+
+2 _ _ O
+
+3 _ _ O
+
+
+a _ _ B-Concept
+
+∅ _ _ B-Concept
+
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+} _ _ O
+
+
+b _ _ B-Concept
+
+{ _ _ B-Concept
+2 _ _ I-Concept
+} _ _ I-Concept
+
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+
+ε _ _ O
+
+{ _ _ B-Concept
+3 _ _ I-Concept
+} _ _ I-Concept
+
+∅ _ _ B-Concept
+
+∅ _ _ O
+
+
+q0 _ _ O
+= _ _ O
+1 _ _ O
+
+F _ _ O
+= _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ B-Concept
+
+
+Machine _ _ O
+M _ _ O
+= _ _ O
+( _ _ O
+Q0 _ _ O
+, _ _ O
+Σ _ _ O
+, _ _ O
+δ _ _ O
+0 _ _ O
+, _ _ O
+q00 _ _ O
+, _ _ O
+F _ _ O
+0 _ _ O
+) _ _ O
+equivalent _ _ O
+to _ _ O
+N _ _ O
+: _ _ O
+
+Q0 _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+Q _ _ O
+) _ _ O
+= _ _ O
+P _ _ O
+( _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+) _ _ O
+
+Q0 _ _ O
+= _ _ O
+{ _ _ O
+∅ _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+2 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+3 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+} _ _ O
+
+Start _ _ O
+state _ _ O
+is _ _ O
+E _ _ O
+( _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+) _ _ O
+= _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+F _ _ O
+0 _ _ O
+is _ _ O
+a _ _ O
+set _ _ O
+of _ _ O
+set _ _ O
+of _ _ O
+states _ _ O
+that _ _ O
+contain _ _ O
+accept _ _ O
+states _ _ O
+of _ _ O
+N _ _ O
+
+( _ _ O
+F _ _ O
+= _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+) _ _ O
+. _ _ O
+
+F _ _ O
+0 _ _ O
+= _ _ O
+{ _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+, _ _ O
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+} _ _ O
+
+[ _ _ B-Concept
+
+δ _ _ B-Concept
+0 _ _ I-Concept
+( _ _ I-Concept
+R _ _ I-Concept
+, _ _ I-Concept
+a _ _ I-Concept
+) _ _ I-Concept
+= _ _ I-Concept
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+) _ _ O
+
+r∈R _ _ B-Concept
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ O
+03 _ _ O
+
+
+Example _ _ O
+
+Let _ _ O
+’ _ _ O
+s _ _ O
+focus _ _ O
+on _ _ O
+transition _ _ O
+functions _ _ O
+
+The _ _ O
+transition _ _ O
+function _ _ O
+δ _ _ O
+of _ _ O
+the _ _ O
+NFA _ _ O
+is _ _ O
+as _ _ O
+follows _ _ O
+: _ _ O
+
+δ _ _ O
+
+a _ _ O
+
+b _ _ O
+
+ε _ _ O
+
+1 _ _ B-Concept
+
+∅ _ _ O
+
+{ _ _ O
+2 _ _ O
+} _ _ O
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+2 _ _ O
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+1 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+3 _ _ O
+
+Recall _ _ O
+that _ _ O
+the _ _ O
+set _ _ O
+of _ _ B-Concept
+state _ _ I-Concept
+of _ _ I-Concept
+the _ _ O
+equivalent _ _ O
+DFA _ _ O
+is _ _ O
+the _ _ O
+power _ _ O
+
+set _ _ O
+of _ _ O
+set _ _ O
+of _ _ B-Concept
+state _ _ I-Concept
+of _ _ I-Concept
+the _ _ I-Concept
+NFA _ _ O
+
+δ0 _ _ O
+
+a _ _ O
+
+b _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+2 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+} _ _ O
+
+{ _ _ O
+2 _ _ O
+} _ _ O
+
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+∅ _ _ O
+
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+2 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+{ _ _ B-Concept
+1 _ _ I-Concept
+, _ _ I-Concept
+2 _ _ I-Concept
+, _ _ I-Concept
+3 _ _ I-Concept
+} _ _ I-Concept
+{ _ _ I-Concept
+1 _ _ I-Concept
+, _ _ I-Concept
+2 _ _ I-Concept
+, _ _ O
+3 _ _ O
+} _ _ O
+{ _ _ O
+2 _ _ O
+, _ _ O
+3 _ _ O
+} _ _ O
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ I-Concept
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Finite _ _ O
+Automata _ _ B-Concept
+03 _ _ I-Concept
+
+
+Machine _ _ O
+M _ _ O
+’ _ _ O
+s _ _ O
+δ _ _ O
+0 _ _ O
+
+0 _ _ O
+
+
+δ _ _ O
+( _ _ O
+∅ _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+) _ _ O
+
+
+0 _ _ O
+
+
+= _ _ B-Concept
+E _ _ I-Concept
+( _ _ I-Concept
+δ _ _ I-Concept
+( _ _ I-Concept
+2 _ _ I-Concept
+, _ _ I-Concept
+b _ _ I-Concept
+) _ _ I-Concept
+) _ _ I-Concept
+
+= _ _ B-Concept
+E _ _ I-Concept
+( _ _ I-Concept
+{ _ _ I-Concept
+3 _ _ I-Concept
+} _ _ I-Concept
+) _ _ I-Concept
+
+
+r∈∅ _ _ O
+
+
+= _ _ B-Concept
+{ _ _ I-Concept
+3 _ _ I-Concept
+} _ _ I-Concept
+
+[ _ _ B-Concept
+
+δ _ _ O
+( _ _ O
+{ _ _ O
+3 _ _ O
+} _ _ O
+, _ _ O
+a _ _ O
+) _ _ B-Concept
+= _ _ I-Concept
+
+
+=∅ _ _ O
+
+0 _ _ B-Concept
+
+
+0 _ _ O
+
+
+[ _ _ O
+
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+b _ _ O
+) _ _ O
+) _ _ O
+
+
+r∈ _ _ B-Concept
+{ _ _ I-Concept
+2 _ _ I-Concept
+} _ _ I-Concept
+
+
+=∅ _ _ O
+
+[ _ _ O
+
+0 _ _ O
+
+δ _ _ O
+( _ _ O
+∅ _ _ O
+, _ _ O
+b _ _ O
+) _ _ O
+= _ _ O
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+b _ _ O
+) _ _ O
+) _ _ O
+
+
+δ _ _ O
+( _ _ O
+{ _ _ O
+1 _ _ O
+} _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+= _ _ O
+
+
+[ _ _ O
+
+
+δ _ _ B-Concept
+( _ _ I-Concept
+{ _ _ I-Concept
+2 _ _ I-Concept
+} _ _ I-Concept
+, _ _ I-Concept
+b _ _ I-Concept
+) _ _ I-Concept
+= _ _ I-Concept
+
+
+r∈∅ _ _ O
+
+
+E _ _ B-Concept
+( _ _ I-Concept
+δ _ _ I-Concept
+( _ _ I-Concept
+r _ _ I-Concept
+, _ _ I-Concept
+a _ _ I-Concept
+) _ _ I-Concept
+) _ _ I-Concept
+
+
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+r _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+) _ _ O
+
+
+r∈ _ _ O
+{ _ _ O
+3 _ _ O
+} _ _ O
+
+
+r∈ _ _ B-Concept
+{ _ _ I-Concept
+1 _ _ I-Concept
+} _ _ O
+
+
+= _ _ B-Concept
+E _ _ I-Concept
+( _ _ I-Concept
+δ _ _ I-Concept
+( _ _ I-Concept
+3 _ _ I-Concept
+, _ _ I-Concept
+a _ _ I-Concept
+) _ _ I-Concept
+) _ _ I-Concept
+
+
+= _ _ O
+E _ _ O
+( _ _ O
+δ _ _ O
+( _ _ O
+1 _ _ O
+, _ _ O
+a _ _ O
+) _ _ O
+) _ _ O
+
+
+-DOCSTART- -X- -X- O
+
+11 _ _ O
+
+
+How _ _ O
+
+Programs _ _ O
+
+
+Are _ _ O
+Managed _ _ O
+
+
+CS/COE _ _ O
+0449 _ _ O
+
+Introduction _ _ O
+to _ _ O
+
+Systems _ _ O
+Software _ _ O
+
+
+Luis _ _ O
+Oliveira _ _ O
+
+( _ _ O
+with _ _ O
+content _ _ O
+borrowed _ _ O
+from _ _ O
+wilkie _ _ O
+and _ _ O
+Vinicius _ _ O
+Petrucci _ _ O
+) _ _ O
+
+
+Where _ _ O
+’ _ _ O
+s _ _ O
+the _ _ O
+Lie _ _ O
+? _ _ O
+
+And _ _ O
+other _ _ O
+operating _ _ O
+systems _ _ O
+questions _ _ O
+. _ _ O
+
+
+2 _ _ B-Concept
+
+
+On _ _ B-Concept
+the _ _ I-Concept
+last _ _ B-Concept
+episode… _ _ I-Concept
+
+• _ _ B-Concept
+Programs _ _ I-Concept
+are _ _ B-Concept
+loaded _ _ O
+into _ _ O
+memory _ _ O
+by _ _ O
+the _ _ O
+
+operating _ _ O
+system _ _ O
+. _ _ O
+
+• _ _ O
+They _ _ O
+have _ _ O
+to _ _ O
+exist _ _ O
+in _ _ O
+memory _ _ O
+before _ _ O
+they _ _ O
+can _ _ O
+
+be _ _ B-Concept
+executed _ _ I-Concept
+. _ _ O
+
+
+Kernel _ _ B-Concept
+Memory _ _ O
+
+stack _ _ O
+
+libz.so _ _ O
+.data _ _ O
+
+
+libz.so _ _ O
+.text _ _ O
+
+
+• _ _ O
+Programs _ _ O
+go _ _ O
+through _ _ O
+a _ _ O
+lot _ _ O
+of _ _ O
+trouble _ _ O
+to _ _ O
+have _ _ O
+
+all _ _ O
+their _ _ O
+data/code _ _ O
+in _ _ O
+memory _ _ O
+. _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+
+.text _ _ O
+
+
+3 _ _ O
+
+
+3 _ _ O
+
+
+The _ _ O
+Lie _ _ O
+
+• _ _ O
+Programs _ _ O
+are _ _ O
+told _ _ O
+that _ _ O
+they _ _ O
+are _ _ O
+
+the _ _ O
+only _ _ O
+things _ _ O
+running… _ _ O
+
+• _ _ O
+The _ _ O
+only _ _ O
+things _ _ O
+in _ _ O
+memory… _ _ O
+
+• _ _ O
+We _ _ B-Concept
+know _ _ I-Concept
+that _ _ I-Concept
+this _ _ O
+is _ _ O
+not _ _ O
+true _ _ O
+! _ _ O
+
+• _ _ O
+Operating _ _ B-Concept
+Systems _ _ O
+are _ _ O
+big _ _ O
+liars _ _ O
+
+crafting _ _ B-Concept
+illusions _ _ I-Concept
+. _ _ O
+
+
+4 _ _ O
+
+
+The _ _ O
+Truth _ _ O
+
+• _ _ O
+In _ _ O
+reality _ _ O
+, _ _ O
+many _ _ O
+programs _ _ O
+can _ _ O
+be _ _ O
+running _ _ O
+at _ _ O
+the _ _ O
+same _ _ O
+time _ _ O
+. _ _ O
+
+• _ _ O
+Each _ _ O
+program _ _ O
+, _ _ O
+when _ _ O
+running _ _ O
+, _ _ O
+is _ _ O
+typically _ _ O
+called _ _ O
+a _ _ O
+process _ _ O
+. _ _ O
+
+▪ _ _ O
+A _ _ O
+multitasking _ _ B-Concept
+OS _ _ I-Concept
+is _ _ O
+( _ _ O
+a _ _ O
+rather _ _ O
+common _ _ O
+) _ _ O
+one _ _ O
+that _ _ O
+supports _ _ O
+concurrent _ _ O
+
+processes _ _ B-Concept
+. _ _ I-Concept
+
+
+• _ _ O
+The _ _ O
+OS _ _ O
+must _ _ O
+handle _ _ O
+switching _ _ O
+from _ _ O
+one _ _ O
+process _ _ O
+to _ _ O
+another _ _ O
+. _ _ O
+
+▪ _ _ O
+Which _ _ O
+processes _ _ O
+get _ _ O
+to _ _ O
+run _ _ O
+? _ _ O
+
+▪ _ _ B-Concept
+What _ _ I-Concept
+if _ _ I-Concept
+you _ _ I-Concept
+have _ _ I-Concept
+more _ _ O
+processes _ _ O
+than _ _ O
+CPUs _ _ O
+? _ _ O
+
+▪ _ _ O
+When _ _ O
+do _ _ O
+you _ _ O
+switch _ _ O
+from _ _ O
+one _ _ O
+to _ _ O
+another _ _ O
+? _ _ O
+
+▪ _ _ O
+What _ _ O
+if _ _ O
+one _ _ O
+is _ _ O
+more _ _ O
+urgent _ _ O
+? _ _ O
+? _ _ O
+
+5 _ _ O
+
+
+My _ _ O
+process _ _ O
+is _ _ O
+one _ _ O
+of _ _ B-Concept
+method… _ _ I-Concept
+
+• _ _ O
+A _ _ O
+process _ _ O
+is _ _ O
+an _ _ O
+abstraction _ _ O
+representing _ _ O
+a _ _ O
+single _ _ O
+instance _ _ O
+of _ _ O
+a _ _ O
+program _ _ O
+. _ _ O
+
+▪ _ _ O
+An _ _ O
+executable _ _ O
+represents _ _ O
+the _ _ O
+initial _ _ O
+state _ _ O
+of _ _ O
+a _ _ O
+program _ _ O
+and _ _ O
+thus _ _ O
+the _ _ O
+process _ _ O
+. _ _ O
+
+▪ _ _ O
+A _ _ O
+program _ _ O
+can _ _ O
+be _ _ O
+instantiated _ _ O
+multiple _ _ O
+times _ _ O
+, _ _ O
+if _ _ O
+needed _ _ O
+. _ _ O
+
+▪ _ _ O
+Each _ _ O
+one _ _ O
+would _ _ O
+be _ _ O
+a _ _ O
+separate _ _ O
+process… _ _ O
+of _ _ O
+the _ _ O
+same _ _ O
+program _ _ O
+. _ _ O
+
+▪ _ _ O
+Note _ _ O
+: _ _ O
+A _ _ O
+processor _ _ O
+is _ _ O
+the _ _ O
+hardware _ _ O
+unit _ _ O
+that _ _ O
+executes _ _ O
+a _ _ O
+process _ _ O
+. _ _ O
+( _ _ O
+makes _ _ O
+sense _ _ O
+! _ _ O
+! _ _ O
+) _ _ O
+
+
+• _ _ B-Concept
+The _ _ I-Concept
+Operating _ _ O
+System _ _ O
+defines _ _ O
+what _ _ O
+a _ _ O
+process _ _ O
+and _ _ O
+its _ _ O
+abstraction _ _ O
+is _ _ O
+. _ _ O
+
+▪ _ _ B-Concept
+There _ _ I-Concept
+is _ _ O
+an _ _ O
+OS _ _ O
+representation _ _ O
+and _ _ O
+metadata _ _ O
+associated _ _ O
+with _ _ O
+a _ _ O
+process _ _ O
+. _ _ O
+
+▪ _ _ B-Concept
+The _ _ I-Concept
+OS _ _ O
+maintains _ _ O
+two _ _ O
+key _ _ O
+lies _ _ O
+: _ _ O
+
+
+• _ _ B-Concept
+The _ _ I-Concept
+control _ _ O
+flow _ _ O
+( _ _ O
+exclusive _ _ O
+use _ _ O
+of _ _ O
+CPU _ _ O
+) _ _ O
+: _ _ O
+as _ _ O
+defined _ _ O
+by _ _ O
+the _ _ O
+code _ _ O
+( _ _ O
+this _ _ O
+lecture _ _ O
+) _ _ O
+
+• _ _ B-Concept
+The _ _ I-Concept
+memory _ _ O
+layout _ _ O
+( _ _ O
+exclusive _ _ O
+use _ _ O
+of _ _ O
+memory _ _ O
+) _ _ O
+: _ _ O
+defined _ _ O
+by _ _ O
+executable/code _ _ O
+( _ _ O
+next _ _ O
+lecture _ _ O
+) _ _ O
+
+
+• _ _ B-Concept
+We _ _ I-Concept
+are _ _ I-Concept
+focusing _ _ O
+on _ _ O
+the _ _ O
+control _ _ O
+flow _ _ O
+, _ _ O
+here _ _ O
+. _ _ O
+
+
+▪ _ _ B-Concept
+How _ _ I-Concept
+do _ _ O
+we _ _ O
+determine _ _ O
+when _ _ O
+a _ _ O
+program _ _ O
+runs _ _ O
+? _ _ O
+When _ _ O
+does _ _ O
+the _ _ O
+lie… _ _ O
+break _ _ O
+down _ _ O
+? _ _ O
+
+6 _ _ B-Concept
+
+
+CPU _ _ O
+Scheduling _ _ O
+
+Eeny _ _ O
+Meeny _ _ O
+Miney _ _ O
+Moe _ _ O
+
+
+7 _ _ B-Concept
+
+
+The _ _ O
+Reality _ _ O
+
+• _ _ O
+Let _ _ O
+us _ _ O
+say _ _ O
+that _ _ O
+we _ _ O
+have _ _ O
+a _ _ O
+machine _ _ O
+with _ _ O
+four _ _ O
+separate _ _ O
+CPUs _ _ O
+. _ _ O
+
+▪ _ _ B-Concept
+You _ _ I-Concept
+could _ _ I-Concept
+run _ _ O
+four _ _ O
+processes _ _ O
+concurrently _ _ O
+( _ _ O
+at _ _ O
+the _ _ O
+same _ _ O
+time _ _ O
+) _ _ O
+relatively _ _ O
+easily _ _ O
+. _ _ O
+
+▪ _ _ O
+What _ _ O
+about _ _ O
+the _ _ O
+fifth _ _ O
+? _ _ O
+
+stack _ _ B-Concept
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+.bss _ _ B-Concept
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ B-Concept
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+CPU _ _ O
+State _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+8 _ _ B-Concept
+
+
+Multiplexing _ _ B-Concept
+the _ _ O
+CPU _ _ O
+
+• _ _ B-Concept
+Truth _ _ I-Concept
+be _ _ O
+told _ _ O
+, _ _ O
+we _ _ O
+often _ _ O
+have _ _ O
+fewer _ _ O
+resources _ _ O
+than _ _ O
+needed _ _ O
+. _ _ O
+
+▪ _ _ B-Concept
+Sharing _ _ I-Concept
+a _ _ O
+common _ _ O
+resource _ _ O
+is _ _ O
+called _ _ O
+multiplexing _ _ O
+. _ _ O
+
+
+• _ _ B-Concept
+Now _ _ I-Concept
+, _ _ O
+consider _ _ O
+a _ _ O
+machine _ _ O
+with _ _ O
+a _ _ O
+single _ _ O
+CPU _ _ O
+. _ _ O
+
+
+Process _ _ B-Concept
+
+
+stack _ _ O
+
+.bss _ _ O
+
+
+• _ _ O
+We _ _ O
+often _ _ B-Concept
+want _ _ I-Concept
+to _ _ O
+run _ _ O
+something _ _ O
+in _ _ O
+the _ _ O
+foreground _ _ B-Concept
+. _ _ I-Concept
+
+
+▪ _ _ O
+Word _ _ O
+processor _ _ O
+, _ _ O
+web _ _ O
+browser _ _ O
+, _ _ O
+minesweeper… _ _ B-Concept
+whatever _ _ I-Concept
+. _ _ I-Concept
+
+
+.data _ _ O
+
+
+• _ _ O
+We _ _ O
+still _ _ O
+want _ _ O
+some _ _ O
+things _ _ O
+running _ _ O
+the _ _ O
+background… _ _ O
+
+
+.text _ _ B-Concept
+
+
+• _ _ B-Concept
+We _ _ I-Concept
+need _ _ O
+to _ _ O
+switch _ _ O
+from _ _ O
+one _ _ O
+process _ _ O
+to _ _ O
+another _ _ O
+at _ _ O
+
+particular _ _ B-Concept
+times _ _ O
+. _ _ O
+
+
+CPU _ _ B-Concept
+State _ _ I-Concept
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+▪ _ _ B-Concept
+Music _ _ I-Concept
+player _ _ O
+, _ _ O
+virus _ _ O
+scanner _ _ O
+, _ _ O
+chat _ _ O
+client _ _ O
+. _ _ O
+
+
+▪ _ _ B-Concept
+Yet… _ _ I-Concept
+we _ _ I-Concept
+have _ _ O
+to _ _ O
+keep _ _ O
+the _ _ O
+illusion _ _ O
+that _ _ O
+the _ _ O
+program _ _ O
+is _ _ O
+
+uninterrupted… _ _ O
+
+
+CPU _ _ B-Concept
+
+
+9 _ _ O
+
+
+Naïve _ _ O
+Campbell _ _ O
+was _ _ O
+great _ _ O
+in _ _ O
+The _ _ O
+Craft _ _ O
+( _ _ O
+1996 _ _ O
+) _ _ O
+
+• _ _ O
+One _ _ O
+way _ _ O
+is _ _ O
+to _ _ O
+run _ _ O
+processes _ _ O
+sequentially _ _ O
+( _ _ O
+the _ _ O
+naïve _ _ O
+solution _ _ O
+) _ _ O
+
+▪ _ _ B-Concept
+When _ _ I-Concept
+one _ _ I-Concept
+process _ _ O
+ends… _ _ O
+run _ _ O
+the _ _ O
+next _ _ O
+. _ _ O
+
+▪ _ _ O
+Yet _ _ O
+that _ _ O
+’ _ _ O
+s _ _ O
+not _ _ O
+very _ _ O
+flexible _ _ O
+. _ _ O
+( _ _ O
+Stop _ _ O
+your _ _ O
+music _ _ O
+player _ _ O
+to _ _ O
+open _ _ O
+a _ _ O
+PDF _ _ O
+) _ _ O
+
+• _ _ O
+Humans _ _ O
+are _ _ O
+in _ _ O
+the _ _ O
+mix _ _ O
+! _ _ O
+We _ _ O
+need _ _ O
+computers _ _ O
+to _ _ O
+be _ _ O
+useful _ _ O
+to _ _ O
+us _ _ O
+. _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ B-Concept
+
+
+stack _ _ B-Concept
+
+
+stack _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ B-Concept
+
+.data _ _ B-Concept
+
+.text _ _ B-Concept
+
+
+.bss _ _ B-Concept
+
+.data _ _ B-Concept
+
+.text _ _ B-Concept
+
+
+Memory _ _ B-Concept
+
+CPU _ _ O
+
+
+10 _ _ B-Concept
+
+
+The _ _ O
+cruel _ _ O
+passage _ _ O
+of _ _ O
+time _ _ O
+
+• _ _ O
+To _ _ O
+multiplex _ _ O
+the _ _ O
+CPU _ _ O
+, _ _ O
+we _ _ O
+quickly _ _ O
+switch _ _ O
+from _ _ O
+process _ _ O
+to _ _ O
+process _ _ O
+. _ _ O
+
+• _ _ O
+The _ _ O
+OS _ _ O
+retains/restores _ _ B-Concept
+the _ _ I-Concept
+state _ _ I-Concept
+( _ _ O
+context _ _ O
+) _ _ O
+of _ _ O
+the _ _ O
+process _ _ O
+. _ _ O
+
+▪ _ _ O
+The _ _ O
+OS _ _ O
+must _ _ O
+store _ _ O
+this _ _ O
+as _ _ O
+a _ _ O
+form _ _ O
+of _ _ O
+process _ _ O
+metadata _ _ O
+in _ _ O
+memory _ _ O
+. _ _ O
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ B-Concept
+
+
+stack _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ B-Concept
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+CPU _ _ O
+State _ _ O
+A _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+B _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+CPU _ _ B-Concept
+State _ _ I-Concept
+C _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+CPU _ _ B-Concept
+State _ _ I-Concept
+D _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+Memory _ _ B-Concept
+
+CPU _ _ O
+
+
+11 _ _ O
+
+
+The _ _ O
+Context _ _ O
+Switch _ _ O
+
+• _ _ O
+When _ _ O
+an _ _ O
+Operating _ _ O
+System _ _ O
+goes _ _ O
+from _ _ O
+
+one _ _ O
+process _ _ O
+to _ _ O
+another _ _ O
+, _ _ O
+it _ _ O
+performs _ _ O
+a _ _ O
+
+context _ _ O
+switch _ _ O
+. _ _ O
+
+• _ _ O
+This _ _ O
+swaps _ _ O
+out _ _ O
+the _ _ O
+CPU _ _ O
+state _ _ O
+of _ _ O
+one _ _ O
+
+process _ _ O
+for _ _ O
+the _ _ O
+next _ _ O
+one _ _ O
+to _ _ O
+run _ _ O
+. _ _ O
+
+1 _ _ O
+. _ _ O
+Store _ _ O
+registers _ _ O
+( _ _ O
+including _ _ O
+stack _ _ O
+
+pointer _ _ O
+and _ _ O
+program _ _ O
+counter _ _ O
+) _ _ O
+to _ _ O
+
+memory _ _ O
+. _ _ O
+
+2 _ _ O
+. _ _ O
+Determine _ _ O
+next _ _ O
+process _ _ O
+to _ _ O
+run _ _ O
+. _ _ O
+
+3 _ _ O
+. _ _ O
+Load _ _ O
+those _ _ O
+registers _ _ O
+from _ _ O
+memory _ _ O
+. _ _ O
+
+Switch _ _ O
+memory _ _ O
+space _ _ O
+. _ _ O
+( _ _ O
+see _ _ O
+next _ _ O
+lecture _ _ O
+: _ _ O
+
+
+stack _ _ B-Concept
+
+
+stack _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ B-Concept
+
+.text _ _ B-Concept
+
+
+Context _ _ B-Concept
+
+
+Context _ _ B-Concept
+
+
+CPU _ _ B-Concept
+State _ _ I-Concept
+A _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ B-Concept
+
+
+CPU _ _ B-Concept
+State _ _ I-Concept
+B _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ O
+
+
+virtual _ _ B-Concept
+memory _ _ I-Concept
+) _ _ O
+
+
+4 _ _ O
+. _ _ O
+Jump _ _ O
+to _ _ O
+old _ _ O
+program _ _ O
+counter _ _ O
+. _ _ O
+Go _ _ O
+! _ _ O
+
+
+CPU _ _ O
+
+
+12 _ _ B-Concept
+
+
+A _ _ O
+deeper _ _ O
+dive _ _ O
+
+• _ _ O
+When _ _ O
+we _ _ O
+pause _ _ O
+a _ _ O
+process… _ _ O
+we _ _ O
+store _ _ O
+the _ _ O
+state _ _ O
+of _ _ O
+registers _ _ O
+( _ _ O
+context _ _ O
+) _ _ O
+
+x86-64 _ _ B-Concept
+( _ _ I-Concept
+gas _ _ I-Concept
+/ _ _ I-Concept
+AT _ _ O
+& _ _ O
+T _ _ O
+syntax _ _ O
+) _ _ O
+– _ _ O
+Process _ _ O
+A _ _ O
+
+
+Context _ _ O
+( _ _ O
+A _ _ O
+) _ _ O
+
+
+x86-64 _ _ B-Concept
+( _ _ I-Concept
+gas _ _ I-Concept
+/ _ _ I-Concept
+AT _ _ I-Concept
+& _ _ I-Concept
+T _ _ I-Concept
+syntax _ _ I-Concept
+) _ _ O
+– _ _ O
+Process _ _ O
+B _ _ O
+
+
+CPU _ _ O
+State _ _ O
+
+
+13 _ _ O
+
+
+When _ _ O
+is _ _ O
+a _ _ O
+good _ _ O
+time _ _ O
+to _ _ O
+call _ _ O
+you _ _ O
+? _ _ O
+
+• _ _ O
+When _ _ O
+should _ _ O
+a _ _ O
+program _ _ O
+pause _ _ O
+and _ _ O
+let _ _ O
+another _ _ O
+one _ _ O
+go _ _ O
+? _ _ O
+
+• _ _ O
+When _ _ O
+programs _ _ O
+voluntarily _ _ O
+pause _ _ O
+, _ _ O
+this _ _ O
+is _ _ O
+called _ _ O
+cooperative _ _ O
+
+scheduling _ _ O
+. _ _ O
+
+▪ _ _ O
+They _ _ O
+may _ _ O
+give _ _ O
+up _ _ O
+control _ _ O
+at _ _ O
+convenient _ _ O
+points _ _ O
+such _ _ O
+as _ _ O
+system _ _ O
+calls _ _ O
+. _ _ O
+
+
+• _ _ O
+We _ _ O
+often _ _ O
+do _ _ O
+not _ _ O
+expect _ _ O
+this _ _ O
+, _ _ O
+so _ _ O
+modern _ _ O
+Operating _ _ O
+Systems _ _ O
+forcibly _ _ O
+
+pause _ _ O
+programs _ _ O
+from _ _ O
+time _ _ O
+to _ _ O
+time _ _ O
+. _ _ O
+Called _ _ O
+preemptive _ _ O
+scheduling _ _ O
+. _ _ O
+
+▪ _ _ O
+Processes _ _ O
+give _ _ O
+up _ _ O
+control _ _ O
+when _ _ O
+hardware _ _ O
+interjects _ _ O
+via _ _ O
+an _ _ O
+“ _ _ O
+interrupt _ _ O
+” _ _ O
+
+▪ _ _ O
+How _ _ O
+does _ _ O
+this _ _ O
+work _ _ O
+? _ _ O
+
+
+14 _ _ O
+
+
+Round _ _ O
+Robin _ _ O
+Scheduling _ _ O
+
+• _ _ O
+One _ _ O
+method _ _ O
+is _ _ O
+to _ _ O
+just _ _ O
+cycle _ _ O
+through _ _ B-Concept
+each _ _ I-Concept
+process _ _ I-Concept
+each _ _ O
+for _ _ O
+equal _ _ O
+time _ _ O
+. _ _ O
+
+▪ _ _ O
+This _ _ B-Concept
+is _ _ I-Concept
+an _ _ I-Concept
+element _ _ O
+of _ _ O
+“ _ _ O
+fairness _ _ O
+” _ _ O
+… _ _ O
+each _ _ O
+gets _ _ O
+equal _ _ O
+stake _ _ O
+. _ _ O
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ B-Concept
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+.bss _ _ B-Concept
+
+.data _ _ O
+
+.text _ _ O
+
+
+CPU _ _ O
+State _ _ O
+A _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+B _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+C _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+D _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+Memory _ _ O
+
+CPU _ _ O
+
+
+15 _ _ O
+
+
+Problems _ _ O
+with _ _ O
+“ _ _ O
+fairness _ _ O
+” _ _ O
+
+• _ _ O
+Let _ _ O
+’ _ _ O
+s _ _ O
+say _ _ O
+I _ _ O
+want _ _ O
+to _ _ O
+play _ _ O
+Doom _ _ O
+Eternal _ _ O
+
+▪ _ _ O
+In _ _ O
+round-robin _ _ O
+, _ _ O
+I _ _ O
+give _ _ O
+the _ _ O
+video _ _ O
+game _ _ O
+25 _ _ O
+% _ _ O
+of _ _ O
+my _ _ O
+resources _ _ O
+. _ _ O
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+stack _ _ O
+
+
+.bss _ _ O
+
+.data _ _ B-Concept
+
+.text _ _ O
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ B-Concept
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ B-Concept
+
+
+.bss _ _ O
+
+.data _ _ O
+
+.text _ _ O
+
+
+CPU _ _ O
+State _ _ O
+A _ _ O
+: _ _ O
+
+Registers _ _ B-Concept
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+B _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+C _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+CPU _ _ O
+State _ _ O
+D _ _ O
+: _ _ O
+
+Registers _ _ O
+
+, _ _ O
+
+
+This _ _ O
+should _ _ O
+get _ _ O
+
+more _ _ O
+priority _ _ O
+. _ _ O
+
+
+CPU _ _ O
+
+
+16 _ _ O
+
+
+I _ _ O
+have _ _ O
+priorities _ _ O
+! _ _ O
+
+• _ _ O
+Round-Robin _ _ O
+schedulers _ _ O
+are _ _ O
+fair _ _ O
+; _ _ O
+then _ _ O
+we _ _ O
+tweak _ _ O
+to _ _ O
+meet _ _ O
+expectations _ _ O
+. _ _ O
+
+▪ _ _ O
+How _ _ O
+might _ _ O
+we _ _ O
+add _ _ O
+a _ _ O
+sense _ _ O
+of _ _ O
+“ _ _ O
+priority _ _ O
+” _ _ O
+to _ _ O
+the _ _ O
+scheduler _ _ O
+? _ _ O
+
+
+• _ _ O
+Let _ _ B-Concept
+’ _ _ I-Concept
+s _ _ I-Concept
+look _ _ I-Concept
+at _ _ I-Concept
+a _ _ O
+visualization _ _ B-Concept
+of _ _ I-Concept
+how _ _ I-Concept
+processes _ _ I-Concept
+are _ _ I-Concept
+currently _ _ O
+scheduled _ _ O
+
+with _ _ B-Concept
+a _ _ I-Concept
+round-robin _ _ I-Concept
+scheme _ _ O
+: _ _ O
+( _ _ O
+Doom _ _ O
+gets _ _ O
+only _ _ O
+25 _ _ O
+% _ _ O
+of _ _ O
+resources _ _ B-Concept
+! _ _ I-Concept
+) _ _ I-Concept
+ _ _ I-Concept
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+A _ _ O
+
+
+A _ _ O
+
+B _ _ O
+
+
+B _ _ O
+
+
+C _ _ O
+
+50ms _ _ O
+/ _ _ O
+200ms _ _ O
+= _ _ O
+25 _ _ O
+% _ _ O
+
+
+17 _ _ O
+
+
+I _ _ O
+have _ _ O
+priorities _ _ O
+! _ _ O
+
+• _ _ O
+Round-Robin _ _ O
+schedulers _ _ O
+are _ _ O
+fair _ _ O
+; _ _ O
+then _ _ O
+we _ _ O
+tweak _ _ O
+to _ _ O
+meet _ _ O
+expectations _ _ O
+. _ _ O
+
+▪ _ _ O
+How _ _ O
+might _ _ O
+we _ _ O
+add _ _ O
+a _ _ O
+sense _ _ O
+of _ _ O
+“ _ _ O
+priority _ _ O
+” _ _ O
+to _ _ O
+the _ _ O
+scheduler _ _ O
+? _ _ O
+
+
+• _ _ O
+We _ _ O
+could _ _ O
+give _ _ O
+some _ _ O
+tasks _ _ O
+a _ _ O
+longer _ _ O
+quantum _ _ O
+. _ _ O
+
+▪ _ _ B-Concept
+A _ _ I-Concept
+quantum _ _ I-Concept
+is _ _ I-Concept
+the _ _ I-Concept
+amount _ _ I-Concept
+of _ _ O
+time _ _ O
+a _ _ O
+task _ _ O
+is _ _ O
+guaranteed _ _ O
+to _ _ O
+run _ _ O
+. _ _ O
+
+100ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ B-Concept
+
+
+50ms _ _ O
+
+
+100ms _ _ O
+
+
+A _ _ O
+
+B _ _ O
+
+
+C _ _ O
+
+100ms _ _ O
+/ _ _ O
+250ms _ _ O
+= _ _ O
+40 _ _ O
+% _ _ O
+
+
+18 _ _ O
+
+
+I _ _ O
+have _ _ O
+priorities _ _ O
+! _ _ O
+
+• _ _ O
+Round-Robin _ _ O
+schedulers _ _ O
+are _ _ O
+fair _ _ O
+; _ _ O
+then _ _ O
+we _ _ O
+tweak _ _ O
+to _ _ O
+meet _ _ O
+expectations _ _ O
+. _ _ O
+
+▪ _ _ O
+How _ _ O
+might _ _ O
+we _ _ O
+add _ _ O
+a _ _ O
+sense _ _ O
+of _ _ O
+“ _ _ O
+priority _ _ O
+” _ _ O
+to _ _ O
+the _ _ O
+scheduler _ _ O
+? _ _ O
+
+
+• _ _ O
+We _ _ O
+could _ _ O
+increase _ _ O
+the _ _ O
+chance _ _ O
+a _ _ O
+specific _ _ O
+task _ _ O
+is _ _ O
+scheduled _ _ O
+. _ _ O
+
+▪ _ _ O
+Round-robin _ _ O
++ _ _ O
+priority _ _ O
+: _ _ O
+two _ _ O
+queues _ _ O
+, _ _ O
+switch _ _ O
+back _ _ O
+and _ _ O
+forth _ _ O
+and _ _ O
+round-robin _ _ O
+
+within _ _ O
+them _ _ O
+. _ _ O
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+50ms _ _ B-Concept
+
+
+50ms _ _ O
+
+
+50ms _ _ O
+
+
+A _ _ O
+
+B _ _ O
+
+
+C _ _ O
+
+100ms _ _ O
+/ _ _ O
+200ms _ _ O
+= _ _ O
+50 _ _ O
+% _ _ O
+
+
+19 _ _ O
+
+
+I _ _ B-Concept
+have _ _ I-Concept
+priorities _ _ I-Concept
+! _ _ O
+
+• _ _ O
+Round-Robin _ _ B-Concept
+schedulers _ _ I-Concept
+are _ _ O
+fair _ _ O
+; _ _ O
+then _ _ O
+we _ _ O
+tweak _ _ O
+to _ _ O
+meet _ _ O
+expectations _ _ O
+. _ _ O
+
+▪ _ _ O
+How _ _ O
+might _ _ O
+we _ _ O
+add _ _ O
+a _ _ O
+sense _ _ O
+of _ _ O
+“ _ _ O
+priority _ _ O
+” _ _ O
+to _ _ O
+the _ _ O
+scheduler _ _ O
+? _ _ O
+
+
+• _ _ O
+We _ _ O
+can _ _ O
+then _ _ O
+always _ _ O
+do _ _ O
+some _ _ O
+sort _ _ O
+of _ _ O
+combination _ _ O
+. _ _ O
+
+▪ _ _ O
+Hybrid _ _ O
+approaches _ _ O
+do _ _ O
+seem _ _ O
+very _ _ O
+alluring _ _ O
+. _ _ O
+Hmm _ _ O
+. _ _ O
+The _ _ O
+power _ _ O
+of _ _ O
+trade-offs _ _ O
+. _ _ O
+
+100ms _ _ B-Concept
+
+
+50ms _ _ B-Concept
+
+
+100ms _ _ O
+
+
+50ms _ _ O
+
+
+A _ _ O
+
+B _ _ O
+
+200ms _ _ O
+/ _ _ O
+300ms _ _ O
+= _ _ O
+67 _ _ O
+% _ _ O
+
+
+20 _ _ O
+
+
+Ideal _ _ O
+circumstances _ _ O
+: _ _ O
+Human _ _ O
+perception _ _ O
+
+• _ _ O
+The _ _ O
+reality _ _ O
+: _ _ O
+( _ _ O
+very _ _ O
+quickly _ _ O
+switching _ _ O
+) _ _ O
+
+100ms _ _ O
+
+
+-DOCSTART- -X- -X- O
+
+Turing _ _ B-Concept
+Machine _ _ I-Concept
+02 _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Turing _ _ O
+Machine _ _ B-Concept
+02 _ _ I-Concept
+
+
+Turing _ _ O
+Machine _ _ O
+Example _ _ O
+
+
+Design _ _ O
+a _ _ O
+Turing _ _ O
+machine _ _ O
+that _ _ O
+recognizes _ _ O
+the _ _ O
+language _ _ O
+B _ _ O
+
+where _ _ O
+
+B _ _ O
+= _ _ O
+{ _ _ O
+w _ _ O
+# _ _ O
+w _ _ O
+| _ _ O
+w _ _ O
+∈ _ _ O
+Σ∗ _ _ O
+} _ _ B-Concept
+
+On _ _ O
+input _ _ O
+string _ _ O
+w _ _ O
+: _ _ O
+
+1 _ _ O
+
+
+2 _ _ O
+
+
+Zig-zag _ _ O
+across _ _ O
+the _ _ O
+tape _ _ O
+to _ _ O
+corresponding _ _ O
+positions _ _ O
+on _ _ O
+either _ _ O
+
+side _ _ O
+of _ _ O
+the _ _ O
+# _ _ O
+symbol _ _ O
+to _ _ O
+check _ _ O
+whether _ _ O
+those _ _ O
+positions _ _ O
+contain _ _ O
+
+the _ _ O
+same _ _ O
+symbol _ _ O
+. _ _ O
+If _ _ O
+they _ _ O
+do _ _ O
+not _ _ O
+, _ _ O
+or _ _ O
+if _ _ O
+no _ _ O
+# _ _ O
+is _ _ O
+found _ _ O
+, _ _ O
+reject _ _ O
+. _ _ O
+
+Cross _ _ B-Concept
+off _ _ I-Concept
+symbols _ _ I-Concept
+as _ _ O
+they _ _ O
+are _ _ O
+checked _ _ O
+to _ _ O
+keep _ _ O
+track _ _ O
+of _ _ O
+which _ _ O
+
+symbols _ _ B-Concept
+correspond _ _ I-Concept
+. _ _ O
+
+When _ _ B-Concept
+all _ _ I-Concept
+symbols _ _ I-Concept
+to _ _ O
+the _ _ O
+left _ _ O
+of _ _ O
+the _ _ O
+# _ _ O
+have _ _ O
+been _ _ O
+crossed _ _ O
+off _ _ O
+, _ _ O
+
+check _ _ O
+for _ _ O
+any _ _ O
+remaining _ _ O
+symbols _ _ O
+to _ _ O
+the _ _ O
+right _ _ O
+of _ _ O
+the _ _ O
+# _ _ O
+. _ _ O
+If _ _ O
+any _ _ O
+
+symbols _ _ O
+remain _ _ O
+, _ _ O
+reject _ _ O
+; _ _ O
+otherwise _ _ O
+, _ _ O
+accept _ _ O
+. _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M1 _ _ O
+
+A _ _ O
+Turing _ _ O
+machine _ _ O
+that _ _ O
+decides _ _ O
+B _ _ O
+= _ _ O
+{ _ _ O
+w _ _ O
+# _ _ O
+w _ _ O
+| _ _ O
+w _ _ O
+∈ _ _ O
+Σ∗ _ _ O
+} _ _ O
+. _ _ O
+
+
+1 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+R _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+
+
+R _ _ O
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+q2 _ _ O
+
+# _ _ O
+→R _ _ O
+
+
+x→R _ _ O
+
+
+x→R _ _ O
+
+
+q8 _ _ O
+
+t _ _ O
+
+
+q4 _ _ O
+
+
+→R _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+qaccept _ _ O
+
+
+q5 _ _ O
+
+
+1 _ _ O
+
+
+L _ _ O
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+x _ _ B-Concept
+, _ _ I-Concept
+
+
+L _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+x _ _ O
+→ _ _ O
+L _ _ O
+
+
+q6 _ _ O
+
+# _ _ O
+→L _ _ O
+
+x→R _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+q7 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+q3 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+L _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+x→R _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M1 _ _ O
+
+Σ _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+# _ _ O
+} _ _ O
+
+Γ _ _ O
+= _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+# _ _ O
+, _ _ O
+x _ _ O
+, _ _ O
+t _ _ O
+} _ _ O
+
+1 _ _ O
+→ _ _ O
+x _ _ O
+, _ _ O
+R _ _ O
+
+Read _ _ O
+1 _ _ O
+, _ _ O
+write _ _ O
+x _ _ O
+, _ _ O
+and _ _ O
+move _ _ O
+the _ _ O
+tape _ _ O
+head _ _ O
+to _ _ O
+the _ _ O
+right _ _ O
+direction _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+A _ _ O
+shorthand _ _ O
+notation _ _ O
+for _ _ O
+# _ _ O
+→ _ _ O
+# _ _ O
+, _ _ O
+R _ _ O
+
+Read _ _ O
+# _ _ O
+, _ _ O
+write _ _ O
+# _ _ O
+, _ _ O
+and _ _ O
+move _ _ O
+the _ _ O
+tape _ _ O
+head _ _ O
+to _ _ O
+the _ _ O
+right _ _ O
+direction _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+L _ _ O
+
+A _ _ O
+shorthand _ _ O
+notation _ _ O
+representing _ _ O
+two _ _ O
+transitions _ _ O
+: _ _ O
+
+0 _ _ O
+→ _ _ O
+L _ _ O
+which _ _ O
+is _ _ O
+0 _ _ O
+→ _ _ O
+0 _ _ O
+, _ _ O
+L _ _ O
+
+1 _ _ O
+→ _ _ O
+L _ _ O
+which _ _ O
+is _ _ O
+1 _ _ O
+→ _ _ O
+1 _ _ O
+, _ _ O
+L _ _ O
+
+
+qreject _ _ O
+is _ _ O
+omitted _ _ O
+
+All _ _ B-Concept
+missing _ _ I-Concept
+exiting _ _ I-Concept
+arrows _ _ O
+go _ _ O
+to _ _ O
+qreject _ _ O
+
+Assume _ _ O
+that _ _ O
+it _ _ O
+moves _ _ O
+the _ _ O
+tape _ _ O
+head _ _ O
+to _ _ O
+the _ _ O
+right _ _ O
+direction _ _ O
+
+before _ _ O
+entering _ _ O
+qreject _ _ O
+without _ _ O
+writing _ _ O
+a _ _ O
+symbol _ _ O
+( _ _ O
+writing _ _ O
+the _ _ O
+
+same _ _ O
+symbol _ _ O
+it _ _ O
+read _ _ O
+) _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M1 _ _ O
+
+Computing _ _ O
+01 _ _ O
+# _ _ O
+01 _ _ O
+
+
+1 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+R _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+R _ _ O
+
+
+0 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+q2 _ _ O
+
+# _ _ O
+→R _ _ O
+
+
+x→R _ _ O
+
+
+x→R _ _ O
+
+
+q8 _ _ O
+
+t _ _ O
+
+
+q4 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+q3 _ _ O
+
+
+→R _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+qaccept _ _ O
+
+
+q5 _ _ O
+
+
+1 _ _ O
+
+
+L _ _ O
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+x _ _ O
+, _ _ O
+
+L _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+x _ _ O
+→ _ _ O
+L _ _ O
+
+
+q6 _ _ O
+
+# _ _ O
+→L _ _ O
+
+x→R _ _ O
+
+
+q7 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+L _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+x→R _ _ O
+
+
+q1 _ _ O
+01 _ _ O
+# _ _ O
+01 _ _ O
+
+xq2 _ _ O
+1 _ _ O
+# _ _ O
+01 _ _ O
+
+x1q2 _ _ O
+# _ _ O
+01 _ _ O
+
+x1 _ _ O
+# _ _ O
+q4 _ _ O
+01 _ _ O
+
+x1q6 _ _ O
+# _ _ O
+x1 _ _ O
+
+xq7 _ _ O
+1 _ _ O
+# _ _ O
+x1 _ _ O
+
+q7 _ _ O
+x1 _ _ O
+# _ _ O
+x1 _ _ O
+
+xq1 _ _ O
+1 _ _ O
+# _ _ O
+x1 _ _ O
+
+xxq3 _ _ O
+# _ _ O
+x1 _ _ O
+
+xx _ _ O
+# _ _ O
+q5 _ _ O
+x1 _ _ O
+
+xx _ _ O
+# _ _ O
+xq5 _ _ O
+1 _ _ O
+
+xx _ _ O
+# _ _ O
+q6 _ _ O
+xx _ _ O
+
+xxq6 _ _ O
+# _ _ O
+xx _ _ O
+
+xq7 _ _ O
+x _ _ O
+# _ _ O
+xx _ _ O
+
+xxq1 _ _ O
+# _ _ O
+xx _ _ O
+
+xx _ _ O
+# _ _ O
+q8 _ _ O
+xx _ _ O
+
+xx _ _ O
+# _ _ O
+xq8 _ _ O
+x _ _ O
+
+xx _ _ O
+# _ _ O
+xxq8 _ _ O
+t _ _ O
+
+xx _ _ O
+# _ _ O
+xxtqaccept _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M1 _ _ O
+
+Computing _ _ O
+01 _ _ O
+# _ _ O
+10 _ _ O
+
+
+1 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+R _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ B-Concept
+, _ _ I-Concept
+1 _ _ I-Concept
+→ _ _ I-Concept
+R _ _ I-Concept
+
+
+R _ _ O
+
+
+0 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+q2 _ _ O
+
+# _ _ O
+→R _ _ O
+
+
+x→R _ _ O
+
+
+x→R _ _ O
+
+
+q8 _ _ O
+
+t _ _ O
+
+
+q4 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+q3 _ _ O
+
+
+→R _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+qaccept _ _ O
+
+
+q5 _ _ O
+
+
+1 _ _ O
+
+
+L _ _ O
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+x _ _ O
+, _ _ O
+
+L _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+x _ _ O
+→ _ _ O
+L _ _ O
+
+
+q6 _ _ O
+
+# _ _ O
+→L _ _ O
+
+x→R _ _ O
+
+
+q7 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+L _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+x→R _ _ O
+
+
+q1 _ _ O
+01 _ _ O
+# _ _ O
+10 _ _ O
+
+xq2 _ _ O
+1 _ _ O
+# _ _ O
+10 _ _ O
+
+x1q2 _ _ O
+# _ _ O
+10 _ _ O
+
+x1 _ _ O
+# _ _ O
+q4 _ _ O
+10 _ _ O
+
+x1 _ _ O
+# _ _ O
+1qreject _ _ O
+0 _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M1 _ _ O
+
+Computing _ _ O
+01 _ _ O
+( _ _ O
+no _ _ O
+# _ _ O
+symbol _ _ O
+) _ _ O
+
+
+1 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+R _ _ O
+
+
+q1 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+R _ _ O
+
+
+0 _ _ O
+
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+q2 _ _ O
+
+# _ _ O
+→R _ _ O
+
+
+x→R _ _ O
+
+
+x→R _ _ O
+
+
+q8 _ _ O
+
+t _ _ O
+
+
+q4 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+R _ _ O
+
+
+q3 _ _ O
+
+
+→R _ _ O
+
+
+# _ _ O
+→R _ _ O
+
+
+qaccept _ _ O
+
+
+q5 _ _ O
+
+
+1 _ _ O
+
+
+L _ _ O
+
+x _ _ O
+, _ _ O
+
+
+→ _ _ O
+
+
+→ _ _ O
+
+
+x _ _ O
+, _ _ O
+
+L _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+x _ _ O
+→ _ _ O
+L _ _ O
+
+
+q6 _ _ O
+
+# _ _ O
+→L _ _ O
+
+x→R _ _ O
+
+
+q7 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+→ _ _ O
+L _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+x→R _ _ O
+
+
+q1 _ _ O
+01 _ _ O
+
+xq2 _ _ O
+1 _ _ O
+
+x1q2 _ _ O
+t _ _ O
+
+x1tqreject _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+Example _ _ O
+
+
+Design _ _ O
+a _ _ O
+Turing _ _ O
+machine _ _ O
+that _ _ O
+recognizes _ _ O
+the _ _ O
+language _ _ O
+A _ _ O
+
+where _ _ O
+
+n _ _ O
+
+A _ _ O
+= _ _ O
+{ _ _ O
+02 _ _ O
+| _ _ O
+n _ _ O
+≥ _ _ O
+0 _ _ O
+} _ _ O
+
+On _ _ O
+input _ _ O
+string _ _ O
+w _ _ O
+: _ _ O
+
+1 _ _ O
+
+2 _ _ O
+
+3 _ _ O
+
+
+4 _ _ O
+
+5 _ _ O
+
+
+Sweep _ _ O
+left _ _ O
+to _ _ O
+right _ _ O
+across _ _ O
+the _ _ B-Concept
+tape _ _ I-Concept
+, _ _ I-Concept
+crossing _ _ I-Concept
+off _ _ O
+every _ _ O
+other _ _ O
+0 _ _ O
+
+If _ _ O
+in _ _ O
+stage _ _ O
+1 _ _ O
+the _ _ O
+tape _ _ O
+contained _ _ O
+a _ _ O
+single _ _ O
+0 _ _ O
+, _ _ O
+accept _ _ O
+
+If _ _ O
+in _ _ O
+stage _ _ O
+1 _ _ O
+the _ _ O
+tape _ _ O
+contained _ _ O
+more _ _ O
+than _ _ O
+a _ _ O
+single _ _ O
+0 _ _ O
+and _ _ O
+the _ _ O
+
+number _ _ O
+of _ _ O
+0s _ _ O
+was _ _ O
+odd _ _ O
+, _ _ O
+reject _ _ O
+
+Return _ _ O
+the _ _ O
+head _ _ O
+to _ _ O
+the _ _ O
+left-hand _ _ O
+end _ _ O
+of _ _ O
+the _ _ O
+tape _ _ O
+
+Go _ _ O
+to _ _ O
+stage _ _ O
+1 _ _ O
+
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+Moving _ _ O
+the _ _ O
+Tape _ _ O
+Head _ _ O
+Back _ _ O
+
+Suppose _ _ O
+we _ _ O
+want _ _ O
+to _ _ O
+move _ _ O
+the _ _ O
+tape _ _ O
+head _ _ O
+back _ _ O
+to _ _ O
+the _ _ O
+left _ _ O
+most _ _ O
+
+end _ _ O
+of _ _ O
+the _ _ O
+tape _ _ B-Concept
+
+Need _ _ O
+a _ _ O
+state _ _ O
+to _ _ O
+do _ _ O
+that _ _ O
+
+0 _ _ O
+, _ _ O
+1 _ _ O
+, _ _ O
+x _ _ O
+→ _ _ O
+L _ _ O
+
+
+This _ _ O
+will _ _ O
+result _ _ O
+in _ _ O
+an _ _ O
+infinite _ _ O
+loop _ _ O
+
+
+Recall _ _ O
+that _ _ O
+if _ _ O
+the _ _ O
+tape _ _ O
+head _ _ O
+is _ _ O
+at _ _ O
+the _ _ O
+left-most _ _ O
+square _ _ O
+and _ _ O
+the _ _ O
+
+transition _ _ O
+is _ _ O
+L _ _ O
+, _ _ O
+it _ _ O
+will _ _ O
+stay _ _ O
+at _ _ O
+the _ _ O
+same _ _ O
+place _ _ O
+
+There _ _ O
+is _ _ O
+no _ _ O
+signal _ _ O
+telling _ _ O
+a _ _ O
+TM _ _ O
+that _ _ O
+its _ _ O
+tape _ _ O
+head _ _ O
+is _ _ O
+currently _ _ O
+
+at _ _ O
+the _ _ O
+left-most _ _ O
+square _ _ O
+
+
+The _ _ O
+trick _ _ O
+is _ _ O
+to _ _ O
+mark _ _ O
+the _ _ O
+left-most _ _ O
+symbol _ _ O
+( _ _ O
+depending _ _ O
+on _ _ O
+Γ _ _ O
+) _ _ O
+
+Turn _ _ O
+0 _ _ O
+or _ _ O
+1 _ _ O
+to _ _ O
+t _ _ O
+
+Turn _ _ O
+0 _ _ O
+to _ _ O
+0̇ _ _ O
+or _ _ O
+x _ _ O
+
+Turn _ _ O
+1 _ _ O
+to _ _ O
+1̇ _ _ O
+or _ _ O
+t _ _ O
+
+Thumrongsak _ _ O
+Kosiyatrakul _ _ O
+tkosiyat _ _ O
+@ _ _ O
+cs.pitt.edu _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+02 _ _ O
+
+
+Turing _ _ O
+Machine _ _ O
+M2 _ _ O
+
+n _ _ O
+
+
+A _ _ O
+Turing _ _ O
+machine _ _ O
+that _ _ O
+decides _ _ O
+A _ _ O
+= _ _ O
+{ _ _ O
+02 _ _ O
+| _ _ O
+n _ _ O
+≥ _ _ O
+0 _ _ O
+} _ _ O
+. _ _ O
+
+0→L _ _ O
+
+x→L _ _ O
+
+
+→ _ _ O
+
+t _ _ O
+
+
+
