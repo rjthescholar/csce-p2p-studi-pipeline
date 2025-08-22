@@ -11,10 +11,9 @@
 
 module purge
 module load gcc/8.2.0
-module load python/anaconda3.10-2022.10
+module load python/ondemand-jupyter-python3.13.5
 
 source activate /ix/dmosse/rek94/envs/pytorch_gpu
-module unload python/anaconda3.10-2022.10
 
 # python3 /ihome/dmosse/rek94/p2p-cce-training-script/main.py --train-path /ihome/dmosse/rek94/data/dataset_bio_uniform/train_set --val-path /ihome/dmosse/rek94/data/dataset_bio_uniform/dev_set --test-path /ihome/dmosse/rek94/data/dataset_bio_uniform/test_set \
 # --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_2 > /ihome/dmosse/rek94/results.txt
