@@ -60,6 +60,8 @@ def eval_concepts(model, deck_loader_list):
     pred_ds = get_predictions(model, deck_loader)
     concepts = extract_concepts(pred_ds)
     gold_concepts = extract_concepts(pred_ds, gold=True)
+    concepts = {item.lower() for item in concepts if len(item) > 0}
+    gold_concepts = {item.lower() for item in gold_concepts if len(item) > 0}
     print(f"predicted concepts for file: {concepts}")
     print(f"actual concepts for file: {gold_concepts}")
     fn_concepts = gold_concepts - concepts
