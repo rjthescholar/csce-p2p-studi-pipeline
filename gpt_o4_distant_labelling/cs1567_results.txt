@@ -1,0 +1,165 @@
+=== METRICS ===
+true_positives   : 23
+false_positives  : 39
+false_negatives  : 47
+precision        : 0.371
+recall           : 0.3286
+f1               : 0.3485
+accuracy         : 0.3286
+
+TRUE POSITIVES (23):
+   • blob
+   • blob detection
+   • blobs
+   • chrominance
+   • cmvision
+   • cmvision.launch
+   • colorgui
+   • colors.txt
+   • contour
+   • gaussian blur
+   • gscam
+   • height
+   • image message
+   • keypoints
+   • luminance
+   • opencv
+   • rgb
+   • roscore
+   • u
+   • v
+   • width
+   • y
+   • yuv
+
+FALSE POSITIVES (39):
+   • /blobs
+   • /v4l/camera/image_raw
+   • [colors]
+   • [thresholds]
+   • background
+   • blue
+   • bounding box
+   • boundingrect()
+   • brightness
+   • center
+   • cmvision/color_cal_on
+   • cmvision/color_file
+   • cmvision/color_radius_pix
+   • cmvision/debug_on
+   • cmvision/mean_shift_on
+   • cmvision/spatial_radius_pix
+   • color
+   • connected regions
+   • cv2
+   • cvbridge
+   • cvtcolor()
+   • drawcontours()
+   • drawkeypoints()
+   • filter
+   • findcontours()
+   • foreground
+   • gaussianblur()
+   • green
+   • image_view
+   • inrange()
+   • mask
+   • pixel
+   • red
+   • roslaunch
+   • rosrun
+   • sensor_msgs/image
+   • simpleblobdetector
+   • simpleblobdetector_create
+   • simpleblobdetector_params
+
+FALSE NEGATIVES (47):
+   • (b,g,r)
+   • (left,right,top,bottom)
+   • (miny:maxy,minu:maxu,minv:maxv)
+   • (r,g,b)
+   • .. /mypackage directory
+   • 0
+   • 0.000000
+   • 1
+   • b
+   • blob.msgs
+   • blobs.msgs
+   • brightgreen
+   • cmvision node
+   • cmvision node,
+   • colorgui node
+   • colors
+   • contours
+   • cvtcolor ()
+   • data
+   • detector
+   • drawcontours ()
+   • drawkeypoints ()
+   • encoding
+   • findcontours ()
+   • g
+   • gaussianblur ()
+   • gscam node
+   • header
+   • hierarchy
+   • image_view node
+   • inrange ()
+   • intensity
+   • is_bigendian
+   • lower_bound
+   • masked image
+   • node name="cmvision"
+   • opencv format
+   • param name="cmvision/color_file
+   • param name="cmvision/debug_on"
+   • r
+   • simpleblobdetector ()
+   • step
+   • thresholds
+   • upper_bound
+   • 𝐵
+   • 𝐺
+   • 𝑅
+=== METRICS ===
+true_positives   : 6
+false_positives  : 8
+false_negatives  : 14
+precision        : 0.4286
+recall           : 0.3
+f1               : 0.3529
+accuracy         : 0.3
+
+TRUE POSITIVES (6):
+   • .launch
+   • cwd="node"
+   • launch directory
+   • launch file
+   • output="screen"
+   • roscore
+
+FALSE POSITIVES (8):
+   • $(find
+   • <include> tag
+   • <launch> tag
+   • <node> tag
+   • gscam
+   • kobuki_node
+   • roslaunch
+   • xml
+
+FALSE NEGATIVES (14):
+   • $ (find kobuki node)
+   • <!-- and -->
+   • <include>
+   • <launch>
+   • <node>
+   • ctrl-c
+   • kobuki node
+   • launch
+   • launch files
+   • p2.launch
+   • pkg
+   • roscd
+   • rospy.init node ()
+   • type

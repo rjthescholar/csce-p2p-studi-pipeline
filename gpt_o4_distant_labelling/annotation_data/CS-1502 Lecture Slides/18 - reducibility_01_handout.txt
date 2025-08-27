@@ -1,0 +1,230 @@
+Reducibility 01
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Reducibility
+Reducibility is a way to convert a problem A into another
+problem B where
+a solution to the problem B can be used to solve problem A
+
+Problems in our discussion are membership problems
+Consider two sets A ⊆ X and B ⊆ Y and a function
+f : X → Y such that
+w ∈ A ↔ f (w) ∈ B
+Recall that
+P ↔ Q ≡ (P → Q) ∧ (Q → P )
+= (¬P ∨ Q) ∧ (¬Q ∨ P )
+= (Q ∨ ¬P ) ∧ (P ∨ ¬Q)
+= (¬Q → ¬P ) ∧ (¬P → ¬Q)
+
+If the above property holds, we have:
+If w ∈ A, f (w) ∈ B
+If f (w) ∈ B, w ∈ A
+
+If f (w) 6∈ B, w 6∈ A
+If w 6∈ A, f (w) 6∈ B
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Reducibility
+Again, consider two sets A ⊆ X and B ⊆ Y and a function
+f : X → Y with the following property:
+w ∈ A ↔ f (w) ∈ B
+Problem #1: Is a specific element in the set A
+Problem #2: Is a specific element in the set B
+Reducibility:
+Given an element w ∈ X , suppose no idea whether w ∈ A
+However, given an element s ∈ Y, we know whether s ∈ B
+Suppose f () exists and the above property hold
+Convert w to f (w) and check whether f (w) ∈ B
+If f (w) ∈ B, w ∈ A
+If f (w) 6∈ B, w 6∈ A
+
+Solution to problem #2 can be used to solve problem #1
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Example
+
+Suppose we have a sport car and we need to know whether it
+can go over 200 MPH
+Unfortunately, we cannot drive our car that fast in Pittsburgh
+Way too many potholes
+
+Luckily, we have a psychic lady who has a very special ability
+She can tell whether an object can explode into multiple pieces
+
+So, let’s put a bomb into our sport car
+Put the trigger at the speedometer at 200 MPH mark
+
+Take the car to the psychic lady:
+If she says that it can explode
+our sport car can go over 200
+MPH
+our sport car cannot go
+If she says that it cannot explode
+over 200 MPH
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Example
+Let’s compare the previous example with the concept of
+reducibility
+Let w be our sport car
+Let X be the set of cars
+The set A ⊆ X can be
+A = {c | c is a sport car that can go over 200 MPH}
+Problem #1: Is our sport car in the set A? (Is w ∈ A?)
+We want to know the answer to this problem
+
+Let Y be the set of objects
+The set B ⊆ Y can be
+B = {x | x is an object that can explode}
+Problem #2: Is an object s can explode? (Is s ∈ B?)
+The psychic lady knows how to answer this problem
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Example
+
+The function f : X → Y converts a car into an object by
+strapping a bomb to the car and wire the trigger into the
+speedometer
+The function f () converts an instance of the problem #1 into
+an instance of the problem #2 such that
+w ∈ A ↔ f (w) ∈ B
+Recall that we put a bomb into our car (w) and wire the
+trigger to speedometer
+We convert w into f (w)
+We convert an instance of the problem #1 into and instance
+of the problem #2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Example
+
+Then we ask the psychic lady whether f (w) ∈ B
+The answer from the psychic lady can be use to answer our
+first problem because of the above property
+If the psychic lady says f (w) ∈ B
+
+w∈A
+
+Our sport car can go over 200 MPH
+
+If the psychic lady says f (w) 6∈ B
+
+w 6∈ A
+
+Our sport car cannot go over 200 MPH
+
+Reducibility
+A is reducible to B if a solution to the problem B can be used to
+solve problem A.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Reducibility
+Suppose B is a language
+What does it mean by the psychic lady know whether an
+object is in B?
+B is decidable
+B is decide by the psychic lady
+
+Suppose A is a language
+What happen if f () exists and the following property hold?
+x ∈ A ↔ f (x) ∈ B
+A is decidable by the following TM
+M = “On input x where x is a string:
+1
+2
+3
+
+Convert x to f (x)
+Run the psychic lady on input f (x)
+If the psychic lady accept f (x), accept. Otherwise, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Reducibility
+If B is decidable and f : Σ∗ → Σ∗ exists such that
+x ∈ A ↔ f (x) ∈ B
+A is decidable.
+Again, let’s apply some boolean algebra:
+P ≡ B is decidable
+Q ≡ f : Σ∗ → Σ∗ exists such that . . .
+R ≡ A is decidable
+
+According to the boolean algebra, we have
+(P ∧ Q) → R ≡ (¬R ∧ Q) → ¬P
+If A is undecidable and f : Σ∗ → Σ∗ exists such that
+x ∈ A ↔ f (x) ∈ B
+B is undecidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Undecidability
+
+How to prove that a language A is undecidable?
+Use the fact that ATM is undecidable
+
+But how?
+Imagine if you can prove that
+If A is decidable, ATM is decidable
+The above statement is in the form of P → Q
+Since P → Q ≡ ¬Q → ¬P , we have
+If ATM is undecidable, A is undecidable
+This allows you to conclude that A is undecidable because
+ATM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+Use ATM
+To show that a language A is undecidable (proof by
+contradiction)
+1
+2
+3
+4
+
+Assume that A is decidable
+Show that if A is decidable, ATM is also decidable
+Since ATM is decidable — contradiction
+Therefore, A is undecidable
+
+But why all the sudden ATM is decidable?
+By assuming that a language A is decidable, it means there
+exists a TM R that decides A
+R is a decider for A
+L(R) = A
+R always halts
+TM R can tell you whether a specific element is in A or not
+If w ∈ A, R accepts w
+If w 6∈ A, R rejects w
+
+This TM R will be our helper to help us decide ATM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 01
+
+

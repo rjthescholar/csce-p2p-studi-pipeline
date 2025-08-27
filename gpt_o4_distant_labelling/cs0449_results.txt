@@ -1,0 +1,183 @@
+=== METRICS ===
+true_positives   : 12
+false_positives  : 33
+false_negatives  : 1
+precision        : 0.2667
+recall           : 0.9231
+f1               : 0.4138
+accuracy         : 0.9231
+
+TRUE POSITIVES (12):
+   • best-fit
+   • buddy allocator
+   • coalesce
+   • coalescing
+   • dynamic memory
+   • first-fit
+   • fragmentation
+   • internal fragmentation
+   • next-fit
+   • page
+   • segmentation fault
+   • virtual memory
+
+FALSE POSITIVES (33):
+   • allocnode
+   • array
+   • arrays
+   • binary tree
+   • brk
+   • buddy allocation
+   • code
+   • defragmentation
+   • depth-first search
+   • doubly linked list
+   • free
+   • free list
+   • garbage collection
+   • head
+   • heap
+   • lifo
+   • linked list
+   • malloc
+   • memory layout
+   • metadata
+   • mmap
+   • node
+   • o(1)
+   • o(n)
+   • pages
+   • pointer
+   • pointers
+   • segments
+   • slab allocator
+   • stack
+   • static data
+   • tail
+   • traversal
+
+FALSE NEGATIVES (1):
+   • reallocating
+=== METRICS ===
+true_positives   : 2
+false_positives  : 16
+false_negatives  : 0
+precision        : 0.1111
+recall           : 1.0
+f1               : 0.2
+accuracy         : 1.0
+
+TRUE POSITIVES (2):
+   • activation frame
+   • c application binary interface
+
+FALSE POSITIVES (16):
+   • abi
+   • alu
+   • at&t syntax
+   • bitwise and
+   • c abi
+   • cmp
+   • control flow
+   • gas
+   • mips
+   • program counter
+   • sign bit
+   • stack
+   • test
+   • x86-64
+   • x86-64 linux c abi
+   • zero flag
+
+FALSE NEGATIVES (0):
+=== METRICS ===
+true_positives   : 14
+false_positives  : 50
+false_negatives  : 13
+precision        : 0.2188
+recall           : 0.5185
+f1               : 0.3077
+accuracy         : 0.5185
+
+TRUE POSITIVES (14):
+   • absolute path
+   • amplitude modulation
+   • cylinder
+   • file descriptor
+   • file system
+   • frequency modulation
+   • index node
+   • latency
+   • persistent memory
+   • platter
+   • sector
+   • seek time
+   • track
+   • volatile memory
+
+FALSE POSITIVES (50):
+   • ..
+   • access control
+   • access time
+   • binary file
+   • close
+   • distributed filesystem
+   • elf
+   • ext
+   • fat
+   • fclose
+   • file format
+   • file metadata
+   • file path
+   • floppy disks
+   • fopen
+   • fread
+   • fseek
+   • ftell
+   • fwrite
+   • hard disk
+   • hfs
+   • inode
+   • lseek
+   • magic number
+   • magnetic flux
+   • modified-fm encoding
+   • named pipe
+   • ntfs
+   • nvram
+   • o_creat
+   • o_rdonly
+   • o_trunc
+   • o_wronly
+   • open
+   • open file table
+   • posix
+   • pronom
+   • ram
+   • read
+   • read head
+   • snapshot
+   • socket
+   • stdio
+   • symbolic link
+   • syscalls
+   • tag
+   • tags
+   • text file
+   • wafl
+   • write
+
+FALSE NEGATIVES (13):
+   • cylinders
+   • directories
+   • directory
+   • disk
+   • file descriptors
+   • file systems
+   • head
+   • path
+   • platters
+   • process
+   • processes
+   • sectors
+   • unix

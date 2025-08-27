@@ -1,0 +1,467 @@
+Reducibility 06
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Reductions
+Recall the concept of reducibility:
+A problem A is reducible to a problem B if the solution to the
+problem B can be used to solve the problem A
+
+To show that a language A is undecidable, we show that ATM
+(or other undecidable language) is reducible to A
+ATM is reducible to HALT TM
+We want to know whether hM, wi ∈ ATM
+Turn hM, wi to hM 0 , w0 i (in our case w0 = ε)
+Check whether hM 0 , w0 i ∈ HALT TM
+hM, wi ∈ ATM ↔ hM 0 , w0 i ∈ HALT TM
+
+ATM is reducible to ETM
+We want to know whether hM, wi ∈ ATM
+Turn hM, wi to hM 0 i
+Check whether hM 0 i ∈ ETM
+hM, wi ∈ ATM ↔ hM 0 i 6∈ ETM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Reductions
+ATM is reducible to REGULAR TM
+We want to know whether hM, wi ∈ ATM
+Turn hM, wi to hM 0 i
+Check whether hM 0 i ∈ REGULAR TM
+hM, wi ∈ ATM ↔ hM 0 i ∈ REGULAR TM
+hM, wi ∈ ATM ↔ hM 0 i 6∈ REGULAR TM
+
+ATM is reducible to EQ TM
+We want to know whether hM, wi ∈ ATM
+Turn hM, wi to hM1 , M2 i
+Check whether hM1 , M2 i ∈ EQ TM
+hM, wi ∈ ATM ↔ hM1 , M2 i ∈ EQ TM
+
+ETM is reducible to EQ TM
+We want to know whether hM i ∈ ETM
+Turn hM i to hM, ME i
+Check whether hM, ME i ∈ EQ TM
+hM i ∈ ETM ↔ hM, ME i ∈ EQ TM
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Reductions via Computation Histories
+
+So for we construct TMs to show that ATM is reducible to
+certain languages
+Another method is Reduction via Computation Histories
+Generally use when the problem to be shown undecidable
+involves testing for the existence of something
+Given a polynomial p, does it has an integral root?
+Given a set of dominoes, does it has a match?
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Definitions
+
+Recall definitions about configuration:
+Suppose the start state of TM M is q0 , the start
+configuration of M on input w is q0 w
+An accepting configuration is a configuration uqaccept v for
+strings u and v
+A rejecting configuration is a configuration uqreject v for
+strings u and v
+A configuration Ci legally go to Cj according to the
+transitions of the TM M
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Reductions via Computation Histories
+Definition 5.5
+Let M be a Turing machine and w an input string. An accepting
+computation history for M on w is a sequence of configurations,
+C1 , C2 , . . . Cl where C1 is the start configuration of M on w, Cl is
+an accepting configuration of M , and each Ci legally follows from
+Ci−1 according to the rules of M . A rejecting computation
+history for M on w is defined similarly, except that Cl is a
+rejecting configuration.
+Note that M must halt on input w. Otherwise, accepting or
+rejection computation history does not exists
+For simplicity, we only consider deterministic Turing machine
+If M halts on w, exactly one computation history exists
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Reductions via Computation Histories
+Again, to show that a language A is undecidable, we show
+that ATM is reducible to A
+Given a TM M and a string w, there is no algorithm to check
+whether hM, wi ∈ ATM because ATM is undecidable
+But we know that
+If M accepts w, hM, wi ∈ ATM
+If M does not accept w, hM, wi 6∈ ATM
+
+Using the concept of computation histories:
+If the accepting computation history of M on input w exists
+hM, wi ∈ ATM
+M accepts w
+If the accepting computation history of M on input w does
+M does not accept w
+hM, wi 6∈ ATM
+not exists
+
+Let’s try to use reduction via computation histories with a
+variation of a TM called Linear Bounded Automaton (LBA)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+Definition 5.6
+A linear bounded automaton is a restricted type of Turing
+machine wherein the tape head isn’t permitted to move off the
+portion of the tape containing the input. If the machine tries to
+move its head off either end of the input, the head stays where it is.
+control
+
+a
+
+b
+
+a
+
+b
+
+a
+
+n
+
+With an input of length n, the amount of memory available is
+linear in n.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+
+Problem: Given an LBA M and a string w, is there an
+algorithm to determine whether M accepts w?
+Formally,
+ALBA = {hM, wi | M is an LBA that accepts w}
+Is ALBA decidable?
+This sounds like ATM
+ATM = {hM, wi | M is a TM that accepts w}
+Even though ATM is undecidable, ALBA is actually decidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+
+Recall a configuration uqv
+uv is the content of the tape
+
+Recall that very TM has an infinite long tape
+Therefore, there are infinite number of distinct strings uv
+But the tape of an LBA is finite
+The length of its tape on input string w is |w|
+The number of states and |Γ| of an LBA are also finite
+Because of these, the set of all distinct configurations that an
+LBA can have on an input string w is finite
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+Consider an LBA with the following specification:
+The number of states is q
+|Γ| = g (number of symbols in its tape alphabets)
+The length of the tape is n
+
+From the above LBA:
+For each square on the tape, there can be one of g symbols
+There are the total of g n unique tape contents
+
+There are n possible positions of the tape head
+For each tape head position, it can be in one of q states
+
+Thus, there are exactly qng n distinct configurations
+Because of this, we can detect when an LBA is entering a
+loop by checking whether sequence of configurations when
+running an LBA and a string w contains a duplicate
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+To detect an infinite loop in an LBA, consider an LBA M
+where its series of configuration while processing w is as
+follows:
+C1 , C2 , C3 , C4 , C5 , C6 , C7 , C8 , C9 , C10 , C11 , . . .
+What if the configuration C3 is the same as C9 ?
+The content of the tape are exactly the same
+The current state of M are the same
+The tape head are at the same location
+
+Thus
+C10 will be the same as C4
+C11 will be the same as C5
+and so on
+
+However, this method requires us to keep track of sequence of
+configurations
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+
+Recall that if we run an LBA on input w for 1 step, we
+already sees two configurations
+The start configuration
+The next configuration that legally goes from the start
+configuration
+
+Thus, if we run an LBA on input w for k steps, we already see
+k + 1 configurations
+Recall that the total number of distinct configurations is qng n ,
+we can simply run the LBA for qng n steps or until it halts
+If it does not halt after qng n steps, we already see qng n + 1
+configurations
+But there are only qng n distinct configurations
+Thus, at least two of them must be the same (loop indefinitely)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+Linear Bounded Automaton
+
+Theorem 5.9
+ALBA = {hM, wi | M is an LBA that accepts string w} is
+decidable.
+Construct a TM L that decides ALBA as follows:
+L = “On input hM, wi, where M is an LBA and w is a string:
+1
+2
+
+Simulate M on input w for qng n steps or until it halts.
+If M has halted, accept if it has accepted and reject if it has
+rejected. if it has not halted, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+
+Now, we just verify that ALBA is decidable
+But what about the problem of determining whether an LBA
+M accepts no strings (L(M ) = ∅)
+Formally,
+ELBA = {hM i | M is an LBA and L(M ) = ∅}
+It turns out that this problem is unsolvable
+In other words, ELBA is undecidable
+Let’s try to prove it using the same method that we used to
+prove that ETM is undecidable to try to prove that ELBA is
+undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+Assume that ELBA . Since ELBA is decidable, there exists a TM R that decides
+ELBA . Construct a TM S (to decide ATM ) as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1 Construct an LBA M 0 as follows:
+M 0 = “On input x:
+Run M on input w.
+If M accepts w, accept; otherwise, reject.”
+2 Run R (a decider for ELBA ) on input hM 0 i.
+3 If R accepts hM 0 i, reject. If R rejects hM 0 i, accept.”
+Next, we need to prove that the TM S above, decides ATM . . .
+1
+
+2
+
+Did you see a problem in the above prove?
+M 0 (constructed by S) must be an LBA
+An LBA has a finite long tape
+To run TM M on input w, the LBA M 0 may need infinite
+long tape
+You cannot construct an LBA that can always run a TM M
+on an input w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+In this case, we need to show that ATM is reducible to ELBA
+using the computation history method
+This method will also give you the same conclusion:
+If ELBA is decidable, ATM is decidable
+
+The idea is to construct an LBA B that accepts exactly one
+string
+The string will be a string representation of the accepting
+computation history for M on w
+Why this work?
+If hM, wi ∈ ATM
+M accepts w
+the accepting
+LBA B accepts
+computation history for M on w exists
+exactly one string
+L(B) 6= ∅
+hBi 6∈ ELBA
+M does not accept w
+the accepting
+If hM, wi 6∈ ATM
+LBA B
+computation history for M on w does not exists
+L(B) = ∅
+hBi ∈ ELBA
+accepts no strings
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+
+But can we construct an LBA that accepts exactly one string
+which is the accepting computation history for M on w
+without requiring an infinite amount of tape?
+Recall that an LBA cannot always runs M on input w because
+of its finite long tape
+So, can an LBA checks whether a given string is the accepting
+computation history for M on w without actually run M on
+input w?
+It turns out, we can
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+An accepting computation history for M on w is a series of
+configurations C1 , C2 , . . . Cl where
+C1 is the start configuration of M on input w
+Cl is an accepting configuration
+Ci yields Ci+1 according to M
+
+We can represents an accepting computation history by a
+single string with the configurations separated from each
+other by the # symbol
+#
+
+#
+C1
+
+#
+C2
+
+#
+C3
+
+#
+
+#
+Cl
+
+For example an accepting computation history of TM M2 in
+Example 3.7 on input 0 can be represented as a single string
+as follows:
+#q1 0#tq2 #ttqaccept #
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+With an input string x to the LBA B, the machine B must
+check the following conditions before accepting x
+1
+2
+3
+4
+
+x is in the form of #C1 #C2 # . . . #Cl # for a number l
+C1 is the start configuration for M on w
+Ci+1 legally follows from Ci
+Cl is an accepting configuration for M
+
+Given the definition of a TM M and a input string w:
+We know the start state of M
+Thus, we know the start configuration
+
+We know the transition function of M
+Thus, we can check whether Ci+1 legally follows from Ci
+
+Accepting configuration is just uqaccept v for strings u and v
+
+This show that there is an algorithm to check whether an
+input string x is an accepting computation history for M on w
+without actually running M on input w
+Therefore, the LBA B can be constructed
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+
+Theorem 5.10
+ELBA = {hM i | M is an LBA and L(M ) = ∅} is undecidable.
+For the sake of contradiction, assume that ELBA is decidable
+There exists a TM R decides ELBA
+Construct a TM S decides ATM as follows:
+S = “On input hM, wi, where M is a TM and w is a string:
+1
+2
+3
+
+Construct LBA B from M and w as described in the proof idea
+Run R on input hBi
+If R rejects hBi, accept; if R accepts hBi, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+ELBA is Undecidable
+Sketch of the proofs:
+If hM, wi ∈ ATM :
+M accepts w
+The accepting computation history for M on w exists
+B accepts exactly one string
+L(B) 6= ∅
+R rejects hBi
+S accepts hM, wi
+
+If hM, wi 6∈ ATM :
+M does not accept w
+The accepting computation history for M on w does not exists
+B accepts no strings
+L(B) = ∅
+R accepts hBi
+S rejects hM, wi
+
+This show that S is a decider for ATM
+In other words, ATM is decidable — contradiction
+Therefore, ELBA is undecidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 06
+
+

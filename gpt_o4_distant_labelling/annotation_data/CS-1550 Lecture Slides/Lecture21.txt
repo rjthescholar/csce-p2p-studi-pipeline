@@ -1,0 +1,358 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Homework 10: due on 4/11
+• Project 3: due on 4/11
+• Lab 4: due on 4/15
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous lecture …
+• How to allocate disk blocks to files and directories?
+• contiguous and linked
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Muddiest Points (Memory)
+
+• Is the reference bit initially set to 0 or 1 after a page is
+loaded into memory following a page fault?
+• Page locking
+• Unclear on how to use valid bit to indicate page fault.
+Is that because valid bit == 0 means the data at this
+address is invalid, so we need to fetch a valid data
+from disk?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Muddiest Points (File System)
+• Not sure what the numbers in the FAT cells
+represent?
+• Is it better to the int next_block at the beginning or
+end of the structure?
+• offset calculation was a little quick, can we review it
+
+• Logical to physical mapping calculation
+• Are block sizes all the same when using linked
+allocation?
+• What allocation method is used most commonly in
+modern OS's?
+CS 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Muddiest Points (Project 3)
+• Would you please explain about project 3?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Problem of the Day
+
+How to allocate disk blocks to files and directories?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+File Allocation Table (FAT)
+• Links on disk are slow
+• Keep linked list in memory
+
+• Advantage: faster
+• Disadvantages
+• Have to copy it to disk at some point
+• Have to keep in-memory and on-disk
+copy consistent
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+4
+-1
+-1
+-2
+-2
+-1
+3
+-1
+-1
+0
+-1
+-1
+-1
+-1
+-1
+-1
+
+B
+
+A
+
+8
+
+FAT Example
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+i-node and FAT
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+Using a block index for allocation
+• Store file block addresses
+in an array
+Name
+grades
+
+index
+4
+
+size
+4802
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+• Array itself is stored in a
+disk block
+• Directory has a pointer to
+this disk block
+• Non-existent blocks
+indicated by -1
+
+• Random access easy
+• Limit on file size?
+
+6
+9
+7
+0
+8
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+Max File Size for Indexed Allocation
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+i-node vs index block
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Unix Fast File System indexing scheme
+protection mode
+
+data
+data
+
+...
+
+owner & group
+timestamps
+
+data
+data
+
+size
+block count
+link count
+
+...
+
+Direct pointers
+
+single indirect
+double indirect
+triple indirect
+inode
+
+...
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+
+data
+data
+
+•
+•
+•
+•
+
+•
+•
+
+data
+data
+
+•
+•
+
+•
+•
+
+data
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+...
+...
+
+14
+
+FFS and Max File Size
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+15
+
+What’s in a directory?
+• Two types of information
+•
+•
+
+File names
+File metadata (size, timestamps, etc.)
+
+• Basic choices for directory information
+•
+
+Store all information in directory
+• Fixed size entries
+• Disk addresses and attributes in directory entry
+
+•
+
+Store names & pointers to index nodes (i-nodes)
+attributes
+games
+mail
+news
+research
+
+attributes
+attributes
+attributes
+attributes
+
+Storing all information
+in the directory
+
+games
+mail
+news
+research
+
+Using pointers to
+index nodes
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+attributes
+attributes
+
+attributes
+
+16
+
+Handling long file names in a directory
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+17
+
+Free Block Tracking
+
+10
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+18
+
+Free Block Tracking Example 1
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+19
+
+Free Block Tracking Example 2
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+20
+
+

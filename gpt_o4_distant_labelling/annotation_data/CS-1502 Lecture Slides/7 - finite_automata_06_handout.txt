@@ -1,0 +1,496 @@
+Finite Automata 06
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Language
+A language is a set of strings
+A set can be empty
+A set can have a finite number of elements
+A set can have an infinite number of elements
+
+Regular or not regular?
+If L is the empty language,
+L is regular since we can express it using the regular
+expression ∅
+
+If L is finite
+L = {s1 , s2 , s3 , . . . , sn }
+for a number n > 0 and si is a string,
+L is regular since we can express it using the regular expression
+s1 ∪ s2 ∪ s3 ∪ · · · ∪ sn
+
+So, a non-regular language must be an infinite language
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Regular Infinite Languages
+But an infinite language can be a regular language:
+{w | w starts with a 1}
+{w | w contains 011 as a substring}
+{w | w ends with 0110}
+
+Technically, there are infinite number of regular languages
+that contains infinite number of strings
+There must be something that can be used to distinguish
+between regular languages and non-regular languages
+By definition, a language is regular if there are some finite
+state machines that recognize it
+Recall that the number of states of a finite state machine must
+be finite
+But a finite state machine can accept an infinite number of
+strings
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Regular Infinite Languages
+What is the special property that makes a finite state machine
+accepts an infinite number of strings?
+A loop in a path to an accept state
+0
+
+1
+
+1
+0
+
+0
+
+0
+1
+
+1
+
+0
+
+Let L(M ) be the language of the above machine M :
+10∗ 1 ⊆ L(M )
+10∗ 1 = {11, 101, 1001, 10001, . . . } ⊆ L(M )
+In other words, 10i 1 ∈ L(M ) for any i ≥ 0
+00(1010)∗ 0 ⊆ L(M )
+00(1010)∗ 0 = {000, 0010100, 00101010100, . . . } ⊆ L(M )
+In other words, 00(1010)i 0 ∈ L(M ) for any i ≥ 0
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Regular Infinite Languages
+Given a DFA M , how to detect that there is a loop in a path
+to an accept state?
+Suppose a DFA M has 5 states and it accepts the string
+w = w1 w2 w3 w4 w5 of length 5
+w1
+
+w2
+
+w3
+
+w4
+
+w5
+
+There are the total of 6 current states but there are only 5
+states
+At least two of them must be the same (Pigeonhole principle)
+
+Suppose the third and the fifth are the same state
+
+w4
+w1
+
+w3
+
+w2
+
+w1 w2 (w3 w4 )i w5 ∈ L(M ) for any i ≥ 0
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+w5
+
+Regular Infinite Languages
+From previous example
+Any strings of length at least 5 that is accepted by M will go
+through a loop
+If we let x = w1 w2 , y = w3 w4 , and z = w5 , we can say that
+xy i z ∈ L(M ) for any i ≥ 0
+
+Given an infinite regular language A, there is a finite state
+machine M that recognizes it
+But we have no idea how many states it has
+Suppose it has p states
+Any string s ∈ A of length at least p will go through a loop
+s must be divided into s = xyz where y 6= ε such that
+xy i z ∈ A for any i ≥ 0
+where y is the string that takes you around a loop
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example
+Consider the following language
+A = {w | w contains 011 as a substring}
+We need at least a 4-states DFA to recognize A
+Let’s find a string s ∈ A of length at least 4
+Let s = 0111
+x = 011, y = 1, z = ε
+xy 0 z = xz = 011 ∈ A
+xy 1 z = xyz = 0111 ∈ A
+xy 2 z = xyyz = 01111 ∈ A
+..
+.
+xy i z ∈ A for i ≥ 0
+
+Let s = 0101011
+x = 0, y = 1, z = 01011 and xy i z ∈ A for i ≥ 0
+xy 0 z = xz = 001011 ∈ A
+xy 1 z = xyz = 0101011 ∈ A
+xy 2 z = xyyz = 01101011 ∈ A
+..
+.
+xy i z ∈ A for i ≥ 0
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Pumping Lemma
+
+The pumping lemma states that all regular languages has a
+special property
+If a language lack this property, it is not a regular language
+Property
+All strings in the language can be pumped if they are at least as
+long as a certain special value, called the pumping length. Each
+such strings contains a section that can be repeated any number of
+times with the resulting string remaining in the language.
+pumped: xy i z for any i ≥ 0
+We can insert the string y in between x and z any number of
+times but the result string is still in the language
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Pumping Lemma
+Pumping Lemma
+If A is a regular language, then there is a number p (the pumping
+length) where if s is any string in A of length at least p, then s
+must be divided into three pieces, s = xyz, satisfying the following
+conditions:
+1
+
+for each i ≥ 0, xy i z ∈ A,
+
+2
+
+|y| > 0, and
+
+3
+
+|xy| ≤ p.
+
+where
+|s| represents the length of the string s
+y i means that i copies of y are concatenated together
+y 0 equals ε but it does not mean that y = ε
+(010)0 = ε but 010 6= ε
+
+xy 0 z = xz, xy 1 z = xyz, xy 2 z = xyyz, xy 3 z = xyyyz, and so
+on
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Proof of the Pumping Lemma
+Let M be a DFA recognizing A and p (the pumping length)
+be the number of states of M .
+Let s be a string of length at least p.
+s = s1 s2 . . . sn where sx ∈ Σ and n ≥ p.
+
+Let r1 , r2 , . . . , rn+1 be the sequence of states of M when
+processing s.
+r1 is the start state of M
+When s1 is processed, the state of M is changed to r2 , and so
+on.
+δ(r1 , s1 ) = r2
+δ(r2 , s2 ) = r3
+..
+.
+δ(ri , si ) = ri+1 for 1 ≤ i ≤ n.
+..
+.
+δ(rn , sn ) = rn+1
+
+Note that there is no restriction that rx and ry cannot be the
+same state.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Proof of the Pumping Lemma
+The sequence r1 , r2 , . . . , rn+1 consists of n + 1 states
+Since n ≥ p, the above sequence has at least p + 1 states.
+
+Since the machine M has only p states, in the first p + 1
+states of the sequence, at least two states rj and rl must be
+the same state.
+Let rj be the first occurrence of the repeated state
+Let rl be the second occurrence of the repeated state in the
+above sequence.
+Note that j < l.
+
+Since rl is in the first p + 1 states of the sequence l ≤ p + 1.
+Let
+x = s1 . . . sj−1
+y = sj . . . sl−1
+z = sl . . . sn
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Proof of the Pumping Lemma
+
+If M accepts s = s1 s2 . . . sn and s = xyz,
+x takes M from r1 to rj ,
+y takes M from rj to rl , and
+z takes M from rl to rn+1
+
+where rn+1 is an accept state.
+Let’s check all conditions of the pumping lemma
+1
+2
+3
+
+Thus M accept xy i z for i ≥ 0.
+Since j < l, |y| > 0.
+Since l ≤ p + 1, |xy| ≤ p.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+How to use the Pumping Lemma
+To check whether a language B is not regular using the
+Pumping Lemma, we use prove by contradiction
+Assume that B is regular
+There exists a machine M with p states that recognizes B
+
+Select a string s ∈ B of length at least p so that the conditions
+1, 2, and 3 of the pumping lemma lead to a contradiction
+
+Notes
+The choice of s must involve p to ensure that s has length at
+least p (e.g., s = 0p 011, s = ap ba2p or s = bp+1 ap b)
+It is possible that some choices of s do not produce
+contradiction. If we do not get a contradiction, we have
+not proved anything yet
+Once you pick an s, nothing tells us what x, y, and z should
+be. We have to show that we must get a contradiction,
+no matter what x, y, and z are, as long as they satisfy
+conditions 1, 2, and 3.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example
+Show that B = {0n 1n | n ≥ 0} is not regular.
+Assume that B is regular. In other words, there exists a
+machine M with p states that recognizes B.
+There are infinite number of strings in B of length at least p
+Just pick one (for now)
+
+Let s = 0p 1p . Note that s ∈ B and |s| = 2p ≥ p.
+The pumping lemma says there are strings x, y, and z such
+that s = xyz satisfying the conditions 1, 2, and 3
+
+Recall that there are multiple ways to divide s into x, y, and z
+such that xyz = s = 0p 1p
+Examples:
+x = ε, y = 0, and z = 0p−1 1p
+xyz = ε00p−1 1p = 0p 1p
+2
+3
+p−5 p
+x = 0 , y = 0 , and z = 0
+1
+xyz = 02 03 0p−5 1p = 0p 1p
+p
+p−2
+x = 0 1, y = 1, and z = 1
+xyz = 0p 111p−2 = 0p 1p
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example: B = {0n 1n | n ≥ 0}
+Since there are multiple ways to divide s, we are going to
+focus on all possible way to divide s into x, y, and z satisfying
+only conditions 2 and 3 first
+We will try to get a contradiction from the first condition
+
+The condition 3 says |xy| ≤ p
+Since s starts with p 0s, to satisfy this condition, x and y must
+be strings that contains only 0s
+If x contains one 1, for s = 0p 1p = xyz, |x| is already p + 1
+|xy| = |x| + |y| = (p + 1) + |y| > p
+If y contains one 1, for s = 0p 1p = xyz, |xy| is already p + 1
+
+Formally, to satisfy conditions 3
+x = 0j for some j ≥ 0
+y = 0k for some k > 0
+k > 0 makes |y| > 0 (satisfying condition 2)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example: B = {0n 1n | n ≥ 0}
+Now we have
+x = 0j for some j ≥ 0 and
+y = 0k for some k > 0
+
+To make xyz = s = 0p 1p , z must be 0p−(j+k) 1p
+xyz = 0j 0k 0p−(j+k) 1p = 0j+k+p−(j+k) 1p = 0p 1p
+Condition 1 says that xy i z ∈ B for any i ≥ 0
+We just need to find an i such that xy i z 6∈ B
+Let i = 0
+xy 0 z = 0j (0k )0 0p−(j+k) 1p
+= 0j 0p−(j+1) 1p
+= 0p−k 1p
+For 0p−k 1p to be in B = {0n 1n | n ≥ 0}
+p − k must be equal to p
+k must be 0 to make p − k = p but k cannot be 0
+Contradiction
+B is not regular
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example: B = {0n 1n | n ≥ 0}
+There are multiple is that can lead to a contradiction
+But i should not be 1 since xy 1 z = xyz = s ∈ B
+
+Let i = 2
+xy 2 z = 0j (0k )2 0p−(j+k) 1p
+= 0j 0k 0k 0p−(j+1) 1p
+= 0p+k 1p
+For 0p+k 1p to be in B
+p + k must be equal to p
+k must be 0 to make p + k = p but k cannot be 0
+Contradiction
+B is not regular
+
+In this example, any i 6= 1 will give you a contradiction
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Example: B = {0n 1n | n ≥ 0}
+There are multiple strings s of length at least p that work for
+this example
+Example: s = 02p 12p
+This this string s, use exact same proof where x = 0j for any
+j ≥ 0, y = 0k for any k > 0, and z = 02p−(j+k) 12p
+p
+
+p
+
+Example: s = 0 2 1 2
+
+This one is a little bit harder since condition 3 does not help
+much
+There are three possibility for the string y
+y contains nothing but 0s (y = 0k for some k > 0)
+contradiction because xy 2 z will have more 0s than 1s
+y contains some 0s and 1s (y = 0k 1m for some k, m > 0)
+p
+contradiction because xy 2 z = 0j 0k 1m 0k 1m 1 2 −m 6∈ B
+k
+y contains nothing but 1s (y = 1 for some k > 0)
+contradiction because xy 2 z will have more 1s than 0s
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Rule of Thumb
+
+Pick a string s in the language of length at least p such that
+it starts with at least p of the same symbol
+0p 1p
+02p 12p
+Condition 3 will help reducing the amount of proofs that you
+have to do
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Some Incorrect Proofs: B = {0n 1n | n ≥ 0}
+Let s = 000111
+s does not have length at least p (p can be any positive
+number)
+
+Let s = 0p 12p
+s 6∈ B, cannot use the Pumping lemma
+
+Let s = 0p 1p and x = 0, y = 0p−1 , z = 1p
+This only show one way of dividing s into x, y, and z such
+that s = xyz
+There are multiple ways
+Need to show them all by using variable (e.g., 0j , 0k , etc)
+
+Let s = 0p 1p and x = 0j , y = 0k , and z = 1p
+xyz = 0j 0k 1p = 0j+k 1p 6= s = 0p 1p
+If you say j + k = p, it is still incorrect
+You only show all possible way such that s = xyz where
+z = 1p
+But z can have some 0s as well
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+Show that B = {0n 1n | n ≥ 0} is not regular
+Assume that B is regular. Since B is regular, the Pumping lemma says that for any
+string s ∈ B of length at least p, s can be divided into s = xyz satisfying the
+following conditions:
+1
+
+xy i z ∈ B for any i ≥ 0
+
+2
+
+|y| > 0
+
+3
+
+|xy| ≤ p
+
+Let s = 0p 1p . Since s starts with p 0s, to satisfy the third condition, x and y are
+strings that contain nothing but 0s. In other words, x = 0j for any j ≥ 0, and y = 0k
+for any k > 0. Note that k must be greater than 0 because |y| = |0k | = k, and the
+condition 2 says that |y| > 0. Since x = 0j and y = 0k , z = 0p−(j+k) 1p . Let i = 0.
+We have
+xy i z = xy 0 z
+= xz
+= 0j 0p−(j+k) 1p
+= 0p−k 1p
+For the string 0p−k 1p to be in B, the number of 0s must be equal to the number of
+1s. In other words, p − k must be equal to p. This requires k to be 0. But since k
+must be greater than 0, xy 0 z 6∈ B — contradiction. Therefore, B is not regular.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 06
+
+

@@ -1,0 +1,545 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #22: Bayes’ Theorem
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+n Bayes’ Theorem
+l What do we compute conditional probabilities with
+incomplete information?
+
+Conditional Probability
+Definition: Let E and F be events with p(F) > 0. The conditional
+probability of E given F, denoted p(E | F), is defined as:
+
+𝑝 𝐸∩𝐹
+𝑝 𝐸 𝐹 =
+𝑝 𝐹
+
+Intuition:
+l Think of the event F as reducing the sample space that can be considered
+l The numerator looks at the likelihood of the outcomes in E that overlap
+those in F
+l The denominator accounts for the reduction in sample size indicated by our
+prior knowledge that F has occurred
+
+Bayes’ Theorem
+Bayes’ Theorem allows us to relate the conditional and marginal
+probabilities of two random events.
+
+?
+In English: Bayes’ Theorem will help us assess the probability
+that an event occurred given only partial evidence.
+Doesn’t our formula for conditional probability do this already?
+
+We can’t always use this
+formula directly…
+
+A Motivating Example
+Suppose that a certain drug test correctly identifies a person who
+use the drug as testing positive 99% of the time, and will correctly
+identify a non-user as testing negative 99% of the time. If a
+company suspects that 0.5% of its employees are users of the
+drug, what is the probability that an employee that tests positive
+for this drug is actually a user?
+
+Question: Can we use our simple
+conditional probability formula?
+𝑝 𝐸𝐹 =
+
+X is a user
+
+!(#∩%)
+!(%)
+
+X tested positive
+
+The 1,000 foot view…
+In situations like those on the last slide, Bayes’ theorem can help!
+Essentially, Bayes’ theorem will allow us to calculate P(E|F)
+assuming that we know (or can derive):
+l 𝑃 𝐸
+l 𝑃 𝐹𝐸
+&
+l 𝑃(𝐹|𝐸)
+
+Probability that X is a user
+Test success rate
+Test false positive rate
+
+Probability that X is a user of the
+drug, given a positive test
+
+Returning to our earlier example:
+l Let E = “Person X is a user of the drug”
+l Let F = “Person X tested positive for the drug”
+
+It sounds like Bayes’ Theorem could help in this case…
+
+New Notation
+To simplify expressions, we will use the notation EC to
+denote the complementary event of E
+That is:
+
+C
+E=E
+
+A Simple Example
+We have two boxes. The first contains two green balls and seven
+red balls. The second contains four green balls and three red
+balls. Bob selects a ball by first choosing a box at random. He
+then selects one of the balls from that box at random. If Bob has
+selected a red ball, what is the probability that he took it from
+the first box?
+
+1
+
+2
+
+Picking the problem apart…
+First, let’s define a few events relevant to this problem:
+l Let E = Bob has chosen a red ball
+l By definition EC = Bob has chosen a green ball
+l Let F = Bob chose his ball from this first box
+l Therefore, FC = Bob chose his ball from the second box
+
+We want to find the probability that Bob chose from the first box,
+given that he picked a red ball. That is, we want p(F|E).
+Goal: Given that p(F|E) = p(F ∩ E)/p(E), use what we know to
+derive p(F ∩ E) and p(E).
+
+What do we know?
+We have two boxes. The first contains two green balls and seven red balls.
+The second contains four green balls and three red balls. Bob selects a ball
+by first choosing a box at random. He then selects one of the balls from that
+box at random. If Bob has selected a red ball, what is the probability that he
+took it from the first box?
+Statement: Bob selects a ball by first choosing a box at random
+l Bob is equally likely to choose the first box, or the second box
+l p(F) = p(FC) = 1/2
+
+Statement: The first contains two green balls and seven red balls
+l The first box has nine balls, seven of which are red
+l p(E|F) = 7/9
+
+Statement: The second contains four green balls and three red balls
+l The second box contains seven balls, three of which are red
+l p(E|FC) = 3/7
+
+Now, for a little algebra…
+The end goal: Compute p(F|E) = p(F ∩ E)/p(E)
+Note that p(E|F) = p(E ∩ F)/p(F)
+l If we multiply by p(F), we get p(E ∩ F) = p(E|F) p(F)
+l Further, we know that p(E|F) = 7/9 and p(F) = 1/2
+l So p(E ∩ F) = 7/9 × 1/2 = 7/18
+
+Recall:
+•p(F) = p(FC) = 1/2
+•p(E|F) = 7/9
+•p(E|FC) = 3/7
+
+Similarly, p(E ∩ FC) = p(E|FC) p(FC) = 3/7 × 1/2 = 3/14
+Observation: E = (E ∩ F) ∪ (E ∩ FC)
+l This means that p(E) = p(E ∩ F) + p(E ∩ FC)
+l
+l
+l
+l
+
+= 7/18 + 3/14
+= 49/126 + 27/126
+= 76/126
+= 38/63
+
+Denouement
+The end goal: Compute p(F|E) = p(F ∩ E)/p(E)
+So, p(F|E) = (7/18) / (38/63) ≈ 0.645
+
+Recall:
+•p(F) = p(FC) = 1/2
+•p(E|F) = 7/9
+•p(E|FC) = 3/7
+•p(E ∩ F) = 7/18
+•p(E) = 38/63
+
+How did we get here?
+1.
+2.
+
+Extract what we could from the problem definition itself
+Rearrange terms to derive p(F ∩ E) and p(E)
+
+3.
+
+Use our trusty definition of conditional probability to do the rest!
+
+The reasoning that we used in the last problem
+essentially derives Bayes’ Theorem for us!
+Bayes’ Theorem: Suppose that E and F are events from some
+sample space S such that p(E) ≠ 0 and p(F) ≠ 0. Then:
+𝑝 𝐸 𝐹 𝑝 𝐹
+𝑝 𝐹 𝐸 =
+𝑃 𝐸 𝐹 𝑝 𝐹 + 𝑝 𝐸 𝐹' 𝑝 𝐹'
+
+Proof:
+l The definition of conditional probability says that
+➣ p(F|E) = p(F ∩ E)/p(E)
+➣ p(E|F) = p(E ∩ F)/p(F)
+
+l This means that
+➣ p(E ∩ F) = p(F|E)p(E)
+➣ p(E ∩ F) = p(E|F)p(F)
+
+l So p(F|E)p(E) = p(E|F)p(F)
+l Therefore, p(F|E) = p(E|F)p(F)/p(E)
+
+Proof (continued)
+Note: To finish, we must prove p(E) = p(E | F)p(F) + p(E | FC)p(FC)
+l Observe that E = E ∩ S
+l
+= E ∩ (F ∪ FC)
+l
+= (E ∩ F) ∪ (E ∩ FC)
+l Note also that (E ∩ F) and (E ∩ FC) are disjoint (i.e., no x can be in both F and FC)
+l This means that p(E) = p(E ∩ F) + p(E ∩ FC)
+l We already have shown that p(E ∩ F) = p(E|F)p(F)
+l Further, since p(E | FC) = p(E ∩ FC)/p(FC), we have that p(E ∩ FC) = p(E|FC)p(FC)
+l So p(E) = p(E ∩ F) + p(E ∩ FC) = p(E|F)p(F) + p(E|FC)p(FC)
+
+Putting everything together, we get:
+𝑝 𝐸 𝐹 𝑝 𝐹
+𝑝 𝐹 𝐸 =
+𝑃 𝐸 𝐹 𝑝 𝐹 + 𝑝 𝐸 𝐹' 𝑝 𝐹'
+❏
+
+And why is this useful?
+In a nutshell, Bayes’ Theorem is useful if you want to find p(F|E),
+but you don’t know p(E ∩ F) or p(E).
+
+Here’s a general solution tactic
+Step 1: Identify the independent events that are being
+investigated. For example:
+l F = Bob chooses the first box, FC = Bob chooses the second box
+l E = Bob chooses a red ball, EC = Bob chooses a green ball
+
+Step 2: Record the probabilities identified in the problem
+statement. For example:
+l p(F) = p(FC) = 1/2
+l p(E|F) = 7/9
+l p(E|FC) = 3/7
+
+Step 3: Plug into Bayes’ formula and solve
+
+Example: Pants and Skirts
+Suppose there is a co-ed school having 60% boys and 40% girls as
+students. The girl students wear pants or skirts in equal numbers;
+the boys all wear pants. An observer sees a (random) student
+from a distance; all they can see is that this student is wearing
+pants. What is the probability this student is a girl?
+Step 1: Set up events
+l
+l
+l
+l
+
+E = X is wearing pants
+EC = X is wearing a skirt
+F = X is a girl
+FC = X is a boy
+
+Step 2: Extract probabilities from problem definition
+l
+l
+l
+l
+
+p(F) = 0.4
+p(FC) = 0.6
+p(E|F) = p(EC|F) = 0.5
+p(E|FC) = 1
+
+Pants and Skirts (continued)
+𝑝 𝐹 𝐸 =
+
+𝑝 𝐸 𝐹 𝑝 𝐹
+𝑃 𝐸 𝐹 𝑝 𝐹 + 𝑝 𝐸 𝐹! 𝑝 𝐹!
+
+Step 3: Plug in to Bayes’ Theorem
+
+Recall:
+• p(F) = 0.4
+• p(FC) = 0.6
+• p(E|F) = p(EC|F) = 0.5
+• p(E|FC) = 1
+
+l p(F|E) = (0.5 × 0.4)/(0.5 × 0.4 + 1 × 0.6)
+l
+= 0.2/0.8
+l
+= 1/4
+
+Conclusion: There is a 25% chance that the person seen was a
+girl, given that they were wearing pants.
+
+Drug screening, revisited
+Suppose that a certain drug test correctly identifies a person who
+uses the drug as testing positive 99% of the time, and will
+correctly identify a non-user as testing negative 99% of the time.
+If a company suspects that 0.5% of its employees are users of the
+drug, what is the probability that an employee that tests positive
+for this drug is actually a user?
+Step 1: Set up events
+l
+l
+l
+l
+
+F = X is a user
+FC = X is not a user
+E = X tests positive for the drug
+EC = X tests negative for the drug
+
+Step 2: Extract probabilities from problem definition
+l p(F) = 0.005
+l p(FC) = 0.995
+l p(E|F) = 0.99
+l p(E|FC) = 0.01
+
+Drug screening (continued)
+𝑝 𝐹 𝐸 =
+
+𝑝 𝐸 𝐹 𝑝 𝐹
+𝑃 𝐸 𝐹 𝑝 𝐹 + 𝑝 𝐸 𝐹! 𝑝 𝐹!
+
+Step 3: Plug in to Bayes’ Theorem
+
+Recall:
+• p(F) = 0.005
+• p(FC) = 0.995
+• p(E|F) = 0.99
+• p(E|FC) = 0.01
+
+l p(F|E) = (0.99 × 0.005)/(0.99 × 0.005 + 0.01 × 0.995)
+l
+= 0.3322
+
+Conclusion: If an employee tests positive for the drug, there is
+only a 33% chance that they are actually a user!
+
+In-class exercises
+Suppose that 1 person in 100,000 has a particular rare disease. A
+diagnostic test is correct 99% of the time when given to someone
+with the disease, and is correct 99.5% of the time when given to
+someone without the disease.
+Problem 1: Calculate the probability that someone who tests
+positive for the disease actually has it.
+Problem 2: Calculate the probability that someone who tests
+negative for the disease does not have the disease.
+
+Application: Spam filtering
+Definition: Spam is unsolicited bulk email
+I didn’t ask for it, I probably
+don’t want it
+
+Sent to lots of people…
+
+In recent years, spam has become increasingly
+problematic. For example, in 2015, spam accounted
+for ~50% of all email messages sent.
+To combat this problem, people have developed spam
+filters based on Bayes’ theorem!
+
+How does a Bayesian spam filter work?
+Essentially, these filters determine the probability that a message
+is spam, given that it contains certain keywords.
+𝑝 𝐸 𝐹 𝑝 𝐹
+𝑝 𝐹 𝐸 =
+𝑃 𝐸 𝐹 𝑝 𝐹 + 𝑝 𝐸 𝐹' 𝑝 𝐹'
+Message is spam
+
+Message contains
+questionable keyword
+
+In the above equation:
+l p(E|F) = Probability that our keyword occurs in spam messages
+l p(E|FC) = Probability that our keyword occurs in legitimate messages
+l p(F) = Probability that an arbitrary message is spam
+l p(FC) = Probability that an arbitrary message is legitimate
+
+Question: How do we derive these parameters?
+
+We can learn these parameters by examining
+historical email traces
+Imagine that we have a corpus of email messages…
+We can ask a few intelligent questions to learn the parameters of our
+Bayesian filter:
+l How many of these messages do we consider spam?
+l In the spam messages, how often does our keyword appear?
+l In the good messages, how often does our keyword appear?
+
+p(F)
+p(E|F)
+p(E|FC)
+
+Aside: This is what happens when you click the “mark as spam” button
+in your email client!
+
+Given this information, we can apply Bayes’ theorem!
+
+Filtering spam using a single keyword
+Suppose that the keyword “Rolex” occurs in 250 of 2000 known spam
+messages, and in 5 of 1000 known good messages. Estimate the
+probability that an incoming message containing the word “Rolex” is
+spam, assuming that it is equally likely that an incoming message is
+spam or not spam. If our threshold for classifying a message as spam
+is 0.9, will we reject this message?
+Step 1: Define events
+l F = message is spam
+l FC = message is good
+l E = message contains the keyword “Rolex”
+l EC = message does not contain the keyword “Rolex”
+
+Step 2: Gather probabilities from the problem statement
+l p(F) = p(FC)= 0.5
+l p(E|F) = 250/2000 = 0.125
+l p(E|FC) = 5/1000 = 0.005
+
+Spam Rolexes (continued)
+Recall:
+• p(F) = p(FC) = 0.5
+• p(E|F) = 0.125
+• p(E|FC) = 0.005
+
+Step 3: Plug in to Bayes’ Theorem
+l p(F|E) = (0.125 × 0.5)/(0.125 × 0.5 + 0.005 × 0.5)
+l
+= 0.125/(0.125 + 0.005)
+l
+≈ 0.962
+
+Conclusion: Since the probability that our message is spam given
+that it contains the string “Rolex” is approximately 0.962 >
+0.9, we will discard the message.
+
+Problems with this simple filter
+How would you choose a single keyword/phrase to use?
+l “All natural”
+l “Nigeria”
+l “Click here”
+l …
+
+Users get upset if false positives occur, i.e., if legitimate
+messages are incorrectly classified as spam
+l When was the last time you checked your spam folder?
+
+How can we fix this?
+l Choose keywords so p(spam | keyword) is very high or very low
+l Filter based on multiple keywords
+
+Specifically, we want to develop a Bayesian filter that tells us
+p(F | E1 ∩ E2)
+First, some assumptions
+1. Events E1 and E2 are independent
+2. The events E1|F and E2|F are independent
+3. p(F) = p(FC) = 0.5
+
+By Bayes’ theorem
+
+Now, let’s derive formula for this p(F | E1 ∩ E2)
+𝑝 𝐹 𝐸( ∩ 𝐸) =
+=
+=
+
+𝑝 𝐸(
+
+𝑝 𝐸( ∩ 𝐸)
+
+𝑝 𝐸( ∩ 𝐸) ∣ 𝐹 𝑝 𝐹
+𝐹 𝑝 𝐹 + 𝑝 𝐸( ∩ 𝐸) 𝐹 ' 𝑝 𝐹 '
+
+𝑝(𝐸( ∩ 𝐸) ∣ 𝐹)
+𝑝 𝐸( ∩ 𝐸) 𝐹 + 𝑝 𝐸( ∩ 𝐸) 𝐹 '
+
+Assumption 3
+Assumptions 1 and 2
+
+𝑝 𝐸( 𝐹 𝑝(𝐸) ∣ 𝐹)
+𝐹 𝑝 𝐸) 𝐹 + 𝑝 𝐸( 𝐹 ' 𝑝 𝐸) 𝐹 '
+
+Spam filtering on two keywords
+Suppose that we train a Bayesian spam filter on a set of 2000 spam
+messages and 1000 messages that are not spam. The word “stock”
+appears in 400 spam messages and 60 good messages, and the word
+“undervalued” appears in 200 spam messages and 25 good messages.
+Estimate the probability that a message containing the words “stock”
+and “undervalued” is spam. Will we reject this message if our spam
+threshold is set at 0.9?
+Step 1: Set up events
+l F = message is spam, FC = message is good
+l E1 = message contains the word “stock”
+l E2 = message contains the word “undervalued”
+
+Step 2: Identify probabilities
+l P(E1|F) = 400/2000 = 0.2
+l p(E1|FC) = 60/1000 = 0.06
+l p(E2|F) = 200/2000 = 0.1
+l p(E2|FC) = 25/1000 = 0.025
+
+Two keywords (continued)
+𝑝 𝐹 𝐸! ∩ 𝐸" =
+
+𝑝 𝐸!
+
+𝑝 𝐸! 𝐹 𝑝(𝐸" ∣ 𝐹)
+𝐹 𝑝 𝐸" 𝐹 + 𝑝 𝐸! 𝐹 # 𝑝 𝐸" 𝐹 #
+
+Step 3: Plug in to Bayes’ Theorem
+
+Recall:
+• p(E1|F) = 0.2
+• p(E1|FC) = 0.06
+• p(E2|F) = 0.1
+• p(E2|FC) = 0.025
+
+l p(F|E1 ∩ E2) = (0.2 × 0.1)/(0.2 × 0.1 + 0.06 × 0.025)
+l
+= 0.02/(0.02 + 0.0015)
+l
+≈ 0.9302
+
+Conclusion: Since the probability that our message is spam
+given that it contains the strings “stock” and
+“undervalued” is ≈ 0.9302 > 0.9, we will reject this
+message.
+
+In-class exercises
+Problem 3: A business records incoming emails for 1 week and
+collects 1,000 spam messages and 400 non-spam messages. The
+word “opportunity” appears in 175 spam messages and 20 nonspam messages. Assuming this week's emails were typical
+(including the proportion of spam), should an incoming message
+be labeled as spam if it contains the word “opportunity” and the
+threshold for rejecting is 0.9?
+Problem 4: Suppose that a Bayesian spam filter is trained on a
+set of 10,000 spam messages and 5,000 messages that are not
+spam. The word “enhancement” appears in 1,500 spam messages
+and 20 non-spam messages, while the word “herbal” appears in
+800 spam messages and 200 non-spam messages. Estimate the
+probability that a received message containing both the words
+“enhancement” and “herbal” is spam. Here, you may assume that
+50% of emails are spam.
+
+Final Thoughts
+n Conditional probability is very useful
+n Bayes’ theorem
+l Helps us assess conditional probabilities
+l Has a range of important applications
+
+n Next time:
+l Expected values and variance (Section 7.4)
+
+

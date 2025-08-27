@@ -1,0 +1,367 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #23: Expected Value
+
+Based on materials developed by Dr. Adam Lee
+
+What is a random variable?
+Definition: A random variable is a function X from the sample
+space of an experiment to the set of real numbers R. That is, a
+random variable assigns a real number to each possible outcome.
+
+Note: Despite the name, X is not a variable,
+and is not random. X is a function!
+
+Example: Suppose that a coin is flipped three times. Let X(s) be
+the random variable that equals the numbers of heads that
+appear when s is the outcome. Then X(s) takes the following
+values:
+l X(HHH) = 3
+l X(HHT) = X(HTH) = X(THH) = 2
+l X(TTH) = X(THT) = X(HTT) = 1
+l X(TTT) = 0
+
+Random variables and distributions
+Definition: The distribution of a random variable X on a sample
+space S is the set of pairs (r, p(X=r)) for all r ∈ X(S), where p(X=r)
+is the probability that X takes the value r.
+Note: A distribution is usually described by specifying p(X=r) for
+each r ∈ X(S)
+
+Example: Assume that our coin flips from the previous slide were
+all equally likely to occur. We then get the following distribution
+for the random variable X:
+l p(X=0) = 1/8
+l p(X=1) = 3/8
+l p(X=2) = 3/8
+l p(X=3) = 1/8
+
+Many times, we want to study the expected
+value of a random variable
+Definition: The expected value (or expectation) of a random
+variable X(s) on the sample space S is equal to:
+𝐸 𝑋 = %𝑝 𝑠 𝑋 𝑠
+!∈#
+
+For every outcome…
+
+… use the probability of
+that outcome occuring…
+
+… to weight the value of the
+random variable for that
+outcome.
+
+Note: The expected value of a random variable defined on an
+infinite sample space is defined iff the infinite series in the
+definition is absolutely convergent.
+
+A roll of the dice…
+Example: Let X be the number that comes up when a die is
+rolled. What is the expected value of X?
+
+Solution:
+l 6 possible outcomes: 1, 2, 3, 4, 5, 6
+l Each outcomes occurs with the probability 1/6
+l E(X) = 1/6 + 2/6 + 3/6 + 4/6 + 5/6 + 6/6
+l
+= 21/6
+l
+= 7/2
+
+A flip of the coin…
+Example: A fair coin is flipped three times. Let S be the sample
+space of the eight possible outcomes, and X be the random
+variable that assigns to an outcome the number of heads in that
+outcome. What is the expected value of X?
+
+Solution:
+l Since coin flips are independent, each outcome is equally likely
+l E(X) = 1/8[X(HHH) + X(HHT) + X(HTH) + X(THH) + X(TTH)
++ X(THT) + X(HTT) + X(TTT)]
+l
+= 1/8[3 + 2 + 2 + 2 + 1 + 1 + 1 + 0]
+l
+= 12/8
+l
+= 3/2
+
+If S is large, the definition of expected value can be
+difficult to use directly
+Definition: If X is a random variable and p(X=r) is the probability
+that X = r (i.e., p(X=r) = ∑s∈S,X(s)=r p(s)), then
+𝐸 𝑋 = % 𝑝 𝑋=𝑟 𝑟
+$∈% #
+
+Each value of X…
+
+… is weighted by its probability of
+occurrence.
+
+Proof:
+l Suppose that X is a random variable ranging over S
+l Note that p(X=r) is the probability that X takes the value r
+l This means that p(X=r) is the sum of the probabilities of the outcomes s∈S
+such that X(s) = r
+l It thus follows that 𝐸 𝑋 = ∑!∈# $ 𝑝 𝑋 = 𝑟 𝑟 ❏
+
+Rolling two dice
+Example: Let X be the sum of the numbers that appear when a pair of fair
+dice is rolled. What is the expected value of X?
+
+Recall from last week:
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+
+X(1,1) = 2
+X(1,2) = X(2, 1) = 3
+X(1,3) = X(2,2) = X(3,1) = 4
+X(1,4) = X(2,3) = X(3,2) = X(4,1) = 5
+X(1,5) = X(2,4) = X(3,3) = X(4,2) = X(5,1) = 6
+X(1,6) = X(2,5) = X(3,4) = X(4,3) = X(5,2) = X(6,1) = 7
+X(2,6) = X(3,5) = X(4,4) = X(5,3) = X(6,2) = 8
+X(3,6) = X(4,5) = X(5,4) = X(6,3) = 9
+X(4,6) = X(5,5) = X(6,4) = 10
+X(5,6) = X(6,5) = 11
+X(6,6) = 12
+
+p(X=2) = 1/36
+p(X=3) = 2/36 = 1/18
+p(X=4) = 3/36 = 1/12
+p(X=5) = 4/36 = 1/9
+p(X=6) = 5/36
+p(X=7) = 6/36 = 1/6
+p(X=8) = 5/36
+p(X=9) = 4/36 = 1/9
+p(X=10) = 3/36 = 1/12
+p(X=11) = 2/36 = 1/18
+p(X=12) = 1/36
+
+So we have that:
+l E(X) = 2(1/36) + 3(1/18) + 4(1/12) + 5(1/9) + 6(5/36) + 7(1/6) + 8(5/36)
++ 9(1/9) + 10(1/12) + 11(1/18) + 12(1/36)
+l
+=7
+
+We can apply this formula to reason about
+Bernoulli trials!
+Theorem: The expected number of successes when n independent
+Bernoulli trials are performed, in which p is the probability of
+success, is np.
+The proof of this theorem is straightforward (cf. Sec 7.4 of the text)
+But let’s think about it intuitively…
+l 6 coin flips, how many will be heads?
+l Bernoulli trials: n = 6, p = 0.5, q = 0.5
+l Intuitively, you’d expect half of your flips to be heads
+l Mathematically, 6 * 0.5 = 3
+
+Expected values are linear!
+Theorem: If X1, X2, …, Xn are random variables on S and if a and b
+are real numbers, then
+1.
+2.
+
+E(X1 + X2 + … + Xn) = E(X1) + E(X2) + … + E(Xn)
+E(aX + b) = aE(X) + b
+
+Proof:
+l
+l
+l
+l
+l
+
+To prove the first result for n=2, note that
+E(X1 + X2) = ∑s∈S p(s)(X1(s) + X2(s))
+Def’n of E(X)
+= ∑s∈S p(s)X1(s) + ∑s∈S p(s)X2(s)
+Property of summations
+= E(X1) + E(X2)
+Def’n of E(X)
+The case with n variables is an easy proof by induction
+
+l
+l
+l
+l
+l
+
+To prove the second property, note that
+E(aX + b) = ∑s∈S p(s)(aX(s) + b)
+= ∑s∈S p(s)aX(s) + ∑s∈S p(s)b
+= a∑s∈S p(s)X(s) + b∑s∈S p(s)
+= aE(X) + b ❏
+
+Def’n of E(X)
+Property of summations
+Property of summations
+Def’n of E(X), ∑s∈S p(s) = 1
+
+Dice, revisited
+Example: What is the expected value of the sum of the numbers
+that appear when two fair dice are rolled?
+
+Solution:
+l Let X1 and X2 be random variables indicating the value on the first and
+second die, respectively
+l Want to calculate E(X1+X2)
+l By the previous theorem, we have that E(X1+X2) = E(X1)+E(X2)
+l From earlier in lecture, we know that E(X1) = E(X2) = 7/2
+l So, E(X1+X2) = 7/2 + 7/2 = 7
+
+Note: This agrees with the (more complicated)
+calculation that we made earlier in lecture.
+
+In-class exercises
+Top Hat
+
+Sometimes we need more information than the
+expected value can give us
+The expected value of a random variable doesn’t tell
+us the whole story…
+
+p(X(s)=r)
+
+p(X(s)=r)
+X(s)
+
+X(s)
+
+p(X(s)=r)
+X(s)
+
+The variance of a random variable gives us information
+about how wide it is spread
+Definition: The variance of a random variable 𝑋 on a
+sample space 𝑆 is defined as:
+𝑉 𝑋 = % 𝑋 𝑠 −𝐸 𝑋
+
+$
+
+𝑝 𝑠
+
+!∈#
+Squared difference from
+expected value
+
+Weighted by probability of
+occurrence
+
+Definition: The standard deviation of a random
+variable 𝑋 on a sample space 𝑆 is defined as
+
+𝑉 𝑋 .
+
+Variance of a die
+Example: A fair die is rolled. What is the variance of the random
+variable X representing the face that appears?
+
+Solution:
+l Recall that E(X) = 3.5
+l X(1) = 1, p(1)=1/6
+l X(2) = 2, p(2)=1/6
+l X(3) = 3, p(3)=1/6
+l X(4) = 4, p(4)=1/6
+l X(5) = 5, p(5)=1/6
+l X(6) = 6, p(6)=1/6
+l Thus, V(X) = (1/6)(1−3.5)2 + (1/6)(2−3.5)2 + (1/6)(3−3.5)2 +
+(1/6)(4−3.5)2 + (1/6)(5−3.5)2 + (1/6)(6−3.5)2
+l V(X) = 6.25/6 + 2.25/6 + 0.25/6 + 0.25/6 + 2.25/6 + 6.25/6
+l V(X) = 17.5/6 ≈ 2.92
+
+Variance: The short form
+Theorem: If X is a random variable on a sample space S,
+then 𝑉 𝑋 = 𝐸 𝑋 $ − 𝐸 𝑋 $.
+
+Proof:
+l V(X) = ∑s∈S (X(s) – E(X))2p(s)
+l
+= ∑s∈S X(s)2p(s) – 2E(X)∑s∈S X(s)p(s) + E(X)2∑s∈S p(s)
+l
+= E(X2) – 2E(X)E(X) + E(X)2
+l
+= E(X2) – E(X)2
+❏
+
+Variance of a die, revisited
+Example: A fair die is rolled. What is the variance of the random
+variable X representing the face that appears?
+
+Solution:
+l Recall that E(X) = 3.5
+l X2(1) = 1, p(1)=1/6
+l X2(2) = 4, p(2)=1/6
+l X2(3) = 9, p(3)=1/6
+l X2(4) = 16, p(4)=1/6
+l X2(5) = 25, p(5)=1/6
+l X2(6) = 36, p(6)=1/6
+l Thus, E(X2) = (1/6)(1) + (1/6)(4) + (1/6)(9) + (1/6)(16) + (1/6)(25) +
+(1/6)(36)
+l E(X2) = 1/6 + 4/6 + 9/6 + 16/6 + 25/6 + 36/6 = 91/6
+l V(X) = E(X2) − E(X)2 = 91/6 − 3.52 ≈ 2.92
+
+Multiple Dice
+Example: Two dice are rolled. What is the variance of the
+random variable X((j,k)) = 2j, where j is the number
+appearing on the first die and k is the number appearing on
+the second die.
+
+Solution:
+l V(X) = E(X2) – E(X)2
+l Note that p(X=m) = 1/6 for m = 2,4,6,8,10,12 and is 0 otherwise
+l E(X) = (2+4+6+8+10+12)/6 = 7
+l E(X2) = (22+42+62+82+102+122)/6 = 182/3
+l So V(X) = 182/3 – 49 = 35/3
+
+Variance of a Bernoulli Distribution
+Example: What is the variance of random variable X
+with X(t)=1 if a Bernoulli trial is a success and X(t)=0
+otherwise? Assume that the probability of success is p.
+§7.4 also proves that the variance
+of n Bernoulli trials is npq
+Solution:
+l Note that X takes only the values 0 and 1
+l Hence, X(t) = X2(t)
+l V(X) = E(X2) – E(X)2
+l
+= p – p2
+l
+= p(1-p)
+l
+= pq
+This tells us that the variance of
+ANY Bernoulli distribution is pq!
+
+Variance of n Bernoulli trials
+Example: A fair die is rolled 5 times. Let X be the
+random variable that assigns to an outcome the
+number of throws less than 3. What is the variance of
+X?
+
+Solution:
+l n = 5, p = 1/3, q = 2/3
+l V(X) = npq = 5 * 1/3 * 2/3 ≈ 1.11
+
+In-class exercises
+Top Hat
+
+Final Thoughts
+n Analyzing the expected value of a random variable
+allows us to answer a range of interesting questions
+n The variance of a random variable tells us about the
+spread of values that the random variable can take
+
+

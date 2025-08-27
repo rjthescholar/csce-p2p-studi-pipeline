@@ -1,0 +1,511 @@
+Time Complexity 03
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Hamiltonian Path
+A Hamiltonian path in a directed graph G is a directed path
+that goes through each node exactly once
+Formally,
+HAMPATH = {hG, s, ti | G is a directed graph with a
+Hamiltonian path from s to t}
+
+s
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+t
+
+Time Complexity 03
+
+Verifier
+Suppose a path is represented by a sequence of pairs of nodes
+For example: ((s, a), (a, c), (c, d), (d, r), (r, t))
+Given a path c, we can verify whether it is a Hamiltonian path
+of graph G from s to t in polynomial time
+Given an input hhG, s, ti, ci, where G is a directed graph, s
+and t are nodes, and c is a path, a TM can verify whether c is
+a Hamiltonian path of graph G from s to t in polynomial time
+
+Similarly, given a natural number c, we can verify whether c is
+a factor of a composite number x in polynomial time
+Given an input hx, ci where x and c are natural numbers, a
+TM can verify whether c is a factor of x in polynomial time
+
+This feature is called polynomial verifiability
+Recall that both problems need exponential time to solve
+Verifying is easier than finding
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Verifier
+Recall the language COMPOSITES :
+COMPOSITES = {hxi | x = pq for natural numbers p, q > 1}
+
+We can define the identical set using a different predicate
+COMPOSITES = {hxi | x is divisible by c a natural number c > 1}
+
+Check whether x is divisible by c can be easily done by this
+TM V :
+V = “On input hx, ci where x and c are natural numbers
+greater than 1:
+1
+2
+
+Calculate y = x mod c
+If y = 0, accept. If y 6= 0, reject.”
+
+With the TM V above, now we have
+COMPOSITES = {hxi | V accepts hx, ci for some c}
+
+This TM V is called a verifier
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Verifier
+A verifier for a language A is an algorithm V , where
+A = {w | V accepts hw, ci for some string c}
+In our discussion, an algorithm V is a TM
+If TM V runs in polynomial time, it is called a polynomial
+time verifier
+A language A is polynomially verifiable if it has a polynomial
+time verifier
+
+c is called a certificate or proof of membership in A
+Examples:
+A certificate of HAMPATH problem for hG, s, ti is simply a
+Hamiltonian path from s to t
+A certificate of COMPOSITES problem for a number x is one
+of its divisors
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Class NP
+
+Definition 7.19
+NP is the class of languages that have polynomial time verifiers.
+NP comes from Nondeterministic Polynomial time
+NP -Problems are set of problems in NP
+Every problems in P also have polynomial time verifier
+Therefore, P ⊆ NP
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Nondeterministic
+Recall that NP stands for Nondeterministic Polynomial
+The word nondeterministic has been discussed int
+Nondeterministic Finite Automaton (NFA)
+Nondeterministic Turing Machine (NTM)
+
+We have not yet seen a nondeterministic Turing machine yet
+Example:
+t
+
+→ 0, R
+
+q0
+
+t
+
+→ 0, R
+
+q1
+t
+
+→ 1, R
+
+t
+
+→ 0, R
+
+q2
+t
+
+→ 1, R
+
+q3
+t
+
+→ 1, R
+
+When it read the blank symbol, it splits to two copies, same
+current state, but different tape contents
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Nondeterministic
+t
+
+→ 0, R
+
+q0
+
+t
+
+→ 0, R
+
+q1
+t
+
+→ 1, R
+
+t
+
+→ 0, R
+
+q2
+t
+
+→ 1, R
+
+q3
+t
+
+→ 1, R
+
+What would happen if we run the above machine on input ε
+for three steps?
+Consists of 8 copies
+They are all in state q3
+Tape contents are unique:
+000, 001, 010, 011, 100, 101, 110, and 111
+
+This is how we generate all possible strings over Σ = {0, 1} of
+length exactly 3
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Nondeterministic
+t
+
+→ 0, R
+
+q0
+
+t
+
+→ 0, R
+
+q1
+t
+
+→ 1, R
+
+t
+
+→ 0, R
+
+q2
+t
+
+→ 1, R
+
+q3
+t
+
+→ 1, R
+
+But how to express the above TM in a high-level description?
+M = “On input w:
+1
+
+2
+
+Write a string of length 3 where each symbol on the string is
+nondeterministically selected to be either 0 or 1
+...
+
+This type of NTM is suitable for describing brute-force
+algorithm
+A brute-force algorithm generally generates all possible of
+something
+Then search for an element in the set of possibilities
+If it finds an element that satisfies the criteria, done
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Nondeterministic TM for HAMPATH
+
+A nondeterministic TM N1 that decides HAMPATH :
+N1 = “On input hG, s, ti, where G is a directed graph with
+nodes s and t:
+1
+
+2
+3
+4
+
+Write a list of m numbers p1 , . . . pm , where m is the number
+of nodes in G. Each number in the list is nondeterministically
+selected to be between 1 and m.
+Check for repetitions in the list. If any are found reject.
+Check whether s = p1 and t = pm . If either fail, reject.
+For each i between 1 and m − 1, check whether (pi , pi+1 ) is
+an edge of G. If any are not, reject. Otherwise, all tests have
+been passed. so accept.
+
+The nondeterministic part of N1 is in step 1
+It generates all permutations of m nodes
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Nondeterministic TM for HAMPATH
+What is the run-time of NTM N1 ?
+Step 1 takes only m steps to write m numbers
+Check for repetition take O(m2 )
+Get the first number and compare with the rest is O(m)
+Get the second number and compare with the rest is O(m)
+and so on (m times)
+
+Check whether the first number is s and the last number is t is
+O(m)
+Step 4 takes O(m2 )
+Get the first pair and scan for the edge is O(m)
+Get the second pair and scan for the edge is O(m)
+and so on (m − 1 times)
+
+Note that all copies run steps 2, 3, and 4 simultaneously
+The above TM runs in polynomial time
+From Theorem 7.11, this algorithm will run in exponential time
+on a single-tape Turing machine
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Language in NP
+
+Is there a relation between problem in NP and NTM?
+Yes:
+Theorem 7.20: A language is in NP iff it is decided by some
+nondeterministic polynomial time Turing machine.
+But the NP is the class of languages that have polynomial
+time verifiers
+Proof Idea:
+Show how to convert a polynomial time verifier to an
+equivalent polynomial time nondeterministic Turing machine
+(decider)
+Show how to convert polynomial time nondeterministic Turing
+machine (decider) to an equivalent polynomial time verifier
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Verifier to NTM
+Assume that A ∈ NP
+By definition, there exists a TM V (a polynomial time verifier)
+for the language A that can verify an input of length n in nk
+steps for some k
+Recall that a verifier for a language A is an algorithm V ,
+where
+A = {w | V accepts hw, ci for some string c}
+
+Construct a NTM N as follows:
+N = “On input w of length n:
+1
+2
+3
+
+Nondeterministically select string c of length at most nk .
+Run V on input hw, ci.
+If V accepts, accept; otherwise, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+NTM to Verifier
+
+Assume that A can be decided by NTM N in polynomial time
+Construct a polynomial time verifier V as follows:
+V = “On input hw, ci, where w and c are strings:
+1
+
+2
+
+Simulate N on input w, treating each symbol of c as a
+description of the nondeterministic choice to make at each step
+If this branch of N ’s computation accepts, accept; otherwise,
+reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+Language in NP
+Definition 7.21
+NTIME(t(n)) = {L | L is a language decided by an O(t(n)) time
+nondeterministic Turing machine}.
+Corollary 7.22
+NP =
+
+[
+
+NTIME(nk )
+
+k
+
+To show that a language A is in NP :
+Construct a nondeterministic TM M that decides A
+Verify that M runs in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+CLIQUE
+A clique in an undirected graph is a subgraph where every
+two nodes in the subgraph are connected by an edge
+A k-clique is a clique that contains k nodes
+A graph with 5-clique is shown below:
+
+Formally,
+CLIQUE = {hG, ki | G is an undirected graph with a k-clique}
+
+Is CLIQUE in NP ?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+CLIQUE ∈ NP
+
+To show that CLIQUE ∈ NP , we can perform one of the
+following:
+Show a polynomial time verifier V for CLIQUE or
+Show an NTM N that decides CLIQUE in polynomial time
+
+The following TM V verifies CLIQUE in polynomial time:
+V = “On input hhG, ki, ci:
+1
+2
+3
+
+Test whether c is a subgraph with k nodes in G.
+Test whether G contains all edges connecting nodes in c.
+If both pass, accept; otherwise, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+CLIQUE ∈ NP
+
+Analysis of TM V :
+Each step will be executed only once
+Step 1: Need to go back and forth k times
+Each time is O(n) step
+Thus step 1 is k × O(n) = O(n)
+
+Step 2: for each node a ∈ c, it needs to find either (a, b) or
+(b, a) for every b ∈ c and b 6= a
+For each node, it needs to scan back and forth k − 1 times
+and each time is O(n)
+There are k nodes in c. Thus, step 2 is k × (k − 1) × O(n) =
+O(n)
+
+Thus, V runs in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+CLIQUE ∈ NP
+
+The following NTM N can decide CLIQUE in polynomial
+time:
+N = “On input hG, ki, where G is a graph:
+1
+2
+3
+
+Nondeterministically select a subset c of k nodes of G.
+Test whether G contains all edges connecting nodes in c.
+If yes, accept; otherwise, reject.”
+
+Analysis of NTM N :
+Each step will be execute only once
+Step 1: To generate a subset c of k nodes of G requires k steps
+Step 2: This step is the same as Step 2 of V which is O(n)
+steps
+Step 3: Simply O(1) or O(n) depending on implementations
+Thus N can decides CLIQUE in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+SUBSET −SUM
+Consider a set of numbers S = {x1 , x2 , . . . , xk } and a target
+number t
+Is
+Pthere exists a set Y = {y1 , y2 , . . . , yi } ⊆ S such that
+i yi = t?
+Formally:
+SUBSET −SUM = {hS, ti | S = {x1 , x2 , . . . , xk }, and for some
+{y1 , y2 , . . . , yi } ⊆ {x1 , x2 , . . . , xk },
+X
+we have
+yi = t}
+i
+
+For example h{4, 11, 16, 21, 27}, 25i ∈ SUBSET −SUM
+because 4 + 11 = 25
+Note that for SUBSET −SUM , S and Y are multisets which
+allow duplicate elements
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+SUBSET −SUM ∈ N P
+To show that SUBSET −SUM ∈ NP , we can perform one of
+the following:
+1
+2
+
+Show a polynomial time verifier V for SUBSET −SUM
+Show an NTM N that decide SUBSET −SUM in polynomial
+time
+
+The following TM V verifies SUBSET −SUM in polynomial
+time:
+V = “On input hhS, ti, ci:
+1
+2
+3
+
+Test whether c is a collection of numbers that sum to t.
+Test whether S contains all the numbers in c.
+If both pass, accept; otherwise, reject.”
+
+The following NTM N decides SUBSET −SUM in
+polynomial time:
+N = “On input hS, ti:
+1
+2
+3
+
+Nondeterministically select a subset c of the number in S.
+Test whether c is a collection of numbers that sum to t.
+If the test passes, accept; otherwise, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 03
+
+

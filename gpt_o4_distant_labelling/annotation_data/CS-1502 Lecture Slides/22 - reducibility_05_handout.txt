@@ -1,0 +1,386 @@
+Reducibility 05
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+REGULAR TM is Undecidable
+Problem: Is there an algorithm to determine whether the
+language of a TM is regular?
+Formally,
+REGULAR TM = {hM i | M is a TM and L(M ) is a regular language}
+
+Unfortunately, no algorithm can solve this problem
+To verify this, we need to prove that REGULAR TM is
+undecidable
+As usual, we are going to use the proof by contradiction
+Assume that REGULAR TM is decidable
+Thus, there exists a TM R that decides REGULAR TM
+This gives us the ability to check whether the language of a
+TM M 0 is regular or not regular
+
+As usual, we want to show that if REGULAR TM is decidable,
+ATM is decidable
+So, we need to construct a TM M 0 such that whether the
+language of TM M 0 is regular or not depending on whether M
+accepts w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+REGULAR TM is Undecidable
+
+Once again, we have two choices:
+1
+
+Choice #1:
+If M accepts w, L(M 0 ) is regular
+If M does not accept w, L(M 0 ) is not regular
+
+2
+
+Choice #2:
+If M accepts w, L(M 0 ) is not regular
+If M does not accept w, L(M 0 ) is regular
+
+Which one?
+This is an example of the problem where you can pick any
+choices
+Let’s look at how to construct a TM M 0 that satisfies each
+choice
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+REGULAR TM is Undecidable
+Choice #1
+If M accepts w, L(M 0 ) is regular
+If M does not accept w, L(M 0 ) is not regular
+Here is an example of a TM M 0 that satisfies choice #1:
+M 0 = “On input x:
+1
+2
+3
+
+If x is in the form of 0n 1n , accept.
+If x is not in the form of 0n 1n , run M on input w.
+If M accepts w, accept. If M rejects w, reject.”
+
+From the definition of the above TM M 0 :
+If M accepts w, L(M 0 ) = Σ∗
+If M does not accept w:
+If M rejects w, L(M 0 ) = {0n 1n | n ≥ 0}
+If M loops indefinitely on w, L(M 0 ) = {0n 1n | n ≥ 0}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+REGULAR TM is Undecidable
+Choice #2
+If M accepts w, L(M 0 ) is not regular
+If M does not accept w, L(M 0 ) is regular
+Here is an example of a TM M 0 that satisfies choice #2:
+M 0 = “On input x:
+1
+2
+
+3
+
+Run M on input w.
+If M accepts w and x is in the form of 0n 1n , accept;
+otherwise, reject.
+If M rejects w, reject.”
+
+From the definition of the above TM M 0 :
+If M accepts w, L(M 0 ) = {0n 1n | n ≥ 0}
+If M does not accept w:
+If M rejects w, L(M 0 ) = ∅
+If M loops indefinitely on w, L(M 0 ) = ∅
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+REGULAR TM is undecidable (Choice #1)
+Proof: Assume that REGULAR TM is decidable. Since REGULAR TM is decidable,
+there exists a TM R that decides REGULAR TM . Let construct a TM S as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1 Construct TM M 0 as follows:
+M 0 = “On input x:
+1 If x is in the form of 0n 1n , accept.
+2 If x is not in the form of 0n 1n , run M on input w.
+3 If M accepts w, accept. If M rejects w, reject.”
+2 Run R on input hM 0 i.
+3 If R accepts hM 0 i, accept. If R rejects hM 0 i, reject.”
+Next, we need to prove that TM S is a decider for ATM .
+Prove that if hM, wi ∈ ATM , S accepts hM, wi: Assume that hM, wi ∈ ATM .
+Since hM, wi ∈ ATM , M is a TM that accepts w. Since M accepts w, from the
+definition of TM M 0 , L(M 0 ) is Σ∗ which is a regular language. Since L(M 0 ) is
+regular, hM 0 i ∈ REGULAR TM . Since R is a decider for REGULAR TM , by
+running R on input hM 0 i, R will accept hM 0 i. Since R accepts hM 0 i, S accepts
+hM, wi.
+Prove that if hM, wi 6∈ ATM , S rejects hM, wi: Assume that hM, wi 6∈ ATM .
+Since hM, wi 6∈ ATM , M is a TM that does not accept w. Since M does not
+accept w, from the definition of TM M 0 , L(M 0 ) is {0n 1n | n ≥ 0} which is not
+a regular language. Since L(M 0 ) is not regular, hM 0 i 6∈ REGULAR TM . Since
+R is a decider for REGULAR TM , by running R on input hM 0 i, R will reject
+hM 0 i. Since R rejects hM 0 i, S rejects hM, wi.
+This show that TM S is a decider for ATM . Therefore, ATM is decidable
+contradiction. Therefore, REGULAR TM is undecidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+More Fact for Contradiction
+
+So far, we have been using ATM as the mean of contradiction
+Because we know from the fact that ATM is undecidable
+
+But now, we have the following undecidable languages:
+ATM = {hM, wi | M is a TM that accepts w}
+HALT TM = {hM, wi | M is a TM that halts on input w}
+ETM = {hM i | M is a TM and L(M ) = ∅}
+REGULAR TM = {hM i | M is a TM and L(M ) is regular}
+
+We can now use those undecidable languages
+For example, to show that a language A is undecidable, we can
+show that if A is decidable, ETM is decidable
+
+But we can always use ATM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+EQ TM is Undecidable
+Problem: Is there an algorithm to determine whether
+languages of two TMs M1 and M2 are identical?
+Formally,
+EQ TM = {hM1 , M2 i | M1 and M2 are TMs and L(M1 ) = L(M2 )}
+
+Unfortunately, EQ TM is undecidable
+As usual, we are going to assume that EQ TM is decidable
+In other words, given two TMs M1 and M2 , we know whether
+hM1 , M2 i ∈ EQ TM or not
+
+For this language, we generally need to construct two TMs
+M1 and M2 from a TM M and a string w
+For this problem, we are going to look at two proofs:
+Contradict with the fact that ATM is undecidable
+Contradict with the fact that ETM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+EQ TM is Undecidable
+Prove that EQ TM = {hM1 , M2 i | M1 and M2 are TMs and L(M1 ) = L(M2 )} is
+undecidable.
+Proof: Assume that EQ TM is decidable. Since EQ TM is decidable, there exists a TM
+R that decides EQ TM . Let construct a TM S (to decide ATM ) as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1 Construct TM M1 as follows:
+M1 = “On input x:
+1 accept.
+2 Construct TM M2 as follows:
+M2 = “On input x:
+1 Run M on input w.
+2 If M accepts w, accept. If M rejects w, reject.”
+3 Run R on input hM1 , M2 i.
+4 If R accepts hM1 , M2 i, accept. If R rejects hM1 , M2 i, reject.”
+Next, we need to prove that TM S is a decider for ATM .
+Prove that if hM, wi ∈ ATM , S accepts hM, wi:
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a TM that accepts w.
+Since M accepts w, from the definition of TM M1 , L(M1 ) = Σ∗ and from the
+definition of TM M2 , L(M2 ) = Σ∗ . In other words, L(M1 ) = L(M2 ). Since
+L(M1 ) = L(M2 ), hM1 , M2 i ∈ EQ TM . Since R is a decider for EQ TM , by
+running R on input hM1 , M2 i, R will accept hM1 , M2 i. Since R accepts
+hM1 , M2 i, S accepts hM, wi.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+EQ TM is Undecidable
+
+Proof: (continue)
+Prove that if hM, wi 6∈ ATM , S rejects hM, wi:
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a TM that does not
+accept w. Since M does not accept w, from the definition of TM M1 ,
+L(M1 ) = Σ∗ and from the definition of TM M2 , L(M2 ) = ∅. In other words,
+L(M1 ) 6= L(M2 ). Since L(M1 ) 6= L(M2 ), hM1 , M2 i 6∈ EQ TM . Since R is a
+decider for EQ TM , by running R on input hM1 , M2 i, R will reject hM1 , M2 i.
+Since R rejects hM1 , M2 i, S rejects hM, wi.
+This show that TM S is a decider for ATM . Therefore, ATM is decidable
+contradiction. Therefore, EQ TM is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+EQ TM is Undecidable
+Prove that EQ TM = {hM1 , M2 i | M1 and M2 are TMs and L(M1 ) = L(M2 )} is
+undecidable.
+Proof: Assume that EQ TM is decidable. Since EQ TM is decidable, there exists a TM
+R that decides EQ TM . Let construct a TM S (to decide ETM ) as follows:
+S = “On input hM i where M is a TM:
+1
+
+Construct TM ME as follows:
+ME = “On input x:
+1 reject.
+
+2
+
+Run R on input hM, ME i.
+
+3
+
+If R accepts hM, ME i, accept. If R rejects hM, ME i, reject.”
+
+Next, we need to prove that TM S is a decider for ETM .
+Prove that if hM i ∈ ETM , S accepts hM i:
+Assume that hM i ∈ ETM . Since hM i ∈ ETM , M is a TM and L(M ) = ∅.
+From the definition of TM ME , L(ME ) = ∅. Since L(M ) = ∅ and L(ME ) = ∅,
+L(M ) = L(ME ). In other words, hM, ME i ∈ EQ TM . Since R is a decider for
+EQ TM , by running R on input hM, ME i, R will accept hM, ME i. Since R
+accepts hM, ME i, S accepts hM i.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+EQ TM is Undecidable
+
+Proof: (continue)
+Prove that if hM i 6∈ ETM , S rejects hM i:
+Assume that hM i 6∈ ETM . Since hM i 6∈ ETM , M is a TM and L(M ) 6= ∅.
+From the definition of TM ME , L(ME ) = ∅. Since L(M ) 6= ∅ and L(ME ) = ∅,
+L(M ) 6= L(ME ). In other words, hM, ME i 6∈ EQ TM . Since R is a decider for
+EQ TM , by running R on input hM, ME i, R will reject hM, ME i. Since R
+rejects hM, ME i, S rejects hM i.
+This show that TM S is a decider for ETM . Therefore, ETM is decidable
+contradiction. Therefore, EQ TM is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+ONE TM is Undecidable
+
+Problem: Given a TM M , is there an algorithm to check
+whether M only accept one string (|L(M )| = 1)
+Unfortunately, this is another unsolvable problem
+Formally,
+ONE TM = {hM i | M is a TM and |L(M )| = 1}
+To show that the above problem is unsolvable, we just need to
+show that ONE TM is undecidable
+Use the same method:
+Show that if ONE TM is decidable, ATM is decidable
+We need to construct a TM M 0 from a TM M and a string w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+ONE TM is Undecidable
+
+Two choices as usual:
+1
+
+Choice #1:
+If hM, wi ∈ ATM , hM 0 i ∈ ONE TM
+If M accepts w, |L(M 0 )| = 1
+If hM, wi 6∈ ATM , hM 0 i 6∈ ONE TM
+If M does not accept w, |L(M 0 )| =
+6 1
+
+2
+
+Choice #2:
+If hM, wi ∈ ATM , hM 0 i 6∈ ONE TM
+If M accepts w, |L(M 0 )| 6= 1
+If hM, wi 6∈ ATM , hM 0 i ∈ ONE TM
+If M does not accept w, |L(M 0 )| = 1
+
+This is another example where you can pick either choices
+We are going to use the choice #1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+ONE TM is Undecidable
+Prove that ONE TM = {hM i | M is a TM and |L(M )| = 1} is undecidable.
+Proof: Assume that ONE TM is decidable. Since ONE TM is decidable, there exists a
+TM R that decides ONE TM . Let construct a TM S (to decide ATM ) as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1
+
+Construct TM M 0 as follows:
+M 0 = “On input x:
+1 If x = ε, run M on input w. If M accepts w, accept; otherwise, reject.
+2 If x 6= ε, reject.
+
+2
+
+Run R on input hM 0 i.
+
+3
+
+If R accepts hM 0 i, accept. If R rejects hM 0 i, reject.”
+
+Next, we need to prove that TM S is a decider for ATM .
+Prove that if hM, wi ∈ ATM , S accepts hM, wi:
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a TM and that
+accepts w. Since M accepts w, from the definition of TM M 0 , L(M 0 ) = {ε}.
+Since L(M 0 ) = {ε}, |L(M 0 )| = 1. In other words, hM 0 i ∈ ONE TM . Since R is
+a decider for ONE TM , by running R on input hM 0 i, R will accept hM 0 i. Since
+R accepts hM 0 i, S accepts hM, wi.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+ONE TM is Undecidable
+
+Proof: (continue)
+Prove that if hM, wi 6∈ ATM , S rejects hM, wi:
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a TM and that does
+not accept w. Since M does not accept w, from the definition of TM M 0 ,
+L(M 0 ) = ∅. Since L(M 0 ) = ∅, |L(M 0 )| 6= 1. In other words, hM 0 i 6∈ ONE TM .
+Since R is a decider for ONE TM , by running R on input hM 0 i, R will reject
+hM 0 i. Since R rejects hM 0 i, S rejects hM, wi.
+This show that TM S is a decider for ATM . Therefore, ATM is decidable
+contradiction. Therefore, ONE TM is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+Conclusion
+So far, to prove that a language A is undecidable, we use
+proof by contradiction
+Assume that A is decidable
+Since A is decidable, there exists a TM R that decides A
+Then we show that if A is decidable, ATM is decidable
+Another known undecidable language can be used instead of
+ATM
+
+So, we need to construct a TM S that decides ATM and prove
+that S is a decider for ATM
+Given a TM M and a string w, TM S need to construct a
+string s such that whether s ∈ A depends on whether M
+accepts w
+Then use TM R (a decider for A) as a helper machine to
+decide ATM
+
+Try to prove that ONE TM is undecidable using the choice #2.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 05
+
+

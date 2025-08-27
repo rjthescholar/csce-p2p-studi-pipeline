@@ -1,0 +1,673 @@
+Bottom-up Parsing
+CS/COE 1622
+Jarrett Billingsley
+
+Class Announcements
+● today we're finishing parsing!! yaaay
+o so after today you’ll have everything you need for project 2!!!!!!
+● bottom-up parsing is (imo) best used for parsing expressions, so we
+should start by talking about…
+
+2
+
+Operators
+
+3
+
+Evaluating (and producing) trees
+● we saw before that given an AST, we could evaluate it:
+*
+
+5
+
+I think you would agree that the order of operations
+here is to do the addition, then the multiplication.
+
++
+2
+
+3
+
+but we're talking about parsing now. what source
+code would I write to produce this AST?
+
+5 * (2 + 3)
+
++
+
+why did we have to put parentheses there?
+because of the order of operations:
+without them, 5 * 2 + 3 would parse as:
+
+*
+
+5
+
+3
+
+2
+4
+
+PEMDAS, BODMAS, BIDMAS…
+● officially, the order of operations used by mathematicians is:
+1. parentheses/brackets
+2. exponentiation/roots
+3. multiplication/division
+4. addition/subtraction
+● the order of the letters in the acronym (MD vs. DM) does not say
+that e.g. multiplication happens before division.
+● when writing math horizontally like 27 / 3 / 9, there's a problem:
+o even among mathematicians, there is no consensus on what
+order horizontal division should be done!
+● in programming languages, all math is written horizontally…
+o and you have e.g. %, &&, ||, &, |, ^, !, ~, <, >, <=, >=, ==, !=, …
+● so we need a more rigorous way of dealing with this.
+5
+
+Operator Precedence
+● here's a more formalized, algorithmically-checkable method:
+o you rank the operators by giving each a number, its precedence
+o that precedence decides the order of evaluation
+● another way of thinking of it is: if you wrote the expression without
+parentheses, the precedence tells you where they should go:
+Operator Prec
+
+a + b * c
+
+a + (b * c)
+
+**
+
+1st
+
+a ** b * c
+
+(a ** b) * c
+
+* / %
+
+2nd
+
++ -
+
+3rd
+
+but this still isn't enough information to
+disambiguate when operators of the same
+precedence appear next to each other:
+
+27 / 3 / 9
+
+(27 / 3) / 9 or
+27 / (3 / 9) ?
+6
+
+Operator Associativity
+● in a precedence tie, an operator's associativity breaks the tie.
+left-associative operators
+(e.g. +, -, *, /, %) evaluate
+things left-to-right.
+
+and right-associative
+operators (e.g. **, =) evaluate
+things right-to-left.
+
+27 / 3 / 9
+
+2 ** 3 ** 4
+
+(27 / 3) / 9
+
+2 ** (3 ** 4)
+
+in other words, associativity says which way the tree branches.
+/
+
+/
+27
+
+**
+
+9
+3
+
+2
+
+**
+
+3
+
+4
+7
+
+More about associativity
+● to be clear: associativity only applies when you have adjacent
+operators of the same precedence.
+o a ** b + c parses as (a ** b) + c, because exponentiation's
+precedence ranks higher than addition's.
+● it's also possible for operators to be non-associative.
+o that means it's an error for them to be adjacent.
+● for example, what does x < y < z mean?
+o in Java, you get a type error.
+o in Python, it's parsed as (x < y) && (y < z).
+o in the language we're designing, we could say that comparisons are
+non-associative, and block this potentially-confusing code as a
+parsing error instead.
+
+8
+
+Unary and postfix operators
+● operators that take two operands are called binary. but many
+(especially in C-style languages) are unary and operate on one value.
+o -x, ~x, !x, &x, *x, ++x, --x, (int)x
+o these are given a precedence higher than any binary operator.
+▪ this matches our intuition: -3 + 5 should give 2, not -8.
+o these are all right-associative, but it doesn't come up much.
+▪ -~x would bitwise-complement x first, then negate that.
+● finally there are postfix operators which come after their operand.
+o x++, x--, a[i], obj.field, f(x)
+o and these have the highest precedence of all!
+▪ -f(x) calls the function first, then negates the return value.
+o these are all left-associative, and that's pretty common to see.
+▪ f(x)[i].field calls f first, then indexes the returned array, then
+accesses the field from the array value.
+9
+
+Summarizing operators
+● a language's specification will typically have all the operators, their
+precedences, and their associativities listed in a table:
+Operator
+
+Prec Assoc
+
+f() a[i] o.f
+
+1
+
+L
+
+!x -x *x &x
+++x --x
+
+2
+
+R
+
+* / %
+
+3
+
+L
+
++ -
+
+4
+
+L
+
+< <= > >=
+
+5
+
+L
+
+== !=
+
+6
+
+L
+
+&&
+
+7
+
+L
+
+||
+
+8
+
+L
+
+=
+
+9
+
+R
+
+this is a pretty typical arrangement for a
+C-style language (excluding bitwise operators, casts,
+reflexive assignments, and some other obscure operators)
+
+but where are parentheses?
+
+well, they're not operators. parentheses
+only control the order of evaluation and
+the way the AST is built; they don't do
+anything otherwise.
+10
+
+Building a grammar
+for expressions
+
+11
+
+A grammar from the bottom up
+● rather than starting with the "overall" structure of an expression…
+o let's start with the most basic parts and gradually combine them.
+● a primary expression is the most basic kind.
+literals fall into this category.
+
+318
+
+identifiers are another kind:
+they name single things.
+
+"hello"
+9.5
+
+'x'
+
+x
+
+main
+
+System
+
+last, we'll include parenthesized expressions, because they
+contain whole sub-expressions. so, our grammar is:
+PrimaryExp: IdExp | IntLitExp | ParenExp
+IdExp:
+<identifier token>
+IntLitExp: <int literal token>
+(Exp is the top-level expression
+rule that we're building up to)
+ParenExp:
+'(' Exp ')'
+
+12
+
+Terms: primaries with decorations
+● since unary and postfix operators are so closely associated with their
+operands, we can define a Term rule like this:
+Term: UnaryOp* PrimaryExp PostfixOp*
+● that is, 0 or more unary operators before a primary "core," followed
+by 0 or more postfix operators.
+● UnaryOp and PostfixOp might be defined like:
+UnaryOp:
+'-' | '!'
+PostfixOp: CallOp | FieldOp | IndexOp
+CallOp:
+'(' ')' | '(' Exp (',' Exp)* ')'
+FieldOp:
+'.' <identifier token>
+IndexOp:
+'[' Exp ']'
+● example productions of this grammar are x, -x, f(), !f(x).z, !!x
+
+13
+
+Expressions: the big picture
+● really, every expression looks like this:
+term op term op term op term op term
+where each op is a binary operator.
+so, we'll define these rules:
+Exp:
+Term (BinaryOp Term)*
+BinaryOp: '+'|'-'|'*'|'/'|'%'|…etc.
+
+but what about the associativity and precedence??
+well, we just… uh… won't encode that into the grammar.
+
+14
+
+Wait. What?
+● it is absolutely possible to encode precedence and associativity into
+the expression grammar, and then write a fully recursive-descent
+parser for expressions. (I know, because I've done it.)
+● but the result is just… well. here's a simple mathematical language:
+Exp: Add
+Add: Mul (('+'|'-') Mul)*
+Mul: Neg (('*'|'/'|'%') Neg)*
+Neg: Pow | ('-' Neg)
+Pow: Pri ('**' Pow)*
+Pri: Id | IntLit | '(' Exp ')'
+
+is it obvious that this accurately
+captures all expressions?
+can you identify the
+associativity and precedence
+of these operators?
+
+what if, like C or C++, we had 15 precedence levels and
+dozens of operators? how readable would that be?
+15
+
+So no! We won't do it!
+● because we're defining our language's grammar a bit loosely, it
+doesn't really matter if our grammar is 100% accurate.
+o instead, the ambiguities in the grammar are resolved by the table
+of precedence and associativity.
+● any complex idea can be expressed in multiple different ways.
+o unless you have some kind of externally-imposed reason to stick
+with one way of writing something…
+o it makes sense to use different ways according to their strengths.
+● so…
+o how do we write an algorithm to parse this stuff??
+
+16
+
+Bottom-up parsing
+
+17
+
+The core of the algorithm
+● let's assume we only have left-associative binary operators.
+● so, to parse Term (BinaryOp Term)*, we can write something like:
+let mut LHS = parse_term();
+while current token is a binary operator {
+let op = current token;
+move to next token;
+let RHS = parse_term();
+LHS = AstNode::new(LHS, op, RHS);
+}
+return LHS;
+● it might seem strange to replace the contents of the LHS variable
+inside the loop, but this is how it builds up the tree.
+
+18
+
+Okay, let's try it (animated)
+● given this sequence of tokens, let's see what happens:
+
+x + y - z <eof>
+Token Action
+
+x
++
+y
+z
+<eof>
+
+LHS = parse term
+
+LHS
+
++
+
+stop looping!
+
+y
+
+(x + y)
+
+op = -, loop!
+RHS = parse term
+LHS = (LHS op RHS)
+
+RHS
+
+x
+
+op = +, loop!
+RHS = parse term
+LHS = (LHS op RHS)
+
+op
+
+-
+
+z
+((x + y) - z)
+19
+
+That's why it's called bottom-up (animated)
+● this algorithm produces a tree that branches to the left, like this.
+
+a + b + c + d + e
+but if we allow all the operators, what
+would be a problem input for this?
+
++
++
+
++
++
+a
+
+x + y * z
+
+e
+
+*
+
+d
++
+
+c
+b
+
+and it builds it…
+bottom up!
+
+x
+
+z
+y
+
+it was a little too
+eager to produce
+(x + y), when it
+didn't know that
+there was a *
+coming up.
+20
+
+Accounting for precedence
+● we have to tweak our algorithm a bit.
+let mut LHS = parse_term();
+while current token is a binary operator {
+let op = current token;
+move to next token;
+at this point, we don't know if RHS is
+let RHS = parse_term();
+our second operand, or if it's the next
+
+operator's first operand.
+
+so, we'll have to check if the current token is a binary operator
+whose precedence is higher than op's.
+and if that's the case, we um. uh.
+
+wait, what do we do then?
+
+LHS = AstNode::new(LHS, op, RHS);
+}
+
+21
+
+Implicit parentheses
+● if you think about what we're doing in a different way…
+
+a +(b * c * d * e)+ f
+we're sort of inserting parentheses as we go.
+so when we see the first *, we should say "oh, the left
+parenthesis goes before b…
+
+"…and the right parenthesis goes before the first operator that has
+a lower precedence than multiplication."*
+since we want to put the parsing of + on hold, the most
+natural way to parse the multiplications is to recurse.
+
+(let's look at the example to see how this is done.)
+22
+
+How that parses (animated)
+● Looking at this input again, let's see how the AST is built for it:
++
+
+a + b * c * d * e + f
+1. a is parsed.
+
+f
+
++
+
+2. b is parsed.
+3. * is seen, causing us to recurse. + is put "on hold."
+
+*
+
+4. the subtree of multiplications is parsed.
+
+5. that subtree is returned and becomes +'s RHS.
+6. the final + f is parsed.
+Right-branching is done by the
+Recursion;
+Left-branching is done by the
+Loop.
+
+*
+
+*
+a
+
+b
+
+e
+
+d
+c
+23
+
+Finishing up by parsing terms
+● finally, these are more straightforward.
+Term: UnaryOp* PrimaryExp PostfixOp*
+● since the unary operators are Right-associative…
+o you got it: we have to Recurse to build the AST for those.
+● after that, primary expressions are straightforward.
+o parenthesized expressions will work just fine, because ')' is not an
+operator, and will cause the operator parsing loop to terminate.
+● and finally, postfix expressions come after the primaries.
+o the primary has to be passed to the postfix parser, so that it can
+become the LHS of those postfix operators.
+o postfix operators are Left-associative, so we can use a Loop.
+o also, it's not an error to see 0 postfix operators. they’re optional!
+
+24
+
+What about right-associative binary operators?
+● right-associativity is another kind of right-branching.
+o so, we would have to change the recursion condition in the binary
+operator parsing.
+● currently we recurse when we see an operator of higher precedence.
+o we will also recurse when we see a right-associative operator of
+the same or higher precedence.
+● this is so if you have multiple right-associative operators in a row of
+the same precedence, you still get the right-branching structure.
+● in a ** b ** c…
+o we see that the second ** has the same precedence as the first
+o so we recurse, giving us an RHS of b ** c
+o ultimately giving us a ** (b ** c)
+
+25
+
+Things to think about
+
+26
+
+Bottom-up parsing without recursion
+● by using auxiliary stack data structures, we could remove the need for
+recursion entirely.
+● did any of you do the expression evaluation assignment in 445?
+o where you had an operator stack and an operand stack?
+● if you still have that code, try going back and looking at it.
+● what if the operand stack held AST nodes, instead of Doubles?
+o and when you handle names/operands, you pushed AST nodes?
+● and in the parts where you pop operators and evaluate…
+o what if, instead of evaluating, you created/pushed AST nodes?
+● that's it, that's a parser, you already made most of an expression parser
+and you didn't even know it
+
+27
+
+Can we parse everything with bottom-up parsing?
+● Yes!
+● actually, generalized bottom-up parsing is more powerful than topdown parsing!
+o there are some grammars that top-down parsers can never parse.
+● however…
+o once you move beyond expressions it gets stupidly complex
+o the complexity is not really justified for programming languages
+▪ their grammars are typically not that complicated
+o so it's mostly out of the scope of this course, IMO
+● for our language, we can parse everything using a hybrid approach:
+o use recursive descent for the program's broad structure
+o use bottom-up for expressions
+
+28
+
+How does that work though?
+● well, expressions only appear inside other pieces of code.
+● so, a grammar might look like this:
+Program:
+Function*
+Function:
+'fn' Id '(' ')' Block
+Block:
+'{' Stmt* '}'
+Stmt:
+IfStmt | ExpStmt | AssignStmt
+IfStmt:
+'if' Exp Block ('else' Block)?
+ExpStmt:
+Exp ';'
+AssignStmt: Exp '=' Exp ';'
+● all of these rules would be parsed with recursive descent…
+● and whenever we need to parse an Exp, we use bottom-up parsing.
+
+29
+
+Syntactic Sugar
+
+30
+
+Yummy
+● each language feature adds complexity in every stage of the
+compiler: lexing, parsing, semantics, optimization, code generation…
+● so, one approach to adding features to our languages is by defining
+them in terms of other, simpler features that already exist.
+let lhs = self.parse_term()?;
+this is syntactic sugar, and it's called that because
+it usually makes your code easier to write.
+let lhs = match self.parse_term() {
+Ok(x) => x,
+Err(e) => return Err(e),
+};
+31
+
+Another example
+● Java's generic for loop is just sugar for using an iterator.
+for(int i : someCollection) { … }
+
+● becomes something like:
+for(Iterator<Integer> iter = someCollection.iterator();
+iter.hasNext(); )
+{
+int i = iter.next().intValue();
+…
+}
+
+32
+
+How is it implemented?
+● by desugaring: rewriting the AST after parsing.
+o we saw previously that trees are easy to create and manipulate.
+● but we have to be a little careful.
+o up next is semantic analysis, and if we desugar the code before
+then, it might give really confusing errors about code that the
+programmer didn't write!
+● but that's it for parsing!
+
+33
+
+

@@ -1,0 +1,557 @@
+=== METRICS ===
+true_positives   : 25
+false_positives  : 7
+false_negatives  : 47
+precision        : 0.7812
+recall           : 0.3472
+f1               : 0.4808
+accuracy         : 0.3472
+
+TRUE POSITIVES (25):
+   • abstract syntax tree
+   • ast
+   • astnode
+   • backtracking
+   • cfgs
+   • derivation
+   • enum
+   • err
+   • expressions
+   • grammar
+   • lexer
+   • lexing
+   • lisp
+   • nonterminals
+   • ok
+   • parseerror
+   • parser
+   • parsing
+   • recursive descent
+   • result
+   • rust
+   • semantic analysis
+   • struct
+   • token
+   • top-down parsing
+
+FALSE POSITIVES (7):
+   • ?
+   • error recovery
+   • exp
+   • id
+   • num
+   • parens
+   • parseresult
+
+FALSE NEGATIVES (47):
+   • 0+repetition
+   • accurate error messages
+   • accurate errors
+   • alternation
+   • an array/vector
+   • ast nodes
+   • backtrack
+   • column
+   • compile
+   • compiler
+   • compiler errors
+   • compilers
+   • easy-toparse
+   • error
+   • error handling
+   • error messages
+   • error recovery.
+   • error recovery:
+   • error reporting
+   • errors
+   • exponential time
+   • expression
+   • grammar rule
+   • limits of recursive descent
+   • line
+   • location information
+   • match
+   • option <a>
+   • parse
+   • parse_thing
+   • produce
+   • recover
+   • recursive
+   • recursive descent parser
+   • result-returning
+   • results
+   • root rule
+   • rule
+   • rules
+   • rust's
+   • sentences
+   • sequencing
+   • syntax error
+   • terminals
+   • tokens
+   • unambiguously
+   • x?
+=== METRICS ===
+true_positives   : 31
+false_positives  : 8
+false_negatives  : 62
+precision        : 0.7949
+recall           : 0.3333
+f1               : 0.4697
+accuracy         : 0.3333
+
+TRUE POSITIVES (31):
+   • abi
+   • abis
+   • api
+   • application binary interface
+   • application binary interfaces
+   • architectural abi
+   • calling convention
+   • exceptions
+   • fp
+   • frame pointer
+   • function epilogue
+   • function prologue
+   • isa
+   • language abi
+   • local variables
+   • os abi
+   • return address
+   • runtime libraries
+   • runtime library
+   • shared libraries
+   • sp
+   • stack frame
+   • stack frames
+   • stack overflow
+   • stack pointer
+   • standard libraries
+   • standard library
+   • stdlib
+   • syscall
+   • system calls
+   • tracing garbage collector
+
+FALSE POSITIVES (8):
+   • dynamic method dispatch
+   • function closures
+   • mars
+   • mips
+   • object file formats
+   • ra
+   • reference types
+   • string literals
+
+FALSE NEGATIVES (62):
+   • .data segment
+   • alignment
+   • architectural or os abis
+   • argument
+   • arguments
+   • asynchronous messages
+   • backend
+   • callee
+   • callee's
+   • caller
+   • caller's
+   • calling
+   • calling conventions
+   • calling functions
+   • cleans the stack
+   • code generator
+   • codegen
+   • compiled
+   • compiler
+   • compiler's
+   • compilers
+   • dynamic method dispatch!
+   • dynamically allocated
+   • epilogue
+   • executables
+   • function calls
+   • generating code
+   • generating the code
+   • global variable
+   • global variables
+   • globals
+   • heap
+   • hll
+   • hlls
+   • local
+   • local variable
+   • locals
+   • machine code
+   • memory
+   • memory regions
+   • method calls
+   • operating system
+   • operating systems
+   • os
+   • oses
+   • popping
+   • println_i
+   • pushing
+   • return values
+   • runtime
+   • runtime data representation
+   • saved registers
+   • stack
+   • stack,
+   • stack/frame pointers
+   • standard and runtime libraries
+   • syscalls
+   • system call
+   • truss
+   • truss's
+   • truss’s
+   • variables
+=== METRICS ===
+true_positives   : 17
+false_positives  : 13
+false_negatives  : 55
+precision        : 0.5667
+recall           : 0.2361
+f1               : 0.3333
+accuracy         : 0.2361
+
+TRUE POSITIVES (17):
+   • atv rule
+   • block statements
+   • callee
+   • caller
+   • calling convention
+   • control flow statements
+   • dynamic memory allocation
+   • epilogue
+   • fp
+   • prologue
+   • register allocation
+   • runtime library
+   • s registers
+   • saved registers
+   • short-circuiting
+   • sp
+   • stack frame
+
+FALSE POSITIVES (13):
+   • a registers
+   • comparison operators
+   • global variable
+   • jal
+   • lazy operators
+   • ra
+   • rt$new_array
+   • runtime representation
+   • saved register contract
+   • t registers
+   • t0
+   • v registers
+   • v0
+
+FALSE NEGATIVES (55):
+   • a.length
+   • accessing variables
+   • allocate arrays
+   • allocating arrays
+   • arguments
+   • array
+   • array allocations
+   • array types
+   • arrays
+   • ast
+   • block
+   • body
+   • call
+   • caller's
+   • code generation
+   • codegen
+   • codegen-related
+   • data
+   • dynamically allocates
+   • epilogue,
+   • epilogue;
+   • evaluating expressions
+   • evaluation rules
+   • expressions
+   • field
+   • generate code
+   • generating code
+   • heap
+   • hlls
+   • length
+   • lexer
+   • lexing
+   • locals
+   • parsing
+   • pop
+   • popping
+   • push
+   • pushing
+   • registers
+   • return value
+   • runtime error checking
+   • runtime semantics
+   • saved (s) registers
+   • saved register
+   • semantic analysis
+   • semantics
+   • stack
+   • stacks
+   • standard library
+   • temporaries
+   • tokens
+   • trees
+   • type
+   • types
+   • typing rules
+=== METRICS ===
+true_positives   : 32
+false_positives  : 9
+false_negatives  : 81
+precision        : 0.7805
+recall           : 0.2832
+f1               : 0.4156
+accuracy         : 0.2832
+
+TRUE POSITIVES (32):
+   • alignment
+   • base class
+   • classes
+   • constructors
+   • data inheritance
+   • data layout
+   • derived class
+   • dynamic dispatch
+   • indirect function call
+   • memory allocator
+   • method call
+   • method inheritance
+   • methods
+   • nominal identity
+   • object-oriented programming
+   • padding
+   • privacy
+   • record type
+   • reference types
+   • rtti
+   • runtime type identification
+   • static dispatch
+   • struct padding
+   • structs
+   • structural identity
+   • subtype
+   • tuple
+   • value types
+   • virtual method calls
+   • virtual method tables
+   • virtual methods
+   • vtables
+
+FALSE POSITIVES (9):
+   • bottom type
+   • function pointers
+   • multiple inheritance
+   • nullable reference types
+   • prefixed representation
+   • primitive types
+   • supertype
+   • type information
+   • unit
+
+FALSE NEGATIVES (81):
+   • access a field
+   • accessing fields
+   • align
+   • aligned
+   • allocates
+   • allocating
+   • allocation
+   • allocations
+   • anonymous
+   • array
+   • arrays
+   • base type
+   • class
+   • class instance
+   • compile-time
+   • compiler
+   • constructor
+   • copied
+   • data
+   • dynamically allocate
+   • dynamically-sized data structures
+   • end-padding,
+   • field access
+   • fields
+   • final
+   • generate code
+   • indirection
+   • inheritance
+   • inheriting
+   • inherits
+   • instance
+   • instances
+   • interface
+   • interfaces
+   • jalr
+   • length
+   • lexing
+   • method
+   • method calls
+   • misaligned
+   • named
+   • null
+   • obj.method
+   • object
+   • offset
+   • offsets
+   • oop
+   • operations on that data
+   • override
+   • padded
+   • parsing
+   • prefixed
+   • prefixing
+   • private
+   • protected
+   • public
+   • reference
+   • reference type
+   • reference variable
+   • references
+   • run-time type identification
+   • runtime
+   • runtime library
+   • semantic
+   • semantic analysis
+   • size
+   • struct
+   • struct runtime representation
+   • structs,
+   • structured types
+   • subtypes
+   • subtyping
+   • supertype's
+   • syntactic sugar
+   • tuples
+   • type
+   • types
+   • unaligned
+   • value type
+   • virtual method
+   • vtable
+=== METRICS ===
+true_positives   : 31
+false_positives  : 13
+false_negatives  : 56
+precision        : 0.7045
+recall           : 0.3563
+f1               : 0.4733
+accuracy         : 0.3563
+
+TRUE POSITIVES (31):
+   • basic block
+   • basic blocks
+   • bb
+   • cfg
+   • conditional terminator
+   • constant
+   • constants
+   • control flow analysis
+   • control flow graph
+   • control flow graphs
+   • data flow analysis
+   • entry point
+   • function addresses
+   • goto terminator
+   • intermediate representation
+   • ir
+   • isa
+   • local
+   • locals
+   • lowering
+   • optimization
+   • place
+   • places
+   • postorder
+   • predecessors
+   • return terminator
+   • source
+   • sources
+   • successors
+   • temporaries
+   • terminators
+
+FALSE POSITIVES (13):
+   • back edge
+   • function address
+   • mips
+   • mips abi
+   • mips backend
+   • mir
+   • optimizations
+   • predecessor
+   • rustc
+   • successor
+   • temporary registers
+   • x86
+   • x86 backend
+
+FALSE NEGATIVES (56):
+   • (
+   • abi
+   • abstract syntax tree
+   • arguments
+   • assembly language
+   • ast
+   • asts
+   • backend
+   • bb's
+   • bbs
+   • blocks
+   • code generation
+   • code generator
+   • codegen
+   • compiler
+   • compilers
+   • control flow
+   • depth-first traversal
+   • flowchart
+   • flowcharts
+   • frontend
+   • function calls
+   • function's address
+   • goto
+   • graph
+   • graphs
+   • instructions
+   • local variables
+   • machine code
+   • machine/assembly code
+   • node
+   • nodes
+   • operands
+   • parsing
+   • register allocation algorithms
+   • return
+   • return value
+   • return values
+   • returning statements
+   • returns
+   • semantic
+   • semantic analysis
+   • source language
+   • sources,
+   • stack frames
+   • structure
+   • target language
+   • target languages
+   • terminator
+   • tree
+   • truss
+   • type
+   • typed
+   • visit_node
+   • visiting
+   • visiting arbitrary graphs

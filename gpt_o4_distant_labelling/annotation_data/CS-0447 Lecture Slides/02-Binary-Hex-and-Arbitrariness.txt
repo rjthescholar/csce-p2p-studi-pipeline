@@ -1,0 +1,940 @@
+#1
+CS 0447
+Introduction to
+Computer Programming
+
+Binary, Hex, Octal
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce Childers, David
+Wilkinson
+
+Luís Oliveira
+
+Fall 2020
+
+What do I need to know now!
+The classes will be recorded!
+● You will be able to access the videos online
+o They are for your personal use only!
+o Do not distribute them!
+● You don’t need to turn on your camera
+o If you do, you may be recorded
+● You can ask questions via text!
+o Chat is great for that. If I don’t stop and read your questions, ask them again
+o But feel free to interrupt me at any point.
+
+2
+
+Class Announcements
+Recitation are happening!!
+
+3
+
+Summary
+● Numbers and bases
+o Why is 2020 worth 2020??
+o Or is it?
+▪ Maybe it’s worth 8224?
+● Number representation
+o Binary – what do 0s and 1s mean?
+● Other representations
+o Hexadecimal and octal
+● How does a computer interpret them?
+o (bait) The answer will surprise you!!
+
+4
+
+Numbers and bases
+
+5
+
+Positional number systems
+● The numbers we use are written positionally: the position of a digit within
+the number has a meaning.
+
+3
+2 x 10
+
+2000
+2
+0 0 0 0 x 10
+=
+2021=
+1
+2 0 2 x 10
+0
++
+1 1 x 10
+6
+
+Positional number systems
+● The numbers we use are written positionally: the position of a digit within
+the number has a meaning.
+
+2021
+
+Most Significant
+
+Least Significant
+
+1000s
+
+100s
+
+10s
+
+1s
+
+103
+
+102
+
+101
+
+100
+
+● How many (digits) symbols do we have in our number system?
+○ 10: 0, 1, 2, 3, 4, 5 ,6 ,7, 8, 9
+
+7
+
+Range of numbers
+Suppose we have a 4-digit numeric display.
+
+● What is the smallest number it can show?
+● What is the biggest number it can show?
+● How many different numbers can it show?
+o 9999 - 0 + 1 = 10,000
+o What power of 10 is 10,000?
+▪ 104
+
+8
+
+So… with the numbers we use every day…
+● A number represented by the digits
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+● Has the value
+𝑑𝑛 × 10𝑛 + 𝑑𝑛−1 × 10𝑛−1 + ⋯ + 𝑑1 × 101 + 𝑑0 × 100
+● Using 𝑛 digits we can represent 10𝑛 different numbers
+● The smallest non-negative number representable with 𝑛 digits is 0
+● The largest number representable with 𝑛 digits is 10𝑛 − 1
+● Using 10 symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+9
+
+Numeric Bases
+● These 10s keep popping up… and for good reason
+● We use a base-10 (decimal) numbering system
+o 10 different symbols, and each place is a power of 10
+● But we can use (almost) any number as a base!
+● The most common bases when dealing with computers are base-2 (binary), base-16
+(hexadecimal), and (rarely) base-8 (octal)
+● When dealing with multiple bases, you can write the base as a subscript to be explicit
+about it:
+
+510 = 1012
+
+10
+
+Making a number system
+Using base B
+● A number represented by the digits
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+● Has the value
+𝑑𝑛 × B𝑛 + 𝑑𝑛−1 × B𝑛−1 + ⋯ + 𝑑1 × B1 + 𝑑0 × B0
+● Using 𝑛 digits we can represent B𝑛 different numbers
+● The smallest non-negative number representable with 𝑛 digits is 0
+● The largest number representable with 𝑛 digits is B𝑛 − 1
+
+● Using B symbols
+If you use base 0 you
+don’t need to
+remember any symbols
+
+11
+
+Binary – Base 2
+
+12
+
+How many symbols in binary????
+
+13
+
+Let's make a base-2 number system
+Using base 2
+● A number represented by the digits
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+● Has the value
+𝑑𝑛 × 2𝑛 + 𝑑𝑛−1 × 2𝑛−1 + ⋯ + 𝑑1 × 21 + 𝑑0 × 20
+● Using 𝑛 digits we can represent 2𝑛 different numbers
+● The smallest non-negative number representable with 𝑛 digits is 0
+● The largest number representable with 𝑛 digits is 2𝑛 − 1
+
+● Using 2 symbols: 0, 1
+14
+
+Binary (base-2)
+
+• We call a Binary digIT a bit – a single 1 or 0
+• When we say an n-bit number, we mean one with n binary digits
+
+1001 0110 =
+MSB
+
+27 26 25 24
+128s 64s 32s 16s
+
+LSB
+
+23
+8s
+
+22
+4s
+
+21 20
+2s 1s
+
+To convert binary to decimal: ignore 0s, It’s the only
+add up place values wherever you see a 1. odd number!
+
+1 × 128 +
+0 × 64 +
+0 × 32 +
+1 × 16 +
+0×8+
+1×4+
+1×2+
+0×1
+
+= 15010
+15
+
+Making change
+● You want to give someone $9.63 in change, using the fewest bills and coins possible.
+How do you count it out?
+
+$5×1
+$1× 4
+25¢× 2 10¢× 1 5¢× 0
+1¢×__
+3
+Left: $9.63 -$5= $4.63 -$4= $0.63 -50¢= $0.13-10¢=$0.03 -0¢=$0.03 -3¢=$0.00
+
+• Biggest to smallest
+• Most significant to least significant
+• WHERE COULD THIS BE GOING...
+16
+
+Converting decimal to binary
+
+• You want to convert the number 8310 to binary.
+128s
+
+64s
+
+32s
+
+16s
+
+8s
+
+4s
+
+2s
+
+1s
+
+Left: 83- 0 =83- 64 =19 - 0 = 19- 16 = 3 - 0 = 3 - 0 = 3 - 2 = 1 - 1 = 0
+
+01010011
+
+• For each place from MSB:
+• If place value < remainder:
+
+o digit = 1
+o remainder = remainder - place
+• Else, digit = 0.
+17
+
+Bits, bytes, nibbles, and words
+● A bit is one binary digit, and its unit is lowercase b.
+
+● A byte is an 8-bit value, and its unit is UPPERCASE B.
+o This is (partially) why your 30 megabit (Mbps) internet connection can only give you
+at most 3.57 megabytes (MB) per second!
+● A nibble (also nybble) is 4 bits – half of a byte
+o Corresponds nicely to a single hex digit.
+
+● A word is the "most comfortable size" of number for a CPU.
+● When we say "32-bit CPU," we mean its word size is 32 bits.
+o This means it can, for example, add two 32-bit numbers at once.
+● BUT WATCH OUT:
+o Some things (Windows, x86) use word to mean 16 bits and double word (or
+dword) to mean 32 bits.
+
+18
+
+Kilo, mega, tera
+Potatoes
+
+Bytes
+
+Bytes
+
+1g (gram)
+
+1B (Byte)
+
+1B (Byte)
+
+1kg (Kilogram) = 1000g
+
+1kB (Kilobyte) = 1000B
+
+1kiB (Kibibyte) = 1024B
+(power of 2 nearest to 1000)
+
+1Mg (Megagram) = 1000Kg
+
+1MB (Megabyte) = 1000kB
+
+1MiB (Mebibyte) = 1024kiB
+
+1Gg (Gigagram) = 1000Mg
+
+1GB (Gigabyte) = 1000MB
+
+1GiB (Gibibyte) = 1024MiB
+
+1Tg (Teragram) = 1000Gg
+
+1TB (Terabyte) = 1000GB
+
+1TiB (Tebibyte) = 1024GiB
+
+1Eg (Exagram) = 1000Tg
+
+1EB (Exabyte) = 1000TB
+
+1EiB (Exbibyte) = 1024TiB
+
+Used for hard drive capacity and
+network speeds
+
+Used for most other things!
+Because binary!
+
+A 1TB drive only has 931GiB!
+
+19
+
+The real world IS CONFUSING!!!!
+
+931GB
+
+931GiB
+
+Sometimes this is used to mean
+931GiB 
+
+This always means 931GiB! ☺
+
+20
+
+Why binary? Whynary?
+
+• Why indeed?
+o log 2 10 = 3.322
+o The number of bits required to represent 10 digits
+o The increase on number of components in a computer!
+
+• Because it’s soooooo much easier to implement the hardware!
+o And robust!
+
+• Arithmetic becomes really easy (as we'll see in several weeks)
+
+21
+
+Why binary? Whynary?
+● Why indeed?
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+● What color is this?
+
+22
+
+Why binary? Whynary?
+● Why indeed?
+0
+
+1
+
+● What color is this?
+
+23
+
+Why binary? Whynary?
+
+• Why indeed?
+o log 2 10 = 3.322
+o The number of bits required to represent 10 digits
+o The increase on number of components in a computer!
+
+• Because it’s soooooo much easier to implement the hardware!
+o And robust!
+
+• Arithmetic becomes really easy (as we'll see in several weeks)
+
+24
+
+Everything in a computer is a number
+● So, everything on a computer is represented in binary.
+o everything.
+01100101 01110110 01100101 01110010 01111001 01110100 01101000
+01101001 01101110 01100111 00001010 00000000
+● Java strings are encoded using UTF-16
+o Most letters and numbers in the English alphabet are < 128.
+o “Strings are numbers”
+▪ 83 116 114 105 110 103 115 32 97 114 101 32 110 117 109 98 101 114 115 0
+● ASCII is also pretty common (the best kind of common)
+o That’s what we will be using → 8 bit numbers represent characters
+o Letters and numbers (and most/all ascii characters) have the same value as UTF-16
+
+CS 0007 – Summer 2020
+
+Do try this at home: what does this mean?
+• 71 111 111 100 32 74 111 98 0
+25
+
+EVERYTHING
+
+• Images and colors? Numbers!
+• Videos? Numbers!
+
+CS 0007 – Summer 2020
+
+122
+
+185
+
+32
+
+239
+
+97
+
+181
+
+181
+
+40
+
+41
+
+26
+
+One number, many possible meanings
+● All information on computers is stored as patterns of bits, but…
+● How these bits are interpreted, transformed, and displayed is up to the
+programmer and the user.
+
+-59
+
+Signed integer
+
+R3G3B2 color
+
+11000100
+
+Unsigned integer
+
+196
+
+z80 instruction
+
+Hexadecimal
+
+0xC4
+
+Unicode
+
+Ä
+
+call nz
+27
+
+What it means to be "arbitrary"
+
+• It means there's no reason for it to be that way.
+• we just know/agree that it's how things are.
+• One of the biggest things I want you to know is:
+What a pattern of bits means is arbitrary.
+
+• As a corollary:
+The same pattern of bits can be interpreted many
+different ways.
+
+28
+
+The calculat--hum--computer doesn't know or care.
+● when writing assembly (and C!) programs, the computer has no idea what you
+mean, cause nothing means anything to it
+● "my program assembles/compiles, why is it crashing?"
+o cause the computer is stupid
+▪ it's a big fast calculator
+● there's no difference between nonsense code and useful code
+● it's good at doing fun things with bit patterns
+● but don't confuse what it does with intelligence
+● every "smart" thing a computer does, it does because a human programmed it
+to act like that
+
+29
+
+Hexadecimal – Base 16
+
+30
+
+How many symbols in hexadecimal????
+
+31
+
+Shortcomings of binary and decimal
+● Binary numbers can get really long, really quickly.
+o 3,927,66410 = 11 1011 1110 1110 0111 00002
+● But nice "round" numbers in binary look arbitrary in decimal.
+o 10000000000000002 = 32,76810
+
+● This is because 10 is not a power of 2!
+● We could use base-4, base-8, base-16, base-32, etc.
+o Base-4 is not much concise than binary
+▪ e.g. 3,927,66410 = 120 3331 2323 00004
+o Base-32 and up? would require 32+ symbols. Nope.
+▪ Well at least for humans… They are actually used!
+o Base-8 and base-16 look promising!
+32
+
+Let's make a base-2 16 number system
+Using base 16
+● A number represented by the digits
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+● Has the value
+𝑑𝑛 × 16 𝑛 + 𝑑𝑛−1 × 16 𝑛−1 + ⋯ + 𝑑1 × 161 + 𝑑0 × 16 0
+● Using 𝑛 digits we can represent 𝟏𝟔𝑛 different numbers
+● The smallest non-negative number representable with 𝑛 digits is 0
+● The largest number representable with 𝑛 digits is 16 𝑛 − 1
+
+● Using 16 symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+33
+
+Hexadecimal, or "hex" (base-16)
+● Digit symbols after 9 are A-F, meaning 10-15 respectively.
+● Usually we call one hexadecimal digit a hex digit. No fancy name :(
+
+003B EE70 =
+
+167 166 165 164
+
+163 162 161 160
+
+To convert decimal to hex: use a calculator!
+
+0 × 167 +
+0 × 166 +
+3 × 165 +
+11 × 164 +
+14 × 163 +
+14 × 162 +
+7 × 161 +
+0 × 160 =
+
+3,927,66410
+
+34
+
+BUT WE REALLY WANT TO KNOW!!
+
+• Ok! then. Let’s go back to decimal for a bit
+
+2021
+2
+
+Just divide by 10!
+
+How would you
+extract this
+number???
+
+R0
+
+10 2 0 R 2
+10 2 0 2 R 1
+10 2 0 21
+35
+
+BUT WE REALLY WANT TO KNOW!!
+
+• Turns out that dividing by 10 in any base has the same outcome
+
+0x10 1610
+
+003B EE7016
+
+3
+1610 59
+
+R 11
+R 14
+
+R 14
+1610 958
+1610 15 342 R 7
+1610 245 479 R 0
+
+1610
+
+3 927 664
+
+36
+
+BUT WE REALLY WANT TO KNOW!!
+
+• Turns out that dividing by 10 in any base has the same outcome
+
+0b10
+
+210
+
+110012
+
+210
+210
+
+1
+
+R1
+
+3
+
+R0
+
+6
+
+R0
+R1
+
+210 12
+210 25
+
+37
+
+The relationship between binary and hex
+● Four bits are equivalent to one hex digit.
+● Converting between them is easy!
+● Say we had this binary number:
+
+11101111101110011100002
+
+● Starting from the LSB, divide into groups of 4
+bits (put 0s before the first digits if there are
+leftovers). Then use the table.
+
+0011 1011 1110 1110 0111 0000
+
+0x 3 B E E 7 0
+(this is common notation for hex,
+derived from the C language.)
+
+Bin
+
+Hex
+
+Bin
+
+Hex
+
+0000
+
+0
+
+1000
+
+8
+
+0001
+
+1
+
+1001
+
+9
+
+0010
+
+2
+
+1010
+
+A
+
+0011
+
+3
+
+1011
+
+B
+
+0100
+
+4
+
+1100
+
+C
+
+0101
+
+5
+
+1101
+
+D
+
+0110
+
+6
+
+1110
+
+E
+
+0111
+
+7
+
+1111
+
+F
+
+know how to make
+this table.
+38
+
+Let’s do it!
+
+100100011001111000011010010101
+
+39
+
+Let’s do it!
+
+00 10 0100 0110 0111 1000 0110 1001 0101
+
+2
+
+4
+
+6
+
+7
+
+8
+
+6
+
+9
+
+5
+
+2467869516
+
+0x24678695
+40
+
+Why?
+
+1111 1111
+1 × 27 + 1 × 26 + 1 × 25 + 1 × 24 + 1 × 23 + 1 × 22 + 1 × 21 + 1 × 20
+
+1 × 23 + 1 × 22 + 1 × 21 + 1 × 20 =
+8+4+2+1=
+15
+1 × 23 + 1 × 22 + 1 × 21 + 1 × 20 × 24 + 15
+15 × 161 + 15 × 160
+
+F
+
+F
+
+Factoring
+
+24 = 16
+41
+
+Powers of Two
+● Memorize at least the powers up to ~28 or 210.
+o If you can't remember one, double the previous one.
+
+Dec
+
+Hex
+
+20
+
+1
+
+0x1
+
+21
+
+2
+
+0x2
+
+22
+
+4
+
+0x4
+
+23
+
+8
+
+0x8
+
+24
+
+16
+
+0x10
+
+● How about a 16-bit value?
+o 65535: 0xFFFF
+
+25
+
+32
+
+0x20
+
+26
+
+64
+
+0x40
+
+● "0xFFFF" is kinda like "9999" in decimal.
+
+27
+
+128
+
+0x80
+
+28
+
+256
+
+0x100
+
+● These are the place values for binary, and they are also
+nice "round" numbers in binary and hex.
+● What is the largest number that an 8-bit value can hold?
+What is that in hexadecimal?
+o 255: 0xFF
+
+42
+
+Octal – Base 8
+
+43
+
+How many symbols in octal????
+
+44
+
+Base-8?
+● base-8, octal, used to be commonplace but isn't anymore
+● each octal digit (0-7) corresponds to three bits
+o this made it a nice fit for 9-, 12-, 18-, and 36-bit machines
+● buuuut no one cares about octal anymore 
+● SORRY OCTAL
+o it's okay, it has its revenge from time to time
+o try this out in Java sometime:
+
+System.out.println("012345 = " + 012345);
+
+45
+
+Let’s do it!
+
+100100011001111000011010010101
+
+46
+
+Let’s do it!
+
+100 100 011 001 111 000 011 010 010 101
+
+4
+
+4
+
+3
+
+1
+
+7
+
+0
+
+3
+
+44317032258
+04431703225
+0o4431703225
+
+2
+
+2
+
+5
+
+47
+
+Next class!
+
+• Assembly!!!!!
+
+o How can we program the computer?
+o New language -> new bugs!
+
+• Specifically
+
+o Storing and retrieving data from memory
+o Manipulating the data
+
+48
+
+

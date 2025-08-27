@@ -1,0 +1,707 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Lab 3: due on 4/1
+• Homework 9: due on 4/4
+• Project 3: due on 4/11
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous lecture …
+• The problem of large page tables
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Muddiest Points (1/2)
+• How to determine number of bits (2^n) from day 4gb or
+4kb
+
+• Calculating the PTE frame number size.
+• calculating the number of frames
+• userspace page replacement
+• For the final top hat question, how did we get 24 in the
+answer 24*(2^20)? I understand that we did log(2^20) to
+get 20, but where did the extra 4 come from?
+• I don't understand the last two examples about
+calculating the PTE s and frames, what information
+(values) do we need to look at in terms of different
+questions?
+• Could you list the formulas for page table entries?
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Muddiest Points (2/2)
+• In the OPT simulation, why do we only re order the
+pages above the one we want? Wouldn't it be better
+to re order everything?
+• OPT trace was slightly confusing of what switches
+where
+• How to find the number of writes for LRU and OPT?
+• How to calculate the distance in the tables we made
+• Are local or global selection policies more common in
+modern OS’s?
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Problem of the Day
+
+• How to keep track of larger page tables that can store
+more pages
+• How big can a page table be?
+• 64-bit machine
+• 4 KB page size
+
+• How many pages?
+• How many PTE?
+• How big is a PTE?
+• How big is the page table of one process?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Address Translation Structures
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Memory & paging structures
+Physical
+memory
+
+Page frame number
+
+Page 0
+Page 1
+Page 2
+Page 3
+Page 4
+Logical memory (P0)
+
+6
+3
+4
+9
+2
+Page table (P0)
+
+Page 0
+Page 1
+
+8
+0
+
+Logical memory (P1)
+
+Page table (P1)
+
+0
+
+Page 1 (P1)
+
+1
+2
+3
+
+Free
+pages
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Page 4 (P0)
+Page 1 (P0)
+Page 2 (P0)
+
+5
+6
+
+Page 0 (P0)
+
+7
+8
+9
+
+Page 0 (P1)
+Page 3 (P0)
+
+8
+
+Mapping logical => physical address
+◼
+
+Split address from CPU into two
+pieces
+Page number (p)
+◼ Page offset (d)
+◼
+
+◼
+
+Page number
+
+Example:
+• 4 KB (=4096 byte) pages
+• 32 bit logical addresses
+
+Index into page table
+2d = 4096
+◼ Page table contains base address of
+page in physical memory
+◼
+
+◼
+
+Page offset
+◼
+
+◼
+
+d = 12
+
+Added to base address to get actual
+physical memory address
+
+32-12 = 20 bits
+
+12 bits
+
+p
+
+d
+
+Page size = 2d bytes
+
+32 bit logical address
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+Address translation architecture
+page number
+
+CPU
+
+p
+
+Page frame number
+
+Page frame number
+
+page offset
+
+d
+0
+1
+p-1
+p
+p+1
+
+f
+
+d
+
+..
+.
+
+..
+.
+f
+
+..
+.
+
+0
+1
+
+f-1
+f
+f+1
+f+2
+
+physical memory
+page table
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+Memory Sizes
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+Address Translation Relations
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+Page number vs. Offset
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Solution 1: Two-level page tables
+◼
+
+Problem: page tables can be too
+large
+◼
+
+◼
+
+◼
+
+◼
+
+220
+657
+
+Solution: use multi-level page
+tables
+◼
+
+◼
+
+232 bytes in 4KB pages need 1
+million PTEs
+
+“Page size” in first page table is
+large (megabytes)
+PTE marked invalid in first page
+table needs no 2nd level page
+table
+
+..
+.
+
+401
+
+..
+.
+
+1st level page table has pointers to
+1st level
+2nd level page tables
+page table
+2nd level page table has actual
+physical page numbers in it
+2nd level
+page tables
+CS 1550 – Operating Systems – Sherif Khattab
+
+125
+613
+
+..
+.
+
+961
+884
+960
+
+..
+.
+
+955
+
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+main
+memory
+14
+
+Two-level Page Table
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+15
+
+More on two-level page tables
+◼
+
+Tradeoffs between 1st and 2nd level page table
+sizes
+Total number of bits indexing 1st and 2nd level table is
+constant for a given page size and logical address
+length
+◼ Tradeoff between number of bits indexing 1st and
+number indexing 2nd level tables
+◼
+
+More bits in 1st level: fine granularity at 2nd level
+◼ Fewer bits in 1st level: maybe less wasted space?
+◼
+
+All addresses in table are physical addresses
+◼ Protection bits kept in 2nd level table
+◼
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+16
+
+Two-level paging: example
+◼
+
+System characteristics
+◼
+◼
+
+◼
+
+Page number divided into:
+◼
+◼
+
+◼
+
+8 KB pages
+32-bit logical address divided into 13 bit page offset, 19 bit page number
+10 bit page number
+9 bit page offset
+
+Logical address looks like this:
+◼
+◼
+
+p1 is an index into the 1st level page table
+p2 is an index into the 2nd level page table pointed to by p1
+
+page number
+p1 = 10 bits
+
+p2 = 9 bits
+
+page offset
+offset = 13 bits
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+17
+
+2-level address translation example
+page number
+p1 = 10 bits
+
+Page
+table
+base
+
+page offset
+
+p2 = 9 bits
+
+offset = 13 bits
+
+frame
+number
+0
+1
+
+physical address
+
+19
+
+0
+1
+p1
+
+..
+.
+
+0
+1
+
+..
+.
+
+p2
+
+1st level page table
+
+13
+
+..
+.
+..
+.
+
+..
+.
+..
+.
+main memory
+
+2nd level page table
+CS 1550 – Operating Systems – Sherif Khattab
+
+18
+
+Address Translation: 2-level Page Table
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+19
+
+TLB
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+20
+
+Translation Lookaside Buffer (TLB)
+◼
+
+Search the TLB for the desired logical
+page number
+◼
+◼
+
+◼
+
+◼
+
+Search entries in parallel
+Use standard cache techniques
+
+If desired logical page number is found,
+get frame number from TLB
+If desired logical page number isn’t found
+◼
+
+◼
+
+Get frame number from page table in
+memory
+Replace an entry in the TLB with the
+logical & physical page numbers from this
+reference
+
+Logical
+page #
+
+Physical
+frame #
+
+8
+unused
+2
+3
+12
+29
+22
+7
+
+3
+1
+0
+12
+6
+11
+4
+
+Example TLB
+CS 1550 – Operating Systems – Sherif Khattab
+
+21
+
+Handling TLB misses
+If PTE isn’t found in TLB, OS needs to do the lookup in the
+page table
+◼ Lookup can be done in hardware or software
+◼ Hardware TLB replacement
+◼
+
+CPU hardware does page table lookup
+◼ Can be faster than software
+◼ Less flexible than software, and more complex hardware
+◼
+
+◼
+
+Software TLB replacement
+OS gets TLB exception
+◼ Exception handler does page table lookup & places the result into the
+TLB
+◼ Program continues after return from exception
+◼ Larger TLB (lower miss rate) can make this feasible
+◼
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+22
+
+How long do memory accesses take?
+◼
+
+Assume the following times:
+TLB lookup time = a (often zero - overlapped in CPU)
+◼ Memory access time = m
+◼
+
+◼
+
+Hit ratio (h) is percentage of time that a logical page number
+is found in the TLB
+Larger TLB usually means higher h
+◼ TLB structure can affect h as well
+◼
+
+◼
+
+Effective access time (an average) is calculated as:
+EAT = (m + a)h + (m + m + a)(1-h)
+◼ EAT =a + (2-h)m
+◼
+
+◼
+
+Interpretation
+Reference always requires TLB lookup, 1 memory access
+◼ TLB misses also require an additional memory reference
+◼
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+23
+
+Effective Access Time
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+24
+
+EAT Calculation
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+25
+
+Solution 2: Inverted page table
+Reduce page table size further: keep one entry for
+each frame in memory
+◼ PTE contains
+◼
+
+Virtual address pointing to this frame
+◼ Information about the process that owns this page
+◼
+
+◼
+
+Search page table by
+Hashing the virtual page number and process ID
+◼ Starting at the entry corresponding to the hash result
+◼ Search until either the entry is found or a limit is
+reached
+◼
+
+Page frame number is index of PTE
+◼ Improve performance by using more advanced
+hashing algorithms
+◼
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+26
+
+Inverted page table architecture
+
+process ID
+
+pid
+
+page number
+
+page offset
+
+p = 19 bits
+
+offset = 13 bits
+
+p
+search
+0
+1
+k
+
+physical address
+19
+13
+pid0
+pid1
+pidk
+
+p0
+
+..
+.
+..
+.
+
+..
+.
+
+..
+.
+
+p1
+pk
+
+Page frame
+number
+0
+1
+
+k
+
+main memory
+
+inverted page table
+CS 1550 – Operating Systems – Sherif Khattab
+
+27
+
+Inverted Page Table Example
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+28
+
+

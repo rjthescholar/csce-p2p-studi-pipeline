@@ -1,0 +1,1207 @@
+Memory Hierarchy
+CS 1541
+Wonsun Ahn
+
+Using the PMU to
+Understand Performance
+
+2
+
+Experiment on kernighan.cs.pitt.edu
+● The source code for the experiments are available at:
+https://github.com/wonsunahn/CS1541_Spring2022/tree/main/res
+ources/cache_experiments
+● Or on the following directory at linux.cs.pitt.edu:
+/afs/cs.pitt.edu/courses/1541/cache_experiments/
+● You can run the experiments by doing ‘make’ at the root
+o It will take a few minutes to run all the experiments
+o In the end, you get two plots: IPC.pdf and MemStalls.pdf
+
+3
+
+Four benchmarks
+● linked-list.c
+o Traverses a linked list from beginning to end over and over again
+o Each node has 120 bytes of data
+● array.c
+o Traverses an array from beginning to end over and over again
+o Each element has 120 bytes of data
+
+● linked-list_nodata.c
+o Same as linked-list but nodes have no data inside them
+● array_nodata.c
+o Same as array but elements have no data inside them
+4
+
+Code for linked-list.c
+// Define a linked list node type with data
+typedef struct node {
+struct node* next; // 8 bytes
+int data[30];
+// 120 bytes
+} node_t;
+…
+// Create a linked list of length items
+void *create(void *unused) {
+for(int i=0; i<items; i++) {
+node_t* n = (node_t*)malloc(sizeof(node_t));
+if(last == NULL) { // Is the list empty? If so, the new node is the head and tail
+head = n;
+last = n;
+} else {
+last->next = n;
+last = n;
+}
+}
+}
+5
+
+Code for linked-list.c
+#define ACCESSES 1000000000
+
+// MEASUREMENT BEGIN
+// Traverse list over and over until we’ve visited `ACCESSES` nodes
+node_t* current = head;
+for(int i=0; i<ACCESSES; i++) {
+if(current == NULL) current = head;
+// reached the end
+else current = current->next;
+// next node
+}
+// MEASUREMENT END
+● Note: executed instructions are equivalent regardless of list length
+● So we expect performance to be same regardless of length. Is it?
+6
+
+Code for array.c
+// Define a linked list node type with data
+typedef struct node {
+struct node* next; // 8 bytes
+int data[30];
+// 120 bytes
+} node_t;
+…
+// Create a linked list but allocate nodes in an array
+void *create(void *unused) {
+head = (node_t *) malloc(sizeof(node_t) * items);
+last = head + items - 1;
+for(int i=0; i<items; i++) {
+node_t* n = &head[items];
+n->next = &head[items+1]; // Next node is next element in array
+}
+last->next = NULL;
+}
+7
+
+Code for array.c
+#define ACCESSES 1000000000
+
+// MEASUREMENT BEGIN
+// Traverse list over and over until we’ve visited `ACCESSES` nodes
+node_t* current = head;
+for(int i=0; i<ACCESSES; i++) {
+if(current == NULL) current = head;
+// reached the end
+else current = current->next;
+// next node
+}
+// MEASUREMENT END
+● Note: same exact loop as the linked-list.c loop.
+● So we expect performance to be exactly the same. Is it?
+8
+
+kernighan.cs.pitt.edu specs
+● Two CPU sockets. Each CPU:
+o Intel(R) Xeon(R) CPU E5-2640 v4
+o 10 cores, with 2 threads per each core (SMT)
+o L1 i-cache: 32 KB 8-way set associative (per core)
+o L1 d-cache: 32 KB 8-way set associative (per core)
+o L2 cache: 256 KB 8-way set associative (per core)
+o L3 cache: 25 MB 20-way set associative (shared)
+● Memory
+o 128 GB DRAM
+● Information obtained from
+o “cat /proc/cpuinfo” on Linux server
+o “cat /proc/meminfo” on Linux server
+o https://en.wikichip.org/wiki/intel/xeon_e5/e5-2640_v4
+9
+
+Experimental data collection
+● Collected using CPU Performance Monitoring Unit (PMU)
+o PMU provides performance counters for a lot of things
+o Cycles, instructions, various types of stalls, branch mispredictions,
+cache misses, bandwidth usage, …
+
+● Linux perf utility summarizes this info in easy to read format
+o https://perf.wiki.kernel.org/index.php/Tutorial
+
+10
+
+CPI (Cycles Per Instruction) Results
+Why the three “plateaus”?
+
+Why increase in CPI with larger size?
+
+Why is array
+faster than
+linked list?
+
+Why constant IPC, regardless of size?
+
+11
+
+Memory Stall Cycle Percentage
+The three “plateaus” are in memory stalls too!
+
+IPC decrease due to memory stall increases!
+
+Array has less
+memory stalls
+than linked list
+
+No IPC decrease because no increase in memory stalls!
+
+12
+
+Data Structure Performance ∝ Memory Stalls
+
+● Data structure performance is proportional to memory stalls
+o Applies to other data structures such as trees, graphs, …
+● In general, more data leads to worse performance
+o But why? Does more data make MEM stalls longer? (Hint: yes)
+o And why is an array not affected by data size? (I wonder …)
+● You will be able to answer all these questions when we are done.
+13
+
+Memory Technologies
+
+14
+
+Static RAM (SRAM)
+● SRAM uses a loop of NOT gates to
+store a single bit
+● This is usually called a 6T SRAM cell
+since it uses... 6 Transistors!
+● Pros:
+o Very fast to read/write
+● Cons:
+o Volatile (loses data without power)
+o Relatively many transistors needed
+-> expensive
+
+15
+
+Dynamic RAM (DRAM)
+● DRAM uses one transistor and one capacitor
+o The bit is stored as a charge in the capacitor
+o Capacitor leaks charge over time
+-> Must be periodically recharged (called refresh)
+-> During refresh, DRAM can’t be accessed
+o Accesses are slower
+-> Small charge must be amplified to be read
+-> Also after read, capacitor needs recharging again
+o Reading a DRAM cell is slower than reading SRAM
+● Pros:
+o Higher density -> less silicon -> much cheaper than SRAM
+● Cons:
+o Still volatile (even more volatile than SRAM)
+o Slower access time
+16
+
+Spinning magnetic disks (HDD)
+● Spinning platter coated with a ferromagnetic
+substance magnetized to represent bits
+o Has a mechanical arm with a head
+o Reads by placing arm in correct cylinder,
+and waiting for platter to rotate
+● Pros:
+o Nonvolatile (magnetization persists without power)
+o Extremely cheap (1TB for $50)
+● Cons:
+o Extremely slow (it has a mechanical arm, enough said)
+
+17
+
+Other technology
+● Flash Memory
+o Works using a special MOSFET with “floating gate”
+o Pros: nonvolatile, much faster than HDD
+o Cons:
+▪ Slower than DRAM
+▪ More expensive than HDDs (1TB for $250)
+▪ Writing is destructive and shortens lifespan
+
+● Experimental technology
+o Ferroelectric RAM (FeRAM), Magnetoresistive RAM (MRAM),
+Phase-change memory (PRAM), carbon nanotubes ...
+o In varying states of development and maturity
+o Nonvolatile and close to DRAM speeds
+18
+
+Memory/storage technologies
+Volatile
+
+Nonvolatile
+
+SRAM
+
+DRAM
+
+HDDs
+
+Flash
+
+Speed
+
+FAST
+
+OK
+
+SLOW
+
+Pretty good!
+
+Price
+
+Expensive
+
+OK
+
+Cheap!
+
+Meh
+
+Power
+
+Good!
+
+Meh
+
+Bad
+
+OK
+
+Durability
+
+Good!
+
+Good!
+
+Good!
+
+OK
+
+Reliability
+
+Good!
+
+Pretty good!
+
+Meh
+
+Pretty good!
+
+I’m using Durability to mean “how well it holds data after repeated use.”
+I’m using Reliability to mean “how resistant is it to external shock.”
+
+19
+
+Do you notice a trend?
+● The faster the memory the more expensive and lower density.
+
+● The slower the memory the less expensive and higher density.
+● There exists a hierarchy in program data:
+o Small set of data that is accessed very frequently
+o Large set of data that is accessed very infrequently
+
+● Thus, memory should also be constructed as a hierarchy:
+o Fast and small memory at the upper levels
+o Slow and big memory at the lower levels
+
+20
+
+Larger capacity memories are slower
+
+Thoziyoor, Shyamkumar & Muralimanohar, Naveen & Ahn, Jung Ho & Jouppi,
+Norman. (2008). CACTI 5.1.
+
+21
+
+DRAM faster than SRAM at high capacity due to density
+
+● Access Time = Memory Cell Delay + Address Decode Delay + Wire Delay
+● With high capacity, Wire Delay (word lines + bit lines) starts to dominate
+● Wire Delay ∝ Memory Structure Area
+● DRAM density > SRAM density → DRAM Wire Delay < SRAM Wire Delay
+22
+
+The Memory Hierarchy
+
+23
+
+System Memory Hierarchy
+● Use fast memory (SRAM) to store frequently used data inside the CPU
+● Use slow memory (e.g. DRAM) to store rest of the data outside the CPU
+
+CPU
+
+Pipeline
+
+Memory bus
+delay
+
+SRAM
+(regs)
+
+PCIe bus
+delay
+
+DRAM
+(memory)
+
+HDD/SDD
+(files, swapped
+out memory)
+
+● Registers are used frequently for computation so are stored in SRAM
+● Memory pages used frequently are stored in DRAM
+● Memory pages used infrequently are stored in HDD/SDD (in swap space)
+● Note: Memories outside CPU suffers from bus delay as well
+24
+
+System Memory Hierarchy
+● Use fast memory (SRAM) to store frequently used data inside the CPU
+● Use slow memory (e.g. DRAM) to store rest of the data outside the CPU
+
+CPU
+
+Pipeline
+
+Memory bus
+delay
+
+SRAM
+(regs)
+
+PCIe bus
+delay
+
+DRAM
+(memory)
+
+HDD/SDD
+(files, swapped
+out memory)
+
+● Drawback: Memory access is much slower compared to registers
+● Q: Can we make memory access speed comparable to register access?
+
+25
+
+System Memory Hierarchy
+● Use fast memory (SRAM) to store frequently used data inside the CPU
+● Use slow memory (e.g. DRAM) to store rest of the data outside the CPU
+
+CPU
+SRAM
+(registers)
+
+DRAM
+(memory)
+
+Pipeline
+SRAM
+(cache)
+
+HDD/SDD
+(files, swapped
+out memory)
+
+● Drawback: Memory access is much slower compared to registers
+● Q: Can we make memory access speed comparable to register access?
+o How about storing frequently used memory data in SRAM too?
+o This is called caching. The hardware structure is called a cache.
+26
+
+Caching
+● Caching: keeping a temporary copy of data for faster access
+● DRAM is in a sense also caching frequently used pages from swap space
+o We are just extending that idea to bring cache data inside the CPU!
+● Now instructions like lw or sw never directly access DRAM
+o They first search the cache to see if there is a hit in the cache
+o Only if they miss will they access DRAM to bring data into the cache
+
+CPU
+SRAM
+(registers)
+
+DRAM
+(memory)
+
+Pipeline
+SRAM
+(cache)
+
+HDD/SDD
+(files, swapped
+out memory)
+
+27
+
+Cache Flow Chart
+● Cache block: unit of data used to cache data
+o What page is to memory paging
+o Cache block size is typically multiple words
+(e.g. 32 bytes or 64 bytes. You’ll see why.)
+
+● Good: Memory Wall can be surmounted
+o On cache hit, no need to go to DRAM!
+● Bad: MEM stage has variable latency
+o Typically, only a few cycles if cache hit
+o More than a 100 cycles if cache miss!
+(Processor must go all the way to DRAM!)
+o Makes performance very unpredictable
+28
+
+Cache Locality: Temporal and Spatial
+
+• Temporal Locality
+
+• Spatial Locality
+Cache Block
+Data
+Item 0
+
+Data
+Item
+
+Miss!
+
+Hit!
+Time
+
+Hit!
+
+Miss!
+
+Data
+Item 1
+
+Hit!
+
+Data
+Item 2
+
+Hit!
+Time
+
+29
+
+Cache Locality: Temporal and Spatial
+● Caching works because there is locality in program data accesses
+o Temporal locality
+▪ Same data item is accessed many times in succession
+▪ 1st access will miss but following accesses will hit in the cache
+o Spatial locality
+▪ Different data items spatially close are accessed in succession
+▪ 1st access will miss but bring in an entire cache block
+▪ Accesses to other items within same cache block will hit
+▪ E.g., fields in an object, elements in an array, …
+● Locality, like ILP, is a property of the program
+
+30
+
+Cold Misses and Capacity Misses
+● Cold miss (a.k.a. compulsory miss)
+o Miss suffered when data is accessed for the first time by program
+o Cold miss since cache hasn’t been warmed up with accesses
+o Compulsory miss since there is no way you can hit on the first access
+o Subsequent accesses will be hits since now data is fetched into cache
+▪ Unless it is replaced to make space for more frequently used data
+● Capacity miss
+o Miss suffered when data is accessed for the second or third times
+o This miss occurred because data was replaced to make space
+o If there had been more capacity, miss wouldn’t have happened
+o Capacity decides how much temporal locality you can leverage
+
+31
+
+Reducing Cold Misses and Capacity Misses
+● Reducing capacity misses is straightforward
+o Increase capacity, that is cache size!
+● But how do you reduce cold misses? Is it even possible?
+o Yes! By taking advantage of spatial locality.
+o Have a large cache block so you bring in other items on a miss
+o Those other items may be accessed for the first time but will hit!
+● Large cache blocks can …
+o Potentially reduce cold misses (and/or reduce capacity misses)
+(given some spatial locality, can bring in more data on a miss)
+o Potentially increase capacity misses
+(with no spatial locality, can store less data items in same capacity)
+→ Each program has a sweet spot. Architects choose a compromise.
+32
+
+So how big do we want the cache to be?
+● Uber big!
+
+Caches
+
+● On the right is a diagram of
+the Xeon Broadwell CPU used
+in kernighan.cs.pitt.edu.
+o Caches take up almost as
+much real estate as cores!
+o A cache miss is that painful.
+● But having a big cache comes
+with its own set of problems
+o Cache itself gets slower
+
+33
+
+Bigger caches are slower
+● Below is a diagram of a Nehalem CPU (an older Intel CPU)
+● How long do you
+think it takes for
+data to make it from
+here...
+● ...to here?
+● It must be routed
+through all this.
+● Can we cache the
+data in the far away
+“L3 Cache” to a
+nearby “L2 Cache”?
+34
+
+Multi-level Caching
+● This is the structure of the kernighan.cs.pitt.edu Xeon CPU:
+L1 I-Cache
+
+L1 D-Cache
+
+L2 Cache
+L3 Cache
+
+● L1 cache: Small but fast. Interfaces with CPU pipeline MEM stage.
+o Split to i-cache and d-cache to avoid structural hazard
+● L2 cache: Middle-sized and middle-fast. Intermediate level.
+● L3 cache: Big but slow. Last line of defense against memory access.
+● Allows performance to degrade gracefully
+35
+
+Revisiting Our Experiments
+
+36
+
+Revisiting our CPI Results with the new perspective
+Correspond to multiple levels of memory
+
+But this is just conjecture.
+Is it actually true?
+
+CPI increases with bigger size: more of
+data structure is stored in lower memory
+
+37
+
+kernighan.cs.pitt.edu cache specs
+● On a Xeon E5-2640 v4 CPU (10 cores):
+o L1 i-cache: 32 KB 8-way set associative (per core)
+o L1 d-cache: 32 KB 8-way set associative (per core)
+o L2 cache: 256 KB 8-way set associative (per core)
+o L3 cache: 25 MB 20-way set associative (shared)
+Ref: https://en.wikichip.org/wiki/intel/xeon_e5/e5-2640_v4
+
+● Access latencies (each level includes latency of previous levels):
+o L1: ~3 cycles
+o L2: ~8 cycles
+o L3: ~16 cycles
+o DRAM Memory: ~67 cycles
+
+Ref: https://www.nas.nasa.gov/assets/pdf/papers/NAS_Technical_Report_NAS-2015-05.pdf
+
+38
+
+Cache Specs Reverse Engineering
+● Why do I have to refer to a NASA technical report for latencies?
+
+o Ref: https://www.nas.nasa.gov/assets/pdf/papers/NAS_Technical_Report_NAS-2015-05.pdf
+
+o Because Intel doesn’t publish detailed cache specs on data sheet
+● In the technical report (does the step function look familiar?):
+
+Why just Loads and not Stores?
+
+39
+
+Loads have more impact on performance
+● Suppose we added a store to our original loop:
+node_t* current = head;
+for(int i=0; i<ACCESSES; i++) {
+if(current == NULL) current = head;
+// reached the end
+else {
+current->data[0] = 100;
+// store to node data
+current = current->next;
+// load next node address
+}
+
+● Which would have more impact on performance? The load or the store?
+o A: The load because it is on the critical path.
+…
+
+current = current->next
+
+current = current->next
+
+current = current->next
+
+…
+
+current->data[0] = 100
+
+current->data[0] = 100
+
+current->data[0] = 100
+
+…
+40
+
+Loads have more impact on performance
+● Loads produce values needed for computation to proceed
+o Stalled loads delays computation and possibly the critical path
+● Stores write computation results back to memory
+o As long as the results are written back eventually, no big hurry
+o If store results in a cache miss,
+store is marked as “pending” and CPU moves on to next computation
+o Pending stores are maintained in a write buffer hardware structure
+
+● What if the next computation reads from a pending store?
+o First check the write buffer and read in the value if it’s there
+o Again, performing the store is not on the critical path
+
+41
+
+How Write Buffer Maintains Pending Stores
+● sw p0,4(p1) is about to commit. 4(p1) == 0xdeadbeef, p0 == 10
+● Unfortunately, address 0xdeadbeef is not in the L1 d-cache and it misses
+L1 d-cache
+…
+… Miss!
+…
+…
+
+Store Queue
+Address Value
+0xdeadbeef 10
+…
+…
+…
+…
+…
+…
+
+commit in order
+
+Instruction Decoder
+
+Write Buffer
+Address Value
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instruction dest done?
+sw p0,4(p1)
+Y
+…
+…
+…
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+42
+
+How Write Buffer Maintains Pending Stores
+● sw p0,4(p1) commits successfully anyway
+● The store is moved to the Write Buffer and stays there until store completes
+L1 d-cache
+…
+…
+…
+…
+
+Store Queue
+Address Value
+…
+…
+…
+…
+…
+…
+…
+…
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+
+commit in order
+
+Instruction Decoder
+
+Write Buffer
+Address Value
+0xdeadbeef 10
+
+Instruction Queue
+instruction dest done?
+…
+…
+…
+…
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+43
+
+How Write Buffer Maintains Pending Stores
+● Later, when lw p3,0(p2) comes along, it checks Write Buffer first
+● If 0(p2) == 0xdeadbeef, Write Buffer provides value instead of memory
+L1 d-cache
+…
+…
+…
+…
+
+Store Queue
+Address Value
+…
+…
+…
+…
+…
+…
+…
+…
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+
+commit in order
+
+Instruction Decoder
+
+Write Buffer
+Address Value
+0xdeadbeef 10
+
+Instruction Queue
+instruction dest done?
+lw p3,0(p2) t0
+N
+…
+…
+…
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+44
+
+So are stores never on the critical path?
+● If we had an infinitely sized write buffer, no, never.
+
+● In real life, write buffer is limited and can suffer structural hazards
+o If write buffer is full of pending stores, you can’t insert more.
+→ That will prevent a missing store from committing from i-queue
+→ That will prevent all subsequent instructions from committing
+→ That will eventually stall the entire pipeline
+● But with ample write buffer size, happens rarely
+o And if it does happen can be detected using PMUs
+● Hence, we will focus on loads to analyze performance
+
+45
+
+Linked List Cache Load Miss Rates
+
+But what do these lines
+actually mean?
+
+46
+
+Linked List Cache Load Miss Rates
+
+A few L2 cold misses result in high miss rate.
+But very few L2 accesses to begin with.
+
+Almost only L1 L1
++
+L2
+
+L1 + L2 + L3
+
+Do the miss rates correspond to CPI results?
+Let’s compare with our own eyes!
+
+L1 + L2 + L3
++ Memory
+
+L1 + Memory
+(mostly)
+
+Miss! Miss! Miss! Hit!
+
+L1 Cache
+
+Miss! Miss!
+
+L2 Cache
+
+Miss!
+Hit!
+
+Hit!
+
+Hit!
+
+L3 Cache
+DRAM Memory
+47
+
+Linked List Cache Load Miss Rates vs CPI
+
+Almost only L1 L1
++
+L2
+
+L1 + L2 + L3
+
+L1 + L2 + L3
++ Memory
+
+L1 + Memory
+(mostly)
+
+48
+
+Linked List Cache Load Miss Rates – Other Questions
+
+Almost only L1 L1
++
+L2
+
+L1 + L2 + L3
+
+L1 + L2 + L3
++ Memory
+
+L1 + Memory
+(mostly)
+
+● Why the step up in L1 cache misses between 500 – 1000 nodes?
+● Why the step up in L2 cache misses between 1000 – 5000 nodes?
+● Why the step up in L3 cache misses between 100 k – 500 k nodes?
+● Also, why do cache miss increases look like step functions in general?
+49
+
+Working Set Overflow can cause Step Function
+● The size of a node is 128 bytes:
+typedef struct node {
+struct node* next;
+// 8 bytes
+int data[30];
+// 120 bytes
+} node_t;
+● Working set: amount of memory program accesses during a phase
+o For linked-list.c, working set is the entire linked list
+▪ Program accesses entire linked list in a loop over and over again
+o If there are 8 nodes in linked list, working set size = 128 * 8 = 1 KB
+● When working set overflows cache capacity, start to see cache misses
+o Miss increase can be drastic, almost like a step function
+o Suppose cache size is 1 KB and nodes increase from 8 → 9
+▪ When 8 nodes: always hit (since entire list in contained in cache)
+▪ When 9 nodes: always miss (if least recent node is replaced first)
+50
+
+Linked List Cache Load Miss Rates – Other Questions
+● Why the step up in L2 cache misses between 1000 – 5000 nodes?
+o L2 cache size is 256 KB
+o Number of nodes that can fit = 256 KB / 128 = 2048
+● Why the step up in L3 cache misses between 100 k – 500 k nodes?
+o L3 cache size is 25 MB
+o Number of nodes that can fit = 25 MB / 128 ≈ 200 k
+● Why the step up in L1 cache misses between 500 – 1000 nodes?
+o L1 d-cache size is 32 KB
+o Number of nodes that can fit = 32 KB / 128 = 256
+o So, in theory you should already see a step up at 500 nodes
+o Apparently, CPU doesn’t use least-recently-used (LRU) replacement
+o According to another reverse engineering paper, Intel uses PLRU
+
+Ref: “CacheQuery: Learning Replacement Policies from Hardware Caches” by Vila et al.
+https://arxiv.org/pdf/1912.09770.pdf
+
+51
+
+Linked List Cache Load Miss Rates – Other Questions
+
+Almost only L1 L1
++
+L2
+
+L1 + L2 + L3
+
+L1 + L2 + L3
++ Memory
+
+L1 + Memory
+(mostly)
+
+● Why did L1 cache miss rate saturate at around 20%?
+o Shouldn’t it keep increasing with more nodes like L2 and L3?
+
+52
+
+Linked List Cache Load Miss Rates – Other Questions
+[linked-list.c]
+void *run(void *unused) {
+node_t* current = head;
+for(int i=0; i<ACCESSES; i++) {
+if(current == NULL) current = head;
+else current = current->next;
+}
+}
+
+[objdump -S linked-list]
+0000000000400739 <run>:
+...
+400741: mov 0x200920(%rip),%rax # %rax = head
+400748: mov %rax,-0x8(%rbp) # current = %rax
+40074c: movl $0x0,-0xc(%rbp) # i = 0
+400753: jmp 400778 # jump to i < ACCESSES comparison
+400755: cmpq $0x0,-0x8(%rbp) # current == NULL?
+40075a: jne 400769 # jump to else branch if not equal
+Within a typical iteration in for loop:
+40075c: mov 0x200905(%rip),%rax # %rax = head
+4 blue loads that hit in L1:
+400763: mov %rax,-0x8(%rbp) # current = %rax
+• 2 loads each of local vars current, i 400767: jmp 400774 # jump to end of if-then-else
+• Read frequently so never replaced
+400769: mov -0x8(%rbp),%rax # %rax = current
+1 red load that misses in L1:
+40076d: mov (%rax),%rax # %rax = current->next
+• current->next (next field of node)
+400770: mov %rax,-0x8(%rbp) # current = %rax
+• Node may not be in cache and miss 400774: addl $0x1,-0xc(%rbp) # i++
+(e.g. due to a capacity miss)
+400778: cmpl $0x3b9ac9ff,-0xc(%rbp) # i < ACCESSES ?
+ 1 miss / 5 loads = 20% miss rate
+40077f: jle 400755 # jump to head of loop if less than
+53
+
+How about Linked List with No Data?
+
+● Linked list, no data suffered almost no CPI degradation. Why?
+
+54
+
+Linked List w/ Data vs. w/o Data
+● Linked list with data
+
+● Linked list with no data
+
+55
+
+Linked List w/ Data vs. w/o Data. Why?
+● The size of a node with no data is only 8 bytes:
+typedef struct node {
+struct node* next;
+// 8 bytes
+// no data
+} node_t;
+● Compared to 128 bytes with data, can fit in 16X more nodes in cache
+o Temporal locality: More likely that a node will be present in cache
+
+● How about L1 cache miss rate that hovers around 10% instead of 20%?
+o By 107 nodes, there is no temporal locality with respect to the L1 cache
+o Spatial locality must be responsible for the reduction in miss rate
+
+56
+
+Linked List w/ Data vs. w/o Data. Why?
+● Nodes of the linked list are malloced one by one in a loop:
+for(int i=0; i<items; i++) {
+node_t* n = (node_t*)malloc(sizeof(node_t));
+…
+}
+o I have no idea where glibc malloc decides to allocate each node
+● But knowing each cache block is 64 bytes long in the Xeon E5 processor
+o Let’s say multiple nodes are allocated on same cache block:
+node 1
+
+meta-data meta-data
+
+node 37 meta-data meta-data node 23 meta-data
+
+o Then even if access to node 1 misses, due to a capacity miss,
+accesses to nodes 37 and 23 that soon follow will hit!
+o This is assuming there is some spatial locality in how malloc allocates
+57
+
+Data structure with most spatial locality: Array
+● Elements of an array are guaranteed to be in contiguous memory:
+void *create(void *unused) {
+head = (node_t *) malloc(sizeof(node_t) * items);
+…
+}
+● Each cache block is 64 bytes long in the Xeon E5 processor
+o Now 8 elements are guaranteed to be on same cache line, in order:
+node 0 node 1 node 2 node 3 node 4 node 5 node 6 node 7
+
+o Even with cold cache, only 1 out of 8 nodes miss (1/8 = 12.5% miss rate)
+o Assuming that nodes are accessed sequentially
+▪ If accessed in random order, no spatial locality, even with array
+o True regardless of capacity (even if cache contained only a single block)
+58
+
+Let’s look at the CPI of arrays finally
+
+● Array, no data did very well as expected
+o The most spatial locality of the four benchmarks (contiguous nodes)
+o Smallest memory footprint so can also leverage temporal locality the best
+● Array performed the same as array, no data. How come?
+o No spatial locality since each node takes up two 64-byte cache blocks
+o Has much larger memory footprint compared to array, no data
+o This is the real mystery. We will learn more about it as we go on. ☺
+59
+
+Impact of Memory
+On Performance
+
+60
+
+Impact of Memory on Performance
+● CPU Cycles = CPU Compute Cycles + Memory Stall Cycles
+o CPU Compute Cycles = cycles where CPU is not stalled on memory
+o Memory Stall Cycles = cycles where CPU is waiting for memory
+● Why do we need to differentiate between the two?
+o Because each are improved by different design features!
+● HW/SW design features that impact CPU Compute Cycles:
+o HW: Pipelining, branch prediction, wide execution, out-of-order
+o SW: Optimizing the computation in the program
+● HW/SW design features that impact Memory Stall Cycles:
+o HW: Caches, write buffer, prefetcher (we haven’t learned this yet)
+o SW: Optimizing memory access pattern of program
+
+(Taking into consideration temporal and spatial locality)
+
+61
+
+How about overclocking using DVFS?
+● CPU Time = CPU Cycles * Cycle Time
+= (CPU Compute Cycles + Memory Stall Cycles) * Cycle Time
+● What if we halved the Cycle Time using DVFS?
+o Memory Stall Cycles could increase by up to 2X!
+o Why? DRAM speed remains the same, so you need twice the cycles.
+▪ The bus (wire) that connects CPU to DRAM is not getting any faster
+▪ The DRAM chip itself is not getting clocked any faster
+o How about caches? Same number of cycles regardless of DVFS.
+● If most of your time is spent accessing DRAM, then overclocking is useless
+o Memory Stall Time (Memory Stall Cycles * Cycle Time) is mostly constant
+
+62
+
+Memory Latency vs. Memory Bandwidth
+● Memory stall cycles comes from two sources:
+o Memory latency: seconds to handle a single memory request
+
+vs.
+o Memory bandwidth: maximum requests handled per second
+
+vs.
+
+63
+
+Memory bandwidth puts a ceiling on performance
+● Memory latency can be surmounted by smart scheduling
+o Either by compiler or by instruction queue scheduling by CPU
+● No real way to surmount memory bandwidth limit
+o No matter how much scheduling you do, same bandwidth
+● When you get a traffic jam, performance is dictated by bandwidth
+o How quickly you pull data in, rather than how fast you process it
+o Operational intensity = work (FLOP) per memory access (byte)
+o Performance = work / second
+= work / byte * byte / second
+= operational intensity * memory bandwidth
+→ Linear relationship between performance and operational intensity
+64
+
+The Roofline Model: A bird’s eye view of performance
+● Roofline: theoretical performance achievable given an intensity
+o Formed by memory bandwidth bounds + peak CPU performance
+
+Where do these gaps come from?
+
+65
+
+Memory bound vs. compute bound apps
+● I = intensity, β = peak bandwidth, π = peak performance
+
+66
+
+Effect of Cache on Roofline Model
+● With caching, apps shift upwards and rightwards
+
+Reduction in memory latency makes CPU efficient
+Reduction in memory accesses increases operational intensity
+
+67
+
+

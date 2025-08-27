@@ -1,0 +1,282 @@
+=== METRICS ===
+true_positives   : 35
+false_positives  : 44
+false_negatives  : 7
+precision        : 0.443
+recall           : 0.8333
+f1               : 0.5785
+accuracy         : 0.8333
+
+TRUE POSITIVES (35):
+   • 6∈
+   • \
+   • alphabet
+   • big union
+   • cartesian product
+   • complement
+   • concatenation
+   • d
+   • function
+   • functions
+   • intersection
+   • k-tuple
+   • language
+   • lexicographic ordering
+   • ordered pair
+   • predicate
+   • predicates
+   • proof
+   • proofs
+   • r
+   • sequence
+   • sequences
+   • set
+   • set different
+   • sets
+   • shortlex order
+   • string
+   • substring
+   • union
+   • ×
+   • σa
+   • ∈
+   • −
+   • ∩
+   • ∪
+
+FALSE POSITIVES (44):
+   • 2-tuple
+   • boolean logic
+   • boolean operators
+   • boolean value
+   • construction
+   • contradiction
+   • demorgan
+   • dictionary ordering
+   • distributive
+   • domain
+   • empty set
+   • equality
+   • even number
+   • exclusive or
+   • f
+   • false
+   • implication
+   • irrational number
+   • mod
+   • notations
+   • odd
+   • operations
+   • p
+   • p → q
+   • proof by construction
+   • proof by contradiction
+   • q
+   • range
+   • rational number
+   • t
+   • true
+   • tuple
+   • |a|
+   • |s|
+   • ¬
+   • ε
+   • σ
+   • σb
+   • →
+   • ↔
+   • ∅
+   • ∧
+   • ∨
+   • ⊕
+
+FALSE NEGATIVES (7):
+   • alphabets
+   • languages
+   • length
+   • lexicographc order
+   • sortlex order
+   • strings
+   • tuples
+=== METRICS ===
+true_positives   : 7
+false_positives  : 9
+false_negatives  : 2
+precision        : 0.4375
+recall           : 0.7778
+f1               : 0.56
+accuracy         : 0.7778
+
+TRUE POSITIVES (7):
+   • finite automaton
+   • generalized nondeterministic finite automaton
+   • gnfa
+   • nonregular languages
+   • regular expression
+   • regular language
+   • regular languages
+
+FALSE POSITIVES (9):
+   • accept state
+   • accept states
+   • dfa
+   • finite-state machine
+   • finite-state machines
+   • nfa
+   • regular expressions
+   • start state
+   • theorem 1.54
+
+FALSE NEGATIVES (2):
+   • algorithm
+   • regular
+=== METRICS ===
+true_positives   : 3
+false_positives  : 21
+false_negatives  : 1
+precision        : 0.125
+recall           : 0.75
+f1               : 0.2143
+accuracy         : 0.75
+
+TRUE POSITIVES (3):
+   • infinite language
+   • pumping lemma
+   • regular infinite languages
+
+FALSE POSITIVES (21):
+   • 00(1010)∗ 0
+   • 0n 1n
+   • 0p 1p
+   • 10∗ 1
+   • dfa
+   • empty language
+   • finite language
+   • finite state machines
+   • l(m)
+   • language
+   • loop
+   • non-regular language
+   • pigeonhole principle
+   • pumping length
+   • regular
+   • regular expression
+   • strings
+   • x
+   • xy i z
+   • y
+   • z
+
+FALSE NEGATIVES (1):
+   • regular language
+=== METRICS ===
+true_positives   : 2
+false_positives  : 5
+false_negatives  : 18
+precision        : 0.2857
+recall           : 0.1
+f1               : 0.1481
+accuracy         : 0.1
+
+TRUE POSITIVES (2):
+   • language of a dfa
+   • language operators
+
+FALSE POSITIVES (5):
+   • f
+   • q
+   • q0
+   • transition function
+   • δ
+
+FALSE NEGATIVES (18):
+   • concatenation
+   • deterministic finite automaton
+   • dfa
+   • formal definition
+   • formal definition of a nondeterministic finite automaton
+   • language
+   • nfa
+   • nondeterministic finite automaton
+   • pumping lemma
+   • recognize
+   • regular
+   • regular expression
+   • regular language
+   • regular languages
+   • star
+   • state diagram
+   • union
+   • ε
+=== METRICS ===
+true_positives   : 3
+false_positives  : 13
+false_negatives  : 3
+precision        : 0.1875
+recall           : 0.5
+f1               : 0.2727
+accuracy         : 0.5
+
+TRUE POSITIVES (3):
+   • decider
+   • undecidable language
+   • unrecognizable language
+
+FALSE POSITIVES (13):
+   • adfa
+   • anfa
+   • arex
+   • atm
+   • boolean algebra
+   • correspondence
+   • countable
+   • diagonalization
+   • edfa
+   • encoding
+   • eqdfa
+   • recognizable language
+   • uncountable
+
+FALSE NEGATIVES (3):
+   • recognizable
+   • undecidable
+   • unrecognizable
+=== METRICS ===
+true_positives   : 8
+false_positives  : 13
+false_negatives  : 4
+precision        : 0.381
+recall           : 0.6667
+f1               : 0.4848
+accuracy         : 0.6667
+
+TRUE POSITIVES (8):
+   • asymptotic analysis
+   • asymptotic upper bound
+   • big-o
+   • exponential bounds
+   • polynomial bounds
+   • running time
+   • small-o
+   • time complexity
+
+FALSE POSITIVES (13):
+   • big-o notation
+   • computation tree
+   • deterministic single-tape turing machine
+   • model of computation
+   • multitape turing machine
+   • multitape turing machines
+   • nondeterministic single-tape turing machine
+   • nondeterministic turing machine
+   • single-tape turing machine
+   • single-tape turing machines
+   • small-o notation
+   • time complexity class
+   • time(t(n))
+
+FALSE NEGATIVES (4):
+   • complexity
+   • multitape
+   • solvable
+   • upper bound

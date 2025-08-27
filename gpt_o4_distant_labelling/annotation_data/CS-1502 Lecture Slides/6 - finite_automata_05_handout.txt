@@ -1,0 +1,778 @@
+Finite Automata 05
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Regular Language
+
+Question: Given a regular language, can it be expressed by a
+regular expression?
+There are infinite number of regular languages
+Luckily, all of them have one thing in common
+Each of them has some finite-state machines that recognize it
+
+So, to try to answer the above question, we need to show a
+way to convert a finite-state machine into a regular expression
+that expresses the language of the machine
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Generalized Nondeterministic Finite Automaton
+A Generalized Nondeterministic Finite Automaton (GNFA) N
+of a DFA M is
+a special NFA where L(N ) = L(M )
+N has exactly one accept state
+all transitions of N are regular expressions
+To transition from one state to another, you need a string in
+the language expressed by the regular expression instead of a
+symbol
+
+Example:
+q2
+
+0∗ ∪ 11∗ 0
+
+q5
+
+At q2 , if you encounter a string in the language 0∗ ∪ 11∗ 0,
+move to state q5
+0∗ ∪ 11∗ 0 = {ε, 0, 00, . . . } ∪ {10, 110, 1110, . . . }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Converting a DFA to a GNFA
+1
+2
+
+3
+
+Start with a DFA M
+Add a new start state s with an ε arrow to the original start
+state of M
+Add a new accept state a
+From every accept state of M , add an ε arrow to the new
+accept state
+Change all original accept states of M to non-accept states
+
+4
+
+5
+
+Turn transition labels to regular expressions (rule #1 of
+regular expression)
+Add necessary transition arrows
+Change multiple arrows or multiple labels to a single arrow
+while label is the union of the previous labels
+a
+a∪b
+b
+0, 1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0∪1
+Finite Automata 05
+
+Converting a DFA to a GNFA (Example)
+
+A DFA
+b
+
+a
+1
+
+2
+a
+b
+a
+
+b
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Converting a DFA to a GNFA (Example)
+
+Add a new start state s
+b
+
+a
+1
+
+2
+a
+b
+
+s
+
+a
+
+b
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Converting a DFA to a GNFA (Example)
+
+ε from s to the original start state
+b
+
+a
+1
+
+2
+
+ε
+
+a
+b
+
+s
+
+a
+
+b
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Converting a DFA to a GNFA (Example)
+
+Add a new accept state a
+b
+
+a
+1
+
+2
+
+ε
+
+a
+b
+
+s
+
+a
+
+b
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+a
+
+Converting a DFA to a GNFA (Example)
+
+ε from all accepts state to a
+b
+
+a
+1
+
+2
+
+ε
+
+ε
+
+a
+b
+
+s
+
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+a
+
+a
+
+b
+
+ε
+
+Finite Automata 05
+
+Converting a DFA to a GNFA (Example)
+
+All original accept states to non-accept state
+b
+
+a
+1
+
+2
+
+ε
+
+ε
+
+a
+b
+
+s
+
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+a
+
+a
+
+b
+
+ε
+
+Finite Automata 05
+
+GNFA to Regular Expression
+Note that by converting a DFA and an equivalent GNFA, the
+language of the machine remain unchanged
+Next, we are going to remove original states of DFA one at a
+time until there are only two states left
+When a state is removed, we have to make sure that the
+language of the machine is not changed
+The new start state s and the new accept state a
+
+Example:
+3−state
+DFA
+
+5−state
+GNFA
+
+4−state
+GNFA
+
+regular
+expression
+
+2−state
+GNFA
+
+3−state
+GNFA
+
+The transition from s to a is a regular expression that
+expresses the language of the original DFA
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Reducing Number of States of GNFA
+Removing qrip
+qi
+
+R4
+
+R1
+
+qj
+R3
+
+qrip
+
+R2
+
+How to go from qi to qj ?
+qi → qj using a string in R4
+qi → qrip → qj
+qi → qrip using a string in R1
+qrip → qrip using a string in R2 any number of times (R2∗ )
+qrip → qj using a string in R3
+
+From qi to qj by any strings in R1 R2∗ R3 ∪ R4
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Reducing Number of States of GNFA
+Removing qrip
+qi
+
+R4
+
+qj
+R3
+
+R1
+
+qi
+
+R1 R2 ∗ R3 ∪ R4
+
+qj
+
+qrip
+
+R2
+
+To remove qrip
+1
+
+Search for all possible paths from a state q to qrip and to a
+state r
+q → qrip → r
+
+2
+
+Turn all paths from previous step to regular expressions
+Remove qrip which results in q → r
+Insert paths q → r back with their regular expressions
+
+3
+4
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Example
+DFA
+1
+
+a
+
+b
+
+2
+
+a, b
+
+{w | w contains at least one b}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Example
+DFA to GNFA
+ε
+1
+
+a
+
+s
+
+1
+
+b
+
+a
+
+b
+ε
+
+2
+
+a, b
+
+a
+
+2
+
+{w | w contains at least one b}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+aUb
+
+Example
+Get rid of state 2
+ε
+1
+
+s
+
+a
+
+1
+
+a
+
+b
+
+b
+ε
+2
+
+a, b
+
+a
+
+2
+
+ε
+s
+
+1
+
+a
+
+b(a U b)*
+a
+
+{w | w contains at least one b}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+aUb
+
+Example
+Get rid of state 1
+ε
+1
+
+s
+
+a
+
+1
+
+b
+
+a
+
+b
+ε
+a, b
+
+2
+
+a
+
+2
+
+ε
+s
+
+1
+
+a
+
+s
+
+a*b(a U b)*
+
+b(a U b)*
+a
+
+a
+
+{w | w contains at least one b}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+aUb
+
+Example
+
+DFA to GNFA
+b
+
+b
+
+a
+
+a
+1
+
+2
+
+1
+
+b
+a
+
+b
+
+2
+
+ε
+
+a
+
+b
+
+s
+
+3
+
+Finite Automata 05
+
+a
+
+a
+
+b
+
+3
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+ε
+
+a
+
+ε
+
+Example
+Get rid of state 1
+aa U b
+
+b
+
+a
+1
+
+2
+
+ε
+
+2
+
+a
+
+a
+
+b
+3
+
+ε
+ab
+
+b
+
+s
+
+a
+
+ε
+
+a
+
+s
+
+ba U a
+b
+
+ε
+
+3
+
+bb
+
+Paths that go through state 1 (q → 1 → r)
+s→1→2
+s→1→3
+2→1→2
+2→1→3
+3→1→2
+3→1→3
+
+εa = a
+εb = b
+aa
+ab
+ba
+bb
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+ε
+
+a
+
+Example
+Get rid of state 2
+aa U b
+
+a(aa U b)*
+s
+
+2
+a
+
+a
+
+ε
+ab
+
+s
+
+ba U a
+b
+
+3
+
+a
+(ba U a)(aa U b)* U ε
+
+a(aa U b)*ab U b
+
+ε
+3
+
+bb
+(ba U a)(aa U b)*ab U bb
+
+Paths that go through state 2 (q → 2 → r)
+s→2→a
+s→2→3
+3→2→a
+3→2→3
+
+a(aa ∪ b)∗ ε = a(aa ∪ b)∗
+a(aa ∪ b)∗ ab
+(ba ∪ a)(aa ∪ b)∗ ε = (ba ∪ a)(aa ∪ b)∗
+(ba ∪ a)(aa ∪ b)∗ ab
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Example
+
+Get rid of state 3
+a(aa U b)*
+s
+
+a
+
+a(aa U b)*ab U b
+
+(ba U a)(aa U b)* U ε
+
+s
+
+a
+
+3
+(a(aa U b)*ab U b)((ba U a)(aa U b)*ab U bb)*((ba U a)(aa U b)* U ε ) U a(aa U b)*
+
+(ba U a)(aa U b)*ab U bb
+
+Paths that go through state 3 (q → 3 → r)
+s→3→a
+(a(aa∪b)∗ ab∪b)((ba∪a)(aa∪b)∗ ab∪bb)∗ ((ba∪a)(aa∪b)∗ ∪ε)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Theorem 1.54
+
+Earlier, we show that every regular expression expresses a
+regular language
+We just show that every state diagram of a DFA can be
+converted into an equivalent regular expression
+Theorem (1.54)
+A language is regular if and only if some regular expression
+describes it.
+Problem: If you cannot express a language using a regular
+expression, it does not mean it is not regular
+The language is so complicate that it needs a very long and
+complicate regular expression
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Finite Automaton and Algorithm
+
+For every finite automaton, there is an equivalent algorithm
+For example, consider a machine where its language is the set
+of all strings over 0 and 1 that consist of an odd number of 1s.
+0
+
+0
+1
+
+q0
+
+q1
+
+1
+
+The above machine can be converted into a Java method that
+Takes a string of 0s and 1s as an argument
+Returns true (accept) of the input string consisting of an odd
+number of 1s. Otherwise, returns false (reject).
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Finite Automata and Algorithm
+public boolean isAccepted(String input)
+{
+String state = "q0";
+int length = input.length();
+for(int i = 0; i < length; i++)
+{
+char c = input.charAt(i);
+if(state.equals("q0") && c == ’0’)
+state = "q0";
+else if(state.equals("q0") && c == ’1’)
+state = "q1";
+else if(state.equals("q1") && c == ’0’)
+state = "q1";
+else if(state.equals("q1") && c == ’1’)
+state = "q0";
+}
+if(state.equals("q1"))
+return true;
+else
+return false;
+}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+Limitation of Finite Automaton
+Finite Automaton only captures a small subset of algorithms
+Problems that associated with Regular languages
+
+Not all language can be recognized by a finite state machine
+Such languages is called Nonregular Languages
+
+Example: B = {0n 1n | n ≥ 0}
+B = {ε, 01, 0011, 000111, . . . }
+The machine need to be able to remember how many 0s and
+how many 1s it sees so far
+We need an infinite number of states
+
+If you cannot express a language using regular expression, it
+does not mean it is not a regular language
+Too complicate and requires a huge number of states
+
+We need a way to determine whether a language is not
+regular.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 05
+
+

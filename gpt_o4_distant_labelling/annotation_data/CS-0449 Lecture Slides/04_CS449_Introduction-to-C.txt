@@ -1,0 +1,615 @@
+3
+
+Introduction
+to C
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Overview of C
+What You C is What You Get
+
+2
+
+C: The Universal Assembly Language
+C is not a “very high-level” language, nor
+a “big” one, and is not specialized to any
+particular area of application. But its
+absence of restrictions and its generality
+make it more convenient and effective
+for many tasks than supposedly more
+powerful languages.
+— Kernighan and Ritchie
+
+• Allows writing programs to exploit
+underlying features of the architecture
+– memory management, special
+instructions, parallelism.
+3
+
+C: Relevance
+• From IEEE Spectrum:
+• https://spectrum.ieee.org/static/interacti
+ve-the-top-programming-languages-2019
+
+• Still relatively popular…
+• Lots of legacy code.
+• Lots of embedded devices.
+• Python, Java, R, JS are all written in C.
+
+4
+
+TIOBE index
+TIOBE Programming Community index is an indicator of the popularity of programming languages
+
+https://www.tiobe.com/tiobe-index/
+
+Compilation
+• C is a compiled language.
+• Code is generally converted into machine code.
+• Java, by contrast, indirectly converts to machine code using a byte-code.
+• Python, by contrast to both, interprets the code.
+
+• The difference is in a trade-off about when and how to create a machine-level
+representation of the source code.
+• A general C compiler will typically convert *.c source files into an intermediate *.o
+object file. Then, it will link these together to form an executable.
+• Assembly is also part of this process, but it is done behind the scenes.
+• You can have gcc (a common C compiler) spit out the assembly if you want!
+
+6
+
+Compilation: Simple Overview – Step 1
+• The compiler takes source code (*.c
+files) and translates them into machine
+code.
+
+hello.c
+
+hello.o
+
+• This file is called an “object file” and is
+just potentially one part of your overall
+project.
+• The machine code is not quite an
+executable.
+• This object file is JUST representing the
+code for that particular source file.
+• You may require extra stuff provided by
+the system elsewhere.
+
+7
+
+Compilation: Simple Overview – Step 2
+• You may have multiple files.
+• They may reference each other.
+• For instance, one file may contain certain
+common functionality and then this is
+invoked by your program elsewhere.
+hello.c
+
+hello.o
+
+• You break your project up into pieces
+similarly to your Java programs.
+• The compiler treats them
+independently.
+util.c
+CS/COE 0449 – Spring 2019/2020
+
+util.o
+8
+
+Compilation: Simple Overview – Step 3
+• Then, each piece is
+merged together to form
+the executable.
+• This process is called
+linking.
+hello.c
+
+hello.o
+
+util.c
+
+util.o
+
+hello
+
+stdio.o
+External Libraries
+
+• The name refers to how
+the references to
+functions, etc, between
+files are now filled in.
+• Before this step… it is
+unclear where functions
+will end up in the final
+executable.
+• Keep this in mind as we
+look at memory and
+pointers later!
+9
+
+It's just a grinder.
+• In summary:
+
+hello.c
+
+code goes in, sausage object
+files come out
+
+Some compilers output
+assembly and rely on an
+assembler to produce
+machine code
+These days, it's common
+for the compiler itself to
+produce machine code,
+or some kind of
+platform-independent
+assembly code
+(typically: a bytecode)
+10
+
+Compilation vs. Interpretation
+C (compiled)
+
+Python (interpreted)
+
+• Compiler + Linker translates code
+into machine code.
+
+• Interpreter is written in some
+language (e.g. C) that is itself
+translated into machine code.
+
+• Machine code can be directly
+loaded by the OS and executed by
+the hardware. Fast!!
+• New hardware targets require
+recompilation in order to execute
+on those new systems.
+
+• The Python source code is then
+executed as it is read by the
+interpreter. Usually slower.
+
+• Very portable! No reliance on
+hardware beyond the interpreter.
+11
+
+Compilation vs. Virtual Targets (bytecode)
+• Java translates source to a “byte code” which is a made-up architecture, but it
+resembles machine code somewhat.
+• Technically, architectures could execute this byte code directly.
+• But these were never successful or practical.
+
+• Instead, a type of virtual machine simulates that pseudo-architecture. (interpretation)
+• Periodically, the fake byte code is translated into machine code.
+• This is a type of delayed compilation! Just-In-Time (JIT) compilation.
+
+• This is a compromise to either approach.
+• Surprisingly very competitive in speed.
+• I don’t think the JVM-style JIT is going away any time soon.
+
+12
+
+C vs. Java
+C (C99)
+
+Java
+
+Type of
+Language
+
+Function Oriented
+
+Object Oriented
+
+Programming
+Unit
+
+Function
+
+Class = Abstract Data Type
+
+Compilation
+
+gcc hello.c - creates machine
+language code
+
+javac Hello.java - creates Java virtual machine
+language bytecode
+
+Execution
+
+a.out - loads and executes
+program
+
+java Hello - interprets bytecodes
+
+Manual (malloc, free)
+
+Automatic (garbage collection)
+
+hello, world
+
+Storage
+
+From http://www.cs.princeton.edu/introcs/faq/c2java.html
+
+13
+
+C vs. Java
+C (C99)
+or
+
+Comments
+
+Java
+
+… end of line
+
+or
+
+… end of line
+
+Constants
+Preprocessor Yes
+
+No
+
+Variable
+declaration
+
+Before you use it
+
+At beginning of a block
+
+Variable
+naming
+conventions
+Accessing a
+library
+From http://www.cs.princeton.edu/introcs/faq/c2java.html
+
+14
+
+Hello World
+
+15
+
+C Dialects
+• You will see a lot of different styles of C in the world at large.
+• The syntax has changed very little.
+
+• There have been a few different standard revisions.
+• C89 – ANSI / ISO C
+•
+
+–
+
+–
+
+• C99 – Adds ‘complex’ numbers and single-line comments
+•
+
+–
+
+• C11 – Newer than 99 (laughs in Y2K bug) starts to standardize
+Unicode and threading libraries.
+•
+
+–
+
+• C18 – Minor refinement of C11. The current C standard.
+•
+
+–
+
+• We will more or less focus on the C99 standard in our course.
+• I’ll try to point out some newer things if they are relevant.
+16
+
+The C Syntax
+Nothing can be said to be certain, except death and C-like syntaxes.
+
+17
+
+The C Pre-Processor
+• The C language is incredibly simplistic.
+• To add some constrained complexity, there is a macro language.
+• This code does not get translated to machine code, but to more code!
+
+18
+
+The “main” function
+
+19
+
+Declaring variables
+
+20
+
+Casting
+
+21
+
+Integer Sizes – Revisted: sizeof
+
+22
+
+Integer Sizes – Revisted
+
+23
+
+Integers: Python vs. Java vs. C
+Language
+Python
+Java
+C
+
+sizeof(int)
+>=32 bits (plain ints), infinite (long ints)
+32 bits
+Depends on computer; 16 or 32 or 64
+
+• C:
+• integer type that target processor works with most efficiently
+• For modern C, this is generally a good-enough default choice.
+
+• Only guarantee:
+•
+≥
+• Also,
+>= 16 bits,
+• All could be 64 bits
+
+≥
+
+≥
+
+>= 32 bits
+
+• Impacts portability between architectures
+24
+
+Constants
+
+25
+
+Enumerations
+
+26
+
+Operators: Java stole ‘em from here
+
+27
+
+Augmented Operators
+
+–
+
+28
+
+Expressions: an expression of frustration!!
+
+• C often coerces (implicitly casts) integers when operating on them.
+• To remove ambiguity, expressions, such as
+most accommodates that operation.
+
+, result in a type that
+
+• Specifically, C will coerce all inputs of binary operators to at least
+an
+type.
+• You’ll find that “this is weird, but consistent” is C’s general motto
+
+29
+
+The C Syntax: Control Flow
+Once you C the program, you can BE the program.
+
+30
+
+Controlling the flow: an intro to spaghetti
+
+31
+
+Controlling the flow: Boolean Expressions
+• C does not have a Boolean type!
+• However, the C99 and newer standard library provides one in
+
+• The Boolean expressions are actually just an
+
+type.
+
+• It is just the general, default type. Weird but consistent, yet again!
+
+32
+
+Controlling the flow: Putting it Together
+•
+
+statements therefore take an
+
+and not a Boolean, as an expression.
+
+• If the expression is it is considered false.
+• Otherwise, it is considered true.
+
+33
+
+Throwing us all for a loop
+
+• Most loops (while, do) work exactly like Java.
+• Except, of course, the expressions are
+
+typed, like
+
+statements.
+
+• For loops only come in the traditional variety:
+•
+• C89 does not allow variable declaration within:
+• ERROR:
+
+• However, C99 and newer does allow this. Please do it.
+
+• Loops have special statements that alter the flow:
+•
+•
+
+will end the current iteration and start the next.
+will exit the loop entirely.
+34
+
+Loop Refresher: While, Do-While, For Loops
+
+35
+
+Taking a break and switching it up
+• The
+properly.
+
+statement requires proper placement of
+
+• Starts at
+matching expression and follows until it sees a
+• It will “fall through” other
+statements if there is no
+
+to work
+.
+between them.
+
+• Sometimes fall through is used on purpose... but it’s a bug 99% of the time :/
+36
+
+Control Flow: Summary
+• Conditional Blocks:
+
+Note: a
+
+can be a { block }
+
+•
+•
+• The if statement can be chained:
+
+• Conventional Loops:
+•
+•
+37
+
+Control Flow: Summary
+• For Loops:
+
+Note: a
+
+can be a { block }
+
+•
+•
+•
+
+• Switch:
+•
+
+•
+38
+
+What’s your function?
+• Familiar: Java is, once again, C-like
+• You declare the return type
+before the name.
+•
+
+is used when there is nothing
+returned
+• It is also used to explicitly denote
+there being no arguments.
+• You SHOULD specify
+instead
+of having an empty list.
+
+• Functions must be declared
+before they can be used.
+• We will look at how we divide
+functions up between files soon!
+
+39
+
+This is all the structure you get, kid
+• C gives us a very simple method of defining aggregate data types.
+• The struct keyword can combine several data types together:
+
+40
+
+I don’t like all that typing… So I’ll… typedef it
+• To avoid typing the full name “struct Song” we can create a Song type instead.
+• The typedef keyword defines new types.
+
+41
+
+I don’t like all that typing… So I’ll… typedef it
+• You can also do this with integer types, for instance to define bool:
+
+• And
+
+types, although it won’t complain if you mix/match them:
+
+• Now, functions can better illustrate they take an enum value:
+• Though, it accepts any integer and, yikes, any enum value without complaint!
+
+42
+
+That’s seriously all you get…
+• Unlike Java, C is not Object-Oriented and has no class instantiation.
+• That’s C++!
+
+43
+
+Garbage in, garbage out: initialization
+• As we saw earlier, variables don’t require initialization.
+• However, unlike Java, the variables do not have a default value.
+• Java will initialize integers to 0 if you do not specify.
+• C, on the other hand…
+
+• The default values for variables are undefined.
+• They could be anything.
+• The Operating System ultimately decides.
+• Generally, whatever memory is left over. Also known as “garbage.”
+
+• ALWAYS INITIALIZE YOUR VARIABLES
+44
+
+The trouble is stacking up on us!
+
+Q: Hmm. Where is the value for ‘x’ coming from? Why?
+
+45
+
+Where’s that data coming from??
+• Every variable and data in your program technically has a location in which it
+lives.
+• In the previous nonsense example, the “x” variable was sharing the same space
+as the “a” variable from the other function.
+• The section of incremental memory called the stack, in this specific case.
+• This is not defined behavior of the language, but rather the OS.
+
+• C does not impose many rules on how memory is laid out and used.
+• In fact, it gets right out of the way and lets you fall flat on your face.
+
+• Now, we will take a deeper dive into…
+
+MEMORY
+46
+
+

@@ -1,0 +1,315 @@
+8
+
+Investigating
+the Code
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Going with the Flow
+Tracing the footsteps
+
+2
+
+Bringing back our alphabet soup: The C ABI
+• The C Application Binary Interface (ABI) are assembly conventions
+• Like MIPS, certain registers are typically used for returns values, args, etc
+• It is not defined by the language, but rather the OS.
+• Windows and Linux (UNIX/System V) have a different C ABI 
+
+• In our x86-64 Linux C ABI, registers are used to pass arguments:
+•
+,
+,
+,
+,
+,
+(First, second, etc) (Like MIPS
+–
+)
+• Remaining arguments go on the stack.
+• Callee must preserve
+,
+,
+,
+,
+,
+(Like MIPS
+–
+• Return value:
+(overflows into
+for 128-bits) (MIPS
+–
+)
+• Lots of other small things not worth going over.
+
+)
+
+• For reference: https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf
+3
+
+Function, function… what’s your… function
+• The activation frame contains
+temporary data needed by the function.
+•
+•
+•
+C
+
+is the return value
+is the current stack address
+is the address of this frame
+
+What goes here?
+
+x86-64 (gas / AT&T syntax,
+
+)
+
+4
+
+Oh, that’s your function
+• First: it fills the activation frame
+with initial variable values.
+• It may not allocate them in
+any strict order. Here, it
+allocates x first and further away.
+x86-64 (gas / AT&T syntax,
+
+–
+)
+
+–
+Preserves
+(caller activation frame)
+Allocates “ ” on stack (
+from top)
+Allocates “ ” on stack (
+from top)
+(it does not have to be in order)
+
+Resets caller activation frame
+Returns (return value is in
+)
+
+5
+
+These are actual sandwiches (no hot dogs or w/e)
+• When identifying
+functions, you are
+looking for that
+tell-tale sandwich
+pattern.
+•A
+is a good sign
+of the beginning of a
+function
+• And the
+will
+happen before the
+at the end.
+• Everything between is
+the sweet, sweet jam
+that makes it unique.
+
+6
+
+Who controls the
+• Control flow is a
+•
+•
+
+will set
+will set
+
+•
+
+group set
+
+or
+
+controls the flow
+followed by
+
+based on the difference (subtraction) between values
+based on bitwise AND of both values (faster, but less useful)
+
+(program counter) to an address based on
+
+• Often it is much more useful to just interpret the
+C
+
+x86-64 (gas / AT&T syntax,
+
+(
+
+is
+
+)
+)
+
+7
+
+Who controls the
+•
+
+controls the flow
+
+has bits that are set based on the ALU (CPU math logic) result
+– most significant bit of result
+– set if overflow occurred
+
+• Each jump looks at different
+– Jumps when
+C
+
+Works because of 2’s
+complement math.
+(thus, instead of its strict definition,
+better to think about it abstractly)
+
+– set if result is zero
+– set if last bit operation has carry
+
+patterns. (Look ‘em up!)
+– set if
+
+or
+
+x86-64 (gas / AT&T syntax,
+
+)
+
+Perform x - 0 (does nothing!)
+Jump if the result (that is, x)
+does not have a set sign bit.
+(x is positive in that case)
+Perform x - y
+Jump if the result is 0 or
+if result is negative after overflow
+or positive and didn’t overflow.
+(x is >= y in these cases)
+
+8
+
+cmp, simplifying… the confusion
+• Just remember that the order of operands is not the… best order…
+• It’s kinda swapped around in the AT&T syntax we have been looking at:
+Jump if x > 0
+
+Jump if x >= y
+
+We negate the
+condition
+Because we are
+deciding when to
+skip the code!
+
+Jump if x < y
+
+Jump if x != y
+
+9
+
+test… adding some new confusion
+•
+
+is somewhat stranger… and requires some more thought.
+• performs an AND of the arguments and sets flags on result
+
+• Thankfully, generally only commonly used in a couple of cases.
+• Generally to test a value against “true” or “false”.
+• Recall that
+and
+will look at the zero flag (
+)
+• Keep in mind that jumps are built around
+(which performs:
+We negate the
+condition
+
+)…
+
+Jump if x != 0
+(
+?)
+
+Jump if x == 0
+(
+?)
+CS/COE 0449 – Spring 2019/2020
+
+10
+
+Patterns
+• Control flow is a
+C
+
+/
+
+before a
+–
+–
+x86-64 (gas / AT&T syntax,
+
+)
+
+11
+
+Altogether now… Working backward
+
+Negate logic to form “if” logic
+
+Negate logic to form “if” logic
+
+12
+
+Deduction, dear watson
+No use of
+
+… likely no arguments
+
+Two stack allocations … Two local variables.
+(initialized to 5 and, likely, -2)
+
+Looking at
+
+… This simply returns zero.
+
+13
+
+Conventional wisdom: counting arguments
+
+Readies
+… second argument!
+Readies
+… first argument!
+Since they are
+… yep! Both 32-bit!
+Like a
+in MIPS. A function call.
+
+Still have to follow the
+
+to the assembly of the function.
+
+14
+
+Conventional wisdom: counting arguments
+
+Copies
+… function argument!
+Copies
+… second argument!
+Since they are
+… They are both 32-bit!
+is the return address…
+means it is a 32-bit return
+
+15
+
+

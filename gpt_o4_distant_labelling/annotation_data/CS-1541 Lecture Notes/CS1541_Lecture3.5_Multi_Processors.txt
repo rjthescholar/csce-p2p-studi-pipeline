@@ -1,0 +1,1315 @@
+Multiprocessors
+and Caching
+CS 1541
+Wonsun Ahn
+
+Two ways to use multiple processors
+● Distributed (Memory) System
+o Processors do not share memory (and by extension data)
+o Processors exchange data through network messages
+o Programming standards:
+▪ Message Passing Interface (MPI) – C/C++ API for exchanging messages
+▪ Ajax (Asynchronous JavaScript and XML) – API for web apps
+o Data exchange protocols: TCP/IP, UDP/IP, JSON, XML…
+● Shared Memory System (a.k.a. Multiprocessor System)
+o Processors share memory (and by extension data)
+o Programming standards:
+▪ Pthreads (POSIX threads), Java threads – APIs for threading
+▪ OpenMP – Compiler #pragma directives for parallelization
+o Cache coherence protocol: protocol for exchanging data among caches
+→ Just like Ethernet, caches are part of a larger network of caches
+2
+
+Shared Data Review
+● What bad thing can happen when you have shared data?
+
+● Dataraces!
+o You should have learned it in CS 449.
+o But if you didn’t, don’t worry I’ll go over it.
+
+3
+
+Review: Datarace Example
+int shared = 0;
+void *add(void *unused) {
+for(int i=0; i < 1000000; i++) { shared++; }
+return NULL;
+}
+bash-4.2$ ./datarace
+int main() {
+pthread_t t;
+shared=1085894
+// Child thread starts running add
+bash-4.2$ ./datarace
+pthread_create(&t, NULL, add, NULL);
+shared=1101173
+// Main thread starts running add
+bash-4.2$ ./datarace
+add(NULL);
+// Wait until child thread completes
+shared=1065494
+pthread_join(t, NULL);
+printf("shared=%d\n", shared);
+return 0;
+}
+Q) What do you expect from running this? Maybe shared=2000000 ?
+A) Nondeterministic result! Due to datarace on shared.
+4
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+shared
+1
+
+shared++
+Thread 1
+
+• You may think shared becomes 3.
+(shared++ on each thread)
+• But that’s not the only possibility!
+• I’ll show you shared becoming 2.
+
+shared++
+Thread 2
+
+5
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+0
+
+1
+
+0
+
+R1 = shared
+R1 = R1 + 1
+shared = R1
+Thread 1
+
+R1 = shared
+R1 = R1 + 1
+shared = R1
+Thread 2
+
+6
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+1
+
+1
+
+0
+
+① R1 = shared
+R1 = R1 + 1
+shared = R1
+Thread 1
+
+R1 = shared
+R1 = R1 + 1
+shared = R1
+Thread 2
+
+7
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+1
+
+1
+
+1
+
+R1 = shared②
+R1 = R1 + 1
+shared = R1
+
+① R1 = shared
+R1 = R1 + 1
+shared = R1
+Thread 1
+
+Thread 2
+
+8
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+2
+
+1
+
+1
+
+R1 = shared②
+R1 = R1 + 1
+shared = R1
+
+① R1 = shared
+③ R1 = R1 + 1
+shared = R1
+Thread 1
+
+Thread 2
+
+9
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+2
+
+1
+
+2
+
+R1 = shared②
+R1 = R1 + 1④
+shared = R1
+
+① R1 = shared
+③ R1 = R1 + 1
+shared = R1
+Thread 1
+
+Thread 2
+
+10
+
+Review: Datarace Example
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+2
+
+2
+
+2
+
+R1 = shared②
+R1 = R1 + 1④
+shared = R1
+
+① R1 = shared
+③ R1 = R1 + 1
+⑤ shared = R1
+Thread 1
+
+Thread 2
+
+11
+
+Review: Datarace Example
+• Why did this occur in the first place?
+• Because data was replicated to CPU registers and each worked on its own copy!
+
+● When two threads do shared++; initially shared = 1
+R1
+
+shared
+
+R1
+
+2
+
+2
+
+2
+
+① R1 = shared
+③ R1 = R1 + 1
+⑤ shared = R1
+Thread 1
+
+R1 = shared②
+R1 = R1 + 1④
+shared = R1⑥
+
+• End result is 2 instead of 3!
+• Only on simultaneous access
+(with this type of interleaving)
+
+Thread 2
+
+12
+
+Review: Datarace Example
+pthread_mutex_t lock;
+int shared = 0;
+void *add(void *unused) {
+for(int i=0; i < 1000000; i++) {
+pthread_mutex_lock(&lock);
+shared++;
+pthread_mutex_unlock(&lock);
+}
+return NULL;
+}
+int main() {
+…
+}
+
+bash-4.2$ ./datarace
+shared=2000000
+bash-4.2$ ./datarace
+
+shared=2000000
+bash-4.2$ ./datarace
+shared=2000000
+
+• Data race is fixed! Now shared is always 2000000.
+• Problem solved? No! CPU registers is not the only place replication happens!
+
+13
+
+Caching also does replication!
+● What happens if caches sit in between processors and memory?
+
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+Private L1$
+
+L2$
+
+L2$
+
+L2$
+
+L2$
+
+Private L2$
+
+Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+14
+
+Caching also does replication!
+● Let’s say CPU 0 first fetches shared for incrementing
+
+shared
+
+0
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+Private L1$
+
+shared
+
+0
+L2$
+
+L2$
+
+L2$
+
+L2$
+
+Private L2$
+
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+15
+
+Caching also does replication!
+● Then CPU 0 increments shared 100 times to 100
+
+shared
+
+100
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+Private L1$
+
+shared
+
+0
+L2$
+
+L2$
+
+L2$
+
+L2$
+
+Private L2$
+
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+16
+
+Caching also does replication!
+● Then CPU 2 gets hold of the mutex and fetches shared from L3
+
+shared
+
+100
+L1$
+
+L1$
+
+shared
+
+L1$
+0
+
+L1$
+
+Private L1$
+
+shared
+
+0
+L2$
+
+L2$
+
+shared
+
+L2$
+0
+
+L2$
+
+Private L2$
+
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+17
+
+Caching also does replication!
+● Then CPU 2 increments shared 10 times to 10
+
+shared
+
+100
+L1$
+
+L1$
+
+shared
+
+L1$
+10
+
+L1$
+
+Private L1$
+
+shared
+
+0
+L2$
+
+L2$
+
+shared
+
+L2$
+0
+
+L2$
+
+Private L2$
+
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+18
+
+Caching also does replication!
+● Clearly this is wrong. L1 caches of CPU 0 and CPU 2 are incoherent.
+
+shared
+
+100
+L1$
+
+L1$
+
+shared
+
+L1$
+10
+
+L1$
+
+Private L1$
+
+shared
+
+0
+L2$
+
+L2$
+
+shared
+
+L2$
+0
+
+L2$
+
+Private L2$
+
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+* All caches are write-back
+
+shared
+
+0
+
+19
+
+Cache Incoherence: Problem with Private Caches
+● This problem does not occur with a shared cache.
+o All processors share and work on a single copy of data.
+shared
+
+0 Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+o The problem exists only with private caches.
+● The problem exists for private caches.
+o Private copy is at times inconsistent with lower memory.
+o Incoherence occurs when private copies differ from each other.
+→ Means processors return different values for same location!
+
+20
+
+Cache Coherence
+
+21
+
+Cache Coherence
+● Cache coherence (loosely defined):
+o All processors of system should see the same view of memory
+o Copies of values cached by processors should adhere to this rule
+● Each ISA has a different definition of what that “view” means
+o Memory consistency model: definition of what that “view” is
+● All models agree on one thing:
+o That a change in value should reflect on all copies (eventually)
+
+22
+
+How Memory Consistent Model affects correctness
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+Q) What do you expect the value of data will be when it gets printed?
+A) Most people will say 42 because that is the logical ordering.
+But is it? Not always. There are situations where data is still 0!
+
+23
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+L1$
+
+L1$
+
+data
+0
+
+flag
+
+data
+
+false
+
+0
+
+flag
+false
+
+Let’s assume initially both data and flag are cached in each CPU’s L1 caches.
+
+24
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+L1$
+
+L1$
+
+data
+42
+
+flag
+
+data
+
+true
+
+0
+
+flag
+false
+
+CPU 0 updates both data and flag to 42 and true.
+
+25
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+L1$
+
+L1$
+
+data
+42
+
+flag
+
+data
+
+true
+
+0
+
+flag
+false
+
+Now the cached values in CPU 1 are stale and need to be invalidated.
+Invalidation: act of marking a cache block with stale data invalid.
+26
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+data
+42
+
+L1$
+
+CPU 1
+
+Invalidate for flag
+flag
+true
+
+Invalidate for data
+
+data
+0
+
+L1$
+
+flag
+false
+
+The invalidate messages travel through a network and may arrive out-of-order.
+Let’s say invalidate for flag arrives first to CPU 1 and marks flag invalid.
+27
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+data
+42
+
+L1$
+
+CPU 1
+
+Fetch for flag
+flag
+true
+
+Invalidate for data
+
+data
+0
+
+L1$
+
+flag
+true
+
+CPU 1 fetches updated flag from CPU 0 when comparing flag == false.
+Invalidate for data is still traveling through the network.
+28
+
+Scenario 1: Stores arrive out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+data
+42
+
+L1$
+
+CPU 1
+
+Fetch for flag
+flag
+
+Invalidate for data
+
+true
+
+data
+0
+
+L1$
+
+flag
+true
+
+Since flag is true, CPU 1 breaks out of while loop and prints data.
+data=0 gets printed!
+29
+
+Scenario 2: Loads perform out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+L1$
+
+L1$
+
+data
+0
+
+flag
+
+data
+
+false
+
+0
+
+Let’s assume now flag is not cached in CPU 1.
+CPU 1 suffers a cache miss on flag when it compares flag == false.
+30
+
+Scenario 2: Loads perform out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+Instruction Queue
+lw r1, flag (miss)
+
+data
+0
+
+L1$
+
+flag
+
+data
+
+false
+
+0
+
+L1$
+
+beq r1, $zero, _loop
+lw r2, data (hit)
+call println on r2
+
+Instead of stalling, CPU 1 predicts the branch not taken and issues lw r2, data.
+Now, r2 == 0. (Unless pipeline flushes due to branch misprediction.)
+31
+
+Scenario 2: Loads perform out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+Instruction Queue
+lw r1, flag (miss)
+
+data
+42
+
+L1$
+
+flag
+true
+
+Fetch for flag
+
+data
+0
+
+L1$
+
+beq r1, $zero, _loop
+
+flag
+
+lw r2, data (hit)
+
+true
+
+call println on r2
+
+Now let’s say CPU 0 updates data and flag before the fetch for flag arrives.
+Now, lw r1, flag completes, allowing beq r1, $zero, _loop to issue (with r1 == true)
+32
+
+Scenario 2: Loads perform out-of-order
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+CPU 0
+
+CPU 1
+
+Instruction Queue
+lw r1, flag (miss)
+
+data
+42
+
+L1$
+
+flag
+
+Fetch for flag
+
+true
+
+data
+0
+
+L1$
+
+beq r1, $zero, _loop
+
+flag
+
+lw r2, data (hit)
+
+true
+
+call println on r2
+
+Since r1 == true, that validates the not-taken prediction for the branch.
+Since r1 == 0, the println outputs data=0!
+33
+
+Memory Consistency Models are often very lax
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+• A memory consistency model where above ordering is guaranteed is called,
+Sequential Consistency (SC): Instructions appear to execute sequentially.
+• Real models allow many other orderings to allow optimizations:
+• Write buffers that allow multiple stores to be pending and perform out-of-order
+• Instruction queues that allow loads and other instructions to perform out-of-order
+• Compiler optimizations to reschedule stores and loads out-of-order
+
+• Intel, ARM, Java Virtual Machine all have relaxed memory consistency models
+• Moral: never do custom synchronization unless you know what you are doing!
+34
+
+Memory Consistency Models are often very lax
+● Initially, data == 0, flag == false.
+Producer Thread
+
+Consumer Thread
+
+data == 42;
+
+while(flag == false) { /* wait */ }
+
+flag = true;
+
+System.out.println(“data=“ + data);
+
+• Regardless of memory consistency model, they all agree on one thing:
+that values of data and flag must be made coherent eventually.
+• They only disagree on when that eventually is.
+
+• This property is called cache coherence.
+
+35
+
+Implementing Cache Coherence
+● How to guarantee changes in value are propagated to all caches?
+
+● Cache coherence protocol: A protocol, or set of rules, that all
+caches must follow to ensure coherence between caches
+o MSI (Modified-Shared-Invalid)
+o MESI (Modified-Exclusive-Shared-Invalid)
+o … often named after the states in cache controller FSM
+● Three states of MSI protocol (maintained for each block):
+o Modified: Dirty. Only this cache has copy.
+o Shared: Clean. Other caches may have copy.
+o Invalid: Block contains no data.
+
+36
+
+MSI Snoopy Cache Coherence Protocol
+Processor
+
+Snoop
+tag
+
+Cache tag
+and data
+
+Processor
+
+Snoop
+tag
+
+Cache tag
+and data
+
+Processor
+
+Snoop
+tag
+
+Cache tag
+and data
+
+Single bus
+
+Memory
+
+I/O
+
+●Each processor monitors (snoops) the activity on the bus
+oIn much the same way as how nodes snoop the Ethernet
+●Cache state changes in response to both:
+oRead / writes from the local processor
+oRead misses / write misses from remote processors it snoops
+37
+
+MSI: Example
+• All bus activity is show in blue. Cache changes block state in response.
+• Bus activity is generated only for cache misses, or for invalidates
+• Other caches must maintain coherence by monitoring that bus activity
+
+Event
+
+In P1’s cache
+L = invalid
+
+P1 writes 10 to A
+(write miss)
+P1 reads A
+(read hit)
+P2 reads A
+(read miss)
+P2 writes 20 to A
+(write hit)
+P2 writes 40 to A
+(write hit)
+P1 write 50 to A
+(write miss)
+
+In P2’s cache
+L = invalid
+Read Exclusive A (from write in P1)
+
+L  A = 10 (modified)
+
+L = invalid
+
+L  A = 10 (modified)
+
+L = invalid
+
+Read A (from read in P2)
+
+L  A = 10 (shared)
+
+L  A = 10 (shared)
+
+Invalidate A (from write in P2)
+
+L = invalid
+
+L  A = 20 (modified)
+
+L = invalid
+
+L  A = 40 (modified)
+Read Exclusive A (from write in P1)
+
+L  A = 50 (modified)
+
+L = invalid
+38
+
+Cache Controller FSM for MSI Protocol
+● Processor activity in red, Bus activity in blue
+Read
+Write
+
+Read
+BusRead
+
+BusRead
+
+Modified
+
+Shared
+
+Write
+BusReadX
+BusReadX BusInvalidate
+Write
+
+•
+•
+
+Read
+•
+
+Invalid
+
+BusRead: Read request is snooped
+BusReadX: Read exclusive request is snooped
+• Sent by a processor on a write miss
+• Since line will be modified, need to invalidate
+BusInvalidate: Invalidate request is snooped
+• Sent on a write hit on shared cache line
+• To invalidate all other shared lines in system
+
+BusRead
+BusReadX
+BusInvalidate
+39
+
+TLB Coherence
+
+40
+
+How about TLBs?
+● We said TLBs are also a type of cache that caches PTEs.
+o So what happens if a processor changes a PTE?
+o How does that change get propagated to other processor TLBs?
+● Unfortunately, there is no hardware coherence for TLBs. 
+● That means software (the OS) must handle the coherence
+o Which is of course much much slower
+
+41
+
+TLB shootdown
+● In order to update a PTE (page table entry)
+o Initiator OS must first flush its own TLB
+o Send IPIs (Inter-processor interrupts) to other processors
+▪ To flush the TLBs for all other processors too
+o Source of significant performance overhead
+
+* Courtesy of Nadav Amit et al. at VMWare
+42
+
+

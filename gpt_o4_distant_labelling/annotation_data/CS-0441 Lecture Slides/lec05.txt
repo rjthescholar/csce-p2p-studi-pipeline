@@ -1,0 +1,466 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #5: Logic Programming and Nested
+Quantifiers
+Based on materials developed by Dr. Adam Lee
+
+Today’s topics
+n Applications of predicate logic
+n Nested quantifiers
+
+Logic programming enables automated reasoning
+Prolog
+l Programming in logic
+l Developed in the 1970s for
+AI purposes
+
+Datalog
+l Logical formalization of
+databases
+l Developed in the 1980s
+
+For our purposes, we can consider Prolog and Datalog to be the
+same, though in reality they have very important differences.
+
+Two main constructs:
+
+Lower case = constant
+
+l Facts
+² instructor(bill, cs441)
+Upper case = variable
+² student(smith, cs441)
+l Rules
+² teaches(P,S) :- instructor(P,C), student(S,C)
+
+Rules and facts define predicates
+Facts define predicates by explicitly listing elements that
+satisfy those predicates
+l “Dr. Garrison is the instructor for CS441”
+º instructor(bill, cs441)
+
+Rules define predicates by combining previously specified
+predicates
+l “Professors teach the students enrolled in the courses for
+which they are the instructor” º
+teaches(P,S) :- instructor(P,C), student(S,C)
+
+Prolog is an environment that lets us issue queries to
+determine which predicates are true!
+
+A Security Example
+grant(U, projector) :- located(U, 105), role(U, presenter)
+located(U, R) :- owns(U, D), dev_loc(D, R)
+role(bob, presenter) owns(alice, laptop12)
+role(carol, presenter) owns(bob, tablet23)
+owns(carol, cell42)
+
+dev_loc(laptop12, 105)
+dev_loc(tablet23, 105)
+dev_loc(cell42, 105)
+
+Can Bob run the projector?
+l Query: ?grant(bob, projector)
+l Solution: true
+Knowledge base
+
+Who is in room 105?
+l Query: ?located(X, 105)
+l Solution: alice, bob, carol
+
+Write and evaluate the following queries
+grant(U, projector) :- located(U, 105), role(U, presenter)
+located(U, R) :- owns(U, D), dev_loc(D, R)
+role(bob, presenter) owns(alice, laptop12)
+role(carol, presenter) owns(bob, tablet23)
+owns(carol, cell42)
+
+n Can Alice use the projector?
+l ?grant(alice, projector)
+l false
+
+n Can Carol use the projector
+l ?grant(carol, projector)
+l true
+
+dev_loc(laptop12, 105)
+dev_loc(tablet23, 105)
+dev_loc(cell42, 105)
+
+n Which devices does Alice own?
+l ?owns(alice, X)
+l laptop12
+
+Logic programming is a useful tool!
+Name
+
+Age
+
+Phone
+
+Alice
+
+19
+
+555-1234
+
+Danielle
+
+33
+
+555-5353
+
+Zach
+
+27
+
+555-3217
+
+Charlie
+
+21
+
+555-2335
+
+Artificial Intelligence
+
+Databases
+
+Route
+planning
+
+Security
+
+Just for grins…
+If you are interested in playing around with logic
+programming, download SWI-Prolog
+l URL: http://www.swi-prolog.org/
+
+This (free) package is a runtime environment in which
+you can write logic programs and evaluate queries.
+Dave
+
+Charlie
+Alice
+
+Elise
+
+Bob
+
+Becky
+
+Frank
+Sarah
+
+Tommy
+
+Nested quantifiers!?!?
+Many times, we need the ability to nest one quantifier
+within the scope of another quantifier
+
+Example: All integers have an additive inverse. That is,
+for any integer x, we can choose an integer y such that
+the sum of x and y is zero.
+
+"x $y (x + y = 0)
+There is no way to express this statement using only a
+single quantifier!
+
+Deciphering nested quantifiers isn’t as scary as
+it looks…
+… if you remember to read from left to right!
+
+"x $y "z [(x + y)×z = 0]
+For all x…
+… there exists a y such
+that…
+… for all z…
+
+And think about scope of variables
+like with programming!
+
+… (x + y)× z = 0
+
+A few more examples…
+"x "y (x + y = y + x)
+
+This is the commutative
+law for addition!
+
+l For all integers x and for all integers y, x + y = y + x
+
+"x "y "z [(x+y)+z = x+(y+z)]
+
+This is the associative
+law for addition!
+
+l For all integers x, for all integers y, and for all integers z,
+(x+y)+z = x+(y+z)
+
+$x "y (x× y = 0)
+l There exists an x such that for all y, x× y = 0
+
+Since we always read from left to right, the
+order of quantifiers matters!
+Consider: "x $y (x + y = 0)
+
+Clearly true!
+Just set y = -x
+
+➣ Every integer has an additive inverse
+Not true…
+
+Transpose: $y "x (x + y = 0)
+➣ There exists some integer y such that when added to
+any other integer x, the sum of x and y is 0
+
+Remember: As long as you read from left to right, you
+won’t have any problems!
+
+Many mathematical statements can be translated into
+logical statements with nested quantifiers
+Translating mathematical expressions is often easier
+than translating English statements!
+Steps:
+1. Rewrite statement to make quantification and logical
+operators more explicit
+2. Determine the order in which quantifiers should appear
+3. Generate logical expression
+
+Let’s try a translation…
+Universal quantifier
+
+Statement: Every real number except zero has a
+multiplicative inverse
+x×y=1
+
+Singular—suggestive of an
+existential quantifier
+
+"x
+Rewrite: For every real number x, if x ≠ 0, then there
+exists a real number y such that x×y = 1.
+… $y (x × y = 1)
+
+(x ≠ 0) → …
+
+Translation: "x [(x ≠ 0) → $y (x × y = 1)] OR
+"x $y [(x ≠ 0) → (x × y = 1)]
+
+More examples…
+
+Statement: The product of any two negative integers
+is always positive
+l For any integer x and any integer y, if x < 0 and y < 0, then
+x× y > 0
+l "x "y [(x < 0 ∧ y < 0) → (x× y > 0)]
+
+Statement: For any real number a, it is possible to
+choose real numbers b and c such that a2 + b2 = c2
+l For any real number a, there exist real numbers b and c
+such that a2 + b2 = c2
+l "a $b $c (a2 + b2 = c2)
+
+Translating quantified statements to English is
+as easy as reading a sentence!
+Let:
+l C(x) ≡ x is enrolled in CS441
+l M(x) ≡ x has an MP3 player
+l F(x, y) ≡ x and y are friends
+l Domain of x and y is “all students”
+
+Statement: ∀x [C(x) → M(x) ∨ (∃y (F(x,y) ∧ M(y))]
+For every student x…
+… if x is enrolled in CS441, then…
+… x has an MP3 player…
+… or there exists another student y such that…
+… x and y are friends…
+… and y has an MP3 player.
+
+Translate the following expressions into English
+Let:
+l O(x,y) ≡ x is older than y
+l F(x,y) ≡ x and y are friends
+l The domain for variables x and y is “all students”
+
+Statement: ∃x ∀y O(x,y)
+l There exists a student x, such that for all students y, x is older
+than y.
+l Alternatively: There exists an oldest student.
+
+Statement: ∃x ∃y [F(x,y) ∧ ∀z [(y≠z) → ¬F(x,z)]]
+l There exists two students x and y such that x and y are friends
+and for all students z, if z ≠ y, then x and z are not friends.
+l Alternatively: There exists a student with only one friend L
+
+In-class exercises
+Problem 1: Translate the following mathematical
+statement into predicate logic: Every even number is a
+multiple of 2. Assume that the predicate E(x) means “x
+is even.”
+l
+
+Hint: What does “x is a multiple of 2” mean algebraically? Try
+not to use “mod.”
+
+Problem 2: Translate the following expressions into
+English. Assume that C(x) means “x has a car”, F(x,y)
+means “x and y are friends”, and S(x) means “x is a
+student.”
+l
+l
+
+∀x (S(x) → C(x) ∨ ∃y [F(x,y) ∧ C(y)])
+∀x ∃y ∃z [C(x) ∨ (F(x,y) ∧ C(y)) ∨ (F(x,y) ∧ F(y,z) ∧ C(z))]
+
+Translating from English to a logical expression with
+nested quantifiers is a little bit more work…
+
+Steps:
+1. If necessary, rewrite the sentence to make quantifiers and
+logical operations more explicit
+2. Create propositional functions to express the concepts in
+the sentence
+3. State the domains of the variables in each propositional
+function
+4. Determine the order of quantifiers
+5. Generate logical expression
+
+Let’s try an example…
+Universal quantifier
+
+Statement: Every student has asked at least one
+professor a question.
+Existential quantifier
+
+Rewrite: For every person x, if x is a student, then there
+exists a professor whom x has asked a question.
+
+Let:
+l S(x) ≡ x is a student
+l P(x) ≡ x is a professor
+l Q(x,y) ≡ x has asked y a question
+
+Domains for x and
+y are “all people”
+
+Translation: ∀x (S(x) → ∃y [P(y) ∧ Q(x,y)])
+
+Translate the following from English
+Statement: There is a man who has tasted every type of
+beer.
+
+Rewrite: There exists a person x such that x is man and
+for all types of drink y, if y is a beer then x has tasted y.
+Domain: all people
+
+Let:
+l M(x) ≡ x is a man
+l B(x) ≡ x is a beer
+l T(x,y) ≡ x has tasted y
+
+Domain: all drinks
+Domains: x = all people,
+y = all drinks
+
+Translation: ∃x (M(x) ∧ ∀y [B(y) → T(x,y)])
+
+Negating expression with nested quantifiers is
+actually pretty straightforward…
+… you just repeatedly apply DeMorgan’s laws!
+¬[∃x (M(x) ∧ ∀y [B(y) → T(x,y)])]
+≡ ∀x ¬(M(x) ∧ ∀y [B(y) → T(x,y)])
+≡ ∀x (¬M(x) ∨ ¬∀y [B(y) → T(x,y)])
+≡ ∀x (¬M(x) ∨ ∃y ¬[B(y) → T(x,y)])
+≡ ∀x (¬M(x) ∨ ∃y ¬[¬B(y) ∨ T(x,y)])
+≡ ∀x (¬M(x) ∨ ∃y [B(y) ∧ ¬T(x,y)])
+≡ ∀x (M(x) → ∃y [B(y) ∧ ¬T(x,y)])
+
+a → b ≡ ¬a ∨ b
+
+In English: For all people x, if x is a man, then there
+exists some type beer that x has not tasted.
+
+Alternatively: No man has tasted every type of beer.
+
+A few stumbling blocks…
+Whether the negation sign is on the inside or the outside of
+a quantified statement makes a big difference!
+
+Example: Let T(x) ≡ “x is tall”. Consider the following:
+l ¬∀x T(x)
+➣“It is not the case that all people are tall.”
+
+l ∀x ¬T(x)
+➣“For all people x, it is not the case that x is tall.”
+
+Note: ¬∀x T(x) = ∃x ¬T(x) ≠ ∀x ¬T(x)
+Recall: When we push negation into a quantifier,
+
+DeMorgan’s law says that we need to switch the quantifier!
+
+A few stumbling blocks…
+Let:
+
+C(x) ≡ “x is enrolled in CS441”
+S(x) ≡ “x is smart.”
+
+Question: The following two statements look the same,
+what’s the difference?
+l ∃x [C(x) ∧ S(x)]
+l ∃x [C(x) → S(x)]
+
+There is a smart
+student in CS441.
+
+There exists a student x
+such that if x is in CS441,
+then x is smart.
+
+Subtle note: The second statement is true if there exists
+one person not in CS441, because F→F or F→T.
+
+Negate ∀x (S(x) → ∃y [P(y) ∧ Q(x,y)])
+¬∀x (S(x) → ∃y [P(y) ∧ Q(x,y)])
+≡ ∃x ¬(S(x) → ∃y [P(y) ∧ Q(x,y)])
+≡ ∃x ¬(¬S(x) ∨ ∃y [P(y) ∧ Q(x,y)])
+≡ ∃x (S(x) ∧ ¬∃y [P(y) ∧ Q(x,y)])
+≡ ∃x (S(x) ∧ ∀y ¬[P(y) ∧ Q(x,y)])
+≡ ∃x (S(x) ∧ ∀y [¬P(y) ∨ ¬Q(x,y)])
+≡ ∃x (S(x) ∧ ∀y [P(y) → ¬Q(x,y)])
+
+In English: There exists a student x such that for all people
+y, if y is a professor then x has not asked y a question.
+
+Alternatively: There exists a student that has never asked
+any professor a question.
+
+In-class exercises
+Problem 3: Translate the following English sentences
+into predicate logic.
+a) Every student has at least one friend that is dating a
+Steelers fan.
+b) If a person is a parent and a man, then they are the
+father of some child.
+
+Problem 4: Negate the results from Problem 3 and
+translate the negated expressions back into English.
+
+Final Thoughts
+n Logic programming is an interesting application of
+predicate logic that is used throughout computer
+science
+n Quantifiers can be nested
+l Nested quantifiers are read left to right
+l Order is important!
+l Translation and negation work the same as they did before!
+
+n Next lecture:
+l Rules of inference
+l Please read sections 1.6–1.7
+
+

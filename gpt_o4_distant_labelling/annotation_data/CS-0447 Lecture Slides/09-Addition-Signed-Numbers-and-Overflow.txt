@@ -1,0 +1,1067 @@
+#9
+
+Binary arithmetic:
+Addition
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+
+• nope
+
+2
+
+Binary addition
+
+3
+
+Adding in binary
+● It works the same way as you learned in school
+o Except instead of carrying at 1010, you carry at… 102!
+▪ 1 + 1 = 102 (210)
+▪ 1 + 1 + 1 = 112 (310)
+● Let's try it. (what are these in decimal?)
+0 1 1 1
+
+1 1 0
+
+1011 0010
++0010 1111
+1110 0001
+
+4
+
+Formalizing the algorithm
+● for each pair of bits starting at the LSB,
+o add the two bits and the carry
+o the low bit of the sum goes into the sum row
+o the high bit of the sum is the carry for the next higher bit
+● this is the grade school algorithm
+o cause it's how you learned to add in grade school
+
+Bit
+Bucket..?
+
+1 0 1 1 0 0 1 0
++0 0 1 0 1 1 1 1
+5
+
+Signed Numbers
+
+6
+
+Remember this?
+● if you load a byte…
+
+31
+0
+00000000 00000000 00000000 00000000
+
+10010000
+
+If the byte is signed… what should it become?
+
+31
+0
+11111111 11111111 11111111 10010000
+If the byte is unsigned… what should it become?
+
+31
+0
+00000000 00000000 00000000 10010000
+
+lb does
+
+sign extension.
+
+lbu does
+
+zero extension.
+7
+
+Arbitrariness… Again
+● What does this mean?
+
+10001010
+Is it signed?
+
+¯\_(ツ)_/¯
+
+Is it
+unsigned?
+
+What’s the
+difference?
+8
+
+Unsigned integers – they are all positive!
+● We have numbers, they are all positive!
+o On a number line:
+
+000
+
+010
+100
+110
+001
+011
+101
+111
+
+0 1 2 3 4 5 6 7
+
+● What if we want to have negative numbers?
+
+9
+
+If you wanted to implement signed integers…
+● What would be the most intuitive way of doing it?
+o You could have a "sign bit" where 0 means +, and 1 means ● This is sign-magnitude representation. on a number line:
+
+111
+
+110
+
+000
+010
+101
+001
+011
+
+-3 -2 -1 0 +1 +2 +3
+100
+
+● What about the pattern 100?
+o negative sign, 0 magnitude
+o NEGATIVE ZERO??
+● Arithmetic is a bit awkward
+
+10
+
+Sign-magnitude arithmetic
+● Negation
+
+-(3)
+
+0011
+
+-(-3)
+
+1011
+
+bit pattern for
+positive 3?
+
+bit pattern for
+negative 3?
+
+1011
+
+Flip MSB!
+
+0011
+
+Flip MSB!
+
+11
+
+Sign-magnitude arithmetic
+● Negation
+
+-(3)
+
+0011
+
+1011
+
+-(-3)
+
+1011
+
+0011
+
+● (wrong) Addition
+
+11
+0011
++0011
+0110
+
+to binary?
+
+3
++ 3
+6
+
+bit pattern for
+-3… positive 3?
+
+3
++-3
+0
+
+11
+0011
++1011
+1011
+1110
+
+-6
+
+to decimal?
+
+● It’s not impossible
+o But it is awkward
+
+12
+
+Well, what if…
+● We use a technique borrowed from old accounting practices and
+mechanical calculators, we can flip all the bits to negate a number
+● This is ones' complement. on a number line:
+● We have the same problem with 111
+as sign-magnitude had with 100
+
+100
+
+101
+
+000
+010
+110
+001
+011
+
+-3 -2 -1 0 +1 +2 +3
+● This does make arithmetic easier
+● But it is not used in modern computers.
+
+111
+
+13
+
+Sign-magnitude arithmetic
+● Negation
+
+-(3)
+
+0011
+
+-(-3)
+
+1100
+
+bit pattern for
+positive 3?
+bit pattern for
+negative 3?
+
+flip!
+
+flip!
+
+1100
+
+0011
+
+14
+
+Sign-magnitude arithmetic
+● Negation
+
+● Addition
+
+to binary?
+
+3
++ 2
+5
+
+-(3)
+
+0011
+
+1100
+
+-(-3)
+
+1100
+
+0011
+
+0010
+0011
++0010
+0101
+
+Add the
+carry back in
+
+bit pattern for
+-2… positive 2?
+
+3
++-2
+1
+
+1111
+0011
+0010
+flip!
++1101
+1101
+0000???
++0001
+1
+0001
+
+this is positive, so don’t flip
+
+to decimal?
+
+15
+
+One’s complement arithmetic
+● Do you really want to write code like
+
+if( (my_var == 0) OR (my_var == -0) )
+{
+…
+}
+
+● Just kidding… Compilers would handle that for you!
+
+16
+
+Finally, two's complement
+● First, we flip all the bits
+o Just like with 1’s complement
+● Then add 1.
+● The number line looks a little bit stranger
+o But there is only one 0, and it is 0!
+
+100
+
+101
+
+110
+
+000
+010
+111
+001
+011
+
+-4 -3 -2 -1 0 +1 +2 +3
+
+17
+
+Finally, two's complement
+● First, we flip all the bits
+o Just like with 1’s complement
+● Then add 1.
+● The number line looks a little bit stranger
+o But there is only one 0, and it is 0!
+
+100
+
+101
+
+110
+
+000
+010
+111
+001
+011
+
+-4 -3 -2 -1 0 +1 +2
+● It's lopsided: There is no +4!
+o But arithmetic is easy!
+o when someone says "signed," 99% of the time they mean this
+o When I say “signed”, I 100% of the time mean this
+
++3
+
+18
+
+Sign-magnitude arithmetic
+● Negation
+
+-(3)
+
+0011
+
+-(-3)
+
+1101
+
+bit pattern for
+positive 3?
+bit pattern for
+negative 3?
+
+flip!
+
+flip!
+
+1100
+
+0010
+
+1101
+
+Add 1!
+
+0011
+
+Add 1!
+
+● You don’t need to subtract!!
+o flip(k)+1 == flip(k-1)
+▪ If you ignore the carry! ☺
+
+19
+
+Two's complement addition
+● the great thing is: you can add numbers of either sign without having to do
+Ignore the carry
+anything special!
+to binary? 0111
+
+3
++ 7
+10
+
+bit pattern for
+-7… positive 7?
+
+0011
+3
++0111 +-7
+1010 -4
+
+0011
+0011
+0111
+4
+flip!
++1 +1001
+to decimal?
+1000
+1100 0100
+this is negative, so
+
+what is it? flip!
+the actual patterns of bits are the same.
+so how does the computer "know" whether it's
+doing signed or unsigned addition?
+
++1
+
+0011
+
+20
+
+IT DOESN'T
+21
+
+This is how it looks
+● Interpreting bit patterns as (left) unsigned and (right) signed
+
+15 0
+
+1
+
+-1 0
+
+14 1111 0000 0001 2
+1110
+0010
+13 1101
+0011 3
+
+-2 1111
+1110
+-3 1101
+
+12 1100
+1011
+11 1010
+
+-4 1100
+1011
+-5 1010
+
+10
+
+1001
+
+9
+
+0100
+0101
+0110
+1000
+
+8
+
+0111
+
+7
+
+6
+
+4
+5
+
+-6
+
+1001
+
+0000
+
+1
+0001
+
+0010
+
+2
+
+0011
+0100
+0101
+
+0110
+1000
+
+0111
+
+-7 -8 7
+
+6
+
+3
+4
+5
+
+Two's complement negation
+● (assuming 4 bits) What about??? -8?
+o What happens if we negate -8?
+▪ i.e. -(-8)?
+
+-(-8)
+
+1000
+
+bit pattern for
+negative 8?
+
+flip!
+
+0111
+
+WHAT DID YOU
+DO WRONG??????
+
+1000
+
+Add 1!
+
+-8???
+-1 0
+
+-2 1111
+1110
+-3 1101
+
+0000
+
+-6
+
+0001
+0010
+
+2
+
+0011
+
+-4 1100
+1011
+-5 1010
+1001
+
+1
+
+0100
+0101
+0110
+
+1000
+
+0111
+
+-7 -8 7
+
+3
+4
+5
+
+6
+23
+
+Absolutely Bonkers – Slide borrowed from wilkie (449)
+public class AbsTest {
+public static int abs(int x) {
+if (x < 0) {
+x = -x;
+}
+return x;
+}
+public static void main(String[] args) {
+System.out.println(
+String.format("|%d| = %d", Integer.MIN_VALUE, AbsTest.abs(Integer.MIN_VALUE))
+
+);
+}
+
+}
+
+// Outputs: |-2147483648| = -2147483648
+CS/COE 0449 – Spring 2019/2020
+
+Q: How many bits is a Java int? What happened here?
+
+24
+
+Neat properties
+● If we take a positive number and add zeros:
+o 12010 = 0111 10002
+o 0000 0000 0111 10002 = 12010
+● If we take a negative number and add ones:
+o 1000 01112 = - 0111 10002 + 12
+= - 0111 10012 = -12110
+
+o 1111 1111 1000 01112 = - 0000 0000 0111 10002+12
+= - 0000 0000 0111 10012
+= - 12110
+
+25
+
+A return to E X P A N D V A L U E
+● if you load a byte…
+
+31
+0
+00000000 00000000 00000000 00000000
+
+10010000
+
+If the byte is signed… what should it become?
+
+31
+0
+11111111 11111111 11111111 10010000
+If the byte is unsigned… what should it become?
+
+31
+0
+00000000 00000000 00000000 10010000
+
+lb does
+
+sign extension.
+
+lbu does
+
+zero extension.
+26
+
+Overflow
+
+27
+
+Overflow
+● In computers, numbers are finite.
+● Let's say our 4-digit display was counting up:
+9997, 9998, 9999…
+● What comes "next"?
+o What does this "0000" really mean?
+o It wrapped around.
+● This is overflow: the number you are trying
+to represent is too big to be represented.
+● Essentially, all arithmetic on the computer is modular arithmetic!
+o This causes a lot of software bugs.
+o https://en.wikipedia.org/wiki/Pac-Man#Level_256
+
+28
+
+Number carrousel
+● Computers perform modulus arithmetic
+o Meaning: it goes around!
+o E.g. in a 4-bit computer
+15 0
+
+14 1111
+1110
+13 1101
+
+0000
+
+1001
+
+0001
+0010
+
+2
+
+0011
+
+12 1100
+1011
+11 1010
+10
+
+1
+
+0100
+0101
+0110
+0111
+
+3
+4
+5
+
+6
+
+0110
+8 7
++0111
+what is 6 + 7? 1101
+9
+
+1000
+
+29
+
+Unsigned overflowing
+
+15 0
+
+14 1111
+1110
+13 1101
+
+0000
+
+1001
+
+9
+
+2
+0010
+0100
+0101
+
+0110
+1000
+
+8
+
+Uhhhhh
+
+0001
+
+0011
+
+12 1100
+1011
+11 1010
+10
+
+1
+
+0111
+
+6
+
+7
+
+what is 14 + 7?
+
+3
+4
+5
+
+1110
++0111
+10101
+
+If the result is smaller
+than either addend,
+there is an overflow
+
+30
+
+Signed overflowing
+● It may also happen with signed numbers
+
+what is -6 - 7?
+1 0 0 0
+
+This is OK!
+
+-1 0
+
+-2 1111
+1110
+-3 1101
+
+0000
+
+The sign of
+overflow is the
+opposite sign
+
+-6
+
+1001
+
+0001
+0010
+
+0100
+0101
+0110
+1000
+
+4
+5
+
+what is 6 + 7?
+
+2
+
+0011
+
+-4 1100
+1011
+-5 1010
+
+1010
++1001
+0011
+
+1
+
+0111
+
+-7 -8 7
+
+3
+
+6
+
+If the result of adding two numbers with the
+same sign results in the opposite sign,
+there is overflow
+
+0 1 1 0
+
+0110
++0111
+1101
+31
+
+Signed overflowing
+
+What about this?
+How can we detect
+if operations with
+different signs
+overflow?
+
+-1 0
+
+-2 1111
+1110
+-3 1101
+
+1001
+
+1
+0001
+0010
+
+2
+
+0011
+
+-4 1100
+1011
+-5 1010
+-6
+
+This is impossible:
+Max positive = 7
+-1+7=6!
+
+0000
+
+0100
+0101
+0110
+1000
+
+0111
+
+-7 -8 7
+
+3
+4
+5
+
+6
+
+32
+
+How many bits?
+● if you add two 2-digit decimal numbers, what's the
+largest number you can get?
+● what about two 4-digit decimal numbers?
+● what about two 4-bit numbers?
+● what's the pattern of the number of digits?
+o if you add two n-digit numbers in any base…
+o the result will have at most n + 1 digits
+● that means if we add two 32-bit numbers…
+o …we might get a 33-bit result!
+o if we have more bits than we can store in our
+number, that's overflow.
+
+99 9999
++99 +9999
+198 19998
+1111
++1111
+11110
+
+Q: How many bits do you need to represent -16 in 1s’ complement?
+Q: How many bits do you need to represent -16 in 2’s complement?
+
+33
+
+Handling overflow
+● we could ignore it
+o in MIPS: addu, subu
+o this is usually a bad idea
+▪ your program is broken
+o it's also the default in most languages, thanks C
+● we could fall on the floor - i.e. crash
+o in MIPS add, sub
+o can be handled and recovered from
+o but more complex
+● we could store that 33rd bit somewhere else
+
+34
+
+Maybe the bit bucket is a real place…
+● many other architectures do this
+o MIPS does not.
+● they have a "carry bit" register
+o this can be checked by the program after an add/sub
+● this is very useful for arbitrary precision arithmetic
+o if you want to add 2048-bit numbers, chain many 32-bit additions
+0 1 1 1
+
+0 0 0
+
+0 0 1 1 1
+
+1 0 0 0 0
+
+0010 1001
++0001 1100
+0100 0101
+
+0010
++0001
+0100
+
+1001
++1100
+0101
+
+add8bit
+
+add4bit
+
+add4bit
+
+35
+
+More Bonkers
+public class Main {
+public static void main(String []args) {
+int w = Integer.MAX_VALUE;
+if (w + 1 > w) {
+System.out.println("This does not happen.\n");
+}
+int z = w + 1;
+if (z > w) {
+System.out.println("This does not happen.\n");
+}
+System.out.println("The end.\n");
+}
+}
+CS/COE 0449 – Spring 2019/2020
+
+36
+
+I have a book
+
+37
+
+What’s the first page?
+
+Hilarious,
+right?
+
+38
+
+Then…
+
+What follows, chapter
+1?
+(it’s not!)
+
+What number page
+number does it start at?
+(it’s not “2”!)
+
+39
+
+Is it zero?
+
+Where does it end?
+(nope!)
+40
+
+Yikes….
+
+What can possible come
+after zero?
+(How much is 0-1?)
+
+41
+
+

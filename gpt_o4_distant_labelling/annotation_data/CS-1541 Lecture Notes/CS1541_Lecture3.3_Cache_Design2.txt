@@ -1,0 +1,1924 @@
+Cache Design 2
+CS 1541
+Wonsun Ahn
+
+Cache Design Parameter 6:
+Write-Through vs. Write-Back
+
+2
+
+Writes and Cache Consistency
+● Assume &x is 1110102, and x == 24 initially
+
+lw
+t0, &x
+addi t0, t0, 1
+sw
+t0, &x
+
+# x++
+
+● How will the lw change the cache?
+● How will the sw change the cache?
+o Uh oh, now the cache is inconsistent.
+(Memory still has the old value 24.)
+
+V
+000
+
+0
+
+001
+
+0
+
+010
+
+1
+0
+
+011
+
+0
+
+100
+
+0
+
+101
+
+0
+
+110
+
+0
+
+111
+
+0
+
+Tag
+
+Data
+
+111
+
+25
+24
+
+● How can we solve this? Two policies:
+o Write-through: Propagate write all the way through memory
+o Write-back: Write back cache block when it is evicted from cache
+3
+
+Write-Through Policy
+
+4
+
+Policy 1: Write-through
+● Write-through:
+o On hit, write to cache block and propagate write to lower memory
+o On miss, keep on propagating the write to lower memory
+● What happens if we write 25 to address 1110102?
+● What happens if we write 94 to address 0000102?
+→ Caches are kept consistent at all points in time!
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V Tag Data
+
+V Tag Data
+
+...
+
+...
+
+000 0
+
+000 0
+
+000010
+
+94
+93
+
+001 0
+
+001 0
+
+...
+
+...
+
+010 1 111
+
+24
+25
+
+010 1 000
+
+93
+94
+
+111010
+
+25
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+5
+
+Write-through: Reads
+● What happens if we read from address 0000102?
+o We can just discard the conflicting cache block 1110102
+o It’s just an extra copy of the same data
+● Note how we allocate blocks only on read misses
+o Write misses don’t allocate blocks because it doesn’t help anyway
+--- writes are propagated to lower memory even on write hits
+o This policy is called no write allocate
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V Tag Data
+
+V Tag Data
+
+...
+
+...
+
+000 0
+
+000 0
+
+000010
+
+94
+93
+
+001 0
+
+001 0
+
+...
+
+...
+
+010 1 000
+111
+
+24
+94
+25
+
+010 1 000
+
+93
+94
+
+111010
+
+25
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+6
+
+Write-through: Drawbacks
+● Drawback: Long write delays regardless of hit or miss
+o Must always propagate writes all the way to DRAM
+● Solution: Write buffer maintaining pending writes
+o CPU gets on with work after moving pending write to write buffer
+o But does the write buffer solve all problems?
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V Tag Data
+
+V Tag Data
+
+...
+
+...
+
+Write Buffer
+
+000 0
+
+000 0
+
+000010
+
+94
+93
+
+V Tag Data
+
+001 0
+
+001 0
+
+...
+
+...
+
+010 1 111
+
+24
+25
+
+010 1 000
+
+93
+94
+
+111010
+
+25
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+7
+
+Write-through: Drawbacks
+● The write buffer does not solve all problems.
+
+1. Write buffer must be very big to store all pending writes
+o May take more than 100 cycles for write to propagate to memory
+o Write buffer is always checked before L1$ → adds to hit time
+2. Write buffer does not solve bandwidth problems
+o If memory bandwidth < rate of writes in program,
+write buffer will fill up quickly, no matter how big it is
+● Impractical to write-through all the way to memory
+o Typically only L1 caches are write-through, if any
+● We need another strategy that is not so bandwidth-intensive
+8
+
+Write-Back Policy
+
+9
+
+Policy 2: Write-back
+● Dirty block: a block that is temporarily inconsistent with memory
+o On a hit, write to cache block, marking it dirty. No propagation.
+o Write back dirty block to lower memory only when it is evicted
+→ Saves bandwidth since write hits no longer access memory
+● A dirty bit is added to the cache block metadata (marked “D”)
+o Block 0000012 is clean → can be discarded on eviction
+o Block 1110102 is dirty → needs to be written back on eviction
+Memory
+
+Cache
+V D Tag Data
+000 0 0
+001 0 0 000
+
+93
+
+010 1 1 111
+
+25
+
+...
+
+...
+
+...
+
+Address
+
+Data
+
+...
+
+...
+
+000001
+
+93
+
+...
+
+...
+
+111010
+
+24
+
+...
+
+...
+10
+
+Write-back: Write allocate
+● What happens on a write miss?
+o If no write allocate like write-through, will miss again on next write
+o And on the next write, and on the next write, …
+o No bandwidth savings from hitting in cache
+
+● Unlike write-through, write-back has a write allocate policy
+o On write miss, block is allocated in cache to stop further misses
+o On allocation, the block is read in from lower memory
+● Q: Why the wasted effort?
+o Aren’t we going to overwrite the block anyway with new data?
+o Why read in data that is going be overwritten?
+
+11
+
+Write-back: Write allocate
+● Because a block is multiple bytes, and you are updating just a few
+o Suppose a cache block is 8 bytes (2 words)
+o Suppose you are writing to only the first word
+V D
+1
+
+1
+
+Tag
+
+Data
+first word (written)
+
+second word (not written)
+
+o After allocate, the entire cache block is marked valid
+▪ That means second word as well as first word must be valid
+▪ That means second word must be fetched from lower memory
+▪ Otherwise if later second word is read, it will contain junk data
+▪ Unavoidable, unless you have a valid bit for each byte
+– That means spending 1 bit for every 8 bits of data
+– That’s just too much metadata overhead
+12
+
+Policy 2: Write-back
+● What happens if we write 25 to address 1110102?
+
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+Write Buffer 000 0 0
+
+000 0 0
+
+000010
+
+93
+
+V Tag Data 001 0 0
+
+001 0 0
+
+...
+
+...
+
+010 1 0 111
+
+24
+
+010 1 0 000
+
+93
+
+111010
+
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+13
+
+Policy 2: Write-back
+● What happens if we write 25 to address 1110102?
+o L1 Cache hit! Update cache block and mark it dirty.
+o That’s it! How quick is that compared to write-through?
+
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+Write Buffer 000 0 0
+
+000 0 0
+
+000010
+
+93
+
+V Tag Data 001 0 0
+
+001 0 0
+
+...
+
+...
+
+010 1 0
+1 111
+
+24
+25
+
+010 1 0 000
+
+93
+
+111010
+
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+14
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102?
+o L1 Cache miss! First thing we will do is add store to Write Buffer.
+(So that the CPU can continue executing past the store)
+
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+Write Buffer 000 0 0
+
+000 0 0
+
+000010
+
+93
+
+V Tag Data 001 0 0
+
+001 0 0
+
+...
+
+...
+
+1
+
+94
+
+010 1 1 111
+
+25
+
+010 1 0 000
+
+93
+
+111010
+
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+15
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102? (cont’d)
+o Next the L2 Cache is searched and it’s a hit!
+o To bring in block to L1 Cache, we first need to evict block 25.
+o It’s a dirty block, so we can’t just discard it. Need to write it back!
+o Since block 25 misses in L2, it will take the long trip to Memory
+o Is there a way to put it aside and get to it later?
+Memory
+
+L1 Cache
+
+L2 Cache
+
+Address
+
+Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+Write Buffer 000 0 0
+
+000 0 0
+
+000010
+
+93
+
+V Tag Data 001 0 0
+
+001 0 0
+
+...
+
+...
+
+1
+
+94
+
+010 1 1 111
+
+25
+
+010 1 0 000
+
+93
+
+111010
+
+24
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+16
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102? (cont’d)
+o Yes! Add Write Buffers to caches, just like we did for the pipeline!
+o Move block to L1 Write Buffer so L1 Cache can continue working
+o Pending block will get written back to Memory eventually
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+010 1
+0 1
+0 111
+
+001 0 0
+25
+
+010 1 0 000
+
+Memory
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+1
+
+0 0
+
+0 0
+
+111010
+
+24
+
+0 0
+
+0 0
+
+...
+
+...
+
+94
+
+17
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102? (cont’d)
+o Now we can finally read in block 93 to the L1 Cache
+
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 0 0
+
+010 1 0 000
+
+Memory
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+1
+
+0 1
+0 111
+1
+0 0
+
+0 0
+
+111010
+
+24
+
+0 0
+
+...
+
+...
+
+94
+
+25
+
+18
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102? (cont’d)
+o Now we can finally read in block 93 to the L1 Cache
+o And write 94 into the cache block, also marking it dirty
+o Store is finished, so now remove it from pipeline Write Buffer!
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 1
+0 1
+0 000
+
+94
+
+010 1 0 000
+
+Memory
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+1
+
+0 1
+0 111
+1
+0 0
+
+0 0
+
+111010
+
+24
+
+0 0
+
+...
+
+...
+
+94
+
+25
+
+19
+
+Policy 2: Write-back
+● What happens if we write 94 to address 0000102? (cont’d)
+o Eventually, the pending block in L1 Write Buffer will write back
+o But this didn’t affect the original store latency
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 1
+0 1
+0 000
+
+94
+
+010 1 0 000
+
+Memory
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 1
+0 111
+1
+0 0
+
+0 0
+
+111010
+
+24
+
+0 0
+
+...
+
+...
+
+25
+
+20
+
+Write-back: Reads
+● What happens if we read 25 from address 1110102?
+o Misses in L1 and L2 caches and must go all the way to Memory
+
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 1
+0 1
+0 000
+
+94
+
+010 1 0 000
+
+Memory
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 0
+
+0 0
+
+111010
+
+25
+
+0 0
+
+0 0
+
+...
+
+...
+21
+
+Write-back: Reads
+● What happens if we read 25 from address 1110102?
+o Misses in L1 and L2 caches and must go all the way to Memory
+o Fills the L2 Cache with 25 on the way back after evicting block 93
+(Note that block 93 can simply be discarded since it’s clean)
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 1
+0 1
+0 000
+
+94
+
+010 1 0 111
+000
+
+Memory
+25
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 0
+
+0 0
+
+111010
+
+25
+
+0 0
+
+0 0
+
+...
+
+...
+22
+
+Write-back: Reads
+● What happens if we read 25 from address 1110102? (cont’d)
+o Now it needs to evict block 94 in L1 Cache before filling with 25
+o But block 94 needs to be written back since it’s dirty!
+o So move to Write Buffer temporarily to make space.
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+
+010 1
+0 1
+0 000
+
+94
+
+010 1 0 111
+000
+
+Memory
+25
+93
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 0
+
+0 0
+
+111010
+
+25
+
+0 0
+
+0 0
+
+...
+
+...
+23
+
+Write-back: Reads
+● What happens if we read 25 from address 1110102? (cont’d)
+o Now L1 Cache can be filled with block 25
+
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+
+001 0 0
+010 1 0
+1 111
+
+010 0 0
+
+Memory
+25
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 1
+0 000
+1
+0 0
+
+0 0
+
+111010
+
+25
+
+0 0
+
+...
+
+...
+
+94
+
+24
+
+Write-back: Reads
+● What happens if we read 25 from address 1110102? (cont’d)
+o Now L1 Cache can be filled with block 25
+o Block 94 will eventually be written back to Memory
+o Write buffers in this context are also called victim caches
+L1 Cache
+
+L2 Cache
+
+V D Tag Data
+
+V D Tag Data
+
+000 0 0
+
+000 0 0
+
+001 0 0
+010 1
+0 0 111
+
+001 0 0
+25
+
+010 1 1 111
+
+Memory
+25
+
+Address
+
+Data
+
+...
+
+...
+
+Write Buffer
+
+Write Buffer
+
+Write Buffer
+
+000010
+
+93
+
+V Tag Data
+
+V D Tag Data
+
+V D Tag Data
+
+...
+
+...
+
+0 1
+0 000
+1
+0 0
+
+0 0
+
+111010
+
+25
+
+0 0
+
+...
+
+...
+
+94
+
+25
+
+Impact of Write Policy on AMAT
+● AMAT = hit time + (miss rate × miss penalty)
+
+● Write-through caches can have a larger write hit time
+o With write-back, a read hit and write hit take the same amount of time
+o With write-through, a write hit takes the same time as a write miss
+● Write-back caches can have a larger miss penalty
+o Due to write allocate policy on write misses
+o Due to write-backs of dirty blocks when making space for new block
+● Both issues can be mitigated using write buffers to varying degrees
+● All in all, write-back caches usually outperform write-through caches
+o Because write hits are much more frequent compared to misses
+● But write-through sometimes used in L1 cache due to simplicity
+o Plenty of L1 → L2 (intra-chip) bandwidth to handle write propagation
+o For L3, L3 → DRAM bandwidth cannot support write propagation
+26
+
+Cache Design Parameter 7:
+Blocking vs. Non-blocking
+
+27
+
+Blocking Cache FSM for Write Back Caches
+● FSM must be in Idle state for
+cache to receive new requests
+● While “Memory not Ready”,
+blocks subsequent requests
+→ Called Blocking Cache
+● Write buffer allows cache to
+defer write-back until later
+o Allows quickly return to Idle
+
+● But how about “Memory not
+Ready” on Allocate?
+28
+
+Non-blocking caches service requests concurrently
+Cache
+Miss
+
+● Blocking caches:
+
+CPU Compute
+
+CPU Compute
+Memory Stall
+
+Cache Cache Stall on
+Miss Hit
+Use
+
+● Hit under miss:
+
+CPU Compute
+
+CPU Compute
+Memory Stall
+
+Cache Cache Stall on
+Miss Miss
+Use
+
+● Miss under miss:
+
+CPU Compute
+
+CPU Compute
+Memory Stall
+Memory Stall
+
+29
+
+Non-blocking caches service requests concurrently
+Cache Cache Stall on
+Miss Hit
+Use
+
+● Hit under miss:
+
+CPU Compute
+
+CPU Compute
+Memory Stall
+
+Cache Cache Stall on
+Miss Miss
+Use
+
+● Miss under miss:
+
+CPU Compute
+
+CPU Compute
+
+Memory Stall
+Memory Stall
+
+● Non-blocking cache allows both to happen
+o Allows Memory Level Parallelism (MLP)
+o As important to performance as Instruction Level Parallelism (ILP)
+● Miss Status Handling Register (MSHR) table tracks pending requests
+30
+
+Impact of non-blocking caches
+● Non-blocking caches do not impact our three cache metrics
+o Hit time, miss rate, and miss penalty remain mostly the same
+● Impact is that miss penalty can be overlapped with:
+o Computation of instructions not dependent on the miss
+o Miss penalties of other memory requests
+● Out-of-order processors are always coupled with a non-blocking cache
+o Otherwise, the ability to do out-of-order execution is severely stymied
+
+31
+
+Cache Design Parameter 8:
+Unified vs. Split
+
+32
+
+Problem with Split Caches
+● If cache is split into two (i-cache and d-cache)
+o Space cannot be flexibly allocated between data and code
+Code
+I-Cache
+
+Data
+
+D-Cache
+
+If our working
+set looks like
+this – say, in a
+small loop
+that's accessing
+a large array –
+then we run
+out of data
+space.
+
+Code
+
+If our working
+set looks like
+this – say, in a
+large function
+that's only
+using stack
+variables – then
+we run out of
+code space.
+
+Data
+
+33
+
+Impact of Unifying Cache
+● The answer to the problem is to simply unify the cache into one
+
+● AMAT = hit time + (miss rate × miss penalty)
+● Impact of unifying cache on miss rate:
+o Smaller miss rate due to more flexible use of space
+● Impact of unifying cache on hit time:
+o Potentially longer hit time due to structural hazard
+o With split caches, i-cache and d-cache can be accessed simultaneously
+o With unified cache, access request must wait until port is available
+● L1 cache is almost always split
+o Frequent accesses directly from pipeline trigger structural hazard often
+● Lower level caches are almost always unified
+o Accesses are infrequent (filtered by L1), so structural hazards are rare
+34
+
+Cache Design Parameter 9:
+Private vs. Shared
+
+35
+
+Private vs. Shared Cache
+● On a multi-core system, there are two ways to organize the cache
+
+● Private caches: each core (processor) uses its own cache
+
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+● Shared cache: all the cores share one big cache
+
+Shared L1$
+
+36
+
+Shared Cache can Use Space More Flexibly
+● Suppose only 1st core is active and other cores are idle
+o How much cache space is available to 1st core? (Shown in red)
+● Private caches: 1st core can only use its own private cache
+
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+● Shared cache: 1st core can use entire shared cache!
+
+Shared L1$
+
+37
+
+Banking: Solution to Structural Hazards
+● Now what if all the cores are active at the same time?
+o Won’t that cause structural hazards due to simultaneous access?
+
+Shared L1$
+
+o Could add more ports, but adding banks is more cost effective
+
+Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L1$
+
+▪ Each bank has its own read / write port
+▪ As long as two cores do not access same bank, no hazard!
+38
+
+Banking: Solution to Structural Hazards
+● Cache blocks are interleaved between banks
+
+Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L1$
+
+o Blocks 0, 4, 8 … → Bank 0
+o Blocks 1, 5, 9 … → Bank 1
+o Blocks 2, 6, 10 … → Bank 2
+o Blocks 3, 7, 11 … → Bank 3
+o That way, blocks are evenly distributed across banks
+▪ Causes cache accesses to also be distributed → less hazards
+
+39
+
+Shared Cache have Longer Access Times
+● Again, suppose only 1st core is active and other cores are idle
+o The working set data is shown in red
+● Private caches: entire working set data in nearby private cache
+
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+● Shared cache: data sometimes distributed to remote banks
+
+Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L1$
+
+40
+
+Shared Cache have Longer Access Times
+● Remember this picture?
+
+2/20/2017
+
+CS/COE 1541 term 2174
+
+41
+
+Impact of Shared Cache
+● AMAT = hit time + (miss rate × miss penalty)
+
+● Impact of shared cache on miss rate:
+o Smaller miss rate due to more flexible use of space
+● Impact of shared cache on hit time:
+o Longer hit time due to sometimes having to access remote banks
+● L1 caches are almost always private
+o Hit time is important for L1. Cannot afford access to remote banks.
+● L3 (last level) caches are almost always shared
+o Reducing miss rate is top priority to avoid DRAM access.
+
+42
+
+Cache Organization of Broadwell CPU
+● This is the cache organization of Broadwell used in our Linux server
+
+L1$
+
+L1$
+
+L1$
+
+L1$
+
+Private L1$
+
+L2$
+
+L2$
+
+L2$
+
+L2$
+
+Private L2$
+
+Bank 0
+
+Bank 1
+
+Bank 2
+
+Bank 3
+
+Shared L3$
+
+● Intel rebrands the shared cache as the “Smart Cache”
+
+43
+
+Cache Design Parameter 10:
+Prefetching
+
+44
+
+Prefetching
+● Prefetching: fetching data that is expected to be needed soon
+o Allows you to hide the latency of fetching that data
+o E.g. Web browsers prefetch resources from not-yet-clicked links
+→ when user later clicks on link, response is almost instantaneous
+o Caches also prefetch data that is expected to be used soon
+▪ Can be used to avoid even cold misses
+● Two ways prefetching can happen:
+o Compiler-driven: compiler emits prefetch instructions
+▪ Can manually insert one in C program: __builtin_prefetch(addr)
+▪ Or rely on compiler to insert them using heuristics
+o Hardware-driven: CPU prefetcher emits prefetches dynamically
+▪ Relies on prefetcher to detect a pattern in memory accesses
+45
+
+Hardware Prefetching
+● What do you notice about both these snippets of code?
+● They both access memory sequentially. for(i = 0 .. 100000)
+o The first one data, the next instructions.
+A[i]++;
+00 lw
+● These kinds of access patterns are very common.
+00 04 08 0C 10 14 18 1C
+
+Sequential
+
+00 04 08 0C 10 14 18 1C
+
+Reverse sequential
+
+00 04 08 0C 10 14 18 1C
+
+Strided sequential
+(think "accessing one field
+from each item in an array
+of structs")
+
+04 lw
+08 lw
+0C addi
+10 sub
+14 mul
+18 sw
+1C sw
+20 sw
+46
+
+Hardware Prefetching Stride Detection
+● What kinds of things would you need?
+● A table of the last n memory accesses would be a good start.
+n-7
+
+n-6
+
+n-5
+
+n-4
+
+n-3
+
+n-2
+
+n-1
+
+n
+
+40C0
+
+40C4
+
+40C8
+
+40CC
+
+40D0
+
+40D4
+
+40D8
+
+40DC
+
+● Some subtractors
+to calculate the stride
+● Some comparators to
+see if strides are the same
+● Some detection logic
+
+-
+
+-
+
+=
+
+-
+
+=
+
+-
+
+=
+
+-
+
+=
+
+-
+
+=
+
+-
+
+=
+
+Stride Detector
+
+47
+
+Where Hardware Prefetching Doesn’t Work
+● Sequential accesses are where prefetcher works best
+o E.g. Iterating over elements of an array
+● Some accesses don’t have a pattern or is too complex to detect
+o At below is how a typical linked-list traversal looks like
+
+00 04 08 0C 10 14 18 1C 20 24 28 2C 30 34 38 3C
+(colors are different cache blocks)
+
+o Other pointer-chasing data structures (graphs, trees) look similar
+o Can only rely on naturally occurring locality to avoid misses
+o Or, have compiler insert prefetch instructions in middle of traversal
+48
+
+Mystery Solved
+
+● How come Array performed well for even an array 1.28 GB large?
+o No spatial locality since each node takes up two 64-byte cache blocks
+o No temporal locality since working set of 1.28 GB exceeds any cache
+
+● The answer is: Array had the benefit of a strided prefetcher!
+o Access pattern of Linked List was too complex for prefetcher to detect
+49
+
+Impact of Prefetching
+● Prefetcher runs in parallel with the rest of the cache hardware
+o Does not slow down any on-demand reads or writes
+● What if prefetcher is wrong? It can be wrong in two ways:
+o It fetched a block that was never going to be used
+o It fetched a useful block but fetched it too soon or too late
+▪ Too soon: the block gets evicted before it can be used
+▪ Too late: the prefetch doesn’t happen in time for the access
+● A bad prefetch results in cache pollution
+o Unused data is fetched, potentially pushing out other useful data
+● On the other hand, good prefetches can reduce misses drastically!
+
+50
+
+

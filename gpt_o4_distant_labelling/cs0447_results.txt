@@ -1,0 +1,265 @@
+=== METRICS ===
+true_positives   : 10
+false_positives  : 46
+false_negatives  : 6
+precision        : 0.1786
+recall           : 0.625
+f1               : 0.2778
+accuracy         : 0.625
+
+TRUE POSITIVES (10):
+   • binary
+   • bit
+   • byte
+   • hex
+   • hexadecimal
+   • nibble
+   • octal
+   • positional number systems
+   • powers of two
+   • word
+
+FALSE POSITIVES (46):
+   • 0b
+   • 0o
+   • 0x
+   • ascii
+   • assembly
+   • b
+   • base-10
+   • base-16
+   • base-2
+   • base-8
+   • binary digit
+   • decimal
+   • double word
+   • dword
+   • eb
+   • eib
+   • exabyte
+   • exbibyte
+   • gb
+   • gib
+   • gibibyte
+   • gigabyte
+   • hex digit
+   • kb
+   • kib
+   • kibibyte
+   • kilobyte
+   • lsb
+   • mb
+   • mbps
+   • mebibyte
+   • megabit
+   • megabyte
+   • mib
+   • msb
+   • n-bit
+   • nybble
+   • signed integer
+   • tb
+   • tebibyte
+   • terabyte
+   • tib
+   • unicode
+   • unsigned integer
+   • utf-16
+   • word size
+
+FALSE NEGATIVES (6):
+   • kilo
+   • mega
+   • numbers and bases
+   • numeric bases
+   • range of numbers
+   • tera
+=== METRICS ===
+true_positives   : 5
+false_positives  : 31
+false_negatives  : 2
+precision        : 0.1389
+recall           : 0.7143
+f1               : 0.2326
+accuracy         : 0.7143
+
+TRUE POSITIVES (5):
+   • addresses
+   • array
+   • arrays
+   • la
+   • pointers
+
+FALSE POSITIVES (31):
+   • .ascii
+   • .asciiz
+   • .byte
+   • address
+   • alignment
+   • assembly
+   • byte
+   • bytes
+   • endianness
+   • half-word
+   • halfwords
+   • int
+   • lb
+   • lbu
+   • lh
+   • lhu
+   • li
+   • lsb
+   • lw
+   • memory
+   • mips
+   • mips isa
+   • mul
+   • registers
+   • string
+   • strings
+   • sw
+   • variable
+   • word
+   • words
+   • zero terminator
+
+FALSE NEGATIVES (2):
+   • address calculation
+   • memory address
+=== METRICS ===
+true_positives   : 12
+false_positives  : 29
+false_negatives  : 5
+precision        : 0.2927
+recall           : 0.7059
+f1               : 0.4138
+accuracy         : 0.7059
+
+TRUE POSITIVES (12):
+   • and
+   • and gate
+   • gate
+   • mosfets
+   • nand
+   • nand gate
+   • nor
+   • not gate
+   • or
+   • or gate
+   • xor
+   • xor gate
+
+FALSE POSITIVES (29):
+   • bjt
+   • boolean logic
+   • current
+   • digital logic
+   • drain
+   • electricity
+   • electron
+   • exclusive or
+   • ground
+   • metal-oxide semiconductor field-effect transistor
+   • mosfet
+   • n type
+   • negative charge
+   • not
+   • p type
+   • positive charge
+   • positive terminal
+   • proton
+   • source
+   • switch
+   • switches
+   • thermionic valves
+   • truth-table
+   • vacuum tube
+   • valve
+   • valves
+   • voltage
+   • wire bundles
+   • ⊕
+
+FALSE NEGATIVES (5):
+   • gates
+   • logic
+   • mosfet transistors
+   • nands
+   • transistors
+=== METRICS ===
+true_positives   : 4
+false_positives  : 10
+false_negatives  : 2
+precision        : 0.2857
+recall           : 0.6667
+f1               : 0.4
+accuracy         : 0.6667
+
+TRUE POSITIVES (4):
+   • finite state machine
+   • finite state machines
+   • state machine
+   • state transition table
+
+FALSE POSITIVES (10):
+   • fsm
+   • fsms
+   • k-map
+   • moore fsm circuit
+   • output logic
+   • sequential circuit
+   • state register
+   • state transition diagram
+   • transition logic
+   • truth table
+
+FALSE NEGATIVES (2):
+   • finite state machine is
+   • state transition
+=== METRICS ===
+true_positives   : 3
+false_positives  : 20
+false_negatives  : 10
+precision        : 0.1304
+recall           : 0.2308
+f1               : 0.1667
+accuracy         : 0.2308
+
+TRUE POSITIVES (3):
+   • average cpi
+   • cpi
+   • multi-cycle cpu
+
+FALSE POSITIVES (20):
+   • branch predictor
+   • branch predictors
+   • control hazards
+   • cpu time
+   • cycles per instruction
+   • data hazards
+   • forwarding
+   • harvard architecture
+   • instruction mix
+   • latency
+   • law of diminishing returns
+   • memory hierarchies
+   • nop
+   • pipeline hazards
+   • pipelining
+   • speedup
+   • stall
+   • stalls
+   • structural hazards
+   • throughput
+
+FALSE NEGATIVES (10):
+   • cpis
+   • cycle time
+   • five phases of execution
+   • ipc
+   • multi-cycle design
+   • multicycle
+   • multicycle datapath
+   • multicycle design
+   • single-cycle
+   • 𝐶𝑃𝐼

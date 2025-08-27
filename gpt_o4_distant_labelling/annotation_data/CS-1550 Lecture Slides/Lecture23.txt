@@ -1,0 +1,394 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Homework 11: due on 4/18
+• Project 3: Late due date on 4/13
+• Late penalty waived
+
+• Lab 4: due on 4/15
+• Quiz 3: due on 4/15
+• Homework 12: due on 4/25
+• Lab 5: due on 5/2
+• Project 4 and Quiz 4: due on 5/2
+• Bonus Homework: due on 5/2
+• Course Post-Test: due on 5/2
+CS 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Muddiest Points (1/2)
+• when is the parity checked to see if there is a bit error
+• a little confused about parity example
+• How to flip the correct bits back that were changed with
+parity?
+• What is parity used for
+• ECC
+• What things move how using what in the disk
+• disk request time delay factors
+•
+
+transfer time/rotating time/seek time
+
+• I feel like rotational delay and actual transfer time are
+overlapped. The sector is spending time to rotate to the
+head, and at the same time, the head is rotating to find
+that sector. Are they moving towards each other at the
+same time?
+CS 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Disk drive structure
+head
+sector
+
+platter
+track
+cylinder
+
+surfaces
+
+spindle
+
+actuator
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Muddiest Points (2/2)
+• In the last top hat question, why the page table gets
+smaller if the page frames are larger. I understand
+that would mean less entries, but wouldn't each entry
+would be larger, making the overall table the same
+size?
+• What are RAIDs for?
+
+• Does RAID4 have any advantages over RAID5?
+• All of it, bro
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Problem of the Day – Part 1
+• How does a file system handle errors?
+• Answer: Defense in Depth
+• multiple layers of error detection/correction
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+When good disks go bad…
+Disks have defects
+In 3M+ sectors, this isn’t surprising!
+
+ECC helps with errors, but sometimes this isn’t enough
+
+Disks keep spare sectors (normally unused) and remap bad
+sectors into these spares
+If there’s time, the whole track could be reordered…
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+RAIDs, RAIDs, and more RAIDs
+strip
+
+strip
+
+Stripe
+RAID 0
+(Redundant Array of Inexpensive Disks
+
+RAID 1
+(Mirrored copies)
+
+RAID 4
+(Striped with parity)
+
+RAID 5
+(Parity rotates through disks)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+8
+
+Backing up a file system
+• A file system to be dumped
+• Squares are directories, circles are files
+• Shaded items, modified since last dump
+• Each directory & file labeled by i-node number
+
+File that has
+not changed
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+Bitmaps used in a file system dump
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+Checking the file system for consistency
+Consistent
+
+Missing (“lost”) block
+
+Duplicate block in free list
+
+Duplicate block in two files
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+Problem of the Day – Part 2
+• How does a file system hide disk access delays?
+• Answer: Caching
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+File block cache data structures
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Log-structured file systems
+• Trends in disk & memory
+• Faster CPUs
+• Larger memories
+
+• Result
+• More memory -> disk caches can also be larger
+• Increasing number of read requests can come from cache
+• Thus, most disk accesses will be writes
+
+• LFS structures entire disk as a log
+• All writes initially buffered in memory
+• Periodically write these to the end of the disk log
+• When file opened, locate i-node, then find blocks
+
+• Issue: what happens when blocks are deleted?
+CS 1550 – Operating Systems – Sherif Khattab
+
+14
+
+Log Structured File System
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+15
+
+Log Structured File System
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+16
+
+Flash File System
+
+Wear Leveling
+
+Count total writes per flash sector and attempt to
+balance across the whole disk
+CS 1550 – Operating Systems – Sherif Khattab
+
+17
+
+Wear leveling for SSDs
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+18
+
+Disk block size
+• Dark line (left hand scale) gives data rate of a disk
+
+• Dotted line (right hand scale) gives disk space
+efficiency
+• All files 2KB
+
+Block size
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+19
+
+Problem of the Day – Part 3
+• How do device drivers program I/O devices?
+• Answer: three methods
+• polling
+• Interrupts
+• DMA
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+20
+
+How are I/O devices connected?
+• Single-bus
+• All memory accesses go
+over a shared bus
+• I/O and RAM accesses
+compete for bandwidth
+
+CPU
+
+Memory
+
+I/O
+
+CPU
+
+Memory
+
+I/O
+
+• Dual-bus
+• RAM access over highspeed bus
+• I/O access over lower-speed
+bus
+• Less competition
+• More hardware (more
+expensive…)
+
+This port allows I/O devices
+access into memory
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+21
+
+Memory-Mapped vs. separate I/O Space
+
+Memory
+0xFFF…
+
+I/O ports
+
+0
+
+Separate
+I/O & memory
+space
+
+Memory-mapped I/O
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Hybrid: both
+memory-mapped &
+separate spaces
+
+22
+
+Example: Dynamic Frequency on XScale
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+23
+
+Programmed I/O example: printing a page
+
+User
+
+Printed
+page
+
+Kernel
+
+ABCD
+EFGH
+
+Printed
+page
+ABCD
+EFGH
+
+A
+
+ABCD
+EFGH
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Printed
+page
+ABCD
+EFGH
+
+AB
+
+ABCD
+EFGH
+
+24
+
+Polling
+
+copy_from_user (buffer, p, count); // copy into kernel buffer
+for (j = 0; j < count; j++) {
+// loop for each char
+while (*printer_status_reg != READY)
+;
+// wait for printer to be ready
+*printer_data_reg = p[j]; // output a single character
+}
+return_to_user();
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+25
+
+Hardware’s view of interrupts
+
+Bus
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+26
+
+Interrupt-driven I/O
+copy_from_user (buffer, p, count);
+j = 0;
+enable_interrupts();
+while (*printer_status_reg != READY)
+;
+*printer_data_reg = p[0];
+scheduler(); // and block user
+if (count == 0) {
+unblock_user();
+} else {
+j++;
+*printer_data_reg = p[j];
+count--;
+}
+acknowledge_interrupt();
+return_from_interrupt();
+
+Code run by system call
+
+Code run at interrupt time
+(Interrupt handler)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+27
+
+

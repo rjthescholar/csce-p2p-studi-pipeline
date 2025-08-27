@@ -1,0 +1,242 @@
+Introduction to Operating Systems
+CS/COE 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Project 1: due on 2/18
+• Homework 5: due 2/21
+• Lab 2: due on 2/28
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Previous lecture …
+• Deadlock detection and avoidance using the
+Banker’s algorithm
+• Sleepy Barbers problem
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points
+• Checked on Tophat
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Sleepy Barbers Solution: Take 2
+struct mysems {
+Semaphore RV1a(0), RV1b(0), RV2a(0), RV2b(0);
+};
+SharedBuffer buff; //producers-consumers problem
+Worker Process
+
+Customer Process
+
+struct mysems sems = buff.consume();
+
+struct mysems sems = new struct mysems
+
+up(sems.RV1a);
+
+buff.produce(sems);
+
+down(sems.RV1b);
+
+down(sems.RV1a);
+
+//do work
+
+up(sems.RV1b);
+
+down(sems.RV2a);
+
+//get work
+
+up(sems.RV2b);
+
+up(sems.RV2a);
+
+//check-in for next customer
+
+down(sems.RV2b);
+//leave
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Questions of the Day
+• How to implement condition variables?
+
+• Reflect more on all the solutions/problems that we
+have studied
+
+User-level implementation of Condition Variables
+A Lock with two waiting queues
+
+struct Lock {
+Semaphore mutex(1);
+Semaphore next(0);
+int nextCount = 0;
+Release(){
+
+}
+
+if(nextCount > 0){
+
+Acquire(){
+
+next.up();
+
+mutex.down();
+
+nextCount--;
+
+}
+
+} else mutex.up();
+}
+
+Condition Variable
+struct ConditionVariable {
+Semaphore condSem(0);
+int semCount = 0;
+Lock *lk;
+}
+Wait(){
+if(lk->nextCount > 0)
+
+Signal(){
+
+lk->next.up();
+
+if(semCount > 0){
+
+lk->nextCount--;
+
+condSem.up()
+lk->nextCount++
+
+else {
+
+lk->next.down();
+
+lk->mutex.up();
+
+lk->nextCount—
+
+}
+semCount++;
+condSem.down();
+semCount--;
+}
+
+}
+}
+
+Lock and Condition Variable Implementation
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Implementing locks with semaphores
+•
+
+Use mutex to ensure exclusion within the lock bounds
+
+•
+
+Use next to give lock to processes with a higher priority (why?)
+
+•
+
+nextCount indicates whether there are any higher priority waiters
+
+class Lock {
+Semaphore mutex(1);
+Semaphore next(0);
+int nextCount = 0;
+};
+Lock::Acquire()
+{
+mutex.down();
+}
+Lock::Release()
+{
+if (nextCount > 0)
+next.up();
+else
+mutex.up();
+}
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Implementing condition variables
+•
+
+Are these Hoare or Mesa semantics?
+
+•
+
+Can there be multiple condition variables for a single Lock?
+
+class Condition {
+Lock *lock;
+Semaphore condSem(0);
+int semCount = 0;
+};
+Condition::Wait ()
+{
+semCount += 1;
+if (lock->nextCount > 0)
+lock->next.up();
+else
+lock->mutex.up();
+condSem.down ();
+semCount -= 1;
+}
+
+Condition::Signal ()
+{
+if (semCount > 0) {
+lock->nextCount += 1;
+condSem.up ();
+lock->next.down ();
+lock->nextCount -= 1;
+}
+}
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Process Synchronization inside Monitors
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Condition Variable-based Solutions
+• Code Walkthrough at:
+
+https://cs1550-2214.github.io/cs1550-codehandouts/ProcessSynchronization/Slides/
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Reflections on semaphore usage
+• Semaphores can be used as
+• Resource counters
+• Waiting spaces
+• For mutual exclusion
+
+Reflections on Condition Variables
+• Define a class and put all shared variables inside the
+class
+• Include a mutex and a condition variable in the class
+• For each public method of the class
+• Start by locking the mutex lock
+
+• If need to wait, use a while loop and wait on the condition
+variable
+• Before broadcasting on the condition variable, make
+sure to change the waiting condition
+
+

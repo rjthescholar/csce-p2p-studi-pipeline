@@ -1,0 +1,402 @@
+=== METRICS ===
+true_positives   : 20
+false_positives  : 3
+false_negatives  : 27
+precision        : 0.8696
+recall           : 0.4255
+f1               : 0.5714
+accuracy         : 0.4255
+
+TRUE POSITIVES (20):
+   • atomic operations
+   • atomic swap
+   • context switch
+   • context switching
+   • critical region
+   • critical regions
+   • monitors
+   • operating systems
+   • pcb
+   • process control block
+   • process synchronization
+   • race conditions
+   • semaphores
+   • spinlock
+   • spinlocks
+   • syscall
+   • syscalls
+   • task control block
+   • task_struct
+   • xv6
+
+FALSE POSITIVES (3):
+   • context-switch
+   • mutual exclusion
+   • test & set
+
+FALSE NEGATIVES (27):
+   • % eax
+   • % edx
+   • % eip
+   • % esp
+   • atomic
+   • context
+   • context-switch time
+   • contexts
+   • cpu
+   • cpu register
+   • idt
+   • interrupts
+   • isr
+   • memory
+   • mode bits
+   • os
+   • overhead
+   • process
+   • process state
+   • process table
+   • processes
+   • register
+   • registers
+   • shared memory
+   • state
+   • turn-based solutions
+   • user land
+=== METRICS ===
+true_positives   : 18
+false_positives  : 10
+false_negatives  : 27
+precision        : 0.6429
+recall           : 0.4
+f1               : 0.4932
+accuracy         : 0.4
+
+TRUE POSITIVES (18):
+   • abort
+   • bounded buffer problem
+   • child process
+   • consumer
+   • consumers
+   • copy-and-write
+   • exit
+   • fork
+   • init
+   • kill
+   • orphan processes
+   • parent process
+   • producer
+   • producers
+   • producers consumers problem
+   • semaphores
+   • threads
+   • zombie processes
+
+FALSE POSITIVES (10):
+   • abort()
+   • exec()
+   • exit()
+   • fork()
+   • http
+   • kill()
+   • processes
+   • thread
+   • tracing
+   • wait()
+
+FALSE NEGATIVES (27):
+   • abort ()
+   • back-end processes/threads
+   • background threads
+   • bounded buffer
+   • buffer
+   • child
+   • consumer processes/threads
+   • exec ()
+   • exit ()
+   • fork ()
+   • fork tracing
+   • forks
+   • front-end processes
+   • kill ()
+   • orphan
+   • orphan process
+   • orphaned processes
+   • parent
+   • parent processes
+   • process termination
+   • producer processes/threads
+   • producers consumers
+   • produces consumers problem
+   • shared circular-array buffer
+   • ui thread
+   • wait ()
+   • zombie
+=== METRICS ===
+true_positives   : 27
+false_positives  : 8
+false_negatives  : 27
+precision        : 0.7714
+recall           : 0.5
+f1               : 0.6067
+accuracy         : 0.5
+
+TRUE POSITIVES (27):
+   • arrival time
+   • convoy effect
+   • cpu burst
+   • cpu scheduling
+   • cpu-bound jobs
+   • dispatcher
+   • dynamic priorities
+   • exponential average
+   • exponential averaging
+   • exponentially decreasing coefficients
+   • fcfs
+   • first come first serve
+   • i/o-bound processes
+   • multilevel feedback scheduling
+   • non-preemptive
+   • pre-emptive
+   • preemptive scheduling
+   • priority
+   • round robin
+   • rqs
+   • rr
+   • service time
+   • short-term scheduler
+   • sjf
+   • starvation
+   • time quantum
+   • time slice
+
+FALSE POSITIVES (8):
+   • cpu burst estimation
+   • multiple feedback queues
+   • ready queue
+   • s[i]
+   • t[i]
+   • turnaround time
+   • α
+   • σ
+
+FALSE NEGATIVES (27):
+   • cpu utilization
+   • feedback scheduling
+   • first come first serve scheduling
+   • i/o bound processes
+   • jobs
+   • priorities
+   • priorities algorithm
+   • priority queues
+   • quantum
+   • quantum time
+   • queue
+   • queues
+   • response time
+   • round-robin time quantum
+   • rq0
+   • rq1
+   • rq2
+   • rqi
+   • rqi-1
+   • rqn-1
+   • scheduler
+   • scheduling
+   • scheduling algorithms
+   • shortest process first algorithm
+   • starve
+   • system workload
+   • throughput
+=== METRICS ===
+true_positives   : 7
+false_positives  : 3
+false_negatives  : 12
+precision        : 0.7
+recall           : 0.3684
+f1               : 0.4828
+accuracy         : 0.3684
+
+TRUE POSITIVES (7):
+   • bankers algorithm
+   • banker’s algorithm
+   • circular wait
+   • hold and wait
+   • no preemption
+   • resource trajectory
+   • spooling
+
+FALSE POSITIVES (3):
+   • 2 phase locking
+   • resource trajectory graph
+   • resource trajectory graphs
+
+FALSE NEGATIVES (12):
+   • banker's algorithm
+   • cpu scheduling
+   • deadlock
+   • deadlock avoidance
+   • deadlock detection
+   • deadlock prevention
+   • deadlocks
+   • non-resource deadlocks
+   • overhead
+   • spool
+   • spooling?
+   • starvation
+=== METRICS ===
+true_positives   : 24
+false_positives  : 3
+false_negatives  : 16
+precision        : 0.8889
+recall           : 0.6
+f1               : 0.7164
+accuracy         : 0.6
+
+TRUE POSITIVES (24):
+   • block count
+   • block index
+   • direct pointers
+   • disk blocks
+   • double indirect
+   • fat
+   • ffs
+   • file allocation table
+   • file metadata
+   • free block tracking
+   • group
+   • i-node
+   • index block
+   • indexed allocation
+   • link count
+   • linked allocation
+   • max file size
+   • owner
+   • page locking
+   • protection mode
+   • reference bit
+   • single indirect
+   • timestamps
+   • triple indirect
+
+FALSE POSITIVES (3):
+   • contiguous allocation
+   • fast file system
+   • unix fast file system
+
+FALSE NEGATIVES (16):
+   • block sizes
+   • blocks
+   • contiguous
+   • disk block
+   • file block addresses
+   • file system
+   • i-nodes
+   • index nodes
+   • inode
+   • linked
+   • logical to physical mapping
+   • next_block
+   • offset
+   • page fault
+   • unix fast file system indexing scheme
+   • valid bit
+=== METRICS ===
+true_positives   : 31
+false_positives  : 23
+false_negatives  : 32
+precision        : 0.5741
+recall           : 0.4921
+f1               : 0.5299
+accuracy         : 0.4921
+
+TRUE POSITIVES (31):
+   • bitmaps
+   • caching
+   • cylinder
+   • data rate
+   • disk block size
+   • dma
+   • dual-bus
+   • ecc
+   • file system dump
+   • flash file system
+   • head
+   • lfs
+   • log-structured file systems
+   • memory-mapped i/o
+   • parity
+   • platter
+   • polling
+   • raid4
+   • raid5
+   • raids
+   • rotational delay
+   • sector
+   • seek time
+   • separate i/o space
+   • single-bus
+   • spindle
+   • ssds
+   • strip
+   • track
+   • transfer time
+   • wear leveling
+
+FALSE POSITIVES (23):
+   • actuator
+   • bad sectors
+   • block size
+   • defense in depth
+   • device drivers
+   • disk space efficiency
+   • duplicate block
+   • file block cache
+   • free list
+   • i-node
+   • i-node number
+   • interrupt-driven i/o
+   • lost block
+   • programmed i/o
+   • raid 0
+   • raid 1
+   • raid 4
+   • raid 5
+   • redundant array of inexpensive disks
+   • rotating time
+   • spare sectors
+   • stripe
+   • surfaces
+
+FALSE NEGATIVES (32):
+   • bandwidth
+   • both memory-mapped & separate spaces
+   • buffer
+   • bus
+   • cache
+   • disk access delays
+   • disk caches
+   • disk drive structure
+   • disk log
+   • disk request time delay
+   • dynamic frequency
+   • entries
+   • entry
+   • file block cache data structures
+   • file system
+   • flash sector
+   • i/o access
+   • i/o and ram accesses
+   • i/o ports
+   • interrupts
+   • kernel buffer
+   • left hand scale
+   • log
+   • log structured file system
+   • memory-mapped
+   • page frames
+   • page table
+   • ram access
+   • right hand scale
+   • sectors
+   • shared bus
+   • xscale

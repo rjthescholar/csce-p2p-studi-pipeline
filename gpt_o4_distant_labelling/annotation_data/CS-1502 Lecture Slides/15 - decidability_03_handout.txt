@@ -1,0 +1,1267 @@
+Decidability 03
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Undecidability
+Consider the following language:
+ATM = {hM, wi | M is a TM and M accepts w}
+Is ATM recognizable?
+To show that ATM is recognizable, you need to construct a
+TM that accepts all strings in ATM
+But if a string is not in ATM , no need to explicitly reject
+Loop indefinitely is acceptable
+
+The following is an example of a TM that recognizes ATM :
+U =“On input hM, wi, where M is a TM and w is a string:
+1
+2
+
+Simulate M on input w.
+If M ever enters its accept state, accept; if M enters its reject
+state, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Undecidability
+ATM = {hM, wi | M is a TM and M accepts w}
+The following is an example of a TM that recognizes ATM :
+U =“On input hM, wi, where M is a TM and w is a string:
+1
+2
+
+Simulate M on input w.
+If M ever enters its accept state, accept; if M enters its reject
+state, reject.”
+
+Let’s look at the above machine:
+If hM, wi ∈ ATM :
+M is a TM that accepts w
+TM U will accept hM, wi
+
+If hM, wi 6∈ ATM :
+1
+
+2
+
+M is a TM that rejects w
+TM U will reject hM, wi
+M is a TM that loops indefinitely on input w
+TM U will loop indefinitely on input hM, wi
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Undecidability
+
+TM U accepts all strings in ATM and does not accept
+(either rejects or loop indefinitely) on all strings not in ATM
+ATM is recognizable
+
+Is ATM decidable?
+Unfortunately, ATM is undecidable
+But how to prove it?
+
+We will try to prove that it is undecidable later
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Unrecognizable Lanugage
+Corollary 4.18
+Some languages are not Turing-recognizable.
+To show that there exists an unrecognizable language, we only
+need to find a language that is not recognized by any Turing
+machines
+It is not not easy to come up with such a language
+
+Note that a Turing machine recognizes only one language
+To prove that an unrecognizable language exists, we can
+simply show that the number of languages is more than
+the number of Turing machines
+But we have a problem
+There are infinite number of languages
+There are infinite number of Turing machines
+
+How do we know which set is larger?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Cantor’s Observation
+Cantor observed that two finite sets A and B have the same
+size if we can pair one element from A with the element of B
+{a, s, d, f}
+
+{a, s, d, f}
+
+{1, 4, 7, 3}
+
+{1, 4, 7, 3}
+
+Pairing #1
+
+Pairing #2
+
+The pairing does not have to be unique
+We can consider pairing method as a function f : A → B that
+has the following properties:
+one-to-one: f (a) 6= f (b) whenever a 6= b
+onto: For every b ∈ B there is an a ∈ A such that f (a) = b
+
+Functions that are one-to-one and onto are called bijection or
+correspondence
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Example
+Same Size?
+Let N be the set of natural numbers {1, 2, 3, . . . } and let E be the
+set of even natural number {2, 4, 6, . . . }. Show that N and E have
+the same size.
+To show that N and E have the same size, according to the
+canter’s observation, we need to show a correspondence
+between N and E
+A mapping function can be f : N → E where f (n) = 2n
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ E
+2
+4
+6
+8
+10
+..
+.
+
+By Cantor’s definition of size, they have the same size
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Infinite Ways of Correspondence
+Recall that a correspondence does not have to be unique
+Previous slide show a correspondence between N and E
+How many correspondence are there between N and E
+Infinite
+n ∈ N f (n) ∈ E
+1
+2
+2
+4
+3
+6
+4
+8
+5
+10
+..
+..
+.
+.
+
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ E
+4
+2
+6
+8
+10
+..
+.
+
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ E
+6
+2
+4
+8
+10
+..
+.
+
+There are infinite many permutation of E
+Once there is a correspondence between two infinite sets,
+there are infinitely many correspondences
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+Countable
+Definition 4.14
+A set A is countable if either it is finite or it has the same size as
+N.
+To show that an infinite set A is countable, we need to show
+that it has the same size as N
+To show that an infinite set A has the same size as N, we
+need to show a correspondence f : N → A between A and N
+Can be a definition of a function (one-to-one and onto)
+Can be a table that demonstrates one-to-one and onto
+
+An infinite set B is uncountable if there is no correspondence
+with N
+An infinite set A is smaller than an infinite set B if A is
+countable but B is not countable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Integers is Countable
+To show that Z is countable is to show a correspondence
+between N and Z
+Example (Invalid Correspondence)
+n∈N
+1
+2
+3
+4
+..
+.
+
+f (n) ∈ Z
+0
+1
+2
+3
+..
+.
+
+?
+..
+.
+
+-1
+..
+.
+
+The above table is not a valid correspondence
+It is one-to-one
+It is not onto
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Integers is Countable
+
+For Z we need to pair elements from both sides of 0
+Example
+N 1 2 3 4 5 6 7 ...
+Z 0 1 -1 2 -2 3 -3 . . .
+The above correspondence can be represented by a function
+f : N → Z where
+f (1) = 0
+(
+f (n) =
+
+n
+2
+
+− n−1
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+if n is divisible by 2
+if n is not divisible by 2
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+Let Q be a set of rational numbers:
+Q = {m
+n | m ∈ N and n ∈ N}
+Again, we need to find a correspondence between N and Q
+The best starting point is to try to list them all in an order
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Then, try to pair one-by-one but make sure that it will cover
+all of them
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 1
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 2
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 3
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 4
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 5
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 6
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 7
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 8
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 9
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 10
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+
+Correspond with natural number 11
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+The Set of Positive Rational Numbers is Countable
+Correspond with natural number greater than 12
+
+1
+1
+
+1
+2
+
+1
+3
+
+1
+4
+
+1
+5
+
+2
+1
+
+2
+2
+
+2
+3
+
+2
+4
+
+2
+5
+
+3
+1
+
+3
+2
+
+3
+3
+
+3
+4
+
+3
+5
+
+4
+1
+
+4
+2
+
+4
+3
+
+4
+4
+
+4
+5
+
+5
+1
+
+5
+2
+
+This is an example of a correspondence between N and Q
+Q is countable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 03
+
+

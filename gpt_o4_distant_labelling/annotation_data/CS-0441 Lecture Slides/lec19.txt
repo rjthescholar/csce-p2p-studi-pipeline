@@ -1,0 +1,571 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #19: Generalized Permutations and Combinations
+
+Based on materials developed by Dr. Adam Lee
+
+Counting problems can often be harder than
+those from the last few lectures…
+For example…
+
+Combinations with repetition
+
+Repeated choice
+
+SUCCESS
+USSECCS
+SCSCSEU
+…
+Permuting indistinguishable items
+
+Permutations with repetition
+Recall: r-permutations are ordered collections of r
+elements drawn from some set
+If an r-permutation is drawn from a set of size n
+without replacement, then there are P(n,r) = n!/(n-r)!
+possible r-permutations
+If we select the elements of a permutation with
+replacement, then we can use the product rule to
+count the number of possible r-permutations
+
+How many strings of length r can be created
+using the 26 English letters?
+Let our set S = {A, B, C, …, Z}, with |S| = 26
+To count the number of r-length strings, note that:
+l 26 ways to choose 1st letter
+l 26 ways to choose 2nd letter (not 25)
+l 26 ways to choose 3rd letter (not 24)
+l …
+l 26 ways to choose rth letter (not 26-r+1)
+
+So, there are 26r possible ways to choose an r-length string from
+the set S with replacement
+
+In general: There are nr possible ways to permute a set of size n
+if repetition of elements is allowed
+
+Many times, we want to examine combinations of
+objects in which repeated choices are allowed
+Example: How many ways can four pieces of fruit be chosen from
+a bowl containing at least four apples, four oranges, and four
+pears? Assume that only the type of fruit chosen matters, not the
+individual piece.
+This is TEDIOUS!!!
+
+Solution #1: Explicit enumeration
+4 apples
+3 apples, 1 orange
+3 oranges, 1 pear
+2 apples, 2 oranges
+2 apples, 1 orange, 1 pear
+
+4 oranges
+3 apples, 1 pear
+3 pears, 1 apple
+2 apples, 2 pears
+2 oranges, 1 apple, 1 pear
+
+4 pears
+3 oranges, 1 apple
+3 pears, 1 orange
+2 oranges, 2 pears
+2 pears, 1 apple, 1 orange
+
+So, there are 15 possible 4-combinations of a set containing 3
+items if repetition is allowed
+
+Let’s find a nice closed-form expression for
+counting r-combinations with repetition
+Example: Consider a cash box containing $1 bills, $2 bill, $5 bills,
+$10 bill, $20 bills, $50 bills, and $100 bills. How many ways are
+there to choose 5 bills if order does not matter and bills within a
+single denomination are indistinguishable from one another?
+Assume that there are at least 5 bills of each denomination.
+
+Observations:
+l 7 denominations of bills
+l The order that bills are drawn does not matter
+l At least 5 bills of each denomination
+
+Implication: We are counting 5-combinations with repetition from a
+set of 7 items.
+
+$1
+
+$2
+
+$5
+
+$10
+
+$20
+
+$50
+
+$100
+
+An interesting insight…
+Note:
+l The cash box has 7 compartments
+l These compartments are separated by 6 dividers
+l Choosing 5 bills is the same as arranging 5 placeholders (*) and 6 dividers (|)
+
+Examples:
+1. |||**|||***
+
+$1
+$1
+$1
+
+$10
+$10
+
+2. *|*|**||*||
+
+$5
+
+$20
+$20
+
+$50
+
+$100
+
+This leads us to a nice formula…
+Observation: Arranging 5 stars and 6 bars is the same as choosing
+5 “places” for the stars out of 11 total “places.”
+
+*
+
+|
+
+*
+
+*
+
+|
+
+|
+
+*
+
+|
+
+*
+
+|
+
+|
+
+This can be done in C(11, 5) = 462 ways.
+
+General Theorem: There are C(n+r-1, r) r-combinations from a
+set with n elements when repetition of elements is allowed.
+
+Buying cookies!
+Example: How many ways can we choose six cookies at a cookie
+shop that makes 4 types of cookie? Assume that only the type of
+cookies chosen matters (not the order in which they are chosen or
+the individual cookies within a given type).
+
+Solution #1:
+l Need six “stars” since we are choosing
+six cookies
+l Need 3 “bars” to separate the cookies
+by type
+l So, C(9, 6) = 84 ways to choose places
+to put stars.
+
+Solution #2:
+l Since we choose six cookies, r = 6
+l Four possible cookie types means n = 4
+l So, C(6+4-1, 6) = C(9,6) = 84 ways to choose cookies!
+
+Solving equations
+Example: How many solutions does the equation x1 + x2 + x3 = 11
+have if x1, x2, and x3 are non-negative integers?
+
+Observation: Solving this problem is the same as choosing 11
+objects from a set of 3 objects such that x1 objects of type one
+are chosen, x2 objects of type two are chosen, and x3 objects of
+type three are chosen.
+
+Solution:
+ln=3
+l r = 11
+l So, there are C(3+11-1,11) = C(13, 11) = 78
+ways to solve this equation
+
+Formula Summary
+Type
+
+Repetition?
+
+Formula
+
+r-permutation
+
+No
+
+𝑛!
+𝑛−𝑟 !
+
+r-combination
+
+No
+
+𝑛!
+𝑟! 𝑛 − 𝑟 !
+
+r-permutation
+
+Yes
+
+𝑛!
+
+r-combination
+
+Yes
+
+𝑛+𝑟−1 !
+𝑟! 𝑛 − 1 !
+
+How do we deal with indistinguishable items?
+Example: How many strings can be formed by permuting the
+letters of the word MOM?
+Observation: We can’t simply count permutations
+of the letters in MOM. (Why not?)
+Counting permutations leads to an overcount!
+l Rewrite MOM as M1OM2
+l Possible permutations are:
+➣ M1OM2
+➣ M1M2O
+➣ OM1M2
+➣ M2OM1
+➣ M2M1O
+➣ OM2M1
+
+These are really the same!
+
+How do we fix this?
+
+Rather than permuting all letters as a group,
+arrange identical letters separately
+Note: The string MOM contains two Ms and one O.
+We can count the distinct strings formed by permuting
+MOM as follows:
+l Set up 3 “slots” for letters
+l Count the ways that the 2 Ms can be
+assigned to the these slots
+l Count the ways that the O can be
+assigned to the remaining slots
+l Use the product rule!
+
+C(3,2) = 3
+C(1,1) = 1
+C(3,2) × C(1,1) = 3
+
+This tactic can be stated more generally
+Theorem: The number of different permutations of n
+objects where there are n1 indistinguishable objects of
+type 1, n2 indistinguishable objects of type 2, …, and
+nk indistinguishable objects of type k is:
+
+𝐶 𝑛, 𝑛! 𝐶 𝑛 − 𝑛! , 𝑛" … 𝐶 𝑛# , 𝑛#
+Ways to place objects of
+type 1
+Ways to place objects of
+type 2
+
+𝑛!
+=
+𝑛! ! 𝑛" ! … 𝑛# !
+
+There is always only one way to place
+objects of type k!
+
+How many strings can be formed by permuting
+the letters in SUCCESS?
+Note: SUCCESS contains
+lS×3
+lU×1
+lC×2
+lE×1
+
+Ways to assign each letter group:
+l S: C(7,3)
+l U: C(4,1)
+l C: C(3,2)
+l E: C(1,1)
+
+So, we can form C(7,3) × C(4,1) × C(3,2) × C(1,1) =
+7!/(3!2!) = 420 distinct strings using letters from the
+word SUCCESS
+
+In-class exercises
+Top Hat
+
+Many counting problems can be solved by
+“placing items in boxes”
+We can consider two types of objects:
+1.
+
+Distinguishable objects (e.g., “Billy, Chrissy, and Dan”)
+
+2.
+
+Indistinguishable objects (e.g., “three students”)
+
+We can also consider two types of “boxes”:
+1.
+
+Distinguishable boxes (e.g., “room 123 and room 111”)
+
+123
+2.
+
+111
+
+Indistinguishable boxes (e.g., “two homerooms”)
+
+This leads to four classes of problems…
+Distinguishable objects / distinguishable boxes
+
+123
+
+111
+
+Indistinguishable objects / distinguishable boxes
+
+123
+
+111
+
+E.g., How many ways can Billy, Chrissy, and Dan be
+assigned to the homeroom 123 and homeroom 111?
+
+E.g., How many ways can three students be
+assigned to the homeroom 123 and homeroom 111?
+
+Distinguishable objects / indistinguishable boxes
+
+Indistinguishable objects / indistinguishable boxes
+
+E.g., How many ways can Billy, Chrissy, and Dan be
+assigned to two different homerooms?
+
+E.g., How many ways can three students be
+assigned to two different homerooms?
+
+Counting assignments of distinguishable items to
+distinguishable boxes
+Example: How many ways are there to deal 5-card poker hands
+from a 52-card deck to each of four players?
+
+Solution:
+l Player 1: C(52,5) ways to deal
+l Player 2: C(47,5) ways to deal
+l Player 3: C(42,5) ways to deal
+l Player 4: C(37,5) ways to deal
+
+Theorem: The number of ways that n distinguishable items can be
+placed into k distinguishable boxes so that ni objects are placed
+into box i (1 ≤ i ≤ k) is:
+We can prove this using the
+product rule!
+
+How can we place n indistinguishable items into
+k distinguishable boxes?
+This turns out to be the same as counting the n-combinations for
+a set with k elements when repetition is allowed!
+Recall: We solved the above problem by arranging placeholders
+(*) and dividers (|).
+To place n indistinguishable items into k distinguishable bins:
+1. Treat our indistinguishable items as *s
+2. Use | to divide our distinguishable bins
+3. Count the ways to arrange n placeholders and k-1 dividers
+
+Result: There are C(n + k – 1, n) ways to place n indistinguishable
+objects into k distinguishable boxes
+
+Let’s see how this works…
+Example: How many ways are there to place 10 indistinguishable
+balls into 8 distinguishable bins?
+
+Observation:
+1. Treat balls as *s
+2. Use 8-1 = 7 dividers to separate bins
+3. Pick 10 positions out of a total 17
+to place balls (all remaining
+positions will be bin dividers)
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Solution: We have C(10 + 8 – 1, 10) = C(17, 10) = 19,448 ways to
+arrange 10 indistinguishable balls into 8 distinguishable bins.
+
+Sadly, counting the ways to place distinguishable items
+into indistinguishable boxes isn’t so easy…
+Example: How many ways can Anna, Billy, Caitlin, and Danny be
+placed into three indistinguishable homerooms?
+
+Solution:
+l Let’s call our students A, B, C, and D
+l Goal: Partition A, B, C, and D into at most 3 disjoint subsets
+l One way to put everyone in the same homeroom
+➣
+
+{A, B, C, D}
+
+l Seven ways to put everyone in two homerooms
+➣
+➣
+
+{{A, B, C}, {D}}, {{A, B, D}, {C}}, {{A, C, D}, {B}}, {{B, C, D}, {A}}
+{{A, B}, {C, D}}, {{A, C}, {B, D}}, {{A, D}, {B, C}}
+
+l Six ways to put everyone into three homerooms
+➣
+➣
+
+{{A, B}, {C}, {D}}, {{A, C}, {B}, {D}}, {{A, D}, {B}, {C}}
+{{B, C}, {A}, {D}}, {{B, D}, {A}, {C}}, {{C, D}, {A}, {B}}
+
+l Total: 14 ways to assign Anna, Billy, Caitlin, and Danny to three
+indistinguishable homerooms
+
+Is there some simple closed form that we can use to
+solve this type of problem?
+No, but there is a complicated one J
+S(n, j) is a Stirling number of the second kind that tells us the
+number of ways that a set of n items can be partitioned into j
+non-empty subsets.
+S(n, j) is defined as follows:
+
+$%&
+
+𝑆 𝑛, 𝑗 =
+
+1
++ −1 ! 𝐶 𝑗, 𝑖 𝑗 − 𝑖 '
+𝑗!
+!"#
+
+Result: The number of ways to distribute n distinguishable objects
+into k indistinguishable boxes is:
+(
+
+(
+
+$%&
+
+$"&
+
+$"&
+
+!"#
+
+1
++ 𝑆 𝑛, 𝑗 = + + −1 ! 𝐶 𝑗, 𝑖 𝑗 − 𝑖 '
+𝑗!
+
+What about distributing indistinguishable
+objects into indistinguishable boxes?
+Example: How many ways can six copies of the same book be
+packed in at most four boxes, if each box can hold up to six
+books?
+
+Solution:
+
+6
+5
+
+4
+
+1
+1
+
+3
+
+4
+1
+
+1
+
+3
+1
+
+1
+
+2
+2
+
+3
+1
+
+2
+
+2
+
+3
+
+2
+
+2
+
+1
+
+1
+
+2
+
+Total: There are 9 ways to pack 6 identical books into at most 4
+indistinguishable boxes.
+
+That was ugly…
+
+Is there a better way to do this?
+Unfortunately, no.
+
+Here’s why: Placing n indistinguishable objects into k
+indistinguishable boxes is the same as writing n as the sum of at
+most k positive integers arranged in non-increasing order.
+l i.e., n = a1 + a2 + … + aj, where a1 ≥ a2 ≥ … ≥ aj and j ≤ k
+l We say that a1, a2, …, aj is a partition of n into j integers
+
+There is no known simple closed formula for counting the
+partitions of an integer, thus there is no solution for placing n
+indistinguishable items into k indistinguishable boxes.
+
+In-class exercises
+Top Hat
+
+Final Thoughts
+n Many counting problems require us to generalize the
+simple permutation and combination formulas from
+last time
+n Other problems can be cast as counting the ways to
+arrange (in)distinguishable objects into
+(in)distinguishable boxes
+l Problems with indistinguishable boxes are generally more
+difficult
+
+

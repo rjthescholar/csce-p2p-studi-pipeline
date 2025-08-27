@@ -1,0 +1,305 @@
+=== METRICS ===
+true_positives   : 34
+false_positives  : 11
+false_negatives  : 35
+precision        : 0.7556
+recall           : 0.4928
+f1               : 0.5965
+accuracy         : 0.4928
+
+TRUE POSITIVES (34):
+   • 3d-stacked memory
+   • acpi
+   • advanced configuration and power interface
+   • caches
+   • clock gating
+   • ddr1
+   • ddr4
+   • dennard scaling
+   • dram
+   • dvfs
+   • dynamic voltage frequency scaling
+   • flops
+   • gpus
+   • limited pipelining
+   • memory wall
+   • moore’s law
+   • multi-cores
+   • pipelining
+   • power gating
+   • power wall
+   • powerdynamic
+   • powerleakage
+   • product binning
+   • simd
+   • single instruction multiple data
+   • static power
+   • superscalars
+   • supply voltage
+   • tdp
+   • technology constraints
+   • thermal design power
+   • through silicon vias
+   • tsvs
+   • variability
+
+FALSE POSITIVES (11):
+   • a
+   • c
+   • f
+   • n
+   • powercpu
+   • rc charging curve
+   • system firmware
+   • v
+   • vdd
+   • vg
+   • vth
+
+FALSE NEGATIVES (35):
+   • activity
+   • architecture
+   • bandwidth
+   • cache
+   • caching
+   • capacitance
+   • chip yield
+   • clock gate
+   • computer architecture
+   • dynamic power
+   • energy efficiency
+   • execution speed
+   • execution time
+   • floating point operations per second
+   • frequencies
+   • frequency
+   • instruction set architecture
+   • latency
+   • leakage power
+   • memory
+   • memory caches
+   • os manages power
+   • os power management
+   • power
+   • power gate
+   • power management
+   • processor organization
+   • reliability
+   • security
+   • simpler processor design
+   • technology push
+   • threads
+   • transistor number
+   • transistor speed
+   • wafer yield
+=== METRICS ===
+true_positives   : 27
+false_positives  : 9
+false_negatives  : 37
+precision        : 0.75
+recall           : 0.4219
+f1               : 0.54
+accuracy         : 0.4219
+
+TRUE POSITIVES (27):
+   • alu
+   • bubble
+   • control hazard
+   • control signals
+   • cpi
+   • cycle time
+   • data hazard
+   • ex
+   • flush
+   • hazard detection unit
+   • hdu
+   • id
+   • if
+   • mem
+   • memory wall
+   • nop
+   • nops
+   • pipeline hazards
+   • pipelined parallelism
+   • pipelining
+   • power wall
+   • processor pipelining
+   • register file
+   • single-cycle
+   • stalls
+   • structural hazard
+   • wb
+
+FALSE POSITIVES (9):
+   • cpu clock frequency
+   • datapath
+   • ins. decoder
+   • isa
+   • lw
+   • multi-cycle instruction execution
+   • mux
+   • pipelined instruction execution
+   • stall
+
+FALSE NEGATIVES (37):
+   • bubbles
+   • clock
+   • clock cycle time
+   • clock frequency
+   • clocking
+   • compiler
+   • control hazards
+   • cycle
+   • cycles
+   • cycles per instruction
+   • data hazards
+   • decoded
+   • delays
+   • fetched
+   • fetching
+   • flushed
+   • flushes
+   • frequency
+   • hazard
+   • hazards
+   • ideal 5-stage pipeline
+   • ins.decoder
+   • instruction fetch
+   • memory
+   • multi-cycle
+   • parallelism
+   • pc
+   • performance
+   • pipeline
+   • pipeline flush
+   • pipeline hazard
+   • pipelined
+   • stalled
+   • structural
+   • structural hazards
+   • structural or data hazard
+   • structural/data hazards
+=== METRICS ===
+true_positives   : 42
+false_positives  : 21
+false_negatives  : 47
+precision        : 0.6667
+recall           : 0.4719
+f1               : 0.5526
+accuracy         : 0.4719
+
+TRUE POSITIVES (42):
+   • alu
+   • comparator
+   • compiler reordering
+   • control hazard
+   • control hazards
+   • cpi
+   • critical path
+   • data forwarding
+   • data hazard
+   • data hazards
+   • data memory
+   • deep pipelining
+   • delay slot
+   • delay slots
+   • dynamic scheduling
+   • ex
+   • forwarding unit
+   • hazard detection unit
+   • hdu
+   • i-cache
+   • id
+   • if
+   • instruction memory
+   • mem
+   • memory wall
+   • mux
+   • muxes
+   • no-ops
+   • nop
+   • pipeline hazards
+   • pointer analysis
+   • port
+   • power wall
+   • register file
+   • stall
+   • static scheduling
+   • structural hazard
+   • structural hazards
+   • superscalar processor
+   • use-after-load-hazard
+   • wb
+   • write port
+
+FALSE POSITIVES (21):
+   • adder
+   • adders
+   • cpinch
+   • cycle time
+   • d-cache
+   • data cache
+   • ex stage
+   • forwarding wires
+   • if stage
+   • instruction cache
+   • ipc
+   • memread
+   • no-op
+   • one register write port
+   • pipeline flush
+   • read port
+   • register read port
+   • register write port
+   • superscalars
+   • two register read ports
+   • two register write + two register read ports
+
+FALSE NEGATIVES (47):
+   • bubble
+   • bubbles
+   • cache
+   • compiler
+   • contention
+   • control signals
+   • cycle
+   • d-cache,
+   • data dependencies
+   • data forwarded
+   • decoders
+   • delays slots
+   • dependencies
+   • duplicate contentious resource
+   • flushed
+   • flushes
+   • forward
+   • forwarded
+   • forwarding
+   • forwarding lines
+   • forwarding paths
+   • frequency
+   • hardware duplication
+   • ins.decoder
+   • memories
+   • memory
+   • memory structure
+   • memory's
+   • nops
+   • pc
+   • pipeline
+   • pipeline stage
+   • pipeline stages
+   • pipelined
+   • ports
+   • power
+   • read ports
+   • reorder
+   • reordered
+   • reordering
+   • separate instruction and data caches
+   • stage
+   • stages
+   • stalling
+   • stalls
+   • two register write+two register read ports
+   • write ports
