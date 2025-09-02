@@ -5,7 +5,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:1
 #SBATCH --cluster=gpu
-#SBATCH --partition=a100
+#SBATCH --partition=a100_nvlink
+#SBATCH --constraint=80g
 #SBATCH --mail-user=rek94@pitt.edu    
 #SBATCH --mail-type=END,FAIL 
 
@@ -19,6 +20,4 @@ source activate /ix/dmosse/rek94/envs/pytorch_gpu
 # --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_2 > /ihome/dmosse/rek94/results.txt
 
 python3 /ihome/dmosse/rek94/p2p-cce-training-script/main.py --labeled-path /ihome/dmosse/rek94/data/dataset_bio_uniform/labeled --val-path /ihome/dmosse/rek94/data/dataset_bio_uniform/dev_set \
- --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_2 --distant-path /ihome/dmosse/rek94/data/dataset_bio_uniform/distant > /ihome/dmosse/rek94/results.txt
-
-conda deactivate
+ --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio_uniform/self_training_2 --distant-path /ihome/dmosse/rek94/data/dataset_bio_uniform/distant > /ihome/dmosse/rek94/results.txt -o /ix/dmosse/rek94/models

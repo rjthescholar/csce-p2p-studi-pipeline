@@ -7,6 +7,8 @@ from torch.utils.data import DataLoader
 from transformers import XLNetForTokenClassification
 import sys
 import argparse
+from datetime import datetime
+
 
 from helpers import *
 from json_processing import *
@@ -36,6 +38,13 @@ def without_keys(d, keys):
 if __name__ == "__main__":
 	# Fix randomness, for predictability
 	set_seed(0)
+	# Get the current date and time
+	current_datetime = datetime.now()
+
+	# Format the date and time into a string, avoiding characters illegal in file names (e.g., colons)
+	# Example format: YYYY-MM-DD_HH-MM-SS
+	timestamp_str = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
+
 
 	self_training_type = 'p2p'
 
@@ -47,11 +56,15 @@ if __name__ == "__main__":
 	parser.add_argument("-s", "--self-label-1-path", help = "Self-Training 1 Path", type=Path, required=True)
 	parser.add_argument("-e", "--self-label-2-path", help = "Self-Training 2 Path", type=Path, required=True)
 	parser.add_argument("-d", "--distant-path", help = "Distant Labels Path", type=Path)
+	parser.add_argument("-o", "--out", help = "Models Path", type=Path)
 	args = parser.parse_args(sys.argv[1:])
 
 	# Prepare the validation dataset.
 	sentences, labels = get_data(args.val_path)
 	validation_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
+
+	sentences, labels = get_fs_data(args.val_path)
+	validation_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
 	
 	# Prepare the self-training datasets.
 	sentences, labels = get_data(args.self_label_1_path)
@@ -67,11 +80,13 @@ if __name__ == "__main__":
 	self_training_set_2 = dataset(self_training_dataset_2, tokenizer, MAX_LEN)
 	self_training_set = dataset(self_training_dataset, tokenizer, MAX_LEN)
 	validation_set = dataset(validation_dataset, tokenizer, MAX_LEN)
+	val_block_set = [dataset(data_set, tokenizer, MAX_LEN) for data_set in validation_block_datasets]
 
 	self_training_loader_1 = DataLoader(self_training_set_1, **train_params)
 	self_training_loader_2 = DataLoader(self_training_set_2, **train_params)
 	self_training_loader = DataLoader(self_training_set, **train_params)
 	validation_loader = DataLoader(validation_set, **valid_params)
+	val_block_loader = [DataLoader(data_set, **valid_params) for data_set in val_block_set]
 
 	if not (args.labeled_path or (args.test_path and args.train_path)):
 		parser.error("Neither labeled or test and train sets specified.")
@@ -147,6 +162,8 @@ if __name__ == "__main__":
 		course_list = [i+1 for i in range(EXPERIMENTS)]
 	stats = []
 	p2p_stats = []
+	val_stats = []
+	p2p_val_stats = []
 	for experiment_count in range(len(train_datasets)):
 		train_dataset = train_datasets[experiment_count]
 		test_block_datasets = test_block_datasetses[experiment_count]
@@ -174,7 +191,7 @@ if __name__ == "__main__":
 			print("<============= BEGINNING TRAINING ==================>\n")
 			print(f"=============== XLNET MODEL TRAINING TRIAL {course_list[experiment_count]} ================")
 
-			model = XLNetForTokenClassification.from_pretrained('xlnet-base-cased',
+			model = XLNetForTokenClassification.from_pretrained('xlnet-large-cased',
 														num_labels=len(id2label),
 														id2label=id2label,
 														label2id=label2id)
@@ -182,6 +199,15 @@ if __name__ == "__main__":
 			optimizer = torch.optim.Adam(params=model.parameters(), lr=LEARNING_RATE)
 
 			train_epochs(model, optimizer, training_loader, validation_loader, testing_loader, EPOCHS)
+			print("=============== XLNET MODEL DEV EVAL ================")
+			_, labels, predictions, chunk_stats = valid(model, validation_loader)
+			print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
+			print(classification_report([labels], [predictions]))
+
+			bio_stats = classification_report([labels], [predictions], output_dict=True)
+			concept_stats = eval_concepts(model, val_block_loader)
+
+			val_stats.append({"bio": bio_stats, "chunk": chunk_stats, "concept": concept_stats})
 
 			print("=============== XLNET MODEL EVALUATION ================")
 			_, labels, predictions, chunk_stats = valid(model, testing_loader)
@@ -192,6 +218,11 @@ if __name__ == "__main__":
 			concept_stats = eval_concepts(model, test_block_loader)
 
 			stats.append({"bio": bio_stats, "chunk": chunk_stats, "concept": concept_stats})
+
+			if args.out:
+				save_path = args.out / timestamp_str / "base" / course_list[experiment_count]
+				save_path.parent.mkdir(exist_ok=True, parents=True)
+				model.save_pretrained(save_path)
 
 			print("=============== P2P MODEL TRAINING ================")
 
@@ -208,6 +239,27 @@ if __name__ == "__main__":
 				model_best=p2p_self_train(model_1, model_2, model_best, optimizer_1, optimizer_2, self_training_loader_1, self_training_loader_2, validation_loader, rounds=ROUNDS, self_epochs=SELF_TRAIN_EPOCH, best_model_init=best_model_init)
 			elif self_training_type == "ts":
 				model_best=ts_self_train(teacher_model=model_1, student_model=model_2, teacher_optimizer=optimizer_1, student_optimizer=optimizer_2, self_training_loader=self_training_loader, validation_loader=validation_loader, rounds=ROUNDS, self_epochs=SELF_TRAIN_EPOCH)
+
+			print("=============== P2P MODEL DEV EVAL ================")
+			print("=============== MODEL 1 DEV EVALUATION ================")
+			_, labels, predictions, _ = valid(model_1, validation_loader)
+			print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
+			print(classification_report([labels], [predictions]))
+			eval_concepts(model_1, val_block_loader)
+			print("=============== MODEL 2 DEV EVALUATION ================")
+			_, labels, predictions, _ = valid(model_2, validation_loader)
+			print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
+			print(classification_report([labels], [predictions]))
+			eval_concepts(model_2, val_block_loader)
+			print("=============== FINAL MODEL DEV EVALUATION ================")
+			_, labels, predictions, p2p_chunk_stats = valid(model_best, validation_loader)
+			print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
+			print(classification_report([labels], [predictions]))
+			
+			p2p_bio_stats = classification_report([labels], [predictions], output_dict=True)
+			p2p_concept_stats = eval_concepts(model_best, val_block_loader)
+
+			p2p_val_stats.append({"bio": p2p_bio_stats, "chunk": p2p_chunk_stats, "concept": p2p_concept_stats})
 
 			print("=============== P2P MODEL EVALUATION ================")
 			print("=============== MODEL 1 EVALUATION ================")
@@ -229,6 +281,12 @@ if __name__ == "__main__":
 			p2p_concept_stats = eval_concepts(model_best, test_block_loader)
 
 			p2p_stats.append({"bio": p2p_bio_stats, "chunk": p2p_chunk_stats, "concept": p2p_concept_stats})
+
+			if args.out:
+				save_path = args.out / timestamp_str / "p2p" / course_list[experiment_count]
+				save_path.parent.mkdir(exist_ok=True, parents=True)
+				model_best.save_pretrained(save_path)
+
 
 	print("<============= FINAL EVALUATION ==================>")
 	print(stats)

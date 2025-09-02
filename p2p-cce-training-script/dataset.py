@@ -2,6 +2,9 @@ from torch.utils.data import Dataset
 import math
 
 from helpers import *
+from pylatexenc.latexencode import UnicodeToLatexEncoder
+
+u = UnicodeToLatexEncoder(unknown_char_policy='unihex', replacement_latex_protection='none', non_ascii_only=True)
 
 
 CLS_TOKEN = "<cls>" #if model_type == 'XLNet' else "[CLS]"
@@ -24,7 +27,7 @@ def tokenize_and_preserve_labels(sentence, text_labels, tokenizer):
 
 		# Tokenize the word and count # of subwords the word is broken into
 
-		tokenized_word = tokenizer.tokenize(word)
+		tokenized_word = tokenizer.tokenize(u.unicode_to_latex(word))
 		n_subwords = len(tokenized_word)
 
 		# Add the tokenized word to the final tokenized word list

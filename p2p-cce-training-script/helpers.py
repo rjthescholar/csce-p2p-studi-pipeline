@@ -9,7 +9,7 @@ import copy
 
 device = 'cuda' if cuda.is_available() else 'cpu'
 
-tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased')
+tokenizer = XLNetTokenizer.from_pretrained('xlnet-large-cased')
 
 MAX_LEN = 512
 TRAIN_BATCH_SIZE = 4

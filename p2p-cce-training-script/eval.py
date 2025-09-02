@@ -2,6 +2,9 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.dummy import DummyClassifier
 import sklearn.metrics as sklmet
 from seqeval.metrics import classification_report
+import inflect
+
+p = inflect.engine()
 
 from helpers import *
 
@@ -60,8 +63,8 @@ def eval_concepts(model, deck_loader_list):
     pred_ds = get_predictions(model, deck_loader)
     concepts = extract_concepts(pred_ds)
     gold_concepts = extract_concepts(pred_ds, gold=True)
-    concepts = {item.lower() for item in concepts if len(item) > 0}
-    gold_concepts = {item.lower() for item in gold_concepts if len(item) > 0}
+    concepts = {p.singular_noun(item.lower()) for item in concepts if len(item) > 0}
+    gold_concepts = {p.singular_noun(item.lower()) for item in gold_concepts if len(item) > 0}
     print(f"predicted concepts for file: {concepts}")
     print(f"actual concepts for file: {gold_concepts}")
     fn_concepts = gold_concepts - concepts
