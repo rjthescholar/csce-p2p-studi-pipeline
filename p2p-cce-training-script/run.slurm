@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=p2pselftraining
 #SBATCH --nodes=1
-#SBATCH --time=2-00:00:00
+#SBATCH --time=2-17:00:00
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:1
 #SBATCH --cluster=gpu
