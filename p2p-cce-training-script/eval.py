@@ -43,7 +43,7 @@ def extract_concepts(dataset, gold=False):
         if extracting and tokenizer.convert_ids_to_tokens(processed['ids'][i].item()).startswith("▁"):
           concepts.add(tokenizer.decode(concept))
           concept = []
-        extracting = p = inflect.engine()True
+        extracting = True
       if extracting:
         concept.append(processed['ids'][i].item())
   return concepts
