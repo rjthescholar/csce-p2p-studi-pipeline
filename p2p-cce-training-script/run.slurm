@@ -20,4 +20,4 @@ source activate /ix/dmosse/rek94/envs/pytorch_gpu
 # --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio/self_training_2 > /ihome/dmosse/rek94/results.txt
 
 python3 /ihome/dmosse/rek94/p2p-cce-training-script/main.py --labeled-path /ihome/dmosse/rek94/data/dataset_bio/labeled --val-path /ihome/dmosse/rek94/data/dataset_bio/dev_set \
- --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio/self_training_2 --distant-path /ihome/dmosse/rek94/data/dataset_bio/distant > /ihome/dmosse/rek94/results.txt -o /ix/dmosse/rek94/models
+ --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio/self_training_2 --distant-path /ihome/dmosse/rek94/data/dataset_bio/distant -o /ix/dmosse/rek94/models > /ihome/dmosse/rek94/results.txt

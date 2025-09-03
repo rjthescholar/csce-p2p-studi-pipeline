@@ -4,8 +4,6 @@ import sklearn.metrics as sklmet
 from seqeval.metrics import classification_report
 import inflect
 
-p = inflect.engine()
-
 from helpers import *
 
 def get_predictions(model, loader, model_name=""):
@@ -45,7 +43,7 @@ def extract_concepts(dataset, gold=False):
         if extracting and tokenizer.convert_ids_to_tokens(processed['ids'][i].item()).startswith("▁"):
           concepts.add(tokenizer.decode(concept))
           concept = []
-        extracting = True
+        extracting = p = inflect.engine()True
       if extracting:
         concept.append(processed['ids'][i].item())
   return concepts
@@ -59,12 +57,13 @@ def eval_deck(concepts, gold_concepts):
 
 def eval_concepts(model, deck_loader_list):
   tp, fp, fn = 0, 0, 0
+  inf_eng = inflect.engine()
   for deck_loader in deck_loader_list:
     pred_ds = get_predictions(model, deck_loader)
     concepts = extract_concepts(pred_ds)
     gold_concepts = extract_concepts(pred_ds, gold=True)
-    concepts = {p.singular_noun(item.lower()) for item in concepts if len(item) > 0}
-    gold_concepts = {p.singular_noun(item.lower()) for item in gold_concepts if len(item) > 0}
+    concepts = {inf_eng.singular_noun(item.lower()) for item in concepts if len(item) > 0}
+    gold_concepts = {inf_eng.singular_noun(item.lower()) for item in gold_concepts if len(item) > 0}
     print(f"predicted concepts for file: {concepts}")
     print(f"actual concepts for file: {gold_concepts}")
     fn_concepts = gold_concepts - concepts
