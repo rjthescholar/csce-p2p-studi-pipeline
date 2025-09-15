@@ -1,0 +1,308 @@
+Introduction to Operating Systems
+CS/COE 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines
+• Homework 4 is due next Monday 2/14
+• Project 1 due on 2/18
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous lecture …
+• It is easy to make mistakes when using semaphores
+
+• Solution: Mutex and Condition Variables
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Muddiest Points
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Problem of the Day
+Readers & Writers
+•
+
+Many processes that may read and/or write
+
+•
+
+Only one writer allowed at any time
+
+•
+
+Many readers allowed, but not while a process is writing
+
+•
+
+Real-world Applications
+•
+
+Database queries
+
+•
+
+We have this problem in Project 1
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Semaphore-based Solution
+Shared variables
+int nreaders;
+Semaphore mutex(1), writing(1);
+
+Reader process
+
+Writer process
+
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up();
+// last reader
+mutex.up();
+…
+
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Solution Tracing
+• enterRead
+
+Reader process
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up(); // last reader
+mutex.up();
+…
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Solution Tracing
+• read
+
+Reader process
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up(); // last reader
+mutex.up();
+…
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+8
+
+Solution Tracing
+• doneRead
+
+Reader process
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up(); // last reader
+mutex.up();
+…
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+9
+
+Writer Events
+• enterWrite
+
+Writer process
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+10
+
+Writer Events
+• write
+
+Writer process
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+11
+
+Writer Events
+• doneWrite
+
+Writer process
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+12
+
+Sequence 1
+• W0 enterWrite
+Reader process
+
+• W0 write
+
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up();
+// last reader
+mutex.up();
+…
+
+• R0 enterRead
+• R1 enterRead
+• R2 enterRead
+• W0 doneWrite
+• R2 read
+• W1 enterWrite
+
+• R2 doneRead
+• W1 write
+
+Writer process
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+13
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Sequence 2
+R0 enterRead
+R0 read
+R1 enterRead
+R1 read
+W0 enterWrite
+R2 enterRead
+R2 read
+R2 doneRead
+R1 doneRead
+R0 doneRead
+W0 write
+W0 doneWrite
+
+Reader process
+…
+mutex.down();
+nreaders += 1;
+if (nreaders == 1) // wait if
+writing.down(); // 1st reader
+mutex.up();
+// Read some stuff
+mutex.down();
+nreaders -= 1;
+if (nreaders == 0)
+// signal if
+writing.up();
+// last reader
+mutex.up();
+…
+
+Writer process
+…
+writing.down();
+// Write some stuff
+writing.up();
+…
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+14
+
+Solution using Mutex and Condition Variables
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+15
+
+

@@ -1,0 +1,590 @@
+7
+
+Introduction
+to x86 asm
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Assembly Refresher
+What is forgotten… is art.
+
+2
+
+What is “Assembly”
+• Assembly: Human-readable representation of machine code.
+• Machine code: what a computer actually runs.
+• The “atoms” that make up a program.
+• CPUs CAN actually be fairly simple in concept.
+
+• Each CPU chooses its own machine code (and therefore its own style
+of assembly language)
+• We used MIPS in CS 447.
+• A RISC processor.
+
+• We will compare that to x86 today!
+• A CISC processor.
+
+3
+
+What is “Assembly”
+• Involves very simple commands.
+• This command copies data from
+one place to another.
+
+• Despite being called “move”, ugh!
+
+• Surprise! It’s actually shorthand
+for a different set of instructions.
+
+• The processor can be made simpler.
+
+• This command gets transformed
+into a numerical representation.
+
+Compute t0+0
+Put into “a0”
+
+• The processor then interprets the binary representation.
+• That’s essentially all a computer does!
+• CS 447 looks at this in much greater detail.
+
+4
+
+Assembly vs. Machine Language
+• Machine language instructions are the patterns of bits that a
+processor reads to know what to do
+• Assembly language (or "asm") is a human-readable (mostly), textual
+representation of machine language.
+MIPS asm
+
+MIPS machine language
+
+5
+
+Is Assembly Useful?
+• Short answer: YES
+• Assembly is “fast”, so we should use it for everything!
+--- NO!!! --• No type-checking, no control structures, very few abstractions.
+Fairly impractical for large things --• Tied to a particular CPU.
+
+---
+
+• So, large programs have to be rewritten (usually) to work on new things.
+
+• Yet: good for specialized stuff.
+• Critical paths and “boot” code in Kernels / Operating Systems
+• HPC (simulators, supercomputer stuff)
+• Real-time programs (video games; tho increasingly less / abstracted away)
+• And…
+
+6
+
+Architecture Sits at the Hardware Interface
+Source code
+
+Compiler
+
+Architecture
+
+Applications/algorithms
+
+Perform optimizations,
+generate instructions
+
+Instruction set
+
+Different implementations
+
+Intel Pentium 4
+
+C Language
+Program
+A
+
+Hardware
+
+Intel Core 2
+
+GCC
+
+x86-64
+
+Intel Core i7
+AMD Opteron
+
+Program
+B
+
+AMD Athlon
+Clang
+
+Your
+program
+
+ARMv8
+(AArch64/A64)
+
+ARM Cortex-A53
+Apple A7
+
+Practical Applications of Assembly: Modification
+• Modifying programs after-the-fact. (Or reverse-engineering them)
+• Legal “gray-area,” / “confusing-mess” but generally modification/reverse engineering is allowed.
+Kinda? (Section 1201, US Code 17 § 108, etc)
+• Removing copy protection in order to preserve/backup.
+• Librarians and preservationists and “pirates” alike may all use/view/write assembly for this!
+
+I’m not a lawyer
+• I know someone that patched (the freely distributed) Lost Vikings so it would avoid copy protection
+and use a different sound configuration (so I could run it in a browser emulator)
+
+x86 (NASM / Intel Syntax, MS-DOS)
+
+8
+
+Practical Applications of Assembly: Debugging
+
+• Programs written in C, etc are generally translated into assembly.
+• And then into machine code.
+
+• You can look at the machine code of programs and get an assembly
+code listing.
+• And step through the program one instruction at a time.
+
+• When programs crash (sometimes programs you don’t have the code
+for) you can look at the assembly code and assess.
+• Programs exist to help you (gdb, IDA Pro, radare, etc)
+
+• We will apply this knowledge (using gdb) in a future assignment!
+9
+
+Basics of x86 Assembly
+x86 really puts the… you know what… in Assembly
+
+10
+
+Instruction Set Architecture (ISA)
+• An ISA is the interface that a CPU presents to the programmer.
+• When we say "architecture," this is what we mean.
+
+• The ISA defines:
+• What the CPU can do (add, subtract, call functions, etc.)
+• What registers it has (we'll get to those)
+• The machine language
+• That is, the bit patterns used to encode instructions.
+
+• The ISA does not define:
+• How to design the hardware!
+• …if there's any hardware at all (think of Java, etc: virtual/hypothetical ISAs)
+
+11
+
+Types of ISAs: RISC
+• RISC: "Reduced Instruction Set Computer"
+• ISA designed to make it easy to:
+• build the CPU hardware
+• make that hardware run fast
+• write compilers that make machine code
+
+• A small number of instructions.
+• Instructions are very simple
+• MIPS (and RISC-V) is very RISCy
+
+12
+
+Types of ISAs: CISC
+• CISC: "Complex Instruction Set Computer"
+• ISA designed for humans to write asm.
+• From the days before compilers!
+
+• Lots of instructions and ways to use them
+• Complex (multi-step) instructions to shorten
+and simplify programs.
+• "search a string for a character"
+• "copy memory blocks"
+• "check the bounds of an array access“
+
+• Without these, you’d just write your programs to use the
+simpler instructions to build the complex behavior itself.
+• x86 is very CISCy
+13
+
+Types of ISAs: Overview
+• CISC: Complex Instruction Set Computer (does a whole lot)
+• RISC: Reduced Instruction Set Computer (does enough)
+• Both: Equivalent!! (RISC programs might be longer)
+
+“Hackers” (1995) – Of course, they are talking about a Pentium x86 chip…
+which thanks to its backwards compatibility, is CISC. Oh well!
+Then again… x86 is so complex, modern designs translate the CISC instructions into RISC microcode on the fly… so it’s RISC?? It can get complicated.
+
+14
+
+x86
+• Descended from 16-bit 8086 CPU from 1978.
+• Extended to 32 bits, then 64.
+• Each version can run most programs from the previous version.
+• You can (mostly) run programs written in ‘78 on your brand new x86 CPU!
+
+• This ISA is complex!
+• 30 years of backwards-compatibility… yikes.
+• We won’t exhaustively go over it.
+• There are, however, many very common idioms
+and instructions.
+• We will focus on these.
+• And we will focus on READING x86, not writing it.
+
+15
+
+x86 Registers (general)
+• Like MIPS, there are a set of general-purpose registers.
+• There are 16; 64-bits in size and hold integer values in binary form.
+
+• Unlike MIPS, you can refer to parts of each register.
+• Called partial registers.
+
+Denoted
+by %
+
+Stack
+Pointer
+
+16-bit register names
+
+32-bit register names
+
+16
+
+general purpose
+
+32-bit OLD Registers – 32 bits wide
+8 bits
+
+32 bits
+
+16 bits
+
+%eax
+
+%ax
+
+%ah
+
+%al
+
+accumulate
+
+%ecx
+
+%cx
+
+%ch
+
+%cl
+
+counter
+
+%edx
+
+%dx
+
+%dh
+
+%dl
+
+data
+
+%ebx
+
+%bx
+
+%bh
+
+%bl
+
+base
+
+%esi
+
+%si
+
+source index
+
+%edi
+
+%di
+
+destination index
+
+%esp
+
+%sp
+
+stack pointer
+
+%ebp
+
+%bp
+
+base pointer
+16-bit virtual registers
+(backwards compatibility)
+
+Name Origin
+(mostly obsolete)
+
+x86 Registers (specialized)
+• There are also registers that you cannot directly interact with.
+• Like MIPS, x86 has a program counter (
+)
+• Also like MIPS, it cannot be read directly.
+
+• There is also a
+status register, which has information about the
+CPU state after an instruction is completed.
+• Stuff like a carry flag (CF) that denotes if an addition has a final carry.
+• Overflow detection (OF) denoting if an operation overflowed.
+
+• And some extra registers for vector math, floating point math, and for
+OS usage we won’t go over.
+18
+
+x86 Instruction Types
+• In MIPS, you had R-type, I-type and J-type instructions.
+• In x86 (CISC) you generally can have any instruction refer to data anywhere it is:
+• Registers, Immediates, Memory addresses, etc
+• Cannot refer to memory twice! (not possible:
+x86-64 (gas / AT&T syntax)
+
+)
+
+MIPS
+
+Immediates (prefixed by $)
+Memory load (within parens)
+Memory store
+
+Displacement (can be -4, etc)
+
+19
+
+Complex Addressing
+• In MIPS, you would carefully craft the set of instructions necessary to
+interface with an array. (RISC)
+• In x86, you can do a lot with just a single instruction. (CISC)
+•
+
+: Base + (Index Scalar) where Scalar must be 1, 2, 4 or 8
+• The fields are all optional; i.e.,
+
+x86-64 (gas / AT&T syntax)
+
+does just Index Scalar
+
+MIPS
+
+“Load Effective Address”
+
+LEA simply computes address (no memory access)
+
+20
+
+Complex Addressing: CISC Strikes Again!!
+• When we say you can do a lot with just a single instruction, we
+mean it!
+•
+: Base + (Index Scalar) where Scalar must be 1, 2, 4 or 8
+• What does the following do?
+•
+
+x86-64 (gas / AT&T syntax)
+
+“Load Effective Address” ???
+
+LEA simply computes address… it’s just very specific math.
+
+21
+
+x86 Instruction Qualifiers
+• In MIPS, you sometimes had instructions varying on bitsize.
+• In x86 (CISC) you can operate on any part of a register.
+• 64-bits, 32-bits, 16-bits… even 8-bit sections sometimes.
+
+• The assembler can assume usually, but explicit names also work:
+x86-64 (gas / AT&T syntax)
+The assembler “figures it out”
+
+MIPS64
+
+“quad word” which is 64-bits.
+“long word” which is 32-bits. 
+Ugh. In x86 a “word” here is 16-bits
+CS/COE 0449 – Spring 2019/2020
+
+22
+
+Hello World! (x86 vs. MIPS)
+x86-64 (gas / AT&T syntax)
+
+MIPS (MARS)
+
+23
+
+Doing some x86 maths
+• x86 and MIPS have, essentially, the same mathematical instructions.
+x86-64 (gas / AT&T syntax)
+
+MIPS
+
+24
+
+However, x86 lets you slice and dice
+• Each math instruction in x86 has variants based on the bitsize.
+•
+
+(64-bit),
+
+(32-bit),
+
+(16-bit),
+
+x86-64 (gas / AT&T syntax)
+
+(8-bit) (rest of field zero extended!!)
+
+MIPS
+
+Arithmetic shift (sign extends)
+
+Logical shift (zero extends)
+
+8-bit register aliases are not commonly used
+
+25
+
+Assembly Interlude
+Here, we take a break, and look at some existing code.
+
+26
+
+Why write assembly? When you can write C
+• You can take any of your C programs and emit the assembly.
+• The compiler can do this for you:
+
+• This will create a file called
+
+which looks… messy.
+
+• It has a ton of messy specific stuff wedged in there.
+• But you can generally pull apart some meaning from it.
+
+27
+
+Looking at C compilers…
+• The messy output of the gcc compilation to assembly:
+x86-64 (gas / AT&T syntax,
+
+main hasn’t even shown up yet…
+
+)
+
+C
+
+28
+
+Disassembly – See how the sausage is made…
+• So, that’s not very useful. And often we don’t have the code!
+• How do we go backward?
+
+• You can take any compiled program and emit the assembly.
+• Many tools can help you do this (radare, objdump, gdb)
+
+• Using a tool called objdump (only disassembles code section):
+
+• This will create a file called
+
+.
+
+• You can glance at it and notice that it does not have names.
+• And labels are a bit, well, nonexistent.
+29
+
+And… here we are…
+• An objdump disassembly is slightly lacking context.
+x86-64 (gas / AT&T syntax,
+
+)
+
+C
+
+Machine code (in bytes)
+Instruction address
+30
+
+Looking deeper
+• Now we are starting to read the code… It does what we tell it to do!
+x86-64 (gas / AT&T syntax,
+
+)
+Preserves
+(caller activation frame)
+Allocates “ ” on stack ( from top)
+Move argument to
+Compares to and sets
+Jumps if
+is 0 ( is positive)
+Sets
+to
+Resets caller activation frame
+Returns (return value is in
+)
+
+Instructions have varying size
+So, the next instruction address
+is irregular. Compare with MIPS / RISC-V.
+
+31
+
+Brought to you by the letters: C ABI
+• The C Application Binary Interface (ABI) are assembly conventions
+• Like MIPS, certain registers are typically used for returns values, args, etc
+• It is not defined by the language, but rather the OS.
+• Windows and Linux (UNIX/System V) have a different C ABI 
+
+• In our x86-64 Linux C ABI, registers are used to pass arguments:
+•
+,
+,
+,
+,
+,
+(First, second, etc) (Like MIPS
+–
+)
+• Remaining arguments go on the stack.
+• Callee must preserve
+,
+,
+,
+,
+,
+(Like MIPS
+–
+• Return value:
+(overflows into
+for 128-bits) (MIPS
+–
+)
+• Lots of other small things not worth going over.
+
+)
+
+• For reference: https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf
+32
+
+

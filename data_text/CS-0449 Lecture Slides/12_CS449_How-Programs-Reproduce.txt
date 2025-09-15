@@ -1,0 +1,667 @@
+12
+
+How Programs
+Reproduce
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Creating Processes
+Forks: what you stick in things that are done… and sometimes a system call.
+
+2
+
+This is a story about a system call…
+• We are focusing several system calls starting with
+• This system call copies the current process.
+▪ This creates a “child” process that is a duplicate of the
+memory and state of its parent.
+
+• This can be a convenient way to gain concurrency.
+▪ Copy the process and run each copy …
+▪ … those copies now run at the same time.
+• This is the origin of the term “fork” … a logical split in a
+program where there are now multiple paths.
+
+▪ We will see this idea in action soon.
+3
+
+Here’s Dolly
+• The
+
+system call in action:
+
+▪ Copies the memory layout.
+▪ Copies the process state. (but gives it a unique ID)
+
+A
+
+Parent
+
+Child
+
+stack
+
+stack
+
+.bss
+.data
+.text
+
+.bss
+.data
+.text
+
+CPU State A:
+Registers
+,
+
+CPU State B:
+Registers
+,
+
+PID: 4356
+
+PID: 6567
+
+B
+
+4
+
+Here’s Dolly’s ID tag
+• The
+
+system call in action:
+
+▪ Updates the child’s CPU state so that it returns . (An invalid
+▪ Updates parent’s CPU state to return the child’s process ID. (
+
+A
+
+Parent
+
+Child
+
+stack
+
+stack
+
+.bss
+.data
+.text
+
+.bss
+.data
+.text
+
+CPU State A:
+Registers
+
+CPU State B:
+Registers
+
+PID: 4356
+
+Ensures each
+process can detect
+which it is
+
+)
+)
+
+B
+
+PID: 6567
+
+5
+
+A small fork example… a… salad fork? example??
+• There is only one process when
+is called.
+
+C
+
+• However, when
+is called, the
+system call returns “twice”
+The x is copied,
+so it has different
+values in child
+and parent.
+
+▪ Once in the parent process
+▪ Once in the child process
+
+• This starts two concurrent executions
+within the same program.
+▪ Via two processes.
+
+• What does this print out?
+
+6
+
+Children first… OR NOT
+• If the child process goes first…
+
+C
+
+▪ Then it will print the child text.
+Child
+
+Parent
+
+• Then the scheduler schedules the
+parent process once more.
+▪ Then it will print the parent text.
+
+• However, that’s not the only possible
+pattern.
+• If the parent process goes first...
+▪ Then it prints the parent text …
+▪ … followed by the child.
+
+7
+
+Two roads diverged in a yellow wood, AND I TOOK BOTH (NOT SORRY)
+C
+
+• If I were to extend the code to make
+it loop infinitely...
+▪ The parent and child will constantly race
+to print out their respective text.
+
+8
+
+The good, the bad, and the unpredictable
+• Adding concurrency to your program makes things… weird.
+▪ You cannot rely on the order processes will be scheduled.
+▪ Your operations will be asynchronous (not synchronized; no known order)
+
+• If you need to synchronize processes, you can do so with
+
+•
+
+.
+
+yields the process and returns only when a child process ends.
+▪ It returns when any child process exits.
+▪ Its return value is the pid of the child process that exited.
+▪ You can also use
+to specify a specific child process by its pid.
+
+9
+
+Waiting is such sweet sorrow… wait that’s not right
+• By using
+the parent process only
+continues when the child process ends.
+Child
+
+Parent
+
+• Therefore, the output order is now
+known.
+
+Always:
+
+▪ If the parent goes first…
+▪ It gets stuck at the
+call.
+▪ Then the child goes until it hits
+▪
+ends the process.
+▪ And then the parent continues.
+
+• Nice and well-known behavior!
+10
+
+Notes on
+• The
+
+system call ends the current process.
+
+▪ The given argument is the process return code also known as an exit code.
+▪ Normally your program yields an exit code at the end of
+▪ Exit ends your program exactly at the point of the call.
+▪ Therefore, it has its own means of giving the exit code.
+
+• However, we can have processes that are no
+longer running…
+▪ Yet, not deallocated either.
+▪ The are not living…
+▪ And not dead!!
+
+11
+
+Zombies
+• A terminated process still takes up space
+▪ All that process metadata sticks around
+▪ Until the parent tells the system it doesn’t need it
+
+• As long as the parent stays alive…
+▪ The corpse of the child process sticks around, too.
+
+• These are called zombie processes.
+▪ They are processes that still exist and have an ID
+yet do not run and are no longer scheduled.
+Dancing Zombie from Plants vs. Zombies
+Copyright PopCap Games, a subsidiary of EA Games
+
+12
+
+The night of the living dead
+C
+
+• If I added an infinite loop to the
+parent…
+▪ When the child ends…
+▪ And I list the active processes using the
+command.
+▪ I see a “defunct” child process. A ZOMBIE!
+
+13
+
+Just the normal kind of dead.
+C
+
+• However, if I added an infinite loop to
+the child…
+▪ When the parent ends… the program
+ends as well!
+▪ And I list the active processes using the
+command. I see only the child process
+
+No zombies here!
+Just orphans…
+
+14
+
+How to run a different program?
+• When you
+process.
+
+a process, you are making an exact copy of that
+
+• However, maybe you want to create a process to run a different
+program altogether?
+▪ This is very useful… instead of using a software library
+▪ You could just run the existing program.
+
+• For this purpose, the
+
+family of system calls is used.
+
+▪ There are several different variations of exec calls…
+
+15
+
+Invoking the OS loader…
+• Using the
+
+C
+
+system call.
+
+▪ The call takes the path to an executable
+▪ And an array of strings for the arguments.
+• Sentinel: must end in a
+
+▪ The first argument to a C program is
+always its own path!
+
+We ran “
+
+”
+
+Add then continued
+our own process.
+
+16
+
+Here’s Dolly’s brother Bobby. Bobby is a goat somehow. Don’t ask.
+• The
+
+system call in action:
+
+▪ Copies the memory layout. Copies the process state. (but gives it a unique ID)
+
+• The
+
+system call in action:
+
+▪ It’s a goat now.
+
+A
+
+Parent
+
+Child
+
+stack
+
+new
+stack
+stack
+
+.bss
+.data
+.text
+
+new
+.bss
+.bss
+new
+.data
+.data
+new
+.text
+.text
+
+CPU State A:
+Registers
+,
+
+CPU State B:
+Registers
+,
+
+PID: 4356
+
+PID: 6567
+
+B
+
+17
+
+Different forms of
+• You can look up the many different styles of exec
+▪ Each one has a different way of calling it.
+
+called with an array of strings terminated with a
+same, but can use specific environment variables
+searches the system paths for the executable
+combination of
+and
+
+•
+•
+•
+•
+
+• There are also
+functions that use function arguments instead
+of an array of strings.
+▪
+18
+
+The common ancestor… and the orphan.
+• UNIX/Linux has an interesting design: every application is a child process.
+▪ The root is the
+task.
+▪ Your shell spawns child
+processes when you ask
+to run a command.
+▪ It uses
+/
+!
+
+init
+
+httpd
+(daemon)
+
+Orphans get adopted by
+the root process.
+
+How to interact with this process??
+(signals…)
+
+Bash
+(shell)
+
+GUI
+
+• When your own application
+spawns a process, the same thing
+happens.
+
+./app
+
+child
+
+▪ You use
+▪ If your app exits before the child…
+▪ The child is an orphan process. 19
+
+An extreme attitude
+• How do we interact with orphaned processes?
+• How do we synchronize at a finer granularity?
+▪ Using
+is rather inflexible.
+▪ It can only detect that a child process ends using
+
+or via main
+
+• What if you want to synchronize smaller events…
+
+▪ The child process does something... The parent responds…
+▪ But, keep the child process running longer.
+
+• For this, we will need the parent and child to be able to communicate
+with one another.
+20
+
+Inter-Process Communication
+IPC … not to be confused with the other IPC
+
+21
+
+What that last slide said…
+• Passing data or messages from one process to another is called
+inter-process communication.
+• This is a broad OS topic as there are many ways to do this.
+▪ Shared memory (we will talk about this a bit later)
+▪ Message passing (we will talk about this NOW)
+• Simple messages (signals, this lecture)
+• More complex (pipes, semaphores, etc, soon)
+• Most complex (network sockets, we will look at this later)
+
+• Message passing is a fancy way of saying are using an API to send a
+small message to another process.
+▪ And also some means of listening for messages.
+22
+
+All aboard the train metaphor
+• In UNIX/Linux, tiny messages sent between processes are called
+signals.
+• They are typically used to send messages about events from the
+system. Here are a few:
+Number
+
+Name
+
+Description
+
+Default Behavior
+
+Interruption – Somebody pressed CTRL+C
+
+Terminate
+
+Kill – Somebody wants us gone… 
+
+Terminate
+
+Memory Violation – Oops! Seg-fault
+
+Terminate
+
+Child exited – Child process ended
+
+Ignore
+
+A signal that you can use for any purpose
+
+Ignore
+
+23
+
+Talking to orphans
+• Recall the infinite looping child.
+• Orphans run in the background.
+• However, we can send a
+message ( ) to the process by its id.
+
+C
+
+The parent ended.
+
+But not the child.
+We can send a
+using the
+
+message
+application..
+
+And the child is gone!
+
+24
+
+Receiving Signals
+C
+
+• The
+standard function will
+set up your application to listen for a
+particular signal.
+
+• This example hooks the empty
+function sigint_handler to override
+the default behavior of the SIGINT
+signal.
+• If you recall, that happens on a
+CTRL+C… which now does not
+terminate the foreground process!
+▪ Needs to be killed using
+
+now.
+25
+
+Waiting for a signal…
+• Proper use of signals and waiting on
+the values of variables to change can
+create synchronization.
+Both processes set
+to 0 on
+1.
+
+.
+
+is initially
+2. Which causes
+the child to wait…
+5. Until child signals it back
+after printing its own message.
+3. Until the parent process signals it,
+after it prints its message.
+
+6. Repeat… for both
+
+4. Afterward, the
+parent process waits
+
+26
+
+Let’s look at that again. (animated)
+1. Child waits
+2. Parent prints
+Child 0
+
+1. Sets its own wait variable
+2. Sends signal to child
+3. Waits
+
+Parent 0
+
+3. Child prints
+1. Sets its wait variable
+2. Sends signal to parent
+3. Waits
+
+4. Parent prints
+1. Sets its own wait variable
+2. Sends signal to child
+3. Waits
+5.
+
+Repeat…
+
+27
+
+If you are in a hurry... (animated)
+1. Child waits
+2. Parent prints
+Child 0
+
+1. Sets its own wait variable
+2. Sends signal to child
+3. Waits
+
+Parent 0
+
+3. Child prints
+1. Sends signal to parent
+2. Sets its wait variable
+3. Waits
+
+Let’s Mess Things Up!!
+4. Parent prints
+
+1. Sets its own wait variable
+2. Sends signal to child
+3. Waits
+5.
+
+OH NO!!!
+
+28
+
+The race is on!
+• When you have concurrent tasks, they may compete.
+• A bug in a concurrent program where the logic breaks if one process
+out-paces another is called a race condition.
+▪ That is, if the correctness requires a strict order, but that order is not
+guaranteed.
+
+• When you add synchronization you need to be careful that you ensure
+that each synchronized section (called a critical section) is logically
+sound.
+We know we won’t be interrupted
+between the while loop and the signal.
+(This is our critical section)
+
+29
+
+Summary
+• Today we learned the birds and bees of programs.
+▪ They start as processes (technically children of a shell or some root process)
+▪ They can spawn child processes using
+▪ They can load executables over top of them using
+system calls
+▪ And if one process ends before the other, we either get zombies or orphans.
+
+• We also learned about inter-process communication in the form of
+signals.
+▪ These are tiny messages sent using the
+function; received via
+.
+▪ We can use them to synchronize events between processes.
+▪ However, if we aren’t careful, we may introduce a bug called a race condition.
+▪ This is when the program requires a logical order it cannot guarantee.
+30
+
+

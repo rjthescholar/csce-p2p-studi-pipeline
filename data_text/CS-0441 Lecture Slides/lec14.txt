@@ -1,0 +1,178 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #14: Strong Induction
+
+Based on materials developed by Dr. Adam Lee
+
+Recall that mathematical induction let us prove
+universally quantified statements
+Goal: Prove ∀x∈N P(x).
+
+Intuition: If P(0) is true, then
+P(1) is true. If P(1) is true, then
+P(2) is true…
+
+Procedure:
+1. Prove P(0)
+2. Show that P(k) → P(k+1) for any arbitrary k
+3. Conclude that P(x) is true ∀x∈N
+
+P(0)
+P(k) → P(k+1)
+∴∀x∈N P(x)
+
+Strong mathematical induction is another flavor
+of induction
+Goal: Prove ∀x∈N P(x).
+Procedure:
+1. Prove P(0)
+2. Show that [P(0) ∧ P(1) ∧ … ∧ P(k) ] → P(k+1) for any
+arbitrary k
+3. Conclude that P(x) is true ∀x∈N
+
+P(0)
+[P(0) ∧ P(1) ∧ … ∧ P(k) ] → P(k+1)
+∴∀x∈N P(x)
+
+So what’s the big deal?
+Recall: In mathematical induction, our inductive
+hypothesis allows us to assume that P(k) is true and use
+this knowledge to prove P(k+1)
+However, in strong induction, we can assume that P(0) ∧
+P(1) ∧ … ∧ P(k) is true before trying to prove P(k+1)
+For certain types of proofs, this is much easier than
+trying to prove P(k+1) from P(k) alone.
+
+For example…
+
+Show that if n is an integer greater than 1, then n can
+be written as the product of primes
+P(n) ≡ n can be written as a product of primes
+Base case: P(2): 2 = 21
+
+✔
+
+I.H.: Assume that P(2) ∧ … ∧ P(k) holds for an arbitrary k
+Inductive step: We will now show that [P(2) ∧ … ∧ P(k)] → P(k+1)
+n Two cases to consider: k+1 prime and k+1 composite
+n If k+1 is prime, then we’re done
+n If k+1 is composite, then by definition, k+1 = ab
+n Since 2 ≤ a ≤ k and 2 ≤ b ≤ k, a and b can be written as
+products of primes by the I.H.
+n Thus, k+1 can be written as a product of primes
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by strong induction ❏
+
+Is strong induction somehow more powerful than
+mathematical induction?
+The ability to assume P(0) ∧ P(1) ∧ … ∧ P(k) true before
+proving P(k+1) seems more powerful than just assuming
+P(k) is true
+Perhaps surprisingly, mathematical induction, strong
+induction, and well ordering are all equivalent!
+That is, a proof using one of these methods can always
+be written using the other two methods
+
+This may not be easy, though!
+
+Prove that every amount of postage of 12 cents or more can be
+formed using just 4-cent and 5-cent stamps
+P(n) ≡ n cents of postage can be made using 4- and 5-cent stamps
+Base case: P(12): 3 4-cent stamps
+P(13): 1 5-cent stamp, 2 4-cent stamps
+P(14): 2 5-cent stamps, 1 4-cent stamp
+P(15): 3 5-cent stamps
+
+✔
+
+I.H.: Assume that P(12) ∧ … ∧ P(k) holds for an arbitrary integer k
+Inductive step: We will now show that [P(12) ∧ … ∧ P(k)] → P(k+1)
+n By the I.H., we can make k-3 cents worth of postage using
+only 4-cent and 5-cent stamps
+n By adding another 4-cent stamp, we end up with k+1 cents
+worth of postage
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by strong induction ❏
+
+Prove that every amount of postage of 12 cents or more can be
+formed using just 4-cent and 5-cent stamps
+P(n) ≡ n cents of postage can be made using 4- and 5-cent stamps
+Base case: P(12): 3 4-cent stamps ✔
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n We can k cents using 4- and 5-cent stamps, by the I.H.
+n If at least one 4-cent stamp was used, remove that stamp and
+add in a 5-cent stamp, thereby making k+1 cents of postage
+n If no 4-cent stamps were used, then only 5-cent stamps were
+used.
+n Since k > 12, at least 3 5-cent stamps were used.
+n Replace 3 5-cent stamps with 4 4-cent stamps, thereby making
+k+1 cents of postage
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+So when should we use strong induction?
+If it is straightforward to prove P(k+1) from P(k) alone,
+use mathematical induction
+P(0)
+
+P(1)
+
+…
+
+P(k-1)
+
+P(k)
+
+P(k+1)
+
+If it would be easier to prove P(k+1) using one or more
+P(j) for 0 ≤ j < k, use strong induction
+P(0)
+
+P(1)
+
+…
+
+P(k-1)
+
+P(k)
+
+?
+
+P(k+1)
+
+In-class exercises
+Problem 1: Use strong induction to prove that any
+whole dollar amount greater than or equal to $4 can
+be formed using only $2 and $5 bills.
+
+In-class exercises
+Problem 2: Suppose you have a box of Maltesers
+containing 𝑛 candies, and you want to split it into 𝑛 piles
+of 1 candy each by repeatedly splitting a pile into two
+smaller piles. Each time you split a pile, you multiply the
+number of candies in each of the two smaller piles you
+form, and add it to a running total. For example, if you
+split a pile of 13 candies into two piles of size 4 and 9,
+you would add 4×9 = 36 to the total.
+Show that, no matter how you split the piles, the sum of
+! !"#
+the products computed at each step will equal
+$
+
+Final Thoughts
+n Strong induction lets us prove universally quantified
+statements using this inference rule:
+P(0)
+[P(0) ∧ P(1) ∧ … ∧ P(k) ] → P(k+1)
+∴∀x∈N P(x)
+
+n Although sometimes more convenient than mathematical
+induction, strong induction is no more powerful
+
+

@@ -1,0 +1,1731 @@
+SuperScalar Processors
+CS 1541
+Wonsun Ahn
+
+In-order vs. Out-of-order superscalars
+● Superscalar: a wide-issue processor that does dynamic scheduling
+o Extracts instruction level parallelism (ILP) within the processor
+● In-order superscalar: does not reorder instructions
+o Only detects hazards between instructions to insert bubbles
+o Only extracts ILP that arises from given ordering of instructions
+o The processor simulated in Project 1
+● Out-of-order superscalar: does reorder instructions
+o Reorders instructions to remove hazards and increase utilization
+o Typically results in higher performance compared to in-order
+o But dynamic reordering consumes lots of power
+● Out-of-order sounds more exciting so let’s talk about that
+2
+
+Name of the game is still ILP
+● The processor internally constructs the data dependency graph
+● The processor tries to take advantage of ILP as much as possible
+o By executing the red nodes in parallel with the blue nodes
+
+3
+2
+
+1
+
+2
+
+1
+
+1
+2
+
+1
+1
+
+2
+
+total 7 cycles
+
+illustration courtesy of Dr. Melhem
+3
+
+Instruction Queue
+
+Register
+File
+
+Instruction Queue
+
+I-Mem
+
+Ins. Decoder
+
+● In order to expose ILP, superscalars need a big instruction window
+o Just like the compiler did for VLIWs
+o HW structure for storing instructions is called instruction queue
+o Now EX stage has a big pool of instructions to choose from
+
+ALU
+
++
+
+D-Mem
+
+4
+
+Instruction Queue
+
+Instruction Queue
+
+● In order to expose ILP, superscalars need a big instruction window
+o Just like the compiler did for VLIWs
+o HW structure for storing instructions is called instruction queue
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+
+● At ID, instructions are decoded
+o And dispatched to the i-queue
+● At EX, ready instructions are chosen
+from the instruction queue
+o Ready as in operands are available
+o And issued to an EX unit
+● Typically queue is always full
+o Insts start queueing up when insts
+fail to issue due to hazards
+5
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+li t0, 1
+li t1, 2
+add t2, t0, t1
+
+Instruction Queue
+
+● Now we have pool of instructions. When do they become ready?
+o Ready operands and instructions are in green
+o Not ready operands and instructions are in red
+Load/
+Store
+
+[Issued]
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+
+Float
+ALU
+6
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+li t0, 1
+li t1, 2
+add t2, t0, t1
+
+Instruction Queue
+
+● Initially both li t0, 1 and li t1, 2 are ready
+o The li instruction does not have any register operands
+o Instruction scheduler has a choice of what to issue
+Load/
+Store
+
+[Issued]
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+
+Float
+ALU
+7
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+li t0, 1
+li t1, 2
+add t2, t0, t1
+
+Instruction Queue
+
+● Let’s say the scheduler issues li t1, 2 first
+● Then the t1 operand becomes ready after it completes
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+[Issued]
+li t1, 2
+
+Int ALU 2
+
+Float
+ALU
+8
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+li t0, 1
+add t2, t0, t1
+
+Instruction Queue
+
+● Now the only ready instruction li t0, 1 issues
+● Then the t0 operand becomes ready after it completes
+● Now add t2, t0, t1 is finally ready to issue
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+[Issued]
+li t1, 2
+li t0, 1
+
+Int ALU 2
+
+Float
+ALU
+9
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+
+Instruction Queue
+
+● And we are done!
+
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+
+[Issued]
+li t1, 2
+li t0, 1
+add t2, t0, t1
+
+Float
+ALU
+10
+
+Scheduling the Instruction Queue
+
+[Dispatched]
+li t0, 1
+li t1, 2
+add t2, t0, t1
+
+Instruction Queue
+
+● Note how we reordered li t0, 1 and li t1, 2
+o There are no dependencies between the two, so no issues
+o Also, RAW dependency with add t2, t0, t1 was enforced
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+
+[Issued]
+li t1, 2
+li t0, 1
+add t2, t0, t1
+
+Float
+ALU
+11
+
+What if we had a WAW dependency?
+
+[Dispatched]
+li t0, 1 WAW!
+li t0, 2
+add t2, t0, t0
+
+Instruction Queue
+
+● Reordering li t0, 1 and li t0, 2 still allowed (both are ready)
+o Now t2 = 4 in original code, but t2 = 2 during execution!
+o How do we disallow this from happening?
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+
+[Issued]
+li t0, 2
+li t0, 1
+add t2, t0, t0
+
+Float
+ALU
+12
+
+WAW and WAR dependencies are tricky
+● RAW (true) dependencies are automatically enforced
+o Instructions cannot issue until all operands are ready (written)
+● WAW and WAR dependencies are not enforced
+o There is no data passing between the two instructions
+o The two instructions can become ready in any order
+● We could somehow enforce WAW and WAR dependencies
+o But there is a better solution: register renaming!
+o Remember? That’s what the compiler did to remove WAW/WAR.
+
+13
+
+Register Renamer and the RAT
+
+[Decoded]
+li t0, 1 WAW!
+li t0, 2
+add t2, t0, t0
+
+All 32 MIPS registers
+
+Register
+Renamer
+RAT
+
+t0
+
+p1
+
+t1
+
+-
+
+t2
+
+p2
+
+…
+
+…
+
+[Dispatched]
+li p0, 1 No
+li p1, 2 WAW!
+add p2, p1, p1
+
+Instruction Queue
+
+● As soon as decode, Register Renamer renames all registers
+o Done with the help of the Register Alias Table (RAT)
+o RAT is current mapping between architectural and physical registers
+▪ Architectural registers: Registers in ISA used in programs (t0, t1, t2, …)
+▪ Physical registers: Renamed registers used in processor (p0, p1, p2, …)
+
+14
+
+Register Renamer and the RAT
+● So how does the RAT work?
+● Initially, no assignments have been done, so mapping is empty.
+
+Register
+Renamer
+RAT
+
+All 32 MIPS registers
+
+t0
+
+-
+
+t1
+
+-
+
+t2
+
+-
+
+…
+
+…
+
+[Dispatched]
+
+Instruction Queue
+
+[Decoded]
+
+15
+
+Register Renamer and the RAT
+
+[Decoded]
+li t0, 1
+
+Register
+Renamer
+RAT
+
+All 32 MIPS registers
+
+t0
+
+p0
+
+t1
+
+-
+
+t2
+
+-
+
+…
+
+…
+
+[Dispatched]
+li p0, 1
+
+Instruction Queue
+
+1. li t0, 1 is decoded, destination t0 is renamed to p0
+
+16
+
+Register Renamer and the RAT
+
+[Decoded]
+li t0, 1
+li t0, 2
+
+Register
+Renamer
+RAT
+
+All 32 MIPS registers
+
+t0
+
+p1
+
+t1
+
+-
+
+t2
+
+-
+
+…
+
+…
+
+[Dispatched]
+li p0, 1
+li p1, 2
+
+Instruction Queue
+
+1. li t0, 1 is decoded, destination t0 is renamed to p0
+2. li t0, 2 is decoded, destination t0 is renamed to p1
+o Remember the single assignment rule?
+o A new value always gets a new register
+
+17
+
+Register Renamer and the RAT
+
+[Decoded]
+li t0, 1
+li t0, 2
+add t2, t0, t0
+
+All 32 MIPS registers
+
+Register
+Renamer
+RAT
+
+t0
+
+p1
+
+t1
+
+-
+
+t2
+
+p2
+
+…
+
+…
+
+[Dispatched]
+li p0, 1
+li p1, 2
+add p2, p1, p1
+
+Instruction Queue
+
+1. li t0, 1 is decoded, destination t0 is renamed to p0
+2. li t0, 2 is decoded, destination t0 is renamed to p1
+3. add t2, t0, t0 is decoded:
+o Two t0 input registers use current mapping p1
+o Destination register t2 is renamed to p2
+
+18
+
+Register Rename Removes all WAW/WAR Deps
+
+[Decoded]
+li t0, 1 WAW!
+li t0, 2
+add t2, t0, t0
+
+Register
+Renamer
+t0
+
+RAT
+renamed p
+
+…
+
+…
+
+t9
+
+renamed p
+
+Instruction Queue
+
+● By the time instructions are dispatched to i-queue
+o All architectural registers have been renamed to physical registers
+o All WAR and WAR dependencies have been removed
+[Dispatched]
+li p0, 1 No
+li p1, 2 WAW!
+add p2, p1, p1
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+[Issued]
+li p1, 2
+li p0, 1
+add p2, p1, p1
+
+Int ALU 2
+
+Float
+ALU
+19
+
+All Computation Done using Physical Registers
+
+Physical
+Register File
+
+p0
+p1
+
+Register
+Renamer
+t0
+
+RAT
+renamed p
+
+…
+
+…
+
+t9
+
+renamed p
+
+p2
+…
+
+p(n-1)
+p(n)
+
+Instruction Queue
+
+Instruction Decoder
+
+● Now ID stage (dispatch) reads registers from physical register file
+● All data forwarding also done based on physical registers
+Load/
+Store
+
+Instruction
+Scheduler
+
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+20
+
+ILP limits performance improvements of wide-issue
+● We already discussed limits on pipelining.
+● Time to discuss limits on IPC improvements through wide-issue!
+● There is a fundamental limit to achievable IPC
+o Amount of ILP (Instruction Level Parallelism) in code
+o Remember the data dependence graph?
+o ILP is constrained only by true RAW dependencies
+o How about control dependencies?
+▪ Not a fundamental limit → can elide using branch prediction
+● ILP is a property of the program, not the processor
+o This limit applies to both VLIW and superscalar processors
+
+21
+
+ILP present in different programs
+● After renaming, theoretical limit of IPC is 35 ~ 4003!
+
+Matthew Postiff et al. “The Limits
+of Instruction Level Parallelism in
+SPEC95 Applications”. ACM
+SIGARCH Computer Architecture
+News, 1999
+22
+
+Practical limits on performance of Superscalar
+● Achieving the theoretical limit would be awesome
+o In reality, superscalars are typically no more than 10-wide
+● Practical limits on superscalar processors
+o Number of execution units (e.g. ALU, Load/Store) not really a limit
+o Practical limits on the IPC you can achieve
+▪ Instruction queue size (impacts scheduling window)
+▪ Physical register file size (also impacts scheduling window)
+o Upsizing above structures negatively impacts cycle time
+▪ Time to search and schedule instruction queue
+▪ Time to access register file (increased size and number of ports)
+o Upsizing above structures negatively impacts energy efficiency
+
+23
+
+Exceptions
+
+24
+
+Exceptions Review
+● Exception: an event which causes the CPU to stop the normal flow of
+execution and go somewhere else (the exception handler)
+● There are mainly two causes of exceptions:
+o Software exceptions (or traps): Triggered by a program instruction
+▪ Trap instruction: typically used to call OS routines (system calls)
+▪ Page fault: instruction accessed a page not mapped to memory
+▪ Divide-by-0: instruction performed a divide-by-0 arithmetic
+▪ Arithmetic overflow: instruction overflowed MAX_INT of register
+o Hardware exceptions (or interrupts): Triggered by hardware event
+▪ User has typed on the keyboard
+▪ A network packet has arrived
+▪ A file block read has completed
+
+● In all cases, the OS exception handler is invoked
+
+25
+
+Handling exceptions
+● What happens when an exception is triggered:
+1. Processor stops execution of user program.
+2. Processor stores information about exception (cause, PC).
+3. Processor jumps to the OS exception handler.
+4. Handler creates backup of program register values in memory.
+5. Handler inspects exception info and handles it accordingly.
+▪ While overwriting some of the registers that were backed up.
+6. Handler restores program register values from memory.
+7. Processor resumes execution of user program.
+● Processor must provide precise register values at point of exception
+o Otherwise, when processor resumes, program will malfunction
+o Guaranteeing this is called a precise exception
+26
+
+Rules for Precise Exceptions
+1. All instructions before the exception must have executed
+
+2. No instructions after the exception must execute
+● Architectural state: the state visible to the ISA (i.e. software)
+o State in architectural registers (For MIPS: t0, t1, t2, …)
+o State in data memory
+
+● Architectural state at point of exception must reflect above rules
+
+27
+
+Precise Exceptions in In-order Processors is Easy
+
+I-Mem
+
+Ins. Decoder
+
+● Exceptions are typically detected at the EX stage
+o Stage where all arithmetic happens as well as address calculations
+● On exception, flush EX and all previous stages (ID and IF)
+o Since in-order, guarantees instructions following EX do not writeback
+o Only state leading up to instruction at EX will be written to reg / mem
+
+Register
+File
+
+ALU
+
+D-Mem
+
+ALU
+28
+
+Precise Exceptions in Out-of-order Processors is Hard
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+
+Instruction Queue
+
+● Suppose div t2,t1,t0 and li t0, 3 issue out-of-order as below
+o div p2,p1,p0 triggers a divide-by-zero exception (p0 = 0)
+o But at point of exception, t0 appears to be 3 due to li p3, 3!
+▪ At that point, t0 is mapped to p3 in the RAT (not p0)
+[Dispatched]
+li p0, 0
+li p1, 1
+div p2,p1,p0
+li p3, 3
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+
+[Issued]
+li p0, 0
+li p1, 1
+li p3, 3
+div p2,p1,p0
+Divide-by-zero
+Exception!
+
+Float
+ALU
+29
+
+Precise Exceptions in Out-of-order Processors is Hard
+● This is the challenge with out-of-order processors
+o Instructions execute and complete out-of-order
+o For precise exceptions, instructions must appear to complete in-order
+● Solution: update architectural state in-order
+o When instructions execute, have them only update “internal” state
+▪ Physical registers
+▪ Store queue (MEM queues up stores instead of performing them)
+o Internal state is transferred to visible state during in-order commit
+▪ Physical registers are copied to architectural registers
+▪ Store queue entries are written to memory
+
+30
+
+In-order Commit
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest done?
+li p0, 0
+t0
+Y
+li p1, 1
+t1
+Y
+div p2,p1,p0 t2
+N
+li p3, 3
+t0
+Y
+
+Architectural
+Registers
+
+commit in order
+
+Instruction Decoder
+
+● Decoded instructions are stored to i-queue in-order
+● Instructions execute out-of-order (updating done? field)
+● Done instructions commit in-order to Retirement Register File (RRF)
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+31
+
+In-order Commit Example: Cycle 1
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest done?
+li p0, 0
+t0
+Y
+li p1, 1
+t1
+Y
+div p2,p1,p0 t2
+N
+li p3, 3
+t0
+Y
+
+Architectural
+Registers
+
+commit in order
+
+Instruction Decoder
+
+● At this point, all li instructions have completed but not the div
+● li p0, 0 and li p1, 1 can commit on the next cycle
+o But not li p3, 3 since we have in-order commit!
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+32
+
+In-order Commit Example : Cycle 2
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest done?
+div p2,p1,p0 t2
+Y
+li p3, 3
+t0
+Y
+…
+…
+
+Architectural
+Registers
+
+commit in order
+
+Instruction Decoder
+
+● li p0, 0 and li p1, 1 have committed updating t0 and t1
+● div p2,p1,p0 has completed execution and is finally ready to commit
+o On completion, div has set an “exception bit” in i-queue (not shown here)
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+33
+
+In-order Commit Example : Cycle 3
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest done?
+div p2,p1,p0 t2
+Y
+li p3, 3
+t0
+Y
+…
+…
+
+Architectural
+Registers
+
+Instruction
+Scheduler
+Exception!
+
+Flush!
+
+Instruction Decoder
+
+● An exception is raised for div p2,p1,p0 when it tries to commit
+o Instructions following div are flushed, without modifying RRF
+● Retirement Register File contains a precise architectural state
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+34
+
+In-order Commit also solves branch misprediction
+
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest done?
+li p0, 0
+t0
+Y
+li p1, 1
+t1
+Y
+beq p0,p1,… t2
+N
+li p3, 3
+t0
+Y
+
+Architectural
+Registers
+
+Instruction
+Scheduler
+
+Flush!
+
+Instruction Decoder
+
+● What if processor finds out it mispredicted a branch?
+o Just flush instructions below it after the branch executes!
+o Also restore an RAT snapshot that was taken at point of branch.
+
+Mispredict!
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+35
+
+In-order Commit also solves physical register recycling
+
+Instruction Decoder
+
+● When can the processor recycle physical registers?
+o The prev column records previous physical register mapped to dest.
+o When li p3, 3 commits, p0 previously mapped to t0 can be recycled
+[Decoded]
+li t0, 0
+li t1, 1
+div t2,t1,t0
+li t0, 3
+
+Register
+Renamer
+Physical
+Register
+File
+
+Retirement Register File
+t0
+s0
+a0
+t1
+s1
+a1
+t2
+s2
+a2
+…
+…
+…
+Instruction Queue
+instructions dest prev
+li p0, 0
+t0
+li p1, 1
+t1
+beq p0,p1,… t2
+li p3, 3
+t0
+p0
+
+Architectural
+Registers
+
+Instruction
+Scheduler
+Recycle p0
+on commit
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+36
+
+Load / Store Queue
+
+37
+
+How about data dependencies through memory?
+● RAW, WAR, and WAW dependencies happen through memory as well
+o Clearly, the below code has no data dependencies through registers
+sw
+$t0, 4($s0)
+// stores to 0xdeadbeef
+lw
+$t1, 8($s1)
+// loads from 0xdeadbeef
+o But there is a RAW dependency through the location 0xdeadbeef
+● Question: how does processor enforce RAW dependencies?
+● Question: how does processor deal with WAR and WAW dependencies?
+
+● Answer: through memory renaming using a load / store queue
+o Just like registers, a new queue entry created for every store instruction
+→ All WAR and WAW memory dependencies are removed
+o Loads fetch data from most recent queue entry with same address
+→ All RAW memory dependencies are enforced
+38
+
+Every store gets a new store queue entry
+
+Instruction Decoder
+
+● Loads / stores are inserted into load / store queue as well instruction queue
+o Age denotes age of memory operation (incremented at every mem op)
+o Address and value of mem op is unknown until mem op is complete
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0($s0) ???
+???
+sw $t1, 0($s1) 1
+0($s1) ???
+???
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0($s2) ???
+N
+…
+…
+…
+
+Renamed
+Memory
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+39
+
+Scenario 1: WAW reordering of two stores
+
+Instruction Decoder
+
+● Let’s say sw $t1, 0($s1) becomes ready first in the i-queue and executes
+o 0($s1) is resolved to 0xdeadbeef and $t1 is resolved to 1
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0($s0) ???
+???
+sw $t1, 0($s1) 1
+0xdeadbeef
+1
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0($s2) ???
+N
+…
+…
+…
+
+Renamed
+Memory
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+40
+
+Scenario 1: WAW reordering of two stores
+
+Instruction Decoder
+
+● Next, sw $t0, 0($s0) becomes ready in the i-queue and executes
+o 0($s0) is also resolved to 0xdeadbeef and $t0 is resolved to 0
+o So, we have effectively reordered execution of a WAW dependency
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0xdeadbeef
+0
+sw $t1, 0($s1) 1
+0xdeadbeef
+1
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0($s2) ???
+N
+…
+…
+…
+
+Renamed
+Memory
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+41
+
+Scenario 1: WAW reordering of two stores
+
+Instruction Decoder
+
+● Finally, lw $t2, 0($s2) becomes ready in the i-queue and executes
+o 0($s2) also resolves to 0xdeadbeef meaning a RAW dependence
+o Load Unit searches Store Queue for most recent store matching address
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0xdeadbeef
+0
+sw $t1, 0($s1) 1
+0xdeadbeef
+1
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0xdeadbeef
+Y
+…
+…
+…
+
+$t2 = 1
+
+addr == 0xdeadbeef
+&&
+age < 3?
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+42
+
+Scenario 2: Flush due to RAW violation
+
+Instruction Decoder
+
+● In this scenario, lw $t2, 0($s2) becomes ready first and executes
+o Load Unit searches store queue but does not find matching entry
+o So, it simply fetches value for $t2 from memory
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0($s0) ???
+???
+sw $t1, 0($s1) 1
+0($s1) ???
+???
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0xdeadbeef
+Y
+…
+…
+…
+
+addr == 0xdeadbeef
+&&
+age < 3?
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+43
+
+Scenario 2: Flush due to RAW violation
+
+Instruction Decoder
+
+● Next, sw $t0, 0($s0) becomes ready in the i-queue and executes
+o Store Unit searches Load Queue to see if there were RAW violations
+o And, yes, there is a Load that performed earlier than it should have!
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0xdeadbeef
+0
+sw $t1, 0($s1) 1
+0($s1) ???
+???
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+Physical
+Register
+File
+
+Instruction
+Queue
+
+Load/
+Store
+
+Instruction
+Scheduler
+
+Load Queue
+age
+addr
+done?
+addr == 0xdeadbeef
+3
+0xdeadbeef
+Y
+&& age > 1
+…
+…
+…
+&& done?
+
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+44
+
+Scenario 2: Flush due to RAW violation
+
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0xdeadbeef
+0
+sw $t1, 0($s1) 1
+0($s1) ???
+???
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0xdeadbeef
+Y
+…
+…
+…
+
+Load/
+Store
+
+Instruction
+Scheduler
+
+Flush!
+
+Instruction Decoder
+
+● Flush lw $t2, 0($s2) and all instructions that follow it in i-queue
+o All following execution has been polluted by incorrect value of $t2
+
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+45
+
+Precise exceptions through in-order commit
+
+Instruction Decoder
+
+● Values in Store Queue are committed in-order
+o When store instruction reaches head of i-queue, value stored to memory
+o Guarantees precise exceptions
+Store Queue
+[Decoded]
+addr
+value
+sw $t0, 0($s0) age
+0xdeadbeef
+0
+sw $t1, 0($s1) 1
+0xdeadbeef
+1
+lw $t2, 0($s2) 2
+…
+…
+…
+
+Register
+Renamer
+
+Instruction
+Queue
+
+Physical
+Register
+File
+
+Load Queue
+age
+addr
+done?
+3
+0xdeadbeef
+Y
+…
+…
+…
+
+Committed
+In-order
+
+Instruction
+Scheduler
+
+Load/
+Store
+Int ALU 1
+
+Int ALU 2
+Float
+ALU
+46
+
+Real Life Superscalars
+
+47
+
+The ARM Cortex-A8 architecture
+● The ARM Cortex-A8 is an in-order superscalar processor
+o Notice the use of the architectural register file
+
+FIGURE 4.75 The A8 pipeline. The first three stages fetch instructions into a 12-entry instruction
+fetch buffer. The Address Generation Unit (AGU) uses a Branch Target Buffer (BTB), Global
+History Buffer (GHB), and a Return Stack (RS) to predict branches to try to keep the fetch queue
+full. Instruction decode is five stages and instruction execution is six stages.
+
+48
+
+The AMD Opteron X4 Microarchitecture
+● The AMD Opteron is an out-of-order superscalar processor
+o Commit unit oversees retiring instructions from operation queue
+Instruction Fetch
+and Decode
+
+Register read
+and Dispatch
+
+Execute
+
+Mem
+
+Write Back
+
+49
+
+The Intel Core i7 architecture
+● The Intel Core i7 is another out-of-order superscalar processor
+
+FIGURE 4.77 The Core i7 pipeline with
+memory components. The total pipeline
+depth is 14 stages, with branch
+mispredictions costing 17 clock cycles.
+This design can buffer 48 loads and 32
+stores. It is a 4-wide processor but has 6
+execution units of different types to reduce
+structural hazards.
+
+50
+
+Intel Core i7 Performance
+● Ideal CPI = 0.25 since this is a 4-wide processor
+
+51
+
+Intel Core i7 Impact of Branch Misprediction
+● Due to deep pipeline, tiny misprediction can have outsized impact
+
+52
+
+Recap:
+VLIWs vs SuperScalars
+
+53
+
+Ability to deal with hazards
+● Hazards prevent the full exploitation of ILP (Instruction Level Parallelism)
+● Which processor type is better at dealing with various hazards?
+VLIW
+
+Out-of-order SuperScalar
+
+Structural Hazards
+Data Hazards (Registers)
+Data Hazards (Memory)
+Control Hazards
+Instruction Window
+
+54
+
+Ability to operate energy efficiently
+● We learned that performance and power are two sides of the same coin.
+● Which processor type has less power-hungry control structures?
+VLIW
+
+Out-of-order SuperScalar
+
+Big Register File
+Register Alias Table
+Instruction Queue
+Data Forwarding Wires
+
+55
+
+

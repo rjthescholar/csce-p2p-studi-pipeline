@@ -1,0 +1,644 @@
+#4
+
+Memory and
+Addresses
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+● Add/Drop period ends ??!
+● Everyone joined slack? Links will/have? Expired
+● Repeat after me:
+o Store copies from the CPU to memory
+o Load copies from memory to CPU
+
+2
+
+Variables, Loads, Stores
+
+3
+
+Memory addresses
+● Everything in memory has an address
+o the position in memory where it begins
+▪ where its first byte is
+o this applies to variables, functions, objects, arrays etc.
+● A super important concept:
+
+every piece of data really has two parts:
+an address and a value
+
+● If you want to put a variable in memory…
+o first you need to figure out what address to put it in
+o this extremely tedious task is handled by assemblers
+▪ whew
+
+4
+
+Putting a variable in memory
+● we can declare a global variable like this:
+
+.data
+x: .word 4
+name
+
+type
+
+initial value
+
+● the Java/C equivalent would be static int x = 4;
+● .data says "I'm gonna declare variables"
+o you can declare as many as you want!
+o to go back to writing code, use .text
+● if we assemble this little program and make sure Tools > Show Labels
+Window is checked, what do you see?
+o the assembler gave the variable that address
+o it'll do that for every variable
+5
+
+Load-store architectures
+● In some architectures, many instructions can access memory
+o x86-64: add [rsp-8], rcx
+▪ adds the contents of rcx to the value at address rsp-8
+● In a load-store architecture, all memory accesses are done with two kinds of
+instructions: loads and stores (like in MIPS)
+loads copy data from memory
+into CPU registers
+
+lw
+Registers
+
+Memory
+
+sw
+
+stores copy data from CPU
+registers into memory
+6
+
+Operating on variables in memory (animated)
+● we want to increment a variable that is in memory
+o where do values have to be for the CPU to operate on them?
+o what do we want the overall outcome to be?
+● so, what three steps are needed to increment that variable?
+1. load the value from memory into a register
+2. add 1 to the value in the register
+3. store the value back into memory
+● every variable access works like this!!!
+o HLLs just hide this from you
+
+5
+4
+
+5
+4
+
+x
+
+7
+
+Accessing memory in MIPS
+
+8
+
+MIPS ISA: load and store instructions for words
+● you can load and store entire 32-bit words with lw and sw
+● the instructions look like this (variable names not important):
+
+lw t1, x # loads from variable x into t1
+sw t1, x # stores from t1 into variable x
+● Ermm… In MIPS, stores are written with the destination on the right. !?
+o well, you can remember it with this diagram…
+o the memory is "on the right" for both
+lw
+loads and stores
+Registers
+
+Memory
+
+sw
+9
+
+MIPS ISA: load and store instructions for words
+● You can also load the 32-bit address of a variable with la
+
+la t1, x # loads the ADDRESS of x into t1
+t1  will now contain 4: The address of variable x
+
+● And then use that address to access memory, e.g.:
+
+la t2, 0(t1) # the contents of x into t2
+x
+
+Addr
+
+Val
+
+0
+
+04
+
+1
+
+00
+
+2
+
+00
+
+3
+
+00
+
+4
+
+DE
+
+5
+
+C0
+
+6
+
+EF
+
+7
+
+BE
+
+8
+
+6C
+
+9
+
+34
+
+A
+
+00
+
+B
+
+01
+
+10
+
+Read, modify, write
+● you now know enough to increment x!
+● But first, lets look at some assembly
+● first we load x into a register
+● then…
+● and then…
+
+lw t0, x
+add t0, t0, 1
+sw t0, x
+
+● let's see what values are in t0 and memory after this program runs
+
+11
+
+It really is that simple
+● variables in asm aren't THAT scary
+● please don't be afraid of them
+● you just gotta remember to store if you wanna change em
+
+12
+
+Questions?
+
+• Just in case I prepared some for you:
+o Does load word (lw) put or get data from memory?
+o I already know the word is the most “comfortable” size for the CPU, but are
+they the only size it can work with?
+
+13
+
+Smaller values
+
+14
+
+Smaller numeric
+● MIPS also understands smaller and tiny datatypes
+
+.data
+x: .word 4
+y: .half 4
+z: .byte 4
+
+=>
+=>
+=>
+
+0x00000004
+0x0004
+0x04
+
+15
+
+MIPS ISA: loading and storing 8/16-bit values
+● to load/store bytes, we use lb/sb
+● to load/store 16-bit (half-word) values, we use lh/sh
+● these look and work just like lw/sw, like:
+
+lb t0, tiny # loads a byte into t0
+sb t0, tiny # stores a byte into tiny
+
+o …or DO THEY?!?!?!?
+● how big are registers?
+o what should go in those extra 16/24 bits then?
+▪ ???
+
+16
+
+can I get an extension?
+
+… no
+
+● sometimes you need to widen a number with fewer bits to more
+● zero extension is easy: put 0s at the beginning.
+
+10012 ➔ to 8 bits ➔ 0000 10012
+
+● but there are also signed numbers which we didn't talk about yet
+o the top bit (MSB) of signed numbers is the sign (+/-)
+● sign extension puts copies of the sign bit at the beginning
+
+10012 ➔ to 8 bits ➔ 1111 10012
+00102 ➔ to 8 bits ➔ 0000 00102
+
+o like spreading peanut butter
+▪ we'll learn about why this is important later in the course
+
+17
+
+EXPAND VALUE
+● if you load a byte…
+
+31
+0
+00000000 00000000 00000000 00000000
+
+10010000
+
+If the byte is signed… what should it become?
+
+31
+0
+11111111 11111111 11111111 10010000
+If the byte is unsigned… what should it become?
+
+31
+0
+00000000 00000000 00000000 10010000
+
+lb does
+
+sign extension.
+
+lbu does
+
+zero extension.
+18
+
+How does the CPU know whether it's signed or unsigned
+➔ Everything’s a number
+➔ Everything's in binary (and hex is convenient shorthand)
+➔ Numbers may not be numbers
+➔ So, how does the computer know a number is a number?
+o How does it know that a number is signed?
+o How does it know how to add two numbers?
+o How does it know how to manipulate strings?
+o How does it know if one pattern of bits is a string or a number or a video
+or a program or a file or an icon or
+
+19
+
+IT DOESN'T
+20
+
+How does the CPU know whether it's signed or unsigned
+
+• Do YOU think the CPU knows this?
+
+o no
+▪ it doesn't
+– you have to use the right instruction.
+• It’s particularly easy to mess this up
+o lbu is usually what you want for byte variables but lb is one character
+shorter and just looks so nice and consistent…
+o But don’t!
+
+21
+
+Truncation
+● If we go the other way, the upper part of the value is cut off.
+
+sh
+31
+0 11111111 00000100
+10100010 00001110 11111111 00000100
+● The sign issue doesn't exist when storing, cause we're going from a larger
+number of bits to a smaller number
+o therefore, there are no sbu/shu instructions
+
+22
+
+Memory
+
+23
+
+What is the memory?
+
+• The system memory is a piece of temporary storage hardware
+
+o it's smaller and faster (more expensive!) than the persistent storage.
+▪ maybe in the future it won't be temporary
+▪ the line between system memory and persistent storage will fade away…
+• It's where the programs and data that the computer is currently executing
+and using reside
+o all the variables, all the functions, all the open files etc.
+o the CPU can only run programs from system memory!
+
+24
+
+Bytes, bytes, bytes
+● The memory is a big one-dimensional array of bytes
+● What do these bytes mean?
+o ¯\_(ツ)_/¯
+● Every byte value has an address
+o This is its "array index"
+o Addresses start at 0, like arrays in C/Java
+▪ Gee wonder where they got the idea
+▪ Addresses are the offset from the beginning!
+● When each byte has its own address, we call it a byteaddressable machine
+o not many non-byte-addressable machines these days
+
+Addr
+
+Val
+
+0
+
+00
+
+1
+
+30
+
+2
+
+04
+
+3
+
+00
+
+4
+
+DE
+
+5
+
+C0
+
+6
+
+EF
+
+7
+
+BE
+
+8
+
+6C
+
+9
+
+34
+
+A
+
+00
+
+B
+
+01
+
+C
+
+02
+
+25
+
+How much memory?
+● Each address refers to one byte. if your addresses are n bits long…
+how many bytes can your memory have?
+o 2n B
+● machines with 32-bit addresses can access 232 B = 4GiB of memory
+o with 64-bit addresses… 16EiB
+● Remember:
+o kibi, Mebi, Gibi, Tebi, Pebi, Exbi are powers of 2
+▪ kiB = 210, MiB = 220, GiB = 230 etc.
+o kilo, mega, giga, tera, peta, exa are ostensibly powers of 10
+▪ kB = 103, MB = 106, GB = 109 etc.
+
+26
+
+Words, words, words
+● For most things, we want to use words
+o The "comfortable" integer size for the CPU
+o On this version of MIPS, it's 32b (4B)
+● But our memory only holds bytes…
+● Combine multiple bytes into larger values
+o The CPU can handle this for us
+o But importantly, the data is still just bytes
+● When we talk about values bigger than a byte…
+o The address is the address of their first byte
+▪ The byte at the smallest address
+o So what are the addresses of the three words here?
+
+Addr
+
+Val
+
+0
+
+00
+
+1
+
+30
+
+2
+
+04
+
+3
+
+00
+
+4
+
+DE
+
+5
+
+C0
+
+6
+
+EF
+
+7
+
+BE
+
+8
+
+6C
+
+9
+
+34
+
+A
+
+00
+
+B
+
+01
+
+C
+
+02
+
+27
+
+Endianness
+
+28
+
+A matter of perspective
+● let's say there's a word at address 4… made of 4 bytes
+● wh…what word do those 4 bytes represent?
+
+…is it
+0xDEC0EFBE?
+
+Addr
+
+Val
+
+...
+
+...
+
+7
+
+DE
+
+6
+
+C0
+
+5
+
+EF
+
+4
+
+BE
+
+...
+
+...
+
+…is it
+0xBEEFC0DE?
+
+29
+
+Endianness
+
+● when interpreting a sequence of bytes as larger values, endianness
+is the rule used to decide what order to put the bytes in
+
+little-endian means 0
+the “LITTLE address“ DE
+contains the END-byte
+
+0xBEEFC0DE
+
+1 2 3 big-endian means the
+“BIG address"
+C0 EF BE
+
+contains the END-byte
+
+0xDEC0EFBE
+
+nothing to do with value of bytes, only order
+
+30
+
+Which is better: little or big?
+● it doesn't matter.* as long as you're consistent, it's fine
+● for political reasons, most computers today are little-endian
+● but endianness pops up whenever you have sequences of bytes:
+o like in files
+o or networks
+o or hardware buses
+o or… memory!
+● which one is MIPS?
+o it's bi-endian, meaning it can be configured to work either way
+o but MARS uses the endianness of the computer it's running on
+▪ so little-endian for virtually everyone
+– cause x86
+– Apple sillycone will use a bi-endien architecture: ARM architecture
+(x86)
+
+*big endian is better
+
+31
+
+What DOESN'T endianness affect?
+× the arrangement of the bits within a byte
+o it just changes meaning of order of the bytes
+▪ note the bytes are still DE, C0 etc.
+× 1-byte values, arrays of bytes, ASCII strings…
+o single bytes don’t care about endianness at all
+× the ordering of bytes inside the CPU
+o there's no need for e.g. "big-endian" arithmetic
+o the CPU works with whole words
+● endianness only affects moving/splitting data:
+o larger than single bytes
+o between the CPU and memory
+o or between multiple computers
+
+0xBEEFC0DE
+0xED0CFEEB
+0xDEC0EFBE
+
+l l e H o
+H e l l o
+
+32
+
+Summary
+
+33
+
+

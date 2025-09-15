@@ -1,0 +1,380 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #18: Permutations and Combinations
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+n Permutations
+n Combinations
+n Binomial coefficients
+
+A permutation is an ordered arrangement of a
+set of objects
+S=
+
+σ(S) =
+
+Note: A permutation of some set is essentially
+just a shuffling of that set.
+
+Sometimes we’re interested in counting the number of
+ways that a given set can be arranged
+Example: Suppose that a photographer wants to take a picture of
+three dogs. How many ways can the dogs be arranged?
+
+There are six possible
+arrangements of three
+dogs!
+
+Counting permutations
+In general, we can use the product rule to count the
+number of permutations of a given set.
+Given a set of n items, we have:
+l n ways to pick the 1st item in the permuted set
+l n-1 ways to pick the 2nd item in the permuted set
+l n-2 ways to pick the 3rd item in the permuted set
+l…
+l 1 way to choose the last item in the permuted set
+
+So, for a set of size n, we have n × (n-1) × (n-2) × … × 1
+= n! ways to permute that set
+
+And the winner is…
+Example: Six friends run in a foot race. How many
+possible outcomes of the race are there, assuming that
+there are no ties?
+
+Solution:
+l 6 ways to choose 1st place
+l 5 ways to choose 2nd place
+l 4 ways to chose 3rd place
+l 3 ways to choose 4th place
+l 2 ways to choose 5th place
+l 1 way to choose last place
+l So there are 6! = 720 possible outcomes
+
+Functions and permutations
+Let S be some set. If f: S → S is a bijection, then f
+describes a permutation of the set S.
+
+Example: Let S = {1, 2, 3}, f(1) = 3, f(2) = 2, f(3) = 1
+
+S=
+
+1
+
+2
+
+3
+
+f(S) =
+
+3
+
+2
+
+1
+
+More often than not, we’re only interested in
+arranging a subset of a given set
+Definition: An r-permutation is a permutation of some
+r elements of a set.
+
+Example: Let S = {Alice, Bob, Carol, Dave}. Then:
+l Dave, Bob is a 2-permutation of S
+l Carol, Alice, Bob is a 3-permutation of S
+l Bob, Dave is a 2-permutation of S
+
+Rather than specifying a particular r-permutation of a
+set, we’re usually more interested in counting the
+number of r-permutations of a set
+
+Counting r-permutations
+Definition: We denote the number of r-permutations of
+a set of size n by P(n, r). By the product rule:
+
+𝑛!
+𝑃 𝑛, 𝑟 = 𝑛 × 𝑛 − 1 × … × 𝑛 − 𝑟 + 1 =
+𝑛−𝑟 !
+
+Example: In a foot race between six people, how many
+ways can the gold, silver, and bronze medals be
+assigned, assuming that there are no ties?
+
+Solution:
+l P(6, 3) = 6!/(6-3)! = 6!/3! = 720/6 = 120
+l So, 120 ways to assign medals
+
+The traveling salesperson
+Example: A salesperson must visit 7 different cities.
+The first and last cities of her route are specified by
+her boss, but she can choose the order of the other
+visits. How many possible trips can she take?
+
+Solution:
+l Since first and last cities are fixed,
+we must count the number of ways
+to permute the 5 remaining cities
+l So, there are 5! = 120 possible trips
+that the salesperson can take.
+
+Counting strings
+Example: How many permutations of “ABCDEFG”
+contain the substring “ABC”?
+
+Solution:
+l Observation: Treat “ABC” as one character
+l Now, how many ways are there to permute
+{ABC, D, E, F, G}?
+l |{ABC, D, E, F, G}| = 5
+l 5! = 120 permutations contain the substring “ABC”
+
+How do we count unordered selections of
+objects?
+Example: How many ways can we choose two objects
+from the set S =
+
+S1 =
+
+=
+
+S2 =
+
+=
+
+S3 =
+
+=
+
+Conclusion: There are three 2-combinations of a set
+of size three.
+
+Counting r-combinations
+Definition: Let C(n, r) denote the number of rcombinations of a set of size n. Then:
+𝑛!
+𝐶 𝑛, 𝑟 =
+𝑟! 𝑛 − 𝑟 !
+
+Proof:
+l
+
+l
+l
+l
+l
+l
+
+The r-permutations of the set can be formed by finding all
+of the r-combinations of the set and then permuting each
+r-combination in each possible way
+There are 𝑃 𝑟, 𝑟 ways to permute each possible rcombination
+So, 𝑃 𝑛, 𝑟 = 𝐶 𝑛, 𝑟 × 𝑃 𝑟, 𝑟
+This means that 𝐶 𝑛, 𝑟 = 𝑃 𝑛, 𝑟 /𝑃 𝑟, 𝑟
+= 𝑛!⁄ 𝑛 − 𝑟 ! ⁄𝑟!
+= 𝑛!⁄ 𝑟! 𝑛 − 𝑟 ! ❏
+
+Alternate notation
+Note 1: Sometimes, C(n, r) is read “n choose r”
+
+This is intuitive, as C(n, r) specifies the number of
+ways to choose r objects from a set of size n.
+
+Note 2: C(n, r) is often written as !" . In this class, I
+will use the notation C(n, r) exclusively.
+
+Be careful using the formula for C(n, r)
+Using the formula for C(n, r) directly can result in
+doing lots of multiplication…
+Instead, note that much of the denominator cancels
+out terms in the numerator. For example:
+
+Poker Hands
+Example: Given a standard 52-card deck, how many 5
+card poker hands can be drawn?
+
+Solution:
+l C(52, 5) = 52!/[5! 47!]
+l
+= (52 × 51 × 50 × 49 × 48)/(5 × 4 × 3 × 2 × 1)
+l
+= 26 × 17 × 10 × 49 × 12
+l
+= 2,598,960 different hands
+
+Choosing participants
+Example: Say that a class consists of 30 students.
+How many ways can 3 people be chosen from this class
+to participate in a survey?
+
+Solution:
+l Want to compute is “30 choose 3”
+l C(30, 3) = 30!/[3! 27!]
+l
+= (30 × 29 × 28)/(3 × 2)
+l
+= 10 × 29 × 14
+l
+
+= 4,060 ways to choose participants
+
+An interesting observation…
+Note: Given a set of size n, choosing r elements is the
+same as excluding n-r elements.
+This means that C(n, r) = C(n, n-r).
+
+Proof:
+l C(n, n-r) = n!/[(n-r)! (n-(n-r))!]
+l
+= n!/[(n-r)! r!]
+l
+= n!/[r! (n-r)!]
+l
+= C(n, r)
+
+by simplification
+by the commutative property
+by definition ❏
+
+Permutations and combinations can be used in
+conjunction with the product and sum rules!
+Example: Suppose the CS department has 11 faculty
+members and the Math department has 9 faculty members.
+How many ways can a committee consisting of 4 CS faculty
+members and 3 Math faculty members be chosen?
+
+Solution:
+l C(11, 4) ways to choose 4 CS profs
+l For each of these, there are C(9, 3) ways to choose 3 Math profs
+l So, we need to compute C(11, 4) × C(9, 3)
+l C(11, 4) × C(9, 3) = 11!/(4! 7!) × 9!/(3! 6!)
+l
+= 84 × 330
+l
+
+= 27,720 ways!
+
+In-class exercises
+Top Hat
+
+Combinations can be helpful when examining
+binomial expressions
+Definition: A binomial is an expression involving the sum of
+two terms.
+l For example (x + y) is a binomial, as is (3 + j)4.
+
+r-Combinations are also called binomial coefficients, since
+they occur as coefficients in the expansions of binomial
+expressions.
+
+Example:
+(x + y)3 = x3 + 3x2y + 3xy2 + y3
+= C(3,0)x3y0 + C(3,1)x2y1 + C(3,2)x1y2 + C(3,3)x0y3
+
+The Binomial Theorem
+The Binomial Theorem: Let x and y be variables, and
+let n be a non-negative integer. Then:
+!
+
+𝑥 + 𝑦 ! = / 𝐶 𝑛, 𝑗 𝑥 !&# 𝑦 #
+#$%
+
+Example: Compute (x + y)2.
+l C(2, 0) = 1
+l C(2, 1) = 2
+l C(2, 2) = 1
+l (x + y)2 = x2y0 + 2x1y1 + x0y2
+l
+= x2 + 2xy + y2
+
+✔
+
+A small example…
+Question: What is the coefficient of x12y13 in the
+expansion of (x+y)25?
+
+Solution: By the binomial theorem, we know that this
+term can be written as C(25,13)x12y13, so the
+coefficient of x12y13 is C(25, 13) = 5,200,300.
+
+A slightly more complicated example…
+Question: What is the coefficient of x12y13 in the
+expansion of (2x-3y)25?
+
+Solution:
+l Note that (2x-3y)25 = (2x + (-3)y)25
+l The binomial theorem tells us that:
+2𝑥 + −3𝑦
+
+!"
+
+!"
+
+= 1 𝐶 25, 𝑗 2𝑥 !"&# −3𝑦 #
+#$%
+
+l Thus, the coefficient of x12y13 occurs when j = 13
+l C(25,13)(2x)25-13(-3y)13 = C(25,13)212(-3)13x12y13
+l So the coefficient = 25!/(13! 12!) 212 (-3)13
+l
+= -[25!/(13! 12!) 212 313]
+
+Pascal’s Identity
+Pascal’s identity: C(n+1, k) = C(n, k-1) + C(n, k)
+
+Proof:
+l Let T be a set of n+1 elements
+l Let a ∈ T, and S = T — {a}
+l By definition, there are C(n+1, k) subsets of T containing k
+elements
+l A subset of T containing k elements either contains k elements
+of S, or the element a along with k-1 elements of S
+l There are C(n, k) subsets of S containing k elements, so there
+are C(n, k) subsets of T not containing a.
+l Further, there are C(n, k-1) subsets of S containing k-1
+elements, so there are C(n, k-1) subsets of T containing a.
+l Thus, C(n+1, k) = C(n, k-1) + C(n, k) ❏
+
+We can use Pascal’s identity to define C(n, r)
+recursively
+Basis step: For all n, we have that C(n, 0) = C(n, n) = 1
+Recursive step: C(n+1, k) = C(n, k-1) + C(n, k)
+
+Example: Compute C(3,2).
+l C(3,2) = C(2,1) + C(2,2)
+l
+= C(1,0) + C(1,1) + 1
+l
+=1+1+1
+l
+=3
+l
+= 3!/(2!(3-2)!)
+
+✔
+
+Using this definition, we can compute
+C(n, r) without using multiplication at
+all!
+
+In-class exercises
+Problem 4: What is the coefficient of the term a7b8 in
+(a+b)15?
+Problem 5: Use the recursive definition of C(n, r) to
+calculate C(5,3).
+
+Final Thoughts
+n Permutations count the ways that we can shuffle a
+set (forming a sequence). r-Permutations count the
+number of ways that we can arrange r items from a
+set.
+n r-Combinations are useful when we want to count
+(unordered) subsets of a given set
+n Next time:
+l Generalized permutations and combinations
+
+

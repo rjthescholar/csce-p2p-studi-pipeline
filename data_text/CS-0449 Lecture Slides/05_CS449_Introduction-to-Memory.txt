@@ -1,0 +1,933 @@
+5
+
+Introduction
+to Memory
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+The Memory Model
+If you forget how addressing works, I have a few pointers for you.
+
+2
+
+The C Memory Model
+• Memory is a continuous series of bits.
+
+Potential Layout
+(32-bit addresses)
+
+• It can be logically divided into bytes or words.
+
+• We will treat it as byte-addressable which
+means individual bytes can be read.
+
+stack
+
+• This is not always the case!!
+• Consider masking and shifting to know the
+workaround!
+
+currently unused but
+available memory
+
+• With byte-addressable memory, each and
+every byte (8 bits) has its own unique
+address.
+• It’s the place it lives!! Memory is JUST LIKE US!
+• Address starts at 0, second byte is at address 1,
+and increases (“upward”) as you add new data.
+
+heap
+static data
+
+code
+3
+
+The C Memory Model
+• There are two main parts of a
+program: code and data
+• “code” is sometimes called “text”
+
+• Where in memory should each go?
+• Should we interleave them?
+• Which do you think is usually largest?
+
+• How do we use memory dynamically?
+• That is, only when we know we need it,
+in the moment.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+4
+
+The C Memory Model: Code
+• Code has a few known properties:
+
+Potential Layout
+(32-bit addresses)
+
+• It likely should not change.
+• It must be loaded before a program can start.
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+5
+
+The C Memory Model: Static Data
+• Static Data is an oft forgotten but useful section.
+• It does change. (contrary to its name)
+• It generally must be loaded before a program starts.
+• The size of the data and section is fixed.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+6
+
+The C Memory Model: The Stack
+• The Stack is a space for temporary dynamic data.
+• Holds local variables and function arguments.
+• Allocated when functions are called. Freed on return.
+• Grows “downward”! (Allocates lower addresses)
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+Stack Allocation allows
+recursion. However, the more
+you recurse, the more you
+use! (Stack is only freed on return)
+
+static data
+
+code
+7
+
+Revisiting our past troubles:
+
+4. Stack Allocation (No initialization!)
+It reuses what is already there!!
+2. Stack Allocation
+
+1. Function Call
+3. Function Call
+Q: Hmm. Where is the value for ‘x’ coming from? Why?
+
+8
+
+The C Memory Model: The Heap
+• The Heap is the dynamic data section!
+• Managing this memory can be very complex.
+• No garbage collection provided!!
+• We will revisit it in greater detail very soon.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+😱
+
+9
+
+Can an emoji be a variable name?
+The questions that really matter 😃
+Compiler and version
+
+Success
+
+gcc main.c -std=c99
+
+😔
+
+gcc main.c -std=c11
+
+😔
+
+gcc main.c -std=c18
+
+😔
+
+clang main.c -std=c99
+
+😔
+
+clang main.c -std=c11
+
+😃
+
+clang main.c -std=c18
+
+😃
+
+#include <stdio.h>
+int main(void) {
+int 😱 = 3;
+printf("😱 is %d\n", 😱);
+return 0;
+}
+lun8@thoth:~/code_449$ ./Hello
+😱 is 3
+
+Answer: So… Not really, so avoid it (unless it’s for fun)!
+10
+
+Pointers
+They point to things. They are not the things. But they are things!?
+
+11
+
+The “Memory Address” Variable Type
+• In C, we have integer types, floating point types…
+• Now we introduce our dedicated address type!
+• A pointer is a specific variable type that holds a memory address.
+
+• You can create a pointer that points to any address in memory.
+• Furthermore, you can tell it what type of data it should interpret that
+memory to be: Just place that
+at the end.
+
+12
+
+Interpreting Pointers: Basics
+👉
+
+👉
+
+Memory
+(32-bit addresses)
+
+3.14159
+
+42
+
+• Pointers can pointer to individual sections of
+memory.
+• They interpret whatever binary information is there.
+13
+
+Interpreting Pointers: Hmm
+👉
+
+👉
+
+Memory
+(32-bit addresses)
+
+3.14159
+
+42 or 0.1543e10(-8) ?
+
+• Pointers can refer to the same address as other
+pointers just fine.
+• They interpret whatever binary information is
+there.
+
+14
+
+Interpreting Pointers: A Sign of Trouble
+👉
+
+Memory
+(32-bit addresses)
+
+Help I’m Lost!
+
+👉
+
+3.14159
+
+
+
+42 or 0.1543e10(-8) ?
+
+• Without the pointer, allocated data may linger
+forever without a way to reference it again!
+• C does not manage freeing memory for you.
+15
+
+Dereferencing Pointers: A Star is Born
+• So, we have some ambiguity in our language.
+• If we have a variable that holds an address, normal operations
+change the address not the value referenced by the pointer.
+• We use the dereference operator (
+
+)
+
+👉
+
+👉
+👉
+
+👉
+16
+
+Dereferencing Pointers: A Star is Born
+• Remember: C implicitly coerces whatever values you throw at it…
+• Incorrectly assigning a value to an address or vice versa will be…
+• … Well … It will be surprising to say the least.
+
+• Generally, compilers will issue a warning.
+• But warnings mean it still compiles!! (You should eliminate warnings in practice)
+
+👉
+👉
+👉 🤔
+👉
+
+👉
+
+17
+
+Referencing Data: An… &… is Born?
+• Again… ambiguity. When do you want the address or the data?
+• We can pull out the address to data and assign that to a pointer.
+• Sometimes we refer to pointers as ‘references’ to data.
+
+• We use the reference operator (
+
+)
+
+👉
+
+👉
+👉
+18
+
+Turtles all the way down
+👉_
+
+👉_👉_
+
+👉_
+
+👉_
+
+👉_👉_
+👉_👉_
+
+19
+
+Removing the emoji
+
+20
+
+Like skipping rocks on the lake…
+
+00
+
+01
+
+02
+
+03
+
+04
+
+05
+
+06
+
+42
+
+07
+
+08
+
+09
+
+0A
+
+0B
+
+0C
+
+0D
+
+0E
+
+0F
+
+10
+
+11
+
+12
+
+13
+
+4
+data
+
+dataptr
+21
+
+Like skipping rocks on the lake…
+
+00
+
+01
+
+02
+
+03
+
+04
+
+05
+
+06
+
+42
+
+07
+
+08
+
+09
+
+0A
+
+0B
+
+0C
+
+4
+data
+
+0D
+
+0E
+
+0F
+
+10
+
+11
+
+12
+
+13
+
+A
+dataptr
+
+dataptrptr
+22
+
+The C Memory Model: The Heap
+• The Heap is the dynamic data section!
+• You interact with the heap entirely with pointers.
+•
+returns the address to the heap with at
+least the number of bytes requested. Or
+on
+error.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+23
+
+Arrays
+It is what all my fellow teachers desperately need: Arrays.
+
+24
+
+Many ducks lined up in a row
+• An array is simply a continuous span of memory.
+
+• You can declare an array on the stack:
+
+• You can declare an array on the heap:
+
+writing in a pedantic style, you
+would write the cast here.
+
+25
+
+Initialization
+• You can initialize them depending on how they are allocated:
+• You can initialize an array as it is allocated on the stack:
+
+• And the heap (for values other than 0, you’ll need a loop):
+
+Q: Why is using
+
+important here?
+
+26
+
+Carelessness means the Stack; Can stab you in the back!
+— “A poem about betrayal” by wilkie
+
+• Remember: Variables declared on the stack are temporary.
+• All arrays can be considered pointers, but addresses to the stack are not
+reliable:
+
+Stack allocation
+Arrays are indeed just pointers! This is an address on the stack.
+Stack deallocation (oh no!)
+
+• This may work sometimes.
+
+• However calling a new function will overwrite the array. Don’t trust it!!
+
+• Instead: Allocate on the heap and pass in a buffer. (next slide)
+27
+
+Appropriate use of arrays. Approp-array-te.
+Arrays don’t store length. Gotta pass it in.
+Pointers allow for passing arguments “by reference”
+
+Pointers can indeed be array-like!
+
+Heap allocation!
+Although we overwrite all values, using calloc to
+initialize array elements to 0 reduces surprises.
+Q: What happens if we pass 20 instead of 10 to powers_of_two?
+
+28
+
+Quick notes on function arguments, here…
+• All arguments are passed “by value” in C.
+• This means the values are copied into temporary space (the stack, usually)
+when the functions are called.
+• This means changing those values does not change their original sources.
+
+• However, we can pass “by reference” indirectly using pointers:
+• Similar to how you pass “by reference” in Java by using arrays.
+The “value” of the argument is the address.
+
+29
+
+Careful! No guard rails… You might run off the edge…
+• Since arrays are just pointers… and the length is not known…
+• Accessing any element is correct regardless of actual intended length!
+• No array bounds checking is the source of many very serious bugs!
+• Can pull out and leak arbitrary memory.
+• Can potentially cause the program to execute arbitrarily code.
+
+What if this is too big?
+
+A simple mistake, but it will gleefully write to it!
+
+30
+
+Pointer arithmetic (Warning: it’s wacky)
+• Because pointers and arrays are essentially the same concept in C…
+• Pointers have some strange interactions with math operations.
+
+• Ideally pointers should “align” to their values in memory.
+• Goal: Incrementing an
+pointer should go to the next
+• That is, not part way between two
+values.
+
+in memory.
+
+• Therefore, pointer sum is scaled to the element size.
+• Multiplication and other operators are undefined and result in a compiler
+error.
+
+31
+
+Pointer arithmetic in practice:
+Alternative (and less common) way of expressing a pointer.
+
+The
+(postfix-increment) happens AFTER the dereference.
+This is defined by the C language and is really confusing in practice.
+(but you’ll see it. often.)
+
+32
+
+The C Memory Model: The Heap
+• The Heap is the dynamic data section!
+• You interact with the heap entirely with pointers.
+•
+returns the address to the heap with at least the
+number of bytes requested. Or
+on error.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+33
+
+Strings
+No longer just for cats!
+
+34
+
+Strings
+• They are arrays and, as such, inherit all their limitations/issues.
+• The size is not stored.
+• They are essentially just pointers to memory.
+
+• Text is represented as an array of
+
+elements.
+
+• Representing text is hard!!!
+• Understatement of the dang century.
+• Original ASCII is 7-bit, encodes Latin and Greek
+• Hence
+
+being the C integer byte type.
+
+• Extended for various locales haphazardly.
+• 7-bits woefully inadequate for certain languages.
+
+• Unicode mostly successfully unifies a variety of glyphs.
+• Tens of thousands of different characters! More than a byte!!
+
+35
+
+How long is your string?
+• Arrays in C are just pointers and as such do not store their length.
+• They are simply continuous sections of memory!
+• Up to you to figure out how long it is!
+• Misreporting or assuming length is often a big source of bugs!
+
+• So, there are two common ways of expressing length:
+• Storing the length alongside the array.
+• Storing a special value within the array to mark the end. (A sentinel
+value)
+
+• Strings in C commonly employ a sentinel value.
+• Such a value must be something considered invalid for actual data.
+• How do you know how long such an array is?
+• You will have to search for the sentinel value! Incurring a 𝑂(𝑛) time cost.
+
+36
+
+The string literal.
+• String literals should be familiar from Java.
+• However, in C, they are
+pointers. (That is:
+)
+• The contents of the literal are read-only (immutable) so it is a:
+• Modifying it crashes your program!!
+• A pointer that can’t change pointing to an immutable string is a
+
+Let’s ignore this! ☺
+(for now)
+
+The variable is allocated on the stack,
+which is a pointer. The string itself is
+37
+likely in the static data segment!
+
+How long is your string? Let’s find out.
+• The
+
+standard library function reports the length of a string.
+
+• This is done in roughly 𝑂(𝑛) time as it must find the sentinel.
+• The following code investigates and prints out the sentinel:
+
+38
+
+When good strings go bad.
+• What happens if that sentinel… was not there?
+• Well… it would keep counting garbage memory until it sees a 0.
+
+This syntax copies the string literal on to the stack.
+This allows us to modify it. (otherwise, it is immutable)
+
+The length here depends on the state of memory in the stack.
+
+39
+
+Using stronger strings. A… rope… perhaps.
+• To ensure that malicious input is less likely to be disastrous…
+• We have alternative standard functions that set a maximum length.
+
+strnlen will stop after the 12th character if it does not see a sentinel.
+
+40
+
+Comparing “Apples” to “Oranges”
+• When you compare strings using
+
+it compares the addresses!
+
+• Since string literals are constant, they only exist in the executable once.
+• All references will refer to the same string!
+
+41
+
+Comparing “Apples” to “Oranges”
+• When the addresses differ, they are not equal.
+• So, you have to be careful when comparing them.
+• This is similar to Java when considering
+versus
+
+42
+
+Comparing “Apples” to “Oranges”
+• To compare values instead, use the standard library’s
+
+.
+
+• This will perform a byte-by-byte comparison of the string.
+• Upon finding a difference, it returns rough difference between those contrary bytes.
+• When they are the same, then the difference is 0!
+
+• Therefore, it is case sensitive! It also has a 𝑂 𝑛 time complexity.
+
+will return 0 when the strings
+are equal.
+
+43
+
+Appropriate string construction. A-rope-riate.
+• C is a very deliberate language.
+is important here! Ensures string has
+a length of 0. (is initially empty, not garbage!)
+Like a ballroom. Empty, but spacious.
+
+is the bounded form of
+Overwrites string.
+
+.
+
+is the bounded form of
+.
+Concatenates to end of existing string.
+44
+
+Memory/Strings: Summary
+• Memory Allocation
+•
+•
+•
+•
+
+Returns pointer to length bytes
+
+Returns pointer to (count*size) bytes, zeros them
+Deallocates memory at ‘ptr’ so it can be allocated elsewhere
+
+• Strings
+•
+•
+•
+•
+•
+•
+•
+• Generally safer to use the bounded forms.
+
+Copies src to dst overwriting dst.
+Copies up to ‘max’ to dst.
+Copies string from src to end of dst.
+Copies up to ‘max’ to end of dst.
+Returns difference between strings. (0 if equal)
+Compares up to ‘max’ bytes.
+
+45
+
+Input/Output: Summary
+• Input
+•
+•
+•
+•
+
+• Output
+•
+•
+•
+•
+•
+•
+•
+
+Copies string input by user into buffer (unsafe!)
+Copies up to 10 chars into buffer
+(my_buffer needs to be >= 11 bytes for sentinel)
+Interprets input and places value into int variable.
+
+updates your variable, so you need to pass the address.
+(
+does not need it. Strings are already
+)
+Prints string. (technically unsafe)
+Prints up to 10 chars from string.
+(safe as long as my_buffer is >= 10 bytes)
+Prints int variable. (d for decimal, unfortunately)
+Prints int variable in hexadecimal. (x for hex)
+Prints long variable.
+Prints unsigned long variable.
+
+• Lots more variations! Generally
+
+and
+
+share terms. Look them up!
+
+46
+
+Structures
+It may not have class, but it has style.
+
+47
+
+Quick note on allocated structures…
+• You are gonna allocate a lot of structures…
+• They are big… you want them around… therefore, not good on the stack.
+• You could make them globals… except when you want them dynamically.
+
+48
+
+Pointing to structure fields…
+• A shorthand for
+• The “arrow” syntax works only on
+
+is
+pointers and dereferences a field.
+
+49
+
+Pointing to structure fields…
+• Recall that
+• If you want a
+
+is what names types.
+data type, you can use
+
+to do so:
+
+50
+
+It took humanity thousands of years to discover the NULL pointer error.
+
+• So, what do we use to denote that we are not pointing to anything?
+• Same as Java… we use a Null value and we hope nobody dereferences it.
+• It is not a built-in thing! We have to include
+to use it.
+
+51
+
+When malloc … goes bad
+• When your request for memory cannot be made, malloc returns
+
+!
+
+• In your perfect program, you would always check for this.
+
+52
+
+When malloc … goes bad
+• You can check if
+
+is null with
+
+• You might say, “hey!
+is not defined as
+by the C standard!”
+• Yet, C specifically considers any pointer equal to
+to be a false value.
+• Regardless of the value of
+
+which is usually
+
+anyway.
+
+53
+
+Examples
+Some nice examples that address addressing!
+
+54
+
+Summing it all up.
+
+55
+
+Searching for values
+
+Remember that
+
+wants pointers to data.
+
+56
+
+Paving a new path
+
+Remember that
+
+wants pointers to data.
+
+When it sees more than 20 characters… what
+will it do? (What will the next call to
+do?)
+
+57
+
+Paving a new path (arbitrary number of directories!)
+
+will resize the allocated space, copying the old
+value to a new chunk of memory if necessary.
+Look it up on your own!
+
+58
+
+

@@ -1,0 +1,434 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #15: Recursion and Structural Induction
+
+Based on materials developed by Dr. Adam Lee
+
+There are many uses of induction in computer
+science!
+Proof by induction is often used to reason about:
+l Algorithm properties (correctness, etc.)
+l Properties of data structures
+l Membership in certain sets
+l Determining whether certain expressions are well-formed
+l…
+
+To begin looking at how we can use induction to prove
+the above types of statements, we first need to
+learn about recursion
+
+Sometimes, it is difficult or messy to define
+some object explicitly
+Recursive objects are defined in terms of (other
+instances of) themselves
+We often see the recursive versions of the following
+types of objects:
+l Functions
+l Sequences
+l Sets
+l Data structures
+
+Let’s look at some examples…
+
+Recursive functions are useful
+When defining a recursive function whose domain is
+the set of natural numbers, we have two steps:
+1. Basis step: Define the behavior of f(0)
+2. Recursive step: Compute f(n+1) using f(0), …, f(n)
+Doesn’t this look a little bit like strong induction?
+
+Example: Let f(0) = 3, f(n+1) = 2f(n) + 3
+l
+l
+l
+l
+l
+
+f(1) = 2f(0) + 3 = 2(3) + 3 = 9
+f(2) = 2f(1) + 3 = 2(9) + 3 = 21
+f(3) = 2f(2) + 3 = 2(21) + 3 = 45
+f(4) = 2f(3) + 3 = 2(45) + 3 = 93
+…
+
+Some functions can be defined more precisely
+using recursion
+Example: Define the factorial function F(n) recursively
+1. Basis step: F(0) = 1
+2. Recursive step: F(n+1) = (n+1) × F(n)
+
+Note: F(4) = 4 × F(3)
+The recursive definition
+= 4 × 3 × F(2)
+avoids using the “…”
+shorthand!
+= 4 × 3 × 2 × F(1)
+= 4 × 3 × 2 × 1 × F(0)
+= 4 × 3 × 2 × 1 × 1 = 24
+Compare the above definition our old definition:
+l
+
+F(n) = n × (n-1) × … × 2 × 1
+
+It should be no surprise that we can also define
+recursive sequences
+Example: The Fibonacci numbers, {fn}, are defined as follows:
+l f0 = 1
+l f1 = 1
+l fn = fn-1 + fn-2
+
+This is like strong induction, since we need
+more than fn-1 to compute fn.
+
+Calculate: f2, f3, f4, and f5
+l f2 = f1 + f0 = 1 + 1 = 2
+l f3 = f2 + f1 = 2 + 1 = 3
+l f4 = f3 + f2 = 3 + 2 = 5
+l f5 = f4 + f3 = 5 + 3 = 8
+
+This gives us the sequence {fn} = 1, 1, 2, 3, 5, 8, 13, 21, 34, …
+
+Recursion is used heavily in the study of strings
+Let: ∑ be defined as an alphabet
+l Binary strings: ∑ = {0, 1}
+l Lower case letters: ∑ = {a, b, c, …, z}
+
+We can define the set ∑* containing all strings over the
+λ is the empty string
+alphabet ∑ as follows:
+containing no characters
+1. Basis step: λ ∈ ∑*
+2. Recursive step: If w ∈ ∑* and x ∈ ∑, then wx ∈ ∑*
+
+Example: If ∑ = {0, 1}, then ∑* = {λ, 0, 1, 01, 11, …}
+
+This recursive definition allows us to easily
+define important string operations
+Definition: The concatenation of two strings can be
+defined as follows:
+1. Basis step: if w ∈ ∑*, then w⋄λ = w
+2. Recursive step: if w1 ∈ ∑*, w2 ∈ ∑*, and x ∈ ∑, then
+w1⋄(w2x) = (w1⋄w2)x
+
+Example: Concatenate the strings “Hello” and “World”
+1. Hello⋄World = (Hello⋄Worl)d
+2.
+= (Hello⋄Wor)ld
+3.
+= (Hello⋄Wo)rld
+4.
+= (Hello⋄W)orld
+5.
+= (Hello⋄λ)World
+6.
+= HelloWorld
+
+This recursive definition allows us to easily
+define important string operations
+Definition: The length l(w) of a string can be defined
+as follows:
+1. Basis step: l(λ) = 0
+2. Recursive step: l(wx) = l(w) + 1 if w ∈ ∑* and x ∈ ∑
+
+Example: l(1001) = l(100) + 1
+= l(10) + 1 + 1
+= l(1) + 1 + 1 + 1
+= l(λ) + 1 + 1 + 1 + 1
+=0+1+1+1+1
+=4
+
+We can define sets of well-formed formulae
+recursively
+This is often used to specify the operations permissible in
+a given formal language (e.g., a programming language)
+
+Example: Defining propositional logic
+1. Basis step: ⟙, ⟘, and s are well-formed propositional logic
+statements (where s is a propositional variable)
+2. Recursive step: If E and F are well-formed statements, so are
+➣
+➣
+➣
+➣
+➣
+
+(¬E)
+(E ∧ F)
+(E ∨ F)
+(E → F)
+(E ↔ F)
+
+Example
+Question: Is ((p ∧ q) → (((¬r) ∨ q) ∧ t)) well-formed?
+l
+l
+l
+l
+l
+
+Basis tells us that p, q, r, t are well-formed
+1st application: (p ∧ q), (¬r) are well-formed
+2nd application: ((¬r) ∨ q) is well-formed
+3rd application: (((¬r) ∨ q) ∧ t)
+4th application: ((p ∧ q) → (((¬r) ∨ q) ∧ t)) is well-formed
+
+✔
+
+In-class exercises
+Problem 1: Construct a recursive definition of the
+sequence 𝑎# where the 𝑛$% term is a natural number
+computed by adding the 𝑛 − 1 $% term to the square
+of the 𝑛 − 3 $% term. Assume that the first three
+terms of this sequence are 1, 1, 1.
+Problem 2: Top Hat
+
+Like other forms of induction, structural induction
+requires that we consider two cases
+Basis step: Show that the result holds for the objects
+specified in the basis case of the recursive definition
+Recursive step: Show that if the result holds for the
+objects used to construct new elements using the
+recursive step of the definition, then it holds for the
+new object as well.
+To see how this works, let’s revisit string length…
+
+Recall from earlier…
+Definition: The length l(w) of a string can be defined
+as follows:
+1. Basis step: l(λ) = 0
+2. Recursive step: l(wx) = l(w) + 1 if w ∈ ∑* and x ∈ ∑
+
+Example: l(1001) = l(100) + 1
+= l(10) + 1 + 1
+= l(1) + 1 + 1 + 1
+= l(λ) + 1 + 1 + 1 + 1
+=0+1+1+1+1
+=4
+
+Prove that l(x⋄y) = l(x) + l(y) for x,y ∈ ∑*
+P(n) ≡ l(x⋄y) = l(x) + l(y) whenever x ∈ ∑* and l(y) = n
+Base case: P(0): l(x⋄λ) = l(x) = l(x) + 0 = l(x) + l(λ) ✔
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n Consider the string x⋄ya, where x,y ∈ ∑*, a ∈ ∑ and l(y) = k
+n l(x⋄ya) = l(x⋄y) + 1 by the recursive definition of l()
+n
+= l(x) + l(y) + 1 by the I.H.
+n Since l(ya) = l(y) + 1 by the recursive defintion of l(), we have
+that l(x⋄ya) = l(x) + l(ya), where ya is a string of size k+1
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by structural induction ❏
+
+Many common data structures used in computer
+science have recursive definitions
+Example: Rooted Trees
+
+Base step: A single node is a rooted tree
+Recursive step: If T1, T2, …, Tn are disjoint rooted trees
+with roots r1, r2, …, rn then introducing a new root r
+connected to r1, r2, …, rn forms a new rooted tree.
+
+Example Rooted Trees
+Base case:
+One application:
+
+…
+
+Two applications:
+
+…
+
+…
+
+Many common data structures used in computer
+science have recursive definitions
+Example: Extended binary trees
+
+Base step: The empty set is an extended binary tree
+Recursive step: If T1 and T2 are disjoint extended binary
+trees with roots r1 and r2, then introducing a new root
+r connected to r1 and r2 forms a new extended binary
+tree.
+
+Example Extended Binary Trees
+Base case:
+
+∅
+
+Step 1:
+
+Step 2:
+
+Step 3:
+
+…
+
+…
+
+Many common data structures used in computer
+science have recursive definitions
+Example: Full binary trees
+
+Base step: A single root node r is a full binary tree
+Recursive step: If T1 and T2 are disjoint full binary trees
+with roots r1 and r2, then introducing a new root r
+connected to r1 and r2 forms a new full binary tree.
+
+Example Full Binary Trees
+Base case:
+Step 1:
+
+Step 2:
+
+…
+
+Trees are used to parse expressions
+
+456
+
+(((3 + 6) × 7) – (4 + 2)) × 8
+
+×
+57
+63
+
+-
+
+8
+
+×
+
+6
+
++
+
+9
++
+3
+
+7
+6
+
+4
+
+2
+
+Trees are used to enable fast searches
+Consider the set S = {56, 22, 34, 89, 99, 77, 16}
+34 < 56
+
+22
+
+34 > 22
+
+34
+
+16
+
+56
+
+262 > 56
+
+89
+77
+
+262 > 89
+
+99
+
+Question: Is 34 ∈ S?
+
+Question: Is 262 ∈ S?
+
+YES!
+
+NO!
+
+As with other recursively defined objects, we can
+define many properties of trees recursively
+Definition: Given a tree T, we can define the height of
+T recursively, as follows:
+1. Basis step: If T consists only of the root node r, then h(T) = 0
+2. Recursive step: If T consists of a root r that connects to
+subtrees T1, …, Tn, then h(T) = 1 + max(h(T1), …, h(Tn))
+
+Example: What is the height of this tree T?
+h(T) = 1 + max(h(L), h(R)) = 3
+h(L) = 1 + h(L1) = 2
+h(L1) = 1 + max(h(L11), h(L12)) = 1
+h(L11) = 0
+
+h(R) = 1 + h(R1) = 1
+h(R1) = 0
+h(L12) = 0
+
+If T is a full binary tree, then the number of nodes in T
+(denoted n(T)) is less than or equal to 2h(T)+1-1
+Claim: n(T) ≤ 2h(T)+1-1
+Base case: T contains only a root node. In this case n(T) = 1 and
+h(T) = 0. Note that 20+1-1 = 1, so the claim holds.
+I.H.: Assume that claim holds for a tree of height k
+Inductive step: Show that the claim holds for trees of height k+1
+n Let T1 and T2 be disjoint full binary trees of height k
+n By the I.H., n(T1) ≤ 2h(T1)+1-1 and n(T2) ≤ 2h(T2)+1-1
+n Let r be a unique root element, and let T be the tree formed
+using r as a root, T1 as the left subtree of r, and T2 as the right
+subtree of r
+
+r
+T1
+
+T2
+
+If T is a full binary tree, then the number of nodes in T
+(denoted n(T)) is less than or equal to 2h(T)+1-1
+r
+T1
+
+T2
+
+Inductive step (cont.): We have that
+n n(T) = 1 + n(T1) + n(T2)
+n
+≤ 1 + 2h(T1)+1 - 1 + 2h(T2)+1 - 1
+n
+≤ 2h(T1)+1 + 2h(T2)+1 – 1
+n
+≤ 2 ×max(2h(T1)+1, 2h(T2)+1) – 1
+n
+≤ 2 ×2max(h(T1), h(T2))+1 – 1
+n
+≤ 2 ×2h(T) – 1
+n
+≤ 2h(T)+1 – 1
+
+by recursive formula of n(T)
+by I.H.
+sum of 2 terms ≤ twice larger term
+max(2x, 2y) = 2max(x,y)
+by recursive def’n of h(T)
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by structural induction ❏
+
+In-class exercises
+Problem 3: Use structural induction to prove that
+checking whether some number is contained in a
+binary search tree T involves at most h(T)+1
+comparison operations.
+
+Final Thoughts
+n Structural induction can be used to prove properties
+of recursive
+l Functions
+l Sequences
+l Sets
+l Data structures
+
+n Next time, we start learning about counting and
+combinatorics (Section 6.1)
+
+

@@ -1,0 +1,203 @@
+CS 0007: Introduction to Java
+Lecture 6
+Nathan Ong
+University of Pittsburgh
+September 20, 2016
+
+Even more API for your first Object
+
+SCANNERS
+
+Scanner
+
+What is a Scanner?
+• Retrieves input
+• Can take input from a file, an input
+stream (console, network, etc.), or from
+a String
+• Can read all primitives (except chars),
+and can read Strings
+• An object
+
+Declaring Objects
+
+Type name = expression;
+
+Scanner name = new Scanner();
+We will fill this in with something,
+but what exactly goes here?
+
+Declaring Objects
+• Any declaration of objects requires the
+keyword “new”
+• The method that follows the keyword
+are called constructors
+• Where can I look for them?
+
+A Special InputStream
+System.in
+• The standard way to retrieve input (via
+the console)
+• A “special” variable.
+• Is this static or non-static?
+
+Scanner consoleInput =
+new Scanner(System.in);
+
+What can I do with it?
+• I have a Scanner that can read input
+from the user via the console.
+• How do I actually use it?
+
+Using Scanner
+public class AddingMachine
+{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("Please enter a number:");
+double firstNum = scan.nextDouble();
+System.out.println("Please enter a second
+number:");
+double secondNum = scan.nextDouble();
+double sum = firstNum + secondNum;
+System.out.println("The sum of " + firstNum +
+" and " + secondNum + " equals " + sum);
+}//end method main
+}//End class AddingMachine
+
+Using Scanner
+public class AddingMachine
+{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("Please enter a number:");
+double firstNum = scan.nextDouble();
+System.out.println("Please enter a second
+number:");
+double secondNum = scan.nextDouble();
+double sum = firstNum + secondNum;
+System.out.println("The sum of " + firstNum +
+" and " + secondNum + " equals " + sum);
+}//end method main
+}//End class AddingMachine
+
+Using Scanner
+public class AddingMachine
+{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("Please enter a number:");
+double firstNum = scan.nextDouble();
+System.out.println("Please enter a second
+number:");
+double secondNum = scan.nextDouble();
+double sum = firstNum + secondNum;
+System.out.println("The sum of " + firstNum +
+" and " + secondNum + " equals " + sum);
+}//end method main
+}//End class AddingMachine
+
+Let’s Compile
+
+???
+
+Error?!?
+“Cannot find symbol”
+• This indicates that the name does not
+refer to anything
+• Based on the console output, “Scanner”
+does not exist
+• Is there a way to figure out why?
+
+From the API
+
+Error?!?
+• Rather than being a part of “java.lang,”
+which is already included by default, it is
+part of a different package
+• In order to include Scanner, we need to
+do an import
+
+import java.util.Scanner;
+public class AddingMachine
+{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("Please enter a number:");
+double firstNum = scan.nextDouble();
+System.out.println("Please enter a second
+number:");
+double secondNum = scan.nextDouble();
+double sum = firstNum + secondNum;
+System.out.println("The sum of " + firstNum +
+" and " + secondNum + " equals " + sum);
+}//end method main
+}//End class AddingMachine
+
+Don’t Forget to Import
+
+FUNCTIONS
+
+Functions
+• A function is similar to its mathematical
+counterpart
+• f(x) = x2, plug in 3, get 9
+• Contains several more parts
+
+Java Functions
+• Takes in zero or more parameters,
+processes them in the function body,
+and returns a result
+• Imagine going to BestBuyTM and telling
+them you want your computer fixed.
+You are telling them to run a fixing
+function, with your computer being a
+parameter. What you get back is your
+fixed computer.
+
+You Already Have the Power!
+• You already know how to call functions!
+Static:
+ClassName.functionName(<parameters
+>);
+Non-static:
+objectName.functionName(<parameter
+s>);
+• How do I make my own?
+
+Function Components
+
+1.
+2.
+3.
+Function 4.
+Header 5.
+
+Function
+Body 6.
+
+Visibility type (public/protected/private)
+static (For now, required)
+Return Type
+functionName
+Parentheses “()”
+–
+a)
+b)
+c)
+
+Parameters
+Type1 parameterName1
+Type2 parameterName2
+…
+
+Curly Brackets/Braces “{}”
+–
+
+return a value
+
+

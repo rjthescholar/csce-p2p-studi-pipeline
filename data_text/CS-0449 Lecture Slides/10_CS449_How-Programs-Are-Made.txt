@@ -1,0 +1,951 @@
+10
+
+How
+Programs
+Are Made
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Linkers
+Filling in the blanks.
+
+2
+
+Compilation: Simple Overview – Step 1
+• The compiler takes source code (
+files) and
+translates them into machine code.
+
+hello.c
+
+hello.o
+
+• This file is called an “object file” and is just
+potentially one part of your overall project.
+
+• The machine code is not quite an executable.
+• This object file is JUST representing the code for that
+particular source file.
+• You may require extra stuff provided by the system
+elsewhere.
+3
+
+Compilation: Simple Overview – Step 2
+• You may have multiple files.
+• They may reference each other.
+
+hello.c
+
+hello.o
+
+• For instance, one file may contain certain common
+functionality and then this is invoked by your program
+elsewhere.
+
+• You break your project up into pieces similarly to
+your Java programs.
+• The compiler treats them independently.
+util.c
+CS/COE 0449 – Spring 2019/2020
+
+util.o
+4
+
+Compilation: Simple Overview – Step 3
+• Then, each piece is merged
+together to form the
+executable.
+• This process is done by a linker
+and is called linking.
+hello.c
+
+hello.o
+
+hello
+
+• The name refers to how the
+references to functions, etc,
+between files are now filled in.
+
+util.c
+CS/COE 0449 – Spring 2019/2020
+
+util.o
+
+stdio.o
+External Libraries
+
+• Before this step… it is unclear
+where functions will end up in
+the final executable.
+5
+
+It's just a grinder.
+• In summary:
+
+hello.c
+
+code goes in, sausage object
+files come out
+The executable is produced
+by a linker, which merges
+code together.
+
+Some compilers output
+assembly and rely on an
+assembler to produce
+machine code
+These days, it's common
+for the compiler itself to
+produce machine code,
+or some kind of
+platform-independent
+assembly code
+(typically: a bytecode)
+6
+
+Compiler
+• Input: Higher-level language code (e.g. C, Java)
+• foo.c
+
+• Output: Assembly language code (e.g. x86, ARM, MIPS)
+• foo.s
+
+• First there’s a preprocessor step to handle #directives
+• Macro substitution, plus other specialty directives
+• If curious/interested: http://tigcc.ticalc.org/doc/cpp.html
+
+• Compiler optimizations
+• “Level” of optimization specified by capital ‘O’ flag (e.g. -Og, -O3)
+• Options: https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
+7
+
+Compilers Are Non-Trivial
+• There’s a whole course about them – CS 1622
+• We won’t go into much detail in this course
+• For the very curious: http://www.sigbus.info/how-i-wrote-a-self-hosting-ccompiler-in-40-days.html
+
+• Some examples of the task’s complexity:
+• Operator precedence: 2 + 3 * 4
+• Operator associativity: a = b = c;
+• Determining locally whether a program is valid
+if (a) { if (b) { … /*long distance*/ … } } }//extra bracket
+
+8
+
+The need for the linker
+• A compiler converts source code into machine code.
+• A linker merges pieces of machine code into an executable.
+• Why have a separate tool for creating executables?
+• Mixing different languages together (C, C++, Python, Rust, Go…)
+• Lot’s of complications we won’t get to here.
+• Assembly is the glue… all high-level languages have to get there.
+
+• Let’s us break large programs up into smaller pieces.
+• And we only have to recompile files that changed! (Faster)
+
+• Those small pieces can come from others. Code reuse!
+• We can share executable code among many running programs. (Shared Libraries)
+
+9
+
+What is inside that box?
+• To understand what linkers do, we
+need to see what an executable is
+made out of.
+(Spoilers: it is not just code/data)
+• A Linux executable is defined by
+the Executable and Linkable
+Format (ELF) standard.
+• Used for
+files
+• And executables
+• And
+(shared objects; soon!)
+10
+
+Object File Format
+1. object file header: size and position of the other pieces of the object
+file
+2. text segment: the machine code
+3. data segment: data in the source file (binary)
+4. relocation table: identifies lines of code that need to be “handled”
+5. symbol table: list of this file’s labels and data that can be referenced
+6. debugging information
+• A standard format is ELF (except MS)
+• http://www.skyfree.org/linux/references/ELF_Format.pdf
+
+Object File Information Tables
+• Symbol Table holds list of “items” that may be used by other files
+• Non-local labels – function names for call
+• Static Data – variables & literals that might be accessed across files
+
+• Relocation Table holds list of “items” that this file needs the address of later
+(currently undetermined)
+• Any label or piece of static data referenced in an instruction in this file
+• Both internal and external
+
+• Each file has its own symbol and relocation tables
+
+12
+
+What the ELF ??
+• Contains all of the segments and data sections defining a program.
+• The ELF executable has roughly the following structure:
+Offset
+
+Name
+
+Description
+
+Magic Number
+
+4 bytes: A
+
+Class
+
+1 byte:
+
+if 32-bit, 0x2 if 64-bit
+
+Data
+
+1 byte:
+
+if little-endian, 0x2 if big-endian
+
+Version
+
+1 byte:
+
+for the current version.
+
+ABI
+
+1 byte:
+
+for System V (our C ABI)
+
+Machine
+
+2 bytes:
+
+byte followed by “
+
+is x86,
+
+is MIPS,
+
+” in ASCII
+
+is RISC-V, etc
+
+13
+
+What the ELF ??
+• The remaining fields indicate where certain sections start.
+• An ELF executable contains these sections:
+• Segment Headers (where .text, .data, .bss, etc, exist in the executable)
+• The initial data for each memory segment in the memory layout!
+• We will look at these again when we look at loading.
+
+• The Symbol Table
+• All of the “names” that may be referenced by other code.
+
+• Symbols can consist of:
+• Functions
+• Global variables
+• Special sections (special compiler or OS areas)
+
+• We will focus on function/variable symbols.
+14
+
+– Viewing the symbol table
+• You can investigate the symbols that are part of any object file
+using the
+command on Linux/UNIX.
+C(
+
+)
+
+This is a symbol. It has a location.
+
+Here it is! At 0x27 (39) bytes.
+
+15
+
+; Controlling the symbols
+• Remember the
+
+keyword?
+
+• This forces any symbol to be local to the current file. That is, it can
+not be referenced by an outside function.
+• This is because the symbol will not be included in the symbol table!
+• The linker will not be able to see it.
+
+• This is useful for avoiding name collisions, when two functions have
+the same name.
+• This normally would make using multiple files and other people’s code
+troublesome.
+• Using
+helps because it will not pollute the symbol table.
+16
+
+Controlled the symbols
+• You can investigate the impact of using
+command on Linux/UNIX.
+C(
+
+by again using the
+
+)
+This symbol has a location… but it can
+only be referenced in this file.
+
+Our static function is now “LOCAL”
+
+17
+
+; when you used to be an intern
+• The other side of the coin is the
+keyword.
+• This tells the linker that it should expect the symbol to be found
+elsewhere.
+C(
+
+)
+
+C(
+
+)
+
+Here it is!!
+
+This symbol is… somewhere.
+
+18
+
+Final thoughts of global variables
+• You should always avoid global variables.
+• However, if you are using them, make sure to liberally use
+• This will stop the names of variables from polluting the symbol table.
+• The use of
+is likely indicating a poor design.
+
+• This is also true for functions, too.
+• Generally declare them
+unless you need
+them from within another file.
+• Helps make it clear what functions are important
+and which can be deleted or refactored.
+• (Much like private functions in classes)
+
+• Always initialize your global variables!
+
+19
+
+Seeing through the linker’s eyes
+• Which symbols are part of each file?
+• Which are local and which are global?
+• Which symbols are satisfied by the other file?
+C(
+
+)
+
+A local symbol.
+
+A global symbol.
+
+Referenced here.
+
+C(
+
+)
+
+The linker references
+“main” when it compiles
+the executable.
+
+We need to tell the compiler
+that we are linking to a symbol.
+
+A global symbol.
+Linker doesn’t see these
+temporary variables.
+
+Referenced here.
+
+20
+
+Summing it up: Playing mad-libs
+
+fibonacci.c
+
+fibonacci.o
+
+fibonacci
+
+0x007c0e10
+???
+
+main.c
+
+• The compiler hands
+off object files with
+blanks where
+referenced symbols
+reside.
+• The linker’s job is to
+fill in those blanks
+with the location of
+the symbol in the
+final executable.
+
+main.o
+21
+
+Static Libraries (
+
+files)
+• If you want to share
+your library with
+others…
+
+util.c
+
+tree.c
+
+util.o
+
+tree.o
+
+my-lib.a
+
+• Instead of creating an
+executable, you can
+package together all of
+the
+files into a
+single archive (
+file)
+• You can use the
+program on Linux for
+this.
+22
+
+Compilation: Simple Overview – Redux
+• We can use my-lib.a in
+place of the object files
+we need.
+
+hello.c
+
+util.c
+CS/COE 0449 – Spring 2019/2020
+
+hello.o
+
+util.o
+
+hello
+
+my-lib.a
+External Libraries
+
+• The
+file is just a
+container for a set of
+object files. Essentially,
+it is just a kind of zip
+file of object files.
+• These object files get
+copied into our
+executable… not very
+efficient! Hmm!
+23
+
+Loaders
+You should always stretch before you run – OSes do this, too.
+
+24
+
+The Operating System
+• How does your ELF executable actually
+run?
+• There needs to be some system software
+to unpack the executable into memory.
+
+• That system software is a loader and it is
+part of an operating system.
+
+25
+
+Memory Segments – Deeper dive!
+• The ELF executable defines several segments:
+•
+•
+•
+•
+
+– The code segment (machine code)
+– The data segment (program data)
+– The read-only data segment (constants)
+– Uninitialized data segment (“zero” data)
+
+• The
+segment is a special segment for all data
+that starts as
+or
+.
+• (Its name is Block Started by Symbol which is a historic
+name.)
+• It is often an optimization: the executable does not need to
+store a whole bunch of zeros.
+• Hmm… the operating system must then allocate a bunch of
+zeros. Is that fast?? (We’ll get there)
+
+Kernel Memory
+stack
+currently unused but
+available memory
+
+heap
+.bss
+.data
+
+.text
+26
+
+Running a program
+1. Take the ELF executable.
+
+Our lie starts to unravel!
+We have a kernel…
+
+• This defines each segment and where in memory
+it should go.
+
+2. Place the
+segment into memory.
+3. Place the
+segment into memory.
+4. Write the number of zeroes specified to the
+segment.
+5. Allocate the stack and assign the stack
+pointer (
+)
+6. Jump to the entry point address (the
+location of the
+symbol)
+•
+
+will call main after initializing the C
+runtime and the heap.
+
+Kernel Memory
+stack
+currently unused but
+available memory
+
+heap
+.bss
+.data
+
+.text
+27
+
+Some .bss BS I’ve dealt with…
+• Forgetting to zero the .bss segment is… very interesting.
+• If you write an OS, and forget this, then you get loops that don’t work write.
+• Because now variables that were equal to
+are now random garbage.
+C(
+
+)
+
+This goes into the .bss because it is zero
+
+This does not go into the .bss because it is not a symbol.
+
+28
+
+That’s it???
+• Pretty much! However, let’s make it more flexible.
+• Our linking so far is static linking where all of the code goes into
+the executable. Duplicate code from static libraries is copied in.
+• Not very space efficient. Duplicates code most programs are using! (libc)
+• What if we “shared” the code external to the executable?
+
+• For dynamic linking we will think about loading not just the
+executable, but library code as well. A shared library.
+• The OS loader must load the program into memory and also take on the
+task of loading library code.
+• It then must do the “mad-libs” replacing references in the program to
+point to where in memory the library code was loaded. Tricky!
+29
+
+Dynamic Linking
+Linking but… yanno… animated.
+
+30
+
+Code that can be loaded… anywhere?
+• The main problem is this:
+• Programs generally need to assume where in
+memory they live.
+
+• They refer to functions and data at particular
+addresses.
+• The linker decides where those are, but they are
+then hard-coded in.
+Where should this go??
+
+• We want to provide a single software library
+to multiple executables…
+• We can’t know ahead of time where that library
+can go in memory since programs are different
+sizes… they might need multiple libraries… etc.
+CS/COE 0449 – Spring 2019/2020
+
+Kernel Memory
+stack
+libz.so .data
+libz.so .text
+
+.bss
+.data
+
+.text
+31
+
+Solution: relocatable code
+• Let’s allow code to refer to functions and/or data that may move.
+• Essentially, the operating system plays the mad-lib game.
+• The ELF executable has a list of “relocatable entries”
+• The OS goes through them and fills them in according to where the external
+symbols are.
+Linking to the libz.so dynamic library
+
+C(
+
+)
+
+We don’t know where this function ultimately is…
+
+32
+
+Solution: relocatable code
+• Let’s allow code to refer to functions and/or data that may move.
+• Essentially, the operating system plays the mad-lib game.
+• The ELF executable has a list of “relocatable entries”
+• The OS goes through them and fills them in according to where the external symbols are.
+C(
+
+)
+
+x86-64 (
+
+)
+
+33
+
+Solution: relocatable code: Loading
+• When the OS loads this executable… it will have a relocation entry that tells
+it to overwrite at byte
+the relative address of “compressBound”
+• With this extra step, the OS loader is also providing dynamic linking.
+C(
+
+)
+
+x86-64 (
+
+)
+
+0x114b + 0x5fe = 0x1749
+(
+is relative to
+)
+In modern times, this makes use of a jump table
+called
+Procedure
+Linkage Table (PLT).
+CS/COEa
+0449
+– Spring 2019/2020
+
+34
+
+Taking a PIC, eating some PIE – Avoiding relocations
+• In order to allow code to be resident
+anywhere in memory, the compiler must
+emit machine code that always uses
+relative addresses!
+
+• This is called position independent
+code (or PIC).
+• When your entire executable is made
+out of PIC, it is a position independent
+executable (or PIE)
+•
+
+will compile code this way when
+you specify the
+flag.
+
+Who doesn’t like pie???
+
+• You generally need this when creating
+dynamic libraries.
+
+35
+
+Running a program - Redux
+1. Take the ELF executable.
+2. Place and initially prepare the
+segments into memory.
+5. Allocate the stack and assign the stack pointer
+(
+)
+6. Repeatably load each required shared library.
+6a. Place .text and .data in memory
+6b. Rewrite .text sections by looking at the
+relocatable entries
+6c. Repeat for each library.
+7. Jump to the entry point address (the location of
+the
+symbol)
+•
+
+will call main after initializing the C
+runtime and the heap.
+
+Kernel Memory
+stack
+libz.so .data
+libz.so .text
+
+heap
+.bss
+.data
+
+.text
+36
+
+Being lazy – Run-time loading
+• Having the OS load every library at
+the start can delay the execution
+of a program.
+• What if your program rarely uses a
+library?
+• What if you want to expand the
+program while it is running?
+
+C(
+
+)
+
+Function pointers are
+very messy.
+
+• Plugins are a good example.
+
+• We can make use of an OS service
+to dynamically load libraries.
+• On Linux we have the
+and
+system functions.
+• Look at the documentation online
+and refer to examples.
+
+Prints to the screen’s “error” buffer.
+
+Uses the lazy-loaded function.
+
+37
+
+Investigating dynamic libraries
+• If you would like to see what dynamic libraries a program uses, you
+can use
+or the
+command.
+• Cannot see the
+
+/
+
+lazy loaded libraries.
+
+•
+•
+
+38
+
+Linking, loading; static and dynamic… Whew!
+• Linking is when we merge multiple pieces of executable code into one
+logical program.
+• We link at various times:
+• At compile-time: using our normal
+
+files and static libraries (
+
+)
+
+• At load-time: our OS reads and loads the executable and loads dynamic libraries
+(
+) at the same time, rewriting relocatable sections.
+• At run-time: our program uses system services (
+libraries lazily.
+
+) to load dynamic
+39
+
+Software Licensing
+Combining code
+
+40
+
+So derivative…
+• Software is generally built from existing software.
+• Only building bespoke programs would be impractical.
+
+• However, how do we negotiate such usage of software?
+• And how does this impact the design of systems?
+
+• Disclaimer: I am not a lawyer.
+• But… neither will you be one…
+• And yet, we often find the need to be.
+
+41
+
+UNIX
+• The UNIX system, which Linux is somewhat modeled after, was
+originally from American Telephone & Telegraph (AT&T).
+• Hence lots of AT&T intellectual residue
+
+• Because of an anti-trust case from 1956, they entered a “consent
+decree” with the government.
+• AT&T could not sell anything that does
+not pertain to “common carrier
+communications services” (telephony)
+• Therefore, UNIX, their product, could
+not be profitable
+• ANTI-TRUST WORKING?? WHAT A TIME!
+
+• Due to this, UNIX was shipped out
+mostly for a low cost; with source!
+• Hardware was the money maker.
+
+42
+
+The bell tolls…
+• AT&T often flirted with what they could get away with, yet in 1983,
+the U.S. government broke up the “Bells” that made up AT&T.
+• This freed AT&T from the decree.
+• And allowed them to commercialize UNIX.
+
+• The source code for UNIX became less
+and less available.
+▪ It came at a high cost… and not available to
+the average user.
+▪ This motivated many engineers/researchers
+to organize.
+
+43
+
+A GNU world…
+• Researchers, lulled into a world where systems software was opensource, felt disenfranchised by such new corporate policies.
+• Quite hard to research system design without easy access to the system.
+
+• Richard Stallman created the GNU
+(GNU is Not Unix) Project.
+• An effort to replace UNIX and other systems
+software with community-built versions.
+• He creates the GNU C Compiler (gcc)
+• Organized around the Free Software
+Foundation (FSF)
+
+• He licenses the work under the GPL.
+• GNU Public License later GNU General
+Public License
+44
+
+GPL: Free Software Movement
+• The GPL has evolved over time to legally enforce several things:
+• The work can be freely studied. (open source)
+• The work can be freely modified.
+• The work can be freely copied/distributed with/without changes.
+
+• These rules apply to all derivative versions. (All modifications)
+• Your modifications require you to distribute the source with your
+program.
+• Prevents others from adding substantive changes to divide userbases.
+• Known colloquially as a “copyleft” license or “viral” license.
+
+• This contract is enforced by U.S. and international copyright law.
+• By not using a software license, technically nobody can modify or
+distribute your code!
+• Current copyright law lasts the life of the author + 70 years.
+• Yikes.
+
+45
+
+What is derivative?
+• Copyright interacts heavily with systems software.
+• When your program calls a system call, it executes
+code written by somebody else.
+• Is this copyrighted? (Yes. Everything is.)
+• If it is GPL, does it make your program a derivative?
+• AHHHHH.
+
+• If your compiler, like GCC, is copyleft, is your
+program derivative?
+• Generally, no, but runtime code and C standard library
+are GPL.
+
+• Special exceptions must exist for these blurry lines
+between systems software and application
+software.
+
+Linux is licensed
+under the GPL
+46
+
+Operating Systems and Copyright Law
+• We’ve seen an executable loader in this lecture.
+• Part of the OS! Obviously derivative to the OS.
+
+• User programs are not considered “derivative” to the OS.
+• They aren’t operating systems… just enabled by them.
+• THANK GOODNESS.
+
+• Linux has a “system call” exception.
+• Use of system calls is never considered “derivative”
+• THANK GOODNESS.
+
+• But some other parts are left very very unclear.
+47
+
+The Problem
+• What about device drivers??
+• Device drivers are small libraries the implement interactions with hardware.
+• They typically run in the operating system’s space.
+• Do they “derive” the OS? (They cannot co-exist… they extend…)
+
+• This is a difficult problem that plagues Linux…
+• They need to support proprietary hardware…
+• At least, not allow large companies software/hardware exclusivity
+
+• So they then need to wedge in proprietary code…
+• They can’t because it needs to be under the GPL…
+• This is antagonistic to culture… the source cannot be read or modified.
+
+• Are we willing to wait 70-90 years for a device driver’s copyright to lapse?
+48
+
+

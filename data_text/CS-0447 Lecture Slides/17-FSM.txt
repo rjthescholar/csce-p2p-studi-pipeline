@@ -1,0 +1,1242 @@
+#11
+
+Finite State
+Machines
+Original slides by: David Wilkinson
+Modified with bits from: Bruce
+Childers, and Jarrett Billingsley
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Finite State Machines
+
+2
+
+What's an FSM?
+● A Finite State Machine is a machine with a finite number of states.
+o :’)
+● A Finite State Machine is a way of thinking about a process where:
+o there is a series of inputs
+o we need to produce a series of outputs
+o the state stores some information
+o the inputs can change the state and the outputs
+
+● FSMs come up all the time in programming and hardware design
+● They're great for controlling simple multiple-step procedures
+
+3
+
+A very simple example
+● what states can a ceiling fan be in?
+o high, medium, low, and off
+● what are the input and output?
+o the chain and the motor
+● when you pull the chain, it changes state
+
+off
+
+pull
+
+pull
+
+pull
+
+high
+
+med
+
+low
+
+pull
+
+4
+
+Missing some arrows
+● at any point in time, which of 2 choices can the input (chain) be?
+o pulled or not-pulled
+● when you don't pull the chain, what happens?
+
+pull
+
+no
+pull
+
+off
+
+no
+pull
+
+pull
+
+high
+
+no
+pull
+
+pull
+
+med
+
+no
+pull
+
+low
+
+pull
+
+this is the state transition diagram
+5
+
+The state transition table - Table-a-fyin’ it
+● we can represent this diagram with a truth table
+
+S
+
+In
+
+Snext
+
+off no pull off
+pull
+
+off
+no
+pull
+
+no
+pull
+
+pull
+
+high
+
+no
+pull
+pull
+
+off
+
+pull
+
+med
+
+no
+pull
+
+pull
+
+high
+
+high no pull high
+low
+
+high
+
+pull
+
+med
+
+med no pull med
+med
+
+pull
+
+low
+
+low no pull low
+low
+
+pull
+
+off
+6
+
+The state transition table - Table-a-fyin’ it
+● we can represent this diagram with a truth table
+● we have 4 states. how many bits
+are needed to represent 4 values?
+pull
+
+off
+no
+pull
+
+no
+pull
+
+pull
+
+high
+
+no
+pull
+
+pull
+
+med
+
+pull
+
+for the state, let's say:
+off means 00
+high means 01
+med means 10
+low means 11
+
+no
+pull
+
+S
+
+In
+
+Snext
+
+00 no 0pull off
+00
+off
+00
+off
+
+pull
+1
+
+01
+high
+
+01 no 0pull high
+01
+high
+low
+
+01
+high
+
+pull
+1
+
+10
+med
+
+10 no 0pull med
+10
+med
+10
+med
+
+pull
+1
+
+11
+low
+
+11 no 0pull low
+11
+low
+11
+low
+
+pull
+1
+
+00
+off
+7
+
+The state transition table - Table-a-fyin’ it
+● we can represent this diagram with a truth table
+● we have 4 states. how many bits
+are needed to represent 4 values?
+pull
+
+off
+no
+pull
+
+no
+pull
+
+pull
+
+high
+
+no
+pull
+
+pull
+
+med
+
+pull
+
+for the input, let's say:
+0 means not pulling
+1 means pulling
+
+no
+pull
+
+S
+00
+00
+
+01
+low
+
+01
+10
+10
+11
+11
+
+In
+
+Snext
+
+no0pull 00
+pull
+1
+
+01
+
+no0pull 01
+pull
+1
+
+10
+
+no0pull 10
+
+pull
+1
+
+11
+
+no0pull 11
+pull
+1
+
+00
+8
+
+The state transition table - Table-a-fyin’ it
+● we can represent this diagram with a truth table
+● we have 4 states. how many bits
+are needed to represent 4 values?
+1
+
+off
+0
+
+0
+
+1
+
+high
+
+0
+
+1
+
+med
+
+1
+
+for the input, let's say:
+0 means not pulling
+1 means pulling
+
+0
+
+low
+
+S
+
+In
+
+Snext
+
+00
+
+0
+
+00
+
+00
+
+1
+
+01
+
+01
+
+0
+
+01
+
+01
+
+1
+
+10
+
+10
+
+0
+
+10
+
+10
+
+1
+
+11
+
+11
+
+0
+
+11
+
+11
+
+1
+
+00
+9
+
+It’s a UNIX system truth table, I know this!
+
+*it’s a Silicon Graphics IRIX, which counts… kinda
+Image from Jurassic Park (1993), distributed by Universal Pictures
+
+10
+
+Truth tables with multiple output bits
+● there's no tricky stuff here – each output bit is its own expression
+S
+
+In
+
+Snext
+
+S1
+
+S0
+
+In
+
+Snext1
+
+S1
+
+S0
+
+In
+
+Snext0
+
+00
+
+0
+
+00
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+00
+
+1
+
+01
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+01
+
+0
+
+01
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+01
+
+1
+
+10
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+10
+
+0
+
+10
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+10
+
+1
+
+11
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+11
+
+0
+
+11
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+11
+
+1
+
+00
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+11
+
+What about the outputs
+● our fan controller has to control the motor after all
+● we can make a table showing the output(s) for each state
+
+Assume this is
+how you
+control the
+motor
+
+note that the
+input isn't
+involved at all
+
+State
+
+Motor power
+
+Output
+
+off
+
+0%
+
+00
+
+the outputs
+only have to
+depend on the
+current state!
+
+high
+
+100%
+
+11
+
+med
+
+50%
+
+10
+
+low
+
+25%
+
+01
+12
+
+Representing the output
+● We can represent the output in the state machine!
+
+1
+
+off
+[00]
+0
+
+0
+
+1
+
+high
+[11]
+
+0
+1
+
+1
+
+med
+[10]
+
+0
+
+low
+[01]
+
+S
+
+Output
+
+00
+
+00
+
+01
+
+11
+
+10
+
+10
+
+11
+
+01
+
+13
+
+Making a circuit out of it
+● This is a sequential circuit – the state changes over time
+● But the state transition and output tables are just combinational
+● Here's the general organization of any Moore FSM circuit:
+
+state feeds back into transition logic
+
+D
+
+inputs
+
+transition
+logic
+
+outputs based
+on state
+
+outputs
+
+Q
+
+state
+register
+
+output
+logic
+14
+
+How to create a state machine?
+● Understand the problem
+● Represent all possible states and transitions
+● Encode the states
+● Implement the machine
+
+15
+
+Understanding the problem
+A problem:
+● You have an espresso machine
+o Each espresso costs 15c <3
+o The machine takes:
+▪ 5c - (N)ickels
+▪ 10c - (D)imes
+o No change is given back!
+N
+Coin
+sensor
+
+D
+
+Espresso
+machine
+
+Pour
+
+Coffee
+Brewer
+
+Reset
+16
+
+Represent all possible states and transitions
+Reset
+0c
+
+0c
+
+0c
+[0]
+N
+
+5c
+[0]
+
+D
+
+N
+0c
+D
+
+10c
+[0]
+N
+
+15c
+[1]
+
+D
+
+S
+
+D
+
+N
+
+Snext
+
+Output
+
+0c
+
+0
+
+0
+
+0c
+
+0
+
+0c
+
+0
+
+1
+
+5c
+
+0
+
+0c
+
+1
+
+0
+
+10c
+
+0
+
+0c
+
+1
+
+1
+
+X
+
+X
+
+5c
+
+0
+
+0
+
+5c
+
+0
+
+5c
+
+0
+
+1
+
+10c
+
+0
+
+5c
+
+1
+
+0
+
+15c
+
+0
+
+5c
+
+1
+
+1
+
+X
+
+X
+
+10c
+
+0
+
+0
+
+10c
+
+0
+
+10c
+
+0
+
+1
+
+15c
+
+0
+
+10c
+
+1
+
+0
+
+15c
+
+0
+
+10c
+
+1
+
+1
+
+X
+
+X
+
+15c
+
+X
+
+X
+
+15c
+
+1
+
+17
+
+Encode the states
+
+S
+
+Encoded
+
+0c
+
+00
+
+5c
+
+01
+
+10c
+
+10
+
+15c
+
+11
+
+S
+
+D
+
+N
+
+Snext
+
+Output
+
+00
+0c
+
+0
+
+0
+
+00
+0c
+
+0
+
+00
+0c
+
+0
+
+1
+
+01
+5c
+
+0
+
+00
+0c
+
+1
+
+0
+
+10c
+10
+
+0
+
+00
+0c
+
+1
+
+1
+
+X
+
+X
+0
+
+01
+5c
+
+0
+
+0
+
+01
+5c
+
+0
+
+01
+5c
+
+0
+
+1
+
+10c
+10
+
+0
+
+01
+5c
+
+1
+
+0
+
+15c
+11
+
+0
+
+01
+5c
+
+1
+
+1
+
+X
+
+X
+0
+
+10c
+10
+
+0
+
+0
+
+10c
+10
+
+0
+
+10c
+10
+
+0
+
+1
+
+15c
+11
+
+0
+
+10c
+10
+
+1
+
+0
+
+15c
+11
+
+0
+
+10c
+10
+
+1
+
+1
+
+X
+
+X
+0
+
+15c
+11
+
+X
+
+X
+
+15c
+11
+
+1
+
+18
+
+Our good old friend K-map - 𝑺𝒏𝒆𝒙𝒕𝟎
+𝑺𝟏 𝑺𝟎
+𝑫𝑵
+
+𝟎𝟎 𝟎𝟏 𝟏𝟏 𝟏𝟎
+
+0
+𝟎𝟏 1
+𝟏𝟏 X
+𝟏𝟎 0
+𝟎𝟎
+
+1
+0
+X
+1
+
+1
+1
+X
+1
+
+0
+1
+X
+1
+
+Red: 𝐃𝐒𝟏
+ഥ 𝐒𝟎
+Blue: 𝑵
+
+Green:𝑵𝑺𝟎
+Purple: 𝐍𝐒𝟏
+
+𝑺𝒏𝒆𝒙𝒕𝟎 = 𝐃𝐒𝟏 + 𝑵𝑺𝟎
+ഥ 𝐒𝟎 + 𝐍𝐒𝟏
++𝑵
+
+19
+
+Our good old friend K-map -𝑺𝒏𝒆𝒙𝒕𝟏
+𝑺𝟏 𝑺𝟎
+𝑫𝑵
+
+𝟎𝟎 𝟎𝟏 𝟏𝟏 𝟏𝟎
+
+0
+𝟎𝟏 0
+𝟏𝟏 X
+𝟏𝟎 1
+𝟎𝟎
+
+0
+1
+X
+1
+
+1
+1
+X
+1
+
+1
+1
+X
+1
+
+Red: 𝐒𝟏
+Green: 𝐍𝐒𝟎
+Blue: 𝐃
+
+𝑺𝒏𝒆𝒙𝒕𝟏 = 𝐒𝟏 + 𝐍𝐒𝟎 + 𝐃
+
+20
+
+Our good old friend K-map - Output
+𝑺𝟎
+𝑺𝟏
+
+𝟎
+
+𝟎
+𝟏
+
+𝟏
+
+0 0
+0 1
+
+Red: 𝐒𝟎 𝐒𝟏
+
+Output= 𝐒𝟎 𝐒𝟏
+
+21
+
+Get everything together
+
+22
+
+

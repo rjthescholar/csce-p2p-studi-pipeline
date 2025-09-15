@@ -1,0 +1,1907 @@
+Finite Automata 03
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Nondeterministic Finite Automaton
+0, 1
+
+0, 1
+
+1
+
+q1
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Let Σ = {0, 1}
+Different between Deterministic Finite Automaton (DFA) and
+Nondeterministic Finite Automaton (NFA):
+DFA always has exactly one exiting transition arrow for each
+symbol in the alphabet
+NFA may have none, one, or many exiting arrows for each
+symbol
+
+DFA have no arrow with the label ε
+NFA may have Zero, one, or many arrows exiting from each
+state with the label ε.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Compute an NFA
+0, 1
+
+0, 1
+
+1
+
+q1
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+If you encounter a state with multiple way to proceed for a
+regular input:
+The machine splits into multiple copies of itself
+The machines follow all the possibilities in parallel.
+Each copy of the machine takes one of the possible ways.
+
+If you encounter a state with an ε symbol as an exiting arrow:
+Without reading any input, the machine splits into multiple
+copies.
+Each follows each of the exiting ε-labeled arrows, and
+One stays at the current state.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+Symbol read
+
+q1
+
+Start
+
+0, 1
+
+0, 1
+
+1
+
+q1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+Symbol read
+
+q1
+
+Start
+
+0
+
+q1
+
+0, 1
+
+0, 1
+
+1
+
+q1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+q1
+
+Symbol read
+
+Start
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q3
+
+0, 1
+
+0, 1
+
+1
+
+q1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+q1
+
+Symbol read
+
+Start
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q1
+
+q3
+
+q3
+
+0, 1
+
+0, 1
+
+0
+1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+q1
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+q1
+
+Symbol read
+
+Start
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q1
+
+q3
+
+q3
+
+0, 1
+
+0, 1
+
+0
+1
+
+q1
+
+1
+
+q1
+
+q2
+
+q3
+
+q4
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+q1
+
+Symbol read
+
+Start
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q1
+
+q3
+
+q3
+
+0, 1
+
+0, 1
+
+0
+1
+
+q1
+
+1
+
+q1
+
+q2
+
+q3
+
+q4
+
+q2
+
+q3
+
+q4
+
+q4
+
+1
+
+q1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+0, ε
+
+q2
+
+1
+
+q3
+
+q4
+
+Compute an NFA (Computational Tree)
+Computation of the machine on input 010110
+
+q1
+
+Symbol read
+
+Start
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q1
+
+q3
+
+q3
+
+0, 1
+
+0, 1
+
+0
+1
+
+q1
+
+0, ε
+
+q2
+
+1
+
+q3
+
+1
+
+q1
+
+q2
+
+q3
+
+q4
+
+q1
+
+q2
+
+q3
+
+q4
+
+q4
+
+q1
+
+q3
+
+q4
+
+q4
+
+1
+
+0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+If there is at least one copy in an accept state,
+the machine accept the input string.
+Finite Automata 03
+
+q4
+
+Example
+Let A be the language consisting of all strings over {0, 1}
+containing a 1 in the third position from the end (e.g., 000100 is in
+A but 0011 is not in A).
+Design a DFA for this problem is quite complicate
+Design an NFA is easier
+0, 1
+
+1
+
+q1
+
+0, 1
+
+q2
+
+0, 1
+
+q3
+
+q4
+
+The transition from q1 to q2 is our guess that this is the 1 in
+the third position from the end.
+If our guess is wrong:
+The input string is shorter, it will end at reject state.
+The input string is longer, the machine will die but other one
+remains alive.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+An equivalent DFA machine
+0
+
+0
+
+0
+
+q000
+1
+1
+
+0
+
+q100
+
+q010
+
+q110
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+q001
+
+q101
+
+1
+
+q011
+
+1
+
+1
+
+Name states according to the last three symbols
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+q111
+
+1
+
+Example
+Suppose the alphabet Σ is {0}. Design a machine that recognizes
+the language A where A is an empty string or all strings over Σ
+that their length is a multiple of 2 or 3.
+0
+
+0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Suppose the alphabet Σ is {0}. Design a machine that recognizes
+the language A where A is an empty string or all strings over Σ
+that their length is a multiple of 2 or 3.
+0
+
+0
+
+0
+
+0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+Finite Automata 03
+
+Example
+Suppose the alphabet Σ is {0}. Design a machine that recognizes
+the language A where A is an empty string or all strings over Σ
+that their length is a multiple of 2 or 3.
+0
+
+ε
+
+0
+
+ε
+0
+
+0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+Finite Automata 03
+
+Formal Definition of A Nondeterministic Finite Automaton
+A nondeterministic finite automaton is a 5-tuple
+(Q, Σ, δ, q0, F )
+1
+2
+3
+
+Q is a finite set of states
+Σ is a finite alphabet
+δ : Q × Σε → P(Q) is the transition function,
+Σε = Σ ∪ {ε} and
+P(Q) is the powerset of Q (set of set of states).
+
+4
+5
+
+q0 ∈ Q is the start state
+F ⊆ Q is the set of accept states.
+
+Notes
+In an NFA, one input symbol can change the state of the
+machine to multiple states.
+Split to multiple copies with different current states
+Example: δ(q0 , 1) = {q0 , q1 }
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+0, 1
+
+0, 1
+
+1
+
+q1
+
+0, ε
+
+q2
+
+1
+
+q3
+
+Q = {q1 , q2 , q3 , q4 }
+Σ = {0, 1} and Σε = {0, 1, ε}
+δ is given as
+δ
+0
+1
+q1 {q1 } {q1 , q2 }
+q2 {q3 }
+∅
+q3
+∅
+{q4 }
+q4 {q4 }
+{q4 }
+
+q4
+
+ε
+∅
+{q3 }
+∅
+∅
+
+We treat ε as a regular input symbol
+If there is no ε transitions, we can ignore the ε column
+
+q1 is the start state
+F = {q4 }
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+NFA and DFA
+
+NFA is a slightly different computation model compared to
+DFA
+NFA can split into multiple copies
+NFA may have ε transitions
+
+Is there a language that can be recognized by an NFA but
+cannot be recognized by any DFAs?
+In theory of computation, we try to see whether we can
+capture the behavior of an NFA using a DFA
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Simulating and NFA with a DFA
+Simulate 010110
+δ
+
+0
+
+ε
+
+1
+
+q1
+
+q1 {q1 } {q1 , q2 } ∅
+{q3 }
+q2 {q3 }
+∅
+{q4 }
+∅
+q3 ∅
+∅
+q4 {q4 } {q4 }
+
+Start
+
+{q1 }
+
+= {q1 }
+
+{q1 }
+
+= {q1 }
+
+{q1 , q2 , q3 }
+
+= {q1 , q2 , q3 }
+
+{q1 } ∪ {q3 } ∪ ∅
+
+= {q1 , q3 }
+
+{q1 , q2 , q3 } ∪ {q4 }
+
+= {q1 , q2 , q3 , q4 }
+
+0
+
+q1
+1
+
+q1
+
+q2
+
+q3
+0
+
+q1
+
+q3
+1
+
+q1
+
+q2
+
+q3
+
+q4
+1
+
+q1
+
+q2
+
+q3
+
+q4
+
+{q1 , q2 , q3 } ∪ ∅ ∪ {q4 } ∪ {q4 } = {q1 , q2 , q3 , q4 }
+
+q4
+0
+
+q1
+
+q3
+
+q4
+
+q4
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+{q1 } ∪ {q3 } ∪ ∅ ∪ {q4 } ∪ {q4 } = {q1 , q3 , q4 }
+Finite Automata 03
+
+Equivalence of NFAs and DFAs
+
+Every nondeterministic finite automaton has an equivalent
+deterministic finite automaton.
+Let N = (Q, Σ, δ, q0 , F ) be the NFA recognizing some
+language A
+We are going to construct a DFA M = (Q0 , Σ, δ 0 , q00 , F 0 )
+recognizing A
+Let’s consider the case where N has no ε transitions.
+1
+2
+
+Q0 = P(Q) [
+δ 0 (R, a) =
+δ(r, a)
+r∈R
+
+3
+4
+
+q00 = {q0 }
+F 0 = {R ∈ Q0 | R contains an accept state of N }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Let Σ be {0, 1}. The following NFA N recognizes the
+language A where A is a set of strings that end with a 1.
+0, 1
+
+1
+
+q0
+
+q1
+
+N = (Q, Σ, δ, q0 , F )
+1
+2
+3
+
+Q = {q0 , q1 },
+Σ = {0, 1}
+δ is given as
+q0
+q1
+
+4
+5
+
+0
+{q0 }
+∅
+
+1
+{q0 , q1 }
+∅
+
+q0 is the start state
+F = {q1 }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+
+Construct a DFA M = (Q0 , Σ, δ 0 , q00 , F 0 )
+Q0 = P(Q) = P({q0 , q1 })
+Q0 = {∅, {q0 }, {q1 }, {q0 , q1 }}
+We will construct δ 0 later
+q00 = {q0 } where q0 is the start state of the NFA
+F 0 = {R ∈ Q0 | R contains an accept state of N }
+F 0 = {{q1 }, {q0 , q1 }}
+where F = {q1 }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+
+Let’s focus on transition functions
+The transition function δ of the NFA is as follows:
+0
+1
+q0 {q0 } {q0 , q1 }
+q1
+∅
+∅
+Recall that the set of state of the equivalent DFA is the power
+set of set of state of the NFA
+δ0
+0
+1
+∅
+∅
+∅
+{q0 } {q0 , q1 }
+{q0 }
+{q1 }
+∅
+∅
+{q0 , q1 } {q0 } {q0 , q1 }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Machine M = (Q0 , Σ, δ 0 , q00 , F 0 ) equivalent to N can be
+defined as follows:
+Q0 = P(Q) [
+= {∅, {q0 }, {q1 }, {q0 , q1 }},
+0
+δ (R, a) =
+δ(r, a)
+r∈R
+0
+
+δ (∅, 0) =
+
+[
+
+δ(r, 0) = ∅
+
+r∈∅
+
+δ 0 (∅, 1) =
+
+[
+
+δ(r, 1) = ∅
+
+r∈∅
+
+δ 0 ({q0 }, 0) =
+
+[
+
+δ(r, 0) = δ(q0 , 0) = {q0 }
+
+r∈{q0 }
+
+δ 0 ({q0 }, 1) =
+
+[
+
+δ(r, 1) = δ(q0 , 1) = {q0 , q1 }
+
+r∈{q0 }
+
+δ 0 ({q1 }, 0) =
+
+[
+
+δ(r, 0) = δ(q1 , 0) = ∅
+
+r∈{q1 }
+
+δ 0 ({q1 }, 1) =
+
+[
+
+δ(r, 1) = δ(q1 , 1) = ∅
+
+r∈{q1 }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+
+Machine M (Continue)
+δ 0 (Continue)
+δ 0 ({q0 , q1 }, 0) =
+
+[
+
+δ(r, 0) = δ(q0 , 0) ∪ δ(q1 , 0) =
+
+r∈{q0 ,q1 }
+
+{q0 } ∪ ∅ = {q0 }
+δ 0 ({q0 , q1 }, 1) =
+
+[
+
+δ(r, 0) = δ(q0 , 1) ∪ δ(q1 , 1) =
+
+r∈{q0 ,q1 }
+
+{q0 , q1 } ∪ ∅ = {q0 , q1 }
+
+Thus δ 0 is given by
+δ0
+∅
+{q0 }
+{q1 }
+{q0 , q1 }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+∅
+{q0 }
+∅
+{q0 }
+
+1
+∅
+{q0 , q1 }
+∅
+{q0 , q1 }
+
+Finite Automata 03
+
+Example
+The state diagram of the machine M = (Q0 , Σ, δ 0 , q00 , F 0 )
+equivalent to N (L(M ) = L(N )) is shown below:
+0
+
+1
+
+1
+
+{q0 }
+
+{q0 , q1 }
+
+0
+0
+
+0
+
+{q1 }
+
+∅
+1
+
+1
+
+Without bottom part, it is the same as one of our previous
+example
+It is okay for a DFA to have unreachable states
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+NFA to DFA with ε Symbol
+Let E(R) be the collection of states that can be reached from
+members of R by going only along ε arrows, including the
+members of R themselves.
+E(R) = {q | q can be reached from R by travel along
+0 or more ε arrows}
+Note that a state q can be reached from its own state q by
+travel along no ε arrow (R ⊆ E(R))
+Example:
+0, 1
+
+0, 1
+
+1
+
+q1
+
+0, ε
+
+q2
+
+1
+
+q3
+
+E({q1 }) = {q1 }
+E({q2 }) = {q2 , q3 }
+E({q1 , q2 }) = {q1 , q2 , q3 }
+E({q1 , q3 }) = {q1 , q3 }
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+q4
+
+NFA to DFA with ε Symbol
+
+Let NFA N = (Q, Σ, δ, q0 , F ) with ε transitions that
+recognizes a language A
+We can construct a DFA M = (Q0 , Σ, δ 0 , q00 , F 0 ) as
+1
+2
+
+Q0 = P(Q)
+δ 0 is given by
+δ 0 (R, a) =
+
+[
+
+E(δ(r, a))
+
+r∈R
+3
+
+q00 = E({q0 })
+If q0 has no exiting arrow for ε, q00 = {q0 }
+
+4
+
+F 0 = {R ∈ Q0 | R contains an accept state of N }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Consider the following NFA machine:
+1
+b
+
+a
+
+ε
+2
+
+a
+
+3
+a, b
+
+N = (Q, Σ, δ, q0 , F )
+Q = {1, 2, 3}
+Σ = {a, b}
+δ is given by
+1
+2
+3
+
+a
+∅
+{2, 3}
+{1}
+
+b
+{2}
+{3}
+∅
+
+ε
+{3}
+∅
+∅
+
+q0 = 1
+F = {1}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+
+Machine M = (Q0 , Σ, δ 0 , q00 , F 0 ) equivalent to N :
+Q0 = P(Q) = P({1, 2, 3})
+Q0 = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+Start state is E({1}) = {1, 3}
+F 0 is a set of set of states that contain accept states of N
+(F = {1}).
+F 0 = {{1}, {1, 2}, {1, 3}, {1, 2, 3}}
+[
+δ 0 (R, a) =
+E(δ(r, a))
+r∈R
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Let’s focus on transition functions
+The transition function δ of the NFA is as follows:
+δ
+a
+b
+ε
+1
+∅
+{2} {3}
+2 {2, 3} {3}
+∅
+{1}
+∅
+∅
+3
+Recall that the set of state of the equivalent DFA is the power
+set of set of state of the NFA
+δ0
+a
+b
+∅
+∅
+∅
+∅
+{2}
+{1}
+{2}
+{2, 3}
+{3}
+{3}
+{1, 3}
+∅
+{2, 3}
+{2, 3}
+{1, 2}
+{1, 3}
+{2}
+{1, 3}
+{2, 3}
+{1, 2, 3}
+{3}
+{1, 2, 3} {1, 2, 3} {2, 3}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Machine M ’s δ 0
+0
+
+δ (∅, a) =
+
+[
+
+E(δ(r, a))
+
+0
+
+= E(δ(2, b))
+= E({3})
+
+r∈∅
+
+= {3}
+[
+δ ({3}, a) =
+
+=∅
+0
+
+0
+
+[
+
+E(δ(r, b))
+
+r∈{2}
+
+=∅
+[
+0
+δ (∅, b) =
+E(δ(r, b))
+
+δ ({1}, a) =
+
+[
+
+δ ({2}, b) =
+
+r∈∅
+
+E(δ(r, a))
+
+E(δ(r, a))
+
+r∈{3}
+
+r∈{1}
+
+= E(δ(3, a))
+
+= E(δ(1, a))
+
+= E({1})
+
+= E(∅)
+=∅
+0
+
+δ ({1}, b) =
+
+0
+
+[
+
+= {1, 3}
+[
+
+δ ({3}, b) =
+
+E(δ(r, b))
+
+E(δ(r, b))
+
+r∈{3}
+
+r∈{1}
+
+= E(δ(3, b))
+
+= E(δ(1, b))
+
+= E(∅)
+
+= E({2})
+= {2}
+[
+0
+δ ({2}, a) =
+
+=∅
+0
+
+E(δ(r, a))
+
+δ ({1, 2}, a) =
+
+[
+
+E(δ(r, a))
+
+r∈{1,2}
+
+r∈{2}
+
+= E(δ(1, a)) ∪ E(δ(2, a))
+
+= E(δ(2, a))
+
+= ∅ ∪ {2, 3}
+
+= E({2, 3})
+
+= {2, 3}
+
+= {2, 3}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Machine M ’s δ 0
+0
+
+δ ({1, 2}, b) =
+
+[
+
+E(δ(r, b))
+
+r∈{1,2}
+
+0
+
+δ ({2, 3}, b) =
+
+= E(δ(1, b)) ∪ E(δ(2, b))
+= {2} ∪ {3}
+= {2, 3}
+[
+0
+δ ({1, 3}, a) =
+
+= E(δ(2, b)) ∪ E(δ(3, b))
+E(δ(r, a))
+
+= {3}
+0
+
+= E(δ(1, a)) ∪ E(δ(3, a))
+
+δ ({1, 2, 3}, a) =
+
+E(δ(3, a))
+E(δ(r, b))
+
+r∈{1,3}
+
+= {2} ∪ ∅
+= {2}
+[
+δ ({2, 3}, a) =
+
+E(δ(r, a))
+
+= E(δ(1, a) ∪ E(δ(2, a))∪
+
+= E(δ(1, b)) ∪ E(δ(3, b))
+
+0
+
+[
+r∈{1,2,3}
+
+= ∅ ∪ {1, 3}
+= {1, 3}
+[
+δ ({1, 3}, b) =
+
+E(δ(r, b))
+
+= {3} ∪ ∅
+
+r∈{1,3}
+
+0
+
+[
+r∈{2,3}
+
+= ∅ ∪ {2, 3} ∪ {1, 3}
+= {1, 2, 3}
+[
+δ ({1, 2, 3}, b) =
+E(δ(r, b))
+0
+
+r∈{1,2,3}
+
+= E(δ(1, b) ∪ E(δ(2, b))∪
+E(δ(r, a))
+
+E(δ(3, b))
+
+r∈{2,3}
+
+= {2} ∪ {3} ∪ ∅
+
+= E(δ(2, a)) ∪ E(δ(3, a))
+
+= {2, 3}
+
+= {2, 3} ∪ {1, 3}
+= {1, 2, 3}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Example
+Recall the transition function of M
+a
+∅
+∅
+{2, 3}
+{1, 3}
+{2, 3}
+{1, 3}
+{1, 2, 3}
+{1, 2, 3}
+
+∅
+{1}
+{2}
+{3}
+{1, 2}
+{1, 3}
+{2, 3}
+{1, 2, 3}
+
+b
+∅
+{2}
+{3}
+∅
+{2, 3}
+{2}
+{3}
+{2, 3}
+
+The state diagram of M
+a
+a, b
+
+b
+{1}
+
+φ
+
+{2}
+a, b
+
+b
+
+b
+
+{1,2}
+
+a
+
+b
+
+a
+{3}
+
+a
+
+{1,3}
+
+a
+
+{2,3}
+
+{1,2,3}
+b
+
+b
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+a
+
+Closure Under Union Operation
+N1
+
+N
+
+ε
+
+ε
+N2
+
+N1 recognizes a regular language A
+N2 recognizes a regular language B
+N recognizes A ∪ B (A ∪ B is regular)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+
+Let N1 = (Q1 , Σ, δ1 , q1 , F1 ) recognizes A1 .
+Let N2 = (Q2 , Σ, δ2 , q2 , F2 ) recognizes A2 .
+To construct N = (Q, Σ, δ, q0 , F ) to recognizes A1 ∪ A2 :
+1
+2
+3
+4
+
+Q = {q0 } ∪ Q1 ∪ Q2
+The state q0 is the start state of N
+The set of accept state F = F1 ∪ F2
+δ is given by
+
+δ1 (q, a) q ∈ Q1
+
+
+
+δ (q, a) q ∈ Q
+2
+2
+δ(q, a) =
+
+{q
+,
+q
+}
+q
+=
+q
+and a = ε
+1
+2
+0
+
+
+
+∅
+q = q0 and a 6= ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+
+Given state diagrams of finite-state machines N1 and N2
+To draw a state diagram of a new machine N where
+L(N ) = L(N1 ) ∪ L(N2 ):
+1
+2
+3
+4
+
+Draw the state diagram of N1 on the top half
+Draw the state diagram of N2 on the bottom half
+Add a new start state
+Add ε transitions from the new start state to the start states
+of N1 and N2 , respectively
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+Draw N1 on the top half
+N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+Draw N2 on the bottom half
+N1
+
+N2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+Add new start state
+N1
+
+N2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Union Operation
+Add ε transitions
+N
+
+N1
+ε
+
+ε
+
+N2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+Let N1 recognizes A and N2 recognizes B
+Given a string w, how do we know whether w ∈ AB?
+Recall the definition of AB (A concatenated by B)
+AB = {xy | x ∈ A and y ∈ B}
+For w to be in AB, w must be divided into two strings x and
+y where w = xy such that x ∈ A and y ∈ B
+If x ∈ A, x ∈ L(N1 )
+Since x ∈ L(N1 ), by simulating N1 on input x, the simulation
+will end in an accept state of N1 (N1 accepts x)
+
+But if x 6∈ A, simulation will end in a non-accept state of N1
+If y ∈ B, y ∈ L(N2 )
+Since y ∈ L(N2 ), by simulating N2 on input y, the simulation
+will end in an accept state of N2 (N2 accepts y)
+
+But if y 6∈ B, simulation will end in a non-accept state of N2
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+N1
+
+N2
+
+N
+
+ε
+ε
+ε
+
+N1 recognizes a regular language A
+N2 recognizes a regular language B
+N recognizes AB (AB is regular)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+Let N1 = (Q1 , Σ, δ1 , q1 , F1 ) recognizes A1 .
+Let N2 = (Q2 , Σ, δ2 , q2 , F2 ) recognizes A2 .
+To construct N = (Q, Σ, δ, q0 , F ) to recognizes A1 ◦ A2 :
+1
+2
+3
+4
+
+Q = Q1 ∪ Q2
+The state q1 is the start state of N
+The set of accept state F = F2
+δ is given by
+
+δ1 (q, a)
+q ∈ Q1 and q 6∈ F1
+
+
+
+δ (q, a)
+q
+∈ Q2 and a 6= ε
+2
+δ(q, a) =
+
+δ1 (q, a) ∪ {q2 } q ∈ F1 and a = ε
+
+
+
+δ2 (q, a)
+q ∈ Q2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+Given state diagrams of finite-state machines N1 and N2
+To draw a state diagram of a new machine N where
+L(N ) = L(N1 ) ◦ L(N2 ):
+1
+2
+3
+
+4
+
+Draw the state diagram of N1 on the left side
+Draw the state diagram of N2 on the right side
+For every accept state of N1 , add the ε transition to the start
+state of N2
+Change all accept states of N1 to non-accept states
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+Draw the state diagram of N1 on the left side
+N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+Draw the state diagram of N2 on the right side
+N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+N2
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+ε from accept states of N1 to start state of N2
+N1
+
+N2
+ε
+ε
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Concatenation Operation
+
+Accept states of N1 to non-accept states
+N
+
+N1
+
+N2
+ε
+ε
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+Star operator is similar to concatenation except that it can be
+concatenated any number of times:
+A∗ = {x1 x2 x3 . . . xk | k ≥ 0 and xi ∈ A}
+and
+ε ∈ A∗
+N1
+
+for any language A
+N
+ε
+ε
+ε
+
+N1 recognizes a regular language A
+N recognizes A∗ (A∗ is regular)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+Let N1 = (Q1 , Σ, δ1 , q1 , F1 ) recognizes A1 .
+To construct N = (Q, Σ, δ, q0 , F ) to recognizes A∗1 :
+1
+2
+3
+4
+
+Q = {q0 } ∪ Q1
+The state q0 is the start state of N
+The set of accept state F = {q0 } ∪ F1
+δ is given by
+
+
+δ1 (q, a)
+q ∈ Q1 and q 6∈ F1
+
+
+
+
+
+q ∈ F1 and a 6= ε
+δ1 (q, a)
+δ(q, a) = δ1 (q, a) ∪ {q1 } q ∈ F1 and a = ε
+
+
+
+{q1 }
+q = q0 and a = ε
+
+
+
+∅
+q = q0 and a 6∈ ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+Given state diagrams of finite-state machines N1
+To draw a state diagram of a new machine N where
+L(N ) = L(N1 )∗ :
+1
+2
+3
+
+4
+
+Draw the state diagram of N1
+Add a new start state and make it an accept state
+Add ε transition from the new start state to the start state of
+N1
+For each original accept state of N1 , add ε transition to the
+original start state of N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+Draw the state diagram of N1
+N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+Add a new start state and make it an accept state
+N1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+Add ε from thew new start state to the original start state of
+N1
+N1
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Closure Under Star Operation
+
+For each original accept state of N1 , add ε transition to the
+original start state of N1
+N
+
+N1
+ε
+ε
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+Conclusions
+
+A Nondeterministic Finite Automata (NFA) has an equivalent
+Deterministic Finite Automata (DFA)
+The algorithm how to convert from an NFA N to an
+equivalent DFA D where L(N ) = L(D) has been discussed
+
+The set of all regular languages is closed under union,
+concatenation, and star operations:
+If A and B are regular languages, A ∪ B is a regular language
+If A and B are regular languages, AB (A ◦ B) is a regular
+language
+If A is a regular language, A∗ is a regular language
+
+The proof process also gives us an algorithm how to construct
+DFAs
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 03
+
+

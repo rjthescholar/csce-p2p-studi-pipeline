@@ -1,0 +1,1222 @@
+13
+
+Virtual
+Memory
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+The Virtual
+I just want to use this time to point out that “Virtual Reality” is an oxymoron.
+
+2
+
+Our protagonist’s journey so far…
+• Processes have an addressable memory space.
+▪ We call this an address space.
+
+• Now, we know it has some obvious things…
+▪ The code (.text)
+▪ The data (.data)
+▪ A stack and some available space that can be
+allocated as we need it.
+
+• We added the “Kernel” memory to our diagram.
+▪ This is the OS code and data.
+▪ For system processes to run, they need to be
+resident in memory as well.
+3
+
+Random Access Memory
+• Memory is a
+physical device.
+
+Sense Line
+
+• It is a random
+access device.
+▪ Allows the
+machine to access
+data at any point.
+
+Capacitor
+Control
+Line
+
+• As opposed to
+
+sequential access.
+Dynamic RAM (DRAM)
+
+4
+
+Let’s get physical
+• Physical
+addressing is
+when hardware
+relates a program
+address directly to
+the memory
+hardware.
+• The program
+addresses are the
+exact physical
+locations of data.
+Dynamic RAM (DRAM)
+
+5
+
+Let’s get physical
+• Physical addressing is
+useful when you
+have only a single,
+simple process.
+• Embedded devices
+(small, specific uses)
+• Think of your
+toaster… or a
+thermostat.
+
+Memory load
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+6
+
+The problem
+• However, we don’t always have such simple cases.
+▪ A general-purpose system, like our phones and desktop machines, can run a
+variety of programs.
+▪ We often have multitasking operating systems running many programs at the
+same time.
+
+• When we have several processes, how to we manage memory?
+▪ How to present a consistent address space?
+▪ How to prevent other processes from interfering?
+▪ How to prevent address space fragmentation?
+
+• The solution, as usual: indirection: Virtual Memory.
+7
+
+Virtual vs. Reality
+• Just like “virtual reality,” we create a
+world that resembles reality, but it
+really is a facsimile.
+• We can provide a scheme, backed
+by hardware, that allows memory
+addresses to be seen by programs in
+a specific place…
+
+• Yet, those addresses differ from the
+actual physical memory location.
+
+Angela Lansbury as Jessica Fletcher, Director Lee Smith
+Murder, She Wrote; “A Virtual Murder”
+Universal Studios, Universal Television, 1993
+
+8
+
+Consistency, dear Watson.
+• When you write a program, do you write it deliberately for the
+memory layout of your OS?
+▪ No!
+
+• The OS loads executables to specific places in memory.
+▪ The program expects data to be in a specific place.
+▪ The program expects memory to be “large enough.”
+
+• So, we will look at one strategy to define well-known stretches of
+memory (virtually) that are mapped to physical memory (in reality.)
+
+9
+
+Segmentation
+It’s not just a type of fault.
+
+10
+
+Segmentation
+• Segmentation is a virtual
+memory system where spans
+of physical memory called a
+segment are given a physical
+base address.
+• The application refers to the
+virtual address by its segment
+index which is translated by
+hardware into the real address
+behind-the-scenes.
+
+• Here, we have a segment table
+which defines two segments.
+▪ The first segment defines a range of
+addresses from
+to
+.
+▪ Second is
+to
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+11
+
+Address Translation
+• The Memory Management Unit
+(MMU) is a hardware component of
+your CPU that translates virtual
+addresses to physical addresses.
+• Here, it translates based on the
+segment table.
+Address Space
+
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+MMU
+
+CPU
+
+Dynamic RAM (DRAM)
+
+12
+
+Addressing the Code Segment
+• The MMU translates
+addresses by looking
+up the segment index
+and adding the base to
+the given offset.
+MMU
+
+Memory load
+
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+13
+
+Addressing the Data Segment
+• The same offset might
+refer to a different
+physical address
+depending on the
+index and the table.
+MMU
+
+Memory load
+
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+14
+
+Addressing… nothing
+• However, if the MMU
+cannot translate an
+address, it will fault.
+• This is a segmentation
+fault.
+
+MMU
+
+Memory load
+
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+15
+
+Addressing… out of range
+• This is true even if the
+address calculation results
+in an address that is
+allocated to another
+segment.
+• Fault: It goes beyond the
+size of the segment.
+
+MMU
+
+Memory load
+
+Segment Table
+Index
+
+Physical
+Base
+
+Size
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+16
+
+It’s for your pwn protection
+• The lie only operates if processes cannot see each other.
+▪ It’s not just about address spaces not overlapping…
+▪ It is also for security purposes!
+
+• You don’t want your login process to be snooped on by another.
+
+• Yet, also, you don’t want your own program to do ridiculous things it
+should not do!
+▪ Should your program be able to write to constant values?
+▪ Should your program be able to execute instructions in the
+
+segment?
+
+• Virtual memory generally also has ways to arbitrate access.
+17
+
+Amending to add access control
+• The MMU can also arbitrate access
+to the segments by adding access
+control to the segment table.
+• Here, a in the table denotes the
+action is allowed.
+▪
+▪
+
+Writes allowed.
+Can be executed.
+
+Address Space
+
+Segment Table
+I
+
+Physical
+Base
+
+Size
+
+W
+
+X
+
+MMU
+
+CPU
+
+Dynamic RAM (DRAM)
+
+18
+
+Writing to the Code Segment? NO!!
+• When the MMU
+decides if an action is
+allowed, it looks at the
+access control bits in
+the table.
+MMU
+
+Memory store
+
+Segment Table
+I
+
+Physical
+Base
+
+Size
+
+W
+
+X
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+19
+
+Executing the Data Segment? ABSOLUTELY NOT!!
+• This feature can be
+used to effectively
+prevent many buffer
+overflow attacks.
+• Here, you can’t
+execute application
+data.
+
+MMU
+Instruction Fetch
+
+Segment Table
+I
+
+Physical
+Base
+
+Size
+
+W
+
+X
+
+Address Space
+
+CPU
+
+Dynamic RAM (DRAM)
+
+20
+
+A Problem Remains: Fragmentation
+• In a purely segmented system, you can map
+regions of physical memory.
+
+???
+
+• However, the segments of virtual memory
+are continuous in physical memory and
+cannot overlap other physical regions on the
+system.
+
+• We may run out of room as we run more
+processes…
+• … and as processes finish, they may leave
+awkward gaps in memory. (external
+fragmentation)
+21
+
+Paging
+This won’t give you paper cuts... I don’t think.
+
+22
+
+Making things… smaller.
+• So, segmentation helped us isolate
+processes by allowing a virtual address
+space where large spans of memory
+were mapped continuously to a
+physical address range.
+• Since segments are large, managing
+that space is difficult.
+• So why don’t we make the segments…
+small? And use more of them?
+
+• Welcome to the wonderful world of
+pages!
+
+Process’s Virtual
+Address Space
+
+23
+
+Paging Mr. Herman… Mr. P. W. Herman…
+• Each segment is itself divided into
+smaller pieces called a page.
+• This allows us to even interleave the
+different pages that make up a section
+of memory.
+• Because of this interleaving and that
+every page is the same exact size,
+removing a page leaves room for
+exactly one page… no fragmentation.
+▪ At the cost of over-allocating, if we need
+less space than a single page.
+
+Allocating this:
+
+Removing this
+page left room big
+enough for… a new
+page!
+
+Process’s Virtual
+Address Space
+
+24
+
+Page Tables
+• There are many strategies for
+maintaining the metadata that maps
+virtual addresses to physical
+addresses.
+
+CPU
+
+Virtual Address
+Page Index
+
+Page Offset
+
+• The first we will look at is the simple
+page table.
+• In this strategy, we will maintain a
+data structure that maps virtual
+addresses to physical addresses.
+
+Physical Address
+Page Index
+
+Page Offset
+
+25
+
+Address Fields
+Virtual Address
+
+• First, you need to set a static
+page size.
+
+Page Index
+
+Page Offset
+
+▪ Every page is the same size.
+Process Page Table
+
+• Part of the virtual address is the
+offset, which is retained when
+the MMU translates the physical
+address.
+
+Valid
+
+Write
+
+Execute
+
+Page Address
+
+Index
+
+▪ This is determined by the page size.
+Physical Address
+
+• The remainder is used to
+determine the entry in the table.
+
+Page Index
+
+Page Offset
+
+26
+
+It’s not your fault…
+Virtual Address
+
+• If there is no entry for the given
+page or the entry isn’t valid…
+
+Page Index
+
+Page Offset
+
+▪ Or if an operation is not allowed.
+Process Page Table
+Valid
+
+• This signals a page fault.
+
+Execute
+
+Page Address
+
+Index
+
+▪ Similar to a segmentation fault.
+▪ In fact, many OSes retain that term
+to this day, even when it is a page
+fault, technically.
+
+• This is a generic error that is
+triggered by the MMU on such
+invalid accesses.
+
+Write
+
+DRAM
+CPU
+
+Virtual Address
+
+X MMU
+
+27
+
+Process Isolation
+• To give each
+process its own
+virtual address
+space, each process
+gets its own page
+table.
+
+Page Table
+Address
+Process Page Table
+Valid
+
+Write
+
+Execute
+
+Page Address
+
+Index
+
+• The CPU keeps
+track of which page
+table is active.
+DRAM
+CPU
+
+Virtual Address
+
+MMU
+
+Physical Address
+
+28
+
+Context Switching: Getting to the root of it.
+• When an Operating
+System goes from one
+process to another, it
+performs a context
+switch.
+1. Store registers
+(including stack
+pointer and program
+counter) to memory.
+2. Determine next
+process to run.
+3. Load those registers
+from memory.
+Switch address
+space.
+4. Jump to old program
+counter. Go!
+
+Process A
+
+Process B
+
+Process C
+
+stack
+
+stack
+
+stack
+
+.bss
+.data
+.text
+
+.bss
+.data
+.text
+
+.bss
+.data
+.text
+
+CPU State A:
+Registers
+,
+
+CPU State B:
+Registers
+,
+
+CPU State C:
+Registers
+,
+
+Page Table
+Address A
+
+Page Table
+Address B
+
+Page Table
+Address C
+
+DRAM
+CPU
+
+Virtual Address
+
+MMU
+
+Physical Address
+
+29
+
+Addressing the granularity issue
+• The table size has to do with how big
+you make each page.
+▪ The bigger the page, the less entries you’ll
+need for your process.
+▪ However, the more internal
+fragmentation if you do not need some of
+that space!
+
+• For a page size of 𝐾
+▪ Page offset will have log 2 𝐾 bits.
+▪ Page index will be the remaining bits.
+
+• For 32-bit address spaces:
+▪ Assuming table entries are also 32-bits.
+
+Virtual Address
+Page Index
+
+Page Offset
+
+𝐾 = 216 𝐾𝑖𝐵 = 64𝐾𝑖𝐵
+Mapping 2MiB takes 32 pages.
+Page table size: 216 ∗ 4𝐵 = 256𝐾𝑖𝐵
+Page Index
+
+Page Offset
+
+𝐾 = 212 𝐾𝑖𝐵 = 4𝐾𝑖𝐵
+Mapping 2MiB takes 512 pages.
+Page table size: 220 ∗ 4𝐵 = 4𝑀𝑖𝐵
+Page Index
+
+Page Offset
+
+𝐾 = 28 𝐵 = 256𝐵
+Mapping 2MiB takes 8192 pages.
+Page table size: 224 ∗ 4𝐵 = 64𝑀𝑖𝐵 30
+
+Inverted Page Tables
+• There are many strategies for
+maintaining the metadata that maps
+virtual addresses to physical
+addresses.
+
+CPU
+
+Virtual Address
+Page Index
+
+Page Offset
+
+• Now we will look at the inverted page
+table.
+• In this strategy, we switch things
+around: we have just one table for the
+whole system and an entry for every
+possible physical page.
+
+Physical Address
+Page Index
+
+Page Offset
+
+31
+
+Address Fields
+Virtual Address
+
+• In this case, you have a single
+table for the entire system.
+• When translating, you scan
+the table to find an entry that
+contains the page index.
+
+Page Tag
+
+Page Offset
+
+Inverted Page Table
+Page Tag
+
+Valid
+
+Write
+
+Execute
+
+Index
+
+▪ This may be intensive!
+
+• When you do, and it is valid,
+make a note of the index of
+the entry. That is the physical
+page index.
+
+Physical Address
+Page Index
+
+Page Offset
+
+32
+
+Process Isolation
+• Many processes exist, and
+each may use the same
+virtual address.
+▪ And expect a different physical
+page!
+
+Virtual Address
+Page Tag
+
+Process ID
+
+Page Offset
+
+Inverted Page Table
+Page Tag
+
+Process ID
+
+Valid
+
+Write
+
+Execute
+
+Index
+
+• Since there is only one table
+on the entire system, we
+have to disambiguate.
+
+• Therefore, we also tag by the
+process identifier.
+
+Physical Address
+Page Index
+
+Page Offset
+
+33
+
+What’s the size??
+• One nice feature of an inverted
+page table is the size is bound.
+
+Inverted Page Table
+Page Tag
+
+Process ID
+
+Valid
+
+Write
+
+Execute
+
+• Since an inverted page table has
+an entry for every possible
+physical page…
+▪ You can simply allocate the table
+of a fixed size big enough to
+represent all of physical memory.
+
+• The size of the table is the
+product of the entry size and
+the number of physical pages.
+
+If the page size (K) is 4KiB and our
+system has 16GiB of RAM, how big
+is the inverted page table?
+234
+16𝐺𝑖𝐵 / 4𝐾𝑖𝐵 = 12 = 222 𝑝𝑎𝑔𝑒𝑠
+2
+222 𝑝𝑎𝑔𝑒𝑠 ∗ 32 𝑏𝑖𝑡𝑠 = 222 𝑝𝑎𝑔𝑒𝑠 ∗ 4𝐵
+224 𝐵 = 24 220 𝐵 = 16𝑀𝑖𝐵
+
+34
+
+Trade-offs. Trade-offs everywhere!
+• What is best? … Who even knows.
+• Inverted page tables are very space efficient since entries are ordered
+by physical page.
+▪ However, translations mean scanning the table for entries… a time-consuming
+task. 𝑂(𝑛) (Can implement with a hashing function, see your OS course.)
+▪ Normal page tables are a constant time lookup, 𝑂 1
+
+• Since they are indexed by virtual address, normal page tables require
+ordered virtual memory to be space efficient.
+▪ Gaps in virtual memory mean lots of page table entries going unused.
+▪ Perhaps we can solve this problem…
+35
+
+Multi-level Page Tables (Not a pyramid scheme)
+• Perhaps we can allow
+gaps in virtual memory
+if we use MORE
+INDIRECTION!
+
+32-bit Virtual Address (
+Page Table
+Root Address
+
+Second Index
+
+First Index
+
+)
+Page Offset
+
+2nd Level Page Table
+
+• The use of multiple
+levels of indirection
+gives a lot of flexibility
+in defining the virtual
+address space.
+• Each page table is the
+size of a page. (
+)
+
+1st Level Page Table
+
+DRAM
+
+36
+
+Indirection times two
+• We split up the virtual
+address into further
+index fields.
+
+32-bit Virtual Address (
+Page Table
+Root Address
+
+Second Index
+
+First Index
+
+)
+Page Offset
+
+2nd Level Page Table
+Index
+
+• The top-level index
+yields the real
+physical address of
+the page containing
+the next page table.
+
+Write
+
+Execute
+
+1st Level Page Table (Real
+Index
+
+• This table is used to
+determine the referred
+physical page.
+
+Valid
+
+Valid
+
+Write
+
+Execute
+
+Page Table Address
+
+)
+Page Address
+
+DRAM
+
+37
+
+Home, home on the [memory] range
+• Each entry in the toplevel page table
+represents an entire
+range of memory.
+
+32-bit Virtual Address (
+Page Table
+Root Address
+
+• Here, the 2nd level index
+is
+. This represents all
+virtual memory addresses
+with the most significant
+binary digits:
+
+First Index
+
+Page Offset
+
+2nd Level Page Table
+Index
+
+Valid
+
+Write
+
+Execute
+
+Page Table Address
+
+1st Level Page Table (Real
+Index
+
+Maps 4KiB virtual page starting at 0x00400000
+Maps 4KiB virtual page starting at 0x00401000
+...
+Maps 4KiB virtual page starting at 0x007ff000
+
+Second Index
+
+)
+
+Valid
+
+Write
+
+Execute
+
+)
+Page Address
+
+38
+
+It’s a sparse world, after all
+• By marking entries
+invalid in the top-level
+page table, this
+invalidates the entire
+memory range.
+• Attempting to access
+such a virtual address
+would immediately page
+fault.
+
+32-bit Virtual Address (
+Page Table
+Root Address
+
+Second Index
+
+First Index
+
+)
+Page Offset
+
+2nd Level Page Table
+Index
+
+Valid
+
+Write
+
+Execute
+
+Page Table Address
+
+No 1st level table.
+
+Therefore: all virtual addresses between
+and
+are not mapped (and are not referenceable.)
+
+39
+
+A got a sparsity jacket, but it was just the sleeves.
+32-bit Virtual Address
+
+• Given a 32-bit virtual address.
+
+Second Index
+
+▪ And multi-level paging with two
+levels, each index 10 bits.
+
+• What is the page size?
+▪ 32 − 10 − 10 = 12 𝑏𝑖𝑡𝑠 for offset
+▪ 212 𝐵 = 4𝐾𝑖𝐵 (4 Kibibytes)
+
+First Index
+
+Page Offset
+
+2nd Level Page Table
+Index
+
+Valid
+
+Write
+
+Execute
+
+Page Table Address
+
+• Given the root page table here,
+and assuming unknown entries
+are invalid, what virtual address
+ranges are potentially used?
+▪ Let’s find out…
+40
+
+Continuing: Filling in the blanks
+• Given the root page table here, and
+assuming unknown entries are invalid, what
+virtual address ranges are potentially used?
+
+Second Index
+
+First Index
+
+Page Offset
+
+2nd Level Page Table
+
+to
+
+Maps virtual pages from
+
+32-bit Virtual Address
+
+Index
+
+Valid
+
+Write
+
+Execute
+
+Page Table Address
+
+to
+to
+
+Maps virtual pages from
+
+to
+to
+
+Maps virtual pages from
+
+to
+
+41
+
+Best of both worlds.
+• With multi-level page tables, we can
+represent large ranges of memory
+with gaps, much like segments!
+
+32-bit Virtual Address
+Second Index
+
+▪ All the while, we can satisfy each
+individual page in this “segment” by
+interleaving them throughout physical
+ram. (flexibility, no external
+fragmentation)
+
+2nd Level Page Table
+
+1st Level Page Table
+
+▪ x86-64 uses a 4 level page table!
+to
+to
+to
+
+Page Offset
+
+Page Table
+Root Address
+
+• Modern architectures often use
+multi-level page tables.
+Maps virtual pages from
+Maps virtual pages from
+Maps virtual pages from
+
+First Index
+
+Segments?
+(kinda)
+
+DRAM
+
+42
+
+Summary
+So, we have many complex processes running at the same time.
+• How to present a consistent address space?
+▪ Indirection using segments or page tables.
+▪ We translate virtual addresses to physical addresses.
+
+• How to prevent other processes from interfering?
+▪ We can mark segments or individual pages with access controls. (Read-only,
+non-execute, etc.)
+
+• How to prevent address space fragmentation?
+▪ We give each process its own address space.
+▪ When we context switch, we switch address spaces.
+43
+
+

@@ -1,0 +1,644 @@
+Reducibility 02
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Consider the following Turing machine:
+M1 = “On input x:
+1
+
+accept”
+
+What is the language of TM M1 ?
+L(M1 ) = Σ∗
+
+Why?
+Action
+Run M1 on input ε
+Run M1 on input 0
+Run M1 on input 1
+Run M1 on input 00
+Run M1 on input 01
+..
+.
+Because it accepts all strings
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Result
+accept
+accept
+accept
+accept
+accept
+..
+.
+
+Turing Machine
+Consider the following Turing machine:
+M2 = “On input x:
+1
+
+reject”
+
+What is the language of TM M2 ?
+L(M2 ) = ∅
+
+Why?
+Action
+Run M2 on input ε
+Run M2 on input 0
+Run M2 on input 1
+Run M2 on input 00
+Run M2 on input 01
+..
+.
+Because it rejects all strings
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Result
+reject
+reject
+reject
+reject
+reject
+..
+.
+
+Turing Machine
+Consider the following Turing machine:
+M3 = “On input x:
+1
+
+Enter infinite loop”
+
+What is the language of TM M3 ?
+L(M3 ) = ∅
+
+Why?
+Action
+Run M3 on input ε
+Run M3 on input 0
+Run M3 on input 1
+Run M3 on input 00
+Run M3 on input 01
+..
+.
+
+Result
+Loops indefinitely
+Loops indefinitely
+Loops indefinitely
+Loops indefinitely
+Loops indefinitely
+..
+.
+
+Because it loops indefinitely on all strings
+
+It does not accept or reject on all strings
+The language of a TM is the set of all strings accepted by it
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Consider the following Turing machine:
+M4 = “On input x:
+1
+2
+
+If x is in the form of 0n 1n , accept.
+If x is not in the form of 0n 1n , reject.”
+
+What is the language of TM M4 ?
+L(M4 ) = {0n 1n | n ≥ 0}
+
+Why?
+Action
+Run M4 on input ε
+Run M4 on input 0
+Run M4 on input 1
+Run M4 on input 00
+Run M4 on input 01
+Run M4 on input 10
+..
+.
+
+Result
+accept
+reject
+reject
+reject
+accept
+reject
+..
+.
+
+TM M4 only accepts ε, 01, 0011, 000111, 00001111, . . .
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Consider the following Turing machine:
+M5 = “On input x:
+1
+2
+
+If x starts with a 0, accept.
+Enter infinite loop.”
+
+What is the language of TM M5 ?
+L(M5 ) = 0Σ∗
+
+Why?
+Action
+Run M5 on input ε
+Run M5 on input 0
+Run M5 on input 1
+Run M5 on input 00
+Run M5 on input 01
+Run M5 on input 10
+..
+.
+
+Result
+Loops indefinitely
+accept
+Loops indefinitely
+accept
+accept
+Loops indefinitely
+..
+.
+
+TM M5 only accepts 0, 00, 01, 000, 001, 010, 011, 0000, . . .
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Consider the following Turing machine:
+M6 = “On input x:
+1
+2
+
+If x = ε , accept.
+reject.”
+
+What is the language of TM M6 ?
+L(M6 ) = {ε}
+
+Why?
+Action
+Run M6 on input ε
+Run M6 on input 0
+Run M6 on input 1
+Run M6 on input 00
+Run M6 on input 01
+Run M6 on input 10
+..
+.
+TM M6 only accepts ε
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Result
+accept
+reject
+reject
+reject
+reject
+reject
+..
+.
+
+Turing Machine
+Consider the following Turing machine:
+M7 = “On input x:
+1
+2
+
+If x 6= ε , accept.
+reject.”
+
+What is the language of TM M7 ?
+L(M7 ) = Σ∗ − {ε}
+
+Why?
+Action
+Run M7 on input ε
+Run M7 on input 0
+Run M7 on input 1
+Run M7 on input 00
+Run M7 on input 01
+Run M7 on input 10
+..
+.
+
+Result
+reject
+accept
+accept
+accept
+accept
+accept
+..
+.
+
+TM M7 accepts any string that is not the empty string
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Given a TM M and a string w, answer the following questions:
+1
+
+What is L(M )?
+
+2
+
+Is M a decider?
+
+3
+
+What is the result of running M on input w?
+
+We have no idea
+We have no idea
+We have no idea
+4
+
+Is hM, wi ∈ ATM ?
+We have no idea
+
+What do we know about the given TM M and a string w?
+Technically, we know almost nothing about M and w
+But we know that if we run TM M on input w, there are three
+possible outcomes:
+1
+2
+3
+
+M accepts w
+M rejects w
+M loops indefinitely on w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N1 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N1 ?
+We cannot answer this question
+The answer to the above question depends on whether
+M accepts w,
+M rejects w, or
+M loops indefinitely on w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N1 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N1 if M accepts w?
+L(N1 ) = Σ∗ if M accepts w
+
+Why?
+Action
+Run N1 on input ε
+Run N1 on input 0
+Run N1 on input 1
+Run N1 on input 00
+Run N1 on input 01
+..
+.
+
+Step 1 of TM N1
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+..
+.
+
+Step 1 Result
+accept
+accept
+accept
+accept
+accept
+..
+.
+
+TM N1 accepts all strings if M accepts w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Result
+accept
+accept
+accept
+accept
+accept
+..
+.
+
+Turing Machine
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N1 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N1 if M rejects w?
+L(N1 ) = ∅ if M rejects w
+
+Why?
+Action
+Run N1 on input ε
+Run N1 on input 0
+Run N1 on input 1
+Run N1 on input 00
+Run N1 on input 01
+..
+.
+
+Step 1 of TM N1
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+..
+.
+
+TM N1 rejects all strings if M rejects w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Step 1 Result
+reject
+reject
+reject
+reject
+reject
+..
+.
+
+Result
+reject
+reject
+reject
+reject
+reject
+..
+.
+
+Turing Machine
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N1 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N1 if M loops indefinitely on w?
+L(N1 ) = ∅ if M loops indefinitely on input w
+
+Why?
+Action
+Run N1 on input ε
+Run N1 on input 0
+Run N1 on input 1
+Run N1 on input 00
+Run N1 on input 01
+.
+.
+.
+
+Step 1 of TM N1
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+Run M on input w
+.
+.
+.
+
+Step 1 Result
+M loops indefinitely
+M loops indefinitely
+M loops indefinitely
+M loops indefinitely
+M loops indefinitely
+.
+.
+.
+
+Result
+N1 loops indefinitely
+N1 loops indefinitely
+N1 loops indefinitely
+N1 loops indefinitely
+N1 loops indefinitely
+.
+.
+.
+
+TM N1 loops indefinitely on all strings if M loops indefinitely
+on input w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N1 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N1 under the following
+assumptions:
+L(N1 ) = Σ∗
+If M accepts w
+L(N1 ) = ∅
+If M rejects w
+If M loops indefinitely on input w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+L(N1 ) = ∅
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N2 = “On input x:
+1
+2
+3
+
+If x = ε, accept
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N2 under the following
+assumptions:
+If M accepts w
+L(N2 ) = Σ∗
+L(N2 ) = {ε}
+If M rejects w
+If M loops indefinitely on input w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+L(N2 ) = {ε}
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N3 = “On input x:
+1
+2
+
+If x = ε, Run M on input w and accept if M does.
+reject.”
+
+What is the language of TM N3 under the following
+assumptions:
+L(N3 ) = {ε}
+If M accepts w
+L(N3 ) = ∅
+If M rejects w
+If M loops indefinitely on input w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+L(N3 ) = ∅
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N4 = “On input x:
+1
+
+2
+
+If x = ε, Run M on input w. if M accepts w, accept.
+Otherwise, reject.
+accept.”
+
+What is the language of TM N4 under the following
+assumptions:
+If M accepts w
+L(N4 ) = Σ∗
+L(N4 ) = Σ∗ − {ε}
+If M rejects w
+If M loops indefinitely on input w
+L(N4 ) = Σ∗ − {ε}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Turing Machine
+
+Suppose we have a TM M and a string w
+Consider the following Turing machine:
+N5 = “On input x:
+1
+2
+3
+
+If x is in the form of 0n 1n , accept
+If x is not in the form of 0n 1n , run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+What is the language of TM N5 under the following
+assumptions:
+L(N5 ) = Σ∗
+If M accepts w
+If M rejects w
+L(N5 ) = {0n 1n | n ≥ 0}
+L(N5 ) = {0n 1n | n ≥ 0}
+If M loops indefinitely on input w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+Conclusion
+
+Again, given a TM M and a string w, we know almost
+nothing about them
+If we construct a TM N that run M on input w, the behavior
+or language of TM N depends on whether
+1
+2
+3
+
+M accepts w
+M rejects w
+M loops indefinitely on input w
+
+What you have seen are some example of turning a TM M
+and a string w into a new TM
+Reducibility
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 02
+
+

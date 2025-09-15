@@ -1,0 +1,327 @@
+Decidability 02
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Languages
+
+EDFA
+Let EDFA = {hAi | A is a DFA and L(A) = ∅}. Show that EDFA
+is decidable.
+How do we know a DFA accepts no string?
+This machine has no accept state (F = ∅) or
+This machine has some accept states but are not reachable
+from the start state
+
+To show that EDFA is decidable, we need a Turing machine T
+such that
+If hAi ∈ EDFA , T accepts hAi
+If hAi 6∈ EDFA , T rejects hAi
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Not a Decider Example
+Consider this TM S:
+S = “On input hAi where A is a DFA:
+1
+2
+3
+
+For all strings w:
+Run TM M on input hA, wi
+If M accepts hA, wi, reject”
+
+Do you see the problem of TM S?
+TM S is not a decider
+Given hAi where A is a DFA and L(A) = ∅, S will run
+indefinitely
+
+For this problem:
+We may have to play around with its state diagram
+Create a Turing machine that analyze a DFA by marking all
+states reachable from the start state. If no accept state is
+marked, the DFA accepts no string
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Languages
+
+Consider the following TM T :
+T =“On input hAi, where A is a DFA:
+1
+2
+3
+
+4
+
+Mark the start state of A.
+Repeat until no new states get marked:
+Mark any state that has a transition coming into it from
+any state that is already marked.
+If no accept state is marked, accept; otherwise, reject.”
+
+We should not need to go down to the state diagram of a
+DFA unless it is necessary
+Rely on graph theory
+To prove, it must be based on graph theory
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Languages
+EQDFA
+Let EQDFA = {hA, Bi | A and B are DFAs and L(A) = L(B)}.
+Show that EQDFA is decidable.
+Given two DFAs A and B, is there any algorithm to check
+whether L(A) = L(B)?
+In other words, can we have a Turing machine F such that
+If hA, Bi ∈ EQDFA (L(A) = L(B)), F will accept hA, Bi and
+If hA, Bi 6∈ EQDFA (L(A) 6= L(B)), F will reject hA, Bi
+
+Again, we cannot simply run both DFAs on all strings until
+one accept but the other reject
+This may loop indefinitely
+
+Since L(A) and L(B) are sets, we need to use the set theory
+L(A) = L(B) iff L(A) ⊆ L(B) and L(B) ⊆ L(A)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Languages
+L(A) ⊆ L(B)
+L(B)
+L(A)
+L(B)
+
+From the above diagram L(A) ∩ L(B) = ∅
+L(B) ⊆ L(A)
+L(A)
+L(B)
+L(A)
+
+From the above diagram L(A) ∩ L(B) = ∅
+L(A) = L(B) iff (L(A) ∩ L(B)) ∪ (L(A) ∩ L(B)) = ∅.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+The set of regular languages
+Closed Under Complement:
+Given a DFA A = (Q, Σ, δ, q0 , F ) we can construct a DFA A0
+where L(A0 ) = L(A).
+A0 = (Q, Σ, δ, q0 , Q − F )
+
+Closed Under Union:
+Given two DFAs A = (QA , Σ, δA , qA , FA ) and
+B = (QB , Σ, δB , qB , FB ) we can construct a DFA
+C = (QC , Σ, δC , qC , FC ) where L(C) = L(A) ∪ L(B).
+QC = QA × QB
+δC ((qi , qj ), x) = (δA (qi , x), δB (qj , x)) where qi ∈ QA and
+qj ∈ QB .
+qC = (qA , qB )
+FC = {(qi , qj ) | qi ∈ FA or qj ∈ FB }.
+
+Closed Under Intersection:
+Same as Closed Under Union except that
+FC = {(qi , qj ) | qi ∈ FA and qj ∈ FB }.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Language
+To show that
+(L(A) ∩ L(B)) ∪ (L(A) ∩ L(B)) = ∅
+We need to construct a DFA C such that
+L(C) = (L(A) ∩ L(B)) ∪ (L(A) ∩ L(B))
+and check that L(C) = ∅ (hCi ∈ EDFA )
+This can be done by:
+1
+2
+3
+4
+5
+6
+
+Construct DFA D such that L(D) = L(B)
+Construct DFA E such that L(E) = L(A) ∩ L(D)
+Construct DFA F such that L(F ) = L(A)
+Construct DFA G such that L(G) = L(F ) ∩ L(B)
+Construct DFA C such that L(C) = L(E) ∪ L(G)
+Run T (a decider for EDFA ) on input hCi
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidable Languages
+
+For simplicity, we can simply construct a DFA C such that
+L(C) = (L(A) ∩ L(B)) ∪ (L(A) ∩ L(B))
+Again, we need to show that C accepts no string (L(C) = ∅)
+This is an example of a TM:
+F =“On input hA, Bi, where A and B are DFAs:
+1
+
+Construct DFA C such that
+L(C) = (L(A) ∩ L(B)) ∪ (L(A) ∩ L(B))
+
+2
+3
+
+Run TM T from Theorem 4.4 on input hCi.
+If T accepts hCi, accept. If T rejects hCi, reject.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Prove that EQ DFA is Decidable
+Prove that EQ DFA = {hA, Bi | A and B are DFAs and L(A) = L(B)} is decidable.
+Solution: Construct a TM F as follows:
+F =“On input hA, Bi, where A and B are DFAs:
+1
+
+Construct DFA C such that L(C) = (L(A) ∩ L(B)) ∪ (L(A) ∩ L(B))
+
+2
+
+Run TM T from Theorem 4.4 on input hCi.
+
+3
+
+If T accepts hCi, accept. If T rejects hCi, reject.
+
+Now, we need to prove that F is a decider for EQ DFA .
+1
+
+Assume that hA, Bi ∈ EQ DFA . Since hA, Bi ∈ EQ DFA , A and B are DFAs
+and L(A) = L(B). Since L(A) = L(B), according to the definition of the
+language of DFA C, L(C) = ∅. Since L(C) = ∅, hCi ∈ EDFA . By running T
+on input hCi, T will accept hCi. Since T accepts hCi, F accepts hA, Bi.
+
+2
+
+Assume that hA, Bi 6∈ EQ DFA . Since hA, Bi 6∈ EQ DFA , A and B are DFAs
+and L(A) 6= L(B). Since L(A) 6= L(B), according to the definition of the
+language of DFA C, L(C) 6= ∅. Since L(C) 6= ∅, hCi 6∈ EDFA . By running T
+on input hCi, T will reject hCi. Since T rejects hCi, F rejects hA, Bi.
+
+This shows that F is a decider for EQ DFA . Therefore, EQ DFA is decidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+Decidability
+So far we have the following Turing machines:
+1
+
+TM M that decides ADFA where
+ADFA = {hB, wi | B is a DFA that accepts w}
+
+2
+
+TM N that decides ANFA where
+ANFA = {hB, wi | B is an NFA that accepts w}
+
+3
+
+TM P that decides AREX
+AREX = {hR, wi | R is a regular expression that generates w}
+
+4
+
+TM T that decides EDFA
+EDFA = {hAi | A is an DFA and L(A) = ∅}
+
+5
+
+TM F that decides EQ DFA
+EQ DFA = {hA, Bi | A and B are DFAs and L(A) = L(B)}
+
+We can use these TMs as helper machines
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+ONE DFA
+How do we know that a DFA accepts exactly one string?
+This problem corresponds with the language ONE DFA as
+follows:
+ONE DFA = {hAi | A is a DFA and |L(A)| = 1}
+How to show that ONE DFA is decidable?
+Construct a TM M 0 such that
+1
+2
+
+If hAi ∈ ONE DFA , M 0 accepts hAi
+If hAi 6∈ ONE DFA , M 0 rejects hAi
+
+Note that we cannot run a DFA A on all string until it
+accepts a string because it may loop indefinitely
+But if L(A) 6= ∅, it will not loop indefinitely
+So, we need to check that the language of a given DFA is not
+empty first
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+ONE DFA
+
+Construct a TM M 0 as follows:
+M 0 = “On input hAi where A is a DFA:
+1
+2
+3
+
+4
+5
+6
+
+Run T on input hAi
+If T accepts hAi, reject.
+If T rejects hAi, run A on all inputs until it accepts an input
+string w
+Construct a DFA B such that L(B) = {w}
+Run F on input hA, Bi.
+If F accepts hA, Bi, accept. Otherwise, reject.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+ONE DFA
+Prove that if hAi ∈ ONE DFA , M 0 accepts hAi:
+Assume that hAi ∈ ONE DFA . Since hAi ∈ ONE DFA , A is a DFA and
+|L(A)| = 1. Since |L(A)| = 1, L(A) 6= ∅. Since L(A) 6= ∅, hAi 6∈ EDFA . Since
+T is a decider for EDFA , by running T on input hAi, T will reject hAi. Since
+|L(A)| = 1, by running A on all strings, it will eventually accept a string w.
+Since |L(A)| = 1 and A accepts w, L(A) = {w} which is the same as the
+language of B. Since L(A) = L(B), hA, Bi ∈ EQ DFA . By running F on input
+hA, Bi, F will accept hA, Bi. Since F accepts hA, Bi, M 0 accepts hAi.
+Prove that if hAi 6∈ ONE DFA , M 0 rejects hAi:
+Assume that hAi 6∈ ONE DFA . Since hAi 6∈ ONE DFA , A is a DFA and
+|L(A)| 6= 1. In other words, L(A) = ∅ or |L(A)| > 1.
+If L(A) = ∅, hAi ∈ EDFA . Since T is a decider for EDFA , by running T on
+input hAi, T will accept hAi. Since T accepts hAi, M 0 rejects hAi.
+If |L(A)| > 1, by running A on all strings, it will eventually accept a string w.
+Since |L(A)| > 1 and A accepts w, L(A) 6= {w} which is not the same as the
+language of B. Since L(A) 6= L(B), hA, Bi 6∈ EQ DFA . By running F on input
+hA, Bi, F will reject hA, Bi. Since F rejects hA, Bi, M 0 rejects hAi.
+This shows that M 0 is a decider for ONE DFA . Therefore, ONE DFA is decidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 02
+
+

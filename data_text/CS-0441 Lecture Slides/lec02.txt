@@ -1,0 +1,567 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #2: Propositional Logic
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topic: Propositional Logic
+n What is a proposition?
+n Logical connectives and truth tables
+n Translating between English and propositional logic
+
+Logic is the basis of all mathematical and analytical reasoning
+
+Given a collection of known truths, logic allows us to
+deduce new truths
+Example
+Base facts:
+If it is raining, I will not go outside
+If I am inside, Lisa will stay home
+Lisa and I always play video games if we are together during the
+weekend
+Today is a rainy Saturday
+
+Conclusion: Lisa and I will play video games today
+
+Logic allows us to advance mathematics through an
+iterative process of conjecture and proof
+
+Propositional logic is a very simple logic
+
+Definition: A proposition is a precise statement that is
+either true or false, but not both.
+Examples:
+l 2 + 2 = 4 (true)
+l All dogs have 3 legs (false)
+l x2 < 0 (false)
+l Washington, D.C. is the capital of the USA (true)
+
+Not all statements are propositions
+
+n Charlie is handsome
+l “Handsome” is a subjective term.
+
+n x3 < 0
+l True if x < 0, false otherwise.
+
+n Springfield is the capital
+l True in Illinois, false in Massachusetts.
+
+We can use logical connectives to build complex
+propositions
+
+We will discuss the following logical connectives:
+l ¬ (not)
+l Ù (conjunction / and)
+l Ú (disjunction / or)
+l Å (exclusive disjunction / xor)
+l ® (implication)
+l « (biconditional)
+
+Negation
+The negation of a proposition is true iff the proposition is
+false
+What we want
+to know
+
+What we know
+One row for
+each possible
+value of “what
+we know”
+
+p
+
+¬p
+
+T
+F
+
+F
+T
+
+The truth table for negation
+(I’ll sometimes use ⊤ and ⊥)
+
+Negation Examples
+Negate the following propositions
+l Today is Monday
+➣Today is not Monday
+
+l 21 * 2 = 42
+➣21 * 2 ¹ 42
+
+What is the truth value of the following propositions
+l ¬(9 is a prime number)
+➣true
+
+l ¬(Pittsburgh is in Pennsylvania)
+➣false
+
+Conjunction
+The conjunction of two propositions is true iff both
+propositions are true
+p
+
+q
+
+pÙq
+
+T
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+T
+
+F
+
+F
+
+F
+
+F
+
+The truth table for conjunction
+22 = 4 rows since we know both p and q!
+
+Disjunction
+The disjunction of two propositions is true iff at least one
+proposition is true
+p
+
+q
+
+pÚq
+
+T
+
+T
+
+T
+
+T
+
+F
+
+T
+
+F
+
+T
+
+T
+
+F
+
+F
+
+F
+
+The truth table for disjunction
+
+Conjunction and disjunction examples
+This symbol means “is defined as”
+or “is equivalent to”
+(sometimes I’ll use ≜)
+
+Let:
+
+l p º x2 ≥ 0
+l q º A lion weighs less than a mouse
+l r º 10 < 7
+l s º Pittsburgh is located in Pennsylvania
+
+What are the truth values of these expressions:
+lpÙq
+lpÙs
+lpÚq
+lqÚr
+
+false
+true
+true
+false
+
+In-class Exercises
+Problem 1: Let p º 2+2=5, q º eagles can fly, r º 1=1.
+Determine the value for each of the following:
+lpÙq
+l ¬p Ú q
+l p Ú (q Ù r)
+l (p Ú q) Ù (¬r Ú ¬p)
+
+Exclusive or (XOR)
+The exclusive or of two propositions is true iff exactly one
+proposition is true
+p
+
+q
+
+pÅq
+
+T
+
+T
+
+F
+
+T
+
+F
+
+T
+
+F
+
+T
+
+T
+
+F
+
+F
+
+F
+
+The truth table for exclusive or
+Note: Exclusive or is typically used to natural language to
+identify choices. For example “You may have a soup or
+salad with your entree.”
+
+Implication
+The implication p ® q is false if p is true and q is false,
+and true otherwise
+Terminology
+l p is called the hypothesis
+l q is called the conclusion
+
+p
+
+q
+
+p®q
+
+T
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+T
+
+T
+
+F
+
+F
+
+T
+
+The truth table for implication
+
+Implication (cont.)
+The implication p ® q can be read in a number of
+(equivalent) ways:
+l If p then q
+l p only if q
+l p is sufficient for q
+l q whenever p
+
+Implication examples
+Let:
+l p º Jane gets a 100% on her final exam
+l q º Jane gets an A on her final exam
+
+What are the truth values of these implications:
+lp®q
+lq®p
+
+true
+false
+
+Other conditional statements
+Given an implication p ® q:
+l q ® p is its converse
+l ¬q ® ¬p is its contrapositive
+l ¬p ® ¬q is its inverse
+
+Why might this
+be useful?
+
+Note: An implication and its contrapositive always have
+the same truth value
+
+Biconditional
+The biconditional p « q is true if and only if p and q assume the same
+truth value
+
+p
+
+q
+
+p«q
+
+T
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+T
+
+F
+
+F
+
+F
+
+T
+
+The truth table for the biconditional
+Note: The biconditional statement p « q is often read as
+“p if and only if q” or “p is a necessary and sufficient
+condition for q.”
+
+Truth tables can also be made for more complex expressions
+Example: What is the truth table for (p Ù q) ® ¬r?
+
+23 =
+
+8r
+ows
+
+Subexpressions of
+“what we want to
+know”
+
+What we want to know
+
+p
+
+q
+
+r
+
+pÙq
+
+¬r
+
+(p Ù q) ® ¬r
+
+T
+T
+T
+T
+F
+F
+F
+F
+
+T
+T
+F
+F
+T
+T
+F
+F
+
+T
+F
+T
+F
+T
+F
+T
+F
+
+T
+T
+F
+F
+F
+F
+F
+F
+
+F
+T
+F
+T
+F
+T
+F
+T
+
+F
+T
+T
+T
+T
+T
+T
+T
+
+Like mathematical operators, logical operators
+are assigned precedence levels
+1. Negation
+l
+
+¬q Ú r means (¬q) Ú r, not ¬(q Ú r)
+
+2. Conjunction
+3. Disjunction
+l
+
+q Ù r Ú s means (q Ù r) Ú s, not q Ù (r Ú s)
+
+4. Implication
+l
+
+q Ù r ® s means (q Ù r) ® s, not q Ù (r ® s)
+
+5. Biconditional
+In general, we will try to use parenthesis to
+disambiguate these types of expressions.
+
+In-class Exercises
+Problem 2: Show that an implication p ® q and its
+contrapositive ¬q ® ¬p always have the same value
+l Hint: Construct two truth tables
+
+Problem 3: Construct the truth table for the compound
+proposition p Ù (¬q Ú r) ® s
+
+English sentences can often be translated into propositional
+sentences
+But why would we do that?
+
+Reasoning about law
+Philosophy and epistemology
+
+Verifying complex system
+specifications
+
+Example #1
+
+Example: You can see an R-rated movie only if you are
+over 17 or you are accompanied by your legal guardian.
+Let:
+
+Find logical connectives
+
+Translate fragments
+l r º “You can see an R-rated movie”
+l o º “You are over 17”
+l a º “You are accompanied by your legal guardian”
+
+Translation: r ® (o Ú a)
+Create logical expression
+
+Example #2
+
+Example: You can have free coffee if you are senior
+citizen and it is a Tuesday
+Let:
+c º “You can have free coffee”
+n s º “You are a senior citizen”
+n t º “It is a Tuesday”
+n
+
+Translation: (s Ù t) ® c
+
+Example #3
+Example: If you are under 17 and are not accompanied
+by your legal guardian, then you cannot see the
+R-rated movie.
+Let:
+n r º “You can see the R-rated movie”
+n u º “You are under 17”
+n a º “You are accompanied by your legal guardian”
+Translation: (u Ù ¬a) ® ¬r
+Note: The above translation is the contrapositive of the
+translation from example 1!
+
+Logic also helps us understand bitwise operations
+n Computers represent data as sequences of bits
+l e.g., 0101 1101 1010 1111
+
+n Bitwise logical operations are often used to manipulate
+these data
+n If we treat 1 as true and 0 as false, our logic truth
+tables tell us how to carry out bitwise logical operations
+
+Bitwise logic examples
+1010 1110
+Ù 1110 1010
+1010 1010
+
+1110
+Ú 1010
+1110 1010
+1110 1110
+
+1110
+Å 1010
+1110 1010
+0100 0100
+
+In-class Exercises
+Problem 4: Translate the following sentences
+l If it is raining and today is Saturday then I will either play
+video games or watch a movie
+l You get a free salad only if you order off of the extended
+menu and it is a Wednesday
+
+Problem 5: Solve the following bitwise problems
+1000
+Å 1011
+1010 0110
+
+1000
+Ù 1011
+1010 0110
+
+Final Thoughts
+n Propositional logic is a simple logic that allows us to
+reason about a variety of concepts
+n In recitation:
+l More examples and practice problems
+l Be sure to attend!
+
+n Next:
+l Logic puzzles and logical equivalences
+l Please read sections 1.2 and 1.3
+➣In general: do the assigned reading!
+
+

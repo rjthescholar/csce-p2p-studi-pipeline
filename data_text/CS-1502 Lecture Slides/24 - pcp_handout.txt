@@ -1,0 +1,3024 @@
+Post Correspondence Problem
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Reducibility So Far
+
+To prove that ETM is undecidable, we need to show that if
+ETM is decidable, then ATM is decidable.
+1
+2
+
+Assume that ETM is decidable and obtain its decider R
+Construct TM S with the help of R to decide ATM
+This TM S takes hM, wi (an instance of ATM ) and construct
+a new TM M 0
+L(M 0 ) 6= ∅ if M accepts w
+L(M 0 ) = ∅ if M does not accepts w (either rejects or loops
+indefinitely)
+
+3
+4
+5
+
+Prove that TM S is a decider for ATM
+Conclude that ATM is decidable — contradiction
+Therefore, ETM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Mapping Reducibility So Far
+
+To prove that EQTM is undecidable, we need to show that
+ATM is mapping reducible to EQTM
+1
+
+Create a computable function f in the form of a TM F
+This TM F takes hM, wi (an instance of ATM ) and construct
+two TMs M1 and M2
+L(M1 ) = L(M2 ) if M accepts w
+L(M1 ) 6= L(M2 ) if M does not accepts w (either rejects or
+loops indefinitely)
+Output hM1 , M2 i (an instance of EQTM )
+
+2
+3
+
+Prove that hM, wi ∈ ATM ↔ hM1 , M2 i ∈ EQTM
+Since ATM is undecidable, EQTM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Reduction via Computation History
+
+To prove that ELBA is undecidable, we need to show that if
+ELBA is decidable, then ATM is decidable.
+1
+2
+
+Assume that ELAB is decidable and obtain its decider R
+Construct TM S with the help of R to decide ATM
+This TM S take hM, wi (an instance of ATM ) an construct a
+new LBA M 0
+This LBA M 0 only accepts the accepting computation history
+for M on input w
+L(M 0 ) 6= ∅ if M accepts w
+L(M 0 ) = ∅ if M does not accept w (either rejects or loops
+indefinitely)
+
+3
+4
+5
+
+Prove that S is a decider for ATM
+Conclude that ATM is decidable — contradiction
+Therefore, ELBA is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Common Theme
+
+All three methods so far share a common process
+Take hM, wi (an instance of ATM )
+Construct a new TM, TMs, or LBA
+Behaviors of new TM, TMs, or LBA depend on whether M
+accepts w
+
+Construct TM or TMs from TM M and string w are quite
+straightforward
+We can simply run M on input w
+
+Construct LBA from TM M and string w is not quite
+straightforward
+We cannot simply run M on input w
+Use computation history (sequence of configurations)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Post Correspondence Problem (PCP)
+A Post Correspondence Problem (PCP) is a problem
+concerning string manipulation.
+Consider a domino
+
+
+
+a
+ab
+There are two non-empty strings in each domino, one on the
+top and one on the bottom.
+Given a set of dominoes
+(      
+)
+b
+a
+ca
+abc
+,
+,
+,
+ca
+ab
+a
+c
+Is it possible to make a horizontal line of one or more
+dominoes, with duplicates allowed, so that the string obtained
+by reading across the top halves matches the one obtained by
+reading across the bottom?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Post Correspondence Problem (PCP)
+
+For this set of dominoes:
+(      
+)
+b
+a
+ca
+abc
+,
+,
+,
+ca
+ab
+a
+c
+There is a match as 
+shownbelow:
+ 
+
+a
+b
+ca
+a
+abc
+ab ca
+a
+ab
+c
+The following set of dominoes does not have a match:
+(
+   
+)
+abc
+ca
+acc
+,
+,
+ab
+a
+ba
+For obvious reason, each top string is longer than its bottom
+string.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Post Correspondence Problem (PCP)
+An instance P of PCP
+of dominoes
+(is a collection
+ 
+  )
+t1
+t2
+tk
+P =
+,
+,...,
+,
+b1
+b2
+bk
+A match is a sequence i1 , i2 , . . . , il such that
+ti1 ti2 . . . til = bi1 bi2 . . . bil
+As usual, we define PCP as a set
+P CP = {hP i | P is an instance of the Post Correspondence
+Problem with a match}.
+Is P CP decidable?
+Given an instance P (a set of dominoes) of PCP, can we
+decide whether P ∈ P CP or not?
+P ∈ PCP if P has a match
+P 6∈ PCP if P does not have a match
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Post Correspondence Problem (PCP)
+To prove that PCP is undecidable, we use the same method
+as what we did for other undecidable languages
+1
+2
+
+Assume that PCP is decidable and obtain its decider R
+Construct TM S with the help of R to decide ATM
+Take hM, wi (an instance of ATM ) and construct P an
+instance of PCP which is a set of dominos
+P has a match if M accepts w
+P does not have a match if M does not accept w
+
+3
+4
+5
+
+Prove that S is a decider for ATM
+Conclude that ATM is decidable — contradiction
+Therefore, PCP is undecidable
+
+Note that we have to construct a set of dominoes from TM
+M and string w
+This process is long but straightforward
+We also need to look at another closely related problem
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Modified Post Correspondence Problem (MPCP)
+A Modified Post Correspondence Problem (MPCP) looks
+exactly like PCP but the match is required to start with the
+first domino.
+An instance P of MPCP
+of dominoes
+( is acollection
+
+  )
+t1
+t2
+tk
+P =
+,
+,...,
+,
+b1
+b2
+bk
+A match is a sequence 1,i2 , i3 , . . . , il such that
+t1 ti2 . . . til = b1 bi2 . . . bil
+As usual, we define MPCP as a language
+M P CP = {hP i | P is an instance of the Post Correspondence
+Problem with a match that starts with he first
+domino}.
+We are going to construct P 0 (an instance of MPCP) from
+TM M and string w such that P 0 has a match if an only if M
+accepts w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Constructing a Set of Dominoes
+
+For simplicity, we are going to pick a specific TM M and a
+string w
+Construct a set of dominoes P 0 from M and w
+Verify that P 0 has a match if and only if M accepts w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+Consider the following TM M :
+0→R
+q0
+1, t → R
+
+q1
+
+1→L
+t
+
+qreject
+
+0→R
+
+→R
+
+qaccept
+
+The above machine:
+accept 00:
+q0 00 → 0q1 0 → 00qaccept
+reject 1:
+q0 1 → 1qreject
+loops indefinitely on 01:
+q0 01 → 0q1 1 → q0 01 → 0q 11 → . . .
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Computation History
+Recall that M accepts w if and only if accepting
+computation history for M on input w exists
+Since M (from previous slide) accepts 00, the accepting
+computation history for M on input 00 exists
+q0 00 → 0q1 0 → 00qaccept
+We can turn it into a string as
+#q0 00#0q1 0#00qaccept #
+This will be our match
+If the accepting computation history for M on input w exist,
+there is a match
+And the match looks exactly like the computation history
+
+If the accepting computation history for M on input w does
+not exist, there is no match
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Formal Definition of TM M
+
+The formal definition of the previous TM M is as follows:
+Q = {q0 , q1 }
+Σ = {0, 1}
+Γ = {0, 1, t}
+δ are as follows:
+δ(q0 , 0) = (q1 , 0, R)
+δ(q0 , 1) = (qreject , 1, R)
+δ(q0 , t) = (qreject , t, R)
+δ(q1 , 0) = (qaccept , 0, R)
+δ(q1 , 1) = (q0 , 1, L)
+δ(q1 , t) = (qreject , t, R)
+
+q0 is the start state
+qaccept
+qreject
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+For the TM M (from earlier slide) and the string 00, let’s
+construct a set of dominoes (an instance of MPCP):
+First, create the domino where the starting configuration is at
+the bottom part:
+
+
+#
+#q0 00#
+This is the first domino, a match must start with this
+domino.
+
+This is what we have so far:
+(
+)
+#
+#q0 00#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+Consider a configuration
+ucqav
+where u and v are strings, a and c are symbols in Γ, and q is
+a state
+Suppose M has a transition as follows:
+δ(q, a) = (r, b, R)
+The above configuration yields
+ucbrv
+If we put one of top of the other:
+ucqav
+qa
+the part that change from top to bottom is
+ucbrv
+br
+which will be our dominoes
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+For every a, b ∈ Γ and every q, r ∈ Q where q 6= qreject
+ 
+qa
+into the set
+if δ(q, a) = (r, b, R), put
+br
+There are five transitions that move the tape head to the right
+direction:
+
+
+δ(q0 , 0) = (q1 , 0, R) gives us
+
+q0 0
+0q1
+
+
+q0 1
+1qreject 
+q0 t
+δ(q0 , t) = (qreject , t, R) gives us
+tqreject
+
+
+q1 0
+δ(q1 , 0) = (qaccept , 0, R) gives us
+ 0qaccept 
+q1 t
+δ(q1 , t) = (qreject , t, R) gives us
+tqreject
+δ(q0 , 1) = (qreject , 1, R) gives us
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+This is what we have so far:
+(
+
+#
+,
+#q0 00#
+ 
+ 
+ 
+ 
+)
+
+q0 1
+q1 0
+q0 t
+q1 t
+q0 0
+,
+,
+,
+,
+0q1
+1qreject
+0qaccept
+tqreject
+tqreject
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+Consider a configuration
+ucqav
+where u and v are strings, c and a are symbols in Γ, and q is
+a state
+Suppose M has a transition as follows:
+δ(q, a) = (r, b, L)
+The above configuration yields
+urcbv
+If we put one of top of the other:
+ucqav
+cqa
+the part that change from top to bottom is
+urcbv
+rcb
+which will be our dominoes
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+For every a, b, c ∈ Γ and every q, r ∈ Q where q 6= qreject
+
+
+cqa
+if δ(q, a) = (r, b, L), put
+into the set
+rcb
+There is only one transition that move the tape head to the
+left direction:
+δ(q1 , 1) = (q0 , 1, L) gives us the following dominoes:
+
+ 
+
+
+
+0q1 1
+1q1 1
+tq1 1
+,
+, and
+q0 01
+q0 11
+q0 t1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+This is what we have so far:
+(
+
+#
+,
+#q0 00#
+
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+,
+,
+,
+,
+,
+0q1
+1qreject
+0qaccept
+tqreject
+tqreject
+
+ 
+ 
+)
+0q1 1
+1q1 1
+tq1 1
+,
+,
+q0 01
+q0 11
+q0 t1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+For every a ∈ Γ, put
+
+ 
+a
+into the set
+a
+
+Our Γ is {0, 1, t}, this gives us the following dominoes:
+   
+ 
+0
+t
+1
+,
+, and
+0
+1
+t
+
+ 
+ 
+#
+#
+Next, put
+and
+into the set
+#
+t#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+This is what we have so far:
+(
+
+#
+,
+#q0 00#
+ 
+ 
+
+ 
+ 
+
+q0 1
+q0 t
+q0 0
+q1 0
+q1 t
+,
+,
+,
+,
+,
+0q1
+1qreject
+0qaccept
+tqreject
+tqreject
+ 
+ 
+
+
+0q1 1
+1q1 1
+tq1 1
+,
+,
+,
+q0 01
+q0 11
+q0 t1
+         )
+0
+1
+t
+#
+#
+,
+,
+,
+,
+t
+#
+t#
+0
+1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+
+
+For every a ∈ Γ, put
+
+aqaccept
+qaccept
+
+
+
+
+and
+
+
+qaccept a
+into the set.
+qaccept
+
+This part gives us the following dominoes:
+
+ 
+ 
+ 
+ 
+ 
+
+0qaccept
+1qaccept
+tqaccept
+qaccept 0
+qaccept 1
+qaccept t
+,
+,
+,
+,
+,
+qaccept
+qaccept
+qaccept
+qaccept
+qaccept
+qaccept
+
+
+
+qaccept ##
+Lastly, simply add the domino
+#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+
+
+Post Correspondence Problem
+
+Converting a TM and a string to a set of dominoes
+For the TM M and the string 00, we get this set of dominoes:
+(
+
+#
+,
+#q0 00#
+
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q0 t
+q1 0
+q1 t
+,
+,
+,
+,
+,
+tqreject
+tqreject
+0q1
+1qreject
+0qaccept
+
+ 
+ 
+
+tq1 1
+0q1 1
+1q1 1
+,
+,
+,
+q0 01
+q0 11
+q0 t1
+         
+1
+#
+#
+0
+t
+,
+,
+,
+,
+,
+t#
+0
+1
+#
+t
+
+ 
+ 
+
+0qaccept
+1qaccept
+tqaccept
+,
+,
+,
+qaccept
+qaccept
+qaccept
+ 
+ 
+ 
+)
+
+qaccept 0
+qaccept 1
+qaccept t
+qaccept ##
+,
+,
+,
+qaccept
+qaccept
+qaccept
+#
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qreject
+0qaccept
+q0 01
+tqreject
+tqreject
+
+ 
+           
+ 
+
+#
+1q1 1
+tq1 1
+0
+1
+t
+#
+0qaccept
+1qaccept
+,
+,
+,
+,
+,
+,
+,
+,
+,
+q0 11
+q0 t1
+0
+1
+#
+qaccept
+qaccept
+t
+t#
+ 
+ 
+ 
+ 
+)
+
+tqaccept
+qaccept 0
+qaccept 1
+qaccept t
+qaccept ##
+,
+,
+,
+,
+qaccept
+qaccept
+qaccept
+qaccept
+#
+
+If we consider q0 , q1 , qaccept and qreject as symbols (not
+strings)
+We can categorize dominoes into three groups based on the
+length of the top string vs the bottom string
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+The top string is shorter than the bottom string:
+
+  
+#
+#
+,
+#q0 00#
+t#
+The top string and the bottom string have equal length:
+ 
+ 
+ 
+ 
+
+
+q0 1
+q1 0
+q0 t
+q1 t
+q0 0
+,
+,
+,
+,
+,
+0q1
+1qr
+0qa
+tqr
+tqr
+
+ 
+ 
+        
+0q1 1
+tq1 1
+t
+#
+1q1 1
+0
+1
+,
+,
+,
+,
+,
+,
+t
+q0 01
+q0 11
+q0 t1
+0
+1
+#
+The top string is longer than the bottom string:
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+0qa
+1qa
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+qa
+qa
+#
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+The set of dominoes
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+tqr
+tqr
+q0 01
+
+ 
+           
+ 
+
+1q1 1
+tq1 1
+0
+1
+t
+#
+0qa
+1qa
+#
+,
+,
+,
+,
+,
+,
+,
+,
+,
+q0 11
+q0 t1
+0
+1
+t
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+It was purely constructed from the definition of TM M and
+input string 00
+Given any TM M and a string w, we can use the same
+process to construct a set of dominoes
+Let’s play
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+#
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+#
+
+0
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+#
+
+0
+
+0
+
+qa
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+0
+
+qa #
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+qa #
+
+0
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+qa
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0
+
+qa #
+
+Post Correspondence Problem
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+qa
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+qa #
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+qa #
+
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+qa #
+
+#
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+The set of dominoes
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+#
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+
+
+ 
+           
+#
+#
+0qa
+1qa
+1q1 1
+tq1 1
+t
+0
+1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+#
+t#
+qa
+qa
+t
+q0 11
+q0 t1
+0
+1
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+The above set of dominoes was constructed from TM M and
+the string 00
+If M accepts 00, the accepting computation history for M on
+input 00 exists, results in a match
+If M does not accept 00, the accepting computation history
+for M on input 00 does not exists, results in no match
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+The set of dominoes
+The set of dominoes
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+#
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+,
+,
+,
+,
+,
+,
+,
+tqr
+tqr
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+ 
+           
+ 
+
+
+0
+1
+#
+0qa
+1qa
+tq1 1
+t
+1q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+,
+,
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+t
+
+ 
+ 
+ 
+ 
+)
+qa 0
+qa 1
+qa t
+qa ##
+tqa
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+Unfortunately, the above set of dominoes is an instance of
+MPCP not PCP
+If the above set of dominoes is an instance of PCP it has a
+match regardless of whether M accepts 00
+Can you see one?
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting P 0 of MPCP to P of PCP
+Now we have an instance P 0 of MPCP. We need to convert it
+to an instance of PCP.
+We need to enforce that the only match of P must start with
+a specific domino only.
+Let u = u1 u2 · · · un be any string of length n. Let
+?u = ∗ u1 ∗ u2 ∗ u3 ∗ · · · ∗ un
+u? =
+
+u1 ∗ u2 ∗ u3 ∗ · · · ∗ un ∗
+
+?u? = ∗ u1 ∗ u2 ∗ u3 ∗ · · · ∗ un ∗
+Example: Suppose u = 011
+?u = ∗ 0 ∗ 1 ∗ 1
+u? =
+
+0 ∗ 1 ∗ 1∗
+
+?u? = ∗ 0 ∗ 1 ∗ 1∗
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Converting P 0 of MPCP to P of PCP
+If P 0 were the collection
+(     
+ )
+t1
+t2
+t3
+tk
+,
+,
+,...,
+b1
+b2
+b3
+bk
+we let(P be the collection
+ 
+ 
+ 
+
+
+  )
+
+?t1
+?t2
+?t3
+?tk
+?
+?t1
+,
+,
+,
+,...,
+,
+?b1 ?
+b1 ?
+b2 ?
+b3 ?
+bk ?
+
+In doing so, the match can only start with
+
+
+?t1
+?b1 ?
+The only domino that top and bottom start with the same
+symbol (∗)
+ 
+?
+The domino
+allows us to add extra ∗ to the top at the
+
+end of the match.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Conclusion
+
+Assume that PCP is decidable. Thus, there exists TM R
+decides PCP.
+Construct TM S that decides ATM
+S =“On input hM, wi where M is a TM and w is a string:
+1
+
+2
+3
+
+Construct a set of dominoes P an instance of PCP from TM
+M and input w as we discussed
+Then run R on input hP i
+If R accepts hP i, accept
+If R rejects hP i, reject
+
+To prove that TM S a decider for ATM is straightforward
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+Conclusion
+Show that TM S is a decider for ATM
+1
+
+2
+
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M accepts
+w. Since M accepts w, the set of dominoes P constructed in
+step 1 will have a match. In other words, hP i ∈ PCP. Since R
+is a decider for PCP, by running R on input hP i, R will accept
+hP i. Since R accepts hP i, S accepts hM, wi.
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M does
+not accept w. Since M does not accept w, the set of
+dominoes P constructed in step 1 will have not have match. In
+other words, hP i 6∈ PCP. Since R is a decider for PCP, by
+running R on input hP i, R will reject hP i. Since R rejects
+hP i, S rejects hM, wi.
+
+This shows that S is a decider for ATM . Therefore, ATM is
+decidable — contradiction
+PCP is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+

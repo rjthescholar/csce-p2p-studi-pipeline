@@ -1,0 +1,1298 @@
+#15
+CS 0447
+Introduction to
+Computer Programming
+
+Multicycle Design
+Original slides by: David Wilkinson
+Modified with bits from: Bruce
+Childers, and Jarrett Billingsley
+
+Luís Oliveira
+
+Fall 2020
+
+Multicycle
+
+2
+
+Multicycle Design
+● Simply put: let instructions take more than one clock cycle to complete.
+
+Single-cycle
+
+PHOTO: https://www.straitstimes.com/asia/east-asia/china-scrambles-to-tame-rental-bike-chaos
+
+Multicycle?
+
+3
+
+Chop chop
+● Not all instructions take the same amount of time, so…
+● Make different instructions take different amounts of time!
+o And by that, we mean different numbers of clock cycles
+
+3 cycles
+
+j
+
+j
+
+4 cycles
+
+or
+
+or or or
+
+or
+
+100 cycles
+
+lw
+
+lw
+
+lw
+
+j
+
+lw
+
+lw
+
+lw
+
+lw
+lw
+
+lw
+
+lw
+
+lw
+
+lw
+
+lw
+
+l
+
+4
+
+The instructions' steps
+● Why would some instructions take less time?
+● Recall the five phases of execution?
+● All instructions have IF, ID, EX, but only some write to memory/regs
+o We’re managing their complexity with respect to time.
+
+beq/j
+
+F
+
+D
+
+X
+
+add/sub etc.
+
+F
+
+D
+
+X
+
+W
+
+lw
+
+F
+
+D
+
+X
+
+M
+
+M
+
+……..
+
+M
+
+M
+
+W
+
+Memory is slooooooow
+5
+
+The instructions' steps
+● Why would some instructions take less time?
+● Recall the five phases of execution?
+● All instructions have IF, ID, EX, but only some write to memory/regs
+o We’re managing their complexity with respect to time.
+
+beq/j
+
+IF
+
+ID
+
+EX
+
+add/sub etc.
+
+IF
+
+ID
+
+EX
+
+WB
+
+lw
+
+IF
+
+ID
+
+EX
+
+M
+
+WB
+
+(let's just say lw is 5 cycles :)
+6
+
+Multi-cycle CPU
+Calculate clock to accommodate a single phase.
+● Chop instructions and make the clock faster
+● Less time wasted by faster instructions! → Reduces latency
+
+Time
+
+0
+
+1
+
+lw t0,0(t1)
+
+Mem
+
+Reg
+
+add t2,t2,t3
+
+2
+
+3
+
+4
+
+Mem
+
+Reg
+
+5
+
+6
+
+Mem
+
+Reg
+
+7
+
+8
+
+Reg
+
+7
+
+Not all stages are the same 
+In the multi-cycle design:
+Slowest stage limits the rate
+Balanced stages are desired
+E.g. split the memory operation into multiple clock cycles
+
+Time
+
+lw t0,0(t1)
+
+0
+
+1
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+2
+
+3
+
+Mem
+
+Mem
+
+4
+
+Reg
+
+Reg
+
+8
+
+The multicycle datapath from a bird's-eye view
+
+● Each phase of execution has its own functional unit
+● between phases, we insert registers to hold onto the data for the next phase.
+(Recall registers ➔ sequential logic)
+
+Instruction
+Memory
+
+D
+
+Control
+
+F
+
+X
+
+M
+
+Register
+File
+
+Data
+Memory
+
+W
+9
+
+Watching an add (animated)
+● Let's watch an add instruction flow through the datapath!
+F
+
+Clock!
+
+D
+
+Clock!
+
+set all control
+signals...
+
+X
+
+Clock!
+
+M
+
+add...
+
+Instruction
+Memory
+
+Control
+
+add
+Register
+File
+
+Data
+Memory
+
+Clock!
+
+W
+data flows back to registers...
+10
+
+Watching a lw (animated)
+● Let's watch a lw instruction flow through the datapath!
+F
+
+Clock!
+
+D
+
+Clock!
+
+set all control
+signals...
+
+X
+
+Clock!
+
+add...
+
+M
+
+Clock!
+
+load...
+
+Instruction
+Memory
+
+Control
+
+lw
+Register
+File
+
+Data
+Memory
+
+W
+data flows back to registers...
+11
+
+CPI (and IPC)
+● CPI (Cycles Per Instruction) measures the average number of cycles it takes
+to complete one instruction
+● IPC (instructions per cycle) is its reciprocal
+o multi-issue CPUs can execute multiple instructions in one clock cycle!
+WOAH 8O
+● So, what's the CPI for the single-cycle implementation?
+o uh, 1.
+o By, yanno, definition.
+● What about for a multicycle implementation?
+o ……????? hmmm
+
+12
+
+So what the heck has this bought us?
+● Let's say our clock cycle time decreased from 5ns to 1ns!
+o that's from 200 MHz to 1 GHz! :D
+● ...buuut our CPI (cycles per instruction) increased a lot.
+o with the single-cycle datapath, CPI was always 1.
+o now the CPI is... well... uh... variable?
+
+beq/j
+
+IF
+
+ID
+
+EX
+
+add/sub etc.
+
+IF
+
+ID
+
+EX
+
+WB
+
+lw
+
+IF
+
+ID
+
+EX
+
+M
+
+if instructions vary in length,
+how do we calculate CPI?
+WB
+
+13
+
+Calculating Average CPI
+● Every program is different, and every program has a different instruction
+mix – how many of each kind of instruction it uses
+● Let's say we have a program where 60% of the instructions are ALU, 20% are
+branches, 15% are loads, and 5% are stores.
+ALU
+
+Branches
+
+Loads
+
+Stores
+
+%
+
+60%
+
+20%
+
+15%
+
+5%
+
+Cycles
+
+4
+
+3
+
+5
+
+4
+
+2. Now sum
+the CPIs
+
+CPI
+
+2.4
+
+0.2
+
+= 3.95
+
++
+
+0.6
+
++
+
+0.75
+
+1. for each category, multiply the proportion
+(percentage) by the number of cycles for that
+category to get the per-category CPI
+
++
+
+this is the Average
+CPI for THIS program.
+different mixes give
+different CPIs!
+14
+
+The performance equation
+● If we have n instructions, and each instruction takes CPI cycles, and each
+cycle takes t seconds, how long does it take to execute all the instructions?
+
+𝐶𝑃𝐼 cycles 𝑡 seconds
+Total time = 𝑛 instructions ×
+×
+instruction
+cycle
+= 𝑛 × 𝐶𝑃𝐼 × 𝑡 seconds
+or in English, it's the product of the instruction count, the
+CPI, and the length of one clock cycle
+
+15
+
+So how much better is it?!??!?
+● Say we execute 500 mega (500 × 106) instructions
+● For the single-cycle datapath:
+o CPI = 1
+o cycle time = 5ns (5 x 10-9 s)
+o total time = n × CPI × cycle time
+▪ = (500 × 106) × (1) × (5 × 10-9)
+▪ = 2.5 seconds.
+● For the multicycle datapath:
+o CPI = 3.95 (much higher!) (again, this CPI is only for this program)
+o cycle time = 1ns (much lower!)
+o total time = (500 × 106) × (3.95) × (1 × 10-9)
+o = 1.975 seconds!
+
+16
+
+How does it look like?
+
+17
+
+Multicycle Datapath + Control (no control flow)
+● A potential example of a multicycle control for MIPS:
+
+o Additional registers and multiplexers hold and then direct temporary data.
+
+A single ALU
+
+A single Shared Memory
+
+Figure 5.26 in P&H 3e
+
+18
+
+Multicycle Datapath + Control (no control flow)
+● A potential example of a multicycle control for MIPS:
+
+o Additional registers and multiplexers hold and then direct temporary data.
+
+Registers are added between
+functional units to store data
+That needs to be used in the
+following clock cycle
+
+Figure 5.26 in P&H 3e
+
+19
+
+Multicycle Datapath + Control (no control flow)
+● A potential example of a multicycle control for MIPS:
+
+o Additional registers and multiplexers hold and then direct temporary data.
+A MUX to connect either
+the PC or the Register File
+
+Using a single ALU requires a
+change in the hardware
+design.
+
+A larger MUX to include PC
+increment and adding
+the branch offsets
+
+Figure 5.26 in P&H 3e
+
+20
+
+Multicycle Datapath + Control (with control flow)
+
+Now we support
+jump instructions ☺
+
+Figure 5.28 in P&H 3e
+
+21
+
+Multicycle Datapath + Control (with control flow)
+
+Figure 5.28 in P&H 3e
+
+22
+
+Signals
+Signal
+
+Effect
+
+MemRead
+
+Read from memory ➔ 0: Don’t read; 1: Read
+
+MemWrite
+
+Write to memory ➔ 0: Don’t write; 1: Write
+
+ALUSelA
+
+Select input of ALU input A ➔ 0: $pc ; 1: register A
+
+RegDst
+
+Select destination register ➔ 0: $rt (I-Type); 1: $rd (R-Type)
+
+RegWrite
+
+Register-file write enable ➔ 0: Don’t write; 1: Write
+
+MemToReg
+
+Select data to write to the register-file➔ 0: ALU; 1: Memory
+
+IorD
+
+Select the source for the memory address to be accessed ➔ 0: PC (instruction);
+1: ALU (lw/sw/lh/lhu/sh/lb/lbu/sb)
+
+IRWrite
+
+Instruction register write enable ➔ 0: Don’t write; 1: Write
+
+PCWrite
+
+PC unconditional write enable (jumps/PC=PC+4) ➔ 0: No effect; 1: Jump
+
+PCWriteCond
+
+PC conditional write enable (branches) ➔ 0: No effect; 1: Jump conditionally
+23
+
+(More) signals
+Signal
+ALUSelB
+
+ALUOp
+
+PCSource
+
+Effect
+00
+
+ALU input B comes from $rt
+
+01
+
+ALU input B is the constant 4
+
+10
+
+ALU input B comes from the Immediate field
+
+11
+
+ALU input B comes from the Immediate field shifted left 2 (branch)
+
+00
+
+ALU does an addition
+
+01
+
+ALU does an subtraction
+
+10
+
+ALU behaviour depends on the function field (R-Type)
+
+00
+
+PC is updated with the result of the ALU (Fetch: PC+4)
+
+01
+
+PC is updated with the result of the ALU (PC = PC + branch offset)
+
+10
+
+PC is updated with the Jump target (jump)
+24
+
+Fetch and decode
+
+25
+
+Fetch Instruction
+
+00
+
+Increment PC
+Read instruction
+from memory
+
+01
+
+00
+26
+
+Decode Instruction
+Controller does its thing
+
+00
+
+Maybe it’s
+a branch?
+
+11
+
+ALU adds PC (incremented in IF)
+to potential branch offset.
+Just in case!
+
+00
+27
+
+R-Type
+
+28
+
+Execute Instruction
+
+00
+
+ALU adds
+registers A and B
+
+00
+
+add
+
+s0, s1, s2
+
+10
+29
+
+Write Back
+
+00
+
+ALU result is written
+back into the
+Register File
+
+00
+
+add
+
+s0, s1, s2
+
+00
+30
+
+I-Type
+lw
+
+31
+
+Execute Instruction
+
+00
+
+ALU adds registers A
+and Imm to calculate
+effective address
+
+10
+
+lw
+
+s0, 4(s1)
+
+00
+32
+
+Memory access
+
+00
+
+ALU result is used
+as the address.
+Memory is read.
+
+00
+
+lw
+
+s0, 4(s1)
+
+00
+33
+
+Write back
+
+00
+
+Data read from memory
+is written into the
+Register File
+
+lw
+
+s0, 4(s1)
+
+00
+
+00
+34
+
+I-Type
+beq
+
+35
+
+Execute Instruction – Branch conclusion
+
+01
+
+ALU subtracts registers
+A and B if the result is
+zero, then branch
+
+00
+
+beq
+
+s0, s1, label
+
+01
+36
+
+J-Type
+jump
+
+37
+
+Execute Instruction – Jump
+
+10
+
+Jump
+
+00
+
+j
+
+target
+
+00
+38
+
+Multicycle Control
+● How are control signals generated on each cycle?
+o Single-cycle: Signals don’t change during each instruction
+▪ Combinational circuit
+o Multi-cycle: Signals change during each instruction
+▪ Different signals each clock cycle
+Sequential circuit → Needs to remember what it did before
+● What are the transitions between cycles?
+o (i.e., what happens next?)
+● How to describe this behaviour?
+o State machine!
+
+39
+
+Tick-tock
+
+D
+
+opcode
+
+transition
+logic
+
+RegWrite
+….
+IRWrite
+
+Q
+
+state
+register
+
+ALUSrcA
+output
+logic
+
+40
+
+Multicycle Control
+Finite State Machine
+Each Cycle: Advance one state
+Whilst in a State:
+•
+Set datapath control
+•
+Make decision based on opcode
+•
+Control is different after Decode
+
+DECODE
+/ REG.
+READ
+
+FETCH
+
+R-Type
+
+load/store
+CALC.
+ADDR.
+load
+READ
+MEM
+
+WRITE
+BACK
+MEM
+
+EXEC.
+ALU
+
+branch
+BRANCH
+COMPL.
+
+jump
+JUMP
+COMPL.
+
+store
+WRITE
+MEM
+
+WRITE
+BACK
+ALU
+
+MIPS has >100 instructions
+Some can take >20 clock cycles!!
+Making the state machine a bit more complex ☺
+
+41
+
+Performance
+
+42
+
+The layman's understanding
+● your ancient computer takes 30 seconds to open the browser
+● you get a new computer. it opens the browser in 3 seconds.
+o which computer is faster?
+
+yeah but this is computer science, not computer guessing.
+43
+
+Old stuff!!
+● you wanna copy a CD as many times as you can in 12 minutes
+● both the PC and this... thing take 4 minutes to copy
+● which device will make more copies in 12 minutes? why?
+o numbers usually mean we're getting more science-y, right?
+
+44
+
+Response time and throughput
+● response time is the length of time from start to finish
+● throughput is the amount of work you can do in a span of time
+
+response time
+(time per task) 3s
+
+30 seconds
+
+they're not quite
+reciprocals of each
+other; their
+relationship is a
+little more complex
+
+throughput
+(tasks per time)
+
+12 minutes
+45
+
+Response time can improve throughput!
+● you put a brand new 52X CD burner in your sweet Dell. it burns a CD in only
+2 minutes.
+4min
+
+4min
+
+4min
+
+2min 2min 2min 2min 2min 2min
+
+● the response time for a single CD burn is improved, but this also
+causes our throughput to double!
+● this is because the measurement period stayed the same (12min)
+
+46
+
+Throughput can improve response time!
+● someone wants you to make them 20 copies ASAP
+● how long would it take with one CD duplicator?
+● how long would it take with two?
+4min 4min 4min 4min 4min
+4min 4min 4min 4min 4min
+
+4min 4min 4min 4min 4min
+
+with one:
+20min
+
+4min 4min 4min 4min 4min
+4min 4min
+
+4min 4min
+4min 4min
+4min 4min
+
+with two:
+12min
+
+this is because the
+workload stayed the
+same (20 copies)
+47
+
+Applying it to a CPU
+● the CPU's job is to run instructions. so we could…
+o do each instruction faster (i.e. reduce latency)
+o do more instructions at once (i.e. increase throughput)
+● for a long time, we did the former…
+o clock speeds increased by 2 orders of magnitude since ~1990
+▪ I had a 33MHz! 80486 PC
+● but then we hit a wall.
+o and that's when multi-core CPUs became common.
+
+48
+
+Reducing latency
+● you put a new Pentium 4 in your sweet Dell. it executes a single instruction in
+only 0.8 nanoseconds.
+1.6ns
+.8ns
+
+.8ns
+
+if each instruction takes only
+0.8ns, that means 0.8ns between
+clock pulses. How fast is the
+clock running?
+
+1.6ns
+
+.8ns
+
+.8ns
+
+1
+0.8 × 10−9 𝑠
+
+1.6ns
+.8ns
+
+.8ns
+
+= 1.25 × 109 𝐻𝑧
+= 1.25 𝐺𝐻𝑧
+
+49
+
+But is this efficient?
+
+50
+
+Multi-cycle lw (animated)
+● Let's watch a lw instruction flow through the datapath!
+
+lw
+Instruction
+Memory
+
+D
+
+Clock!
+
+R
+e
+g
+i
+s
+t
+e
+r
+s
+
+set all control
+signals...
+
+Control
+
+F
+
+Register
+File
+
+Clock!
+
+R
+e
+g
+i
+s
+t
+e
+r
+s
+
+Clock count: 3
+4
+5
+0
+1
+2
+
+X
+
+Clock!
+
+Calculate
+eff addr... R
+
+M
+load...
+
+e
+g
+i
+s
+t
+e
+r
+s
+
+Data
+Memory
+
+Clock!
+
+R
+e
+g
+i
+s
+t
+e
+r
+s
+
+W
+
+data flows back to registers...
+51
+
+Real-World Analysis
+
+52
+
+Another example
+.data
+A:
+B:
+.text
+
+loop:
+
+.word 10,20,30,40,50,60,70,80,90,100
+.word 0,0,0,0,0,0,0,0,0,0
+la
+$s0,A
+li
+$s1,10
+li
+$s2,10
+lw
+$t0,0($s0)
+mul $t0,$t0,$s1
+sw
+$t0,40($s0)
+addi $s0,$s0,4
+addi $s2,$s2,-1
+bne $s2,$0,loop
+li
+$v0,10
+syscall
+
+# address of A
+# A[i] * 10
+# iteration
+# read A[i]
+# $t0=A[i]*10
+# update A[i]
+# next element
+# dec iteration
+# done?
+# exit syscall
+# syscall
+53
+
+Another example
+.data
+A:
+B:
+.text
+
+loop:
+
+.word 10,20,30,40,50,60,70,80,90,100
+.word 0,0,0,0,0,0,0,0,0,0
+#
+la
+$s0,A
+# address of A
+li
+$s1,10
+# A[i] * 10
+li
+$s2,10
+# iteration
+lw
+$t0,0($s0)
+# read A[i]
+mul
+$t0,$t0,$s1
+# $t0=A[i]*10
+sw
+$t0,40($s0)
+# update A[i]
+addi $s0,$s0,4
+# next element
+addi $s2,$s2,-1
+# dec iteration
+bne
+$s2,$0,loop
+# done?
+li
+$v0,10
+# exit syscall
+syscall
+# syscall
+
+instr. count
+2
+1
+1
+10
+10
+10
+10
+10
+10
+1
+1
+54
+
+Another example
+● Let’s analyze the program.
+● How much time with a Single-Cycle design?
+1. What’s the clock length?
+▪ Assume a clock speed of 100 MHz (cycle length is 1/100MHz, or 10ns)
+2. What’s the cycles per instruction?
+▪ CPI: 1 (single-cycle! yay!)
+
+● Thus this program executes in this much time:
+o 66 instructions * 1 CPI * 10 ns = 660ns
+
+55
+
+Another example
+● How much time with a Multicycle design?
+1. We need to know the clock length (what is the clock speed?)
+Let’s just assume the ideal efficiency: divide the clock length by 5.
+▪ (Because we said loads, the slowest, take 5 cycles while arithmetic takes 4)
+▪ AKA multiply the clock speed by 5 to 500 MHz
+▪ Either way, the clock length is 10ns / 5 = 2ns
+
+2. What’s the CPI?
+▪ We need to know how many of each type there are. Look at the program.
+▪ Arithmetic: 36, Branches: 10, Loads: 10, Stores: 10
+▪ There’s a different # of cycles per each type (4, 3, 5, and 4 respectively)
+● Thus this program executes in this much time:
+o 36*4*2ns + 10*3*2ns + 10*5*2ns + 10*4*2ns = 528ns
+● Multicycle, here, let’s us improve our program execution
+from 660ns to 528ns (20% reduction!)
+56
+
+doo-doo-doo doo-doo-doo-doo-doo
+● not bad! I guess?
+I mean, we increased the clock speed by a factor of 5...
+and we only got 20% reduction on execution time
+if our CPI were also close to 1, it'd be 10 times as fast as the single-cycle
+machine...
+▪ How do we increase throughput…
+▪ HMMMMMMMMMMMMMMMMMMMMMM…
+
+57
+
+

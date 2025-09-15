@@ -1,0 +1,145 @@
+CS 0007: Introduction to Java
+Lecture 5
+Nathan Ong
+University of Pittsburgh
+September 15, 2016
+
+and the Application Programming Interface (API)
+
+STRINGS
+
+Strings
+• A length of characters encased in
+quotation marks.
+String name = "Nathan";
+
+Application Programming
+Interface
+• The Java “dictionary”
+• http://docs.oracle.com/javase/8/docs/
+api/
+
+What Can I Do with It?
+• Look up relevant classes (e.g. String) for
+their relevant functions/methods.
+
+An Example
+• What is the 4th character of "Nathan"
+and how do I get it?
+• Check the API
+
+Code Example
+public class Name
+{
+public static void main(String[] args)
+{
+String name = "Nathan";
+System.out.println(name.charAt(4));
+}//end method main
+}//end class Name
+
+There’s one slight issue
+
+Counting in Java
+The first character in the series is at the
+0th index
+
+Code Example
+public class Name
+{
+public static void main(String[] args)
+{
+String name = "Nathan";
+System.out.println(name.charAt(3));
+}//end method main
+}//end class Name
+
+The 4th character is at the 3rd index
+
+Code Example
+
+Another Example
+• How do I get "urge" from "hamburger"?
+• (It’s a substring)
+• Check the API
+
+Re-Counting in Java
+The first character in the substring is at
+the 4th index
+
+Re-Counting in Java
+The last character in the substring is at
+the 7th index
+
+Another Example
+public class DriveThru
+{
+public static void main(String[] args)
+{
+String fastFood = "hamburger";
+System.out.println(fastFood.substring(4,7));
+}//end method main
+}//end class DriveThru
+
+There’s one slight issue
+“The substring begins at the specified beginIndex and
+extends to the character at index endIndex – 1”
+Where can I find this information?
+
+Re-Counting in Java
+The last character in the substring is at
+the 7th index  endIndex – 1 = 7
+
+Another Example
+public class DriveThru
+{
+public static void main(String[] args)
+{
+String fastFood = "hamburger";
+System.out.println(fastFood.substring(4,8));
+}//end method main
+}//end class DriveThru
+
+.
+
+Another Example
+
+You must learn to embrace the
+API
+
+Math Class
+
+Remember from before
+• The caret (^) does NOT indicate
+exponentiation
+• In other words, in Java, 2^3 does not
+equal 8
+• There is another way to do
+exponentiation; maybe it is in the Math
+class?
+
+Math Example
+public class MorePower
+{
+public static void main(String[] args)
+{
+double base = 2.0;
+double exponent = 3.0;
+System.out.println(Math.pow(base,exponent));
+}//end method main
+}//end class MorePower
+
+.
+
+Math Example
+
+When to Use the Variable/Class
+Name
+• Does the “Modifier and Type” column of
+the method say “static”?
+– Yes: Use Class name (typically uppercase
+first letter)
+– No: Use variable name (typically lowercase
+first letter)
+
+

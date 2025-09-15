@@ -1,0 +1,335 @@
+Turing Machine 04
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Recognizable and Decidable
+Given a language R, if some Turing machines accept every
+strings s ∈ R and does not accept (either reject or loop
+indefinitely) every string s 6∈ R, we say that “R is
+recognizable”
+Note that these machines must accept on all input s ∈ R
+However, if s 6∈ R, these machines either reject or loop
+infinitely
+
+Given a language D, if some Turing machine accept every
+strings s ∈ D and rejects every string s 6∈ D, we say that “D
+is decidable”
+Note that these Turing machines must be deciders
+These machine either accept or reject on all input strings
+These machine will not loop indefinitely on any strings
+
+If D is decidable, D is also recognizable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Decidable Language
+
+Following languages are examples of decidable languages:
+n
+
+A = {02 | n ≥ 0}
+B = {w#w | w ∈ Σ∗ }
+
+We already demonstrated that there exists Turing machines
+(deciders) that decide above languages
+There are some languages that are recognizable but not
+decidable
+Suppose R is recognizable but not decidable
+There are TMs that accept all strings in R and does not
+accept all strings not in R
+No TM can accept all strings in R and reject all strings not
+in R
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Undecidable Language
+Consider a polynomial:
+6x3 yz 2 + 3xy 2 − x3 − 10
+A root of a polynomial is an assignment to its variables which
+results in that value of polynomial is 0
+A polynomial has an integral root if all variables are assigned
+integer values
+The above polynomial has an integral root x = 5, y = 3, and
+z=0
+
+Given a polynomial with an integral root, can you find out
+its root?
+Yes, brute force
+
+Given a polynomial, can you find out whether it has an
+integral root?
+Not always
+Hilbert’s tenth problem stated that there is no algorithm that
+tests whether a polynomial has an integral root.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Undecidable Language
+Let hxi be a string representation of the object x
+Let D be the set of all string representations of polynomials
+that have integral root
+Formally
+D = {hpi | p is a polynomial with an integral root}
+Given hpi (a string representation of a polynomial p), if a
+Turing machine can decide whether
+hpi ∈ D (polynomial p has an integral root) or
+hpi 6∈ D (polynomial p does not have an integral root)
+
+D is decidable
+Hilbert’s tenth problem simply stated that D is not decidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Undecidable Language
+Consider polynomials with one variable (e.g., 2x2 + x − 7)
+Let
+D1 = {hpi | hpi is a polynomial over x with an integral root}
+Is D1 recognizable?
+Yes, if there exists a Turing machine that accepts every
+hpi ∈ D1 and does not accept every hpi 6∈ D1
+
+Example: M1 that recognizes D1 using a brute force
+algorithm in high-level definition
+M1 =“On input hpi where p is a polynomial over the variable
+x:
+1
+
+Evaluate p with x set successively to the value 0, 1, -1, 2, -2, 3,
+-3, . . . . If at any point the polynomial evaluates to 0, accept”
+
+Note that M1 accepts all hpi ∈ D1 and loop indefinitely on all
+hpi 6∈ D1
+Therefore, D1 is recognizable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Undecidable Language
+Consider polynomials with one variable (e.g., 2x2 + x − 7)
+Let
+D1 = {hpi | hpi is a polynomial over x with an integral root}
+Is D1 decidable?
+Yes, if there exists a Turing machine that accepts every
+hpi ∈ D1 and rejects every hpi 6∈ D1
+
+Luckily there is an upper/lower bound of the value of x that a
+machine needs to test:
+±k cmax
+c1
+where k is the number of terms in the polynomial, cmax is the
+coefficient with the largest absolute value, and c1 is the
+coefficient of the highest order term
+Change M1 such that it rejects after testing value goes
+out-of-bound
+Therefore, D1 is decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Undecidable Language
+Let D be the set of all polynomials that have integral root
+D = {hpi | hpi is a polynomial with an integral root}
+We can create a machine that tries all possible assignment
+values starting from 0s
+For example, in case of two variables x and y, try the following
+values [x, y]:
+[0, 0], [0, 1], [1, 0], [1, 1], [0, −1], [−1, 0], [−1, −1], [0, 2], . . .
+If a polynomial p has an integral root, eventually it will be
+evaluated to 0
+
+Therefore, D is recognizable
+Unfortunately, there is no bound that we can check and
+machine may loop infinitely
+If the polynomial p does not have an integral root, we will keep
+trying new values of [x, y] forever (loop indefinitely)
+
+D is not decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Describing Turing Machines
+A description of a Turing machine can be huge even for a very
+simple algorithm
+Example, compare two strings {w#w | w ∈ {0, 1}∗ }
+
+1
+
+x,
+R
+
+q1
+
+0
+
+R
+x,
+
+→
+
+→
+
+#→R
+
+0, 1 → R
+
+x→R
+
+x→R
+
+q8
+
+q2
+#→R
+
+t
+
+#→R
+
+qaccept
+
+q4
+
+0, 1 → R
+
+q3
+
+→R
+q5
+
+0
+1
+
+L
+x,
+
+→
+
+→
+
+x,
+
+L
+
+x→R
+
+0, 1, x → L
+
+q6
+#→L
+x→R
+
+q7
+
+0, 1 → L
+
+The above state diagram represents the formal description in
+a form of state diagram of a Turing machine
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Describing Turing Machines
+
+An implementation description of the previous Turing
+machine that decides {w#w | w ∈ {0, 1}∗ } is shown below
+On input string w:
+1
+
+2
+
+Zig-zag across the tape to corresponding positions on either
+side of the # symbol to check whether those positions contain
+the same symbol. If they do not, or if no # is found, reject.
+Cross off symbols as they are checked to keep track of which
+symbols correspond.
+When all symbols to the left of the # have been crossed off,
+check for any remaining symbols to the right of the #. If any
+symbols remain, reject; otherwise, accept.
+
+Note that the above description describes the way the Turing
+machine moves its head and store data (cross off symbols)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Describing Turing Machines
+An high-level description of the previous Turing machine
+that decides {w#w | w ∈ {0, 1}∗ } is shown below:
+M =“On input s where s = x#y for some string x and y:
+1
+2
+
+Compare whether the string x is identical to the string y.
+If they are identical, accept; otherwise, reject.”
+
+Note that the where clause behaves like a filter
+Any string that does not satisfy the where clause will be
+rejected immediately
+
+What a TM can do?
+From the Church-Turing thesis, if there is an algorithm to do
+something, a TM can do the same thing
+Examples:
+Compare two strings
+Check whether the length of a string is a power of 2
+Addition, subtraction, multiplication, division, modulo
+Any algorithms discussed in Chapter 1
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Describing Turing Machines
+
+High-level description of a Turing machine is suitable for
+describing universal Turing machine
+Consider the following language:
+A = {x1 #x2 # . . . #xn | xi = xj for every i and j}
+The following machine M 0 decides A using TM M as a
+subroutine:
+M 0 =“On input s where s = x1 #x2 # . . . #xn :
+1
+2
+3
+4
+
+For every i where 1 ≤ i ≤ n − 1:
+Run M on input xi #xi+1 .
+If M rejects, reject.
+accept”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+Conclusions
+
+Algorithm and Turing Machine are consider equivalent
+Anything that an algorithm can do, there exists a TM that can
+do the same thing
+Simply convert the algorithm to TM
+
+Anything that a Turing machine can do, there exists an
+algorithm that can do the same thing
+Simply convert the TM to algorithm
+
+Because of this, if there is a problem that a TM cannot solve,
+no algorithm can solve the same thing
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 04
+
+

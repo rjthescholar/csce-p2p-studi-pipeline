@@ -1,0 +1,1339 @@
+SIMD and GPUs
+CS 1541
+Wonsun Ahn
+
+SIMD Architectures
+
+2
+
+ISA not optimized for data parallel workloads
+● This loop does multiply accumulate (MAC):
+for (int i = 0; i < 64; i++) {
+y[i] = a * x[i] + y[i]
+}
+o A common operation in digital signal processing (DAXPY)
+● Note how we apply the same MAC operation on each data item
+o This is how many data parallel workloads look like
+● A conventional ISA (likes MIPS) is not optimal for encoding this
+o Results in wasted work and suboptimal performance
+o Let’s look at the actual MIPS translation
+
+3
+
+MIPS code for 𝒚 𝒊 = 𝒂 ∗ 𝒙 𝒊 + 𝒚 𝒊
+l.d
+$f0,0($sp)
+;$f0 = a
+addi $s2,$s0,512
+;64 elements (64*8=512 bytes)
+loop: l.d
+$f2,0($s0)
+;$f2 = x(i)
+mul.d $f2,$f2,$f0
+;$f2 = a * x(i)
+l.d
+$f4,0($s1)
+;$f4 = y(i)
+add.d $f4,$f4,$f2
+;$f4 = a * x(i) + y(i)
+s.d
+$f4,0($s1)
+;y(i) = $f4
+addi $s0,$s0,8
+;increment index to x
+addi $s1,$s1,8
+;increment index to y
+subu $t0,$s2,$s0
+;evaluate i < 64 loop condition
+bne
+$t0,$zero,loop ;loop if not done
+● Blue instructions don’t do actual computation. There for indexing and loop control.
+o Is there a way to avoid? Loop unrolling yes. But that causes code bloat!
+● Red instructions do computation. But why decode them over and over again?
+o Is there a way to fetch and decode once and apply to all data items?
+4
+
+SIMD (Single Instruction Multiple Data)
+● SIMD (Single Instruction Multiple Data)
+o An architecture for applying one instruction on multiple data items
+o ISA includes vector instructions for doing just that
+▪ Along with vector registers to hold multiple data items
+
+● Using MIPS vector instruction extensions:
+l.d
+$f0,0($sp)
+lv
+$v1,0($s0)
+mulvs.d $v2,$v1,$f0
+lv
+$v3,0($s1)
+addv.d $v4,$v2,$v3
+sv
+$v4,0($s1)
+
+;$f0 = scalar a
+;$v1 = vector x (64 values)
+;$v2 = a * vector x
+;$v3 = vector y (64 values)
+;$v4 = a * vector x + vector y
+;vector y = $v4
+
+o Note: no indexing and loop control overhead
+o Note: each instruction is fetched and decoded only once
+
+5
+
+SIMD Processor Design
+● How would you design a processor for the vector instructions?
+data
+
+1. One processing element (PE)
+o Fetch and decode instruction once
+o PE applies op on each data item
+▪ Item may be in vector register
+program
+▪ Item may be in data memory
+2. Multiple PEs in parallel
+program
+o Fetch and decode instruction once
+o PEs apply op in parallel
+▪ In synchronous lockstep
+PE
+→ The more PEs, the faster!
+data
+
+control
+
+PE
+
+control
+
+PE
+
+PE
+
+PE
+
+data
+
+data
+
+data
+6
+
+Example: Adding Two Vectors
+● Instead of having a single FP adder work on each item (a)
+● Have four FP adders work on items in parallel (b)
+● Each pipelined FP unit is in charge of pre-designated items in vector
+o For full parallelization, put as many FP units as there are items
+
+7
+
+Vector Load-Store Unit
+● Striding lets you load/store non-contiguous data from memory at
+regular offsets. (e.g. the first member of each struct in an array)
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+0
+
+4
+
+8
+
+C
+
+6
+
+7
+
+8
+
+9
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+
+● Gather-scatter lets you put pointers in a vector, then load/store
+from arbitrary memory addresses. (gather = load, scatter = store)
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+2
+
+E
+
+7
+
+4
+
+6
+
+7
+
+8
+
+9
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+8
+
+How does Gather-Scatter work?
+
+9
+
+When does Gather-Scatter make sense?
+● Often data for scientific or AI applications are sparse.
+o Time-sampled points where a sensor measurement changes
+o In social networking, connections in a N x N friendship matrix
+o In neural networks, weights in a filter layer that are non-zero
+● To save memory, sparse data is stored in sparse format:
+
+How a sparse filter layer is stored in a
+Convolutional Neural Network (CNN)
+
+10
+
+When does Gather-Scatter make sense?
+● Convolution works by applying filter like a shifting window:
+row column weight
+
+Image
+
+Convolved Feature
+
+0
+
+0
+
+1
+
+0 1 2 3
+
+0
+
+2
+
+1
+
+1 1 0 1
+
+1
+
+1
+
+1
+
+2 0 1 0
+
+2
+
+0
+
+1
+
+3 1 0 1
+
+2
+
+2
+
+1
+
+Filter (sparse matrix format)
+
+● When applying filter on image, a gather needs to take place
+1. Gather values in image in corresponding rows and columns
+2. Create an image vector out of those gathered values
+3. Do a dot (●) product between image vector and filter vector
+11
+
+SIMD instructions in real processors
+● x86 vector extensions
+o Historically: MMX, SSE, AVX, AVX-2
+o Current: AVX-512 (512-bit vector instructions)
+● ARM vector extensions
+o Historically: VFP (Vector Floating Point)
+o Current: Neon (128-bit vector instructions)
+● Vector instructions have progressively become wider historically
+o Due to increase of data parallel applications
+o Due to their power efficiency
+▪ Compared to fetching, decoding, scheduling multiple instructions
+▪ Good way to increase FLOPS while staying within TDP limit
+● Enter GPUs for general computing (circa 2001)
+13
+
+GPUs:
+Graphical Processing Units
+
+14
+
+History of GPUs
+• VGA (Video graphic array) has been around since the early 90’s
+• A display generator connected to some (video) RAM
+• By 2000, VGA controllers were handling almost all graphics computation
+• Programmable through OpenGL, Direct 3D API
+• APIs allowed accelerated vertex/pixel processing:
+• Shading
+• Texture mapping
+• Rasterization
+• Gained moniker Graphical Processing Unit
+• 2007: First general purpose use of GPUs
+• 2007: Release of CUDA language
+• 2011: Release of OpenCL language
+15
+
+GPU is Really a SIMD Processor
+GPU
+
+Streaming Multi-processor (SM)
+
+Streaming
+Processor (SP)
+
+IF/ID
+
+IF/ID
+
+IF/ID
+
+L1 cache
+
+L1 cache
+
+L1 cache
+
+Shared
+memory
+
+Shared
+memory
+
+Shared
+memory
+
+CPU
+L2 cache
+
+CPU (Host)
+memory
+
+L2 cache
+PCIe bus
+
+Global (GPU) memory
+
+● Logically, a GPU is composed of SMs (Streaming Multi-processors)
+o An SM is a vector unit that can process multiple pixels (or data items)
+● Each SM is composed of SPs which work on each pixel or data item
+16
+
+CPU-GPU architecture
+GPU
+
+Streaming Multi-processor (SM)
+
+Streaming
+Processor (SP)
+
+IF/ID
+
+IF/ID
+
+IF/ID
+
+L1 cache
+
+L1 cache
+
+L1 cache
+
+Shared
+memory
+
+Shared
+memory
+
+Shared
+memory
+
+CPU
+L2 cache
+
+CPU (Host)
+memory
+
+L2 cache
+PCIe bus
+
+Global (GPU) memory
+
+● Dedicated GPU memory separate from system memory
+● Code and data must be transferred to GPU memory for it to work on it
+o Through PCI-Express bus connecting GPU to CPU
+17
+
+Modern GPU architecture
+SM=streaming
+multiprocessor
+
+TPC = Texture
+Processing
+TPC = texture Cluster
+processing cluster
+
+ROP = raster operations pipeline
+
+SFU = special
+function unit
+
+GPU Programming Model
+Copy data from CPU
+memory to GPU memory
+
+CPU
+
+IF/ID
+
+CPU
+memory
+
+Launch the kernel
+
+CPU
+
+CPU
+
+CPU
+memory
+
+IF/ID
+
+Global (GPU) memory
+
+IF/ID
+
+CPU
+memory
+
+Copy data from GPU
+memory to CPU memory
+
+IF/ID
+
+IF/ID
+
+IF/ID
+
+Global (GPU) memory
+
+IF/ID
+
+IF/ID
+
+IF/ID
+
+Global (GPU) memory
+19
+
+GPU Programming Model
+CPU program
+(serial code)
+
+cudaMemcpy ( … )
+
+Copy data from CPU
+memory to GPU memory
+
+Function <<<nb,nt >>>Launch kernel on GPU
+
+cudaMemcpy ( … )
+_global_ Function ( … )
+
+Copy results from GPU
+memory to CPU memory
+Implementation of GPU kernel
+kernel: Function executed on the GPU
+
+20
+
+GPU Programming Model: Copying Data
+/* malloc in GPU global memory */
+cudaMalloc (void **pointer, size_t nbytes);
+/* free malloced GPU global memory */
+cudaFree(void **pointer) ;
+/* initialize GPU global memory with value */
+cudaMemset (void *pointer, int value, size_t count);
+/* copy to and from between CPU and GPU memory */
+cudaMemcpy(void *dest, void *src, size_t nbytes, enum cudaMemcopyKind dir);
+enum cudaMemcpyKind
+• cudaMemcpyHostToDevice
+• cudaMemcpyDeviceToHost
+• cudaMemcpyDeviceToDevice
+
+CPU
+memory
+
+PCIe bus
+
+GPU Global
+memory
+
+21
+
+Example: Copying array a to array b using the GPU
+
+22
+
+GPU Programming Model: Launching the Kernel
+CPU program
+(serial code)
+
+cudaMemcpy ( … )
+
+Copy data from CPU
+memory to GPU memory
+
+Function <<<nb,nt >>>Launch a kernel with nb
+blocks, each with nt threads
+
+cudaMemcpy ( … )
+_global_ Function ( … )
+
+Copy results from GPU
+memory to CPU memory
+Implementation of kernel
+(the function run by each GPU thread)
+
+23
+
+The Execution Model
+IF/ID
+
+L1 cache
+
+Shared
+memory
+
+• The thread blocks are dispatched to SMs
+• The number of blocks dispatched to an
+SM depends on the SM’s resources
+(registers, shared memory, …).
+Blocks not dispatched initially are dispatched
+when an SM frees up after finishing a block
+• When a block is dispatched to an
+SM, each of its threads executes on
+an SP in the SM.
+
+IF/ID
+
+L1 cache
+Shared
+memory
+24
+
+A thread block is executed in warps
+● Each block (up to 1K threads) is divided into groups of 32
+threads (called warps) – empty threads are used as fillers.
+● A warp executes as a SIMD vector instruction on the SM.
+● Depending on the number of SPs per SM:
+0 1
+
+30 31
+
+o If 32 SP per SM → 1 thread of a warp executes on 1 SP
+(32 lanes of execution, one thread per lane)
+0 1
+
+30 31
+
+01
+
+30 31
+
+o If 16 SP per SM → 2 threads are time multiplexed on 1 SP (16
+lanes of execution, 2 threads per lane)
+0
+
+15
+
+0123
+
+31
+
+0
+
+o If 8 SP per SM → 4 threads are time multiplexed on 1 SP
+(8 lanes of execution, 4 threads per lane)
+
+7
+25
+
+A SM is composed of one or more warp schedulers
+● In this SM, there are 4 warp schedulers.
+
+● Warps in thread block are divided
+statically among warp schedulers.
+● E.g. for 4 schedulers:
+o Scheduler 1: Warp 0, Warp 4, …
+o Scheduler 2: Warp 1, Warp 5, …
+o Scheduler 3: Warp 2, Warp 6, …
+o Scheduler 4: Warp 3, Warp 7, …
+● Round robin assignment to ensure
+equal distribution of warps
+26
+
+Warp scheduling enables latency hiding
+● Warp scheduler can hide bubbles (just like a superscalar scheduler)
+o But without an instruction queue and out-of-order execution
+● How?
+o In-order execution.
+o Switch to different warp
+when a bubble is
+about to form.
+● Warp can come from any
+thread block in SM
+o More thread blocks can
+lead to higher utilization.
+27
+
+All threads execute the same code
+● Launched using Kernel <<<1, 64>>> : 1 block with 64 threads
+threadIdx.x 0
+
+1
+
+2
+
+3
+
+60
+
+61
+
+62
+
+63
+
+int i = threadIdx.x;
+B[i] = A[63-i];
+C[i] = B[i] + A[i]
+
+A[0,…,63]
+B[0,…,63]
+C[0,…,63]
+GPU memory
+
+● Each thread in a thread block has a unique “thread index” → threadIdx.x
+● The same sequence of instructions can apply to different data items.
+28
+
+Blocks of Threads
+● Launched using Kernel <<<2, 32>>> : 2 blocks of 32 threads
+blockIdx.x = 1
+
+blockIdx.x = 0
+
+threadIdx.x 0
+
+1
+
+30
+
+31
+
+0
+
+1
+
+30
+
+31
+
+int i = 32 * blockIdx.x + threadIdx.x;
+B[i] = A[63-i];
+C[i] = B[i] + A[i]
+
+A[0,…,63]
+B[0,…,63]
+C[0,…,63]
+GPU memory
+
+● Each thread block has a unique “block index” → blockIdx.x
+● Each thread has a unique threadIdx.x within its own block
+● Can compute a global index from the blockIdx.x and threadIdx.x
+29
+
+Two-dimensions grids and blocks
+● Launched using Kernel <<<(2, 2), (4, 8)>>> : 2X2 blocks of 4X8 threads
+blockIdx.x = 0 blockIdx.x = 1
+blockIdx.y = 0 blockIdx.y = 0
+0,0 0,1 0,2 0,3 0,4 0,5 0,6 0,7
+
+0,0 0,1 0,2 0,3 0,4 0,5 0,6 0,7
+
+1,0 1,1 1,2 1,3 1,4 1,5 1,6 1,7
+
+1,0 1,1 1,2 1,3 1,4 1,5 1,6 1,7
+
+2,0 2,1 2,2 2,3 2,4 2,5 2,6 2,7
+
+2,0 2,1 2,2 2,3 2,4 2,5 2,6 2,7
+
+3,0 3,1 3,2 3,3 3,4 3,5 3,6 3,7
+
+3,0 3,1 3,2 3,3 3,4 3,5 3,6 3,7
+
+0,0 0,1 0,2 0,3 0,4 0,5 0,6 0,7
+
+0,0 0,1 0,2 0,3 0,4 0,5 0,6 0,7
+
+1,0 1,1 1,2 1,3 1,4 1,5 1,6 1,7
+
+1,0 1,1 1,2 1,3 1,4 1,5 1,6 1,7
+
+2,0 2,1 2,2 2,3 2,4 2,5 2,6 2,7
+
+2,0 2,1 2,2 2,3 2,4 2,5 2,6 2,7
+
+3,0 3,1 3,2 3,3 3,4 3,5 3,6 3,7
+
+3,0 3,1 3,2 3,3 3,4 3,5 3,6 3,7
+
+x
+
+0,0 0,1 0,2 0,3 0,4 0,5 0,6 0,7
+1,0 1,1 1,2 1,3 1,4 1,5 1,6 1,7
+2,0 2,1 2,2 2,3 2,4 2,5 2,6 2,7
+3,0 3,1 3,2 3,3 3,4 3,5 3,6 3,7
+
+y
+
+blockIdx.x = 0 blockIdx.x = 1
+blockIdx.y = 1 blockIdx.y = 1
+
+● Each block has two indices (blockIdx.x, blockIdx.y)
+● Each thread in a thread block has two indices (threadIdx.x, threadIdx.y)
+30
+
+Example: Computing the global index
+threadIdx.x
+void main ()
+{ cudaMalloc (int* &a, 20*sizeof(int));
+blockIdx.x
+blockIdx.x
+blockIdx.x
+blockIdx.x
+cudaMalloc (int* &b, 20*sizeof(int));
+=0
+=1
+=2
+=3
+cudaMalloc (int* &c, 20*sizeof(int));
+0 1 2 3 4
+0 1 2 3 4
+0 1 2 3 4
+0 1 2 3 4
+…
+kernel<<<4,5>>(a, b, c) ;
+…
+}
+NOTE: Each block will consist of one warp –
+_global_ void kernel(int *a, *b, *c)
+{ int i = blockIdx.x * blockDim.x + threadIdx.x ; only 5 threads in warp will do useful work.
+(Other 27 threads will execute no-ops.)
+a[i] = i ;
+b[i] = blockIdx.x;
+c[i] = threadIdx.x;
+}
+
+a[]
+Global
+Memory b[]
+c[]
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9 10 11 12 13 14 15 16 17 18 19
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+1
+
+2
+
+2
+
+2
+
+2
+
+2
+
+3
+
+3
+
+3
+
+3
+
+3
+
+0
+
+1
+
+2
+
+3
+
+4
+
+0
+
+1
+
+2
+
+3
+
+4
+
+0
+
+1
+
+2
+
+3
+
+4
+
+0
+
+1
+
+2
+
+3
+
+4
+31
+
+Example: Computing 𝒚 𝒊 = 𝒂 ∗ 𝒙 𝒊 + 𝒚 𝒊
+C program (on CPU)
+
+CUDA program (on CPU+GPU)
+
+void saxpy_serial(int n, float a, float
+*x, float *y)
+{
+for(int i = 0; i<n; i++)
+y[i] = a * x[i] + y[i];
+}
+
+_global_ void saxpy_gpu(int n, float a, float *x,
+float *y)
+{
+int i = blockIdx.x*blockDim.x +
+threadIdx.x;
+if (i < n ) y[i] = a * x[i] + y[i];
+}
+
+void main ()
+{
+…
+saxpy_serial(n, 2.0, x, y);
+…
+}
+
+void main ()
+{…
+// cudaMalloc arrays X and Y
+// cudaMemcpy data to X and Y
+int NB = (n + 255) / 256;
+saxpy_gpu<<<NB, 256>>>(n, 2.0, X, Y);
+// cudaMemcpy data from Y
+}
+32
+
+Example: Computing 𝒚 𝒊 = 𝒂 ∗ 𝒙 𝒊 + 𝒚 𝒊
+● What happens when n = 1?
+_global_void saxpy_gpu(int n, float a, float *X, float *Y)
+{
+int i = blockIdx.x*blockDim.x + threadIdx.x;
+if (i < n ) Y[i] = a * X[i] + Y[i];
+}
+…..
+saxpy_gpu<<<1, 256>>>(1, 2.0, X, Y); /* X and Y are both sized 1! */
+
+● “if (i < n)” condition prevents writing beyond bounds of array.
+● But that requires some threads within a warp not performing the write.
+o But a warp is a single vector instruction. How can you branch?
+o “if (i < n)” creates a predicate “mask” vector to use for the write
+o Only thread 0 has predicate turned on, rest has predicate turned off
+33
+
+GPUs Use Predication for Branches
+
+● Each thread computes own predicate for condition threadIdx.x < 4
+● Taken together, 32 threads of a warp create a 32-bit predicate mask
+● Mask is applied to warps for A, B, X, and Y.
+● Just like for VLIW processors, this can lead to low utilization.
+34
+
+GPU Performance
+
+35
+
+Lesson 1:
+Parallelism is Important
+
+36
+
+Thread Level Parallelism
+● Superscalars and VLIWs are useful only if…
+o Program exhibits ILP (Instruction Level Parallelism) in the code
+● GPUs are useful only if…
+o Program has TLP (Thread Level Parallelism) in the code
+o TLP can be expressed as the number of threads in the code
+● How that TLP is laid out in the kernel is also important
+o How many threads are in a thread block
+▪ If less than threads in warp, some SPs may get unused
+o How many thread blocks are in the grid
+▪ If less than number of SMs, some SMs may get unused
+→ If not careful, your GPU may get underutilized
+37
+
+Example: Kernels with Bad Layout
+● Suppose there are 4 SMs in GPU with 32 SPs in each SM.
+o Case 1, 2 below have enough TLP (1024 threads) but bad layout.
+o Utilized threads are marked in red. Rest are unused.
+● Case 1: Not enough threads
+kernel<<<1024, 1>>(…) ;
+● Case 2: Not enough blocks
+kernel<<<1, 1024>>(…) ;
+● Balanced threads and blocks
+kernel<<<32, 32>>(…) ;
+kernel<<<16, 64>>(…) ;
+kernel<<<4, 256>>(…) ;
+
+SM 0
+
+SM 1
+
+SM 2
+
+SM 3
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+SM 0
+
+SM 1
+
+SM 2
+
+SM 3
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+SM 0
+
+SM 1
+
+SM 2
+
+SM 3
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+0 1 2 … 31
+
+38
+
+Lesson 2:
+Bandwidth is Important
+
+39
+
+Example: Computing 𝒚 𝒊 = 𝑨 𝒊, 𝒋 ∗ 𝒙 𝒋
+C program (on CPU)
+void mv_cpu(float* y, float* A,
+float* x, int n) {
+for (int i=0; i<n; i++)
+for (int j=0; j<n; j++)
+y[i] += A[i*n + j] * x[j];
+}
+
+void main ()
+{
+…
+mv_cpu(y, A, x, n);
+…
+}
+
+CUDA program (on CPU+GPU)
+void mv_gpu(float* y, float* A, float* x, int n) {
+int i = blockIdx.x * blockDim.x + threadIdx.x;
+if (i < n) {
+for (int j = 0; j < n; j++)
+y[i] += A[i*n + j] * x[j];
+}
+}
+void main ()
+{
+…
+int nblocks = (n + block_size - 1) / block_size;
+mv_gpu <<<nblocks, block_size>>> (y, A, x, n);
+…
+}
+40
+
+Performance Results for 𝒚 𝒊 = 𝑨 𝒊, 𝒋 ∗ 𝒙 𝒋
+● Guess what? CPU is faster than GPU!
+
+But even comparing pure compute
+time, CPU is still faster than GPU.
+What the…?
+
+* Run on netlab-1.cs.pitt.edu with n=8192:
+- Intel Core i7-4770 CPU
+- NVIDIA GF119-825-A1 GPU
+
+A lot of time is spent copying back and
+forth between CPU and GPU memories.
+
+41
+
+Performance Results for 𝒚 𝒊 = 𝑨 𝒊, 𝒋 ∗ 𝒙 𝒋
+● Was it because the GPU was wimpy and can’t do enough FLOPS?
+
+● NVIDIA GF119-825-A1 is a Fermi GPU Capability 2.1
+o Clock rate: 1046 MHz (X 2 for warp execution)
+o Number of SMs: 1
+o Number of SPs per SM: 48
+o Max FLOPS = 1046 MHz * 2 * 1 * 48 = 100.4 GFLOPS
+● What was the FLOPS achieved?
+o y[i] += A[i*n + j] * x[j] = 2 FP ops each iteration for n * n iterations
+o n = 8192, so FP ops = 8192 * 8192 * 2 = 134 M
+o Time = 0.27 seconds (shortest at 32 thread block size)
+o FLOPS = 134 M / 0.27 = 496 MFLOPS
+o Not even close to the limit!
+42
+
+Performance Results for 𝒚 𝒊 = 𝑨 𝒊, 𝒋 ∗ 𝒙 𝒋
+● Could it be that the GPU didn’t have enough memory bandwidth?
+
+● NVIDIA GF119-825-A1 is a Fermi GPU Capability 2.1
+o Memory Type: DDR3
+o Memory Bandwidth: 14.00 GB/s
+● GPUs also have Performance Monitoring Units (PMUs)
+o NVIDIA Profiler (nvprof) provides an easy way to read them:
+https://docs.nvidia.com/cuda/profiler-users-guide/index.html
+o Let’s use the PMU to profile the following:
+▪ DRAM Transfer Rate (GB/s)
+▪ L1 Hit Rate (%)
+▪ L2 Hit Rate (%)
+43
+
+Memory Wall Hits Again
+
+44
+
+Memory Wall Hits Again
+
+DRAM bandwidth not saturated:
+Benefits from more parallelism
+due to larger thread block sizes
+
+DRAM bandwidth saturated:
+Larger thread blocks → increased working set size →
+higher cache miss rates → worse bandwidth problem
+DRAM
+Bandwidth
+Limit (14 GB/s)
+
+45
+
+Is there a way we can reach max FLOPS?
+● Let’s take a look at the GPU design metrics again:
+o Max FLOPS = 100.4 GFLOPS
+o Memory Bandwidth: 14.00 GB/s
+● To sustain max FLOPS, you need to do a lot of work per byte
+o 100.4 GFLOPS / 14.00 GB/s = 7.17 FP ops / byte
+o Or, about 28 FP ops / float (4 bytes) fetched from memory
+o Otherwise, the memory bandwidth cannot sustain the FLOPS
+● All GPUs have this problem with memory bandwidth:
+o It’s easy to put in more SMs using transistors for Moore’s Law
+o Your memory bandwidth is limited due to your DDR interface
+
+46
+
+Arithmetic Intensity: A property of the program
+● How many FP ops / float for our mat-vec multiplication?
+o y[i] += A[i*n + j] * x[j] each iteration with n * n iterations
+o FP ops = 2 * n * n (one multiply and one add)
+o Float accesses = n * n + 2n (1 matrix and 2 vector accesses)
+▪ That’s counting only cold misses but could be even more
+o So approx. 2 FP ops / float (a far cry from 28 FP ops / float)
+o This metric is called arithmetic intensity
+
+● Arithmetic intensity is a property of the program needed by GPUs
+o Just like TLP (thread-level-parallelism) is needed by GPUs
+o Matrix-vector multiplication has low intensity
+→ Fundamentally not suited for fast GPU computation
+
+47
+
+Arithmetic Intensity: A property of the program
+
+* Courtesy of Lawrence Berkeley National Laboratory:
+https://crd.lbl.gov/departments/computer-science/par/research/roofline/introduction/
+
+● BLAS: Basic Linear Algebra Subprograms
+o BLAS 1: Vector operations only (e.g. saxpy) → Bad intensity
+o BLAS 2: General Matrix-Vector Multiplication (GeMV) → Bad intensity
+o BLAS 3: General Matrix Multiplication (GeMM) → Good intensity
+48
+
+Matrix-Matrix Multiply: Good Arithmetic Intensity
+● Matrix-multiplication:
+for (int i=0; i<n; i++)
+for (int j=0; j<n; j++)
+for (int k=0; k<n; k++)
+C[i*n + j] += A[i*n + k] * B[k*n + j];
+● What’s the arithmetic intensity for this program?
+o FP ops = 2 * n * n * n (one multiply and one add)
+o Float accesses = 3 * n * n (3 matrix accesses)
+▪ If we only have cold misses and no capacity misses
+o Arithmetic intensity = 2 * n / 3 = 0.66 * n = O(n)
+o Implication: The larger the matrix size, the better suited for GPUs!
+▪ Important result for deep learning and other apps
+49
+
+Example: Computing 𝑪 𝒊, 𝒋 = 𝑨 𝒊, 𝒌 ∗ 𝑩 𝒌, 𝒋
+C program (on CPU)
+void mm_cpu(float* C, float* A, float* B,
+int n) {
+for (int i=0; i<n; i++)
+for (int j=0; j<n; j++)
+for (int k=0; k<n; k++)
+C[i*n + j] += A[i*n + k] * B[k*n + j];
+}
+
+void main ()
+{
+mm_cpu(C, A, B, n);
+}
+
+CUDA program (on CPU+GPU)
+void mm_gpu(float* C, float* A, float* B, int n) {
+float Cvalue = 0;
+int i = blockIdx.y * blockDim.y + threadIdx.y;
+int j = blockIdx.x * blockDim.x + threadIdx.x;
+for (int k = 0; k < n; ++k)
+Cvalue += A[i * n + k] * B[k * n + j];
+C[i * n + j] = Cvalue;
+}
+void main ()
+{
+dim3 dimBlock(block_size, block_size);
+dim3 dimGrid(n / dimBlock.x, n / dimBlock.y);
+mm_gpu <<<dimGrid, dimBlock>>> (C, A, B, n);
+}
+50
+
+Performance Results for 𝑪 𝒊, 𝒋 = 𝑨 𝒊, 𝒌 ∗ 𝑩 𝒌, 𝒋
+
+Now GPU is much faster
+than CPU given enough TLP
+
+What’s this? This version of
+matrix-multiply reduces
+cache capacity misses using
+shared memory in the GPU.
+
+51
+
+Capacity Misses can Reduce Arithmetic Intensity
+for (int i=0; i<n; i++)
+for (int j=0; j<n; j++)
+for (int k=0; k<n; k++)
+C[i*n + j] += A[i*n + k] * B[k*n + j];
+
+● The ideal arithmetic intensity for this program was:
+o FP ops = 2 * n * n * n (one multiply and one add)
+o Float accesses = 3 * n * n (3 matrix accesses)
+o Arithmetic intensity = 2 * n / 3 = 0.66 * n = O(n)
+● Only if we have no capacity misses. What if we did have them?
+o For B[k*n + j], reuse distance is the entire matrix of B
+o If B[k*n + j] always misses, memory accesses is in the order of n3!
+52
+
+So what is Shared Memory?
+IF/ID
+
+IF/ID
+
+IF/ID
+
+L1 cache
+
+L1 cache
+
+L1 cache
+
+Shared
+memory
+
+Shared
+memory
+
+Shared
+memory
+
+L2 cache
+
+Global (GPU) memory
+
+● Shared Memory: memory shared among threads in a thread block
+o Variables declared with __shared__ modifier live in shared memory
+o Is same as L1 cache in terms of latency and bandwidth!
+o Storing frequently used data in shared memory can save on bandwidth
+53
+
+Loop Tiling with Shared Memory
+● Store a “tile” within matrix in shared memory while operating on it
+o Can reduce accesses to DRAM memory
+● Code in: https://docs.nvidia.com/cuda/cuda-c-best-practicesguide/index.html#shared-memory-in-matrix-multiplication-c-ab
+__shared__ float aTile[TILE_DIM][TILE_DIM],
+bTile[TILE_DIM][TILE_DIM];
+int row = blockIdx.y * blockDim.y + threadIdx.y;
+int col = blockIdx.x * blockDim.x + threadIdx.x;
+float sum = 0.0f;
+aTile[threadIdx.y][threadIdx.x] = a[row*TILE_DIM+threadIdx.x];
+bTile[threadIdx.y][threadIdx.x] = b[threadIdx.y*N+col];
+__syncthreads();
+for (int i = 0; i < TILE_DIM; i++)
+sum += aTile[threadIdx.y][i]* bTile[i][threadIdx.x];
+c[row*N+col] = sum;
+● Assumption: TILE_DIM = w. What if w > TILE_DIM?
+
+54
+
+Loop Tiling with Shared Memory
+● TILE_DIM is limited by amount of shared memory. What if w > TILE_DIM?
+o Now must load A and B tiles w / TILE_DIM times per thread block
+● Now code will look like:
+N
+__shared__ float aTile[TILE_DIM][TILE_DIM],
+B
+bTile[TILE_DIM][TILE_DIM];
+float sum = 0.0f;
+for (int t = 0; t < w / TILE_DIM; t++) {
+…
+aTile[threadIdx.y][threadIdx.x] = …;
+A
+C
+bTile[threadIdx.y][threadIdx.x] = …;
+__syncthreads();
+N
+for (int i = 0; i < TILE_DIM; i++)
+sum += aTile[threadIdx.y][i]* bTile[i][threadIdx.x];
+w
+}
+c[row*N+col] = sum;
+55
+
+w
+
+

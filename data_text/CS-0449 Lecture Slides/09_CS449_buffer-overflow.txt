@@ -1,0 +1,1247 @@
+8
+
+Buffer Overflow
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Review: General Memory Layout
+• Stack
+• Local variables (procedure context)
+
+• Heap
+
+2N-1
+
+not drawn to scale
+
+Stack
+
+• Dynamically allocated as needed
+• malloc(), calloc(), new(), …
+
+• Statically allocated Data
+• Read/Write: global variables
+• Read-only: string literals
+
+Heap
+Static Data
+
+• Code/Instructions
+• Executable machine instructions
+• Read-only
+
+Literals
+0
+
+Instructions
+
+x86-64 Linux Memory Layout
+• Stack
+• Runtime stack (8MB limit)
+• e.g., local variables
+
+• Heap
+
+00007FFFFFFFFFFF
+(= 247–1)
+00007FFFF0000000
+
+not drawn to scale
+Shared
+Libraries
+Stack
+
+8MB
+
+• Dynamically allocated as needed
+• When call malloc(), new()
+
+• Data
+• Statically allocated data
+• e.g., global/static vars, string constants
+
+• Text / Shared Libraries
+
+Heap
+
+• Executable machine instructions
+• Read-only
+Hex Address
+
+400000
+000000
+
+Data
+Text
+
+Memory Allocation Example
+not drawn to scale
+
+char big_array[1L<<24]; /* 16 MB */
+char huge_array[1L<<31]; /* 2 GB */
+
+Stack
+
+int global = 0;
+int useless() { return 0; }
+int main()
+{
+void *p1, *p2, *p3, *p4;
+int local = 0;
+p1 = malloc(1L << 8); /* 256 B */
+p2 = malloc(1L << 8); /* 256 B */
+p3 = malloc(1L << 8); /* 256 B */
+p4 = malloc(1L << 8); /* 256 B */
+/* Some print statements ... */
+}
+Where does everything go?
+
+Other stuff
+Shared
+Libraries
+
+Heap
+Data
+Instructions
+4
+
+Memory Allocation Example
+not drawn to scale
+
+char big_array[1L<<24]; /* 16 MB */
+char huge_array[1L<<31]; /* 2 GB */
+
+Stack
+
+int global = 0;
+int useless() { return 0; }
+int main()
+{
+void *p1, *p2, *p3, *p4;
+int local = 0;
+p1 = malloc(1L << 8); /* 256 B */
+p2 = malloc(1L << 8); /* 256 B */
+p3 = malloc(1L << 8); /* 256 B */
+p4 = malloc(1L << 8); /* 256 B */
+/* Some print statements ... */
+}
+Where does everything go?
+
+Heap stuff
+Other
+Shared
+Libraries
+Shared
+Libraries
+
+Heap
+Data
+Instructions
+5
+
+Reminder: x86-64/Linux Stack Frame
+Higher Addresses
+
+• Caller’s Stack Frame
+• Arguments (if > 6 args) for this call
+
+• Current/Callee Stack Frame
+• Return address
+• Pushed by call instruction
+
+• Old frame pointer (optional)
+• Saved register context
+(when reusing registers)
+• Local variables
+(if can’t be kept in registers)
+• “Argument build” area
+(If callee needs to call another function parameters for function about to call, if
+needed)
+
+Caller
+Frame
+
+Frame pointer
+%rbp
+(Optional)
+
+Arguments
+7+
+Return Addr
+Old %rbp
+
+Saved
+Registers
++
+Local
+Variables
+
+Stack pointer
+%rsp
+
+Argument
+Build
+(Optional)
+6 Lower Addresses
+
+Recall: Memory Referencing Bug Example
+typedef struct {
+int a[2];
+double d;
+} struct_t;
+double fun(int i) {
+struct_t s;
+s.d = 3.14;
+s.a[i] = 1073741824; /* Possibly out of bounds */
+return s.d;
+}
+
+fun(0)
+fun(1)
+fun(2)
+fun(3)
+fun(4)
+
+->3.1400000000
+->3.1400000000
+->3.1399998665
+->2.0000006104
+->Segmentation fault
+
+Result is system specific
+7
+
+Memory Referencing Bug Example
+fun(0)
+fun(1)
+fun(2)
+fun(3)
+fun(4)
+fun(8)
+
+typedef struct {
+int a[2];
+double d;
+} struct_t;
+
+Memory:
+
+struct_t
+
+???
+
+8
+
+Critical State
+
+7
+
+Critical State
+
+6
+
+Critical State
+
+5
+
+Critical State
+
+4
+
+d7 ... d4
+
+3
+
+d3 ... d0
+
+2
+
+a[1]
+
+1
+
+a[0]
+
+0
+
+->3.1400000000
+->3.1400000000
+->3.1399998665
+->2.0000006104
+->Segmentation fault
+->3.1400000000
+
+Location accessed by
+fun(i)
+
+8
+
+Buffer Overflow
+• Traditional Linux memory layout provide
+opportunities for malicious programs
+• Stack grows “backwards” in memory
+• Data and instructions both stored in the same memory
+
+• Recall that C does not check array bounds
+• Many Unix/Linux/C functions don’t check argument sizes
+• Allows overflowing (writing past the end) of buffers
+(arrays)
+
+9
+
+Buffer Overflow (cont.)
+• Buffer overflows on the stack can overwrite “interesting”
+data
+• Attackers just choose the right inputs
+
+• Simplest form (sometimes called “stack smashing”)
+• Unchecked length on string input into bounded array causes
+overwriting of stack data
+• Try to change the return address of the current procedure
+
+• Why is this a big deal?
+• It is (was?) the #1 technical cause of security vulnerabilities
+• #1 overall cause is social engineering / user ignorance
+
+10
+
+String Library Code
+• Implementation of Unix function gets()
+/* Get string from stdin */
+char* gets(char* dest) {
+int c = getchar();
+char* p = dest;
+while (c != EOF && c != '\n') {
+*p++ = c;
+c = getchar();
+}
+*p = '\0';
+return dest;
+}
+
+pointer to start
+of an array
+same as:
+*p = c;
+p++;
+
+What could go wrong in this code?
+11
+
+String Library Code
+• Implementation of Unix function gets()
+/* Get string from stdin */
+char* gets(char* dest) {
+int c = getchar();
+char* p = dest;
+while (c != EOF && c != '\n') {
+*p++ = c;
+c = getchar();
+}
+*p = '\0';
+return dest;
+}
+
+• No way to specify limit on number of characters to read
+• Similar problems with other Unix functions:
+• strcpy: Copies string of arbitrary length to a dst
+• scanf, fscanf, sscanf, when given %s specifier
+12
+
+Vulnerable Buffer Code
+/* Echo Line */
+void echo() {
+char buf[8];
+gets(buf);
+puts(buf);
+}
+
+Code example to try on Thoth!
+https://bit.ly/3eWwndQ
+/* Way too small! */
+
+ BTW, how big
+is big enough?
+
+void call_echo() {
+echo();
+}
+
+unix> ./buf-nsp
+Enter string: 12345678901234567890123
+12345678901234567890123
+unix> ./buf-nsp
+Enter string: 123456789012345678901234
+Segmentation Fault
+
+Buffer Overflow Disassembly
+24 bytes (decimal)
+
+echo:
+000000000040069c <echo>:
+40069c: 48 83 ec 18
+4006a0: 48 89 e7
+4006a3: e8 a5 ff ff ff
+4006a8: 48 89 e7
+4006ab: e8 50 fe ff ff
+4006b0: 48 83 c4 18
+4006b4: c3
+
+$0x18,%rsp
+%rsp,%rdi
+40064d <gets>
+%rsp,%rdi
+400500 <puts@plt>
+$0x18,%rsp
+
+return address
+
+call_echo:
+4006b5:
+4006b9:
+4006be:
+4006c3:
+4006c7:
+
+sub
+mov
+callq
+mov
+callq
+add
+retq
+
+48 83 ec 08
+b8 00 00 00 00
+e8 d9 ff ff ff
+48 83 c4 08
+c3
+
+sub
+mov
+callq
+add
+retq
+
+$0x8,%rsp
+$0x0,%eax
+40069c <echo>
+$0x8,%rsp
+
+Buffer Overflow Stack Example
+Before call to gets
+Stack Frame
+for call_echo
+
+Return Address
+(8 bytes)
+
+/* Echo Line */
+void echo()
+{
+char buf[4];
+gets(buf);
+puts(buf);
+}
+
+/* Way too small! */
+
+20 bytes unused
+
+[3] [2] [1] [0] buf
+
+%rsp
+
+echo:
+subq $0x18, %rsp
+movq %rsp, %rdi
+call gets
+. . .
+15
+
+Buffer Overflow Stack Example
+Before call to gets
+Stack Frame
+for call_echo
+
+00 Address
+00 00
+00
+Return
+00 (8
+40bytes)
+06 c3
+
+20 bytes unused
+
+[3] [2] [1] [0] buf
+
+void echo()
+{
+char buf[4];
+gets(buf);
+. . .
+}
+
+echo:
+subq $0x18, %rsp
+movq %rsp, %rdi
+call gets
+. . .
+
+call_echo:
+. . .
+4006be:
+4006c3:
+. . .
+
+callq
+add
+
+4006cf <echo>
+$0x8,%rsp
+
+%rsp
+
+16
+
+Buffer Overflow Stack Example #1
+After call to gets
+Stack Frame
+for call_echo
+
+00
+00 Address
+00 00
+Return
+00 (8
+40bytes)
+06 c3
+00 32 31 30
+39 38 37 36
+35
+34 unused
+33 32
+20 bytes
+31 30 39 38
+37 36 35 34
+33 32 31 30 buf
+
+void echo()
+{
+char buf[4];
+gets(buf);
+. . .
+}
+
+echo:
+subq $0x18, %rsp
+movq %rsp, %rdi
+call gets
+. . .
+
+call_echo:
+. . .
+4006be:
+4006c3:
+. . .
+
+%rsp
+
+callq
+add
+
+4006cf <echo>
+$0x8,%rsp
+
+unix>./bufdemo-nsp
+Type a string:01234567890123456789012
+01234567890123456789012
+
+“01234567890123456789012\0”
+
+Overflowed buffer, but did not corrupt state
+
+17
+
+Buffer Overflow Stack Example #2
+After call to gets
+Stack Frame
+for call_echo
+
+00
+00 Address
+00 00
+Return
+00 (8
+40bytes)
+06 00
+33 32 31 30
+39 38 37 36
+35
+34 unused
+33 32
+20 bytes
+31 30 39 38
+37 36 35 34
+33 32 31 30 buf
+
+void echo()
+{
+char buf[4];
+gets(buf);
+. . .
+}
+
+echo:
+subq $0x18, %rsp
+movq %rsp, %rdi
+call gets
+. . .
+
+call_echo:
+. . .
+4006be:
+4006c3:
+. . .
+
+%rsp
+
+callq
+add
+
+4006cf <echo>
+$0x8,%rsp
+
+unix>./bufdemo-nsp
+Type a string:012345678901234567890123
+012345678901234567890123
+Segmentation fault
+
+Program “returned” to 0x0400600, and then crashed.
+
+18
+
+Buffer Overflow Example #2 Explained
+After return from echo
+0000000000400500 <deregister_tm_clones>:
+Stack frame for
+400500: mov
+$0x60104f,%eax
+call_echo
+400505: push
+%rbp
+⟵%rsp
+400506: sub
+$0x601048,%rax
+40050c: cmp
+$0xe,%rax
+00 00 00 00
+400510: mov
+%rsp,%rbp
+00 40 05 00
+400513: jbe
+400530
+34 33 32 31
+400515: mov
+$0x0,%eax
+40051a: test
+%rax,%rax
+30 39 38 37
+40051d: je
+400530
+36 35 34 33
+40051f: pop
+%rbp
+32 31 30 39
+400520: mov
+$0x601048,%edi
+400525: jmpq
+*%rax
+38 37 36 35
+400527: nopw
+0x0(%rax,%rax,1)
+34 33 32 31 buf
+40052e: nop
+400530: pop
+%rbp
+400531: retq
+“Returns” to unrelated code, but continues!
+Eventually segfaults on retq of deregister_tm_clones.
+19
+
+Malicious Use of Buffer Overflow: Code Injection Attacks
+Stack after call to gets()
+High Addresses
+
+void foo(){
+bar();
+A:...
+}
+int bar() {
+char buf[64];
+gets(buf);
+...
+return ...;
+}
+
+foo stack frame
+return address A
+AB
+(return address)
+data written
+by gets()
+buf starts here
+
+B
+
+pad
+
+bar stack frame
+
+exploit
+code
+
+Low Addresses
+
+• Input string contains byte representation of executable code
+• Overwrite return address A with address of buffer B
+• When bar() executes ret, will jump to exploit code
+
+20
+
+Exploits Based on Buffer Overflows
+• Buffer overflow bugs can allow remote machines to execute arbitrary code on
+victim machines
+• Distressingly common in real programs
+• Programmers keep making the same mistakes 
+• Recent measures make these attacks much more difficult
+
+• Examples across the decades
+• Original “Internet worm” (1988)
+• Still happens!!
+• Heartbleed (2014, affected 17% of servers)
+• Cloudbleed (2017)
+
+• Fun: Nintendo hacks
+• Using glitches to rewrite code: https://www.youtube.com/watch?v=TqK-2jUQBUY
+• FlappyBird in Mario: https://www.youtube.com/watch?v=hB6eY73sLV0
+
+Example: the original Internet worm (1988)
+• Exploited a few vulnerabilities to spread
+• Early versions of the finger server (fingerd) used gets() to read the argument
+sent by the client:
+• finger droh@cs.cmu.edu
+
+• Worm attacked fingerd server with phony argument:
+• finger “exploit-code padding new-return-addr”
+• Exploit code: executed a root shell on the victim machine with a direct TCP connection to the
+attacker
+
+• Scanned for other machines to attack
+• Invaded ~6000 computers in hours (10% of the Internet)
+• see June 1989 article in Comm. of the ACM
+
+• The young author of the worm was prosecuted…
+22
+
+Heartbleed (2014)
+• Buffer over-read in OpenSSL
+• Open source security library
+• Bug in a small range of versions
+
+• “Heartbeat” packet
+• Specifies length of message
+• Server echoes it back
+• Library just “trusted” this length
+• Allowed attackers to read contents
+of memory anywhere they wanted
+
+• Est. 17% of Internet affected
+• “Catastrophic”
+• Github, Yahoo, Stack Overflow,
+Amazon AWS, ...
+
+By FenixFeather - Own work, CC BY-SA 3.0,
+https://commons.wikimedia.org/w/index.php?curid=32276981
+
+23
+
+Crafting Smashing String
+int echo() {
+char buf[4];
+gets(buf);
+...
+return ...;
+}
+
+Stack Frame
+for call_echo
+
+07 00
+FF
+00
+00 Address
+00
+Return
+00
+40
+06
+FF (8
+FFbytes)
+AB c3
+80
+33 32 31 30
+39 38 37 36
+35
+34 unused
+33 32
+20 bytes
+31 30 39 38
+37 36 35 34
+33 32 31 30
+Attack String (Hex)
+
+%rsp
+
+24 bytes
+
+Target Code
+void smash() {
+printf("I've been smashed!\n");
+exit(0);
+}
+00000000004006c8 <smash>:
+4006c8:
+48 83 ec 08
+
+30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 36 37 38 39 30 31 32 33
+c8 06 40 00 00 00 00 00
+
+Smashing String Effect
+Stack Frame
+for call_echo
+
+07 00
+FF
+00
+00 Address
+00
+Return
+00
+40
+06
+FF (8
+FFbytes)
+AB c8
+80
+33 32 31 30
+39 38 37 36
+35
+34 unused
+33 32
+20 bytes
+31 30 39 38
+37 36 35 34
+33 32 31 30
+Attack String (Hex)
+
+%rsp
+
+Target Code
+void smash() {
+printf("I've been smashed!\n");
+exit(0);
+}
+00000000004006c8 <smash>:
+4006c8:
+48 83 ec 08
+
+30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 36 37 38 39 30 31 32 33
+c8 06 40 00 00 00 00 00
+
+Performing Stack Smash
+Code example to try on Thoth!
+https://bit.ly/3eWwndQ
+
+• Put hex sequence in file smash-hex.txt
+• Use hexify program to convert hex digits to
+characters
+• Some of them are non-printing
+
+• Provide as input to vulnerable program
+$ cat smash-hex.txt
+30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 36 37 38 39 30 31 32 33
+c8 06 40 00 00 00 00 00
+$ cat smash-hex.txt | ./hexify | ./bufdemo-nsp
+Type a string:012345678901234567890123?@
+I've been smashed!
+void smash() {
+printf("I've been smashed!\n");
+exit(0);
+}
+
+26
+
+Code Injection Attacks
+Stack after call to gets()
+void P(){
+Q();
+A: ...
+}
+
+P stack frame
+
+Return address A
+
+int Q() {
+char buf[64];
+gets(buf);
+...
+return ...;
+}
+
+B
+ABA
+data written
+by gets()
+B
+
+pad
+
+exploit
+code
+
+Q stack frame
+
+• Input string contains byte representation of executable code
+• Overwrite return address A with address of buffer B
+• When Q executes ret, will jump to exploit code
+
+27
+
+How Does The Attack Code Execute?
+rip
+void P(){
+Q();
+...
+}
+
+Stack
+rsp
+rsp
+
+rsp
+Shared
+Libraries
+
+ret
+
+BB
+AA
+pad
+
+ret
+int Q() {
+char buf[64];
+gets(buf); // A->B
+...
+return ...;
+}
+
+…
+
+rip
+rip
+
+exploit
+code
+
+Heap
+
+rip
+rip
+
+Data
+Text
+28
+
+Dealing with buffer overflow attacks
+
+1) Avoid overflow vulnerabilities
+2) Employ system-level protections
+3) Have compiler use “stack canaries”
+
+30
+
+1) Avoid Overflow Vulnerabilities in Code
+• Use library routines that limit string lengths
+• fgets instead of gets (2nd argument to fgets sets limit)
+• strncpy instead of strcpy
+• Don’t use scanf with %s conversion specification
+• Use fgets to read the string
+• Or use %ns where n is a suitable integer
+/* Echo Line */
+void echo()
+{
+char buf[8]; /* Way too small! */
+fgets(buf, 8, stdin);
+puts(buf);
+}
+31
+
+2) System-Level Protections
+High Addresses
+
+• Randomized stack offsets
+• At start of program, allocate random amount of space on stack
+• Shifts stack addresses for entire program
+
+Random
+allocation
+main’s
+stack frame
+
+• Addresses will vary from one run to another
+
+• Makes it difficult for hacker to predict beginning of inserted code
+
+Other
+functions’
+stack frames
+
+• Example: Code from Slide 6 executed 5 times; address of variable
+local =
+•
+•
+•
+•
+•
+
+0x7ffd19d3f8ac
+0x7ffe8a462c2c
+0x7ffe927c905c
+0x7ffefd5c27dc
+0x7fffa0175afc
+
+• Stack repositioned each time program executes
+
+B?
+pad
+
+B?
+
+exploit
+code
+Low Addresses
+
+32
+
+2) System-Level Protections
+Stack after call
+to gets()
+
+• Non-executable code segments
+
+foo
+stack
+frame
+
+• In traditional x86, can mark region of
+memory as either “read-only” or “writeable”
+• Can execute anything readable
+
+• x86-64 added explicit “execute” permission
+• Stack marked as non-executable
+• Do NOT execute code in Stack, Static Data, or
+Heap regions
+• Hardware support needed
+
+B
+data written
+by gets()
+B
+
+pad
+exploit
+code
+
+bar
+stack
+frame
+
+Any attempt to execute this code will fail
+33
+
+3) Stack Canaries
+• Basic Idea: place special value (“canary”) on stack just beyond buffer
+• Secret value known only to compiler
+• “After” buffer but before return address
+• Check for corruption before exiting function
+
+• GCC implementation (now default)
+• -fstack-protector
+• Code back on Slide 14 (buf-nsp) compiled with
+–fno-stack-protector flag
+
+unix>./buf
+Enter string: 12345678
+12345678
+
+unix> ./buf
+Enter string: 123456789
+*** stack smashing detected ***
+
+34
+
+Protected Buffer Disassembly (buf)
+echo:
+400638:
+40063c:
+400645:
+40064a:
+...
+400656:
+400659:
+40065e:
+400661:
+400666:
+40066b:
+400674:
+400676:
+40067b:
+40067f:
+
+sub
+$0x18,%rsp
+mov
+%fs:0x28,%rax
+mov
+%rax,0x8(%rsp)
+xor
+%eax,%eax
+... call printf ...
+mov
+%rsp,%rdi
+callq 400530 <gets@plt>
+mov
+%rsp,%rdi
+callq 4004e0 <puts@plt>
+mov
+0x8(%rsp),%rax
+xor
+%fs:0x28,%rax
+je
+40067b <echo+0x43>
+callq 4004f0 <__stack_chk_fail@plt>
+add
+$0x18,%rsp
+retq
+
+Setting Up Canary
+Before call to gets
+Stack frame for
+call_echo
+Return address
+(8 bytes)
+
+Canary
+(8 bytes)
+[7] [6] [5] [4]
+
+/* Echo Line */
+void echo()
+{
+char buf[8]; /* Way too small! */
+gets(buf);
+puts(buf);
+}
+Segment register
+(don’t worry about it)
+echo:
+. . .
+movq
+%fs:40, %rax
+# Get canary
+movq
+%rax, 8(%rsp)
+# Place on stack
+xorl
+%eax, %eax
+# Erase canary
+. . .
+
+[3] [2] [1] [0] buf ⟵%rsp
+
+36
+
+Checking Canary
+After call to gets
+Stack frame for
+call_echo
+Return address
+(8 bytes)
+
+Canary
+(8 bytes)
+
+00 37 36 35
+34 33 32 31
+
+/* Echo Line */
+void echo()
+{
+char buf[8];
+gets(buf);
+puts(buf);
+}
+echo:
+. . .
+movq
+xorq
+je
+call
+.L6:
+
+/* Way too small! */
+
+8(%rsp), %rax
+%fs:40, %rax
+.L2
+__stack_chk_fail
+. . .
+
+# retrieve from Stack
+# compare to canary
+# if same, OK
+# else, FAIL
+
+buf ⟵%rsp
+
+Input: 1234567
+37
+
+Summary
+
+1) Avoid overflow vulnerabilities
+•
+
+Use library routines that limit string lengths
+
+2) Employ system-level protections
+•
+•
+
+Randomized Stack offsets
+Code on the Stack is not executable
+
+3) Have compiler use “stack canaries”
+
+38
+
+

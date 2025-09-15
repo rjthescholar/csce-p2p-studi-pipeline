@@ -1,0 +1,783 @@
+#12
+
+Controlling
+the PC
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+● If you had a negative grade in the project
+o You should talk to me
+
+2
+
+Assemblers and Compilers
+How the machine-code sausage is made
+
+3
+
+What is machine code?
+
+4
+
+Something denser
+● text is human-oriented and informationally… sparse.
+● instead, we encode each instruction as a bitfield.
+o this encoding is specified by the ISA.
+MIPS has three
+instruction formats.
+
+R opcode
+31
+
+26 25
+
+I opcode
+31
+
+rs
+
+26 25
+
+J opcode
+31
+
+21 20
+
+16 15
+
+rt
+21 20
+
+rs
+
+the opcode (and funct) field
+identifies which instruction it is.
+11 10
+
+rd
+
+6 5
+
+shamt funct
+
+16 15
+
+rt
+
+0
+
+add rd,rs,rt
+sll rd,rs,shamt
+
+0
+
+beq rs,rt,offset
+
+immediate
+
+26 25
+
+0
+
+target
+
+jal target
+5
+
+How does it… do the thing?
+● well this is mostly next lecture, but…
+the fields are used
+as the control
+signals to the CPU's
+components.
+
+Register File
+WE
+
+add t0, t1, t2
+
+ALU
+
+rd
+
+rs
+
+rt
+
+1
+
+"add"
+
+gets encoded as…
+31
+
+26 25
+
+21 20
+
+16 15
+
+11 10
+
+6 5
+
+0
+
+000000 01001 01010 01000 00000 100000
+6
+
+How It's Made
+
+7
+
+So we know the assembler
+li
+
+top:
+
+s0, 0
+
+Address
+
+Instruction
+
+0x00400000
+
+0x24100000
+
+0x00400004
+
+0x00102021
+
+move a0, s0
+assembler!
+0x00400008
+jal print_int
+0x0040000C
+addi s0, s0, 1
+0x00400010
+blt s0, 5, top
+0x00400014
+li
+v0, 10
+but, there's clearly
+0x00400018
+syscall
+a little more
+0x0040001C
+print_int:
+going on under
+0x00400020
+li v0, 1
+the hood…
+syscall
+0x00400024
+jr ra
+0x00400028
+
+0x0C100008
+0x22100001
+0x2A010005
+0x1420FFFB
+0x2402000A
+0x0000000C
+0x24020001
+0x0000000C
+0x03E00008
+8
+
+How it works
+● An assembler is a pretty simple program
+● See an instruction, output its encoding
+
+addi s0, s0, 1
+
+splut
+
+opcode
+
+rs
+
+rt
+
+imm
+
+8
+
+16
+
+16
+
+1
+
+0x22100001
+But what about
+labels and the
+data segment
+
+9
+
+How it actually works (animated)
+.data
+Labels
+.text
+x: .word 0xDEADBEEF
+0: 24100000
+x:
+.data:0
+y: .word 5
+4: 00102021
+y:
+.data:4
+z: .word 0x12345678
+z:
+.data:8
+8: 0c000008
+0c000000
+.text
+top: .text:4
+C: 22100001
+print_int:
+li
+s0, 0
+10: 2A010005
+.text:20
+14: 1420FFFB
+top:
+18: 2402000A
+move a0, s0
+1C: 0000000C
+jal print_int
+20: 24020001
+addi s0, s0, 1
+Fixups
+24: 0000000C
+blt s0, 5, top
+28: 03E00008
+8:
+print_int
+li
+v0, 10
+syscall
+print_int:
+li v0, 1
+syscall
+then, run through the fixups!
+jr ra
+
+.data
+0: DEADBEEF
+4: 00000005
+8: 12345678
+
+10
+
+Yum yum
+● if a label doesn't exist, it's an error.
+● now we have machine code!
+● it's packaged up into a casing: an object file
+● then the object files are linked
+● and then you get an executable program
+o this is CS0449 stuff!
+
+11
+
+What about compilers?
+● ahahaha oh they're a lot more complicated
+int main(int argc, char** argv) {
+if(argc < 2)
+fatal("gimme arguments");
+else {
+Tokens
+...
+KEYWORD("int"),
+}
+ID("main"),
+}
+LPAREN,
+
+AST (Abstract Syntax Tree)
+Function
+ret_type: int
+name: "main"
+args: [
+{type: int, name: "argc"},
+{type: ptr(ptr(char)),
+name: "argv"}
+]
+
+if
+
+KEYWORD("int"),...
+<
+argc
+
+…
+2
+fatal
+
+call
+"gimme arguments"
+
+12
+
+It's just a grinder.
+● all that really matters:
+some compilers output
+assembly and rely on an
+assembler to produce
+machine code
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+hello.c
+
+code goes in, sausage object
+files come out
+
+these days, it's common
+for the compiler itself to
+produce machine code,
+or some kind of
+platform-independent
+assembly code
+
+13
+
+Jumps and Branches
+
+14
+
+Maybe you never noticed…
+● the control flow instructions are divided into two groups.
+
+jumps make execution go
+to one specific place
+
+branches make execution
+go to one of two places
+
+j end
+
+bne s1, t0, top
+
+but.. why?
+well, notice the operands of each.
+
+15
+
+A matter of practicality
+● Each jump or branch has a target: where it goes to
+● We'd like to be able to encode any target address…
+● But we have a fixed number of bits to encode our instructions.
+think about the cases
+where jumps are used.
+
+now think about the cases
+where branches are used.
+
+how far away is a jump
+target likely to be?
+
+how far away is a branch
+target likely to be?
+16
+
+Absolute versus Relative
+● we say that jumps are absolute and branches are relative.
+
+top:
+move a0, s0
+jal print_int
+add s0, s0, 1
+blt s0, 5, top
+...
+
+jumps just set the
+PC to a new value.
+
+PC = 0x800400B0
+
+PC += (-16)
+branches either add an offset
+to the PC or do nothing.
+
+jumps need a long address, but branches only need a
+small offset. so we can fit them into J and I instructions!
+
+17
+
+More bang for your buck
+● every MIPS instruction is 4 bytes
+● what's memory alignment again?
+Address in hex
+
+and in binary
+
+0x78000000
+0x78000004
+
+0111 1000 0000 0000 0000 0000 0000 0000
+0111 1000 0000 0000 0000 0000 0000 0100
+
+0x78000008
+0x7800000C
+
+0111 1000 0000 0000 0000 0000 0000 1000
+0111 1000 0000 0000 0000 0000 0000 1100
+what do you notice about these low 2 bits?
+in binary, multiples of 4 always end in 00
+
+since every instruction's address ends in 00, do we need to store it?
+18
+
+Instruction Fetching
+What do we do next, boss?
+
+19
+
+Remember this?
+● what order do these instructions run?
+
+most instructions
+change the PC to the
+print_int:
+next address
+li v0, 1
+
+li
+s0, 0
+top:
+syscall
+move a0, s0
+control flow
+jr ra
+jal print_int
+instructions can
+addi s0, s0, 1
+change the PC
+blt s0, 5, top
+to a constant…
+li
+v0, 10
+…or the value from a register…
+syscall
+…or one of two choices,
+conditionally
+
+20
+
+Forwarrrrrrrrd MARCH
+
++
+
+● moving ahead by 1 instruction each cycle is easy enough
+o This is a FSD, the next state is the current state + 1 :D
+
+size of one instruction
+
+00100004
+PC
+
+how big are instructions in MIPS?
+
+21
+
+Arbitrary locatiooooon MARCH
+
+4
+
++
+
+● jumps (j, jal, jr) put a constant value into the PC
+o we call this the jump target.
+● well now we have two choices of where to go. how do we choose?
+
+jump target
+PC Source
+
+00100004
+PC
+
+PC Source (PCSrc for short) is a control signal.
+many control signals are just MUX selectors
+22
+
+MIPS jump targets
+● in MIPS, j and jal use the J-type instruction format:
+
+31
+
+26 25
+
+0
+
+opcode
+
+target
+00100004
+
+this is 26 bits…
+…but the PC is 32 bits.
+
+WHAT DO??
+
+23
+
+Do we really need a full 32-bit address (no)
+● we don't need to store the lower 2 bits because of alignment.
+● most programs are nowhere near big enough to need 32-bit addrs.
+● so in MIPS, jumps only change the lower 28 bits of the PC.
+here's a j.
+
+31
+
+0
+
+26 25
+
+000010
+
+0x243C007
+<< 2
+
+0x90F001C
+
+what does this mean if the thing
+you're jumping to is too far away?
+
+78000008
+790F001C
+PC
+put that into the
+low 28 bits of the PC
+24
+
+Do we really need a full 32-bit address (no) (cntd.)
+● If a jump instruction is in address
+
+YXXXXXXX
+● It can reach from address:
+
+31
+
+26 25
+
+000010
+● To address:
+
+31
+
+Y0000000
+0x0000000
+<< 2
+0x0000000
+
+26 25
+
+000010
+
+0
+
+0
+
+YFFFFFFC
+0x3FFFFFF
+<< 2
+0xFFFFFFC
+
+25
+
+If jumping REALLY far, far away…
+● What if we want to jump too far?
+beq t0, zero, a_label_far_far_away
+
+j
+
+a_label_far_far_away
+
+● There is one instruction that can jump into a 32-bit address
+o What is that?
+▪ How big is register ra?
+jr
+
+ra
+
+26
+
+If jumping REALLY far, far away…
+j
+
+a_label_far_far_away
+
+la
+jr
+beq
+
+t0, a_label_far_far_away
+t0
+
+t0, zero, a_label_far_far_away
+
+bne t0, zero, _skip_jump
+la
+t0, a_label_far_far_away
+jr
+t0
+_skip_jump:
+
+27
+
+If jumping REALLY far, far away…
+jal
+
+a_label_far_far_away
+
+la
+jalr
+
+t0, a_label_far_far_away
+t0
+
+28
+
+Relative branches
+● think about a number line.
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+you
+are
+here
+
+8
+
+if you want to get here, what
+do you have to add to 10?
+what's the pattern?
+
+9 10 11 12 13 14 15 16 17
+
+how about here?
+
+destination - source
+
+29
+
+MIPS branch offsets
+● In MIPS the PC points to the next instruction to run.
+● let's say we're running the beq here. it's at address 00…
+
+00: beq a0, 10, else
+…but the PC is here. PC 04: li v0, 0
+08: b
+end
+we want to get to address 0C. else: 0C: li v0, 1
+end: 10: ...
+how do we get there?
+
+PC += 8
+the branch offset for this beq is:
+target – (branch address + 4) = 12 – (0 + 4) = 8
+30
+
+Encoding it
+● Since the branch's immediate is only 16 bits…
+
+31
+
+26 25
+
+4
+
+21 20
+
+4
+
+16 15
+
+1
+
+0
+
+0x0002
+
+0x0008 >> 2
+if the branch offset is negative like 0xFFFFFFE8, no big deal –
+chop off the top 16 bits. 0xFFE8 is still a negative number.
+
+31
+
+The number stored is the number of instructions
+● To go to else, from the updated value of PC: Jump 2 instructions down
+00: beq a0, 10, else
+PC
+04: li v0, 0
+08: b
+end
+else: 0C: li v0, 1
+end: 10: ...
+
+the branch offset for this beq
+is:
+target – (branch address + 4)
+=
+12 – (0 + 4) = 8
+
+31
+
+26 25
+
+4
+
+21 20
+
+4
+
+16 15
+
+1
+
+0
+
+0x0002
+
+0x0008 >> 2
+
+32
+
+

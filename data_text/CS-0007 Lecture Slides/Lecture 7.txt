@@ -1,0 +1,277 @@
+CS 0007: Introduction to Java
+Lecture 7
+Nathan Ong
+University of Pittsburgh
+September 22, 2016
+
+FUNCTIONS
+
+Functions
+• A function is similar to its mathematical
+counterpart
+• f(x) = x2, plug in 3, get 9
+• Contains several more parts
+
+Java Functions
+• Takes in zero or more parameters,
+processes them in the function body,
+and returns a result
+• Imagine going to BestBuyTM and telling
+them you want your computer fixed.
+You are telling them to run a fixing
+function, with your computer being a
+parameter. What you get back is your
+fixed computer.
+
+You Already Have the Power!
+• You already know how to call functions!
+Static:
+ClassName.functionName(<parameters
+>);
+Non-static:
+objectName.functionName(<parameter
+s>);
+• How do I make my own?
+
+Function Components
+
+1.
+2.
+3.
+Function 4.
+Header 5.
+
+Function
+Body 6.
+
+Visibility type (public/protected/private)
+static (For now, required)
+Return Type
+functionName
+Parentheses “()”
+–
+a)
+b)
+c)
+
+Parameters
+Type1 parameterName1
+Type2 parameterName2
+…
+
+Curly Brackets/Braces “{}”
+–
+
+return a value
+
+A Simple Unnecessary
+Function
+• I want this function to take two doubles
+and return their sum.
+• Let us go through the list and see what
+needs to be incorporated for the
+function.
+
+Function Components
+1.
+2.
+3.
+4.
+5.
+
+We’ll just use public for now.
+static (For now, required)
+What is the Return Type?
+What is an appropriate functionName?
+Parentheses “()”
+–
+
+What are the parameters?
+
+6. Curly Brackets/Braces “{}”
+–
+–
+
+What do we do in the Function Body?
+What do we return?
+
+Return Type
+• What kind of thing are we going to give
+back to the function caller?
+• “I want this function to take two
+doubles and return their sum.”
+• The sum of two doubles better be a
+double.
+
+Function Name
+• The function name should easily
+describe what the function does.
+• “I want this function to take two
+doubles and return their sum.”
+• “sum”? Probably not enough detail,
+since there are many types that can be
+summed.
+• sumDoubles
+
+Parameters
+• The required input to the function.
+• The data that the function needs in
+order to properly execute its duties.
+• “I want this function to take two
+doubles and return their sum.”
+• Two doubles.
+• Names?
+
+Function Header
+
+//sums two doubles together
+public static double sumDoubles
+(double addend1, double addend2)
+
+Function Body
+…(Function Header)
+{
+???
+}
+
+Function Body
+…(Function Header)
+{
+double sum = addend1 + addend2;
+return sum;
+}//end method(double,double)
+
+Function Body
+…(Function Header)
+{
+return addend1 + addend2;
+}//end method(double,double)
+
+Function Body
+public class Functions
+{
+…(Function)
+public static void main(String[] args)
+{
+double sum = sumDoubles(2.5,3.9);
+System.out.println(sum);
+}//end method main
+}//End class Functions
+
+import java.util.Scanner;
+public class AddingMachine
+{
+…(Function)
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("Please enter a number:");
+double firstNum = scan.nextDouble();
+System.out.println("Please enter a second
+number:");
+double secondNum = scan.nextDouble();
+double sum = sumDoubles(firstNum,secondNum);
+System.out.println("The sum of " + firstNum +
+" and " + secondNum + " equals " +
+sum);
+}//end method main
+}//End class AddingMachine
+
+Scope
+• Why did we need to submit firstNum
+and secondNum to sumDoubles?
+• Why can’t sumDoubles just use the
+already created variables?
+• This relates to scope.
+
+Scope
+Confidential
+Secret
+Top Secret
+
+Scope
+public class
+AddingMachine
+public
+static void
+main
+
+public
+static
+double
+sumDoubl
+es
+
+Passing-in Parameters
+• The act of providing parameters in a
+function call is called Passing-in.
+• Java has two kinds of passing-in.
+
+Pass-by-Value
+• Passing-in a copy of the value of the
+variable.
+• Any change made to the variable is not
+reflected when the function returns.
+• All primitive type parameters are passby-value.
+
+Pass-by-Reference
+• Passing-in the actual variable.
+• Any change made to the variable IS
+reflected when the function returns,
+UNLESS the parameter name is
+REASSIGNED.
+• All non-primitive type parameters are
+pass-by-reference.
+
+Another Simple Function
+• I want a function that prints a nice
+British greeting, complete with the
+person’s full name.
+Source:
+http://www.bbcamerica.com/anglophen
+ia/2011/07/five-slang-ways-to-say-hello/
+
+Function Components
+1.
+2.
+3.
+4.
+5.
+
+public
+static
+What is the Return Type?
+What is an appropriate functionName?
+Parentheses “()”
+–
+
+What are the parameters?
+
+6. Curly Brackets/Braces “{}”
+–
+–
+
+What do we do in the Function Body?
+What do we return?
+
+Return Type
+• Does this function even need to return
+any data or information?
+• No, so we should use void as our
+return type.
+
+Function Header
+
+public static void britishGreeting
+(String fullName)
+
+Function Body
+…(Function Header)
+{
+System.out.println("Wotcha " +
+fullName +
+". Fancy a cuppa?");
+}//end method(String)
+//Note no return statement
+
+

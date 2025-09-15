@@ -1,0 +1,650 @@
+Finite Automata 01
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite Automata
+Suppose you are asked to write a software to control an
+automatic door as shown below:
+front
+pad
+
+rear
+pad
+
+door
+
+Assume we have the following methods:
+getFrontPad(): returns true if there is a person standing on
+the front pad. Otherwise, it returns false.
+getRearPad(): returns true if there is a person standing on
+the rear pad. Otherwise, it returns false.
+openDoor(): when called it will open the door.
+closeDoor(): when called it will close the door.
+
+How the write the program in Java?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite Automata
+Program to control the automatic door:
+public class DoorController {
+public static void main(String[] args) {
+boolean isDoorOpen = false;
+while(true) {
+if(getFrontPad() && !getRearPad() && !isDoorOpen) {
+openDoor();
+isDoorOpen = true;
+}
+if(!getFrontPad() && !getRearPad() && isDoorOpen) {
+closeDoor();
+isDoorOpen = false;
+}
+}
+}
+}
+
+The variable isDoorOpen of type boolean is used to record
+the status of the door (1 bit of memory is required).
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite Automata
+
+getFrontPad() and getRearPad() together acts as external
+input to the program:
+getFrontPad() getRearPad()
+Input
+true
+true
+Both
+true
+false
+Front
+false
+true
+Rear
+false
+false
+Neither
+We can define the behavior of our program based on its input
+as well as the status of the door whether it is current open or
+close
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Representations
+The program can be represented in two standard ways
+State Diagram:
+Rear
+
+Rear
+
+Front
+Both
+
+Open
+
+Closed
+
+Both
+
+Neither
+
+Neither
+
+State Transition Table:
+Neither
+Closed Closed
+Open
+Closed
+
+Front
+
+Front
+Open
+Open
+
+Rear
+Closed
+Open
+
+Both
+Closed
+Open
+
+But how to represent these in a mathematical way?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite State Machine
+Consider the following finite state machine M1 :
+0
+
+1
+
+0
+
+1
+
+q0
+
+q1
+
+q2
+0, 1
+
+Machine M1 consists of:
+Three states: q0 , q1 , and q2
+The start state q0 (arrow pointing to it from nowhere)
+An accept state q1 (double circle)
+All single circle states are called non-accept state
+
+Arrows represent transition functions
+The label 0, 1 represents two transitions
+q1
+
+q2
+0
+1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite State Machine
+Consider the following finite state machine M1 :
+0
+
+1
+
+0
+
+1
+
+q0
+
+q1
+
+q2
+0, 1
+
+When an input string is given to this machine, it returns
+either accept or reject.
+1101: accept
+1
+
+1
+
+0
+
+1
+
+q0 → q1 → q1 → q2 → q1
+
+(an accept state)
+
+0010: reject
+0
+
+0
+
+1
+
+0
+
+q0 → q0 → q0 → q1 → q2
+
+(a non-accept state)
+
+0100: accept
+0
+
+1
+
+0
+
+0
+
+q0 → q0 → q1 → q2 → q1
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+(an accept state)
+
+Finite Automata 01
+
+Finite State Machine
+Consider the following finite state machine M1 :
+0
+
+1
+
+0
+
+1
+
+q0
+
+q1
+
+q2
+0, 1
+
+Can we define the set of inputs that is accepted by the above
+machine?
+M1 accepts any strings that end with a 1
+M1 also accepts a string that ends with a 0 but it needs to
+have even number of 0s after the last 1
+
+The set of all strings accepted by this machine is
+{x | x ends with a 1 and x is a string
+that ends with an even number of 0s following the last 1}
+The above set is called the language of the machine M1
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Finite-State Automaton
+A finite state machine M can be defined as five tuple
+M = (Q, Σ, δ, q0 , F )
+Q is a non-empty finite set of states
+M must have at least one state
+
+Σ is an alphabet (a finite set of symbols)
+δ : Q × Σ → Q is the transition functions
+We generally use a table to represent δ
+
+q0 ∈ Q is the starting state
+A finite automata can only have exactly one start state
+
+F ⊆ Q is the set of accept states
+F can be ∅
+M can have no accept state (rejects all strings)
+|F | can be more than 1
+M has more than one accept states
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Example: Machine M1
+0
+
+1
+
+0
+
+1
+
+q0
+
+q1
+
+q2
+0, 1
+
+M1 = (Q, Σ, δ, q0 , F )
+Q = {q0 , q1 , q2 }
+Σ = {0, 1}
+δ can be defined using the table below:
+δ
+0
+1
+q0 q0 q1
+q1 q2 q1
+q2 q1 q1
+q0 is the start state
+F = {q1 }
+
+The state diagram and its formal definition are equivalent
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Formal Definition of Machine M1
+M1 = ({q0 , q1 , q2 }, {0, 1}, δ, q0 , {q1 }) where δ is as follows:
+δ
+0 1
+q0 q0 q1
+q1 q2 q1
+q2 q1 q1
+The above formal definition allows use to precisely answer
+questions about M1 :
+Is 0101 is a valid input for this machine?
+Yes. 0 ∈ {0, 1} and 1 ∈ {0, 1}.
+
+Is 01a0 is a valid input for this machine?
+No. a 6∈ {0, 1}
+
+Is input 010 accepted by this machine?
+0
+
+1
+
+0
+
+No. q0 → q0 → q1 → q2 and q2 6∈ {q1 }.
+
+Is input 101 accepted by this machine?
+1
+
+0
+
+1
+
+Yes. q0 → q1 → q2 → q1 and q1 ∈ {q1 }.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Language Recognized
+
+A string w = w1 w2 . . . wn is accepted by M if and only if
+after processing each symbol wi of w, where 1 ≤ i ≤ n, M
+finds itself in an accept state (a state belonging to F ).
+Otherwise, we say w is rejected by M .
+If A is the set of all strings accepted by M , we say A is the
+language of finite-state machine M , denoted by
+L(M ) = A
+We say that M recognizes A
+A machine may accept several strings but it always recognizes
+only one language.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Example
+0
+
+1
+1
+
+q1
+
+q2
+0
+
+M2 = (Q, Σ, δ, start state, F )
+What is the formal definition of the above machine and the
+language that it recognises?
+Q = {q1 , q2 }
+Σ = {0, 1}
+δ
+0 1
+q1 q1 q2
+q2 q1 q2
+The start state is q1
+F = {q2 }
+L(M2 ) = {w | w ends in a 1}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Example
+0
+
+1
+1
+
+q1
+
+q2
+0
+
+M3 = (Q, Σ, δ, start state, F )
+What is the formal definition of the above machine and the
+language that it recognises?
+Q = {q1 , q2 }
+Σ = {0, 1}
+δ
+0 1
+q1 q1 q2
+q2 q1 q2
+Start state is q1
+F = {q1 }
+L(M2 ) = {w | w is the empty string ε or ends in a 0}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Example
+Q = {s, q1 , q2 , r1 , r2 }
+Σ = {a, b}
+a
+
+b
+
+r1
+
+q1
+
+a
+b
+b
+
+s
+
+a
+
+q2
+
+a
+
+b
+b
+
+r2
+
+M4 = (Q, Σ, δ, start state, F )
+
+a
+
+Transition Functions:
+δ
+a b
+s q1 r1
+q1 q1 q2
+q2 q1 q2
+r1 r2 r1
+r2 r2 r1
+Start state is s
+F = {q1 , r1 }
+
+What is the formal definition of
+the above machine and the language that it recognises?
+
+L(M2 ) =
+{w | w starts and ends
+with the same symbol}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Example
+Q = {q0 , q1 , q2 }
+
+0
+
+Σ = {0, 1, 2, <RESET>}
+q1
+
+<RESET>
+
+1
+2
+
+0
+
+2
+
+1
+2
+
+q0
+
+1
+
+q2
+
+0
+
+<RESET>
+<RESET>
+
+M5 = (Q, Σ, δ, start state, F )
+What is the formal definition of
+the above machine and the language that it recognises?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Transition Functions:
+δ
+0 1 2 <RESET>
+q0 q0 q1 q2
+q0
+q1 q1 q2 q0
+q0
+q2 q2 q0 q1
+q0
+Start state is q0
+F = {q0 }
+L(M2 ) =
+{w | w is the empty string ε or
+ends with <RESET> or
+sum of input is multiple
+of 3 after the last
+<RESET>}
+Finite Automata 01
+
+Designing a Finite-State Machine
+
+A computation model simulates a set of algorithms
+Designing a finite-state machine is the same as writing a
+program
+Use states to capture state-of-minds
+I just see a 1
+I just see two consecutive 0s
+I already saw 00 or 11
+
+Do not force yourself to use the least number of states
+Nobody asks you to write a shortest possible program
+Unless you are asked to do so
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Designing Finite Automata
+Suppose the alphabet Σ is {0, 1}. Create a machine such that its
+language is the set of all strings that contain either 11 or 00 as a
+substring.
+q1
+1
+
+q0
+
+1
+
+1
+
+q3
+
+0
+
+0
+
+0
+
+q2
+
+Common mistakes:
+δ(q1 , 0) = q0
+δ(q2 , 1) = q0
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+0,1
+
+Designing Finite Automata
+Suppose the alphabet Σ is {0, 1}. Create a machine such that its
+language is the set of all strings that contain 011 as a substring.
+0
+
+1
+
+0
+
+1
+0
+
+qs
+
+1
+
+q0
+
+q01
+
+q011
+
+1
+
+0
+
+Common mistakes:
+δ(q0 , 0) = qs
+δ(q01 , 0) = qs
+
+Hint: Name of a state can be used to indicate a state-of-mind
+q01 means “I just see a 0 immediately followed by a 1”
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+Designing Finite Automata
+Suppose the alphabet Σ is {0, 1}. Create a machine such that its
+language is the set of all strings that ends with 0110.
+1
+
+0
+1
+0
+
+q0
+
+1
+
+q1
+
+q2
+
+0
+
+q3
+
+0
+1
+
+0
+
+Common mistakes:
+δ(q2 , 0) = q0
+δ(q4 , 0) = q0
+δ(q4 , 1) = q0
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 01
+
+q4
+
+

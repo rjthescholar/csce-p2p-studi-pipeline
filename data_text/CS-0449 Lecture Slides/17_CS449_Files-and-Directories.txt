@@ -1,0 +1,941 @@
+17
+
+Files and
+Directories
+
+Introduction to
+Systems Software
+
+wilkie
+
+Spring 2019/2020
+
+The Nature of Data
+The Lord of the Files
+
+Spring 2019/2020
+
+2
+
+Files and Data
+• What is a file? What is “data”? What is a binary file vs. a text file?
+
+files.c
+Spring 2019/2020
+
+files.o
+
+cat.gif
+3
+
+Formats
+• What is a file “format”? Why are there so many different image types??
+▪ All files are flat binary blobs of information. How can we tell them apart?
+
+• Well, remember ELF? Our executable format?
+▪ And the MAGIC NUMBER inside the box?
+
+• This is one way we differentiate different files.
+▪ Archivists and librarians keep track of different
+file formats when they digitize, store, and retrieve
+data. They maintain the PRONOM database of formats.
+
+• Ok. How do we read files?
+Spring 2019/2020
+
+4
+
+C Programming: Manipulating Files with stdio
+C(
+
+)
+
+• Here is a simple C program that creates a
+file called “
+” and writes a string
+to it, then opens it again to print it out.
+
+Open for
+writing
+
+•
+
+:
+
+Open read-only
+
+Opens a file with the given path. The
+string that follows is the access mode.
+“ ” opens for writing; overwrites file.
+“ ” opens read-only.
+
+•
+
+:
+
+Reads to the provided buffer the given
+number of bytes. (The “ ” is the number
+of elements to read if reading an array.)
+
+Seek 0 from end
+Seek to byte 0 •
+Politely close the file
+
+Spring 2019/2020
+
+:
+
+Writes from the provided buffer the given
+number of bytes. (Similar to
+)
+
+•
+
+:
+
+Moves the current file position.
+
+•
+
+:
+
+Returns the current file position.
+
+5
+
+C Programming: Manipulating Files with syscalls
+C(
+
+)
+
+Open for
+writing
+
+• Here is a simple C program that creates a
+file called “
+” and writes a string
+to it, then opens it again to print it out.
+•
+
+:
+
+Opens a file with the given path. The
+value that follows is the access mode.
+opens for writing.
+creates the file, if needed.
+removes the data in the file.
+opens read-only.
+
+•
+
+:
+
+Reads to the provided buffer the given
+number of bytes.
+
+Open read-only
+Seek to end
+Seek to byte 0
+Politely close the file
+
+Spring 2019/2020
+
+•
+
+:
+
+Writes from the provided buffer the given
+number of bytes. (Similar to
+)
+
+•
+
+:
+
+Moves the current file position. Returns
+the new position.
+
+6
+
+Everything is a “file”
+• UNIX makes lots of things “files” in a
+non-traditional sense.
+• Sockets, named pipes, all kinds of exotic
+things. Directories are files in the
+traditional sense (stored on disk
+properly)
+• You can use the
+,
+, and
+system calls with any of these diverse
+set of data streams.
+Spring 2019/2020
+
+The Internet
+7
+
+How data is stored…
+• Data in RAM is generally volatile memory.
+▪ It disappears after you shut off your computer.
+
+• So, you want some kind of persistent memory.
+▪ Storing data on disk involves creating a physical
+representation of that binary data.
+
+• Fun fact: there are non-volatile (persistent)
+main memories in development. (NVRAM)
+▪ They are really neat! (and slow!)
+▪ But wow they really complicate things!!
+• Consider the implications.
+
+• Let’s dig in…
+Spring 2019/2020
+
+8
+
+Disks
+You throw them and dogs chase them. Wait.. no… don’t do that.
+
+Spring 2019/2020
+
+9
+
+Floppy Disks
+• Data is stored in analog on magnetic material.
+▪ I love them.
+• Buy me a random box for my birthday, please.
+• When is my birthday? It is everyday.
+
+• Termed “floppy” due to the soft, flexible
+nature of the magnetic material.
+• Wait. Magnets?
+• How do you store data… with magnets?
+▪ If you’re thinking “they have two poles… so they
+are binary natured,” then you are on to something.
+Spring 2019/2020
+
+10
+
+Representing continuous data…
+• If you have some (continuous) data, represented by a waveform…
+• How to transmit/store that wave?
+• Amplitude modulation…
+▪ Send pulses of data sampling the wave.
+▪ Data encoded in the amplitude of pulse.
+
+• Frequency modulation…
+
+Different waveform streams
+
+▪ Data encoded in variation of frequency
+of pulse. (Yes, like FM radio)
+▪ Disks actually store data using a form of this encoding!
+Spring 2019/2020
+
+11
+
+Data and magnets… how do they work
+• We can use magnets to represent
+
+and
+
+(discrete binary)
+
+▪ The drive’s read head contains a sensor that detects the “magnetic flux”
+▪ It can sense a change in magnetism over time.
+• This shows the ideal world, without any modulation:
+
+N
+
+S
+
+S
+
+N
+
+N
+
+N
+
+S
+
+S
+
+S
+
+S
+
+N
+
+N
+
+S
+
+S
+
+S
+
+N
+
+N
+
+N
+
+Spring 2019/2020
+
+North and South poles indicate stored values
+
+12
+
+The peril of nature…
+• The magnetic drives read the change in magnetism.
+▪ It is difficult to tell the difference between two consecutive magnets…
+▪ This is also because co-aligned magnets HATE being next to each other.
+• Opposites attract, n’at. (They repel and affect each other’s signal)
+
+N
+
+S
+
+S
+
+N
+
+N
+
+N
+
+S
+
+S
+
+S
+
+S
+
+N
+
+N
+
+S
+
+S
+
+S
+
+N
+
+N
+
+N
+
+Spring 2019/2020
+
+13
+
+The peril of nature…
+• So, we can give up almost half of our data to add synchronization.
+▪ When we read, every other “sense” affects the next read.
+▪ If we read a “0” and then sense a change, the next bit stays the same.
+• If we sense a delay (long frequency), it is a “1” and we continue. (Modified-FM Encoding)
+
+Senses delay
+
+Swaps bit
+
+S
+
+N
+
+S
+
+N
+
+S
+
+S
+
+N
+
+S
+
+N
+
+N
+
+S
+
+N
+
+S
+
+N
+
+N
+
+S
+
+N
+
+S
+
+Spring 2019/2020
+
+Bounds the amount of “0”s physically stored.
+
+14
+
+Disk Drives
+• Also known as a “hard disk” due to the
+inflexible nature of its magnetic material.
+• Data is also stored digitally using a physical
+medium, such as, again, magnets.
+▪ Uses a similar yet stronger encoding scheme.
+
+Platter
+
+Head
+
+• Mechanical parts.
+▪ Can read random access, but it is slower than
+reading data sequentially (in physical order).
+
+• Bits are hard… let’s start abstracting…
+Spring 2019/2020
+
+15
+
+The platter matters:
+• Magnetic disk is represented by a set of
+stacked platters with magnetic bits.
+• A cylinder is a subdivision of platters (a
+track is such a subdivision on a single
+platter.)
+• A sector is a subdivision of a
+cylinder/track.
+▪ You typically read information from a
+disk in units of sectors.
+▪ Files are, generally, a set of sectors.
+Spring 2019/2020
+
+Sector
+Cylinder
+
+16
+
+Making heads turn (actually, they don’t turn at all)
+• Magnetic disk is represented by a set of
+stacked platters with magnetic bits.
+▪ There may be several platters.
+▪ Each read by at least one head.
+▪ Access time is how long it takes to read a sector.
+
+• As a head moves, it goes to a different cylinder.
+▪ As the platter spins, the head reads
+a different sector.
+
+• You can potentially read multiple sectors in
+parallel.
+▪ So how should we layout data on disk to take
+advantage of this?
+Spring 2019/2020
+
+17
+
+Making best use of sequential access
+• Seek time is the time it takes for the head to get into
+position. Latency: the time for the platter to spin.
+▪ Data is located at a two-dimensional coordinate
+on a spinning surface.
+• so the math is not trivial.
+
+• Seek time is relative to the current
+position of the head.
+▪ The closer the next bit of data you need…
+• The sooner it will get there.
+
+• So… to reduce the seek time to nil…
+▪ We position adjacent data in the same
+cylinder and respective sector.
+▪ Next set goes into subsequent sector. Heads don’t move; the platters spin.
+Spring 2019/2020
+
+18
+
+Ain’t no platter like a hard disk platter ‘cause a hard disk platter don’t stop
+
+• Seek time is the time it takes for the head to get into
+position. Latency: the time for the platter to spin.
+▪ Data is located at a two-dimensional coordinate
+on a spinning surface.
+• so the math is not trivial.
+
+• Seek time is relative to the current
+position of the head.
+▪ The closer the next bit of data you need…
+• The sooner it will get there.
+
+• Here, the head does not have to move at
+all and blocks 0 and 1 are read easily.
+▪ Yet, to read block 2, we have to wait for the platter
+to completely spin back around!! Seek time is zero, but maximum latency loss.
+Spring 2019/2020
+
+19
+
+Ain’t no platter like a hard disk platter ‘cause a hard disk platter don’t stop
+
+• Seek time is the time it takes for the head to get into
+position. Latency: the time for the platter to spin.
+▪ Data is located at a two-dimensional coordinate
+on a spinning surface.
+• so the math is not trivial.
+
+• Seek time is relative to the current
+position of the head.
+▪ The closer the next bit of data you need…
+• The sooner it will get there.
+
+• Yikes! Blocks are in different cylinders
+and subsequent blocks are behind the head.
+▪ Worst case! Latency and seek time really suffer.
+▪ Need to keep data in order! How do we organize data on disk?
+Spring 2019/2020
+
+20
+
+File Systems
+Yet another abstraction… moving toward applications.
+
+Spring 2019/2020
+
+21
+
+File Systems
+• There are many ways of representing files on the disks themselves.
+• As you know, you are familiar with:
+▪ Files having names!
+▪ Directories/folders for organization
+▪ Perhaps special files such as symbolic-links/shortcuts
+
+• A file system entails describing how we represent:
+▪ File data (of course)
+▪ The location of the file (a file path)
+▪ Meta data about the file (what kind of file?)
+▪ Access control (who can access the file)
+Spring 2019/2020
+
+22
+
+File Metadata
+• There is a long list of possible
+metadata associated with files:
+▪ The file size.
+▪ The file name.
+▪ When it was last accessed.
+▪ Who created it and when.
+
+• And access control:
+▪ Who can read it.
+▪ Who can write it.
+▪ Who can run it.
+
+Spring 2019/2020
+
+23
+
+Linux/UNIX
+
+Spring 2019/2020
+
+metadata:
+
+24
+
+Operating Systems and Files
+• The
+function returns a file descriptor, an integer that identifies
+the open file in the process.
+▪ Every process can have open files, but none are shared across processes.
+
+• On Linux/UNIX, some file descriptors are established automatically
+for every process by the shell:
+▪
+▪
+▪
+
+– the output file (can be a file on disk! Recall terminal redirection.)
+– a file for error output.
+– the input file (could be a file on disk… or user input in the terminal.)
+
+• The OS maintains a table of open files per process. When it sees a
+syscall such as
+or
+, it uses that table to determine the file.
+Spring 2019/2020
+
+25
+
+Processes and Files
+• The OS maintains a table of open files per process. When it sees a
+syscall such as
+or
+, it uses that table to determine the file.
+• The table contains a set of
+open files indexed by the file
+descriptor.
+
+Process
+
+stack
+.bss
+.data
+.text
+CPU State A:
+Registers
+,
+
+PID: 4356
+Page Table A
+Spring 2019/2020
+
+File Table
+
+• Several files are generally
+opened for you by the shell.
+• Each open file maintains its
+own current position.
+▪
+
+/
+
+manipulate it.
+26
+
+I nodes, you nodes, we all nodes for inodes
+• Files are a set of disk blocks.
+▪ Hopefully laid out in a nice order!
+
+• How do we organize these?
+▪ Similar to virtual memory!
+
+main.c
+
+inode
+
+• We use a disk block that holds
+addresses to other blocks.
+▪ It is a simple table. The blocks that
+make up the file are in the order
+reflected by the table.
+
+• An index node is this main block.
+▪ Often seen shortened to “inode”
+Spring 2019/2020
+
+27
+
+File systems are about organizing the disk
+main.c
+
+inode
+
+Spring 2019/2020
+
+28
+
+Cheap Versioning: WAFL
+Here is WAFL performing “snapshot” backups of files:
+We can keep around snapshots and back them up
+to remote systems at our leisure.
+
+snapshot
+
+inode
+
+inode
+
+The prior
+state
+remains.
+
+Spring 2019/2020
+
+Small changes overwrite
+only parts of the file.
+Once we back them up, we can
+overwrite the snapshot inode with the current inode.
+
+29
+
+Hierarchies
+• Directories maintain strict hierarchical structure for files in the system.
+▪ For instance, your home folder is often something like
+
+.
+
+• An absolute path is a fully-qualified name for a file that indicates
+exactly where in the hierarchy it is located.
+▪ Often organized by a human being in some logical way:
+•
+
+▪ There are many special paths. OS data structures go in:
+•
+
+▪ Devices go in:
+•
+
+▪ Use the Linux
+
+Spring 2019/2020
+
+command to find out where your system binaries go!
+30
+
+Directories (Folders)
+• A directory is a file that contains a
+set of named links to other files.
+
+root
+
+▪ The earliest file systems did not even
+have directories… just a bunch of files.
+
+home
+
+• Groups a set of files together under
+a single name.
+
+sys
+
+▪ Strictly hierarchical…
+▪ Generally, a file can only be within one
+directory.
+▪ Although, a directory can also be within
+a directory… creating a cascade.
+hw1.doc
+
+hw2.doc
+
+main.c
+
+/root/home/main.c
+Spring 2019/2020
+
+main.h
+
+31
+
+Implementing Directories
+• Directories can simply be text files, if you want!
+▪ Every line contains a name and then a block address on disk for the inode.
+
+• Obviously, there are a variety of ways to do this.
+▪ Do you keep a sorted order to make searching directories easier?
+▪ Can a directory refer to a file that is part of a different disk?
+• A file from a completely different machine??
+
+• If a directory is the only thing linking to a file, and removes that link,
+what happens?
+▪ How do you access a file if you cannot look up where it is?
+▪ Deleting a file is really as simple as removing it from the directory.
+▪ (And marking its blocks on disk free)
+Spring 2019/2020
+
+32
+
+A directory
+Name Block Address
+
+Type
+
+• A directory is a simple table,
+implemented as a file, that maps
+names to inodes.
+▪ Each file system (NTFS, FAT, HFS,
+EXT) will implement it slightly
+differently.
+
+• It may also contain metadata
+about the file for each entry.
+▪ Creation date, author, file size.
+
+• How does a directory know its
+parent?
+Spring 2019/2020
+
+▪ Special entry! “ ” points to parent.
+▪“
+” is quite literal.
+33
+
+Heretic of the Day: Alternatives to Hierarchies
+• Margo Seltzer: Hierarchical File-Systems are
+Dead (HotOS ‘09)
+▪ In this paper, she re-orients file systems around
+human beings and our own needs.
+
+• She asks the simple task: “Group these.”
+
+Professor Margo Seltzer
+University of British Columbia
+
+Spring 2019/2020
+
+34
+
+Aww… Human nature at work…
+• How did you group them?
+
+Spring 2019/2020
+
+35
+
+Great Expectations
+• How can we expect anybody to use hierarchies?
+▪ It does not seem to be how we actually think.
+
+• Organize by description instead.
+▪ No more placing files in directories.
+▪ Tag files based on what they are.
+▪ Search for files based on tag / keyword.
+
+• “I want to see all images that are red.”
+▪ “I want all images of squares…,” etc.
+▪ “I want to list all music that is 135bpm.”
+
+• Draws inspiration from the web: we often search by keywords.
+Spring 2019/2020
+
+36
+
+Files with tags…
+• We can attach tags to data files.
+• Then, when I’m feeling down and
+out, I can ask my computer:
+“Hey, show me all the pictures
+that are cute.”
+
+cute
+
+▪ No longer looking into random
+directories to find what I need.
+
+cat
+
+food
+Image by
+Dimitri
+Houtteman
+Spring 2019/2020
+
+cat.gif
+37
+
+POSIX: Contradicting the definition of “path”
+• One piece of trouble with being heretical is that everybody asks you
+“how will you implement this and get people to switch????”
+• You don’t want to completely change C functions… so… let’s make use
+of traditional ideas to implement tags.
+▪
+▪
+▪
+
+can still list all the files with both tags!
+can open a particular file.
+is, naturally but oddly, the same file.
+
+• And you can also fit traditional POSIX paths to tags. Files in
+“
+” can simply be files tagged with
+“
+”
+▪ We don’t do this. Why… don’t we just do this? … … Well, change is hard.
+Spring 2019/2020
+
+38
+
+C File I/O Summary
+• C Standard IO
+▪
+▪
+Reads to the given buffer the given number of bytes from the file indicated by the file descriptor. Returns the
+number of bytes read or 0 if the file reached its end. Negative on error.
+
+▪
+Similarly writes to the given buffer to the file indicated by the file descriptor.
+
+▪
+Modifies and returns the file position for the given file descriptor to the given offset from the reference point.
+
+▪
+Closes the file for this process. No subsequent action can be taken on this file. Returns negative on error.
+
+▪
+Opens the given file at the provided path with access depending on the provided flags. If the flags consist of a
+string with “r” in it, it will be read-only. If it contains a “w” it will be writable. If it contains a “b” it will not be
+interpreted as a text file, but as “binary” instead. If it is “w+”, it will completely overwrite the file. If it has an
+“a”, it will automatically write to the end of the existing file.
+Spring 2019/2020
+
+39
+
+C File I/O Summary
+• UNIX System Calls
+▪
+▪
+Reads to the given buffer the given number of bytes from the file indicated by the file descriptor. Returns the
+number of bytes read or 0 if the file reached its end. Negative on error.
+
+▪
+Similarly writes to the given buffer to the file indicated by the file descriptor.
+
+▪
+Modifies and returns the file position for the given file descriptor to the given offset from the reference point.
+
+▪
+Closes the file for this process. No subsequent action can be taken on this file. Returns negative on error.
+
+▪
+▪
+Opens the given file at the provided path with access depending on the provided flags. If the O_CREAT flag is
+given, the file is created if it does not exist. If the O_TRUNC is passed and the file is writable, it will remove all
+the data in the file after it opens. If O_RDONLY is specified, no writes can occur.
+Spring 2019/2020
+
+40
+
+Summary
+• Files are just binary blobs of information.
+▪ Disambiguating that data requires a specification and consistency.
+
+• Disks are physical and rely on nature, which is chaotic.
+▪ We have strategies for encoding digital data on analog (magnetic) media.
+▪ Physical addressing requires care in where blocks of data are stored.
+
+• File systems are an opinionated space related to how humans organize
+data on disk (and share/discover that data)
+▪ Files are generally organized in trees, much like our virtual memory!
+▪ Hierarchical file systems still dominate: directory structures.
+▪ Other file systems are possible: relational searches and tags.
+Spring 2019/2020
+
+41
+
+Distributed Filesystems and Storage
+• Now… what happens when we have file systems that span machines?
+▪ The power of networks and storage combined!
+
+• What are some unique issues to files that span multiple systems?
+• How can we create better methods of transmitting data between
+machines?
+▪ What if we break down the “client-server” model.
+▪ What if files and data need not be in one particular place?
+▪ How do we find information, then?
+
+• Stay tuned!
+Spring 2019/2020
+
+42
+
+

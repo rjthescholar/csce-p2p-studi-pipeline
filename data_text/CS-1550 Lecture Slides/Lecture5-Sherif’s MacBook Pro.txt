@@ -1,0 +1,433 @@
+Introduction to Operating Systems
+CS/COE 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Lectures and recitations are back in-person
+
+• Upcoming deadlines
+• Homework 2 is due next Monday at 11:59 pm
+• Lab 1 is due on 2/4 at 11:59 pm
+• Project 1 is due on 2/18 at 11:59 pm
+• Explained in this week’s recitations
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous Lecture …
+Three-usage problems of Semaphores
+• compromising mutual exclusion
+• Solution: Mutex
+
+• deadlock
+• Solution: Not yet discussed
+
+• priority inversion
+• Solution: priority inheritance
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Muddiest Points (basic concepts)
+• Deadlock
+
+• mutual exclusion
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Muddiest Points (semaphore)
+• What the semaphore value means.
+• Can we see a process that utilizes a
+semaphore/spinlock and trace it?
+
+• Where we move after down is called
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Muddiest Points (Mutex)
+• With mutex, what happens when a process tries to
+up() when it hasn't down()'d, does it skip over the
+instruction or does it do something else?
+• how does a mutex semaphore verify that the same
+process that called down on it in the first place is the
+one that called up on it?
+
+• Can a mutex have a negative value or is it only 0 or
+1?
+• Advantages/disadvantages of Mutex
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Muddiest Points (priority inheritance)
+• What is priority inheritance?
+• I'm confused on what the solution for priority
+inversion is or did we not mention it yet?
+
+• Does Priority Inheritance solve the Deadlock and
+Starvation problems along with the Priority Inversion
+problem?
+• Why running P1 in the priority inversion question not
+down the semaphore?
+• Does priority inversion (of semaphores) cause the
+lower process to run instead of the higher priority
+process indefinitely or does this resolve itself? If so
+how?
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Semaphore Usage Problem: Priority Inversion
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+8
+
+Muddiest Points (forking 1)
+• if fork creates copies of the process that called it, how
+can you tell which copy has priority to run first?
+• child processes & where they pick up in the code
+• Not exactly sure how semaphores are inherited between
+processes
+• In the last example, when p1 calls fork and creates the
+child p3, will p1’s PCB be copied to p3, which means the
+content of p0’s pcb will be in p3 too?
+• What is a PID and how is it related to the return value of
+fork()?
+• P3 is forked and created before P2 so why is it named
+P2? Is it simply renamed after P1 gets forked again?
+• Is the order of possible outcomes from a forking program
+the permutation of any of the leaf nodes from a forking
+tree?
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+fork()’s of fork()’s
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+Muddiest Points (forking 2)
+• does the fork return zero for all children?
+• Somewhat confused about what order the various forks
+will actually form. I see why and from where they form,
+but not how it decides which one to run
+• how are all processes a fork of another process? i know
+the root of the tree is another process in the OS, but i
+don't get how for example a program you create and
+execute is a fork of something else.
+• the forking process with child processes. The
+relationship between the number of child processes
+created and the number of times fork() is called by the
+parent process
+• what int fork returns for the child and parent process
+• practical uses of forking?
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+Today’s Problem/Question
+
+How are processes created and terminated?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+Process Creation
+• Via fork() syscall
+
+• Parent process: the process that calls fork()
+• Child process: the process that gets created
+• Memory of parent process copied to child process
+• Too much copying
+
+• Even not necessary sometimes
+• e.g., fork() followed by exec() to run a different program
+
+• Optimization trick:
+• copy-on-write
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Process Lifecycle (AKA Process States)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+14
+
+Process Termination
+• Via exit(), abort(), or kill() syscalls
+
+• The parent process may wait for termination of a
+child process by using the wait()system call.The
+call returns status information and the pid of the
+terminated process
+pid = wait(&status);
+• When a process terminates
+
+• If no parent waiting (did not invoke wait()) process is a
+zombie
+• If parent terminated without invoking wait , process is an
+orphan
+• adopted by the init process
+CS 1550 – Operating Systems – Sherif Khattab
+
+15
+
+Orphan vs. Zombie Processes
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+16
+
+Benefits of Orphan Processes
+• Allow a long-running job to continue running even
+after session (e.g., ssh connection) ends.
+• The nohup command does that
+
+• Create daemon processes
+• Long-running background processes adopted by the init
+process.
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+17
+
+Xv6 Code Walkthrough
+• fork()
+
+• exit()
+• wait()
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+18
+
+Process Lifecycle (AKA Process States)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+19
+
+Killing a waiting process
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+20
+
+Thread Synchronization
+Synchronization issues apply to threads as well
+• Threads can share data easily (same address space)
+• Other two issues apply to threads
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+21
+
+Process vs. Thread
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+22
+
+Semaphore Implementation in Project 1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+23
+
+Getting the first entry in a list_head linked list
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+24
+
+Why do we need Synchronization?
+• Each process operates sequentially
+
+• All is fine until processes want to share data
+• Exchange data between multiple processes
+• Allow processes to navigate critical regions
+• Maintain proper sequencing of actions in multiple
+processes
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+25
+
+Semaphores for general synchronization
+•
+
+We want to execute B in P1 only after A executes in P0
+
+•
+
+Use a semaphore initialized to 0
+
+•
+
+Use up() to notify P1 at the appropriate time
+
+Shared variables
+// flag initialized to 0
+Semaphore flag(0);
+
+Process P0
+
+.
+.
+.
+// Execute code for A
+flag.up ();
+
+Process P1
+
+.
+.
+.
+flag.down ();
+// Execute code for B
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+26
+
+Monitors
+•
+
+A monitor is another kind of high-level synchronization primitive
+•
+
+One monitor has multiple entry points
+•
+
+•
+
+Think multiple methods in a Java class
+
+•
+
+Only one process may be in the monitor at any time
+
+•
+
+Enforces mutual exclusion - less chance for programming errors
+
+Monitors provided by high-level language
+•
+
+Variables belonging to monitor are protected from simultaneous access
+
+•
+
+Procedures in monitor are guaranteed to have mutual exclusion
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+27
+
+•
+•
+
+Monitor usage
+Supported by Java
+•
+
+synchronized keyword
+
+Only one process can be executing in either produce or consume at any time
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+28
+
+Condition variables in monitors
+• Problem: how can a process wait inside a monitor?
+• Can’t simply sleep: there’s no way for anyone else to
+enter
+• Solution: use a condition variable
+
+• Condition variables support two operations
+• Wait(): suspend this process until signaled
+• Signal(): wake up exactly one process waiting on this
+condition variable
+• If no process is waiting, signal has no effect
+• Signals on condition variables aren’t “saved up”
+•
+
+Different from semaphores!
+
+• Condition variables are only usable within monitors
+• Process must be in monitor to signal on a condition
+variable
+CS 1550 – Operating Systems – Sherif Khattab
+
+29
+
+Locks & condition variables
+•
+
+Monitors require native language support
+•
+
+•
+
+•
+
+•
+
+What if native support is not there (e.g., in C)?
+
+Provide monitor support using special data types and procedures
+•
+
+Locks (Acquire(), Release())
+
+•
+
+Condition variables (Wait(), Signal())
+
+Lock usage
+•
+
+Acquiring a lock == entering a monitor
+
+•
+
+Releasing a lock == leaving a monitor
+
+Condition variable usage
+•
+
+Each condition variable is associated with exactly one lock
+
+•
+
+Lock must be held to use condition variable
+
+•
+
+Waiting on a condition variable releases the lock implicitly and reacquires the
+lock upon returning
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+30
+
+

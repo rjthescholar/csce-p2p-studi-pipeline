@@ -1,0 +1,1110 @@
+1
+
+Data
+Representation
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Binary Encoding
+i
+Bits, Bytes, and Nybbles
+
+2
+
+Positional number systems
+
+• The numbers we use are written positionally: the position of a digit
+within the number has a meaning.
+
+3
+2 x 10
+
+2000
+2
+0 0 0 0 x 10
+=
+2021=
+1
+2 0 2 x 10
+0
++
+1 1 x 10
+3
+
+Positional number systems
+● The numbers we use are written positionally: the position of a digit within
+the number has a meaning.
+
+2021
+
+Most Significant
+
+Least Significant
+
+1000s
+
+100s
+
+10s
+
+1s
+
+103
+
+102
+
+101
+
+100
+
+● How many (digits) symbols do we have in our number system?
+○ 10: 0, 1, 2, 3, 4, 5 ,6 ,7, 8, 9
+4
+
+Range of numbers
+
+Suppose we have a 4-digit numeric display.
+• What is the smallest number it can show?
+
+• What is the biggest number it can show?
+• How many different numbers can it show?
+• 9999 - 0 + 1 = 10,000
+• What power of 10 is 10,000?
+• 104
+
+5
+
+So… with the numbers we use every day…
+• A number represented by the digits
+• Has the value
+
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+
+𝑑𝑛 × 10𝑛 + 𝑑𝑛−1 × 10𝑛−1 + ⋯ + 𝑑1 × 101 + 𝑑0 × 100
+• Using 𝑛 digits we can represent 10𝑛 different numbers
+• The smallest non-negative number representable with 𝑛 digits is 0
+
+• The largest number representable with 𝑛 digits is 10𝑛 − 1
+• Using 10 symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+6
+
+Numeric Bases
+• These 10s keep popping up… and for good reason
+• We use a base-10 (decimal) numbering system
+• 10 different symbols, and each place is a power of 10
+
+• But we can use (almost) any number as a base!
+• The most common bases when dealing with computers are base-2 (binary),
+base-16 (hexadecimal), and (rarely) base-8 (octal)
+• When dealing with multiple bases, you can write the base as a subscript to be
+explicit about it:
+
+510 = 1012
+7
+
+Making a number system
+Using base B
+• A number represented by the digits
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+
+• Has the value
+
+𝑑𝑛 × B 𝑛 + 𝑑𝑛−1 × B 𝑛−1 + ⋯ + 𝑑1 × B1 + 𝑑0 × B 0
+• Using 𝑛 digits we can represent B 𝑛 different numbers
+• The smallest non-negative number representable with 𝑛 digits is 0
+• The largest number representable with 𝑛 digits is B 𝑛 − 1
+• Using B symbols
+
+If you use base 0 you
+don’t need to remember
+8
+any symbols
+
+Binary – Base 2
+
+9
+
+Let's make a base-2 number system
+Using base 2
+• A number represented by the digits
+• Has the value
+
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+
+𝑑𝑛 × 2𝑛 + 𝑑𝑛−1 × 2𝑛−1 + ⋯ + 𝑑1 × 21 + 𝑑0 × 20
+• Using 𝑛 digits we can represent 2𝑛 different numbers
+• The smallest non-negative number representable with 𝑛 digits is 0
+• The largest number representable with 𝑛 digits is 2𝑛 − 1
+• Using 2 symbols: 0, 1
+
+10
+
+Binary (base-2)
+
+• We call a Binary digIT a bit – a single 1 or 0
+• When we say an n-bit number, we mean one with n binary digits 1 × 128 +
+MSB
+
+LSB
+
+1001 0110 =
+27 2 6
+25 24
+128s 64s 32s 16s
+
+23
+8s
+
+22
+4s
+
+21
+2s
+
+20
+1s
+
+To convert binary to decimal: ignore 0s, add up
+It’s the
+place values wherever you see a 1.
+only odd
+
+0 × 64 +
+0 × 32 +
+1 × 16 +
+0×8+
+1×4+
+1×2+
+0×1
+
+= 15010
+
+number!
+
+11
+
+Converting the other way around
+
+• Ok! then. Let’s go back to decimal for a bit
+
+2021
+
+How would you
+extract this
+number???
+
+How I like to think of it:
+
+When you divide by the BASE
+you are moving the decimal
+point in that BASE
+Just divide by
+10!
+
+10
+10
+
+10
+
+2
+
+R0
+
+20
+
+R2
+
+202 R1
+2 0 21
+12
+
+What happens when you divide by 10?
+
+• Turns out that dividing by 10 in any base has the same outcome
+
+0b10
+
+210
+
+110012
+
+1
+
+R1
+
+210
+210
+
+3
+
+R0
+
+6
+
+210
+
+12
+
+R0
+R1
+
+210
+
+25
+
+13
+
+Bits, bytes, nibbles, and words
+• A bit is one binary digit, and its unit is lowercase b.
+• A byte is an 8-bit value, and its unit is UPPERCASE B.
+
+• This is (partially) why your 30 megabit (Mbps) internet connection can only give you
+at most 3.57 megabytes (MB) per second!
+
+• A nibble (also nybble) is 4 bits – half of a byte
+• Corresponds nicely to a single hex digit.
+
+• A word is the "most comfortable size" of number for a CPU.
+• When we say "32-bit CPU," we mean its word size is 32 bits.
+• This means it can, for example, add two 32-bit numbers at once.
+
+• BUT WATCH OUT:
+
+• Some things (Windows, x86) use word to mean 16 bits and double word (or dword)
+to mean 32 bits.
+14
+
+Why binary? Whynary?
+• Why indeed?
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+• What color is this?
+
+15
+
+Why binary? Whynary?
+• Why indeed?
+0
+
+1
+
+• What color is this?
+
+16
+
+Binary Representation
+• Computers translate
+electrical signals to
+either 0 or 1.
+
+• It is relatively easy to
+devise electronics
+that operate this way.
+• In reality, there is no
+such thing as
+“binary” so we often
+have to approximate
+and mitigate error.
+Oscilloscope visualization of several digital wires. From @computerfact on Twitter.
+
+17
+
+Everything in a computer is a number
+• So, everything on a computer is represented in binary.
+• everything.
+01100101 01110110 01100101 01110010 01111001 01110100 01101000 01101001 01101110
+01100111 00001010 00000000
+
+• Java strings are encoded using UTF-16
+• Most letters and numbers in the English alphabet are < 128.
+• “Strings are numbers”
+• 83 116 114 105 110 103 115 32 97 114 101 32 110 117 109 98 101 114 115 0
+
+• ASCII is also pretty common (the best kind of common)
+• That’s what we will be using → 8 bit numbers represent characters
+• Letters and numbers (and most/all ascii characters) have the same value as UTF16
+Do try this at home: what does this mean?
+• 71 111 111 100 32 74 111 98 0
+18
+
+Hexadecimal – Base 16
+The binary shorthand
+
+19
+
+Hexadecimal
+• Binary numbers can get really long, quickly.
+▪ 3,927,66410 = 11 1011 1110 1110 0111 00002
+
+• But nice "round" numbers in binary look
+arbitrary in decimal.
+▪ 10000000000000002 = 32,76810
+
+• This is because 10 is not a power of 2!
+• We could use base-4, base-8,
+base-16, base-32, etc.
+▪ Base-4 is not much denser than binary
+• e.g. 3,927,66410 = 120 3331 2323 00004
+
+▪ Base-32 would require 32 digit symbols. Yeesh.
+• They do, oddly, have their place… but not really in this
+context.
+
+▪ Base-8 and base-16 look promising!
+20
+
+Hexadecimal or “hex” (base-16)
+• Digit symbols after 9 are A-F, meaning 10-15 respectively.
+• Usually we call one hexadecimal digit a hex digit. No fancy name :(
+
+003B EE70 =
+167 166 165 164
+
+163 162 161 160
+
+To convert hex to decimal: use a dang calculator
+lol
+
+0 × 167 +
+0 × 166 +
+3 × 165 +
+11 × 164 +
+14 × 163 +
+14 × 162 +
+7 × 161 +
+0 × 160 =
+
+3,927,66410
+21
+
+Binary to Hex
+
+(animated)
+
+0100 1100 1010 0010 0000 0010 0110 0001
+
+4 C A 2 0 2 6 1
+0x4CA20261
+32-bits! (Not so bad…)
+Q: Create a random binary string and practice! 22
+
+Let's make a base-16 number system
+Using base 16
+• A number represented by the digits
+• Has the value
+
+𝑑𝑛 𝑑𝑛−1 … 𝑑1 𝑑0
+
+𝑑𝑛 × 16𝑛 + 𝑑𝑛−1 × 16𝑛−1 + ⋯ + 𝑑1 × 161 + 𝑑0 × 160
+• Using 𝑛 digits we can represent 𝟏𝟔𝑛 different numbers
+• The smallest non-negative number representable with 𝑛 digits is 0
+• The largest number representable with 𝑛 digits is 16𝑛 − 1
+• Using 16 symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+23
+
+Why?
+
+1111 1111
+1 × 27 + 1 × 26 + 1 × 25 + 1 × 24 + 1 × 23 + 1 × 22 + 1 × 21 + 1 × 20
+
+1 × 23 + 1 × 22 + 1 × 21 + 1 × 20 =
+8+4+2+1=
+15
+1 × 23 + 1 × 22 + 1 × 21 + 1 × 20 × 24 + 15
+This works with any
+base that is a power
+of 2
+
+15 × 161 + 15 × 160
+
+E.g. Base 4=22
+Split into groups of 2
+bits
+
+F
+
+F
+
+Factoring
+
+24 = 16
+24
+
+Integer Encoding
+Casting is Not Just a Witch or Wizard Thing
+
+25
+
+Finite numbers
+• In computers, numbers are finite.
+• Let's say our 4-digit display was counting up:
+9997, 9998, 9999…
+• What comes "next"?
+• What does this "0000" really mean?
+• It wrapped around.
+
+• This is overflow: the number you are trying
+to represent is too big to be represented.
+• Essentially, all arithmetic on the computer is modular arithmetic!
+• This causes a lot of software bugs.
+• https://en.wikipedia.org/wiki/Pac-Man#Level_256
+26
+
+Number carrousel
+• Computers perform modulus arithmetic
+• Meaning: it goes around!
+• E.g. in a 4-bit computer
+
+15 0
+
+14 1111
+1110
+13 1101
+
+0000
+
+1001
+
+0001
+0010
+
+2
+
+0011
+
+12 1100
+1011
+11 1010
+10
+
+1
+
+0100
+0101
+0110
+0111
+
+3
+4
+5
+
+6
+
+0000
+8 7
+-0001
+what is 0 - 1?
+1111
+9
+
+1000
+
+27
+
+What about negative carrousels?
+• How much is 0 – 1?
+• -1
+
+-1 0
+
+-2 1111
+1110
+-3 1101
+
+0000
+
+1001
+
+0001
+0010
+
+2
+
+0011
+
+-4 1100
+1011
+-5 1010
+-6
+
+1
+
+0100
+0101
+0110
+1000
+
+0111
+
+-7 -8 7
+
+3
+4
+5
+
+6
+Why did we
+stop here?
+
+28
+
+Signed Numbers (2’s Complement)
+• Representing negative numbers.
+• But it’s a little strange!
+
+• Hmm, it’s a little lopsided: -4 doesn’t have a valid positive number.
+
+100
+
+101
+
+110
+
+000
+010
+111
+001
+011
+
+-4 -3 -2 -1 0 +1 +2 +3
+2’s Complement
+
+• I can tell it’s negative if it starts with a 1 ☺
+• And if it’s positive, then I can clearly see how much it’s worth!
+
+• But how exactly… can we tell the value of a negative number?
+• We need to negate (flip the sign) negative numbers
+• But HOW????
+
+29
+
+Two’s complement arithmetic
+• Negation
+
+-(3)
+
+0011
+
+-(-3)
+
+1101
+
+bit pattern for
+positive 3?
+bit pattern for
+negative 3?
+
+flip!
+
+flip!
+
+1100
+
+0010
+
+1101
+
+Add 1!
+
+0011
+
+Add 1!
+
+• You don’t need to subtract!!
+• flip(k)+1 == flip(k-1)
+• If you ignore the carry! ☺
+
+30
+
+Two's complement addition
+• the great thing is: you can add numbers of either sign without having to do
+anything special!
+to binary? 0111
+
+3
++ 7
+10
+
+Ignore the carry
+
+bit pattern for
+-7… positive 7?
+
+0011
+3
++0111 +-7
+1010 -4
+
+0011
+0011
+0111
+4
+flip!
++1 +1001
+to decimal?
+1000
+1100 0100
+this is negative, so
+what is it? flip!
+
+the actual patterns of bits are the same.
+so how does the computer "know" whether it's
+doing signed or unsigned addition?
+
++1
+
+0011
+31
+
+Signed Numbers (2’s Complement)
+• Let’s look some examples:
+
+11010100➔-(00101011+1)➔-(43+1)=-44
+00100110 = 00100110 = 38
+
+00000000 = 00000000= 0
+11111111= -00000000=-(0+1) =-1
+• If the MSB is 1: Flip! Add one!
+• Otherwise: Do nothing! It’s the same!
+
+32
+
+Signed Numbers (2’s Complement)
+• What happens when we add zeros to a positive number:
+
+10100110 = ?
+00100110 = 38
+-(01011001+1) = ?
+0000000000100110 = 38?
+-01011010 = -90
+?
+• What happens when we add ones to a negative number:
+
+10100110 = -90
+?
+11111111110100110 =
+-00000000001011001 = -90
+?
+
+33
+
+Can I Get an Extension?
+• Sometimes you need to widen a number with fewer bits to
+more
+• zero extension is easy: put 0s at the beginning.
+
+10012 ➔ to 8 bits ➔ 0000 10012
+• But there are also signed numbers… what about those?
+• The top bit (MSB) of signed numbers determines the sign (+/-)
+
+• sign extension puts copies of the sign bit at the beginning
+
+10012 ➔ to 8 bits ➔ 1111 10012
+00102 ➔ to 8 bits ➔ 0000 00102
+Q: What happens when you sign extend the largest unsigned value? 34
+
+Absolutely Bonkers
+
+Q: How many bits is a Java
+
+? What happened here? 35
+
+Integer Ranges
+• Recall:
+• The range of an unsigned integer is 0 to 2n – 1
+• Q: Why do we subtract 1?
+
+• What is the range of a 2’s complement number?
+• Consider the sign bit, how many negative integers?
+• Consider, now, the positive integers.
+• Remember 0.
+
+-2n-1 to 2n-1 – 1
+Q: What if you needed CS/COE
+a range
+with
+far more negatives than positives? 36
+0449 – Spring
+2019/2020
+
+Integers in Java C
+• C allows for variables to be declared as either signed or unsigned.
+
+• Remember: “signed” does not mean “negative” just that it can be negative.
+
+• An unsigned integer variable has a range from 0 to 2n – 1
+• And signed integers are usually 2’s complement: 2n-1 to 2n-1 – 1
+• Where “n” is determined by the variable’s size in bits.
+
+• Integer Types: (signed by default, their sizes are arbitrary!!)
+•
+•
+•
+•
+
+• Usually no strong reason to use anything other than (un)signed int.
+Q: What is the range of a
+
+? 37
+
+Integers in C: Limits
+• Since sizes of integers are technically arbitrary…
+
+• They are usually based on the underlying architecture.
+
+• … C provides standard library constants defining the ranges.
+
+• https://pubs.opengroup.org/onlinepubs/009695399/basedefs/limits.h.html
+
+Q: Experiment
+using
+CS/COEwith
+0449 – Spring
+2019/2020
+
+for both. What is the result? 38
+
+Casting
+• C lets you move a value from an unsigned integer variable to a signed
+integer variable. (and vice versa)
+• However, this is not always valid! Yet, it will do it anyway.
+• The binary value is the same, its interpretation is not!
+• This is called coercion, and this is a relatively simple case of it.
+
+• Since it ignores obvious invalid operations this is sometimes referred to as “weak”
+typing.
+• The strong/weak terminology has had very fragile definitions over the years and
+are arguably useless in our context. Let’s ignore them.
+
+• Moving values between different types is called casting
+• Which sounds magical and it sometimes is.
+Q: What is true of the result
+the value -1 to an unsigned type? 39
+CS/COE of
+0449casting
+– Spring 2019/2020
+
+Fractional Binary
+
+40
+
+Fractional numbers
+• Up to this point we have been working with integer numbers.
+
+2019
+2 0 1 9.320
+
+• Unsigned and signed!
+
+• However, Real world numbers are… Real numbers. Like so:
+
+• That create new challenges!
+
+• Let’s start by taking a look at them.
+41
+
+Just a fraction of a number
+• The numbers we use are written positionally: the position of a digit
+within the number has a meaning.
+• What about when the numbers go over the decimal point?
+
+?
+2 0 1 9. 3 2 0
+
+1000s
+
+100s
+
+10s
+
+1s
+
+10ths 100ths 1000ths
+
+103
+
+102
+
+101
+
+100
+
+10-1
+
+10-2
+
+10-3
+
+42
+
+A fraction of a bit?
+• Binary is the same!
+• Just replace 10s with 2s.
+
+0 1 1 0 .1 1 0 1
+23
+8s
+
+22
+4s
+
+21
+2s
+
+20
+1s
+
+2-1
+2ths
+
+?
+
+2-2
+4ths
+
+2-3
+8ths
+
+2-4
+16ths
+
+43
+
+To convert into decimal, just add stuff
+
+0 1 1 0 .1 1 0 1=
+23
+
+22
+
+21
+
+20
+0×8+
+1×4+
+1×2+
+0×1+
+1 × .5 +
+1 × .25 +
+0 × .125 +
+1 × .0625
+
+2-1
+
+2-2
+
+2-3
+
+2-4
+
+= 6.812510
+44
+
+From decimal to binary? Tricky?
+
+6.8125 10
+6÷210 = 3R0
+3÷210 = 1R1
+
+1 1 0.1101
+
+0.812510
+x
+2
+1.6250
+
+MSB
+
+0.625010
+x
+2
+1.2500
+0.250010
+x
+2
+0.5000
+0.500010
+x
+2
+1.0000
+
+LSB
+
+45
+
+So, it’s easy right? Well…
+
+What about: 0.1 10
+
+0.110
+x 2
+0.2
+0.210
+x2
+0.4
+
+0.0001
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+
+46
+
+So, it’s easy right? Well……
+
+What about: 0.1 10
+
+0.0001
+1001
+
+0.610
+x 2
+1.2
+
+0.110
+x 2
+0.2
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+
+47
+
+So, it’s easy right? Well………
+
+What about: 0.1 10
+
+0.0001
+1001
+10
+0
+1
+...
+
+0.610
+x 2
+1.2
+
+0.610
+x 2
+1.2
+
+0.110
+x 2
+0.2
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+
+48
+
+How much is it worth?
+
+•Well, it depends on where you stop!
+
+0.0001 2
+
+= 0.0625
+
+0.00011001 2
+
+= 0.0976…
+
+0.000110011001 2 = 0.0998…
+49
+
+Limited space!
+• How much should we store?
+• We have 32-bit registers, so 32-bits?
+• Let’s say we do!
+
+• How many bits are used to store the integer part?
+• How many bits are used to store the fractional part?
+
+• What are the tradeoffs?
+50
+
+

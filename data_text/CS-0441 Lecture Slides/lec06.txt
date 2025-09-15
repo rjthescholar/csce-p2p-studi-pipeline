@@ -1,0 +1,407 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #6: Rules of Inference
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s topics
+n Rules of inference
+l Logical equivalences allowed us to rewrite and simplify
+single logical statements.
+l How do we deduce new information by combining
+information from (perhaps multiple) known truths?
+
+What have we learned? Where are we going?
+Predicate logic
+(refined representation)
+
+Propositional logic
+(representation)
+
+Quantifiers
+(generalization)
+
+Inference and proof
+(deriving new knowledge!)
+
+Writing valid proofs is a subtle art
+This is called
+“research”
+Step 1: Discover and
+formalize the property
+that you wish to prove
+
+Step 2: Formalize the ground truths
+(axioms) that you will use to prove
+this property
+
+Subtle, but not terribly
+difficult
+Step 3: Show that the property in
+question follows from the truth of
+your axioms
+
+This is the hard part…
+
+What is science without jargon?
+A conjecture is a statement that is thought to be true.
+A proof is a valid argument that establishes the truth
+of a given statement (i.e., a conjecture)
+The truth of the conclusion follows
+from the truth of the preceding
+statements
+
+A sequence of statements ending
+with a conclusion
+
+After a proof has been found for a given conjecture, it
+becomes a theorem
+
+A tale of two proof techniques
+In a formal proof, each step of
+the proof clearly follows from
+the postulates and axioms
+assumed in the conjecture.
+Statements that are assumed to be true
+
+In an informal proof, one step in
+the proof may consist of
+multiple derivations, portions of
+the proof may be skipped or
+assumed correct, and axioms
+may not be explicitly stated.
+
+How can we formalize an argument?
+Consider the following argument:
+“If you have an account, you can access the network”
+“You have an account”
+Therefore,
+“You can access the network”
+Premises
+Conclusion
+
+This argument seems valid, but how can we
+demonstrate this formally??
+
+Let’s analyze the form of our argument
+p
+
+q
+
+“If you have an account, then you can access the network”
+“You have an account”
+Therefore,
+“You can access the network”
+This is called a “rule of
+inference”
+
+p→q
+p
+∴q
+
+Rules of inference are logically valid ways to draw
+conclusions when constructing a formal proof
+The previous rule is called modus ponens
+l Rule of inference: p → q
+p
+∴q
+l Informally: Given an implication p → q, if we know that p
+is true, then q is also true
+
+But why can we trust modus ponens?
+l Tautology: ((p → q) ∧ p) → q
+l Truth table: p
+q
+p→q
+T
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+T
+
+T
+
+F
+
+F
+
+T
+
+Any time that p→q and p
+are both true, q is also
+true!
+
+There are lots of other rules of inference that
+we can use!
+Addition
+l Tautology: p → (p ∨ q)
+p
+l Rule of inference:
+∴p∨q
+l Example: “It is raining now, therefore it is raining now or
+it is snowing now.”
+
+Simplification
+l Tautology: p ∧ q → p
+p∧q
+l Rule of inference:
+∴p
+l Example: “It is cold outside and it is snowing. Therefore, it
+is cold outside.”
+
+There are lots of other rules of inference that
+we can use!
+Modus tollens
+l Tautology: [¬q ∧ (p → q)] → ¬p
+l Rule of inference: p → q
+¬q
+∴ ¬p
+l Example: “If I am hungry, then I will eat. I am not eating.
+Therefore, I am not hungry.”
+
+Hypothetical syllogism
+l Tautology: [(p → q) ∧ (q → r)] → (p → r)
+l Rule of inference: (p → q)
+(q → r)
+∴ (p → r)
+l Example: “If I eat a big meal, then I feel full. If I feel full,
+then I am happy. Therefore, if I eat a big meal, then I am
+happy.”
+
+There are lots of other rules of inference that
+we can use!
+Disjunctive syllogism
+l Tautology: [¬p ∧ (p ∨ q)] → q
+l Rule of inference: p ∨ q
+¬p
+∴q
+l Example: “Either the heat is broken, or I have a fever.
+The heat is not broken, therefore I have a fever.”
+
+Conjunction
+l Tautology: [(p) ∧ (q)] → (p ∧ q)
+l Rule of inference: p
+q
+∴ (p ∧ q)
+l Example: “Jack is tall. Jack is skinny. Therefore, Jack is
+tall and skinny.”
+
+There are lots of other rules of inference that
+we can use!
+Resolution
+l Tautology: [(p ∨ q) ∧ (¬p ∨ r)] → (q ∨ r)
+l Rule of inference: p ∨ q
+¬p ∨ r
+∴q∨r
+l Example: “If it is not raining, I will ride my bike. If it is
+raining, I will lift weights. Therefore, I will ride my bike or
+lift weights”
+
+Special cases:
+1. If r = q, we get
+
+p∨q
+¬p ∨ q
+∴q
+
+2. If r = F, we get
+
+p∨q
+¬p
+∴q
+
+In-class exercises
+See Top Hat
+
+We can use rules of inference to build valid arguments
+
+If it is raining, I will stay inside. If I am inside, Lisa
+will stay home. If Lisa stays home and it is a Saturday,
+then we will play video games. Today is Saturday. It
+is raining.
+
+Let:
+l r ≡ It is raining
+l i ≡ I am inside
+l l ≡ Lisa will stay home
+l p ≡ we will play video games
+l s ≡ it is Saturday
+
+Hypotheses:
+l r→i
+l i→l
+l l∧s→p
+l s
+l r
+
+We can use rules of inference to build valid arguments
+Let:
+
+Hypotheses:
+
+l r ≡ It is raining
+l i ≡ I am inside
+l l ≡ Lisa will stay home
+l p ≡ we will play video games
+l s ≡ it is Saturday
+
+l r→i
+l i→l
+l l∧s→p
+l s
+l r
+
+Step:
+1. r → i
+2. i → l
+3. r → l
+4. r
+5. l
+6. s
+7. l ∧ s
+8. l ∧ s → p
+9. p
+
+hypothesis
+hypothesis
+hypothetical syllogism with 1 and 2
+hypothesis
+modus ponens with 3 and 4
+hypothesis
+conjunction of 5 and 6
+hypothesis
+modus ponens with 7 and 8
+
+I will play
+video games!
+
+We also have rules of inference for statements
+with quantifiers
+Universal Instantiation
+l Intuition: If we know that P(x) is true for all x, then P(c) is
+true for a particular c
+l Rule of inference: ∀x P(x)
+∴ P(c)
+
+Universal Generalization
+l Intuition: If we can show that P(c) is true for an arbitrary c,
+then we can conclude that P(x) is true for any specific x
+l Rule of inference: P(c)
+∴ ∀xP(x)
+Note that “arbitrary” does not mean “randomly chosen.” It
+means that we cannot make any assumptions about c other than
+the fact that it comes from the appropriate domain.
+
+We also have rules of inference for statements
+with quantifiers
+Existential Instantiation
+l Intuition: If we know that ∃x P(x) is true, then we know
+that P(c) is true for some c
+l Rule of inference: ∃x P(x)
+∴ P(c)
+Again, we cannot make assumptions about c other than the fact
+that it exists and is from the appropriate domain.
+
+Existential Generalization
+l Intuition: If we can show that P(c) is true for a particular c,
+then we can conclude that ∃x P(x) is true
+l Rule of inference: P(c)
+∴ ∃xP(x)
+
+Hungry dogs redux
+Given: Kody is one
+of my dogs
+M(Kody)
+
+Given: All of my dogs like peanut butter
+M(x)
+
+P(x)
+
+1. ∀x [M(x) → P(x)]
+2. M(Kody)
+3. M(Kody) → P(Kody)
+4. P(Kody)
+
+hypothesis
+hypothesis
+universal instantiation from 1
+modus ponens from 2 and 3
+
+Reasoning about our class
+Show that the premises “A student in this class has not
+read the book” and “everyone in this class turned in
+HW1” imply the conclusion “Someone who turned in
+HW1 has not read the book.”
+
+Let:
+l C(x) ≡ x is in this class
+l B(x) ≡ x has read the book
+l T(x) ≡ x turned in HW1
+
+Premises:
+l ∃x [C(x) ∧ ¬B(x)]
+l ∀x [C(x) → T(x)]
+
+Reasoning about our class
+Let:
+l C(x) ≡ x is in this class
+l B(x) ≡ x has read the book
+l T(x) ≡ x turned in HW1
+
+Premises:
+l ∃x [C(x) ∧ ¬B(x)]
+l ∀x [C(x) → T(x)]
+
+Steps:
+1. ∃x [C(x) ∧ ¬B(x)]
+2. C(a) ∧ ¬B(a)
+3. C(a)
+4. ∀x [C(x) → T(x)]
+5. C(a) → T(a)
+6. T(a)
+7. ¬B(a)
+8. T(a) ∧ ¬B(a)
+9. ∃x [T(x) ∧ ¬B(x)]
+
+hypothesis
+existential instantiation from 1
+simplification from 2
+hypothesis
+universal instantiation from 4
+modus ponens from 5 and 3
+simplification from 2
+conjunction of 6 and 7
+existential generalization from 8
+
+In-class exercises
+Problem 2: Show that the premises “Everyone in this
+discrete math class has taken a course in computer
+science” and “Melissa is a student in this discrete
+math class” lead to the conclusion “Melissa has taken
+a course in computer science.”
+
+Final Thoughts
+n Until today, we had look at representing different types of
+logical statements
+n Rules of inference allow us to derive new results by reasoning
+about known truths
+n Next time:
+l Proof techniques
+l Please read section 1.8
+
+
