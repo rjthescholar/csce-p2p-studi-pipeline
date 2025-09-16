@@ -2,41 +2,10 @@ from torch.utils.data import Dataset
 import math
 
 from helpers import *
-from pylatexenc.latexencode import UnicodeToLatexEncoder
-
-u = UnicodeToLatexEncoder(unknown_char_policy='unihex', replacement_latex_protection='none', non_ascii_only=True)
-
 
 CLS_TOKEN = "<cls>" #if model_type == 'XLNet' else "[CLS]"
 SEP_TOKEN = "<sep>" #if model_type == 'XLNet' else "[SEP]"
 PAD_TOKEN = "<pad>" #if model_type == 'XLNet' else "[PAD]"
-
-def tokenize_and_preserve_labels(sentence, text_labels, tokenizer):
-	"""
-	Word piece tokenization makes it difficult to match word labels
-	back up with individual word pieces. This function tokenizes each
-	word one at a time so that it is easier to preserve the correct
-	label for each subword. It is, of course, a bit slower in processing
-	time, but it will help our model achieve higher accuracy.
-	"""
-
-	tokenized_sentence = []
-	labels = []
-
-	for word, label in zip(sentence, text_labels):
-
-		# Tokenize the word and count # of subwords the word is broken into
-
-		tokenized_word = tokenizer.tokenize(u.unicode_to_latex(word))
-		n_subwords = len(tokenized_word)
-
-		# Add the tokenized word to the final tokenized word list
-		tokenized_sentence.extend(tokenized_word)
-
-		# Add the same label to the new list of labels `n_subwords` times
-		labels.extend([label] * n_subwords)
-
-	return tokenized_sentence, labels
 
 class dataset(Dataset):
 	def __init__(self, dataframe, tokenizer, max_len, model=None, model_name=""):

@@ -57,20 +57,21 @@ if __name__ == "__main__":
 	parser.add_argument("-e", "--self-label-2-path", help = "Self-Training 2 Path", type=Path, required=True)
 	parser.add_argument("-d", "--distant-path", help = "Distant Labels Path", type=Path)
 	parser.add_argument("-o", "--out", help = "Models Path", type=Path)
+	parser.add_argument("-m", "--merge", help = "Do Merging", action='store_true')
 	args = parser.parse_args(sys.argv[1:])
 
 	# Prepare the validation dataset.
-	sentences, labels = get_data(args.val_path)
+	sentences, labels = get_data(args.val_path, args.merge)
 	validation_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 
-	sentences, labels = get_fs_data(args.val_path)
+	sentences, labels = get_fs_data(args.val_path, args.merge)
 	validation_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
 	
 	# Prepare the self-training datasets.
-	sentences, labels = get_data(args.self_label_1_path)
+	sentences, labels = get_data(args.self_label_1_path, args.merge)
 	self_training_dataset_1 = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 	
-	sentences, labels = get_data(args.self_label_2_path)
+	sentences, labels = get_data(args.self_label_2_path, args.merge)
 	self_training_dataset_2 = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 
 	self_training_dataset = pd.concat([self_training_dataset_1, self_training_dataset_2])
@@ -92,9 +93,9 @@ if __name__ == "__main__":
 		parser.error("Neither labeled or test and train sets specified.")
 
 	if args.labeled_path:
-		sentences, labels = get_course_data(args.labeled_path)
+		sentences, labels = get_course_data(args.labeled_path, args.merge)
 		if args.distant_path:
-			d_sentences, d_labels = get_course_data(args.distant_path)
+			d_sentences, d_labels = get_course_data(args.distant_path, args.merge)
 			d_datas = [
 				pd.DataFrame((
 					{
@@ -140,19 +141,19 @@ if __name__ == "__main__":
 		]
 	else:
 		# Prepare the test dataset.
-		sentences, labels = get_data(args.test_path)
+		sentences, labels = get_data(args.test_path, args.merge)
 		test_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 		
 		#The test dataset, but separated by file.
-		sentences, labels = get_fs_data(args.test_path)
+		sentences, labels = get_fs_data(args.test_path, args.merge)
 		test_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
 
 		# Prepare the train dataset.
-		sentences, labels = get_data(args.train_path)
+		sentences, labels = get_data(args.train_path, args.merge)
 		train_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 
 		if args.distant_path:
-			d_sentences, d_labels = get_data(args.distant_path)
+			d_sentences, d_labels = get_data(args.distant_path, args.merge)
 			d_data = pd.DataFrame({'sentence': d_sentences, 'word_labels': d_labels})
 			d_datas = [d_data] * EXPERIMENTS
 
@@ -186,12 +187,12 @@ if __name__ == "__main__":
 			gold_concepts = extract_concepts(data_set, gold=True)
 			print(f"actual concepts for file: {gold_concepts}")
 
-		do_training = True
+		do_training = False
 		if do_training:
 			print("<============= BEGINNING TRAINING ==================>\n")
 			print(f"=============== XLNET MODEL TRAINING TRIAL {course_list[experiment_count]} ================")
 
-			model = XLNetForTokenClassification.from_pretrained('xlnet-large-cased',
+			model = XLNetForTokenClassification.from_pretrained('xlnet-base-cased',
 														num_labels=len(id2label),
 														id2label=id2label,
 														label2id=label2id)
