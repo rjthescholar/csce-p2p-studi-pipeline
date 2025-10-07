@@ -62,8 +62,10 @@ def eval_concepts(model, deck_loader_list):
     pred_ds = get_predictions(model, deck_loader)
     concepts = extract_concepts(pred_ds)
     gold_concepts = extract_concepts(pred_ds, gold=True)
-    concepts = {inf_eng.singular_noun(item.lower()) if inf_eng.singular_noun(item.lower()) else item.lower() for item in concepts if len(item) > 0}
-    gold_concepts = {inf_eng.singular_noun(item.lower()) if inf_eng.singular_noun(item.lower()) else item.lower() for item in gold_concepts if len(item) > 0}
+    print(f"unprocessed predicted concepts for file: {concepts}")
+    print(f"unprocessed actual concepts for file: {gold_concepts}")
+    concepts = {inf_eng.singular_noun(item.lower()) if (item[0:1].isalnum() and inf_eng.singular_noun(item.lower())) else item.lower() for item in concepts if len(item) > 0}
+    gold_concepts = {inf_eng.singular_noun(item.lower()) if (item[0:1].isalnum() and inf_eng.singular_noun(item.lower())) else item.lower() for item in gold_concepts if len(item) > 0}
     print(f"predicted concepts for file: {concepts}")
     print(f"actual concepts for file: {gold_concepts}")
     fn_concepts = gold_concepts - concepts

@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
 	sentences, labels = get_fs_data(args.val_path, args.merge)
 	validation_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
-	
+
 	# Prepare the self-training datasets.
 	sentences, labels = get_data(args.self_label_1_path, args.merge)
 	self_training_dataset_1 = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
@@ -187,7 +187,7 @@ if __name__ == "__main__":
 			gold_concepts = extract_concepts(data_set, gold=True)
 			print(f"actual concepts for file: {gold_concepts}")
 
-		do_training = False
+		do_training = True
 		if do_training:
 			print("<============= BEGINNING TRAINING ==================>\n")
 			print(f"=============== XLNET MODEL TRAINING TRIAL {course_list[experiment_count]} ================")

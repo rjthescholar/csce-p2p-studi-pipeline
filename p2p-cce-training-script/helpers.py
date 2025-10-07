@@ -56,13 +56,13 @@ label2id = {
 	'B': 0,
 	'I': 1,
 	'O': 2,
-    'X': 3
+#    'X': 3
  }
 id2label = {
 	0: 'B',
 	1: 'I',
 	2: 'O',
-    3: 'X'
+#    3: 'X'
 }
 
 train_params = {'batch_size': TRAIN_BATCH_SIZE,
