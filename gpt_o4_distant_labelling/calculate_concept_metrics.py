@@ -41,15 +41,19 @@ The script prints a metric summary and the three buckets:
 import argparse
 from pathlib import Path
 from typing import Dict, Set, Union
+import inflect
 
 
 # --------------------------------------------------------------------------- #
 # Core evaluation logic
 # --------------------------------------------------------------------------- #
 def _load_concepts(path: Union[str, Path]) -> Set[str]:
+    inf_eng = inflect.engine()
     """Load a text file → lower-cased, deduplicated set of concepts."""
     with Path(path).open(encoding="utf-8") as f:
-        return {line.rstrip("\n").lower() for line in f if line.strip()}
+        concepts = {line.rstrip("\n").lower() for line in f if line.strip()}
+        concepts = {inf_eng.singular_noun(item.lower()) if (item[0:1].isalnum() and inf_eng.singular_noun(item.lower())) else item.lower() for item in concepts if len(item) > 0}
+        return concepts
 
 
 def evaluate_concept_files(
