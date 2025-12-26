@@ -1,6 +1,6 @@
 #!/bin/bash
 set -evx
-cd data/dataset
+cd new_data/dataset
 for dir in */; do
     if [ -d "$dir" ]; then
         mkdir ../dataset_conll/$dir -p
