@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=p2pselftraining
 #SBATCH --nodes=1
-#SBATCH --time=0-03:00:00
+#SBATCH --time=0-02:00:00
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:1
 #SBATCH --cluster=gpu
@@ -16,38 +16,25 @@ module load python/ondemand-jupyter-python3.11
 
 source activate /ix/dmosse/rek94/envs/pytorch_gpu
 
-# python3 /ihome/dmosse/rek94/p2p-cce-training-script/main.py --train-path /ihome/dmosse/rek94/data/dataset_bio/train_set --val-path /ihome/dmosse/rek94/data/dataset_bio/dev_set --test-path /ihome/dmosse/rek94/data/dataset_bio/test_set \
-# --self-label-1-path /ihome/dmosse/rek94/data/dataset_bio/self_training_1 --self-label-2-path /ihome/dmosse/rek94/data/dataset_bio/self_training_2 > /ihome/dmosse/rek94/results.txt
+# python3 /ihome/dmosse/rek94/p2p-cce-training-script/main.py --train-path /ihome/dmosse/rek94/new_data/dataset_bio/train_set --val-path /ihome/dmosse/rek94/new_data/dataset_bio/dev_set --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set \
+# --self-label-1-path /ihome/dmosse/rek94/new_data/dataset_bio/self_training_1 --self-label-2-path /ihome/dmosse/rek94/new_data/dataset_bio/self_training_2 > /ihome/dmosse/rek94/results.txt
 
-echo =============== CS-1502 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1502 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs1502 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-1502 P2P MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1502 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs1502 >> /ihome/dmosse/rek94/results.txt
+echo =============== MODEL 1 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/base/1 >> /ihome/dmosse/rek94/results.txt
+echo =============== P2P MODEL 1 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/p2p/1 >> /ihome/dmosse/rek94/results.txt
 
-echo =============== CS-0447 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0447 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs0447 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-0447 P2P MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0447 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs0447 >> /ihome/dmosse/rek94/results.txt
+echo =============== MODEL 2 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/base/2 >> /ihome/dmosse/rek94/results.txt
+echo =============== P2P MODEL 2 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/p2p/2 >> /ihome/dmosse/rek94/results.txt
 
-echo =============== CS-0441 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0441 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs0441 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-0441 P2P MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0441 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs0441 >> /ihome/dmosse/rek94/results.txt
+echo =============== MODEL 3 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/base/3 >> /ihome/dmosse/rek94/results.txt
+echo =============== P2P MODEL 3 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/p2p/3 >> /ihome/dmosse/rek94/results.txt
 
-echo =============== CS-1541 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1541 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs1541 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-1541 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1541 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs1541 >> /ihome/dmosse/rek94/results.txt
-
-echo =============== CS-0007 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0007 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs0007 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-0007 P2P MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs0007 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs0007 >> /ihome/dmosse/rek94/results.txt
-
-echo =============== CS-1567 MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1567 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/base/cs1567 >> /ihome/dmosse/rek94/results.txt
-echo =============== CS-1567 P2P MODEL EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
-python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/data/dataset_bio/labeled/cs1567 --model /ix/dmosse/rek94/models/2025-09-03_13-16-56/p2p/cs1567 >> /ihome/dmosse/rek94/results.txt
-
-
-
+echo =============== MODEL 4 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/base/4 >> /ihome/dmosse/rek94/results.txt
+echo =============== P2P MODEL 5 EVALUATION ================ >> /ihome/dmosse/rek94/results.txt
+python3 /ihome/dmosse/rek94/p2p-cce-training-script/main_predict.py --test-path /ihome/dmosse/rek94/new_data/dataset_bio/test_set --model /ix/dmosse/rek94/models/2025-12-26_20-10-51/p2p/4 >> /ihome/dmosse/rek94/results.txt

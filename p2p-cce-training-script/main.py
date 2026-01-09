@@ -64,8 +64,9 @@ if __name__ == "__main__":
 	sentences, labels = get_data(args.val_path, args.merge)
 	validation_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
 
-	sentences, labels = get_fs_data(args.val_path, args.merge)
-	validation_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
+	if args.val_path:
+		sentences, labels = get_fs_data(args.val_path, args.merge)
+		validation_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
 
 	# Prepare the self-training datasets.
 	sentences, labels = get_data(args.self_label_1_path, args.merge)
@@ -80,32 +81,55 @@ if __name__ == "__main__":
 	self_training_set_1 = dataset(self_training_dataset_1, tokenizer, MAX_LEN)
 	self_training_set_2 = dataset(self_training_dataset_2, tokenizer, MAX_LEN)
 	self_training_set = dataset(self_training_dataset, tokenizer, MAX_LEN)
-	validation_set = dataset(validation_dataset, tokenizer, MAX_LEN)
-	val_block_set = [dataset(data_set, tokenizer, MAX_LEN) for data_set in validation_block_datasets]
 
 	self_training_loader_1 = DataLoader(self_training_set_1, **train_params)
 	self_training_loader_2 = DataLoader(self_training_set_2, **train_params)
 	self_training_loader = DataLoader(self_training_set, **train_params)
-	validation_loader = DataLoader(validation_set, **valid_params)
-	val_block_loader = [DataLoader(data_set, **valid_params) for data_set in val_block_set]
+		
 
 	if not (args.labeled_path or (args.test_path and args.train_path)):
 		parser.error("Neither labeled or test and train sets specified.")
 
 	if args.labeled_path:
 		sentences, labels = get_course_data(args.labeled_path, args.merge)
+		course_list = [*sentences]
+		exclude = [(course_list[i], course_list[(i+1) % 7]) for i in range(len(course_list))]
 		if args.distant_path:
 			d_sentences, d_labels = get_course_data(args.distant_path, args.merge)
 			d_datas = [
 				pd.DataFrame((
 					{
-					'sentence': double_flatten(without_keys(d_sentences, {course})),
-	   				'word_labels': double_flatten(without_keys(d_labels, {course}))
+					'sentence': double_flatten(without_keys(d_sentences, {course1, course2})),
+	   				'word_labels': double_flatten(without_keys(d_labels, {course1, course2}))
 					}
 				))
-			for course in sentences
+			for course1, course2 in exclude
 			]
-		course_list = [*sentences]
+		
+		print(course_list)
+		val_block_datasetses = [
+			[
+				pd.DataFrame((
+					{
+					'sentence': sentences[course][file],
+	   				'word_labels': labels[course][file]
+					}
+				))
+				for file in sentences[course]
+			]
+			for course, _ in exclude
+		]
+
+		val_datasets = [
+				pd.DataFrame((
+					{
+					'sentence': flatten(sentences[course]),
+	   				'word_labels': flatten(labels[course])
+					}
+				))
+			for course, _ in exclude
+		]
+
 		print(course_list)
 		test_block_datasetses = [
 			[
@@ -117,7 +141,7 @@ if __name__ == "__main__":
 				))
 				for file in sentences[course]
 			]
-			for course in sentences
+			for _, course in exclude
 		]
 
 		test_datasets = [
@@ -127,17 +151,17 @@ if __name__ == "__main__":
 	   				'word_labels': flatten(labels[course])
 					}
 				))
-			for course in sentences
+			for _, course in exclude
 		]
 
 		train_datasets = [
 			pd.DataFrame((
 					{
-					'sentence': double_flatten(without_keys(sentences, {course})),
-	   				'word_labels': double_flatten(without_keys(labels, {course}))
+					'sentence': double_flatten(without_keys(sentences, {course1, course2})),
+	   				'word_labels': double_flatten(without_keys(labels, {course1, course2}))
 					}
 				))
-			for course in sentences
+			for course1, course2 in exclude
 		]
 	else:
 		# Prepare the test dataset.
@@ -160,7 +184,9 @@ if __name__ == "__main__":
 		train_datasets = [train_dataset] * EXPERIMENTS
 		test_block_datasetses = [test_block_datasets] * EXPERIMENTS
 		test_datasets = [test_dataset] * EXPERIMENTS
-		course_list = [i+1 for i in range(EXPERIMENTS)]
+		val_datasets = [validation_dataset] * EXPERIMENTS
+		val_block_datasetses = [validation_block_datasets] * EXPERIMENTS
+		course_list = [f"{i+1}" for i in range(EXPERIMENTS)]
 	stats = []
 	p2p_stats = []
 	val_stats = []
@@ -169,6 +195,8 @@ if __name__ == "__main__":
 		train_dataset = train_datasets[experiment_count]
 		test_block_datasets = test_block_datasetses[experiment_count]
 		test_dataset = test_datasets[experiment_count]
+		validation_block_datasets = val_block_datasetses[experiment_count]
+		validation_dataset = val_datasets[experiment_count]
 
 		if args.distant_path:
 			d_data = d_datas[experiment_count]
@@ -178,10 +206,14 @@ if __name__ == "__main__":
 		training_set = dataset(train_dataset, tokenizer, MAX_LEN)
 		testing_set = dataset(test_dataset, tokenizer, MAX_LEN)
 		test_block_set = [dataset(data_set, tokenizer, MAX_LEN) for data_set in test_block_datasets]
+		validation_set = dataset(validation_dataset, tokenizer, MAX_LEN)
+		val_block_set = [dataset(data_set, tokenizer, MAX_LEN) for data_set in validation_block_datasets]
 
 		training_loader = DataLoader(training_set, **train_params)
 		testing_loader = DataLoader(testing_set, **test_params)
 		test_block_loader = [DataLoader(data_set, **test_params) for data_set in test_block_set]
+		validation_loader = DataLoader(validation_set, **valid_params)
+		val_block_loader = [DataLoader(data_set, **valid_params) for data_set in val_block_set]
 
 		for data_set in test_block_set:
 			gold_concepts = extract_concepts(data_set, gold=True)

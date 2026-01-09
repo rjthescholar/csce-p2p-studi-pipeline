@@ -143,15 +143,15 @@ def valid(model, loader):
     return eval_loss, labels, predictions, chunk_eval_stats
 
 def train_epochs(model, optimizer, train_loader, dev_loader, testing_loader, num_epochs):
-  early_stopper = EarlyStopper(patience=5, min_delta=0.01)
+  early_stopper = EarlyStopper(patience=2, min_delta=0.01)
   for epoch in range(num_epochs):
     print(f"Training epoch: {epoch + 1}")
     train(model, optimizer, train_loader, epoch)
     loss, labels, predictions, _ = valid(model, dev_loader)
     print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
     print(classification_report([labels], [predictions]))
-    #if early_stopper.early_stop(loss):
-    #    break
+    if early_stopper.early_stop(loss):
+        break
     loss, labels, predictions, _ = valid(model, testing_loader)
     print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
     print(classification_report([labels], [predictions]))

@@ -15,7 +15,7 @@ def get_data(data_path, do_merge=False):
 		path = filename
 		if os.path.isfile(path):
 			f = open(path)
-			print(path, f)
+			#print(path, f)
 			file_data = json.load(f)
 			tokens_scooped = 0
 			sentence = []
@@ -47,7 +47,7 @@ def get_course_data(data_path, do_merge=False):
 		path = filename
 		if os.path.isfile(path):
 			f = open(path)
-			print(path, f)
+			#print(path, f)
 			file_data = json.load(f)
 			course = file_data['course']
 			lec = file_data['lec']
@@ -86,7 +86,7 @@ def get_fs_data(data_path, do_merge=False):
 		path = filename
 		if os.path.isfile(path):
 			f = open(path)
-			print(path, f)
+			#print(path, f)
 			file_data = json.load(f)
 			file_id = f"{file_data['course']}-{file_data['lec']}"
 			sentences[file_id] = []
