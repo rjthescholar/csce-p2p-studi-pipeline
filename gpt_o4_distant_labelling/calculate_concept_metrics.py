@@ -7,7 +7,7 @@ concept list against a human (gold) list.
 
 Matching rule
 -------------
-* Exact string equality after LOWER-CASING each line.
+* Stem equality via inflect library after LOWER-CASING each line.
 * One concept per line in each file.
 
 CLI usage
