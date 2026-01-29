@@ -1,0 +1,260 @@
+Robot Operating System
+ROS
+Linux
+inter-process communication
+TCP/IP
+C++
+Python
+interprocess communication
+nodes
+node
+messages
+ROS Master
+roscore
+OpenCV
+ROS Core
+Remote Procedure Call
+RPC
+rosout
+ROS Topics
+publishers
+subscribers
+subscriber
+publisher
+cmvision node
+control node
+camera node
+kobuki node
+ROS Nodes
+gscam node
+TCP
+UDP
+ROS Messages
+std msgs/Int32
+std msgs/Float32
+std msgs/String
+std msgs/Empty
+std msgsPublisher
+Subscriber
+topics
+topic
+subscribers
+talker.py
+python
+Python
+rospy
+std_msgs.msg
+String
+rospy.Publisher
+chatter
+queue_size
+rospy.init_node
+anonymous
+node
+rospy.Rate
+rate.sleep
+rospy.is_shutdown
+rospy.get_time
+rospy.loginfo
+__name__ == '__main__'
+rospy.ROSInterruptException
+Ctrl-c
+rqt console
+subscriber
+listener.py
+callback
+rospy.Subscriber
+publisher
+rospy.spin
+callback()
+std_msgs/String
+messenger.py
+ROS
+chatter2
+chatter1
+Distributed Computing
+loop
+Cleanup
+ROS master
+shutdown hooks
+rospy.on_shutdown
+rospy.signal_shutdown
+Callback Functions
+deepcopy
+rostopic
+roscore
+rosrun
+rostopic list
+rostopic echo
+rostopic info
+rostopic type
+rostopic pub
+Workspace Directory
+mypackage
+scripts
+roscdJoy Node
+joy_node
+joystick
+joy
+rosparam
+rosrun
+roscore
+rostopic list
+Xbox 360 Controller
+Joy
+header
+axes
+buttons
+rostopic echo
+rospy
+sensor_msgs.msg
+Kobuki
+Twist
+geometry_msgs.msg
+/mobile_base/commands/velocity
+ROS
+roslaunch
+kobuki_softnode
+rviz
+/odom
+RobotModelKobuki Node
+Motors
+Bumper switches
+Buttons
+LEDs
+roslaunch
+odometry
+/mobile_base/commands/reset_odometry
+/mobile_base/commands/sound
+/mobile_base/commands/led1
+/mobile_base/commands/led2
+/mobile_base/commands/velocity
+/odom
+/mobile_base/events/bumper
+/mobile_base/events/button
+Sounds
+Sound
+rospy
+kobuki_msgs.msg
+Led
+LED1
+LED2
+Bumpers
+BumperEvent
+ButtonEvent
+B0
+B1
+B2
+Odometry
+nav_mags/Odometry.msg
+pose
+position
+orientation
+quaternion
+roll
+pitch
+yaw
+arcsin
+Empty
+nav_msgs/Odometry.msg
+euler_from_quaternionBlob Detection
+Blob
+color
+brightness
+width
+height
+pixel
+center
+RGB
+red
+green
+blue
+filter
+connected regions
+foreground
+background
+YUV
+Y
+U
+V
+luminance
+chrominance
+gscam
+/v4l/camera/image_raw
+roslaunch
+image_view
+rosrun
+roscore
+sensor_msgs/Image
+Image message
+OpenCV
+CvBridge
+cv2
+cmvision
+/blobs
+colorgui
+colors.txt
+[colors]
+[thresholds]
+cmvision.launch
+cmvision/color_file
+cmvision/debug_on
+cmvision/color_cal_on
+cmvision/mean_shift_on
+cmvision/spatial_radius_pix
+cmvision/color_radius_pix
+Blobs
+Blob
+Gaussian blur
+GaussianBlur()
+cvtColor()
+inRange()
+mask
+SimpleBlobDetector
+SimpleBlobDetector_Params
+SimpleBlobDetector_create
+keypoints
+drawKeypoints()
+contour
+findContours()
+drawContours()
+bounding box
+boundingRect()PID Control
+Tracking an Object
+Field−of−View
+linear.x
+angular.z
+Control System
+Open Loop
+Open Loop Control
+Closed Loop
+Oscillation
+Lost track
+Overcompensate
+Closed Loop Control
+Error
+Proportional-Integral-Derivative
+Proportional-Integral-Derivative Controller
+PID
+PID Controller
+Kp
+Ki
+Kd
+Proportional
+Integral
+Differential
+de/dtLaunch File
+roscore
+roslaunch
+kobuki_node
+gscam
+launch file
+XML
+.launch
+launch directory
+<launch> tag
+<include> tag
+$(find
+<node> tag
+output="screen"
+cwd="node"

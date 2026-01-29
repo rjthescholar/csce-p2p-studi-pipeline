@@ -1,0 +1,368 @@
+linux kernel
+multi-thread programs
+user-land file system
+system call
+interrupt
+os
+virtualization
+hardware interrupt
+operating system
+cooperating processes
+atomic
+xv6
+shared memory
+atomic instruction
+counting semaphore
+__sync_synchronize ()
+blocking
+memory barrier
+testandset
+down
+semaphore
+lock
+swap
+critical section
+busy waiting
+critical region
+wakeup
+v
+non-critical section
+spinning
+p
+priority inversion
+up
+smp
+spinlock
+unlock
+busy waiting
+semaphore
+deadlock
+priority inversion
+mutual exclusion
+up
+down
+spinlock
+mutex
+priority inheritance
+mutex
+semaphore
+fork
+priority inheritance
+process
+mutual exclusion
+deadlock
+priority inversion
+init
+shared circular-array buffer
+tracing
+producers consumers problem
+parent process
+orphan process
+abort ()
+fork ()
+bounded buffer
+problem
+kill ()
+copy-and-write
+child process
+wait ()
+exec ()
+process termination
+exit ()
+problem
+broadcast
+up
+lock
+semaphore-based
+consumer
+semaphore
+wait
+condition variable
+producer
+spinlock
+signal
+bounded buffer
+mutex
+down
+semaphore-based
+enterwrite
+enterread
+database queries
+solution
+mutex
+write
+mutex.up
+solution using mutex and condition variables
+last reader
+read
+writer process
+reader process
+condition variables
+donewrite
+shared variables
+doneread
+semaphore
+mutex.down
+readers & writers
+dining philosophers
+prevention
+semaphore
+condition variable
+fairness
+avoidance
+avail
+;
+hold
+ostrich algorithm
+algorithm
+deadlock
+cv
+current=avail
+want
+detection
+mutex.down
+mutex
+readers-writers problem
+current
+prevention
+;
+avail
+finished
+deadlock
+want
+current=avail
+algorithm
+detection
+current
+hold
+banker's algorithm
+avoidance
+mutex
+lock
+sleepy barbers problem
+semaphore
+acquire
+mutex.down
+producers-consumers problem
+nextcount
+condition variable
+next.down
+condition variable-based
+lock-
+signal
+next.up
+process synchronization
+release
+nextcount++
+nextcount-
+wait
+next
+mutex.up
+mesa semantics
+mutual exclusion
+nextcount--
+cpu scheduling
+shortest-job-first scheduling
+non-preemptive
+cpu burst
+nonpreemptive
+re-entrant locks
+dispatch latency
+round-robin scheduling
+multilevel feedback queue scheduling
+switching context
+preemptive
+user-oriented criteria
+cpu-i/o cycle
+atomic
+multilevel queue scheduling
+barriers
+short-term scheduler
+throughput
+first-come,first-served scheduling
+long jobs
+system-oriented criteria
+ready queue
+arrival time
+ready state
+process synchronization
+decision mode
+fairness
+processor utilization
+turnaround time
+fcfs
+dispatcher
+scheduling algorithms
+average response time
+user mode
+service time
+message passing
+shortest process next
+response time
+priority scheduling
+running state
+futex
+selection function
+arrival time
+first come first serve
+cpu burst
+quantum
+time slice
+short-term scheduler
+round robin
+rr
+much
+starvation
+service time
+fcfs
+sjf
+time quantum
+convoy effect
+process
+cache
+main memory
+memory hierarchy
+sram
+disk
+i/o wait
+dram
+goal
+memory management
+memory manager
+l3 cache
+non-volatile storage
+multiprogramming
+:
+cpu utilization
+banker's algorithm
+detection algorithms
+cpu scheduling
+starvation
+avoidance algorithms
+spooling?
+2 phase locking
+graph
+circular wait
+spooling
+prevention
+non-resource deadlocks
+deadlock
+multiple resource instances
+resource trajectory
+hold and wait
+no preemption
+max
+victim page
+page fault
+optimal page replacement algorithm
+opt
+physical memory
+not frequently used
+page replacement
+first-in,first out
+fifo
+nru
+optimal
+stack algorithm
+least recently used
+algorithm
+distance
+wsclock
+reference string
+page fault
+clock
+nfu
+lru
+string
+working set
+not recently used
+aging
+second chance
+page fault
+opt
+minimum memory allocation to a process
+rate
+page size
+separating policy and mechanism
+backing up an instruction
+clock
+global allocation
+local allocation
+page table
+vm
+degree of multiprogramming
+page replacement
+thrashing
+mmu
+pte
+disk write
+stack algorithm
+lru
+fifo
+pte
+address translation
+page size
+page frame number
+frame number
+page table
+large page table problem
+file allocation table
+fat
+block index
+max file size
+directory
+disk block
+size
+i-node
+free block tracking
+indexed allocation
+error detection
+linked list of free blocks
+kernel
+directory contents
+i/o
+defense in depth
+user-level i/o software
+bitmap
+os
+sector
+cylinder
+head
+track
+ecc
+spindle
+platter
+platter
+cylinder
+track
+mmu
+polling
+device drivers
+interrupt controller
+interrupt-driven i/o
+context
+sector
+actuator
+spindle
+dma
+interrupt service procedure
+direct memory access
+interrupt handler
+interrupts
+head
+file linking
+journaling file system
+read
+on-disk journal
+disk arm scheduling
+write
+delete
+owner
+domain
+cryptographically protected capability
+matrix
+protection
+os
+capability
+access control matrix
+acl

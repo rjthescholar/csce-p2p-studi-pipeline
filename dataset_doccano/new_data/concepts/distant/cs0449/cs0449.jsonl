@@ -1,0 +1,987 @@
+Cache memories
+Memory Allocation
+Stack Discipline
+Disassembly
+direct-mapped cache
+write-allocate
+write-back
+TIO address breakdown
+LRU
+Least Recently Used
+set-associative cache
+LRU counter
+N-way set-associative cache
+End-to-End Address Translation
+byte addressable
+virtual address
+physical address
+virtual address format
+Address Translation
+Physical Memory Access
+Dynamic storage allocation
+immediate coalescing
+process graph
+cold/empty cache
+LRU replacement policy
+block size
+direct-mapped
+2-way set associative
+4-way set associative
+miss rate
+row-wise access pattern
+associativitySystems Software
+ANSI C Programming Language
+C
+K&R book
+K&R style
+Computer Systems: A Programmer’s Perspective
+C Systems Programming Language
+x86 Assembly
+Memory Models
+Memory management
+Memory Caches
+Operating Systems
+Processes
+Signals
+Interprocess Communication
+Virtual Memory
+Network Programming
+ISA
+ABI
+interactive debugging
+Debugging Tools
+Program Analysis
+debuggerData Representation
+Binary Encoding
+Binary
+Bits
+Bytes
+Nybbles
+Positional number systems
+Most Significant
+Least Significant
+Numeric Bases
+base-10
+decimal
+base-2
+binary
+base-16
+hexadecimal
+base-8
+octal
+bit
+MSB
+LSB
+byte
+nibble
+word
+Mbps
+MB
+double word
+dword
+CPU
+UTF-16
+ASCII
+Java
+base-4
+base-32
+hex digit
+Binary to Hex
+Integer Encoding
+overflow
+modular arithmetic
+Signed Numbers
+2’s Complement
+Two’s complement arithmetic
+Two's complement addition
+zero extension
+sign extension
+Integer Ranges
+unsigned
+signed
+Integer Types
+int
+limits.h
+casting
+coercion
+weak typing
+strong typing
+Fractional Binary
+Real numbers
+decimal pointBit Manipulation
+bitwise operations
+NOT
+logical negation
+truth table
+! operator
+AND
+logical product
+& operator
+OR
+logical sum
+| operator
+XOR
+logical difference
+^ operator
+bit shifting
+shift left
+<< operator
+shift right
+>> operator
+Shift Right Logical
+srl
+Shift Right Arithmetic
+sra
+sign-extension
+Fractional Encoding
+fractional numbers
+binary point
+fixed-point representation
+bitfield
+scientific notation
+normalized scientific notation
+Floating point
+floating-point number representation
+IEEE 754
+Binary Scientific Notation
+sign
+significand
+exponent
+fraction
+fraction field
+exponent field
+Single-precision
+float
+normalized representation
+sign-magnitude
+biased notation
+bias constant
+biased exponent
+double-precision
+double
+half-precisionC
+Systems Software
+Python
+Java
+assembly language
+TIOBE index
+TIOBE Programming Community index
+compiled language
+machine code
+byte-code
+interpreter
+compiler
+object file
+source file
+linker
+linking
+executable
+assembly
+gcc
+pointer
+assembler
+bytecodes
+OS
+virtual machine
+Just-In-Time compilation
+JIT
+JVM
+malloc
+free
+garbage collection
+C89
+ANSI C
+ISO C
+C99
+C11
+Unicode
+C18
+C Pre-Processor
+pre-processor
+macro language
+main function
+casting
+sizeof
+enumeration
+struct
+typedef
+bool
+stack
+memoryMemory Model
+byte-addressable memory
+byte
+word
+stack
+heap
+static data
+code
+text
+dynamic memory
+Stack Allocation
+garbage collection
+gcc
+clang
+C99
+C11
+C18
+pointer
+pointers
+memory address
+memory leak
+dereference operator
+reference operator
+pointer to pointer
+malloc
+NULL
+arrays
+array
+calloc
+buffer
+array bounds checking
+pointer arithmetic
+strings
+string
+char
+ASCII
+Unicode
+sentinel value
+string literal
+const
+strlen
+strnlen
+strcmp
+strcpy
+strncpy
+strcat
+strncat
+strncmp
+free
+gets
+fgets
+scanf
+printf
+structures
+structure
+typedef
+stddef.h
+reallocMemory Layout
+code
+static data
+stack
+heap
+dynamic memory
+free
+malloc
+fragmentation
+defragmentation
+pointer
+pointers
+garbage collection
+array
+arrays
+linked list
+Node
+head
+tail
+traversal
+metadata
+O(1)
+O(n)
+doubly linked list
+binary tree
+First-Fit
+Next-Fit
+Best-Fit
+coalesce
+coalescing
+free list
+AllocNode
+buddy allocator
+internal fragmentation
+depth-first search
+segmentation fault
+segments
+page
+pages
+virtual memory
+LIFO
+brk
+mmap
+Slab Allocator
+Buddy Allocationx86 asm
+Assembly
+machine code
+CPUs
+CPU
+MIPS
+RISC processor
+x86
+CISC processor
+Machine language
+assembly language
+asm
+MIPS asm
+MIPS machine language
+Kernels
+Compiler
+Instruction set
+Intel Pentium 4
+Intel Core 2
+x86-64
+Intel Core i7
+AMD Opteron
+AMD Athlon
+GCC
+Clang
+ARMv8
+AArch64
+A64
+ARM Cortex-A53
+Apple A7
+reverse engineering
+NASM
+Intel Syntax
+MS-DOS
+gdb
+IDA Pro
+radare
+Instruction Set Architecture
+ISA
+RISC
+Reduced Instruction Set Computer
+RISC-V
+CISC
+Complex Instruction Set Computer
+microcode
+8086
+general-purpose registers
+partial registers
+Stack Pointer
+%eax
+%ax
+%ah
+%al
+%ecx
+%cx
+%ch
+%cl
+%edx
+%dx
+%dh
+%dl
+%ebx
+%bx
+%bh
+%bl
+%esi
+%si
+%edi
+%di
+%esp
+%sp
+%ebp
+%bp
+16-bit virtual registers
+program counter
+status register
+carry flag
+CF
+overflow detection
+OF
+R-type
+I-type
+J-type
+gas
+AT&T syntax
+Load Effective Address
+LEA
+quad word
+long word
+word
+MIPS64
+arithmetic shift
+logical shift
+gcc
+objdump
+C Application Binary Interface
+ABI
+C ABI
+rdi
+rsi
+rdx
+rcx
+r8
+r9
+rbx
+rbp
+rsp
+r12
+r13
+r14
+r15
+rax
+System VC ABI
+C Application Binary Interface
+ABI
+MIPS
+x86-64
+x86-64 Linux C ABI
+stack
+activation frame
+gas
+AT&T syntax
+control flow
+program counter
+bitwise AND
+ALU
+sign bit
+cmp
+test
+zero flagBuffer Overflow
+Heap
+Static Data
+Instructions
+x86-64
+Shared Libraries
+Text
+Hex Address
+Stack Frame
+Caller’s Stack Frame
+Current/Callee Stack Frame
+Frame pointer
+Stack pointer
+Return address
+Segmentation fault
+Buffer overflows
+stack smashing
+gets
+strcpy
+scanf
+fscanf
+sscanf
+Code Injection Attacks
+exploit code
+Internet worm
+Heartbleed
+OpenSSL
+Heartbeat
+Cloudbleed
+fgets
+strncpy
+Randomized stack offsets
+Non-executable code segments
+Stack Canaries
+stack canaries
+canary
+-fstack-protector
+-fno-stack-protector
+__stack_chk_fail
+GCCLinkers
+compiler
+object file
+executable
+linker
+linking
+bytecode
+preprocessor
+shared libraries
+Executable and Linkable Format
+ELF
+object file header
+text segment
+data segment
+relocation table
+symbol table
+Magic Number
+Segment Headers
+nm
+static keyword
+extern keyword
+global variables
+local symbol
+global symbol
+static library
+ar
+loaders
+code segment
+read-only data segment
+uninitialized data segment
+.bss segment
+Block Started by Symbol
+stack pointer
+entry point
+static linking
+dynamic linking
+shared library
+relocatable code
+Procedure Linkage Table
+PLT
+position independent code
+PIC
+position independent executable
+PIE
+run-time loading
+dlopen
+dlsym
+ldd
+objdump
+UNIX
+GNU Project
+GNU C Compiler
+Free Software Foundation
+FSF
+GPL
+GNU Public License
+GNU General Public License
+copyleft
+viral license
+system call exception
+device driversKernel Memory
+.bss
+.data
+.text
+process
+multitasking OS
+control flow
+memory layout
+CPU Scheduling
+CPU State
+Registers
+multiplexing
+context switch
+stack pointer
+program counter
+cooperative scheduling
+preemptive scheduling
+interrupt
+Round Robin Scheduling
+quantum
+priority
+hardware exception
+software trap
+System calls
+synchronous interrupts
+syscall
+Kernel
+hardware timer
+scheduler
+interrupt vector table
+interrupt descriptor table
+interrupt table
+interrupt handler
+context switching
+asynchronous interrupts
+hardware exceptionsForks
+system call
+child process
+fork
+concurrency
+parent process
+PID
+scheduler
+wait
+waitpid
+exit
+exit code
+zombie processes
+zombies
+orphan process
+orphans
+exec
+OS loader
+execl
+execle
+execvp
+init
+signals
+IPC
+shared memory
+message passing
+pipes
+semaphores
+network sockets
+signal
+SIGINT
+SIGKILL
+SIGSEGV
+SIGCHLD
+SIGUSR1
+kill
+critical section
+race condition
+synchronizationVirtual Memory
+address space
+.text
+.data
+Kernel memory
+Random Access Memory
+Dynamic RAM
+DRAM
+Physical addressing
+Segmentation
+segment
+segment table
+Memory Management Unit
+MMU
+virtual addresses
+physical addresses
+access control
+external fragmentation
+Paging
+page
+pages
+Page Tables
+page table
+Virtual Address
+Physical Address
+Page Index
+Page Offset
+Process Page Table
+page fault
+page faults
+Process Isolation
+Context Switching
+context switch
+page size
+Inverted Page Tables
+inverted page table
+Page Tag
+Process ID
+Multi-level Page Tables
+32-bit Virtual AddressThroughput
+Memory Hierarchy
+Registers
+L1 Cache
+L2 Cache
+Main Memory
+DRAM
+Local Disk
+Distributed Storage
+Tape
+Core 2 Duo
+SRAM
+Static Random Access Memory
+Dynamic Random Access Memory
+Latency
+Miss Penalty
+Cache
+CPU cache
+cache hit
+cache miss
+compulsory miss
+cold miss
+capacity miss
+temporal locality
+spatial locality
+hash
+direct-mapped cache
+conflict miss
+block size
+Average Memory Access Time
+AMAT
+miss rate
+MR
+hit rate
+HR
+hit time
+HT
+fully associative cache
+freeform cache
+associativity
+n-way associative cache
+4-way associative cache
+ways
+cache line
+cache row
+block
+set
+set index
+Cache Tag
+virtual address
+physical address
+Virtual Page Number
+Physical Page Number
+Page offset
+Set IndexThreads
+Synchronization
+concurrency
+Race conditions
+process-level concurrency
+context switching
+thread
+thread ID
+pthread
+Portable Operating System Interface
+POSIX
+semaphore
+semaphores
+Up
+Down
+V
+P
+Critical Section
+critical section
+critical sections
+mutex
+mutexes
+mutual exclusion
+lock
+unlock
+Resource contention
+Deadlock
+Starvation
+Livelock
+tie-breaking scheme
+fairness
+scheduling
+multiprocessing
+multithreadingNetwork Programming
+client-server model
+server process
+client process
+SAN
+System Area Network
+Switched Ethernet
+Quadrics QSW
+LAN
+Local Area Network
+WAN
+Wide Area Network
+internetwork
+Global IP Internet
+router
+packets
+packet
+internet protocol
+header
+payload
+TCP/IP protocol family
+IP
+Internet Protocol
+UDP
+Unreliable Datagram Protocol
+TCP
+Transmission Control Protocol
+datagrams
+byte streams
+sockets interface
+TCP/IP
+32-bit IP addresses
+Internet domain names
+IP address struct
+network byte order
+big-endian byte order
+in_addr
+s_addr
+Dotted Decimal Notation
+getaddrinfo
+getnameinfo
+SA
+first-level domain names
+second-level domain names
+third-level domain names
+Domain Naming System
+DNS
+nslookup
+localhost
+loopback address
+hostname
+point-to-point
+full-duplex
+socket
+socket address
+port
+ephemeral port
+well-known port
+echo
+ftp
+ssh
+smtp
+http
+/etc/services
+socket pair
+Unix file I/O
+socket descriptor
+echo server
+echo client
+INADDR_ANY
+bind
+listen
+accept
+read
+write
+close
+EOF
+connect
+open_listenfd
+open_clientfd
+listening descriptor
+connected descriptor
+telnet
+HyperText Transfer Protocol
+HTTP
+HTTP/1.1
+MIME
+Multipurpose Internet Mail Extensions
+text/html
+text/plain
+image/gif
+image/png
+image/jpeg
+static content
+dynamic content
+cgi-bin
+URL
+Universal Resource Locator
+GET
+POST
+OPTIONS
+HEAD
+PUT
+DELETE
+TRACE
+URI
+Uniform Resource Identifier
+HTTP/1.0
+HTTP request
+request line
+HTTP response
+response line
+status code
+status msg
+200
+301
+404
+Content-Type
+Content-Length
+proxy
+origin server
+caching
+logging
+anonymization
+filtering
+transcoding
+rio_writen
+rio_readlineb
+AF_INET
+SOCK_STREAM
+AI_NUMERICSERV
+AI_ADDRCONFIG
+AI_PASSIVE
+setsockopt
+SO_REUSEADDR
+LISTENQ
+addrinfo
+freeaddrinfo
+gai_strerror
+NI_NUMERICHOST
+Tiny Web Server
+fork
+Common Gateway Interface
+CGI
+fastCGI
+Apache modules
+Java servlets
+Rails controllers
+QUERY_STRING
+dup2
+Ethernet segment
+Ethernet
+hub
+MAC address
+frames
+frame
+bridged Ethernet segment
+bridge
+encapsulation
+IPv4
+IPv6
+socket address structure
+sockaddr
+sa_family
+sa_data
+sockaddr_in
+sin_family
+sin_port
+sin_addr
+sin_zero
+hostinfobinary file
+text file
+file format
+ELF
+MAGIC NUMBER
+PRONOM
+stdio
+fopen
+fread
+fwrite
+fseek
+ftell
+fclose
+syscalls
+open
+O_WRONLY
+O_CREAT
+O_TRUNC
+O_RDONLY
+read
+write
+lseek
+close
+socket
+named pipe
+RAM
+volatile memory
+persistent memory
+NVRAM
+Floppy Disks
+amplitude modulation
+frequency modulation
+magnetic flux
+read head
+Modified-FM Encoding
+hard disk
+platter
+access time
+cylinder
+track
+sector
+seek time
+latency
+file system
+symbolic link
+file path
+file metadata
+access control
+file descriptor
+open file table
+index node
+inode
+WAFL
+snapshot
+absolute path
+NTFS
+FAT
+HFS
+EXT
+..
+tag
+tags
+POSIX
+distributed filesystemEndianness
+B2U(X)
+B2T(X)
+Sign Bit
+UMin
+UMax
+TMin
+TMax
+denormalized
+normalized
+special
+Bias
+Infinity
+NaN
+Big Endian
+Little Endian
+segmentation fault
