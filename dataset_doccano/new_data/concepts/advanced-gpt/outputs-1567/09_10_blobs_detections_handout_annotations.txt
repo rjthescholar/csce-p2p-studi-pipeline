@@ -1,0 +1,123 @@
+blob
+color
+brightness
+rectangular region
+width
+height
+number of pixels
+center coordinate
+
+filter selected color
+rgb
+red
+green
+blue
+color range
+connected region
+foreground
+background
+YUV
+Y
+U
+V
+luminance
+chrominance
+rgb to yuv conversion
+
+object recognition and tracking
+navigation
+object avoidance
+robot location/orientation
+
+integrated web camera
+gscam node
+image_view node
+/v4l/camera/image_raw
+
+image message
+sensor_msg/image.msgs
+header
+height
+width
+encoding
+is_bigendian
+step
+data
+BGR
+
+OpenCV
+cv_bridge
+cvbridge
+imgmsg_to_cv2
+
+cmvision node
+colorgui
+/blobs
+colors.txt
+[colors]
+[thresholds]
+yuv threshold
+
+cmvision.launch
+cmvision/color_file
+cmvision/debug_on
+cmvision/color_cal_on
+cmvision/mean_shift_on
+mean shift filtering
+cmvision/spatial_radius_pix
+spatial bandwidth
+cmvision/color_radius_pix
+color bandwidth
+
+blobs message
+blob message
+blobs.msgs
+blob.msgs
+blob_count
+name
+area
+x
+y
+left
+right
+top
+bottom
+
+region of interest
+
+blob detection algorithm
+gaussian blur
+gaussian normal distribution
+filter unwanted pixels
+one-bit image
+mask
+masked image
+connected pixels
+
+gaussianblur
+cvtcolor
+inrange
+simpleblobdetector
+simpleblobdetector_params
+minthreshold
+maxthreshold
+filterbyarea
+minarea
+maxarea
+filterbycircularity
+mincircularity
+filterbyconvexity
+minconvexity
+filterbyinertia
+mininertiaratio
+keypoints
+drawkeypoints
+
+contour
+findcontours
+drawcontours
+contour area
+hierarchy
+bounding box
+
+roscore

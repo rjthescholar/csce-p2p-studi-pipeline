@@ -5,23 +5,23 @@ rust
 assembly language
 proof
 algebraic data types
-&mut self
+& mut self
 field
 some
 abstract data types
 primitive types
 lambda
 mutator
-product types
+product types:
 adts
 associated function
-&self
+& self
 be
 match
 vec
 pub
 .map
-new
+new (
 v.len
 impl
 sum types
@@ -41,8 +41,9 @@ struct
 product types
 a.iter
 privacy
-iterator
+.iterator
 function literal
+!
 v.push
 column number
 not-so-whitespace
@@ -92,7 +93,8 @@ term
 type-safe
 ub
 system
-error type
+error!
+type
 theory
 undefined behavior
 int
@@ -107,7 +109,7 @@ duck typing
 subtype
 class hierarchy
 set
-don't repeat yourself
+do n't repeat yourself
 symbol table
 late binding
 name mangling
@@ -137,6 +139,7 @@ ownership
 lifetime
 allocation
 static allocation
+:
 global variables
 language abi
 abi
@@ -147,7 +150,7 @@ backend
 stack
 epilogue
 sp
-epilogue
+epilogue;
 atv rule
 v registers
 fp

@@ -144,13 +144,13 @@ nextcount
 condition variable
 next.down
 condition variable-based
-lock
+lock-
 signal
 next.up
 process synchronization
 release
 nextcount++
-nextcount--
+nextcount-
 wait
 next
 mutex.up
@@ -320,13 +320,6 @@ defense in depth
 user-level i/o software
 bitmap
 os
-sector
-cylinder
-head
-track
-ecc
-spindle
-platter
 platter
 cylinder
 track

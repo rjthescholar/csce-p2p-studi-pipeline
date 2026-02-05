@@ -25,8 +25,10 @@ critical section
 busy waiting
 critical region
 wakeup
+v
 non-critical section
 spinning
+p
 priority inversion
 up
 smp
@@ -109,6 +111,7 @@ condition variable
 fairness
 avoidance
 avail
+;
 hold
 ostrich algorithm
 algorithm
@@ -122,6 +125,7 @@ mutex
 readers-writers problem
 current
 prevention
+;
 avail
 finished
 deadlock
@@ -144,13 +148,13 @@ nextcount
 condition variable
 next.down
 condition variable-based
-lock
+lock-
 signal
 next.up
 process synchronization
 release
 nextcount++
-nextcount--
+nextcount-
 wait
 next
 mutex.up
@@ -228,6 +232,7 @@ memory manager
 l3 cache
 non-volatile storage
 multiprogramming
+:
 cpu utilization
 banker's algorithm
 detection algorithms

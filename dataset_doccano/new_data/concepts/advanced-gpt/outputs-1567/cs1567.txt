@@ -1,0 +1,411 @@
+robot operating system
+ROS
+meta-operating system
+operating system
+OS
+distributed computing
+interprocess communication
+ros core
+ros master
+roscore
+remote procedure call
+RPC
+rosout
+ros communication protocol
+ros topics
+topic
+topics
+asynchronous communication
+strongly typed
+publisher
+publishers
+subscriber
+subscribers
+publish/subscribe semantics
+anonymous publish/subscribe semantics
+TCP/IP
+TCP
+UDP
+node
+nodes
+ros nodes
+camera node
+gscam node
+cmvision node
+control node
+kobuki node
+topic image
+topic blobs
+topic velocity
+ros messages
+message
+messages
+standard messages
+std msgs
+std msgs/int32
+std msgs/float32
+std msgs/string
+std msgs/empty
+packaging
+building tools
+API
+language binding
+hardware abstraction
+application level
+capability level
+librariesrobot operating system
+ROS
+publisher
+publisher name
+subscriber
+subscriber name
+topic
+topic name
+message
+message type
+strongly typed
+anonymous
+node
+node name
+rospy
+rospy.Publisher
+queue size
+rospy.init_node
+rospy.Rate
+rate.sleep
+rospy.is_shutdown
+rospy.get_time
+rospy.loginfo
+rospy.Subscriber
+rospy.spin
+rospy.ROSInterruptException
+callback function
+shutdown hook
+rospy.on_shutdown
+rospy.signal_shutdown
+talker node
+listener node
+messenger node
+rostopic
+rostopic list
+rostopic echo
+rostopic info
+rostopic type
+rostopic pub
+ROS master
+roscore
+rosrun
+workspace directory
+scripts directory
+roscd
+std_msgs
+std_msgs/String
+string
+rqt console
+distributed computingfunction
+functions
+function components
+function header
+function body
+function name
+parameter
+parameters
+return type
+return
+function call
+visibility type
+public
+protected
+private
+static
+parentheses
+curly brackets/braces
+scope
+passing-in
+pass-by-value
+pass-by-reference
+void
+variable
+variables
+primitive
+ROS
+joy node
+joy_node
+topic
+topic joy
+message
+message type
+joy
+header
+axes
+buttons
+subscribe
+subscriber
+callback
+rostopic
+rostopic list
+rostopic echo
+rosparam
+rosrun
+rospy
+twist
+command.linear.x
+command.angular.z
+publish
+/mobile_base/commands/velocity
+kobuki
+roslaunch
+rviz
+fixed frame
+/odom
+robotmodelfunction
+functions
+parameter
+parameters
+function body
+return
+returns
+function header
+function name
+header
+return type
+scope
+passing-in
+pass-by-value
+pass-by-reference
+void
+variable
+variables
+primitive type
+public
+protected
+private
+static
+visibility type
+kobuki node
+kobuki robot
+publish
+subscribe
+topic
+roslaunch
+/mobile_base/commands/reset_odometry
+/mobile_base/commands/sound
+/mobile_base/commands/led1
+/mobile_base/commands/led2
+/mobile_base/commands/velocity
+/odom
+/mobile_base/events/bumper
+/mobile_base/events/button
+sound
+led
+bumperevent
+buttonevent
+bumper
+button
+led1
+led2
+odometry
+nav_msgs/odometry.msg
+pose
+position
+orientation
+quaternion
+roll
+pitch
+yaw
+radian
+degree
+reset odometry
+std_msgs/emptyblob
+color
+brightness
+rectangular region
+width
+height
+number of pixels
+center coordinate
+
+filter selected color
+rgb
+red
+green
+blue
+color range
+connected region
+foreground
+background
+YUV
+Y
+U
+V
+luminance
+chrominance
+rgb to yuv conversion
+
+object recognition and tracking
+navigation
+object avoidance
+robot location/orientation
+
+integrated web camera
+gscam node
+image_view node
+/v4l/camera/image_raw
+
+image message
+sensor_msg/image.msgs
+header
+height
+width
+encoding
+is_bigendian
+step
+data
+BGR
+
+OpenCV
+cv_bridge
+cvbridge
+imgmsg_to_cv2
+
+cmvision node
+colorgui
+/blobs
+colors.txt
+[colors]
+[thresholds]
+yuv threshold
+
+cmvision.launch
+cmvision/color_file
+cmvision/debug_on
+cmvision/color_cal_on
+cmvision/mean_shift_on
+mean shift filtering
+cmvision/spatial_radius_pix
+spatial bandwidth
+cmvision/color_radius_pix
+color bandwidth
+
+blobs message
+blob message
+blobs.msgs
+blob.msgs
+blob_count
+name
+area
+x
+y
+left
+right
+top
+bottom
+
+region of interest
+
+blob detection algorithm
+gaussian blur
+gaussian normal distribution
+filter unwanted pixels
+one-bit image
+mask
+masked image
+connected pixels
+
+gaussianblur
+cvtcolor
+inrange
+simpleblobdetector
+simpleblobdetector_params
+minthreshold
+maxthreshold
+filterbyarea
+minarea
+maxarea
+filterbycircularity
+mincircularity
+filterbyconvexity
+minconvexity
+filterbyinertia
+mininertiaratio
+keypoints
+drawkeypoints
+
+contour
+findcontours
+drawcontours
+contour area
+hierarchy
+bounding box
+
+roscoreobject tracking
+line following
+x-coordinate
+angular.z
+linear.x
+odometry data
+object detection node
+control system
+open loop control
+closed loop control
+feedback
+input
+output
+error
+twist
+proportional-integral-derivative controller
+PID
+z(t)
+e(t)
+integral of e(t)
+de/dt
+proportional
+integral
+differential
+oscillation
+lost track
+overcompensate
+overshoot
+drift
+control value
+rate of the error
+accumulated error
+kp
+ki
+kdfunction
+function header
+function body
+function name
+parameters
+return type
+return
+scope
+passing-in
+pass-by-value
+pass-by-reference
+void
+variable
+primitive type
+non-primitive type
+static
+visibility type
+public
+launch file
+<launch> tag
+comment
+<include> tag
+$(find package)
+roscd
+<node> tag
+node
+node name
+pkg
+package
+type
+output="screen"
+cwd="node"
+ros master
+roscore
+roslaunch
+rosrun
+launch directory
