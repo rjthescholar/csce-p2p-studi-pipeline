@@ -2,8 +2,14 @@
 -DOCSTART- -X- -X- O
 
 8 _ _ O
+
+
+ _ _ O
 Buffer _ _ B-Concept
 Overflow _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -12,6 +18,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -24,6 +33,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 Review _ _ O
 : _ _ O
 General _ _ O
@@ -38,14 +50,29 @@ variables _ _ I-Concept
 procedure _ _ O
 context _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Heap _ _ O
+
+
+ _ _ O
 2N-1 _ _ O
+
+
+ _ _ O
 not _ _ O
 drawn _ _ O
 to _ _ O
 scale _ _ O
+
+
+ _ _ O
 Stack _ _ O
+
+
+ _ _ O
 • _ _ O
 Dynamically _ _ O
 allocated _ _ O
@@ -65,6 +92,9 @@ new _ _ O
 ) _ _ O
 , _ _ O
 ... _ _ O
+
+
+ _ _ O
 • _ _ O
 Statically _ _ O
 allocated _ _ O
@@ -81,9 +111,15 @@ Read-only _ _ O
 : _ _ O
 string _ _ O
 literals _ _ O
+
+
+ _ _ O
 Heap _ _ O
 Static _ _ O
 Data _ _ O
+
+
+ _ _ O
 • _ _ O
 Code _ _ O
 / _ _ O
@@ -94,9 +130,18 @@ machine _ _ O
 instructions _ _ O
 • _ _ O
 Read-only _ _ O
+
+
+ _ _ O
 Literals _ _ O
 0 _ _ O
+
+
+ _ _ O
 Instructions _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -118,8 +163,14 @@ e.g. _ _ O
 , _ _ O
 local _ _ O
 variables _ _ O
+
+
+ _ _ O
 • _ _ O
 Heap _ _ O
+
+
+ _ _ O
 00007FFFFFFFFFFF _ _ O
 (= _ _ O
 247 _ _ O
@@ -127,6 +178,9 @@ Heap _ _ O
 1 _ _ O
 ) _ _ O
 00007FFFF0000000 _ _ O
+
+
+ _ _ O
 not _ _ O
 drawn _ _ O
 to _ _ O
@@ -134,8 +188,14 @@ scale _ _ O
 Shared _ _ O
 Libraries _ _ O
 Stack _ _ O
+
+
+ _ _ O
 8 _ _ O
 MB _ _ O
+
+
+ _ _ O
 • _ _ O
 Dynamically _ _ O
 allocated _ _ O
@@ -151,6 +211,9 @@ malloc _ _ O
 new _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Data _ _ O
 • _ _ O
@@ -167,12 +230,21 @@ vars _ _ O
 , _ _ O
 string _ _ O
 constants _ _ O
+
+
+ _ _ O
 • _ _ O
 Text _ _ O
 / _ _ O
 Shared _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 • _ _ O
 Executable _ _ O
 machine _ _ O
@@ -181,10 +253,19 @@ instructions _ _ O
 Read-only _ _ O
 Hex _ _ O
 Address _ _ O
+
+
+ _ _ O
 400000 _ _ O
 000000 _ _ O
+
+
+ _ _ O
 Data _ _ O
 Text _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Allocation _ _ O
 Example _ _ O
@@ -192,6 +273,9 @@ not _ _ O
 drawn _ _ O
 to _ _ O
 scale _ _ O
+
+
+ _ _ O
 char _ _ O
 big_array _ _ O
 [ _ _ O
@@ -222,7 +306,13 @@ huge_array _ _ O
 GB _ _ O
 * _ _ O
 / _ _ O
+
+
+ _ _ O
 Stack _ _ O
+
+
+ _ _ O
 int _ _ O
 global _ _ O
 = _ _ O
@@ -334,14 +424,23 @@ does _ _ O
 everything _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 Other _ _ O
 stuff _ _ O
 Shared _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 Heap _ _ O
 Data _ _ O
 Instructions _ _ O
 4 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Allocation _ _ O
 Example _ _ O
@@ -349,6 +448,9 @@ not _ _ O
 drawn _ _ O
 to _ _ O
 scale _ _ O
+
+
+ _ _ O
 char _ _ O
 big_array _ _ O
 [ _ _ O
@@ -379,7 +481,13 @@ huge_array _ _ O
 GB _ _ O
 * _ _ O
 / _ _ O
+
+
+ _ _ O
 Stack _ _ O
+
+
+ _ _ O
 int _ _ O
 global _ _ O
 = _ _ O
@@ -491,6 +599,9 @@ does _ _ O
 everything _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 Heap _ _ O
 stuff _ _ O
 Other _ _ O
@@ -498,10 +609,16 @@ Shared _ _ O
 Libraries _ _ O
 Shared _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 Heap _ _ O
 Data _ _ O
 Instructions _ _ O
 5 _ _ O
+
+
+ _ _ O
 Reminder _ _ O
 : _ _ O
 x86 _ _ O
@@ -513,6 +630,9 @@ Stack _ _ O
 Frame _ _ O
 Higher _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 • _ _ O
 Caller _ _ O
 's _ _ O
@@ -529,6 +649,9 @@ args _ _ O
 for _ _ O
 this _ _ O
 call _ _ O
+
+
+ _ _ O
 • _ _ O
 Current _ _ O
 / _ _ O
@@ -543,6 +666,9 @@ Pushed _ _ O
 by _ _ O
 call _ _ O
 instruction _ _ O
+
+
+ _ _ O
 • _ _ O
 Old _ _ O
 frame _ _ O
@@ -595,8 +721,14 @@ call _ _ O
 if _ _ O
 needed _ _ O
 ) _ _ O
+
+
+ _ _ O
 Caller _ _ O
 Frame _ _ O
+
+
+ _ _ O
 Frame _ _ O
 pointer _ _ O
 % _ _ O
@@ -604,6 +736,9 @@ rbp _ _ O
 ( _ _ O
 Optional _ _ O
 ) _ _ O
+
+
+ _ _ O
 Arguments _ _ O
 7 _ _ O
 + _ _ O
@@ -612,15 +747,24 @@ Addr _ _ O
 Old _ _ O
 % _ _ O
 rbp _ _ O
+
+
+ _ _ O
 Saved _ _ O
 Registers _ _ O
 + _ _ O
 Local _ _ O
 Variables _ _ O
+
+
+ _ _ O
 Stack _ _ O
 pointer _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 Argument _ _ O
 Build _ _ O
 ( _ _ O
@@ -629,6 +773,9 @@ Optional _ _ O
 6 _ _ O
 Lower _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 Recall _ _ O
 : _ _ O
 Memory _ _ O
@@ -683,6 +830,9 @@ return _ _ O
 s.d _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 fun _ _ O
 ( _ _ O
 0 _ _ O
@@ -703,6 +853,9 @@ fun _ _ O
 ( _ _ O
 4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 - _ _ O
 > _ _ O
 3.1400000000 _ _ O
@@ -719,11 +872,17 @@ fun _ _ O
 > _ _ O
 Segmentation _ _ O
 fault _ _ O
+
+
+ _ _ O
 Result _ _ O
 is _ _ O
 system _ _ O
 specific _ _ O
 7 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Referencing _ _ O
 Bug _ _ O
@@ -752,6 +911,9 @@ fun _ _ O
 ( _ _ O
 8 _ _ O
 ) _ _ O
+
+
+ _ _ O
 typedef _ _ O
 struct _ _ O
 { _ _ O
@@ -767,43 +929,106 @@ d _ _ O
 } _ _ O
 struct_t _ _ O
 ; _ _ O
+
+
+ _ _ O
 Memory _ _ O
 : _ _ O
+
+
+ _ _ O
 struct_t _ _ O
+
+
+ _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Critical _ _ O
 State _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 Critical _ _ O
 State _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Critical _ _ O
 State _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 Critical _ _ O
 State _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 d7 _ _ O
 ... _ _ O
 d4 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 d3 _ _ O
 ... _ _ O
 d0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 a _ _ O
 [ _ _ O
 1 _ _ O
 ] _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
 [ _ _ O
 0 _ _ O
 ] _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 - _ _ O
 > _ _ O
 3.1400000000 _ _ O
@@ -823,6 +1048,9 @@ fault _ _ O
 - _ _ O
 > _ _ O
 3.1400000000 _ _ O
+
+
+ _ _ O
 Location _ _ O
 accessed _ _ O
 by _ _ O
@@ -830,7 +1058,13 @@ fun _ _ O
 ( _ _ O
 i _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 • _ _ O
@@ -861,6 +1095,9 @@ in _ _ O
 the _ _ O
 same _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Recall _ _ O
 that _ _ O
@@ -897,7 +1134,13 @@ buffers _ _ O
 ( _ _ O
 arrays _ _ O
 ) _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 ( _ _ O
@@ -923,6 +1166,9 @@ choose _ _ O
 the _ _ O
 right _ _ O
 inputs _ _ O
+
+
+ _ _ O
 • _ _ O
 Simplest _ _ O
 form _ _ O
@@ -959,6 +1205,9 @@ of _ _ O
 the _ _ O
 current _ _ O
 procedure _ _ O
+
+
+ _ _ O
 • _ _ O
 Why _ _ O
 is _ _ O
@@ -993,7 +1242,13 @@ engineering _ _ O
 / _ _ O
 user _ _ O
 ignorance _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 String _ _ O
 Library _ _ O
 Code _ _ O
@@ -1074,6 +1329,9 @@ return _ _ O
 dest _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 pointer _ _ O
 to _ _ O
 start _ _ O
@@ -1090,6 +1348,9 @@ c _ _ O
 ; _ _ O
 p++ _ _ O
 ; _ _ O
+
+
+ _ _ O
 What _ _ O
 could _ _ O
 go _ _ O
@@ -1099,6 +1360,9 @@ this _ _ O
 code _ _ O
 ? _ _ O
 11 _ _ O
+
+
+ _ _ O
 String _ _ O
 Library _ _ O
 Code _ _ O
@@ -1179,6 +1443,9 @@ return _ _ O
 dest _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 • _ _ O
 No _ _ O
 way _ _ O
@@ -1223,6 +1490,9 @@ given _ _ O
 s _ _ O
 specifier _ _ O
 12 _ _ O
+
+
+ _ _ O
 Vulnerable _ _ O
 Buffer _ _ O
 Code _ _ O
@@ -1254,6 +1524,9 @@ buf _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Code _ _ O
 example _ _ O
 to _ _ O
@@ -1276,6 +1549,9 @@ small _ _ O
 ! _ _ O
 * _ _ O
 / _ _ O
+
+
+ _ _ O
  _ _ O
 BTW _ _ O
 , _ _ O
@@ -1285,6 +1561,9 @@ is _ _ O
 big _ _ O
 enough _ _ O
 ? _ _ O
+
+
+ _ _ O
 void _ _ O
 call_echo _ _ O
 ( _ _ O
@@ -1295,6 +1574,9 @@ echo _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 unix _ _ O
 > _ _ O
 . _ _ O
@@ -1316,6 +1598,9 @@ string _ _ O
 123456789012345678901234 _ _ O
 Segmentation _ _ O
 Fault _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Disassembly _ _ O
@@ -1324,6 +1609,9 @@ bytes _ _ O
 ( _ _ O
 decimal _ _ O
 ) _ _ O
+
+
+ _ _ O
 echo _ _ O
 : _ _ O
 000000000040069c _ _ O
@@ -1370,6 +1658,9 @@ c4 _ _ O
 4006b4 _ _ O
 : _ _ O
 c3 _ _ O
+
+
+ _ _ O
 $ _ _ O
 0x18 _ _ O
 , _ _ O
@@ -1394,8 +1685,14 @@ $ _ _ O
 0x18 _ _ O
 , _ _ O
 %rsp _ _ O
+
+
+ _ _ O
 return _ _ O
 address _ _ O
+
+
+ _ _ O
 call_echo _ _ O
 : _ _ O
 4006b5 _ _ O
@@ -1408,6 +1705,9 @@ call_echo _ _ O
 : _ _ O
 4006c7 _ _ O
 : _ _ O
+
+
+ _ _ O
 sub _ _ O
 mov _ _ O
 callq _ _ O
@@ -1415,6 +1715,9 @@ mov _ _ O
 callq _ _ O
 add _ _ O
 retq _ _ O
+
+
+ _ _ O
 48 _ _ O
 83 _ _ O
 ec _ _ O
@@ -1434,11 +1737,17 @@ ff _ _ O
 c4 _ _ O
 08 _ _ O
 c3 _ _ O
+
+
+ _ _ O
 sub _ _ O
 mov _ _ O
 callq _ _ O
 add _ _ O
 retq _ _ O
+
+
+ _ _ O
 $ _ _ O
 0x8 _ _ O
 , _ _ O
@@ -1455,6 +1764,9 @@ $ _ _ O
 0x8 _ _ O
 , _ _ O
 %rsp _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Stack _ _ O
@@ -1467,12 +1779,18 @@ Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 Return _ _ O
 Address _ _ O
 ( _ _ O
 8 _ _ O
 bytes _ _ O
 ) _ _ O
+
+
+ _ _ O
 / _ _ O
 * _ _ O
 Echo _ _ O
@@ -1501,6 +1819,9 @@ buf _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 / _ _ O
 * _ _ O
 Way _ _ O
@@ -1509,9 +1830,15 @@ small _ _ O
 ! _ _ O
 * _ _ O
 / _ _ O
+
+
+ _ _ O
 20 _ _ O
 bytes _ _ O
 unused _ _ O
+
+
+ _ _ O
 [ _ _ O
 3 _ _ O
 ] _ _ O
@@ -1525,8 +1852,14 @@ unused _ _ O
 0 _ _ O
 ] _ _ O
 buf _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 echo _ _ O
 : _ _ O
 subq _ _ O
@@ -1547,6 +1880,9 @@ gets _ _ O
 . _ _ O
 . _ _ O
 15 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Stack _ _ O
@@ -1559,6 +1895,9 @@ Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 00 _ _ O
 Address _ _ O
 00 _ _ O
@@ -1572,9 +1911,15 @@ Return _ _ O
 ) _ _ O
 06 _ _ O
 c3 _ _ O
+
+
+ _ _ O
 20 _ _ O
 bytes _ _ O
 unused _ _ O
+
+
+ _ _ O
 [ _ _ O
 3 _ _ O
 ] _ _ O
@@ -1588,6 +1933,9 @@ unused _ _ O
 0 _ _ O
 ] _ _ O
 buf _ _ O
+
+
+ _ _ O
 void _ _ O
 echo _ _ O
 ( _ _ O
@@ -1608,6 +1956,9 @@ buf _ _ O
 . _ _ O
 . _ _ O
 } _ _ O
+
+
+ _ _ O
 echo _ _ O
 : _ _ O
 subq _ _ O
@@ -1627,6 +1978,9 @@ gets _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 call_echo _ _ O
 : _ _ O
 . _ _ O
@@ -1639,8 +1993,14 @@ call_echo _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 callq _ _ O
 add _ _ O
+
+
+ _ _ O
 4006cf _ _ O
 < _ _ O
 echo _ _ O
@@ -1649,9 +2009,18 @@ $ _ _ O
 0x8 _ _ O
 , _ _ O
 %rsp _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Stack _ _ O
@@ -1666,6 +2035,9 @@ Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 00 _ _ O
 00 _ _ O
 Address _ _ O
@@ -1707,6 +2079,9 @@ bytes _ _ O
 31 _ _ O
 30 _ _ O
 buf _ _ O
+
+
+ _ _ O
 void _ _ O
 echo _ _ O
 ( _ _ O
@@ -1727,6 +2102,9 @@ buf _ _ O
 . _ _ O
 . _ _ O
 } _ _ O
+
+
+ _ _ O
 echo _ _ O
 : _ _ O
 subq _ _ O
@@ -1746,6 +2124,9 @@ gets _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 call_echo _ _ O
 : _ _ O
 . _ _ O
@@ -1758,10 +2139,19 @@ call_echo _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 callq _ _ O
 add _ _ O
+
+
+ _ _ O
 4006cf _ _ O
 < _ _ O
 echo _ _ O
@@ -1770,6 +2160,9 @@ $ _ _ O
 0x8 _ _ O
 , _ _ O
 %rsp _ _ O
+
+
+ _ _ O
 unix _ _ O
 > _ _ O
 . _ _ O
@@ -1781,9 +2174,15 @@ string _ _ O
 : _ _ O
 01234567890123456789012 _ _ O
 01234567890123456789012 _ _ O
+
+
+ _ _ O
 " _ _ O
 01234567890123456789012\0 _ _ O
 " _ _ O
+
+
+ _ _ O
 Overflowed _ _ O
 buffer _ _ O
 , _ _ O
@@ -1792,7 +2191,13 @@ did _ _ O
 not _ _ O
 corrupt _ _ O
 state _ _ O
+
+
+ _ _ O
 17 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Stack _ _ O
@@ -1807,6 +2212,9 @@ Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 00 _ _ O
 00 _ _ O
 Address _ _ O
@@ -1848,6 +2256,9 @@ bytes _ _ O
 31 _ _ O
 30 _ _ O
 buf _ _ O
+
+
+ _ _ O
 void _ _ O
 echo _ _ O
 ( _ _ O
@@ -1868,6 +2279,9 @@ buf _ _ O
 . _ _ O
 . _ _ O
 } _ _ O
+
+
+ _ _ O
 echo _ _ O
 : _ _ O
 subq _ _ O
@@ -1887,6 +2301,9 @@ gets _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 call_echo _ _ O
 : _ _ O
 . _ _ O
@@ -1899,10 +2316,19 @@ call_echo _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 callq _ _ O
 add _ _ O
+
+
+ _ _ O
 4006cf _ _ O
 < _ _ O
 echo _ _ O
@@ -1911,6 +2337,9 @@ $ _ _ O
 0x8 _ _ O
 , _ _ O
 %rsp _ _ O
+
+
+ _ _ O
 unix _ _ O
 > _ _ O
 . _ _ O
@@ -1924,6 +2353,9 @@ string _ _ O
 012345678901234567890123 _ _ O
 Segmentation _ _ O
 fault _ _ O
+
+
+ _ _ O
 Program _ _ O
 " _ _ O
 returned _ _ O
@@ -1935,7 +2367,13 @@ and _ _ O
 then _ _ O
 crashed _ _ O
 . _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 Buffer _ _ O
 Overflow _ _ O
 Example _ _ O
@@ -2102,6 +2540,9 @@ of _ _ O
 deregister_tm_clones _ _ O
 . _ _ O
 19 _ _ O
+
+
+ _ _ O
 Malicious _ _ O
 Use _ _ O
 of _ _ O
@@ -2120,6 +2561,9 @@ gets _ _ O
 ) _ _ O
 High _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 void _ _ O
 foo _ _ O
 ( _ _ O
@@ -2154,6 +2598,9 @@ return _ _ O
 ... _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 foo _ _ O
 stack _ _ O
 frame _ _ O
@@ -2174,15 +2621,33 @@ gets _ _ O
 buf _ _ O
 starts _ _ O
 here _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 pad _ _ O
+
+
+ _ _ O
 bar _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 Low _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 • _ _ O
 Input _ _ O
 string _ _ O
@@ -2215,7 +2680,13 @@ jump _ _ O
 to _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Exploits _ _ O
 Based _ _ O
 on _ _ O
@@ -2259,6 +2730,9 @@ attacks _ _ O
 much _ _ O
 more _ _ O
 difficult _ _ O
+
+
+ _ _ O
 • _ _ O
 Examples _ _ O
 across _ _ O
@@ -2294,6 +2768,9 @@ Cloudbleed _ _ O
 ( _ _ O
 2017 _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Fun _ _ O
 : _ _ O
@@ -2325,6 +2802,9 @@ https _ _ O
 www.youtube.com _ _ O
 / _ _ O
 watch?v=hB6eY73sLV0 _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 the _ _ O
@@ -2367,6 +2847,9 @@ client _ _ O
 • _ _ O
 finger _ _ O
 droh@cs.cmu.edu _ _ O
+
+
+ _ _ O
 • _ _ O
 Worm _ _ O
 attacked _ _ O
@@ -2403,6 +2886,9 @@ connection _ _ O
 to _ _ O
 the _ _ O
 attacker _ _ O
+
+
+ _ _ O
 • _ _ O
 Scanned _ _ O
 for _ _ O
@@ -2434,6 +2920,9 @@ Comm _ _ O
 of _ _ O
 the _ _ O
 ACM _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 young _ _ O
@@ -2445,6 +2934,9 @@ was _ _ O
 prosecuted _ _ O
 ... _ _ O
 22 _ _ O
+
+
+ _ _ O
 Heartbleed _ _ O
 ( _ _ O
 2014 _ _ O
@@ -2467,6 +2959,9 @@ small _ _ O
 range _ _ O
 of _ _ O
 versions _ _ O
+
+
+ _ _ O
 • _ _ O
 " _ _ O
 Heartbeat _ _ O
@@ -2501,6 +2996,9 @@ memory _ _ O
 anywhere _ _ O
 they _ _ O
 wanted _ _ O
+
+
+ _ _ O
 • _ _ O
 Est _ _ O
 . _ _ O
@@ -2525,6 +3023,9 @@ Amazon _ _ O
 AWS _ _ O
 , _ _ O
 ... _ _ O
+
+
+ _ _ O
 By _ _ O
 FenixFeather _ _ O
 - _ _ O
@@ -2544,7 +3045,13 @@ commons.wikimedia.org _ _ O
 w _ _ O
 / _ _ O
 index.php?curid=32276981 _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Crafting _ _ O
 Smashing _ _ O
 String _ _ O
@@ -2569,10 +3076,16 @@ return _ _ O
 ... _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 07 _ _ O
 00 _ _ O
 FF _ _ O
@@ -2624,10 +3137,19 @@ String _ _ O
 ( _ _ O
 Hex _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 24 _ _ O
 bytes _ _ O
+
+
+ _ _ O
 Target _ _ O
 Code _ _ O
 void _ _ O
@@ -2664,6 +3186,9 @@ smash _ _ O
 83 _ _ O
 ec _ _ O
 08 _ _ O
+
+
+ _ _ O
 30 _ _ O
 31 _ _ O
 32 _ _ O
@@ -2696,6 +3221,9 @@ c8 _ _ O
 00 _ _ O
 00 _ _ O
 00 _ _ O
+
+
+ _ _ O
 Smashing _ _ O
 String _ _ O
 Effect _ _ O
@@ -2703,6 +3231,9 @@ Stack _ _ O
 Frame _ _ O
 for _ _ O
 call_echo _ _ O
+
+
+ _ _ O
 07 _ _ O
 00 _ _ O
 FF _ _ O
@@ -2754,8 +3285,14 @@ String _ _ O
 ( _ _ O
 Hex _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 Target _ _ O
 Code _ _ O
 void _ _ O
@@ -2792,6 +3329,9 @@ smash _ _ O
 83 _ _ O
 ec _ _ O
 08 _ _ O
+
+
+ _ _ O
 30 _ _ O
 31 _ _ O
 32 _ _ O
@@ -2824,6 +3364,9 @@ c8 _ _ O
 00 _ _ O
 00 _ _ O
 00 _ _ O
+
+
+ _ _ O
 Performing _ _ O
 Stack _ _ O
 Smash _ _ O
@@ -2841,6 +3384,9 @@ https _ _ O
 bit.ly _ _ O
 / _ _ O
 3eWwndQ _ _ O
+
+
+ _ _ O
 • _ _ O
 Put _ _ O
 hex _ _ O
@@ -2864,6 +3410,9 @@ of _ _ O
 them _ _ O
 are _ _ O
 non-printing _ _ O
+
+
+ _ _ O
 • _ _ O
 Provide _ _ O
 as _ _ O
@@ -2950,7 +3499,13 @@ exit _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Code _ _ O
 Injection _ _ O
 Attacks _ _ O
@@ -2974,12 +3529,21 @@ A _ _ O
 : _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 P _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 Return _ _ O
 address _ _ O
 A _ _ O
+
+
+ _ _ O
 int _ _ O
 Q _ _ O
 ( _ _ O
@@ -3001,6 +3565,9 @@ return _ _ O
 ... _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 B _ _ O
 ABA _ _ O
 data _ _ O
@@ -3010,12 +3577,24 @@ gets _ _ O
 ( _ _ O
 ) _ _ O
 B _ _ O
+
+
+ _ _ O
 pad _ _ O
+
+
+ _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 Q _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 • _ _ O
 Input _ _ O
 string _ _ O
@@ -3046,7 +3625,13 @@ jump _ _ O
 to _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 How _ _ O
 Does _ _ O
 The _ _ O
@@ -3066,16 +3651,31 @@ Q _ _ O
 ; _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 rsp _ _ O
 rsp _ _ O
+
+
+ _ _ O
 rsp _ _ O
 Shared _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 ret _ _ O
+
+
+ _ _ O
 BB _ _ O
 AA _ _ O
 pad _ _ O
+
+
+ _ _ O
 ret _ _ O
 int _ _ O
 Q _ _ O
@@ -3103,22 +3703,46 @@ return _ _ O
 ... _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 rip _ _ O
 rip _ _ O
+
+
+ _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 rip _ _ O
 rip _ _ O
+
+
+ _ _ O
 Data _ _ O
 Text _ _ O
 28 _ _ O
+
+
+ _ _ O
 Dealing _ _ O
 with _ _ O
 buffer _ _ O
 overflow _ _ O
 attacks _ _ O
+
+
+ _ _ O
 1 _ _ O
 ) _ _ O
 Avoid _ _ O
@@ -3138,7 +3762,13 @@ use _ _ O
 stack _ _ O
 canaries _ _ O
 " _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 1 _ _ O
 ) _ _ O
 Avoid _ _ O
@@ -3241,12 +3871,18 @@ buf _ _ O
 ; _ _ O
 } _ _ O
 31 _ _ O
+
+
+ _ _ O
 2 _ _ O
 ) _ _ O
 System-Level _ _ O
 Protections _ _ O
 High _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 • _ _ O
 Randomized _ _ O
 stack _ _ O
@@ -3271,12 +3907,18 @@ addresses _ _ O
 for _ _ O
 entire _ _ O
 program _ _ O
+
+
+ _ _ O
 Random _ _ O
 allocation _ _ O
 main _ _ O
 's _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 • _ _ O
 Addresses _ _ O
 will _ _ O
@@ -3286,6 +3928,9 @@ one _ _ O
 run _ _ O
 to _ _ O
 another _ _ O
+
+
+ _ _ O
 • _ _ O
 Makes _ _ O
 it _ _ O
@@ -3298,11 +3943,17 @@ beginning _ _ O
 of _ _ O
 inserted _ _ O
 code _ _ O
+
+
+ _ _ O
 Other _ _ O
 functions _ _ O
 ' _ _ O
 stack _ _ O
 frames _ _ O
+
+
+ _ _ O
 • _ _ O
 Example _ _ O
 : _ _ O
@@ -3324,11 +3975,17 @@ local _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 0x7ffd19d3f8ac _ _ O
 0x7ffe8a462c2c _ _ O
 0x7ffe927c905c _ _ O
 0x7ffefd5c27dc _ _ O
 0x7fffa0175afc _ _ O
+
+
+ _ _ O
 • _ _ O
 Stack _ _ O
 repositioned _ _ O
@@ -3336,16 +3993,31 @@ each _ _ O
 time _ _ O
 program _ _ O
 executes _ _ O
+
+
+ _ _ O
 B _ _ O
 ? _ _ O
 pad _ _ O
+
+
+ _ _ O
 B _ _ O
 ? _ _ O
+
+
+ _ _ O
 exploit _ _ O
 code _ _ O
 Low _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 2 _ _ O
 ) _ _ O
 System-Level _ _ O
@@ -3357,13 +4029,22 @@ to _ _ O
 gets _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Non-executable _ _ O
 code _ _ O
 segments _ _ O
+
+
+ _ _ O
 foo _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 traditional _ _ O
@@ -3388,6 +4069,9 @@ Can _ _ O
 execute _ _ O
 anything _ _ O
 readable _ _ O
+
+
+ _ _ O
 • _ _ O
 x86 _ _ O
 - _ _ O
@@ -3421,6 +4105,9 @@ regions _ _ O
 Hardware _ _ O
 support _ _ O
 needed _ _ O
+
+
+ _ _ O
 B _ _ O
 data _ _ O
 written _ _ O
@@ -3429,12 +4116,21 @@ gets _ _ O
 ( _ _ O
 ) _ _ O
 B _ _ O
+
+
+ _ _ O
 pad _ _ O
 exploit _ _ O
 code _ _ O
+
+
+ _ _ O
 bar _ _ O
 stack _ _ O
 frame _ _ O
+
+
+ _ _ O
 Any _ _ O
 attempt _ _ O
 to _ _ O
@@ -3444,6 +4140,9 @@ code _ _ O
 will _ _ O
 fail _ _ O
 33 _ _ O
+
+
+ _ _ O
 3 _ _ O
 ) _ _ O
 Stack _ _ O
@@ -3488,6 +4187,9 @@ corruption _ _ O
 before _ _ O
 exiting _ _ O
 function _ _ O
+
+
+ _ _ O
 • _ _ O
 GCC _ _ O
 implementation _ _ O
@@ -3510,6 +4212,9 @@ compiled _ _ O
 with _ _ O
 -fno-stack-protector _ _ O
 flag _ _ O
+
+
+ _ _ O
 unix _ _ O
 > _ _ O
 . _ _ O
@@ -3520,6 +4225,9 @@ string _ _ O
 : _ _ O
 12345678 _ _ O
 12345678 _ _ O
+
+
+ _ _ O
 unix _ _ O
 > _ _ O
 . _ _ O
@@ -3538,7 +4246,13 @@ detected _ _ O
 * _ _ O
 * _ _ O
 * _ _ O
+
+
+ _ _ O
 34 _ _ O
+
+
+ _ _ O
 Protected _ _ O
 Buffer _ _ O
 Disassembly _ _ O
@@ -3576,6 +4290,9 @@ echo _ _ O
 : _ _ O
 40067f _ _ O
 : _ _ O
+
+
+ _ _ O
 sub _ _ O
 $ _ _ O
 0x18 _ _ O
@@ -3657,6 +4374,9 @@ $ _ _ O
 , _ _ O
 %rsp _ _ O
 retq _ _ O
+
+
+ _ _ O
 Setting _ _ O
 Up _ _ O
 Canary _ _ O
@@ -3674,6 +4394,9 @@ address _ _ O
 8 _ _ O
 bytes _ _ O
 ) _ _ O
+
+
+ _ _ O
 Canary _ _ O
 ( _ _ O
 8 _ _ O
@@ -3691,6 +4414,9 @@ bytes _ _ O
 [ _ _ O
 4 _ _ O
 ] _ _ O
+
+
+ _ _ O
 / _ _ O
 * _ _ O
 Echo _ _ O
@@ -3776,6 +4502,9 @@ canary _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 [ _ _ O
 3 _ _ O
 ] _ _ O
@@ -3790,7 +4519,13 @@ canary _ _ O
 ] _ _ O
 buf _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 36 _ _ O
+
+
+ _ _ O
 Checking _ _ O
 Canary _ _ O
 After _ _ O
@@ -3807,11 +4542,17 @@ address _ _ O
 8 _ _ O
 bytes _ _ O
 ) _ _ O
+
+
+ _ _ O
 Canary _ _ O
 ( _ _ O
 8 _ _ O
 bytes _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
 37 _ _ O
 36 _ _ O
@@ -3820,6 +4561,9 @@ bytes _ _ O
 33 _ _ O
 32 _ _ O
 31 _ _ O
+
+
+ _ _ O
 / _ _ O
 * _ _ O
 Echo _ _ O
@@ -3859,6 +4603,9 @@ je _ _ O
 call _ _ O
 .L6 _ _ O
 : _ _ O
+
+
+ _ _ O
 / _ _ O
 * _ _ O
 Way _ _ O
@@ -3867,6 +4614,9 @@ small _ _ O
 ! _ _ O
 * _ _ O
 / _ _ O
+
+
+ _ _ O
 8 _ _ O
 ( _ _ O
 %rsp _ _ O
@@ -3888,6 +4638,9 @@ stack_chk_fail _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 # _ _ O
 retrieve _ _ O
 from _ _ O
@@ -3905,19 +4658,34 @@ OK _ _ O
 else _ _ O
 , _ _ O
 FAIL _ _ O
+
+
+ _ _ O
 buf _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 Input _ _ O
 : _ _ O
 1234567 _ _ O
 37 _ _ O
+
+
+ _ _ O
 Summary _ _ O
+
+
+ _ _ O
 1 _ _ O
 ) _ _ O
 Avoid _ _ O
 overflow _ _ O
 vulnerabilities _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 library _ _ O
 routines _ _ O
@@ -3925,6 +4693,9 @@ that _ _ O
 limit _ _ O
 string _ _ O
 lengths _ _ O
+
+
+ _ _ O
 2 _ _ O
 ) _ _ O
 Employ _ _ O
@@ -3932,6 +4703,9 @@ system-level _ _ O
 protections _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 Randomized _ _ O
 Stack _ _ O
 offsets _ _ O
@@ -3942,6 +4716,9 @@ Stack _ _ O
 is _ _ O
 not _ _ O
 executable _ _ O
+
+
+ _ _ O
 3 _ _ O
 ) _ _ O
 Have _ _ O
@@ -3951,6 +4728,12 @@ use _ _ O
 stack _ _ O
 canaries _ _ O
 " _ _ O
+
+
+ _ _ O
 38 _ _ O
+
+
+ _ _ O
 
 

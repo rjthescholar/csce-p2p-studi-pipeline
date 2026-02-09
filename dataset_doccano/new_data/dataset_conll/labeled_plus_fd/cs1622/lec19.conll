@@ -9,6 +9,9 @@ CS _ _ O
 1622 _ _ O
 Jarrett _ _ O
 Billingsley _ _ O
+
+
+ _ _ O
 Class _ _ O
 Announcements _ _ O
 ● _ _ O
@@ -75,11 +78,23 @@ from _ _ O
 his _ _ O
 compilers _ _ O
 course _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 The _ _ O
 liveness _ _ B-Concept
 algorithm _ _ B-Concept
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Backwards _ _ O
 Analyses _ _ O
 ● _ _ O
@@ -109,6 +124,9 @@ x _ _ O
 bb2 _ _ O
 else _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 in-state _ _ B-Concept
 after-state _ _ B-Concept
 join _ _ O
@@ -117,6 +135,9 @@ s1 _ _ O
 , _ _ O
 s2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 a _ _ O
 backwards _ _ O
 analysis _ _ O
@@ -142,6 +163,9 @@ the _ _ O
 join _ _ B-Concept
 function _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 terms _ _ O
 " _ _ O
@@ -177,6 +201,9 @@ in _ _ O
 and _ _ O
 out _ _ O
 . _ _ O
+
+
+ _ _ O
 in _ _ O
 forward _ _ O
 , _ _ O
@@ -196,6 +223,9 @@ after _ _ O
 before _ _ O
 . _ _ O
 4 _ _ O
+
+
+ _ _ O
 States _ _ O
 and _ _ O
 transfer _ _ B-Concept
@@ -274,12 +304,18 @@ println_i _ _ O
 ( _ _ O
 x _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 DEAD _ _ B-Concept
 x _ _ O
 = _ _ O
 5 _ _ O
+
+
+ _ _ O
 if _ _ O
 an _ _ O
 instruction _ _ O
@@ -293,6 +329,9 @@ LIVE _ _ B-Concept
 before _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 else _ _ O
 , _ _ O
 if _ _ O
@@ -308,6 +347,9 @@ DEAD _ _ B-Concept
 before _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 DEAD _ _ B-Concept
@@ -317,6 +359,9 @@ y _ _ O
 x _ _ O
 = _ _ O
 DEAD _ _ B-Concept
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 LIVE _ _ B-Concept
@@ -326,6 +371,9 @@ y _ _ O
 x _ _ O
 = _ _ O
 LIVE _ _ B-Concept
+
+
+ _ _ O
 else _ _ O
 , _ _ O
 before _ _ O
@@ -338,6 +386,9 @@ the _ _ O
 state _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 ( _ _ O
 in _ _ O
 x _ _ O
@@ -361,6 +412,9 @@ it _ _ O
 . _ _ O
 ) _ _ O
 5 _ _ O
+
+
+ _ _ O
 The _ _ O
 join _ _ B-Concept
 function _ _ I-Concept
@@ -397,6 +451,9 @@ block _ _ O
 LIVE _ _ B-Concept
 DEAD _ _ B-Concept
 s1 _ _ O
+
+
+ _ _ O
 else _ _ O
 , _ _ O
 x _ _ O
@@ -409,17 +466,35 @@ of _ _ O
 this _ _ O
 block _ _ O
 . _ _ O
+
+
+ _ _ O
 DEAD _ _ B-Concept
 LIVE _ _ B-Concept
 s2 _ _ O
+
+
+ _ _ O
 DEAD _ _ B-Concept
 s3 _ _ O
+
+
+ _ _ O
 DEAD _ _ B-Concept
 s1 _ _ O
+
+
+ _ _ O
 DEAD _ _ B-Concept
 s2 _ _ O
+
+
+ _ _ O
 DEAD _ _ B-Concept
 s3 _ _ O
+
+
+ _ _ O
 ( _ _ O
 yeah _ _ O
 , _ _ O
@@ -447,6 +522,9 @@ successors _ _ O
 . _ _ O
 ) _ _ O
 6 _ _ O
+
+
+ _ _ O
 Trying _ _ O
 it _ _ O
 out _ _ O
@@ -475,6 +553,9 @@ to _ _ O
 DEAD _ _ B-Concept
 everywhere _ _ O
 . _ _ O
+
+
+ _ _ O
 then _ _ O
 we _ _ O
 run _ _ O
@@ -485,6 +566,9 @@ on _ _ O
 each _ _ O
 instruction _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 DEAD _ _ B-Concept
 DEAD _ _ B-Concept
@@ -493,14 +577,23 @@ DEAD _ _ O
 LIVE _ _ O
 DEAD _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 arg _ _ O
 + _ _ O
 10 _ _ O
+
+
+ _ _ O
 defs _ _ O
 x _ _ O
 ... _ _ O
+
+
+ _ _ O
 println_i _ _ O
 ( _ _ O
 x _ _ O
@@ -512,15 +605,24 @@ $ _ _ O
 t0 _ _ O
 = _ _ O
 x _ _ O
+
+
+ _ _ O
 uses _ _ O
 x _ _ O
 ... _ _ O
+
+
+ _ _ O
 return _ _ O
 does _ _ O
 n't _ _ O
 touch _ _ O
 x _ _ O
 ... _ _ O
+
+
+ _ _ O
 and _ _ O
 there _ _ O
 we _ _ O
@@ -563,6 +665,9 @@ that _ _ O
 matter _ _ O
 ? _ _ O
 7 _ _ O
+
+
+ _ _ O
 It _ _ O
 matters _ _ O
 for _ _ O
@@ -659,7 +764,13 @@ to _ _ O
 convince _ _ O
 ourselves _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 One _ _ O
 with _ _ O
 a _ _ O
@@ -688,10 +799,16 @@ here _ _ O
 no _ _ O
 change _ _ O
 . _ _ O
+
+
+ _ _ O
 DEAD _ _ O
 x _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 DEAD _ _ O
 LIVE _ _ O
 if _ _ O
@@ -699,6 +816,9 @@ arg _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 join _ _ O
 DEAD _ _ O
 with _ _ O
@@ -707,6 +827,9 @@ DEAD _ _ O
 get _ _ O
 DEAD _ _ O
 . _ _ O
+
+
+ _ _ O
 join _ _ O
 DEAD _ _ O
 with _ _ O
@@ -715,40 +838,73 @@ LIVE _ _ O
 get _ _ O
 LIVE _ _ O
 ! _ _ O
+
+
+ _ _ O
 DEAD _ _ O
 LIVE _ _ O
 LIVE _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 print_s _ _ O
 ( _ _ O
 "x _ _ O
 = _ _ O
 ") _ _ O
+
+
+ _ _ O
 println_s _ _ O
 ( _ _ O
 "argh _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 LIVE _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 println_i _ _ O
 ( _ _ O
 x _ _ O
 ) _ _ O
+
+
+ _ _ O
 ooh _ _ O
 , _ _ O
 a _ _ O
 use _ _ O
 ! _ _ O
+
+
+ _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 let _ _ O
 's _ _ O
 go _ _ O
 left _ _ O
 .. _ _ O
+
+
+ _ _ O
 we _ _ O
 start _ _ O
 at _ _ O
@@ -756,7 +912,13 @@ the _ _ O
 return _ _ O
 node _ _ O
 . _ _ O
+
+
+ _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 wait _ _ O
 , _ _ O
 we _ _ O
@@ -765,9 +927,21 @@ this _ _ O
 other _ _ O
 path _ _ O
 . _ _ O
+
+
+ _ _ O
 return _ _ O
+
+
+ _ _ O
 DEAD _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 One _ _ O
 with _ _ O
 a _ _ O
@@ -787,6 +961,9 @@ println_s _ _ O
 ! _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 DEAD _ _ O
 x _ _ O
 = _ _ O
@@ -795,6 +972,9 @@ LIVE _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 LIVE _ _ O
 DEAD _ _ O
 DEAD _ _ O
@@ -811,11 +991,17 @@ t1 _ _ O
 bb2 _ _ O
 else _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 follow _ _ O
 the _ _ O
 loop _ _ O
 back _ _ O
 ... _ _ O
+
+
+ _ _ O
 LIVE _ _ O
 println_i _ _ O
 ( _ _ O
@@ -826,11 +1012,17 @@ i _ _ O
 i _ _ O
 + _ _ O
 1 _ _ O
+
+
+ _ _ O
 oh _ _ O
 that _ _ O
 's _ _ O
 interesting _ _ O
 ! _ _ O
+
+
+ _ _ O
 the _ _ O
 liveness _ _ O
 changes _ _ O
@@ -841,6 +1033,9 @@ of _ _ O
 this _ _ O
 BB _ _ O
 . _ _ O
+
+
+ _ _ O
 join _ _ O
 DEAD _ _ O
 with _ _ O
@@ -856,12 +1051,18 @@ DEAD _ _ O
 second _ _ O
 around _ _ O
 ! _ _ O
+
+
+ _ _ O
 DEAD _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
 5 _ _ O
 return _ _ O
+
+
+ _ _ O
 x _ _ O
 is _ _ O
 n't _ _ O
@@ -876,6 +1077,9 @@ this _ _ O
 BB _ _ O
 . _ _ O
 10 _ _ O
+
+
+ _ _ O
 Wait _ _ O
 , _ _ O
 is _ _ O
@@ -922,6 +1126,9 @@ whatever _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 20 _ _ O
@@ -937,6 +1144,9 @@ x _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 x _ _ O
 is _ _ O
 always _ _ O
@@ -961,6 +1171,9 @@ warning _ _ O
 error _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 is _ _ O
 only _ _ O
@@ -988,6 +1201,9 @@ error _ _ O
 again _ _ O
 ! _ _ O
 11 _ _ O
+
+
+ _ _ O
 Some _ _ O
 implementation _ _ O
 thoughts _ _ O
@@ -1147,14 +1363,26 @@ we _ _ O
 allocate _ _ O
 registers _ _ O
 ? _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 Register _ _ O
 Allocation _ _ O
 time _ _ O
 check _ _ O
 ≤ _ _ O
 27 _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 State _ _ O
 of _ _ O
 the _ _ O
@@ -1192,6 +1420,9 @@ y _ _ O
 + _ _ O
 z _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
@@ -1219,6 +1450,9 @@ s0 _ _ O
 ( _ _ O
 fp _ _ O
 ) _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 definitely _ _ O
@@ -1268,6 +1502,9 @@ amount _ _ O
 of _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 that _ _ O
 is _ _ O
 absolutely _ _ O
@@ -1276,6 +1513,9 @@ the _ _ O
 case _ _ O
 anymore _ _ O
 . _ _ O
+
+
+ _ _ O
 in _ _ O
 the _ _ O
 absolute _ _ O
@@ -1297,6 +1537,9 @@ an _ _ O
 add _ _ O
 . _ _ O
 14 _ _ O
+
+
+ _ _ O
 Not _ _ O
 all _ _ O
 doom _ _ O
@@ -1369,12 +1612,18 @@ y _ _ O
 + _ _ O
 z _ _ O
 ; _ _ O
+
+
+ _ _ O
 add _ _ O
 s0 _ _ O
 , _ _ O
 s1 _ _ O
 , _ _ O
 s2 _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 one _ _ O
@@ -1403,6 +1652,9 @@ stuff _ _ O
 like _ _ O
 this _ _ O
 . _ _ O
+
+
+ _ _ O
 more _ _ O
 values _ _ O
 in _ _ O
@@ -1421,6 +1673,9 @@ higher _ _ O
 performance _ _ O
 . _ _ O
 15 _ _ O
+
+
+ _ _ O
 Real _ _ O
 ABIs _ _ O
 use _ _ O
@@ -1535,7 +1790,13 @@ these _ _ O
 real _ _ O
 ABIs _ _ O
 . _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 Under _ _ O
 pressure _ _ O
 ● _ _ O
@@ -1710,6 +1971,9 @@ that _ _ O
 liveness _ _ O
 :) _ _ O
 17 _ _ O
+
+
+ _ _ O
 The _ _ O
 Register _ _ O
 Interference _ _ O
@@ -1718,7 +1982,13 @@ time _ _ O
 check _ _ O
 ≤ _ _ O
 40 _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 Oh _ _ O
 boy _ _ O
 , _ _ O
@@ -1827,6 +2097,9 @@ a _ _ O
 ; _ _ O
 } _ _ O
 x _ _ O
+
+
+ _ _ O
 these _ _ O
 two _ _ O
 edges _ _ O
@@ -1862,6 +2135,9 @@ same _ _ O
 time _ _ O
 . _ _ O
 y _ _ O
+
+
+ _ _ O
 clearly _ _ O
 , _ _ O
 " _ _ O
@@ -1881,6 +2157,9 @@ we _ _ O
 computed _ _ O
 ! _ _ O
 19 _ _ O
+
+
+ _ _ O
 Building _ _ O
 the _ _ O
 RIG _ _ O
@@ -1932,17 +2211,44 @@ between _ _ O
 them _ _ O
 . _ _ O
 n _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 val _ _ O
+
+
+ _ _ O
 found _ _ O
 n _ _ O
 val _ _ O
 l _ _ O
+
+
+ _ _ O
 l _ _ O
+
+
+ _ _ O
 found _ _ O
+
+
+ _ _ O
 fn _ _ O
 has _ _ O
 ( _ _ O
@@ -2003,6 +2309,9 @@ found _ _ O
 ; _ _ O
 } _ _ O
 20 _ _ O
+
+
+ _ _ O
 Ok _ _ O
 but _ _ O
 what _ _ O
@@ -2078,10 +2387,22 @@ algorithms _ _ O
 . _ _ O
 l _ _ O
 val _ _ O
+
+
+ _ _ O
 n _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
 found _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 graph _ _ O
@@ -2138,6 +2459,9 @@ store _ _ O
 the _ _ O
 variable _ _ O
 . _ _ O
+
+
+ _ _ O
 here _ _ O
 , _ _ O
 n _ _ O
@@ -2157,13 +2481,22 @@ same _ _ O
 register _ _ O
 ! _ _ O
 21 _ _ O
+
+
+ _ _ O
 Graph _ _ O
 Coloring _ _ O
 time _ _ O
 check _ _ O
 ≤ _ _ O
 56 _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 Colorability _ _ O
 and _ _ O
 chromatic _ _ O
@@ -2210,12 +2543,33 @@ k _ _ O
 colors _ _ O
 . _ _ O
 a _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 y _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 y _ _ O
+
+
+ _ _ O
 we _ _ O
 could _ _ O
 color _ _ O
@@ -2225,8 +2579,17 @@ with _ _ O
 3 _ _ O
 colors _ _ O
 ... _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 y _ _ O
+
+
+ _ _ O
 or _ _ O
 just _ _ O
 2 _ _ O
@@ -2237,6 +2600,9 @@ is _ _ O
 the _ _ O
 minimum _ _ O
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 chromatic _ _ O
 number _ _ O
@@ -2275,7 +2641,13 @@ be _ _ O
 ≤ _ _ O
 r _ _ O
 ! _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 You _ _ O
 did _ _ O
 n't _ _ O
@@ -2307,6 +2679,9 @@ is _ _ O
 NP-hard _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 so _ _ O
 , _ _ O
@@ -2401,7 +2776,13 @@ enemy _ _ O
 of _ _ O
 good _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 The _ _ O
 coloring _ _ O
 heuristic _ _ O
@@ -2487,10 +2868,19 @@ we _ _ O
 do _ _ O
 so _ _ O
 . _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
 found _ _ O
 25 _ _ O
+
+
+ _ _ O
 Pop _ _ O
 ' _ _ O
 n _ _ O
@@ -2526,8 +2916,17 @@ are _ _ O
 . _ _ O
 Stack _ _ O
 i _ _ O
+
+
+ _ _ O
 n _ _ O
+
+
+ _ _ O
 val _ _ O
+
+
+ _ _ O
 l _ _ O
 has _ _ O
 red _ _ O
@@ -2556,7 +2955,13 @@ red _ _ O
 too _ _ O
 . _ _ O
 n _ _ O
+
+
+ _ _ O
 found _ _ O
+
+
+ _ _ O
 val _ _ O
 needs _ _ O
 to _ _ O
@@ -2565,7 +2970,13 @@ a _ _ O
 fourth _ _ O
 color _ _ O
 ... _ _ O
+
+
+ _ _ O
 l _ _ O
+
+
+ _ _ O
 and _ _ O
 obj _ _ O
 needs _ _ O
@@ -2574,11 +2985,26 @@ be _ _ O
 a _ _ O
 fifth _ _ O
 . _ _ O
+
+
+ _ _ O
 val _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
 found _ _ O
+
+
+ _ _ O
 i _ _ O
 has _ _ O
 no _ _ O
@@ -2592,6 +3018,9 @@ make _ _ O
 it _ _ O
 red _ _ O
 . _ _ O
+
+
+ _ _ O
 found _ _ O
 has _ _ O
 two _ _ O
@@ -2605,7 +3034,13 @@ make _ _ O
 it _ _ O
 green _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 This _ _ O
 works _ _ O
 ? _ _ O
@@ -2717,7 +3152,13 @@ the _ _ O
 popping _ _ O
 phase _ _ O
 ! _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 Failure _ _ O
 to _ _ O
 color _ _ O
@@ -2751,9 +3192,18 @@ now _ _ O
 . _ _ O
 Stack _ _ O
 l _ _ O
+
+
+ _ _ O
 found _ _ O
 obj _ _ O
+
+
+ _ _ O
 val _ _ O
+
+
+ _ _ O
 aaaand _ _ O
 we _ _ O
 're _ _ O
@@ -2766,6 +3216,9 @@ color _ _ O
 l _ _ O
 ! _ _ O
 n _ _ O
+
+
+ _ _ O
 uh _ _ O
 oh _ _ O
 . _ _ O
@@ -2785,20 +3238,38 @@ move _ _ O
 on _ _ O
 anyway _ _ O
 . _ _ O
+
+
+ _ _ O
 val _ _ O
 i _ _ O
 l _ _ O
 n _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
 found _ _ O
 28 _ _ O
+
+
+ _ _ O
 Spilling _ _ O
 time _ _ O
 check _ _ O
 ≤ _ _ O
 85 _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 So _ _ O
 what _ _ O
 do _ _ O
@@ -2931,18 +3402,36 @@ loads _ _ O
 and _ _ O
 stores _ _ O
 ... _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 Stop _ _ O
 interfering _ _ O
 with _ _ O
 me _ _ O
 ! _ _ O
+
+
+ _ _ O
 obj _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 found _ _ O
 n _ _ O
 val _ _ O
 l _ _ O
+
+
+ _ _ O
 ● _ _ O
 picking _ _ O
 which _ _ O
@@ -2994,6 +3483,9 @@ with _ _ O
 long _ _ O
 live _ _ O
 ranges _ _ O
+
+
+ _ _ O
 fn _ _ O
 has _ _ O
 ( _ _ O
@@ -3091,11 +3583,20 @@ like _ _ O
 a _ _ O
 good _ _ O
 } _ _ O
+
+
+ _ _ O
 spilling _ _ O
 candidate _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 So _ _ O
 how _ _ O
 does _ _ O
@@ -3246,7 +3747,13 @@ to _ _ O
 be _ _ O
 conservative _ _ O
 . _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 How _ _ O
 the _ _ O
 code _ _ O
@@ -3292,6 +3799,9 @@ stack _ _ O
 found _ _ O
 = _ _ O
 false _ _ O
+
+
+ _ _ O
 found_1 _ _ O
 = _ _ O
 false _ _ O
@@ -3301,9 +3811,15 @@ fp-12 _ _ O
 , _ _ O
 found_1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 found _ _ O
 = _ _ O
 true _ _ O
+
+
+ _ _ O
 found_2 _ _ O
 = _ _ O
 true _ _ O
@@ -3313,10 +3829,16 @@ fp-12 _ _ O
 , _ _ O
 found_2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
 found _ _ O
+
+
+ _ _ O
 found_3 _ _ O
 = _ _ O
 Load _ _ O
@@ -3327,6 +3849,9 @@ $ _ _ O
 t0 _ _ O
 = _ _ O
 found_3 _ _ O
+
+
+ _ _ O
 we _ _ O
 also _ _ O
 rename _ _ O
@@ -3355,6 +3880,9 @@ live _ _ O
 range _ _ O
 ! _ _ O
 33 _ _ O
+
+
+ _ _ O
 Then _ _ O
 what _ _ O
 ? _ _ O
@@ -3391,17 +3919,35 @@ spill _ _ O
 Liveness _ _ O
 and _ _ O
 RIG _ _ O
+
+
+ _ _ O
 Remove _ _ O
 nodes _ _ O
+
+
+ _ _ O
 Pop _ _ O
 and _ _ O
 color _ _ O
+
+
+ _ _ O
 Done _ _ O
 ! _ _ O
+
+
+ _ _ O
 Pick _ _ O
 spill _ _ O
 candidate _ _ O
+
+
+ _ _ O
 34 _ _ O
+
+
+ _ _ O
 And _ _ O
 it _ _ O
 keeps _ _ O
@@ -3506,6 +4052,12 @@ o _ _ O
 and _ _ O
 more _ _ O
 ... _ _ O
+
+
+ _ _ O
 35 _ _ O
+
+
+ _ _ O
 
 

@@ -6,6 +6,9 @@ Structures _ _ O
 for _ _ O
 Computer _ _ O
 Science _ _ O
+
+
+ _ _ O
 William _ _ O
 Garrison _ _ O
 bill@cs.pitt.edu _ _ O
@@ -20,6 +23,9 @@ Integers _ _ O
 and _ _ O
 Modular _ _ B-Concept
 Arithmetic _ _ I-Concept
+
+
+ _ _ O
 Based _ _ O
 on _ _ O
 materials _ _ O
@@ -28,6 +34,9 @@ by _ _ O
 Dr. _ _ O
 Adam _ _ O
 Lee _ _ O
+
+
+ _ _ O
 Today _ _ O
 's _ _ O
 Topics _ _ O
@@ -46,6 +55,9 @@ Applications _ _ O
 of _ _ O
 modular _ _ B-Concept
 arithmetic _ _ I-Concept
+
+
+ _ _ O
 What _ _ O
 is _ _ O
 number _ _ B-Concept
@@ -97,6 +109,9 @@ random _ _ O
 numbers _ _ O
 l _ _ O
 ... _ _ O
+
+
+ _ _ O
 We _ _ O
 will _ _ O
 only _ _ O
@@ -104,6 +119,9 @@ scratch _ _ O
 the _ _ O
 surface _ _ O
 ... _ _ O
+
+
+ _ _ O
 The _ _ O
 notion _ _ O
 of _ _ O
@@ -173,6 +191,9 @@ does _ _ B-Concept
 not _ _ I-Concept
 divide _ _ I-Concept
 b. _ _ O
+
+
+ _ _ O
 Mathematically _ _ O
 : _ _ O
 a _ _ O
@@ -208,6 +229,9 @@ a _ _ O
 multiple _ _ B-Concept
 of _ _ O
 a _ _ O
+
+
+ _ _ O
 We _ _ O
 've _ _ O
 been _ _ O
@@ -232,6 +256,9 @@ k _ _ O
 ∈ _ _ O
 Z _ _ O
 } _ _ O
+
+
+ _ _ O
 Division _ _ O
 examples _ _ O
 Examples _ _ O
@@ -254,6 +281,9 @@ Does _ _ O
 | _ _ O
 42 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Yes _ _ O
 , _ _ O
 16 _ _ O
@@ -278,6 +308,9 @@ Yes _ _ O
 7 _ _ O
 × _ _ O
 6 _ _ O
+
+
+ _ _ O
 Question _ _ O
 : _ _ O
 Let _ _ O
@@ -365,6 +398,9 @@ are _ _ O
 divisible _ _ O
 by _ _ O
 d. _ _ O
+
+
+ _ _ O
 Important _ _ O
 properties _ _ O
 of _ _ O
@@ -389,6 +425,9 @@ b _ _ O
 + _ _ O
 c _ _ O
 ) _ _ O
+
+
+ _ _ O
 Property _ _ O
 2 _ _ O
 : _ _ O
@@ -405,6 +444,9 @@ for _ _ O
 all _ _ O
 integers _ _ O
 c. _ _ O
+
+
+ _ _ O
 Property _ _ O
 3 _ _ O
 : _ _ O
@@ -421,6 +463,9 @@ then _ _ O
 a _ _ O
 | _ _ O
 c. _ _ O
+
+
+ _ _ O
 Division _ _ B-Concept
 algorithm _ _ I-Concept
 Theorem _ _ O
@@ -460,6 +505,9 @@ a _ _ O
 dq _ _ O
 + _ _ O
 r. _ _ O
+
+
+ _ _ O
 For _ _ O
 historical _ _ O
 reasons _ _ O
@@ -481,6 +529,9 @@ n't _ _ O
 an _ _ O
 algorithm _ _ O
 ! _ _ O
+
+
+ _ _ O
 Terminology _ _ O
 : _ _ O
 Given _ _ O
@@ -525,20 +576,26 @@ r _ _ O
 a _ _ O
 mod _ _ B-Concept
 d _ _ O
-div _ _ O
+
+
+ _ _ O
+div _ _ B-Concept
 and _ _ O
-mod _ _ O
+mod _ _ B-Concept
 are _ _ O
 operators _ _ O
+
+
+ _ _ O
 Examples _ _ O
 Question _ _ O
 : _ _ O
 What _ _ O
 are _ _ O
 the _ _ O
-quotient _ _ O
+quotient _ _ B-Concept
 and _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 when _ _ O
 123 _ _ O
 is _ _ O
@@ -561,20 +618,20 @@ that _ _ O
 . _ _ O
 So _ _ O
 the _ _ O
-quotient _ _ O
+quotient _ _ B-Concept
 is _ _ O
 123 _ _ O
-div _ _ O
+div _ _ B-Concept
 23 _ _ O
 = _ _ O
 5 _ _ O
 , _ _ O
 and _ _ O
 the _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 is _ _ O
 123 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 23 _ _ O
 = _ _ O
 8 _ _ O
@@ -584,9 +641,9 @@ Question _ _ O
 What _ _ O
 are _ _ O
 the _ _ O
-quotient _ _ O
+quotient _ _ B-Concept
 and _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 when _ _ O
 -11 _ _ O
 is _ _ O
@@ -609,12 +666,12 @@ we _ _ O
 have _ _ O
 that _ _ O
 the _ _ O
-quotient _ _ O
+quotient _ _ B-Concept
 is _ _ O
 -4 _ _ O
 and _ _ O
 the _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 is _ _ O
 1 _ _ O
 . _ _ O
@@ -622,7 +679,7 @@ Recall _ _ O
 that _ _ O
 since _ _ O
 the _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 must _ _ O
 be _ _ O
 non-negative _ _ O
@@ -642,14 +699,17 @@ the _ _ O
 division _ _ O
 theorem _ _ O
 ! _ _ O
+
+
+ _ _ O
 Many _ _ O
 programming _ _ O
 languages _ _ O
 use _ _ O
 the _ _ O
-div _ _ O
+div _ _ B-Concept
 and _ _ O
-mod _ _ O
+mod _ _ B-Concept
 operations _ _ O
 For _ _ O
 example _ _ O
@@ -665,7 +725,7 @@ l _ _ O
 / _ _ O
 corresponds _ _ O
 to _ _ O
-div _ _ O
+div _ _ B-Concept
 when _ _ O
 used _ _ O
 on _ _ O
@@ -675,10 +735,16 @@ l _ _ O
 % _ _ O
 corresponds _ _ O
 to _ _ O
-mod _ _ O
+mod _ _ B-Concept
+
+
+ _ _ O
 Prints _ _ O
 out _ _ O
 1 _ _ O
+
+
+ _ _ O
 public _ _ O
 static _ _ O
 void _ _ O
@@ -731,9 +797,15 @@ y _ _ O
 z _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 Prints _ _ O
 out _ _ O
 2.5 _ _ O
+
+
+ _ _ O
 } _ _ O
 This _ _ O
 can _ _ O
@@ -752,6 +824,9 @@ your _ _ O
 future _ _ O
 classes _ _ O
 ! _ _ O
+
+
+ _ _ O
 In-class _ _ O
 exercises _ _ O
 Problem _ _ O
@@ -783,9 +858,9 @@ than _ _ O
 , _ _ O
 then _ _ O
 the _ _ O
-quotient _ _ O
+quotient _ _ B-Concept
 and _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 ! _ _ O
 ! _ _ O
 obtained _ _ O
@@ -803,6 +878,9 @@ d _ _ O
 , _ _ O
 respectively _ _ O
 . _ _ O
+
+
+ _ _ O
 Sometimes _ _ O
 , _ _ O
 we _ _ O
@@ -810,7 +888,7 @@ care _ _ O
 only _ _ O
 about _ _ O
 the _ _ O
-remainder _ _ O
+remainder _ _ B-Concept
 of _ _ O
 an _ _ O
 integer _ _ O
@@ -834,6 +912,9 @@ hours _ _ O
 from _ _ O
 now _ _ O
 ? _ _ O
+
+
+ _ _ O
 Answer _ _ O
 : _ _ O
 If _ _ O
@@ -851,11 +932,11 @@ be _ _ O
 + _ _ O
 22 _ _ O
 ) _ _ O
-mod _ _ O
+mod _ _ B-Concept
 24 _ _ O
 = _ _ O
 28 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 24 _ _ O
 = _ _ O
 4 _ _ O
@@ -864,6 +945,9 @@ in _ _ O
 22 _ _ O
 hours _ _ O
 . _ _ O
+
+
+ _ _ O
 Since _ _ O
 remainders _ _ O
 can _ _ O
@@ -920,7 +1004,7 @@ a _ _ O
 ≡ _ _ O
 b _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 . _ _ O
@@ -930,17 +1014,20 @@ a _ _ O
 ≡ _ _ O
 b _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 iff _ _ O
 a _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 = _ _ O
 b _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m. _ _ O
+
+
+ _ _ O
 Examples _ _ O
 : _ _ O
 l _ _ O
@@ -961,6 +1048,9 @@ to _ _ O
 modulo _ _ O
 6 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Yes _ _ O
 , _ _ O
 since _ _ O
@@ -982,6 +1072,9 @@ since _ _ O
 - _ _ O
 14 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Properties _ _ O
 of _ _ O
 congruencies _ _ O
@@ -1008,7 +1101,7 @@ a _ _ O
 ≡ _ _ O
 b _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 ) _ _ O
@@ -1026,6 +1119,9 @@ b _ _ O
 + _ _ O
 km _ _ O
 . _ _ O
+
+
+ _ _ O
 Theorem _ _ O
 : _ _ O
 Let _ _ O
@@ -1040,7 +1136,7 @@ a _ _ O
 ≡ _ _ O
 b _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 and _ _ O
@@ -1048,7 +1144,7 @@ c _ _ O
 ≡ _ _ O
 d _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 , _ _ O
@@ -1066,7 +1162,7 @@ b _ _ O
 d _ _ O
 ) _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
 l _ _ O
@@ -1074,9 +1170,12 @@ ac _ _ O
 ≡ _ _ O
 bd _ _ O
 ( _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
 ) _ _ O
+
+
+ _ _ O
 Congruencies _ _ O
 have _ _ O
 many _ _ O
@@ -1100,11 +1199,14 @@ functions _ _ O
 The _ _ O
 generation _ _ O
 of _ _ O
-pseudorandom _ _ O
-numbers _ _ O
+pseudorandom _ _ B-Concept
+numbers _ _ I-Concept
 3 _ _ O
 . _ _ O
-Cryptography _ _ O
+Cryptography _ _ B-Concept
+
+
+ _ _ O
 Hash _ _ O
 functions _ _ O
 allow _ _ O
@@ -1138,8 +1240,8 @@ Solution _ _ O
 : _ _ O
 Apply _ _ O
 a _ _ O
-hash _ _ O
-function _ _ O
+hash _ _ B-Concept
+function _ _ I-Concept
 that _ _ O
 determines _ _ O
 the _ _ O
@@ -1160,13 +1262,13 @@ common _ _ O
 hash _ _ O
 function _ _ O
 is _ _ O
-h _ _ O
-( _ _ O
-k _ _ O
-) _ _ O
+h _ _ B-Concept
+( _ _ I-Concept
+k _ _ I-Concept
+) _ _ I-Concept
 = _ _ O
 k _ _ O
-mod _ _ O
+mod _ _ B-Concept
 n _ _ O
 , _ _ O
 where _ _ O
@@ -1179,11 +1281,20 @@ available _ _ O
 storage _ _ O
 locations _ _ O
 . _ _ O
+
+
+ _ _ O
 Memory _ _ O
 : _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 42 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 8 _ _ O
 = _ _ O
 2 _ _ O
@@ -1192,12 +1303,27 @@ ID _ _ O
 42 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 276 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 8 _ _ O
 = _ _ O
 4 _ _ O
@@ -1206,11 +1332,23 @@ ID _ _ O
 276 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 23 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 8 _ _ O
 = _ _ O
 7 _ _ O
@@ -1219,6 +1357,9 @@ ID _ _ O
 23 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 Many _ _ O
 areas _ _ O
 of _ _ O
@@ -1230,8 +1371,11 @@ the _ _ O
 ability _ _ O
 to _ _ O
 generate _ _ O
-pseudorandom _ _ O
-numbers _ _ O
+pseudorandom _ _ B-Concept
+numbers _ _ I-Concept
+
+
+ _ _ O
 Coding _ _ O
 algorithms _ _ O
 Hardware _ _ O
@@ -1242,36 +1386,45 @@ and _ _ O
 network _ _ O
 simulation _ _ O
 Security _ _ O
+
+
+ _ _ O
 Network _ _ O
 protocols _ _ O
+
+
+ _ _ O
 Congruencies _ _ O
 can _ _ O
 be _ _ O
 used _ _ O
 to _ _ O
 generate _ _ O
-pseudorandom _ _ O
-sequences _ _ O
+pseudorandom _ _ B-Concept
+sequences _ _ I-Concept
 Step _ _ O
 1 _ _ O
 : _ _ O
 Choose _ _ O
 l _ _ O
 A _ _ O
-modulus _ _ O
+modulus _ _ B-Concept
 m _ _ O
 l _ _ O
 A _ _ O
-multiplier _ _ O
+multiplier _ _ B-Concept
 a _ _ O
 l _ _ O
 An _ _ O
-increment _ _ O
+increment _ _ B-Concept
 c _ _ O
 l _ _ O
 A _ _ O
-seed _ _ O
+seed _ _ B-Concept
 x0 _ _ O
+
+
+ _ _ O
 Step _ _ O
 2 _ _ O
 : _ _ O
@@ -1286,8 +1439,11 @@ axn _ _ O
 + _ _ O
 c _ _ O
 ) _ _ O
-mod _ _ O
+mod _ _ B-Concept
 m _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 m _ _ O
@@ -1311,17 +1467,17 @@ x1 _ _ O
 7x0 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7×3 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 25 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7 _ _ O
@@ -1331,17 +1487,17 @@ x2 _ _ O
 7x1 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7×7 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 53 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 8 _ _ O
@@ -1351,17 +1507,17 @@ x3 _ _ O
 7x2 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7×8 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 60 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 6 _ _ O
@@ -1371,17 +1527,17 @@ x4 _ _ O
 7x3 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7×6 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 46 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 1 _ _ O
@@ -1391,35 +1547,38 @@ x5 _ _ O
 7x4 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 7×1 _ _ O
 + _ _ O
 4 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 11 _ _ O
-mod _ _ O
+mod _ _ B-Concept
 9 _ _ O
 = _ _ O
 2 _ _ O
 l _ _ O
 ... _ _ O
+
+
+ _ _ O
 The _ _ O
 field _ _ O
 of _ _ O
-cryptography _ _ O
+cryptography _ _ B-Concept
 makes _ _ O
 heavy _ _ O
 use _ _ O
 of _ _ O
-number _ _ O
-theory _ _ O
+number _ _ B-Concept
+theory _ _ I-Concept
 and _ _ O
 congruencies _ _ O
-Cryptography _ _ O
+Cryptography _ _ B-Concept
 is _ _ O
 the _ _ O
 study _ _ O
@@ -1428,7 +1587,7 @@ secret _ _ O
 messages _ _ O
 Uses _ _ O
 of _ _ O
-cryptography _ _ O
+cryptography _ _ B-Concept
 : _ _ O
 l _ _ O
 Protecting _ _ O
@@ -1446,6 +1605,9 @@ web _ _ O
 browsing _ _ O
 l _ _ O
 ... _ _ O
+
+
+ _ _ O
 Congruencies _ _ O
 are _ _ O
 used _ _ O
@@ -1477,10 +1639,13 @@ we _ _ O
 examine _ _ O
 an _ _ O
 ancient _ _ O
-cryptosystem _ _ O
+cryptosystem _ _ B-Concept
+
+
+ _ _ O
 The _ _ O
-Caesar _ _ O
-cipher _ _ O
+Caesar _ _ B-Concept
+cipher _ _ I-Concept
 is _ _ O
 based _ _ O
 on _ _ O
@@ -1491,14 +1656,14 @@ a _ _ O
 message _ _ O
 using _ _ O
 the _ _ O
-Caesar _ _ O
-cipher _ _ O
+Caesar _ _ B-Concept
+cipher _ _ I-Concept
 : _ _ O
 l _ _ O
 Choose _ _ O
 a _ _ O
-shift _ _ O
-index _ _ O
+shift _ _ B-Concept
+index _ _ I-Concept
 s _ _ O
 l _ _ O
 Convert _ _ O
@@ -1521,8 +1686,11 @@ p _ _ O
 p _ _ O
 + _ _ O
 s _ _ O
-mod _ _ O
+mod _ _ B-Concept
 26 _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Let _ _ O
@@ -1584,12 +1752,15 @@ message _ _ O
 19 _ _ O
 = _ _ O
 JCCJLT _ _ O
-Decryption _ _ O
+
+
+ _ _ O
+Decryption _ _ B-Concept
 involves _ _ O
 using _ _ O
 the _ _ O
-inverse _ _ O
-function _ _ O
+inverse _ _ B-Concept
+function _ _ I-Concept
 That _ _ O
 is _ _ O
 , _ _ O
@@ -1601,8 +1772,11 @@ p _ _ O
 p _ _ O
 - _ _ O
 s _ _ O
-mod _ _ O
+mod _ _ B-Concept
 26 _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Assume _ _ O
@@ -1669,6 +1843,9 @@ result _ _ O
 19 _ _ O
 = _ _ O
 RETREAT _ _ O
+
+
+ _ _ O
 In-class _ _ O
 exercises _ _ O
 Problem _ _ O
@@ -1679,11 +1856,14 @@ Problem _ _ O
 On _ _ O
 Top _ _ O
 Hat _ _ O
+
+
+ _ _ O
 Final _ _ O
 thoughts _ _ O
 n _ _ O
-Number _ _ O
-theory _ _ O
+Number _ _ B-Concept
+theory _ _ I-Concept
 is _ _ O
 the _ _ O
 study _ _ O
@@ -1693,10 +1873,10 @@ and _ _ O
 their _ _ O
 properties _ _ O
 n _ _ O
-Divisibility _ _ O
+Divisibility _ _ B-Concept
 , _ _ O
-modular _ _ O
-arithmetic _ _ O
+modular _ _ B-Concept
+arithmetic _ _ I-Concept
 , _ _ O
 and _ _ O
 congruency _ _ O
@@ -1723,5 +1903,8 @@ Section _ _ O
 and _ _ O
 4.3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 
 

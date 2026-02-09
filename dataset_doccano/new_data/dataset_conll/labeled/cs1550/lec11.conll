@@ -11,6 +11,9 @@ COE _ _ O
 1550 _ _ O
 Spring _ _ O
 2022 _ _ O
+
+
+ _ _ O
 Sherif _ _ O
 Khattab _ _ O
 ksm73@pitt.edu _ _ O
@@ -27,6 +30,9 @@ Gagne _ _ O
 © _ _ O
 2013 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Announcements _ _ O
 • _ _ O
 Upcoming _ _ O
@@ -58,6 +64,9 @@ on _ _ O
 2 _ _ O
 / _ _ O
 28 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -66,6 +75,9 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Previous _ _ O
 lecture _ _ O
 ... _ _ O
@@ -83,6 +95,9 @@ algorithm _ _ O
 Sleepy _ _ B-Concept
 Barbers _ _ I-Concept
 problem _ _ I-Concept
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -91,12 +106,18 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Muddiest _ _ O
 Points _ _ O
 • _ _ O
 Checked _ _ O
 on _ _ O
 Tophat _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -105,6 +126,9 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Sleepy _ _ O
 Barbers _ _ O
 Solution _ _ O
@@ -146,8 +170,14 @@ producers-consumers _ _ B-Concept
 problem _ _ I-Concept
 Worker _ _ O
 Process _ _ O
+
+
+ _ _ O
 Customer _ _ O
 Process _ _ O
+
+
+ _ _ O
 struct _ _ O
 mysems _ _ O
 sems _ _ O
@@ -156,6 +186,9 @@ buff.consume _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 struct _ _ O
 mysems _ _ O
 sems _ _ O
@@ -163,60 +196,96 @@ sems _ _ O
 new _ _ O
 struct _ _ O
 mysems _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV1a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 buff.produce _ _ O
 ( _ _ O
 sems _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV1b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV1a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 do _ _ O
 work _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV1b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV2a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 get _ _ O
 work _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV2b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV2a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 check-in _ _ O
 for _ _ O
 next _ _ B-Concept
 customer _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV2b _ _ O
@@ -225,6 +294,9 @@ sems.RV2b _ _ O
 / _ _ O
 / _ _ O
 leave _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -233,6 +305,9 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Questions _ _ O
 of _ _ O
 the _ _ O
@@ -244,6 +319,9 @@ implement _ _ O
 condition _ _ O
 variables _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Reflect _ _ O
 more _ _ O
@@ -257,6 +335,9 @@ that _ _ O
 we _ _ O
 have _ _ O
 studied _ _ O
+
+
+ _ _ O
 User-level _ _ O
 implementation _ _ O
 of _ _ O
@@ -268,6 +349,9 @@ with _ _ O
 two _ _ O
 waiting _ _ O
 queues _ _ O
+
+
+ _ _ O
 struct _ _ O
 Lock _ _ B-Concept
 { _ _ O
@@ -292,7 +376,13 @@ Release _ _ B-Concept
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 nextCount _ _ B-Concept
@@ -300,21 +390,39 @@ nextCount _ _ B-Concept
 0 _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 Acquire _ _ B-Concept
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 next.up _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 mutex.down _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 nextCount-- _ _ B-Concept
 ; _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 } _ _ O
 else _ _ O
 mutex.up _ _ B-Concept
@@ -322,6 +430,9 @@ mutex.up _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Condition _ _ B-Concept
 Variable _ _ I-Concept
 struct _ _ O
@@ -355,16 +466,25 @@ nextCount _ _ B-Concept
 > _ _ O
 0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Signal _ _ B-Concept
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 next.up _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 semCount _ _ O
@@ -372,33 +492,54 @@ semCount _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 nextCount-- _ _ B-Concept
 ; _ _ O
+
+
+ _ _ O
 condSem.up _ _ O
 ( _ _ O
 ) _ _ O
 lk- _ _ O
 > _ _ O
 nextCount++ _ _ B-Concept
+
+
+ _ _ O
 else _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 next.down _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 mutex.up _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 nextCount- _ _ B-Concept
+
+
+ _ _ O
 } _ _ O
 semCount++ _ _ O
 ; _ _ O
@@ -409,13 +550,22 @@ condSem.down _ _ O
 semCount-- _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Lock _ _ B-Concept
 and _ _ O
 Condition _ _ B-Concept
 Variable _ _ I-Concept
 Implementation _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -424,11 +574,17 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Implementing _ _ O
 locks _ _ O
 with _ _ O
 semaphores _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 mutex _ _ B-Concept
 to _ _ O
@@ -438,7 +594,13 @@ within _ _ O
 the _ _ O
 lock _ _ B-Concept
 bounds _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 next _ _ B-Concept
 to _ _ O
@@ -454,7 +616,13 @@ priority _ _ O
 why _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 nextCount _ _ B-Concept
 indicates _ _ O
 whether _ _ O
@@ -464,6 +632,9 @@ any _ _ O
 higher _ _ O
 priority _ _ O
 waiters _ _ O
+
+
+ _ _ O
 class _ _ O
 Lock _ _ B-Concept
 { _ _ O
@@ -521,6 +692,9 @@ mutex.up _ _ B-Concept
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -529,10 +703,16 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Implementing _ _ O
 condition _ _ O
 variables _ _ O
 • _ _ O
+
+
+ _ _ O
 Are _ _ O
 these _ _ O
 Hoare _ _ O
@@ -540,7 +720,13 @@ or _ _ O
 Mesa _ _ B-Concept
 semantics _ _ I-Concept
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Can _ _ O
 there _ _ O
 be _ _ O
@@ -552,6 +738,9 @@ a _ _ O
 single _ _ O
 Lock _ _ B-Concept
 ? _ _ O
+
+
+ _ _ O
 class _ _ O
 Condition _ _ O
 { _ _ O
@@ -614,6 +803,9 @@ semCount _ _ O
 1 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Condition _ _ O
 : _ _ O
 : _ _ O
@@ -653,6 +845,9 @@ nextCount _ _ B-Concept
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -661,10 +856,16 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Process _ _ B-Concept
 Synchronization _ _ I-Concept
 inside _ _ O
 Monitors _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 - _ _ O
@@ -673,6 +874,9 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 Condition _ _ B-Concept
 Variable-based _ _ I-Concept
 Solutions _ _ O
@@ -681,6 +885,9 @@ Code _ _ O
 Walkthrough _ _ O
 at _ _ O
 : _ _ O
+
+
+ _ _ O
 https _ _ O
 : _ _ O
 / _ _ O
@@ -695,6 +902,9 @@ ProcessSynchronization _ _ O
 / _ _ O
 Slides _ _ O
 / _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -705,7 +915,13 @@ Systems _ _ O
 - _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 Reflections _ _ O
 on _ _ O
 semaphore _ _ B-Concept
@@ -726,6 +942,9 @@ spaces _ _ O
 For _ _ O
 mutual _ _ B-Concept
 exclusion _ _ I-Concept
+
+
+ _ _ O
 Reflections _ _ O
 on _ _ O
 Condition _ _ O
@@ -768,6 +987,9 @@ locking _ _ O
 the _ _ O
 mutex _ _ B-Concept
 lock _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 need _ _ O
@@ -799,5 +1021,8 @@ change _ _ O
 the _ _ O
 waiting _ _ O
 condition _ _ O
+
+
+ _ _ O
 
 

@@ -3,6 +3,9 @@ unlabeled|cs0447|lec06
 
 # _ _ O
 6 _ _ O
+
+
+ _ _ O
 Flow _ _ O
 , _ _ O
 Conditionals _ _ O
@@ -25,14 +28,23 @@ Childers _ _ O
 , _ _ O
 David _ _ O
 Wilkinson _ _ O
+
+
+ _ _ O
 CS _ _ O
 0447 _ _ O
 Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
@@ -44,28 +56,49 @@ Putting _ _ O
 numbers _ _ O
 into _ _ O
 registers _ _ O
+
+
+ _ _ O
 li _ _ O
 a0 _ _ O
 , _ _ O
 3 _ _ O
+
+
+ _ _ O
 la _ _ O
 a0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 label _ _ O
+
+
+ _ _ O
 .data _ _ O
 x _ _ O
 : _ _ O
 .word _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 COPYing _ _ O
 register _ _ O
 contents _ _ O
+
+
+ _ _ O
 move _ _ O
 a0 _ _ O
 , _ _ O
 t0 _ _ O
+
+
+ _ _ O
 These _ _ O
 do _ _ O
 zero _ _ O
@@ -73,12 +106,18 @@ Unsigned _ _ O
 ! _ _ O
  _ _ O
 extension _ _ O
+
+
+ _ _ O
 ● _ _ O
 COPYing _ _ O
 from _ _ O
 / _ _ O
 to _ _ O
 memory _ _ O
+
+
+ _ _ O
 lw _ _ O
 / _ _ O
 sw _ _ O
@@ -109,6 +148,9 @@ lw _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 la _ _ O
 t1 _ _ O
 , _ _ O
@@ -124,6 +166,9 @@ sw _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 Do _ _ O
 the _ _ O
 same _ _ O
@@ -144,11 +189,20 @@ lb _ _ O
 lbu _ _ O
 move _ _ O
 CPU _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Registers _ _ O
+
+
+ _ _ O
 li _ _ O
 , _ _ O
 la _ _ O
+
+
+ _ _ O
 sw _ _ O
 , _ _ O
 sh _ _ O
@@ -156,17 +210,53 @@ sh _ _ O
 sb _ _ O
 Other _ _ O
 operations _ _ O
+
+
+ _ _ O
 Datatypes _ _ O
+
+
+ _ _ O
 add _ _ O
+
+
+ _ _ O
 word _ _ O
+
+
+ _ _ O
 sub _ _ O
+
+
+ _ _ O
 half _ _ O
+
+
+ _ _ O
 mul _ _ O
+
+
+ _ _ O
 byte _ _ O
+
+
+ _ _ O
 syscall _ _ O
+
+
+ _ _ O
 asciiz _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Introduction _ _ O
@@ -254,6 +344,9 @@ It _ _ O
 like _ _ O
 procrastination _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 false _ _ O
@@ -267,6 +360,9 @@ do_some_work _ _ O
 
 Control _ _ O
 flow _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 With _ _ O
@@ -381,6 +477,9 @@ like _ _ O
 of _ _ O
 the _ _ O
 bugs _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Getting _ _ O
@@ -414,6 +513,9 @@ else _ _ O
 for _ _ O
 example _ _ O
 … _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 an _ _ O
@@ -428,6 +530,9 @@ but _ _ O
 not _ _ O
 too _ _ O
 interesting _ _ O
+
+
+ _ _ O
 _ _ _ O
 main_loop _ _ O
 : _ _ O
@@ -459,6 +564,9 @@ else _ _ O
 j _ _ O
 _ _ _ O
 main_loop _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Building _ _ O
@@ -486,6 +594,9 @@ statements _ _ O
 separate _ _ O
 basic _ _ O
 blocks _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 x _ _ O
@@ -509,6 +620,9 @@ other_thing _ _ O
 third_thing _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 = _ _ O
@@ -516,9 +630,21 @@ w _ _ O
 - _ _ O
 1 _ _ O
 ? _ _ O
+
+
+ _ _ O
 other_thing _ _ O
+
+
+ _ _ O
 do_thing _ _ O
+
+
+ _ _ O
 third_thing _ _ O
+
+
+ _ _ O
 thinking _ _ O
 about _ _ O
 this _ _ O
@@ -633,6 +759,9 @@ think _ _ O
 it _ _ O
 ’s _ _ O
 helpful _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Conditionals _ _ O
@@ -640,6 +769,9 @@ Conditionals _ _ O
 if _ _ O
 and _ _ O
 if-else _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 MIPS _ _ O
@@ -683,14 +815,26 @@ to _ _ O
 the _ _ O
 next _ _ O
 instruction _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 beq _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -702,12 +846,18 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 bne _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -719,6 +869,9 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 above _ _ O
 , _ _ O
 a _ _ O
@@ -750,12 +903,21 @@ do _ _ O
 these _ _ O
 work _ _ O
 ? _ _ O
+
+
+ _ _ O
 Previous _ _ O
 instruction _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 the _ _ O
 branch _ _ O
+
+
+ _ _ O
 beq _ _ O
 t0 _ _ O
 , _ _ O
@@ -766,13 +928,31 @@ label _ _ O
 branch _ _ O
 if _ _ O
 equal _ _ O
+
+
+ _ _ O
 t0==t1 _ _ O
+
+
+ _ _ O
 True _ _ O
+
+
+ _ _ O
 False _ _ O
+
+
+ _ _ O
 Next _ _ O
 instruction _ _ O
+
+
+ _ _ O
 label _ _ O
 : _ _ O
+
+
+ _ _ O
 Other _ _ O
 instruction _ _ O
 12 _ _ O
@@ -784,6 +964,9 @@ work _ _ O
 ? _ _ O
 label _ _ O
 : _ _ O
+
+
+ _ _ O
 beq _ _ O
 t0 _ _ O
 , _ _ O
@@ -794,17 +977,29 @@ label _ _ O
 branch _ _ O
 if _ _ O
 equal _ _ O
+
+
+ _ _ O
 Other _ _ O
 instruction _ _ O
 Previous _ _ O
 instruction _ _ O
+
+
+ _ _ O
 True _ _ O
+
+
+ _ _ O
 t0==t1 _ _ O
 This _ _ O
 is _ _ O
 the _ _ O
 branch _ _ O
 False _ _ O
+
+
+ _ _ O
 Next _ _ O
 instruction _ _ O
 13 _ _ O
@@ -820,13 +1015,25 @@ again _ _ O
 ● _ _ O
 Remember _ _ O
 : _ _ O
+
+
+ _ _ O
 WRITE _ _ O
 PSEUDOCODE _ _ O
+
+
+ _ _ O
 ALWAYS _ _ O
+
+
+ _ _ O
 REALLY _ _ O
 ! _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 x _ _ O
@@ -847,6 +1054,9 @@ other_thing _ _ O
 ( _ _ O
 ) _ _ O
 } _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Like _ _ O
@@ -879,6 +1089,9 @@ they _ _ O
 do _ _ O
 n’t _ _ O
 matter _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 some _ _ O
@@ -895,6 +1108,9 @@ B _ _ O
 } _ _ O
 block _ _ O
 C _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 A _ _ O
@@ -916,6 +1132,9 @@ it _ _ O
 pretty _ _ O
 simple _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s0 _ _ O
@@ -929,6 +1148,9 @@ A _ _ O
 } _ _ O
 block _ _ O
 B _ _ O
+
+
+ _ _ O
 bne _ _ O
 s0 _ _ O
 , _ _ O
@@ -939,6 +1161,9 @@ blockA _ _ O
 : _ _ O
 blockB _ _ O
 : _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 A _ _ O
@@ -960,6 +1185,9 @@ it _ _ O
 pretty _ _ O
 simple _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s0 _ _ O
@@ -973,12 +1201,18 @@ A _ _ O
 } _ _ O
 block _ _ O
 B _ _ O
+
+
+ _ _ O
 bne _ _ O
 s0 _ _ O
 , _ _ O
 30 _ _ O
 , _ _ O
 blockB _ _ O
+
+
+ _ _ O
 In _ _ O
 Java _ _ O
 / _ _ O
@@ -1000,11 +1234,17 @@ true _ _ O
 or _ _ O
 false _ _ O
 ? _ _ O
+
+
+ _ _ O
 When _ _ O
 its _ _ O
 FALSE _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 A _ _ O
@@ -1014,6 +1254,9 @@ block _ _ O
 ( _ _ O
 if _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 In _ _ O
 MIPS _ _ O
@@ -1037,6 +1280,9 @@ A _ _ O
 } _ _ O
 block _ _ O
 B _ _ O
+
+
+ _ _ O
 bne _ _ O
 s0 _ _ O
 , _ _ O
@@ -1051,6 +1297,9 @@ blockB _ _ O
 : _ _ O
 block _ _ O
 B _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 An _ _ O
@@ -1064,6 +1313,9 @@ more _ _ O
 blocks _ _ O
 now _ _ O
 … _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s0 _ _ O
@@ -1082,6 +1334,9 @@ B _ _ O
 } _ _ O
 block _ _ O
 C _ _ O
+
+
+ _ _ O
 bne _ _ O
 s0 _ _ O
 , _ _ O
@@ -1100,6 +1355,9 @@ blockC _ _ O
 : _ _ O
 block _ _ O
 C _ _ O
+
+
+ _ _ O
 we _ _ O
 NEED _ _ O
 THIS _ _ O
@@ -1116,6 +1374,9 @@ your _ _ O
 labels _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 The _ _ O
@@ -1182,12 +1443,21 @@ s0 _ _ O
 else _ _ O
 { _ _ O
 } _ _ O
+
+
+ _ _ O
 block _ _ O
 A _ _ O
 block _ _ O
 B _ _ O
+
+
+ _ _ O
 block _ _ O
 C _ _ O
+
+
+ _ _ O
 beq _ _ O
 s0 _ _ O
 , _ _ O
@@ -1231,12 +1501,24 @@ that _ _ O
 compare _ _ O
 to _ _ O
 zero _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 bltz _ _ O
 a _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -1247,10 +1529,16 @@ a _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 blez _ _ O
 a _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -1262,20 +1550,32 @@ a _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 bgtz _ _ O
 a _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
 > _ _ O
 0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 bgez _ _ O
 a _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -1287,10 +1587,16 @@ a _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 { _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 MIPS _ _ O
@@ -1303,13 +1609,22 @@ than _ _ O
 ● _ _ O
 And _ _ O
 … _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 slt _ _ O
+
+
+ _ _ O
 c _ _ O
 , _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 Meaning _ _ O
 if _ _ O
 ( _ _ O
@@ -1328,6 +1643,9 @@ c _ _ O
 = _ _ O
 0 _ _ O
 } _ _ O
+
+
+ _ _ O
 Set _ _ O
 if _ _ O
 Less _ _ O
@@ -1383,10 +1701,16 @@ a _ _ O
 b _ _ O
 , _ _ O
 a≤b _ _ O
+
+
+ _ _ O
 Thanks _ _ O
 , _ _ O
 De _ _ O
 Morgan _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 MIPS _ _ O
@@ -1405,30 +1729,51 @@ use _ _ O
 the _ _ O
 pseudo-instructions _ _ O
 :D _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 blt _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
 < _ _ O
 b _ _ O
 ) _ _ O
+
+
+ _ _ O
 { _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 ble _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -1440,24 +1785,36 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 bgt _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
 > _ _ O
 b _ _ O
 ) _ _ O
+
+
+ _ _ O
 bge _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -1469,10 +1826,16 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 { _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 above _ _ O
 , _ _ O
 a _ _ O
@@ -1489,6 +1852,9 @@ a _ _ O
 register _ _ O
 or _ _ O
 immediate _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Examples _ _ O
@@ -1506,6 +1872,9 @@ a _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 # _ _ O
 Goto _ _ O
 label _ _ O
@@ -1513,6 +1882,9 @@ if _ _ O
 a _ _ O
 > _ _ O
 b _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 branch _ _ O
@@ -1532,6 +1904,9 @@ t _ _ O
 zero _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 # _ _ O
 t=1 _ _ O
 if _ _ O
@@ -1543,6 +1918,9 @@ Goto _ _ O
 label _ _ O
 if _ _ O
 t≠0 _ _ O
+
+
+ _ _ O
 Example _ _ O
 2 _ _ O
 : _ _ O
@@ -1555,11 +1933,17 @@ a _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 # _ _ O
 Goto _ _ O
 label _ _ O
 if _ _ O
 a≥b _ _ O
+
+
+ _ _ O
 Solution _ _ O
 : _ _ O
 branch _ _ O
@@ -1582,6 +1966,9 @@ t _ _ O
 zero _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 # _ _ O
 t=1 _ _ O
 if _ _ O
@@ -1597,6 +1984,9 @@ t=0 _ _ O
 
 Complex _ _ O
 conditionals _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 In _ _ O
@@ -1618,6 +2008,9 @@ dog_name _ _ O
 Fluffy _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 if _ _ O
 dog_size _ _ O
 is _ _ O
@@ -1629,14 +2022,23 @@ dog_name _ _ O
 ) _ _ O
 called _ _ O
 ? _ _ O
+
+
+ _ _ O
 NO _ _ O
 ! _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 short _ _ O
 circuit _ _ O
 evaluation _ _ O
 . _ _ O
+
+
+ _ _ O
 for _ _ O
 || _ _ O
 ( _ _ O
@@ -1695,6 +2097,9 @@ one _ _ O
 is _ _ O
 skipped _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 In _ _ O
@@ -1773,6 +2178,9 @@ comes _ _ O
 down _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 And-and _ _ O
@@ -1812,6 +2220,9 @@ condition _ _ O
 is _ _ O
 false _ _ O
 … _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s0 _ _ O
@@ -1828,6 +2239,9 @@ s1 _ _ O
 block _ _ O
 A _ _ O
 } _ _ O
+
+
+ _ _ O
 bne _ _ O
 s0 _ _ O
 , _ _ O
@@ -1844,6 +2258,9 @@ block _ _ O
 A _ _ O
 skipA _ _ O
 : _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Or-or _ _ O
@@ -1884,6 +2301,9 @@ conditions _ _ O
 are _ _ O
 false _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s0 _ _ O
@@ -1899,6 +2319,9 @@ s1 _ _ O
 block _ _ O
 A _ _ O
 } _ _ O
+
+
+ _ _ O
 beq _ _ O
 s0 _ _ O
 , _ _ O
@@ -1941,6 +2364,9 @@ for _ _ O
 loop _ _ O
 work _ _ O
 ? _ _ O
+
+
+ _ _ O
 What _ _ O
 is _ _ O
 the _ _ O
@@ -1950,6 +2376,9 @@ a _ _ O
 for _ _ O
 does _ _ O
 ? _ _ O
+
+
+ _ _ O
 Initialize _ _ O
 : _ _ O
 i=0 _ _ O
@@ -1989,6 +2418,9 @@ block _ _ O
 A _ _ O
 Finally _ _ O
 ? _ _ O
+
+
+ _ _ O
 Increment _ _ O
 : _ _ O
 i++ _ _ O
@@ -1998,6 +2430,9 @@ up _ _ O
 to _ _ O
 the _ _ O
 top _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Looping _ _ O
@@ -2128,6 +2563,9 @@ up _ _ O
 # _ _ O
 carry _ _ O
 on _ _ O
+
+
+ _ _ O
 ● _ _ O
 Let _ _ O
 ’s _ _ O
@@ -2136,6 +2574,9 @@ s0 _ _ O
 to _ _ O
 hold _ _ O
 i _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 That _ _ O
@@ -2189,6 +2630,9 @@ to _ _ O
 skip _ _ O
 over _ _ O
 code _ _ O
+
+
+ _ _ O
 li _ _ O
 s0 _ _ O
 , _ _ O
@@ -2368,6 +2812,9 @@ carry_on _ _ O
 # _ _ O
 carry _ _ O
 on _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 While _ _ O
@@ -2379,6 +2826,9 @@ no _ _ O
 initialization _ _ O
 or _ _ O
 increment _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 s2 _ _ O
@@ -2396,6 +2846,9 @@ stuff _ _ O
 / _ _ O
 more _ _ O
 stuff _ _ O
+
+
+ _ _ O
 loop_top _ _ O
 : _ _ O
 bge _ _ O
@@ -2425,6 +2878,9 @@ more_stuff _ _ O
 # _ _ O
 more _ _ O
 stuff _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 

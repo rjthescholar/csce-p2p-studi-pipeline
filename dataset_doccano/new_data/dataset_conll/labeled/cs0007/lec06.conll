@@ -18,6 +18,9 @@ September _ _ O
 20 _ _ O
 , _ _ O
 2016 _ _ O
+
+
+ _ _ O
 Even _ _ O
 more _ _ O
 API _ _ B-Concept
@@ -25,26 +28,35 @@ for _ _ O
 your _ _ O
 first _ _ O
 Object _ _ O
+
+
+ _ _ O
 SCANNERS _ _ B-Concept
+
+
+ _ _ O
 Scanner _ _ B-Concept
+
+
+ _ _ O
 What _ _ O
 is _ _ O
 a _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 ? _ _ O
 • _ _ O
 Retrieves _ _ O
-input _ _ O
+input _ _ B-Concept
 • _ _ O
 Can _ _ O
 take _ _ O
-input _ _ O
-from _ _ O
+input _ _ B-Concept
+from _ _ I-Concept
 a _ _ O
 file _ _ O
 , _ _ O
 an _ _ O
-input _ _ O
+input _ _ B-Concept
 stream _ _ O
 ( _ _ O
 console _ _ O
@@ -76,18 +88,27 @@ Strings _ _ O
 • _ _ O
 An _ _ O
 object _ _ O
+
+
+ _ _ O
 Declaring _ _ O
 Objects _ _ O
+
+
+ _ _ O
 Type _ _ O
 name _ _ O
 = _ _ O
 expression _ _ O
 ; _ _ O
-Scanner _ _ O
+
+
+ _ _ O
+Scanner _ _ B-Concept
 name _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 ( _ _ O
 ) _ _ O
 ; _ _ O
@@ -105,6 +126,9 @@ exactly _ _ O
 goes _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 Declaring _ _ O
 Objects _ _ O
 • _ _ O
@@ -127,7 +151,7 @@ the _ _ O
 keyword _ _ O
 are _ _ O
 called _ _ O
-constructors _ _ O
+constructors _ _ B-Concept
 • _ _ O
 Where _ _ O
 can _ _ O
@@ -136,6 +160,9 @@ look _ _ O
 for _ _ O
 them _ _ O
 ? _ _ O
+
+
+ _ _ O
 A _ _ O
 Special _ _ O
 InputStream _ _ O
@@ -157,7 +184,7 @@ A _ _ O
 " _ _ O
 special _ _ O
 " _ _ O
-variable _ _ O
+variable _ _ B-Concept
 . _ _ O
 • _ _ O
 Is _ _ O
@@ -166,15 +193,21 @@ static _ _ O
 or _ _ O
 non-static _ _ O
 ? _ _ O
-Scanner _ _ O
+
+
+ _ _ O
+Scanner _ _ B-Concept
 consoleInput _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 ( _ _ O
 System.in _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 What _ _ O
 can _ _ O
 I _ _ O
@@ -186,7 +219,7 @@ it _ _ O
 I _ _ O
 have _ _ O
 a _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 that _ _ O
 can _ _ O
 read _ _ O
@@ -206,15 +239,18 @@ actually _ _ O
 use _ _ O
 it _ _ O
 ? _ _ O
+
+
+ _ _ O
 Using _ _ O
-Scanner _ _ O
-public _ _ O
+Scanner _ _ B-Concept
+public _ _ B-Concept
 class _ _ O
 AddingMachine _ _ O
 { _ _ O
-public _ _ O
+public _ _ B-Concept
 static _ _ O
-void _ _ O
+void _ _ B-Concept
 main _ _ O
 ( _ _ O
 String _ _ O
@@ -223,11 +259,11 @@ String _ _ O
 args _ _ O
 ) _ _ O
 { _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 scan _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 ( _ _ O
 System.in _ _ O
 ) _ _ O
@@ -308,15 +344,18 @@ main _ _ O
 End _ _ O
 class _ _ O
 AddingMachine _ _ O
+
+
+ _ _ O
 Using _ _ O
-Scanner _ _ O
-public _ _ O
+Scanner _ _ B-Concept
+public _ _ B-Concept
 class _ _ O
 AddingMachine _ _ O
 { _ _ O
-public _ _ O
+public _ _ B-Concept
 static _ _ O
-void _ _ O
+void _ _ B-Concept
 main _ _ O
 ( _ _ O
 String _ _ O
@@ -325,11 +364,116 @@ String _ _ O
 args _ _ O
 ) _ _ O
 { _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 scan _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
+( _ _ O
+System.in _ _ B-Concept
+) _ _ O
+; _ _ O
+System.out.println _ _ O
+( _ _ O
+"Please _ _ O
+enter _ _ O
+a _ _ O
+number _ _ O
+: _ _ O
+" _ _ O
+) _ _ O
+; _ _ O
+double _ _ O
+firstNum _ _ O
+= _ _ O
+scan.nextDouble _ _ O
+( _ _ O
+) _ _ O
+; _ _ O
+System.out.println _ _ O
+( _ _ O
+"Please _ _ O
+enter _ _ O
+a _ _ O
+second _ _ O
+number _ _ O
+: _ _ O
+" _ _ O
+) _ _ O
+; _ _ O
+double _ _ O
+secondNum _ _ O
+= _ _ O
+scan.nextDouble _ _ O
+( _ _ O
+) _ _ O
+; _ _ O
+double _ _ O
+sum _ _ O
+= _ _ O
+firstNum _ _ O
++ _ _ O
+secondNum _ _ O
+; _ _ O
+System.out.println _ _ O
+( _ _ O
+"The _ _ O
+sum _ _ O
+of _ _ O
+" _ _ O
++ _ _ O
+firstNum _ _ O
++ _ _ O
+" _ _ O
+and _ _ O
+" _ _ O
++ _ _ O
+secondNum _ _ O
++ _ _ O
+" _ _ O
+equals _ _ O
+" _ _ O
++ _ _ O
+sum _ _ O
+) _ _ O
+; _ _ O
+} _ _ O
+/ _ _ O
+/ _ _ O
+end _ _ O
+method _ _ O
+main _ _ O
+} _ _ O
+/ _ _ O
+/ _ _ O
+End _ _ O
+class _ _ O
+AddingMachine _ _ O
+
+
+ _ _ O
+Using _ _ O
+Scanner _ _ B-Concept
+public _ _ B-Concept
+class _ _ O
+AddingMachine _ _ O
+{ _ _ O
+public _ _ B-Concept
+static _ _ O
+void _ _ B-Concept
+main _ _ O
+( _ _ O
+String _ _ O
+[ _ _ O
+] _ _ O
+args _ _ O
+) _ _ O
+{ _ _ O
+Scanner _ _ B-Concept
+scan _ _ O
+= _ _ O
+new _ _ O
+Scanner _ _ B-Concept
 ( _ _ O
 System.in _ _ O
 ) _ _ O
@@ -410,114 +554,21 @@ main _ _ O
 End _ _ O
 class _ _ O
 AddingMachine _ _ O
-Using _ _ O
-Scanner _ _ O
-public _ _ O
-class _ _ O
-AddingMachine _ _ O
-{ _ _ O
-public _ _ O
-static _ _ O
-void _ _ O
-main _ _ O
-( _ _ O
-String _ _ O
-[ _ _ O
-] _ _ O
-args _ _ O
-) _ _ O
-{ _ _ O
-Scanner _ _ O
-scan _ _ O
-= _ _ O
-new _ _ O
-Scanner _ _ O
-( _ _ O
-System.in _ _ O
-) _ _ O
-; _ _ O
-System.out.println _ _ O
-( _ _ O
-"Please _ _ O
-enter _ _ O
-a _ _ O
-number _ _ O
-: _ _ O
-" _ _ O
-) _ _ O
-; _ _ O
-double _ _ O
-firstNum _ _ O
-= _ _ O
-scan.nextDouble _ _ O
-( _ _ O
-) _ _ O
-; _ _ O
-System.out.println _ _ O
-( _ _ O
-"Please _ _ O
-enter _ _ O
-a _ _ O
-second _ _ O
-number _ _ O
-: _ _ O
-" _ _ O
-) _ _ O
-; _ _ O
-double _ _ O
-secondNum _ _ O
-= _ _ O
-scan.nextDouble _ _ O
-( _ _ O
-) _ _ O
-; _ _ O
-double _ _ O
-sum _ _ O
-= _ _ O
-firstNum _ _ O
-+ _ _ O
-secondNum _ _ O
-; _ _ O
-System.out.println _ _ O
-( _ _ O
-"The _ _ O
-sum _ _ O
-of _ _ O
-" _ _ O
-+ _ _ O
-firstNum _ _ O
-+ _ _ O
-" _ _ O
-and _ _ O
-" _ _ O
-+ _ _ O
-secondNum _ _ O
-+ _ _ O
-" _ _ O
-equals _ _ O
-" _ _ O
-+ _ _ O
-sum _ _ O
-) _ _ O
-; _ _ O
-} _ _ O
-/ _ _ O
-/ _ _ O
-end _ _ O
-method _ _ O
-main _ _ O
-} _ _ O
-/ _ _ O
-/ _ _ O
-End _ _ O
-class _ _ O
-AddingMachine _ _ O
+
+
+ _ _ O
 Let _ _ O
 's _ _ O
 Compile _ _ O
+
+
+ _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 Error _ _ O
 ? _ _ O
 ! _ _ O
@@ -547,7 +598,7 @@ console _ _ O
 output _ _ O
 , _ _ O
 " _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 " _ _ O
 does _ _ O
 not _ _ O
@@ -562,9 +613,15 @@ figure _ _ O
 out _ _ O
 why _ _ O
 ? _ _ O
+
+
+ _ _ O
 From _ _ O
 the _ _ O
-API _ _ O
+API _ _ B-Concept
+
+
+ _ _ O
 Error _ _ O
 ? _ _ O
 ! _ _ O
@@ -599,24 +656,27 @@ In _ _ O
 order _ _ O
 to _ _ O
 include _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 , _ _ O
 we _ _ O
 need _ _ O
 to _ _ O
 do _ _ O
 an _ _ O
-import _ _ O
-import _ _ O
-java.util.Scanner _ _ O
-; _ _ O
-public _ _ O
+import _ _ B-Concept
+
+
+ _ _ O
+import _ _ B-Concept
+java.util.Scanner _ _ I-Concept
+; _ _ B-Concept
+public _ _ B-Concept
 class _ _ O
 AddingMachine _ _ O
 { _ _ O
-public _ _ O
+public _ _ B-Concept
 static _ _ O
-void _ _ O
+void _ _ B-Concept
 main _ _ O
 ( _ _ O
 String _ _ O
@@ -625,11 +685,11 @@ String _ _ O
 args _ _ O
 ) _ _ O
 { _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 scan _ _ O
 = _ _ O
 new _ _ O
-Scanner _ _ O
+Scanner _ _ B-Concept
 ( _ _ O
 System.in _ _ O
 ) _ _ O
@@ -710,16 +770,25 @@ main _ _ O
 End _ _ O
 class _ _ O
 AddingMachine _ _ O
+
+
+ _ _ O
 Do _ _ O
 n't _ _ O
 Forget _ _ O
 to _ _ O
-Import _ _ O
-FUNCTIONS _ _ O
-Functions _ _ O
+Import _ _ B-Concept
+
+
+ _ _ O
+FUNCTIONS _ _ B-Concept
+
+
+ _ _ O
+Functions _ _ B-Concept
 • _ _ O
 A _ _ O
-function _ _ O
+function _ _ B-Concept
 is _ _ O
 similar _ _ O
 to _ _ O
@@ -745,25 +814,28 @@ Contains _ _ O
 several _ _ O
 more _ _ O
 parts _ _ O
+
+
+ _ _ O
 Java _ _ O
-Functions _ _ O
+Functions _ _ B-Concept
 • _ _ O
 Takes _ _ O
 in _ _ O
 zero _ _ O
 or _ _ O
 more _ _ O
-parameters _ _ O
+parameters _ _ B-Concept
 , _ _ O
 processes _ _ O
 them _ _ O
 in _ _ O
 the _ _ O
-function _ _ O
+function _ _ B-Concept
 body _ _ O
 , _ _ O
 and _ _ O
-returns _ _ O
+returns _ _ B-Concept
 a _ _ O
 result _ _ O
 • _ _ O
@@ -788,14 +860,14 @@ to _ _ O
 run _ _ O
 a _ _ O
 fixing _ _ O
-function _ _ O
+function _ _ B-Concept
 , _ _ O
 with _ _ O
 your _ _ O
 computer _ _ O
 being _ _ O
 a _ _ O
-parameter _ _ O
+parameter _ _ B-Concept
 . _ _ O
 What _ _ O
 you _ _ O
@@ -806,6 +878,9 @@ your _ _ O
 fixed _ _ O
 computer _ _ O
 . _ _ O
+
+
+ _ _ O
 You _ _ O
 Already _ _ O
 Have _ _ O
@@ -819,14 +894,14 @@ know _ _ O
 how _ _ O
 to _ _ O
 call _ _ O
-functions _ _ O
+functions _ _ B-Concept
 ! _ _ O
 Static _ _ O
 : _ _ O
 ClassName.functionName _ _ O
 ( _ _ O
 < _ _ O
-parameters _ _ O
+parameters _ _ B-Concept
 > _ _ O
 ) _ _ O
 ; _ _ O
@@ -835,7 +910,7 @@ Non-static _ _ O
 objectName.functionName _ _ O
 ( _ _ O
 < _ _ O
-parameter _ _ O
+parameter _ _ B-Concept
 s _ _ O
 > _ _ O
 ) _ _ O
@@ -848,42 +923,54 @@ make _ _ O
 my _ _ O
 own _ _ O
 ? _ _ O
-Function _ _ O
-Components _ _ O
+
+
+ _ _ O
+Function _ _ B-Concept
+Components _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 2 _ _ O
 . _ _ O
 3 _ _ O
 . _ _ O
-Function _ _ O
+Function _ _ B-Concept
 4 _ _ O
 . _ _ O
-Header _ _ O
+Header _ _ B-Concept
 5 _ _ O
 . _ _ O
-Function _ _ O
+
+
+ _ _ O
+Function _ _ B-Concept
 Body _ _ O
 6 _ _ O
 . _ _ O
-Visibility _ _ O
-type _ _ O
+
+
+ _ _ O
+Visibility _ _ B-Concept
+type _ _ I-Concept
 ( _ _ O
-public _ _ O
+public _ _ B-Concept
 / _ _ O
-protected _ _ O
+protected _ _ B-Concept
 / _ _ O
-private _ _ O
+private _ _ B-Concept
 ) _ _ O
-static _ _ O
-( _ _ O
+static _ _ B-Concept
+( _ _ I-Concept
 For _ _ O
 now _ _ O
 , _ _ O
 required _ _ O
 ) _ _ O
-Return _ _ O
-Type _ _ O
+Return _ _ B-Concept
+Type _ _ I-Concept
 functionName _ _ O
 Parentheses _ _ O
 " _ _ O
@@ -897,12 +984,18 @@ b _ _ O
 ) _ _ O
 c _ _ O
 ) _ _ O
-Parameters _ _ O
+
+
+ _ _ O
+Parameters _ _ B-Concept
 Type1 _ _ O
 parameterName1 _ _ O
 Type2 _ _ O
 parameterName2 _ _ O
 ... _ _ O
+
+
+ _ _ O
 Curly _ _ O
 Brackets _ _ O
 / _ _ O
@@ -912,8 +1005,14 @@ Braces _ _ O
 } _ _ O
 " _ _ O
 - _ _ O
-return _ _ O
+
+
+ _ _ O
+return _ _ B-Concept
 a _ _ O
 value _ _ O
+
+
+ _ _ O
 
 

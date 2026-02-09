@@ -52,12 +52,18 @@ late _ _ O
 Sunday _ _ O
 ) _ _ O
 ! _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 From _ _ O
 Local _ _ O
 to _ _ O
 Global _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Local _ _ O
@@ -97,6 +103,9 @@ x _ _ O
 return _ _ O
 x _ _ O
 ; _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 5 _ _ O
@@ -107,6 +116,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 25 _ _ O
@@ -115,11 +127,17 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
 25 _ _ O
 return _ _ O
+
+
+ _ _ O
 but _ _ O
 local _ _ O
 optimizations _ _ O
@@ -190,6 +208,9 @@ optimization _ _ O
 Stumbling _ _ O
 block _ _ O
 basic _ _ O
+
+
+ _ _ O
 ● _ _ O
 if _ _ O
 we _ _ O
@@ -227,6 +248,9 @@ f _ _ O
 return _ _ O
 x _ _ O
 ; _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 x _ _ O
@@ -246,6 +270,9 @@ f _ _ O
 ) _ _ O
 goto _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 $ _ _ O
@@ -253,6 +280,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 still _ _ O
@@ -260,6 +290,9 @@ constfold _ _ O
 up _ _ O
 here _ _ O
 … _ _ O
+
+
+ _ _ O
 but _ _ O
 now _ _ O
 the _ _ O
@@ -273,6 +306,9 @@ a _ _ O
 different _ _ O
 BB _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 we _ _ O
 want _ _ O
@@ -377,6 +413,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 x _ _ O
 is _ _ O
 only _ _ O
@@ -392,6 +431,9 @@ it _ _ O
 's _ _ O
 used _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 x _ _ O
@@ -416,6 +458,9 @@ t0 _ _ O
 = _ _ O
 25 _ _ O
 return _ _ O
+
+
+ _ _ O
 now _ _ O
 x _ _ O
 is _ _ O
@@ -426,6 +471,9 @@ so _ _ O
 delete _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 if _ _ O
@@ -447,6 +495,9 @@ t0 _ _ O
 = _ _ O
 25 _ _ O
 return _ _ O
+
+
+ _ _ O
 that _ _ O
 was _ _ O
 n't _ _ O
@@ -456,6 +507,9 @@ bad _ _ O
 was _ _ O
 it _ _ O
 ? _ _ O
+
+
+ _ _ O
 well _ _ O
 … _ _ O
 6 _ _ O
@@ -501,6 +555,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 here _ _ O
 , _ _ O
 x _ _ O
@@ -519,6 +576,9 @@ ca _ _ O
 n't _ _ O
 propagate _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 x _ _ O
@@ -536,6 +596,9 @@ x _ _ O
 10 _ _ O
 goto _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 x _ _ O
@@ -543,6 +606,9 @@ x _ _ O
 10 _ _ O
 goto _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 bb3 _ _ O
 : _ _ O
 $ _ _ O
@@ -550,6 +616,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 but _ _ O
 here _ _ O
 , _ _ O
@@ -596,6 +665,9 @@ only _ _ O
 gets _ _ O
 worse _ _ O
 . _ _ O
+
+
+ _ _ O
 intuitively _ _ O
 , _ _ O
 we _ _ O
@@ -604,6 +676,9 @@ simplify _ _ O
 this _ _ O
 whole _ _ O
 function _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
@@ -693,6 +768,9 @@ i _ _ O
 1 _ _ O
 goto _ _ O
 bb1 _ _ O
+
+
+ _ _ O
 but _ _ O
 the _ _ O
 first _ _ O
@@ -704,6 +782,9 @@ is _ _ O
 never _ _ O
 used _ _ O
 … _ _ O
+
+
+ _ _ O
 and _ _ O
 the _ _ O
 assignment _ _ O
@@ -728,6 +809,9 @@ be _ _ O
 removed _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 bb3 _ _ O
 : _ _ O
 $ _ _ O
@@ -843,11 +927,17 @@ data _ _ O
 flow _ _ O
 analysis _ _ O
 . _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Data _ _ O
 Flow _ _ O
 Analysis _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Coming _ _ O
@@ -921,9 +1011,18 @@ visited _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 } _ _ O
 visit_node _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 so _ _ O
 you _ _ O
 can _ _ O
@@ -947,14 +1046,41 @@ to _ _ O
 visited _ _ O
 . _ _ O
 Unvisited _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Visited _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Why _ _ O
@@ -1073,6 +1199,9 @@ in _ _ O
 one _ _ O
 direction _ _ O
 . _ _ O
+
+
+ _ _ O
 therefore _ _ O
 , _ _ O
 the _ _ O
@@ -1101,6 +1230,9 @@ sets _ _ O
 . _ _ O
 minus _ _ O
 one _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 A _ _ O
@@ -1141,6 +1273,9 @@ g _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 no _ _ O
 . _ _ O
 what _ _ O
@@ -1152,6 +1287,9 @@ in _ _ O
 the _ _ O
 CFG _ _ O
 ? _ _ O
+
+
+ _ _ O
 this _ _ O
 can _ _ O
 come _ _ O
@@ -1160,6 +1298,9 @@ in _ _ O
 real _ _ O
 code _ _ O
 : _ _ O
+
+
+ _ _ O
 these _ _ O
 nodes _ _ O
 / _ _ O
@@ -1172,10 +1313,19 @@ can _ _ O
 remove _ _ O
 them _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
+
+
+ _ _ O
 f _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 g _ _ O
 ( _ _ O
 ) _ _ O
@@ -1183,6 +1333,9 @@ f _ _ O
 ( _ _ O
 ) _ _ O
 … _ _ O
+
+
+ _ _ O
 const _ _ O
 FEATURE_ENABLED _ _ O
 = _ _ O
@@ -1218,7 +1371,13 @@ g _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Tweaking _ _ O
@@ -1336,6 +1495,9 @@ visited _ _ O
 } _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 I _ _ O
 'm _ _ O
 paraphrasing _ _ O
@@ -1427,14 +1589,26 @@ g _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 if _ _ O
 f _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 g _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 done _ _ O
 . _ _ O
 now _ _ O
@@ -1481,6 +1655,9 @@ super _ _ O
 complicated _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 do _ _ O
 you _ _ O
 remember _ _ O
@@ -1512,6 +1689,9 @@ reachable _ _ O
 … _ _ O
 ; _ _ O
 o _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Forward _ _ O
@@ -1640,6 +1820,9 @@ we _ _ O
 encountered _ _ O
 before _ _ O
 ! _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Global _ _ O
@@ -1649,6 +1832,9 @@ Propagation _ _ O
 ( _ _ O
 GCCP _ _ O
 ) _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Defs _ _ O
@@ -1760,9 +1946,15 @@ here _ _ O
 a _ _ O
 def-use _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 3 _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 5 _ _ O
@@ -1770,6 +1962,9 @@ f _ _ O
 ( _ _ O
 x _ _ O
 ) _ _ O
+
+
+ _ _ O
 there _ _ O
 can _ _ O
 be _ _ O
@@ -1996,6 +2191,9 @@ a _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 x _ _ O
@@ -2006,6 +2204,9 @@ a _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb1 _ _ O
 : _ _ O
 f _ _ O
@@ -2013,6 +2214,9 @@ f _ _ O
 ) _ _ O
 goto _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb1 _ _ O
 : _ _ O
 x _ _ O
@@ -2020,6 +2224,9 @@ x _ _ O
 10 _ _ O
 goto _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 $ _ _ O
@@ -2027,6 +2234,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 $ _ _ O
@@ -2034,6 +2244,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 1 _ _ O
 def-use _ _ O
 , _ _ O
@@ -2049,6 +2262,9 @@ x _ _ O
 with _ _ O
 25 _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 def-uses _ _ O
 ; _ _ O
@@ -2061,6 +2277,9 @@ values _ _ O
 no _ _ O
 good _ _ O
 . _ _ O
+
+
+ _ _ O
 bb0 _ _ O
 : _ _ O
 x _ _ O
@@ -2078,6 +2297,9 @@ x _ _ O
 10 _ _ O
 goto _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 bb2 _ _ O
 : _ _ O
 x _ _ O
@@ -2085,6 +2307,9 @@ x _ _ O
 10 _ _ O
 goto _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 bb3 _ _ O
 : _ _ O
 $ _ _ O
@@ -2092,6 +2317,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 2 _ _ O
 def-uses _ _ O
 ; _ _ O
@@ -2178,6 +2406,9 @@ what _ _ O
 we _ _ O
 know _ _ O
 . _ _ O
+
+
+ _ _ O
 Knowledge _ _ O
 x _ _ O
 = _ _ O
@@ -2196,6 +2427,9 @@ y _ _ O
 x _ _ O
 = _ _ O
 4 _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 f _ _ O
@@ -2206,12 +2440,18 @@ x _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 9 _ _ O
 x _ _ O
 = _ _ O
 9 _ _ O
+
+
+ _ _ O
 the _ _ O
 change _ _ O
 in _ _ O
@@ -2471,6 +2711,9 @@ CONST _ _ O
 ( _ _ O
 9 _ _ O
 ) _ _ O
+
+
+ _ _ O
 there _ _ O
 is _ _ O
 some _ _ O
@@ -2500,17 +2743,26 @@ g _ _ O
 ) _ _ O
 goto _ _ O
 bb7 _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 CONST _ _ O
 ( _ _ O
 9 _ _ O
 ) _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 we _ _ O
 repeatedly _ _ O
 apply _ _ O
@@ -2522,6 +2774,9 @@ the _ _ O
 instructions _ _ O
 inside _ _ O
 … _ _ O
+
+
+ _ _ O
 and _ _ O
 that _ _ O
 gives _ _ O
@@ -2612,12 +2867,18 @@ CONST _ _ O
 ( _ _ O
 5 _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 f _ _ O
 ( _ _ O
 ) _ _ O
 ANY _ _ O
+
+
+ _ _ O
 so _ _ O
 , _ _ O
 red _ _ O
@@ -2629,6 +2890,9 @@ x _ _ O
 = _ _ O
 ANY _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 5 _ _ O
@@ -2636,6 +2900,9 @@ CONST _ _ O
 ( _ _ O
 5 _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 3 _ _ O
@@ -2643,6 +2910,9 @@ CONST _ _ O
 ( _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 still _ _ O
 , _ _ O
 red _ _ O
@@ -2654,6 +2924,9 @@ x _ _ O
 = _ _ O
 ANY _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 3 _ _ O
@@ -2661,6 +2934,9 @@ CONST _ _ O
 ( _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 3 _ _ O
@@ -2668,6 +2944,9 @@ CONST _ _ O
 ( _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 success _ _ O
 ! _ _ O
 red _ _ O
@@ -2681,6 +2960,9 @@ CONST _ _ O
 3 _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 so _ _ O
 : _ _ O
 if _ _ O
@@ -2747,6 +3029,9 @@ a _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 25 _ _ O
@@ -2755,6 +3040,9 @@ a _ _ O
 bb1 _ _ O
 else _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 25 _ _ O
@@ -2762,10 +3050,16 @@ CONST _ _ O
 x _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 25 _ _ O
 ) _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 25 _ _ O
@@ -2773,17 +3067,29 @@ CONST _ _ O
 x _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 25 _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
@@ -2793,6 +3099,9 @@ CONST _ _ O
 10 _ _ O
 ) _ _ O
 return _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
@@ -2802,6 +3111,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 so _ _ O
 , _ _ O
 red _ _ O
@@ -2813,6 +3125,9 @@ x _ _ O
 = _ _ O
 ANY _ _ O
 . _ _ O
+
+
+ _ _ O
 so _ _ O
 , _ _ O
 red _ _ O
@@ -2826,12 +3141,18 @@ CONST _ _ O
 10 _ _ O
 ) _ _ O
 ! _ _ O
+
+
+ _ _ O
 problem _ _ O
 solved _ _ O
 ! _ _ O
 ............ _ _ O
 right _ _ O
 ? _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 The _ _ O
@@ -2860,6 +3181,9 @@ x _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 wait _ _ O
 , _ _ O
 there _ _ O
@@ -2881,6 +3205,9 @@ the _ _ O
 orange _ _ O
 BB _ _ O
 ? _ _ O
+
+
+ _ _ O
 and _ _ O
 if _ _ O
 we _ _ O
@@ -2900,6 +3227,9 @@ same _ _ O
 orange _ _ O
 BB _ _ O
 ! _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
@@ -2916,6 +3246,9 @@ t1 _ _ O
 bb2 _ _ O
 else _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 print _ _ O
 ( _ _ O
 "ha _ _ O
@@ -2926,6 +3259,9 @@ i _ _ O
 i _ _ O
 + _ _ O
 1 _ _ O
+
+
+ _ _ O
 IT _ _ O
 KEEPS _ _ O
 HAPPENING _ _ O
@@ -2939,15 +3275,24 @@ GRAPHS _ _ O
 BRO _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Fixing _ _ O
 it _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Oh _ _ O
@@ -3047,6 +3392,9 @@ the _ _ O
 other _ _ O
 function _ _ O
 … _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 The _ _ O
@@ -3088,6 +3436,9 @@ x _ _ O
 = _ _ O
 ANY _ _ O
 . _ _ O
+
+
+ _ _ O
 p1 _ _ O
 : _ _ O
 x _ _ O
@@ -3114,9 +3465,15 @@ p4 _ _ O
 x _ _ O
 = _ _ O
 UNK _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 ANY _ _ O
+
+
+ _ _ O
 if _ _ O
 all _ _ O
 predecessors _ _ O
@@ -3133,6 +3490,9 @@ x _ _ O
 = _ _ O
 UNK _ _ O
 . _ _ O
+
+
+ _ _ O
 p1 _ _ O
 : _ _ O
 x _ _ O
@@ -3153,9 +3513,15 @@ p4 _ _ O
 x _ _ O
 = _ _ O
 UNK _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 UNK _ _ O
+
+
+ _ _ O
 if _ _ O
 the _ _ O
 predecessors _ _ O
@@ -3186,6 +3552,9 @@ ANY _ _ O
 like _ _ O
 before _ _ O
 . _ _ O
+
+
+ _ _ O
 p1 _ _ O
 : _ _ O
 x _ _ O
@@ -3212,12 +3581,18 @@ CONST _ _ O
 ( _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 CONST _ _ O
 ( _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Let _ _ O
@@ -3274,6 +3649,9 @@ a _ _ O
 second _ _ O
 time _ _ O
 ! _ _ O
+
+
+ _ _ O
 UNK _ _ O
 x _ _ O
 = _ _ O
@@ -3281,6 +3659,9 @@ x _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 UNK _ _ O
 CONST _ _ O
 ( _ _ O
@@ -3324,11 +3705,17 @@ t1 _ _ O
 bb2 _ _ O
 else _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
 UNK _ _ O
+
+
+ _ _ O
 but _ _ O
 no _ _ O
 more _ _ O
@@ -3345,16 +3732,25 @@ algorithm _ _ O
 is _ _ O
 done _ _ O
 . _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
 UNK _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
 UNK _ _ O
+
+
+ _ _ O
 print _ _ O
 ( _ _ O
 "ha _ _ O
@@ -3438,8 +3834,17 @@ though _ _ O
 . _ _ O
 why _ _ O
 ? _ _ O
+
+
+ _ _ O
 CONST _ _ O
+
+
+ _ _ O
 UNK _ _ O
+
+
+ _ _ O
 we _ _ O
 have _ _ O
 a _ _ O
@@ -3460,6 +3865,9 @@ are _ _ O
 unidirectional _ _ O
 . _ _ O
 ANY _ _ O
+
+
+ _ _ O
 that _ _ O
 's _ _ O
 all _ _ O
@@ -3473,6 +3881,9 @@ termination _ _ O
 . _ _ O
 nice _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Shortcomings _ _ O
@@ -3501,6 +3912,9 @@ x _ _ O
 i _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 UNK _ _ O
 CONST _ _ O
 ( _ _ O
@@ -3540,6 +3954,9 @@ t1 _ _ O
 i _ _ O
 < _ _ O
 10 _ _ O
+
+
+ _ _ O
 what _ _ O
 happened _ _ O
 ? _ _ O
@@ -3578,6 +3995,9 @@ from _ _ O
 then _ _ O
 on _ _ O
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 algorithm _ _ O
 does _ _ O
@@ -3599,24 +4019,36 @@ loops _ _ O
 at _ _ O
 all _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 $ _ _ O
 t1 _ _ O
 bb2 _ _ O
 else _ _ O
 bb3 _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
 UNK _ _ O
 ANY _ _ O
+
+
+ _ _ O
 CONST _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
 UNK _ _ O
 ANY _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 20 _ _ O
@@ -3630,6 +4062,9 @@ t0 _ _ O
 = _ _ O
 x _ _ O
 return _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 It _ _ O
@@ -3790,6 +4225,9 @@ a _ _ O
 correct _ _ O
 program _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Summing _ _ O
@@ -3803,6 +4241,9 @@ dataflow _ _ O
 analysis _ _ O
 works _ _ O
 : _ _ O
+
+
+ _ _ O
 join _ _ O
 ( _ _ O
 p1 _ _ O
@@ -3811,7 +4252,13 @@ p2 _ _ O
 , _ _ O
 p3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 in-state _ _ O
+
+
+ _ _ O
 the _ _ O
 transfer _ _ O
 function _ _ O
@@ -3829,6 +4276,9 @@ BB _ _ O
 's _ _ O
 out-state _ _ O
 . _ _ O
+
+
+ _ _ O
 inst1 _ _ O
 inst2 _ _ O
 inst3 _ _ O
@@ -3836,7 +4286,13 @@ inst4 _ _ O
 inst5 _ _ O
 goto _ _ O
 bb2 _ _ O
+
+
+ _ _ O
 out-state _ _ O
+
+
+ _ _ O
 state _ _ O
 flows _ _ O
 from _ _ O
@@ -3857,6 +4313,9 @@ for _ _ O
 the _ _ O
 BB _ _ O
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 repeated _ _ O
@@ -3875,6 +4334,9 @@ they _ _ O
 stop _ _ O
 changing _ _ O
 . _ _ O
+
+
+ _ _ O
 as _ _ O
 long _ _ O
 as _ _ O
@@ -3896,6 +4358,9 @@ algorithm _ _ O
 will _ _ O
 terminate _ _ O
 . _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Liveness _ _ O
@@ -3903,6 +4368,9 @@ time _ _ O
 check _ _ O
 ≤ _ _ O
 87 _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Liveness _ _ O
@@ -3953,6 +4421,9 @@ of _ _ O
 that _ _ O
 def _ _ O
 . _ _ O
+
+
+ _ _ O
 arg _ _ O
 is _ _ O
 only _ _ O
@@ -3970,6 +4441,9 @@ dead _ _ O
 after _ _ O
 that _ _ O
 . _ _ O
+
+
+ _ _ O
 arguments _ _ O
 are _ _ O
 " _ _ O
@@ -3986,6 +4460,9 @@ function _ _ O
 . _ _ O
 arg _ _ O
 ret _ _ O
+
+
+ _ _ O
 fn _ _ O
 lifey _ _ O
 ( _ _ O
@@ -4003,6 +4480,9 @@ arg _ _ O
 + _ _ O
 10 _ _ O
 ; _ _ O
+
+
+ _ _ O
 ret _ _ O
 becomes _ _ O
 live _ _ O
@@ -4022,6 +4502,9 @@ the _ _ O
 return _ _ O
 statement _ _ O
 . _ _ O
+
+
+ _ _ O
 println_i _ _ O
 ( _ _ O
 ret _ _ O
@@ -4030,7 +4513,13 @@ ret _ _ O
 return _ _ O
 ret _ _ O
 ; _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 these _ _ O
 lines _ _ O
 are _ _ O
@@ -4040,6 +4529,9 @@ locals _ _ O
 liveness _ _ O
 ranges _ _ O
 . _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 One _ _ O
@@ -4061,6 +4553,9 @@ multiple _ _ O
 times _ _ O
 ! _ _ O
 x _ _ O
+
+
+ _ _ O
 x _ _ O
 is _ _ O
 live _ _ O
@@ -4103,6 +4598,9 @@ in _ _ O
 this _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
@@ -4120,6 +4618,9 @@ println_s _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 20 _ _ O
@@ -4129,6 +4630,9 @@ println_i _ _ O
 x _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 ( _ _ O
 remember _ _ O
 SSA _ _ O
@@ -4142,6 +4646,9 @@ towards _ _ O
 it _ _ O
 … _ _ O
 ) _ _ O
+
+
+ _ _ O
 liveness _ _ O
 is _ _ O
 the _ _ O
@@ -4173,8 +4680,14 @@ way _ _ O
 
 Two _ _ O
 perspectives _ _ O
+
+
+ _ _ O
 i _ _ O
 obj _ _ O
+
+
+ _ _ O
 now _ _ O
 we _ _ O
 can _ _ O
@@ -4192,10 +4705,16 @@ variables _ _ O
 are _ _ O
 live _ _ O
 ? _ _ O
+
+
+ _ _ O
 found _ _ O
 n _ _ O
 val _ _ O
 l _ _ O
+
+
+ _ _ O
 ● _ _ O
 we _ _ O
 already _ _ O
@@ -4236,6 +4755,9 @@ have _ _ O
 multiple _ _ O
 variables _ _ O
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 very _ _ O
@@ -4258,6 +4780,9 @@ limited _ _ O
 CPU _ _ O
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 fn _ _ O
 has _ _ O
 ( _ _ O
@@ -4396,9 +4921,15 @@ be _ _ O
 used _ _ O
 again _ _ O
 … _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 5 _ _ O
+
+
+ _ _ O
 println_i _ _ O
 ( _ _ O
 x _ _ O
@@ -4406,10 +4937,16 @@ x _ _ O
 y _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 println_i _ _ O
 ( _ _ O
 y _ _ O
 ) _ _ O
+
+
+ _ _ O
 another _ _ O
 use _ _ O
 . _ _ O
@@ -4418,6 +4955,9 @@ let _ _ O
 keep _ _ O
 assuming _ _ O
 . _ _ O
+
+
+ _ _ O
 z _ _ O
 = _ _ O
 x _ _ O
@@ -4428,6 +4968,9 @@ println_b _ _ O
 ( _ _ O
 z _ _ O
 ) _ _ O
+
+
+ _ _ O
 uh _ _ O
 oh _ _ O
 . _ _ O
@@ -4453,6 +4996,9 @@ this _ _ O
 is _ _ O
 wrong _ _ O
 … _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 

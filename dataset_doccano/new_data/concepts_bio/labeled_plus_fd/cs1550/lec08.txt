@@ -1,20 +1,20 @@
+writer process
 semaphore-based
-enterwrite
-enterread
-database queries
+condition variables
 solution
-mutex
-write
+shared variables
 mutex.up
 solution using mutex and condition variables
-last reader
-read
-writer process
 reader process
-condition variables
-donewrite
-shared variables
+database queries
 doneread
 semaphore
-mutex.down
 readers & writers
+mutex.down
+read
+enterwrite
+donewrite
+enterread
+mutex
+last reader
+write

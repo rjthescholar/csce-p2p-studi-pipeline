@@ -12,7 +12,22 @@
                 "CS",
                 "1550",
                 "Spring",
-                "2022",
+                "2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Sherif",
                 "Khattab",
                 "ksm73@pitt.edu",
@@ -31,13 +46,6 @@
                 ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -99,27 +107,9 @@
                 "on",
                 "4",
                 "/",
-                "11",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "2"
+                "11"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -165,102 +155,7 @@
         },
         {
             "sentence": [
-                "Previous",
-                "lecture",
-                "\u2026",
-                "\u2022",
-                "Page",
-                "replacement",
-                "algorithms",
-                "Algorithm",
-                "Comment",
-                "OPT",
-                "(",
-                "Optimal",
-                ")",
-                "Not",
-                "implementable",
-                ",",
-                "but",
-                "useful",
-                "as",
-                "a",
-                "benchmark",
-                "NRU",
-                "(",
-                "Not",
-                "Recently",
-                "Used",
-                ")",
-                "Crude",
-                "FIFO",
-                "(",
-                "First-In",
-                ",",
-                "First",
-                "Out",
-                ")",
-                "Might",
-                "throw",
-                "out",
-                "useful",
-                "pages",
-                "Second",
-                "chance",
-                "Big",
-                "improvement",
-                "over",
-                "FIFO",
-                "Clock",
-                "Better",
-                "implementation",
-                "of",
-                "second",
-                "chance",
-                "LRU",
-                "(",
-                "Least",
-                "Recently",
-                "Used",
-                ")",
-                "Excellent",
-                ",",
-                "but",
-                "hard",
-                "to",
-                "implement",
-                "exactly",
-                "NFU",
-                "(",
-                "Not",
-                "Frequently",
-                "Used",
-                ")",
-                "Poor",
-                "approximation",
-                "to",
-                "LRU",
-                "Aging",
-                "Good",
-                "approximation",
-                "to",
-                "LRU",
-                ",",
-                "efficient",
-                "to",
-                "implement",
-                "Working",
-                "Set",
-                "Somewhat",
-                "expensive",
-                "to",
-                "implement",
-                "WSClock",
-                "Implementable",
-                "version",
-                "of",
-                "Working",
-                "Set",
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -268,8 +163,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "3"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -280,38 +174,249 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Previous",
+                "lecture",
+                "\u2026",
+                "\u2022",
+                "Page",
+                "replacement",
+                "algorithms",
+                "Algorithm"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Comment"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "OPT",
+                "(",
+                "Optimal",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Not",
+                "implementable",
+                ",",
+                "but",
+                "useful",
+                "as",
+                "a",
+                "benchmark"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "NRU",
+                "(",
+                "Not",
+                "Recently",
+                "Used",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Crude"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "FIFO",
+                "(",
+                "First-In",
+                ",",
+                "First",
+                "Out",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Might",
+                "throw",
+                "out",
+                "useful",
+                "pages"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Second",
+                "chance"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Big",
+                "improvement",
+                "over",
+                "FIFO"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Clock"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Better",
+                "implementation",
+                "of",
+                "second",
+                "chance"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "LRU",
+                "(",
+                "Least",
+                "Recently",
+                "Used",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Excellent",
+                ",",
+                "but",
+                "hard",
+                "to",
+                "implement",
+                "exactly"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -319,11 +424,68 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "NFU",
+                "(",
+                "Not",
+                "Frequently",
+                "Used",
+                ")"
+            ],
+            "word_labels": [
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Poor",
+                "approximation",
+                "to",
+                "LRU"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Aging"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Good",
+                "approximation",
+                "to",
+                "LRU",
+                ",",
+                "efficient",
+                "to",
+                "implement"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -332,18 +494,78 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Working",
+                "Set"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Somewhat",
+                "expensive",
+                "to",
+                "implement"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "WSClock"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Implementable",
+                "version",
+                "of",
+                "Working",
+                "Set"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -352,29 +574,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -532,8 +740,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "4"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -687,6 +894,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "4"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -806,29 +1022,7 @@
                 ")",
                 "runtime",
                 ")",
-                "?",
-                "\u2022",
-                "I",
-                "am",
-                "confused",
-                "on",
-                "the",
-                "details",
-                "of",
-                "thrashing",
-                "\u2022",
-                "LRU",
-                "page",
-                "replacement",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "5"
+                "?"
             ],
             "word_labels": [
                 "O",
@@ -944,6 +1138,35 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "I",
+                "am",
+                "confused",
+                "on",
+                "the",
+                "details",
+                "of",
+                "thrashing",
+                "\u2022",
+                "LRU",
+                "page",
+                "replacement",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -965,6 +1188,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "5"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1069,7 +1301,113 @@
                 "page",
                 "table",
                 "indexed",
-                "?",
+                "?"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "redo",
                 "a",
@@ -1095,8 +1433,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "6"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1125,104 +1462,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1247,16 +1495,7 @@
                 "\u2022",
                 "LRU",
                 ",",
-                "OPT",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "7"
+                "OPT"
             ],
             "word_labels": [
                 "O",
@@ -1266,6 +1505,181 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "7"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "\u2022"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "How",
+                "is",
+                "modeling",
+                "done",
+                "?",
+                "Generate",
+                "a",
+                "list",
+                "of",
+                "references",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Artificial",
+                "(",
+                "made",
+                "up",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Trace",
+                "a",
+                "real",
+                "workload",
+                "(",
+                "set",
+                "of",
+                "processes",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Use",
+                "an",
+                "array",
+                "(",
+                "or",
+                "other",
+                "structure",
+                ")",
+                "to",
+                "track",
+                "the",
+                "pages",
+                "in",
+                "physical",
+                "memory",
+                "at",
+                "any",
+                "given",
+                "time",
+                "\u2022"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1291,54 +1705,7 @@
         },
         {
             "sentence": [
-                "\u2022",
-                "\u2022",
-                "How",
-                "is",
-                "modeling",
-                "done",
-                "?",
-                "Generate",
-                "a",
-                "list",
-                "of",
-                "references",
-                "\u2022",
-                "Artificial",
-                "(",
-                "made",
-                "up",
-                ")",
-                "\u2022",
-                "Trace",
-                "a",
-                "real",
-                "workload",
-                "(",
-                "set",
-                "of",
-                "processes",
-                ")",
-                "Use",
-                "an",
-                "array",
-                "(",
-                "or",
-                "other",
-                "structure",
-                ")",
-                "to",
-                "track",
-                "the",
-                "pages",
-                "in",
-                "physical",
-                "memory",
-                "at",
-                "any",
-                "given",
-                "time",
-                "\u2022",
+                "",
                 "May",
                 "keep",
                 "other",
@@ -1361,8 +1728,48 @@
                 ",",
                 "etc",
                 ".",
-                ")",
-                "\u2022",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Run",
                 "through",
                 "references",
@@ -1370,8 +1777,33 @@
                 "applying",
                 "the",
                 "replacement",
-                "algorithm",
-                "\u2022",
+                "algorithm"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Example",
                 ":",
                 "FIFO",
@@ -1391,7 +1823,35 @@
                 "2",
                 "3",
                 "4",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Page",
                 "replacements",
                 "highlighted",
@@ -1412,7 +1872,36 @@
                 "3",
                 "4",
                 "Youngest",
-                "page",
+                "page"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "0",
                 "1",
                 "2",
@@ -1435,28 +1924,7 @@
                 "1",
                 "4",
                 "2",
-                "2",
-                "Oldest",
-                "page",
-                "0",
-                "1",
-                "2",
-                "3",
-                "0",
-                "0",
-                "0",
-                "1",
-                "4",
-                "4",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "8"
+                "2"
             ],
             "word_labels": [
                 "O",
@@ -1482,8 +1950,36 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Oldest",
+                "page"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0",
+                "1",
+                "2",
+                "3",
+                "0",
+                "0",
+                "0",
+                "1",
+                "4",
+                "4"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1494,6 +1990,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1502,127 +2014,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "8"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1640,16 +2040,7 @@
                 "sim-50.github.io",
                 "/",
                 "cs-tools",
-                "/",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "9"
+                "/"
             ],
             "word_labels": [
                 "O",
@@ -1663,6 +2054,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1671,6 +2078,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "9"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1680,7 +2096,18 @@
                 "FIFO",
                 "with",
                 "3",
-                "frames",
+                "frames"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1688,14 +2115,9 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "10"
+                "Khattab"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1709,9 +2131,29 @@
         },
         {
             "sentence": [
+                "",
+                "10"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "FIFO",
                 "Example",
-                "1",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1719,8 +2161,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "11"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1731,8 +2172,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "11"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1742,7 +2190,18 @@
                 "FIFO",
                 "with",
                 "4",
-                "frames",
+                "frames"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1750,14 +2209,9 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "12"
+                "Khattab"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1771,9 +2225,45 @@
         },
         {
             "sentence": [
-                "\u2022",
-                "\u2022",
-                "\u2022",
+                "",
+                "12"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "\u2022"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Belady",
                 "\u2019s",
                 "anomaly",
@@ -1787,139 +2277,9 @@
                 "supplying",
                 "more",
                 "memory",
-                "\u2022",
-                "Use",
-                "previous",
-                "reference",
-                "string",
-                "and",
-                "FIFO",
-                "algorithm",
-                "\u2022",
-                "Add",
-                "another",
-                "page",
-                "to",
-                "physical",
-                "memory",
-                "(",
-                "total",
-                "4",
-                "pages",
-                ")",
-                "More",
-                "page",
-                "faults",
-                "(",
-                "10",
-                "vs.",
-                "9",
-                ")",
-                ",",
-                "not",
-                "fewer",
-                "!",
-                "\u2022",
-                "This",
-                "is",
-                "called",
-                "Belady",
-                "\u2019s",
-                "anomaly",
-                "\u2022",
-                "Adding",
-                "more",
-                "pages",
-                "should",
-                "n\u2019t",
-                "result",
-                "in",
-                "worse",
-                "performance",
-                "!",
-                "Motivated",
-                "the",
-                "study",
-                "of",
-                "paging",
-                "algorithms",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "13"
+                "\u2022"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1939,17 +2299,50 @@
         },
         {
             "sentence": [
-                "CLOCK",
-                "Simulation",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "14"
+                "",
+                "Use",
+                "previous",
+                "reference",
+                "string",
+                "and",
+                "FIFO",
+                "algorithm"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Add",
+                "another",
+                "page",
+                "to",
+                "physical",
+                "memory",
+                "(",
+                "total",
+                "4",
+                "pages",
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -1961,6 +2354,197 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "More",
+                "page",
+                "faults",
+                "(",
+                "10",
+                "vs.",
+                "9",
+                ")",
+                ",",
+                "not",
+                "fewer",
+                "!",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "This",
+                "is",
+                "called",
+                "Belady",
+                "\u2019s",
+                "anomaly"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Adding",
+                "more",
+                "pages",
+                "should",
+                "n\u2019t",
+                "result",
+                "in",
+                "worse",
+                "performance",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Motivated",
+                "the",
+                "study",
+                "of",
+                "paging",
+                "algorithms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "13"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "CLOCK",
+                "Simulation"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "14"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1998,7 +2582,46 @@
                 "memory",
                 "(",
                 "m",
-                ")",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Model",
                 "this",
@@ -2033,110 +2656,9 @@
                 "pages",
                 "stored",
                 "on",
-                "disk",
-                "\u2022",
-                "Page",
-                "replacement",
-                "occurs",
-                "when",
-                "page",
-                "moves",
-                "from",
-                "top",
-                "to",
-                "bottom",
-                "\u2022",
-                "Top",
-                "and",
-                "bottom",
-                "parts",
-                "may",
-                "be",
-                "rearranged",
-                "without",
-                "causing",
-                "movement",
-                "between",
-                "memory",
-                "and",
-                "disk",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "15"
+                "disk"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2177,7 +2699,101 @@
         },
         {
             "sentence": [
+                "",
                 "\u2022",
+                "Page",
+                "replacement",
+                "occurs",
+                "when",
+                "page",
+                "moves",
+                "from",
+                "top",
+                "to",
+                "bottom",
+                "\u2022",
+                "Top",
+                "and",
+                "bottom",
+                "parts",
+                "may",
+                "be",
+                "rearranged",
+                "without",
+                "causing",
+                "movement",
+                "between",
+                "memory",
+                "and",
+                "disk",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "\u2022"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Example",
                 ":",
                 "LRU",
@@ -2185,28 +2801,113 @@
                 "LRU",
                 "replacement",
                 "with",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "8",
                 "unique",
                 "references",
                 "in",
                 "the",
                 "reference",
-                "string",
-                "\u2022",
+                "string"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "4",
                 "pages",
                 "of",
                 "physical",
-                "memory",
-                "\u2022",
+                "memory"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Array",
                 "state",
                 "over",
                 "time",
                 "shown",
-                "below",
-                "\u2022",
+                "below"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "LRU",
                 "treats",
                 "list",
@@ -2409,40 +3110,9 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "16"
+                "Khattab"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2651,6 +3321,16 @@
         },
         {
             "sentence": [
+                "",
+                "16"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Stack",
                 "algorithms",
                 "\u2022",
@@ -2702,7 +3382,66 @@
                 "number",
                 "of",
                 "page",
-                "faults",
+                "faults"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Stack",
                 "algorithms",
@@ -2772,8 +3511,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "17"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -2846,57 +3584,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "17"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2954,7 +3650,66 @@
                 "in",
                 "the",
                 "distance",
-                "string",
+                "string"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "The",
                 "number",
@@ -2995,7 +3750,56 @@
                 "of",
                 "page",
                 "replacement",
-                "algorithms",
+                "algorithms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "This",
                 "is",
@@ -3014,114 +3818,62 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "18"
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "LRU"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3135,19 +3887,35 @@
         },
         {
             "sentence": [
-                "LRU",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
+                "",
                 "19"
             ],
             "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "OPT"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3161,41 +3929,13 @@
         },
         {
             "sentence": [
-                "OPT",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
+                "",
                 "20"
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         },
         {
             "sentence": [],

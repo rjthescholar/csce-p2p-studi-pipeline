@@ -5,8 +5,14 @@ Kobuki _ _ B-concept
 Node _ _ I-concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -32,6 +38,9 @@ Bumper _ _ B-concept
 switches _ _ O
 Buttons _ _ B-concept
 LEDs _ _ B-concept
+
+
+ _ _ O
 To _ _ O
 control _ _ O
 a _ _ O
@@ -55,6 +64,9 @@ information _ _ O
 about _ _ O
 the _ _ O
 robot _ _ O
+
+
+ _ _ O
 To _ _ O
 start _ _ O
 a _ _ O
@@ -69,6 +81,9 @@ command _ _ O
 roslaunch _ _ O
 kobuki_node _ _ B-concept
 minimal.launch _ _ O
+
+
+ _ _ O
 To _ _ O
 ensure _ _ O
 the _ _ O
@@ -93,8 +108,14 @@ executing _ _ O
 the _ _ O
 above _ _ O
 command _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -139,6 +160,9 @@ led2 _ _ B-concept
 commands _ _ O
 / _ _ O
 velocity _ _ O
+
+
+ _ _ O
 We _ _ O
 simply _ _ O
 publish _ _ O
@@ -171,6 +195,9 @@ bumper _ _ B-concept
 events _ _ O
 / _ _ O
 button _ _ B-concept
+
+
+ _ _ O
 We _ _ O
 simply _ _ O
 subscribe _ _ O
@@ -204,6 +231,9 @@ above _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -233,6 +263,9 @@ named _ _ O
 commands _ _ O
 / _ _ O
 sound _ _ B-concept
+
+
+ _ _ O
 To _ _ O
 recognize _ _ O
 a _ _ O
@@ -250,6 +283,9 @@ from _ _ O
 kobuki_msgs.msg _ _ B-concept
 import _ _ O
 Sound _ _ B-concept
+
+
+ _ _ O
 Sound _ _ B-concept
 message _ _ O
 consists _ _ O
@@ -301,6 +337,9 @@ cleaning _ _ O
 end _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -409,8 +448,14 @@ except _ _ O
 rospy.ROSInterruptException _ _ O
 : _ _ O
 pass _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -457,6 +502,9 @@ LED2 _ _ B-concept
 commands _ _ O
 / _ _ O
 led2 _ _ B-concept
+
+
+ _ _ O
 To _ _ O
 recognize _ _ O
 a _ _ O
@@ -474,6 +522,9 @@ from _ _ O
 kobuki_msgs.msg _ _ B-concept
 import _ _ O
 Led _ _ B-concept
+
+
+ _ _ O
 Led _ _ O
 message _ _ O
 consists _ _ O
@@ -508,6 +559,9 @@ Orange _ _ O
 Red _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -669,8 +723,14 @@ except _ _ O
 rospy.ROSInterruptException _ _ O
 : _ _ O
 pass _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -715,6 +775,9 @@ topic _ _ O
 events _ _ O
 / _ _ O
 bumper _ _ B-concept
+
+
+ _ _ O
 Need _ _ O
 to _ _ O
 import _ _ O
@@ -730,6 +793,9 @@ from _ _ O
 kobuki_msgs.msg _ _ B-concept
 import _ _ O
 BumperEvent _ _ B-concept
+
+
+ _ _ O
 BumperEvent _ _ B-concept
 consists _ _ O
 of _ _ O
@@ -752,6 +818,9 @@ Center _ _ O
 2 _ _ O
 - _ _ O
 Right _ _ O
+
+
+ _ _ O
 state _ _ O
 with _ _ O
 the _ _ O
@@ -765,6 +834,9 @@ Released _ _ O
 1 _ _ O
 - _ _ O
 Pressed _ _ O
+
+
+ _ _ O
 Simply _ _ O
 subscribe _ _ O
 to _ _ O
@@ -792,6 +864,9 @@ bumperCallback _ _ B-concept
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -939,8 +1014,14 @@ _ _ _ O
 bumperExample _ _ B-concept
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -982,6 +1063,9 @@ topic _ _ O
 events _ _ O
 / _ _ O
 button _ _ B-concept
+
+
+ _ _ O
 Your _ _ O
 program _ _ O
 must _ _ O
@@ -998,6 +1082,9 @@ from _ _ O
 kobuki_msgs.msg _ _ B-concept
 import _ _ O
 ButtonEvent _ _ B-concept
+
+
+ _ _ O
 The _ _ O
 message _ _ O
 of _ _ O
@@ -1024,6 +1111,9 @@ B1 _ _ O
 2 _ _ O
 - _ _ O
 B2 _ _ O
+
+
+ _ _ O
 state _ _ O
 with _ _ O
 the _ _ O
@@ -1037,6 +1127,9 @@ released _ _ O
 1 _ _ O
 - _ _ O
 pressed _ _ O
+
+
+ _ _ O
 Simply _ _ O
 subscribe _ _ O
 to _ _ O
@@ -1062,6 +1155,9 @@ bumperCallback _ _ B-concept
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -1206,8 +1302,14 @@ _ _ _ O
 bumperExample _ _ B-concept
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -1236,9 +1338,21 @@ and _ _ O
 orientation _ _ O
 : _ _ O
 position.x _ _ O
+
+
+ _ _ O
 orientation.z _ _ O
+
+
+ _ _ O
 position.y _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
+
+
+ _ _ O
 Information _ _ O
 from _ _ O
 an _ _ O
@@ -1254,6 +1368,9 @@ better _ _ O
 precision _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ B-concept
 Node _ _ I-concept
 
@@ -1340,6 +1457,9 @@ z _ _ O
 , _ _ O
 and _ _ O
 w _ _ O
+
+
+ _ _ O
 For _ _ O
 a _ _ O
 Kobuki _ _ B-concept
@@ -1357,8 +1477,14 @@ pose.pose.orientation.y _ _ O
 is _ _ O
 always _ _ O
 0 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ O
 Node _ _ O
 
@@ -1486,8 +1612,14 @@ multiply _ _ O
 by _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ O
 Node _ _ B-concept
+
+
+ _ _ I-concept
 180 _ _ I-concept
 𝜋 _ _ I-concept
 
@@ -1522,7 +1654,10 @@ to _ _ O
 commands _ _ O
 / _ _ O
 reset_odometry _ _ O
-You _ _ B-concept
+
+
+ _ _ B-concept
+You _ _ I-concept
 must _ _ I-concept
 make _ _ O
 sure _ _ O
@@ -1617,8 +1752,14 @@ _ _ _ O
 resetter _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ O
 Node _ _ O
 
@@ -1668,6 +1809,9 @@ odomCallback _ _ O
 data _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 data.pose.pose.position.x _ _ B-concept
 is _ _ O
 the _ _ O
@@ -1710,8 +1854,14 @@ facing _ _ O
 quaternion _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ O
 Node _ _ O
 
@@ -1864,8 +2014,14 @@ _ _ _ O
 odomExample _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Kobuki _ _ O
 Node _ _ O
 

@@ -69,11 +69,9 @@
                 "with",
                 "CS",
                 "449",
-                "info",
-                "2"
+                "info"
             ],
             "word_labels": [
-                "O",
                 "O",
                 "O",
                 "O",
@@ -121,14 +119,32 @@
         },
         {
             "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Virtual",
                 "Memory",
-                "Review",
-                "3"
+                "Review"
             ],
             "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -175,81 +191,9 @@
                 "Memory",
                 "Process",
                 "1",
-                "0xFFFF",
-                "0xFFFF",
-                "Memory",
-                "0x8000",
-                "Code",
-                "...",
-                "Process",
-                "2",
-                "0xFFFF",
-                "Process",
-                "1",
-                "\u2019s",
-                "and",
-                "Process",
-                "2",
-                "\u2019s",
-                "memory",
-                "?",
-                "Memory",
-                "0x8000",
-                "Code",
-                "Clearly",
-                "this",
-                "is",
-                "impossible",
-                ".",
-                "But",
-                "programs",
-                "see",
-                "this",
-                "view",
-                "of",
-                "memory",
-                ".",
-                "0x8000",
-                "...",
-                "4"
+                "0xFFFF"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -295,6 +239,182 @@
         },
         {
             "sentence": [
+                "",
+                "0xFFFF"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Memory"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0x8000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Code"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Process",
+                "2",
+                "0xFFFF"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Process",
+                "1",
+                "\u2019s",
+                "and",
+                "Process",
+                "2",
+                "\u2019s",
+                "memory",
+                "?"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Memory"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0x8000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Code"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Clearly",
+                "this",
+                "is",
+                "impossible",
+                ".",
+                "But",
+                "programs",
+                "see",
+                "this",
+                "view",
+                "of",
+                "memory",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0x8000",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "4"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Virtual",
                 "Memory",
                 ":",
@@ -325,33 +445,7 @@
                 "cache",
                 "for",
                 "disk",
-                "storage",
-                "Valid",
-                "1",
-                "0",
-                "1",
-                "1",
-                "0",
-                "1",
-                "1",
-                "0",
-                "1",
-                "1",
-                "0",
-                "1",
-                "Page",
-                "table",
-                "Physical",
-                "memory",
-                "Virtual",
-                "memory",
-                "Disk",
-                "storage",
-                "(",
-                "swap",
-                "space",
-                ")",
-                "5"
+                "storage"
             ],
             "word_labels": [
                 "O",
@@ -384,6 +478,27 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Valid",
+                "1",
+                "0",
+                "1",
+                "1",
+                "0",
+                "1",
+                "1",
+                "0",
+                "1",
+                "1",
+                "0",
+                "1"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -397,6 +512,46 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Page",
+                "table"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "memory"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Virtual",
+                "memory",
+                "Disk",
+                "storage",
+                "(",
+                "swap",
+                "space",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -405,10 +560,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "5"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -458,217 +618,9 @@
                 "table",
                 "register",
                 "Virtual",
-                "address",
-                "31",
-                "30",
-                "29",
-                "28",
-                "27",
-                "15",
-                "14",
-                "13",
-                "12",
-                "11",
-                "10",
-                "9",
-                "8",
-                "Virtual",
-                "page",
-                "number",
-                "Virtual",
-                "address",
-                "31",
-                "30",
-                "29",
-                "28",
-                "27",
-                "15",
-                "14",
-                "13",
-                "12",
-                "11",
-                "10",
-                "9",
-                "8",
-                "Virtual",
-                "page",
-                "number",
-                "page",
-                "offset",
-                "20",
-                "3210",
-                "Valid",
-                "page",
-                "offset",
-                "3",
-                "2",
-                "1",
-                "0",
-                "12",
-                "Physical",
-                "page",
-                "number",
-                "Page",
-                "table",
-                "29",
-                "28",
-                "27",
-                "15",
-                "14",
-                "13",
-                "12",
-                "11",
-                "10",
-                "9",
-                "8",
-                "Physical",
-                "page",
-                "number",
-                "Physical",
-                "address",
-                "3210",
-                "page",
-                "table",
-                "page",
-                "offset",
-                "If",
-                "0",
-                "then",
-                "page",
-                "is",
-                "not",
-                "in",
-                "memory",
-                "29",
-                "28",
-                "27",
-                "18",
-                "15",
-                "14",
-                "13",
-                "12",
-                "11",
-                "10",
-                "9",
-                "8",
-                "Physical",
-                "page",
-                "number",
-                "3",
-                "2",
-                "1",
-                "0",
-                "page",
-                "offset",
-                "Physical",
-                "address",
-                "6"
+                "address"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -717,14 +669,438 @@
         },
         {
             "sentence": [
-                "DRAM",
-                "as",
-                "Cache",
-                "7"
+                "",
+                "31",
+                "30",
+                "29",
+                "28",
+                "27"
             ],
             "word_labels": [
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11",
+                "10",
+                "9",
+                "8"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Virtual",
+                "page",
+                "number",
+                "Virtual",
+                "address",
+                "31",
+                "30",
+                "29",
+                "28",
+                "27"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11",
+                "10",
+                "9",
+                "8"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Virtual",
+                "page",
+                "number"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "offset"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "20"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3210"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Valid"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "offset"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3",
+                "2",
+                "1",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "page",
+                "number"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Page",
+                "table",
+                "29",
+                "28",
+                "27"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11",
+                "10",
+                "9",
+                "8"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "page",
+                "number",
+                "Physical",
+                "address"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3210"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "table"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "offset",
+                "If",
+                "0",
+                "then",
+                "page",
+                "is",
+                "not",
+                "in",
+                "memory",
+                "29",
+                "28",
+                "27"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "18"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11",
+                "10",
+                "9",
+                "8"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "page",
+                "number"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3",
+                "2",
+                "1",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "offset"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "address"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "DRAM",
+                "as",
+                "Cache"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "7"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1132,107 +1508,9 @@
                 "physical",
                 "memory",
                 "look",
-                "?",
-                "CPU",
-                "(",
-                "PID",
-                "1",
-                ")",
-                "CPU",
-                "(",
-                "PID",
-                "2",
-                ")",
-                ".",
-                ".",
-                ".",
-                "Access",
-                "PID",
-                "20-bit",
-                "tag",
-                "(",
-                "page",
-                "number",
-                ")",
-                "1",
-                "10110\u2026111",
-                "2",
-                "10010\u2026001",
-                "1",
-                "01010\u2026100",
-                "\u2026",
-                "\u2026",
-                "[",
-                "Page",
-                "Table",
-                "]",
-                "Physical",
-                "Memory",
-                "[",
-                "Pages",
-                "]",
-                "Miss",
-                "Disk",
-                "storage",
-                "(",
-                "swap",
-                "space",
-                ")",
-                "[",
-                "Disk",
-                "]",
-                "9"
+                "?"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1305,6 +1583,232 @@
         },
         {
             "sentence": [
+                "",
+                "CPU",
+                "(",
+                "PID",
+                "1",
+                ")",
+                "CPU",
+                "(",
+                "PID",
+                "2",
+                ")",
+                ".",
+                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Access"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PID"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "20-bit",
+                "tag",
+                "(",
+                "page",
+                "number",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10110\u2026111"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10010\u2026001"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "01010\u2026100"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "[",
+                "Page",
+                "Table",
+                "]"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Memory",
+                "[",
+                "Pages",
+                "]"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Miss",
+                "Disk",
+                "storage",
+                "(",
+                "swap",
+                "space",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "[",
+                "Disk",
+                "]",
+                "9"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Inverted",
                 "Page",
                 "Table",
@@ -1327,50 +1831,243 @@
                 "table",
                 ".",
                 "Associative",
-                "search",
+                "search"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Virtual",
                 "Page",
-                "Number",
-                "PID",
+                "Number"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PID"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "20-bit",
                 "tag",
                 "(",
                 "page",
                 "number",
-                ")",
-                "1",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Virtual",
                 "Page",
-                "42",
-                "2",
+                "42"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Virtual",
                 "Page",
-                "100",
-                "1",
+                "100"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Virtual",
                 "Page",
-                "123",
-                "\u2026",
-                "\u2026",
+                "123"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "[",
                 "Page",
                 "Table",
-                "]",
+                "]"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Physical",
                 "Memory",
                 "[",
                 "Pages",
-                "]",
+                "]"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Miss",
                 "Disk",
                 "storage",
                 "(",
                 "swap",
                 "space",
-                ")",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "[",
                 "Disk",
-                "]",
+                "]"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u25cf",
                 "Called",
                 "inverted",
@@ -1436,71 +2133,6 @@
                 "10"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1634,39 +2266,9 @@
                 "to",
                 "happen",
                 "!",
-                "Process",
-                "Virtual",
-                "Memory",
-                "Code",
-                "Virtual",
-                "Addresses",
-                "?",
-                "CPU",
-                "?",
-                "Cache",
-                "?",
-                "Physical",
-                "Addresses",
-                "Physical",
-                "Memory",
-                "11"
+                "Process"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1737,6 +2339,84 @@
         },
         {
             "sentence": [
+                "",
+                "Virtual",
+                "Memory",
+                "Code"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Virtual",
+                "Addresses"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "?",
+                "CPU",
+                "?",
+                "Cache",
+                "?"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Addresses"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Memory"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "11"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Address",
                 "Lookup",
                 "Using",
@@ -1780,38 +2460,7 @@
                 "memory",
                 "!",
                 "Virtual",
-                "Address",
-                "CPU",
-                "Valid",
-                "Physical",
-                "Page",
-                "Number",
-                "(",
-                "20",
-                "bits",
-                ")",
-                "1",
-                "Physical",
-                "Page",
-                "42",
-                "0",
-                "Physical",
-                "Page",
-                "10",
-                "0",
-                "Physical",
-                "Page",
-                "7",
-                "1",
-                "Physical",
-                "Page",
-                "1337",
-                "\u2026",
-                "\u2026",
-                "Physical",
-                "Address",
-                "DRAM",
-                "12"
+                "Address"
             ],
             "word_labels": [
                 "O",
@@ -1857,6 +2506,41 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CPU"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Valid"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Page",
+                "Number",
+                "(",
+                "20",
+                "bits",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1864,29 +2548,153 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Page",
+                "42"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Page",
+                "10"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Page",
+                "7"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Page",
+                "1337"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Address"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "DRAM"
+            ],
+            "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1945,143 +2753,9 @@
                 "data",
                 "structure",
                 ".",
-                "Address",
-                "PTR",
-                "10",
-                "bits",
-                "(",
-                "\u201c",
-                "directory",
-                "\u201d",
-                ")",
-                "10",
-                "bits",
-                "(",
-                "\u201c",
-                "table",
-                "\u201d",
-                ")",
-                "12",
-                "bits",
-                "(",
-                "\u201c",
-                "offset",
-                "\u201d",
-                ")",
-                "00",
-                "0010",
-                "11",
-                "10",
-                "0011",
-                "00",
-                "0010",
-                "0001",
-                "0000",
-                "index",
-                "...",
-                "index",
-                "...",
-                "V",
-                "Table",
-                "Addr",
-                "V",
-                "D",
-                "R",
-                "Page",
-                "Addr",
-                "P",
-                "\u2026",
-                "...",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "...",
-                "...",
-                "1",
-                "0004C000",
-                "10",
-                "1",
-                "03BFA000",
-                "RX",
-                "\u2026",
-                "...",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "...",
-                "...",
-                "PA",
-                "!",
-                "13"
+                "Address"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2139,6 +2813,372 @@
         },
         {
             "sentence": [
+                "",
+                "PTR"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10",
+                "bits",
+                "(",
+                "\u201c",
+                "directory",
+                "\u201d",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10",
+                "bits",
+                "(",
+                "\u201c",
+                "table",
+                "\u201d",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12",
+                "bits",
+                "(",
+                "\u201c",
+                "offset",
+                "\u201d",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "00",
+                "0010",
+                "11"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10",
+                "0011",
+                "00"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0010",
+                "0001",
+                "0000"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "index",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "index",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "V",
+                "Table",
+                "Addr"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "V",
+                "D",
+                "R",
+                "Page",
+                "Addr"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "P"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026",
+                "\u2026",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0004C000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "03BFA000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "RX"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026",
+                "\u2026",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PA",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "13"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Page",
                 "Table",
                 "Lookup",
@@ -2157,43 +3197,289 @@
                 "16",
                 "(",
                 "$s0",
-                ")",
-                "PTR",
-                "CPU",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PTR"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CPU"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "V",
                 "Table",
-                "Addr",
+                "Addr"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "V",
                 "D",
                 "R",
                 "Page",
-                "Addr",
-                "P",
+                "Addr"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "P"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2026",
-                "...",
                 "\u2026",
-                "\u2026",
-                "\u2026",
-                "...",
-                "...",
-                "1",
-                "0004C000",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0004C000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "10",
-                "1",
-                "03BFA000",
-                "RX",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "03BFA000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "RX"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2026",
-                "...",
                 "\u2026",
-                "\u2026",
-                "\u2026",
-                "...",
-                "...",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "..."
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "hit",
-                "!",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "PA",
-                "!",
-                "Cache",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Cache"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u25cf",
                 "Must",
                 "perform",
@@ -2242,6 +3528,71 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "The",
+                "real",
+                "picture",
+                "looks",
+                "more",
+                "like",
+                "this",
+                "\u25cf",
+                "Alpha",
+                "21264",
+                "CPU",
+                "with",
+                "3-level",
+                "page",
+                "table",
+                ":"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "In",
+                "the",
+                "end",
+                ",",
+                "the",
+                "PTE",
+                "(",
+                "Page",
+                "Table",
+                "Entry",
+                ")",
+                "is",
+                "all",
+                "you",
+                "need",
+                "for",
+                "a",
+                "translation",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2261,6 +3612,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Ptr",
+                "to",
+                "level",
+                "2",
+                "Ptr",
+                "to",
+                "level",
+                "3"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2269,10 +3636,37 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "How",
+                "can",
+                "I",
+                "make",
+                "access",
+                "to",
+                "it",
+                "faster",
+                "?",
+                "Where",
+                "have",
+                "I",
+                "heard",
+                "that",
+                "before",
+                "...",
+                "making",
+                "accesses",
+                "faster",
+                "\u2026",
+                "I",
+                "wonder",
+                "\u2026"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2301,140 +3695,10 @@
         },
         {
             "sentence": [
-                "The",
-                "real",
-                "picture",
-                "looks",
-                "more",
-                "like",
-                "this",
-                "\u25cf",
-                "Alpha",
-                "21264",
-                "CPU",
-                "with",
-                "3-level",
-                "page",
-                "table",
-                ":",
-                "In",
-                "the",
-                "end",
-                ",",
-                "the",
-                "PTE",
-                "(",
-                "Page",
-                "Table",
-                "Entry",
-                ")",
-                "is",
-                "all",
-                "you",
-                "need",
-                "for",
-                "a",
-                "translation",
-                ".",
-                "Ptr",
-                "to",
-                "level",
-                "2",
-                "Ptr",
-                "to",
-                "level",
-                "3",
-                "How",
-                "can",
-                "I",
-                "make",
-                "access",
-                "to",
-                "it",
-                "faster",
-                "?",
-                "Where",
-                "have",
-                "I",
-                "heard",
-                "that",
-                "before",
-                "...",
-                "making",
-                "accesses",
-                "faster",
-                "\u2026",
-                "I",
-                "wonder",
-                "\u2026",
+                "",
                 "15"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O"
             ]
@@ -2526,11 +3790,9 @@
                 "the",
                 "hierarchical",
                 "page",
-                "table",
-                "17"
+                "table"
             ],
             "word_labels": [
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2599,6 +3861,16 @@
         },
         {
             "sentence": [
+                "",
+                "17"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Page",
                 "Table",
                 "Walking",
@@ -2639,7 +3911,55 @@
                 "the",
                 "TLB",
                 "with",
-                "PTE",
+                "PTE"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Ptr",
                 "to",
                 "level",
@@ -2647,7 +3967,23 @@
                 "Ptr",
                 "to",
                 "level",
-                "3",
+                "3"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "2",
                 ".",
                 "Hardware",
@@ -2700,54 +4036,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O"
             ]
         },
@@ -2758,10 +4046,42 @@
                 "Flowchart",
                 "Virtual",
                 "page",
-                "number",
+                "number"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Page",
-                "offset",
-                "TLB",
+                "offset"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "TLB"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Page",
                 "table",
@@ -2797,58 +4117,7 @@
                 "(",
                 "OS",
                 "handler",
-                ")",
-                "Physical",
-                "address",
-                "Cache",
-                "To",
-                "memory",
-                "Note",
-                "that",
-                "there",
-                "can",
-                "not",
-                "be",
-                "a",
-                "page",
-                "fault",
-                "in",
-                "case",
-                "of",
-                "a",
-                "TLB",
-                "hit",
-                "\u2013",
-                "when",
-                "page",
-                "is",
-                "swapped",
-                "to",
-                "disk",
-                ",",
-                "the",
-                "TLB",
-                "is",
-                "flushed",
-                "May",
-                "need",
-                "to",
-                "write",
-                "back",
-                "a",
-                "dirty",
-                "block",
-                "or",
-                ",",
-                "depending",
-                "on",
-                "being",
-                "write",
-                "back",
-                "or",
-                "write",
-                "through",
-                "19"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -2887,38 +4156,67 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "address"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Cache",
+                "To",
+                "memory"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Note",
+                "that",
+                "there",
+                "can",
+                "not",
+                "be",
+                "a",
+                "page",
+                "fault",
+                "in",
+                "case",
+                "of",
+                "a",
+                "TLB",
+                "hit",
+                "\u2013",
+                "when",
+                "page",
+                "is",
+                "swapped",
+                "to",
+                "disk",
+                ",",
+                "the",
+                "TLB",
+                "is",
+                "flushed"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2951,6 +4249,68 @@
         },
         {
             "sentence": [
+                "",
+                "May",
+                "need",
+                "to",
+                "write",
+                "back",
+                "a",
+                "dirty",
+                "block"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "or",
+                ",",
+                "depending",
+                "on",
+                "being",
+                "write",
+                "back",
+                "or",
+                "write",
+                "through"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "19"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Close-up",
                 "on",
                 "the",
@@ -2976,42 +4336,326 @@
                 "protection",
                 "and",
                 "paging",
-                ".",
-                "VA",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "VA"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "VA",
                 "Page",
                 "(",
                 "Tag",
-                ")",
-                "V",
-                "D",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "V"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "D"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Pres",
                 "Ref",
                 "Prot",
                 "PA",
-                "Page",
-                "00008",
-                "1",
-                "0",
-                "0",
-                "1",
-                "RX",
-                "03BFA",
-                "FFFF3",
-                "1",
-                "1",
-                "1",
-                "1",
-                "RW",
-                "19400",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "\u2026",
-                "PA",
+                "Page"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "00008"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "RX"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "03BFA"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "FFFF3"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "RW"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "19400"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PA"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "0",
                 "valid",
                 "bit",
@@ -3064,66 +4708,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O"
             ]
         },
@@ -3132,13 +4716,21 @@
                 "TLBs",
                 "in",
                 "Real",
-                "Processors",
-                "21"
+                "Processors"
             ],
             "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "21"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -3163,97 +4755,9 @@
                 "counter",
                 "(",
                 "PC",
-                ")",
-                "VA",
-                "Page",
-                "#",
-                "page",
-                "page",
-                "Page",
-                "offset",
-                "page",
-                "Block",
-                "of",
-                "a",
-                "page",
-                "TLB",
-                "Physical",
-                "address",
-                "Physical",
-                "Memory",
-                "Cache",
-                "PTE",
-                "TLB",
-                "miss",
-                "PT",
-                "walker",
-                "Page",
-                "fault",
-                "PTE",
-                "into",
-                "TLB",
-                "Virtual",
-                "Address",
-                "space",
-                "HDD",
-                "/",
-                "SSD",
-                "Page",
-                "table",
-                "Oh",
-                "no",
-                "!",
-                "OS",
-                "Page",
-                "Fault",
-                "Handler",
-                "22"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3277,6 +4781,238 @@
         },
         {
             "sentence": [
+                "",
+                "VA",
+                "Page",
+                "#"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "page"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Page",
+                "offset"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "page",
+                "Block",
+                "of",
+                "a",
+                "page"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "TLB"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "address"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Physical",
+                "Memory"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Cache"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PTE"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "TLB",
+                "miss",
+                "PT",
+                "walker"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Page",
+                "fault"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PTE",
+                "into",
+                "TLB"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Virtual",
+                "Address",
+                "space"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "HDD",
+                "/",
+                "SSD"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Page",
+                "table"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Oh",
+                "no",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "OS",
+                "Page",
+                "Fault",
+                "Handler"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "22"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Overall",
                 "Memory",
                 "System",
@@ -3292,71 +5028,9 @@
                 "/",
                 "HW",
                 "collaboration",
-                ":",
-                "Address",
-                "Translation",
-                "(",
-                "HW",
-                "/",
-                "SW",
-                ")",
-                "VA",
-                "TLB",
-                "Caching",
-                "(",
-                "HW",
-                ")",
-                "PA",
-                "Datapath",
-                "PA",
-                "Caches",
-                "Words",
-                "/bytes",
-                "Paging",
-                "(",
-                "SW",
-                ")",
-                "DRAM",
-                "Blocks",
-                "PT",
-                "Pages",
-                "HDD",
-                "/",
-                "SSD",
-                "23"
+                ":"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3376,16 +5050,186 @@
             ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "Address",
+                "Translation",
+                "(",
+                "HW",
+                "/",
+                "SW",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "VA"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "TLB"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Caching",
+                "(",
+                "HW",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PA"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Datapath"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PA",
+                "Caches"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Words",
+                "/bytes"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Paging",
+                "(",
+                "SW",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "DRAM"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Blocks"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "PT"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Pages"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "HDD",
+                "/",
+                "SSD"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "23"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
         },
         {
             "sentence": [],

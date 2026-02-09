@@ -53,11 +53,17 @@ with _ _ O
 CS _ _ O
 449 _ _ O
 info _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Virtual _ _ O
 Memory _ _ O
 Review _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Virtual _ _ O
@@ -101,14 +107,35 @@ Memory _ _ O
 Process _ _ O
 1 _ _ O
 0xFFFF _ _ O
+
+
+ _ _ O
 0xFFFF _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
+
+
+ _ _ O
 Code _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Process _ _ O
 2 _ _ O
 0xFFFF _ _ O
+
+
+ _ _ O
 Process _ _ O
 1 _ _ O
 ’s _ _ O
@@ -118,9 +145,21 @@ Process _ _ O
 ’s _ _ O
 memory _ _ O
 ? _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
+
+
+ _ _ O
 Code _ _ O
+
+
+ _ _ O
 Clearly _ _ O
 this _ _ O
 is _ _ O
@@ -134,8 +173,14 @@ view _ _ O
 of _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 ... _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Virtual _ _ O
@@ -169,6 +214,9 @@ cache _ _ O
 for _ _ O
 disk _ _ O
 storage _ _ O
+
+
+ _ _ O
 Valid _ _ O
 1 _ _ O
 0 _ _ O
@@ -182,10 +230,19 @@ Valid _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 Page _ _ O
 table _ _ O
+
+
+ _ _ O
 Physical _ _ O
 memory _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 memory _ _ O
 Disk _ _ O
@@ -194,6 +251,9 @@ storage _ _ O
 swap _ _ O
 space _ _ O
 ) _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 How _ _ O
@@ -240,11 +300,17 @@ table _ _ O
 register _ _ O
 Virtual _ _ O
 address _ _ O
+
+
+ _ _ O
 31 _ _ O
 30 _ _ O
 29 _ _ O
 28 _ _ O
 27 _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -253,6 +319,9 @@ address _ _ O
 10 _ _ O
 9 _ _ O
 8 _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 page _ _ O
 number _ _ O
@@ -263,6 +332,9 @@ address _ _ O
 29 _ _ O
 28 _ _ O
 27 _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -271,29 +343,62 @@ address _ _ O
 10 _ _ O
 9 _ _ O
 8 _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 page _ _ O
 number _ _ O
+
+
+ _ _ O
 page _ _ O
 offset _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 3210 _ _ O
+
+
+ _ _ O
 Valid _ _ O
+
+
+ _ _ O
 page _ _ O
 offset _ _ O
+
+
+ _ _ O
 3 _ _ O
 2 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 page _ _ O
 number _ _ O
+
+
+ _ _ O
 Page _ _ O
 table _ _ O
 29 _ _ O
 28 _ _ O
 27 _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -302,14 +407,26 @@ table _ _ O
 10 _ _ O
 9 _ _ O
 8 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 page _ _ O
 number _ _ O
 Physical _ _ O
 address _ _ O
+
+
+ _ _ O
 3210 _ _ O
+
+
+ _ _ O
 page _ _ O
 table _ _ O
+
+
+ _ _ O
 page _ _ O
 offset _ _ O
 If _ _ O
@@ -323,7 +440,13 @@ memory _ _ O
 29 _ _ O
 28 _ _ O
 27 _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -332,22 +455,40 @@ memory _ _ O
 10 _ _ O
 9 _ _ O
 8 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 page _ _ O
 number _ _ O
+
+
+ _ _ O
 3 _ _ O
 2 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 page _ _ O
 offset _ _ O
+
+
+ _ _ O
 Physical _ _ O
 address _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 DRAM _ _ O
 as _ _ O
 Cache _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Physical _ _ O
@@ -583,6 +724,9 @@ physical _ _ O
 memory _ _ O
 look _ _ O
 ? _ _ O
+
+
+ _ _ O
 CPU _ _ O
 ( _ _ O
 PID _ _ O
@@ -596,31 +740,73 @@ PID _ _ O
 . _ _ O
 . _ _ O
 . _ _ O
+
+
+ _ _ O
 Access _ _ O
+
+
+ _ _ O
 PID _ _ O
+
+
+ _ _ O
 20-bit _ _ O
 tag _ _ O
 ( _ _ O
 page _ _ O
 number _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 10110…111 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 10010…001 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 01010…100 _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 [ _ _ O
 Page _ _ O
 Table _ _ O
 ] _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Memory _ _ O
 [ _ _ O
 Pages _ _ O
 ] _ _ O
+
+
+ _ _ O
 Miss _ _ O
 Disk _ _ O
 storage _ _ O
@@ -628,6 +814,9 @@ storage _ _ O
 swap _ _ O
 space _ _ O
 ) _ _ O
+
+
+ _ _ O
 [ _ _ O
 Disk _ _ O
 ] _ _ O
@@ -656,39 +845,81 @@ table _ _ O
 . _ _ O
 Associative _ _ O
 search _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Page _ _ O
 Number _ _ O
+
+
+ _ _ O
 PID _ _ O
+
+
+ _ _ O
 20-bit _ _ O
 tag _ _ O
 ( _ _ O
 page _ _ O
 number _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Page _ _ O
 42 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Page _ _ O
 100 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Page _ _ O
 123 _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 [ _ _ O
 Page _ _ O
 Table _ _ O
 ] _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Memory _ _ O
 [ _ _ O
 Pages _ _ O
 ] _ _ O
+
+
+ _ _ O
 Miss _ _ O
 Disk _ _ O
 storage _ _ O
@@ -696,9 +927,15 @@ storage _ _ O
 swap _ _ O
 space _ _ O
 ) _ _ O
+
+
+ _ _ O
 [ _ _ O
 Disk _ _ O
 ] _ _ O
+
+
+ _ _ O
 ● _ _ O
 Called _ _ O
 inverted _ _ O
@@ -829,20 +1066,38 @@ to _ _ O
 happen _ _ O
 ! _ _ O
 Process _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Memory _ _ O
 Code _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 ? _ _ O
 CPU _ _ O
 ? _ _ O
 Cache _ _ O
 ? _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Addresses _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Memory _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Address _ _ O
@@ -889,8 +1144,17 @@ memory _ _ O
 ! _ _ O
 Virtual _ _ O
 Address _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 Valid _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 Number _ _ O
@@ -898,27 +1162,66 @@ Number _ _ O
 20 _ _ O
 bits _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 42 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 10 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 7 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 1337 _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Address _ _ O
+
+
+ _ _ O
 DRAM _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 How _ _ O
@@ -974,7 +1277,13 @@ data _ _ O
 structure _ _ O
 . _ _ O
 Address _ _ O
+
+
+ _ _ O
 PTR _ _ O
+
+
+ _ _ O
 10 _ _ O
 bits _ _ O
 ( _ _ O
@@ -982,6 +1291,9 @@ bits _ _ O
 directory _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 10 _ _ O
 bits _ _ O
 ( _ _ O
@@ -989,6 +1301,9 @@ bits _ _ O
 table _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
 ( _ _ O
@@ -996,50 +1311,125 @@ bits _ _ O
 offset _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 00 _ _ O
 0010 _ _ O
 11 _ _ O
+
+
+ _ _ O
 10 _ _ O
 0011 _ _ O
 00 _ _ O
+
+
+ _ _ O
 0010 _ _ O
 0001 _ _ O
 0000 _ _ O
+
+
+ _ _ O
 index _ _ O
 ... _ _ O
+
+
+ _ _ O
 index _ _ O
 ... _ _ O
+
+
+ _ _ O
 V _ _ O
 Table _ _ O
 Addr _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 R _ _ O
 Page _ _ O
 Addr _ _ O
+
+
+ _ _ O
 P _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 … _ _ O
 … _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0004C000 _ _ O
+
+
+ _ _ O
 10 _ _ O
 1 _ _ O
+
+
+ _ _ O
 03BFA000 _ _ O
+
+
+ _ _ O
 RX _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 … _ _ O
 … _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 PA _ _ O
 ! _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Page _ _ O
@@ -1061,42 +1451,114 @@ t0 _ _ O
 ( _ _ O
 $s0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 PTR _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 V _ _ O
 Table _ _ O
 Addr _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 R _ _ O
 Page _ _ O
 Addr _ _ O
+
+
+ _ _ O
 P _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 … _ _ O
 … _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0004C000 _ _ O
+
+
+ _ _ O
 10 _ _ O
 1 _ _ O
+
+
+ _ _ O
 03BFA000 _ _ O
+
+
+ _ _ O
 RX _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 … _ _ O
 … _ _ O
 … _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 hit _ _ O
 ! _ _ O
+
+
+ _ _ O
 PA _ _ O
 ! _ _ O
+
+
+ _ _ O
 Cache _ _ O
+
+
+ _ _ O
 ● _ _ O
 Must _ _ O
 perform _ _ O
@@ -1137,6 +1599,9 @@ with _ _ O
 page _ _ O
 table _ _ O
 : _ _ O
+
+
+ _ _ O
 In _ _ O
 the _ _ O
 end _ _ O
@@ -1156,6 +1621,9 @@ for _ _ O
 a _ _ O
 translation _ _ O
 . _ _ O
+
+
+ _ _ O
 Ptr _ _ O
 to _ _ O
 level _ _ O
@@ -1164,6 +1632,9 @@ Ptr _ _ O
 to _ _ O
 level _ _ O
 3 _ _ O
+
+
+ _ _ O
 How _ _ O
 can _ _ O
 I _ _ O
@@ -1187,6 +1658,9 @@ faster _ _ O
 I _ _ O
 wonder _ _ O
 … _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 The _ _ O
@@ -1262,6 +1736,9 @@ the _ _ O
 hierarchical _ _ O
 page _ _ O
 table _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Page _ _ O
@@ -1305,6 +1782,9 @@ the _ _ O
 TLB _ _ O
 with _ _ O
 PTE _ _ O
+
+
+ _ _ O
 Ptr _ _ O
 to _ _ O
 level _ _ O
@@ -1313,6 +1793,9 @@ Ptr _ _ O
 to _ _ O
 level _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 Hardware _ _ O
@@ -1345,9 +1828,18 @@ Flowchart _ _ O
 Virtual _ _ O
 page _ _ O
 number _ _ O
+
+
+ _ _ O
 Page _ _ O
 offset _ _ O
+
+
+ _ _ O
 TLB _ _ O
+
+
+ _ _ O
 • _ _ O
 Page _ _ O
 table _ _ O
@@ -1384,11 +1876,20 @@ fault _ _ O
 OS _ _ O
 handler _ _ O
 ) _ _ O
+
+
+ _ _ O
 Physical _ _ O
 address _ _ O
+
+
+ _ _ O
 Cache _ _ O
 To _ _ O
 memory _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 there _ _ O
@@ -1416,6 +1917,9 @@ the _ _ O
 TLB _ _ O
 is _ _ O
 flushed _ _ O
+
+
+ _ _ O
 May _ _ O
 need _ _ O
 to _ _ O
@@ -1424,6 +1928,9 @@ back _ _ O
 a _ _ O
 dirty _ _ O
 block _ _ O
+
+
+ _ _ O
 or _ _ O
 , _ _ O
 depending _ _ O
@@ -1434,6 +1941,9 @@ back _ _ O
 or _ _ O
 write _ _ O
 through _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Close-up _ _ O
@@ -1462,41 +1972,125 @@ protection _ _ O
 and _ _ O
 paging _ _ O
 . _ _ O
+
+
+ _ _ O
 VA _ _ O
+
+
+ _ _ O
 VA _ _ O
 Page _ _ O
 ( _ _ O
 Tag _ _ O
 ) _ _ O
+
+
+ _ _ O
 V _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Pres _ _ O
 Ref _ _ O
 Prot _ _ O
 PA _ _ O
 Page _ _ O
+
+
+ _ _ O
 00008 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 RX _ _ O
+
+
+ _ _ O
 03BFA _ _ O
+
+
+ _ _ O
 FFFF3 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 RW _ _ O
+
+
+ _ _ O
 19400 _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 PA _ _ O
+
+
+ _ _ O
 0 _ _ O
 valid _ _ O
 bit _ _ O
@@ -1527,6 +2121,9 @@ TLBs _ _ O
 in _ _ O
 Real _ _ O
 Processors _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Caching _ _ O
@@ -1548,49 +2145,103 @@ counter _ _ O
 ( _ _ O
 PC _ _ O
 ) _ _ O
+
+
+ _ _ O
 VA _ _ O
 Page _ _ O
 # _ _ O
+
+
+ _ _ O
 page _ _ O
 page _ _ O
+
+
+ _ _ O
 Page _ _ O
 offset _ _ O
+
+
+ _ _ O
 page _ _ O
 Block _ _ O
 of _ _ O
 a _ _ O
 page _ _ O
+
+
+ _ _ O
 TLB _ _ O
+
+
+ _ _ O
 Physical _ _ O
 address _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Cache _ _ O
+
+
+ _ _ O
 PTE _ _ O
+
+
+ _ _ O
 TLB _ _ O
 miss _ _ O
 PT _ _ O
 walker _ _ O
+
+
+ _ _ O
 Page _ _ O
 fault _ _ O
+
+
+ _ _ O
 PTE _ _ O
 into _ _ O
 TLB _ _ O
+
+
+ _ _ O
 Virtual _ _ O
 Address _ _ O
 space _ _ O
+
+
+ _ _ O
 HDD _ _ O
 / _ _ O
 SSD _ _ O
+
+
+ _ _ O
 Page _ _ O
 table _ _ O
+
+
+ _ _ O
 Oh _ _ O
 no _ _ O
 ! _ _ O
+
+
+ _ _ O
 OS _ _ O
 Page _ _ O
 Fault _ _ O
 Handler _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Overall _ _ O
@@ -1609,6 +2260,9 @@ SW _ _ O
 HW _ _ O
 collaboration _ _ O
 : _ _ O
+
+
+ _ _ O
 Address _ _ O
 Translation _ _ O
 ( _ _ O
@@ -1616,29 +2270,71 @@ HW _ _ O
 / _ _ O
 SW _ _ O
 ) _ _ O
+
+
+ _ _ O
 VA _ _ O
+
+
+ _ _ O
 TLB _ _ O
+
+
+ _ _ O
 Caching _ _ O
 ( _ _ O
 HW _ _ O
 ) _ _ O
+
+
+ _ _ O
 PA _ _ O
+
+
+ _ _ O
 Datapath _ _ O
+
+
+ _ _ O
 PA _ _ O
 Caches _ _ O
+
+
+ _ _ O
 Words _ _ O
 /bytes _ _ O
+
+
+ _ _ O
 Paging _ _ O
 ( _ _ O
 SW _ _ O
 ) _ _ O
+
+
+ _ _ O
 DRAM _ _ O
+
+
+ _ _ O
 Blocks _ _ O
+
+
+ _ _ O
 PT _ _ O
+
+
+ _ _ O
 Pages _ _ O
+
+
+ _ _ O
 HDD _ _ O
 / _ _ O
 SSD _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 

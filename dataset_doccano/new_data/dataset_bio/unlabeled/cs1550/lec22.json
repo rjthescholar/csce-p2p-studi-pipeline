@@ -12,7 +12,22 @@
                 "CS",
                 "1550",
                 "Spring",
-                "2022",
+                "2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Sherif",
                 "Khattab",
                 "ksm73@pitt.edu",
@@ -31,13 +46,6 @@
                 ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -90,27 +98,9 @@
                 "on",
                 "4",
                 "/",
-                "15",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "2"
+                "15"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -147,12 +137,59 @@
         },
         {
             "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Previous",
                 "Lecture",
                 "\u2026",
                 "\u2022",
                 "Indexed",
-                "Allocation",
+                "Allocation"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Directory",
                 "contents",
@@ -167,16 +204,7 @@
                 "list",
                 "of",
                 "free",
-                "blocks",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "3"
+                "blocks"
             ],
             "word_labels": [
                 "O",
@@ -194,6 +222,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -202,11 +246,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -308,48 +356,7 @@
                 "is",
                 "it",
                 "stored",
-                "?",
-                "\u2022",
-                "Might",
-                "need",
-                "some",
-                "recap",
-                "on",
-                "inode",
-                ".",
-                "So",
-                "inode",
-                "contains",
-                "information",
-                "for",
-                "a",
-                "specific",
-                "file",
-                "and",
-                "block",
-                "index",
-                "is",
-                "a",
-                "block",
-                "storing",
-                "only",
-                "the",
-                "addresses",
-                "of",
-                "all",
-                "the",
-                "file",
-                "block",
-                "?",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "4"
+                "?"
             ],
             "word_labels": [
                 "O",
@@ -447,6 +454,54 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Might",
+                "need",
+                "some",
+                "recap",
+                "on",
+                "inode",
+                ".",
+                "So",
+                "inode",
+                "contains",
+                "information",
+                "for",
+                "a",
+                "specific",
+                "file",
+                "and",
+                "block",
+                "index",
+                "is",
+                "a",
+                "block",
+                "storing",
+                "only",
+                "the",
+                "addresses",
+                "of",
+                "all",
+                "the",
+                "file",
+                "block",
+                "?",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -487,6 +542,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "4"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -597,53 +661,9 @@
                 "more",
                 "page",
                 "fault",
-                "?",
-                "\u2022",
-                "Linked",
-                "allocation",
-                "versus",
-                "contiguous",
-                "and",
-                "when",
-                "is",
-                "it",
-                "optimal",
-                "to",
-                "use",
-                "linked",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "5"
+                "?"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -753,6 +773,66 @@
         },
         {
             "sentence": [
+                "",
+                "\u2022",
+                "Linked",
+                "allocation",
+                "versus",
+                "contiguous",
+                "and",
+                "when",
+                "is",
+                "it",
+                "optimal",
+                "to",
+                "use",
+                "linked",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "5"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Muddiest",
                 "Points",
                 "(",
@@ -766,7 +846,28 @@
                 "we",
                 "do",
                 "midterm",
-                "corrections",
+                "corrections"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Top",
                 "hat",
@@ -790,16 +891,7 @@
                 "of",
                 "a",
                 "disk",
-                "section",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "6"
+                "section"
             ],
             "word_labels": [
                 "O",
@@ -826,6 +918,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -834,19 +942,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -882,27 +986,9 @@
                 "error",
                 "detection",
                 "/",
-                "correction",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "7"
+                "correction"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -937,8 +1023,7 @@
         },
         {
             "sentence": [
-                "Software",
-                "Stack",
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -946,8 +1031,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "8"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -958,7 +1042,59 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "7"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Software",
+                "Stack"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "8"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -977,9 +1113,39 @@
                 "and",
                 "rest",
                 "of",
-                "OS",
+                "OS"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "User",
-                "space",
+                "space"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Drivers",
                 "standardize",
@@ -987,9 +1153,35 @@
                 "to",
                 "widely",
                 "varied",
-                "devices",
+                "devices"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Kernel",
-                "space",
+                "space"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Device",
                 "drivers",
@@ -1003,79 +1195,9 @@
                 "communicate",
                 "with",
                 "devices",
-                "themselves",
-                "User",
-                "program",
-                "Rest",
-                "of",
-                "the",
-                "OS",
-                "Keyboard",
-                "driver",
-                "Disk",
-                "driver",
-                "Keyboard",
-                "controller",
-                "Disk",
-                "controller",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "9"
+                "themselves"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1095,12 +1217,135 @@
         },
         {
             "sentence": [
+                "",
+                "User",
+                "program"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Rest",
+                "of",
+                "the",
+                "OS"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Keyboard",
+                "driver"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Disk",
+                "driver"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Keyboard",
+                "controller"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Disk",
+                "controller"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "9"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Layers",
                 "of",
                 "I",
                 "/",
                 "O",
-                "software",
+                "software"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "User-level",
                 "I",
                 "/",
@@ -1114,46 +1359,9 @@
                 "Device",
                 "drivers",
                 "Interrupt",
-                "handlers",
-                "User",
-                "Operating",
-                "system",
-                "(",
-                "kernel",
-                ")",
-                "Hardware",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "10"
+                "handlers"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1173,13 +1381,37 @@
         },
         {
             "sentence": [
-                "Anatomy",
-                "of",
-                "an",
-                "I",
-                "/",
+                "",
+                "User",
+                "Operating",
+                "system",
+                "(",
+                "kernel",
+                ")"
+            ],
+            "word_labels": [
                 "O",
-                "request",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Hardware"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1187,8 +1419,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "11"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1199,12 +1430,69 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Anatomy",
+                "of",
+                "an",
+                "I",
+                "/",
+                "O",
+                "request"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "11"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1218,7 +1506,22 @@
                 "Device",
                 "independence",
                 "\u2022",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Programs",
                 "can",
                 "access",
@@ -1233,12 +1536,48 @@
                 "specify",
                 "device",
                 "in",
-                "advance",
+                "advance"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Uniform",
                 "naming",
                 "\u2022",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Name",
                 "of",
                 "a",
@@ -1260,63 +1599,7 @@
                 "(",
                 "underlying",
                 "hardware",
-                ")",
-                "\u2022",
-                "Error",
-                "handling",
-                "\u2022",
-                "\u2022",
-                "Done",
-                "as",
-                "close",
-                "to",
-                "the",
-                "hardware",
-                "as",
-                "possible",
-                "Isolate",
-                "from",
-                "higher-level",
-                "software",
-                "\u2022",
-                "Synchronous",
-                "vs.",
-                "asynchronous",
-                "transfers",
-                "\u2022",
-                "Blocked",
-                "transfers",
-                "vs.",
-                "interrupt-driven",
-                "\u2022",
-                "Buffering",
-                "\u2022",
-                "Data",
-                "coming",
-                "off",
-                "a",
-                "device",
-                "can",
-                "not",
-                "be",
-                "stored",
-                "in",
-                "final",
-                "destination",
-                "\u2022",
-                "Sharable",
-                "vs.",
-                "dedicated",
-                "devices",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "12"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -1341,11 +1624,44 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Error",
+                "handling",
+                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Done",
+                "as",
+                "close",
+                "to",
+                "the",
+                "hardware",
+                "as",
+                "possible",
+                "Isolate",
+                "from",
+                "higher-level",
+                "software"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1358,19 +1674,76 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Synchronous",
+                "vs.",
+                "asynchronous",
+                "transfers",
+                "\u2022"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Blocked",
+                "transfers",
+                "vs.",
+                "interrupt-driven"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Buffering",
+                "\u2022"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Data",
+                "coming",
+                "off",
+                "a",
+                "device",
+                "can",
+                "not",
+                "be",
+                "stored",
+                "in",
+                "final",
+                "destination"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1383,6 +1756,27 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Sharable",
+                "vs.",
+                "dedicated",
+                "devices",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1396,33 +1790,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1437,48 +1813,201 @@
                 "stored",
                 "on",
                 "surfaces",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Up",
                 "to",
                 "two",
                 "surfaces",
                 "per",
-                "platter",
-                "\u2022",
+                "platter"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "One",
                 "or",
                 "more",
                 "platters",
                 "per",
-                "disk",
-                "head",
-                "sector",
+                "disk"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "head"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "sector"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Data",
                 "in",
                 "concentric",
                 "tracks",
                 "\u2022",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Tracks",
                 "broken",
                 "into",
-                "sectors",
-                "platter",
+                "sectors"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "platter"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "256B-1",
                 "KB",
                 "per",
-                "sector",
-                "track",
+                "sector"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "track"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Cylinder",
                 ":",
                 "corresponding",
                 "tracks",
                 "on",
                 "all",
-                "surfaces",
-                "cylinder",
+                "surfaces"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "cylinder"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Data",
                 "read",
@@ -1487,12 +2016,58 @@
                 "by",
                 "heads",
                 "\u2022",
-                "\u2022",
+                "\u2022"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Actuator",
                 "moves",
-                "heads",
-                "surfaces",
-                "spindle",
+                "heads"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "surfaces"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "spindle"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Heads",
                 "move",
                 "in",
@@ -1504,9 +2079,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "actuator",
-                "13"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1521,69 +2094,16 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "actuator",
+                "13"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -1596,16 +2116,7 @@
                 "cylinders",
                 ",",
                 "cylinder",
-                "groups",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "14"
+                "groups"
             ],
             "word_labels": [
                 "O",
@@ -1613,7 +2124,22 @@
                 "O",
                 "O",
                 "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1627,8 +2153,27 @@
         },
         {
             "sentence": [
+                "",
+                "14"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Disk",
-                "Sector",
+                "Sector"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1636,8 +2181,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "15"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1648,7 +2192,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1678,7 +2230,38 @@
                 "factors",
                 "\u2022",
                 "Seek",
-                "time",
+                "time"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Rotational",
                 "delay",
@@ -1702,7 +2285,39 @@
                 "rotation",
                 "delay",
                 "=",
-                "5ms",
+                "5ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Actual",
                 "transfer",
@@ -1738,106 +2353,9 @@
                 "transfer",
                 "time",
                 "per",
-                "sector",
-                "\u2022",
-                "Seek",
-                "time",
-                "dominates",
-                ",",
-                "with",
-                "rotation",
-                "time",
-                "close",
-                "\u2022",
-                "Error",
-                "checking",
-                "is",
-                "done",
-                "by",
-                "controllers",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "16"
+                "sector"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1879,85 +2397,40 @@
         },
         {
             "sentence": [
-                "Disk",
-                "drive",
-                "specifics",
-                "IBM",
-                "360",
-                "KB",
-                "floppy",
-                "WD",
-                "18",
-                "GB",
-                "HD",
-                "Cylinders",
-                "40",
-                "10601",
-                "Tracks",
-                "per",
-                "cylinder",
-                "2",
-                "12",
-                "Sectors",
-                "per",
-                "track",
-                "9",
-                "281",
-                "(",
-                "average",
-                ")",
-                "Sectors",
-                "per",
-                "disk",
-                "720",
-                "35742000",
-                "Bytes",
-                "per",
-                "sector",
-                "512",
-                "512",
-                "Capacity",
-                "360",
-                "KB",
-                "18.3",
-                "GB",
+                "",
+                "\u2022",
                 "Seek",
                 "time",
-                "(",
-                "minimum",
-                ")",
-                "6",
-                "ms",
-                "0.8",
-                "ms",
-                "Seek",
+                "dominates",
+                ",",
+                "with",
+                "rotation",
                 "time",
-                "(",
-                "average",
-                ")",
-                "77",
-                "ms",
-                "6.9",
-                "ms",
-                "Rotation",
-                "time",
-                "200",
-                "ms",
-                "8.33",
-                "ms",
-                "Spinup",
-                "time",
-                "250",
-                "ms",
-                "20",
-                "sec",
-                "Sector",
-                "transfer",
-                "time",
-                "22",
-                "ms",
-                "17",
-                "msec",
+                "close"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Error",
+                "checking",
+                "is",
+                "done",
+                "by",
+                "controllers",
                 "CS",
                 "1550",
                 "\u2013",
@@ -1965,8 +2438,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "17"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -1984,77 +2456,485 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "16"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Disk",
+                "drive",
+                "specifics",
+                "IBM",
+                "360",
+                "KB",
+                "floppy"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "WD",
+                "18",
+                "GB",
+                "HD"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Cylinders"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "40"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10601"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Tracks",
+                "per",
+                "cylinder"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Sectors",
+                "per",
+                "track"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "9"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "281",
+                "(",
+                "average",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Sectors",
+                "per",
+                "disk"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "720"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "35742000"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Bytes",
+                "per",
+                "sector"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "512"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "512"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Capacity"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "360",
+                "KB"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "18.3",
+                "GB"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Seek",
+                "time",
+                "(",
+                "minimum",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "0.8",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Seek",
+                "time",
+                "(",
+                "average",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "77",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6.9",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Rotation",
+                "time"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "200",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "8.33",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Spinup",
+                "time"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "250",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "20",
+                "sec"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Sector",
+                "transfer",
+                "time"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "22",
+                "ms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "17",
+                "msec"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "17"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2078,7 +2958,32 @@
                 "number",
                 "&",
                 "location",
-                "information",
+                "information"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Data",
                 "is",
@@ -2108,18 +3013,7 @@
                 "in",
                 "the",
                 "data",
-                "Preamble",
-                "Data",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "ECC",
-                "18"
+                "Preamble"
             ],
             "word_labels": [
                 "O",
@@ -2152,6 +3046,32 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Data"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2160,25 +3080,25 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "ECC"
+            ],
+            "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "18"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2186,7 +3106,16 @@
         {
             "sentence": [
                 "Parity",
-                "Examples",
+                "Examples"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -2194,8 +3123,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "19"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -2206,7 +3134,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "19"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2214,7 +3150,16 @@
         {
             "sentence": [
                 "1-d",
-                "parity",
+                "parity"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -2222,12 +3167,9 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "20"
+                "Khattab"
             ],
             "word_labels": [
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2241,8 +3183,27 @@
         },
         {
             "sentence": [
+                "",
+                "20"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "2-d",
-                "parity",
+                "parity"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -2250,8 +3211,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "21"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -2262,7 +3222,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "21"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2286,7 +3254,32 @@
                 "is",
                 "n\u2019t",
                 "surprising",
-                "!",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "ECC",
                 "helps",
                 "with",
@@ -2297,7 +3290,26 @@
                 "this",
                 "is",
                 "n\u2019t",
-                "enough",
+                "enough"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Disks",
                 "keep",
                 "spare",
@@ -2324,55 +3336,9 @@
                 "could",
                 "be",
                 "reordered",
-                "\u2026",
-                "CS",
-                "1550",
-                "\u2013",
-                "Operating",
-                "Systems",
-                "\u2013",
-                "Sherif",
-                "Khattab",
-                "22"
+                "\u2026"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2405,45 +3371,7 @@
         },
         {
             "sentence": [
-                "RAIDs",
-                ",",
-                "RAIDs",
-                ",",
-                "and",
-                "more",
-                "RAIDs",
-                "strip",
-                "strip",
-                "Stripe",
-                "RAID",
-                "0",
-                "(",
-                "Redundant",
-                "Array",
-                "of",
-                "Inexpensive",
-                "Disks",
-                "RAID",
-                "1",
-                "(",
-                "Mirrored",
-                "copies",
-                ")",
-                "RAID",
-                "4",
-                "(",
-                "Striped",
-                "with",
-                "parity",
-                ")",
-                "RAID",
-                "5",
-                "(",
-                "Parity",
-                "rotates",
-                "through",
-                "disks",
-                ")",
+                "",
                 "CS",
                 "1550",
                 "\u2013",
@@ -2451,8 +3379,7 @@
                 "Systems",
                 "\u2013",
                 "Sherif",
-                "Khattab",
-                "23"
+                "Khattab"
             ],
             "word_labels": [
                 "O",
@@ -2463,6 +3390,31 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "22"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "RAIDs",
+                ",",
+                "RAIDs",
+                ",",
+                "and",
+                "more",
+                "RAIDs",
+                "strip"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2470,29 +3422,33 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "strip"
+            ],
+            "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Stripe",
+                "RAID",
+                "0",
+                "(",
+                "Redundant",
+                "Array",
+                "of",
+                "Inexpensive",
+                "Disks"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2506,16 +3462,104 @@
             ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "RAID",
+                "1",
+                "(",
+                "Mirrored",
+                "copies",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "RAID",
+                "4",
+                "(",
+                "Striped",
+                "with",
+                "parity",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "RAID",
+                "5",
+                "(",
+                "Parity",
+                "rotates",
+                "through",
+                "disks",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "CS",
+                "1550",
+                "\u2013",
+                "Operating",
+                "Systems",
+                "\u2013",
+                "Sherif",
+                "Khattab"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "23"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
         },
         {
             "sentence": [],

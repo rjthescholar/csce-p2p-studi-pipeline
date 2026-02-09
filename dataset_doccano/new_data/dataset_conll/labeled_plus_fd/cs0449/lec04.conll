@@ -2,9 +2,15 @@
 -DOCSTART- -X- -X- O
 
 3 _ _ O
+
+
+ _ _ O
 Introduction _ _ O
 to _ _ O
 C _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +19,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,6 +34,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 Overview _ _ O
 of _ _ O
 C _ _ O
@@ -35,7 +47,13 @@ is _ _ O
 What _ _ O
 You _ _ O
 Get _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 C _ _ O
 : _ _ O
 The _ _ O
@@ -97,6 +115,9 @@ languages _ _ O
 Kernighan _ _ O
 and _ _ O
 Ritchie _ _ O
+
+
+ _ _ O
 • _ _ O
 Allows _ _ O
 writing _ _ O
@@ -118,6 +139,9 @@ instructions _ _ O
 parallelism _ _ O
 . _ _ O
 3 _ _ O
+
+
+ _ _ O
 C _ _ O
 : _ _ O
 Relevance _ _ O
@@ -137,6 +161,9 @@ static _ _ B-Concept
 / _ _ O
 interacti _ _ O
 ve-the-top-programming-languages-2019 _ _ O
+
+
+ _ _ O
 • _ _ O
 Still _ _ O
 relatively _ _ O
@@ -167,7 +194,13 @@ all _ _ O
 written _ _ O
 in _ _ O
 C. _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 TIOBE _ _ B-Concept
 index _ _ I-Concept
 TIOBE _ _ O
@@ -183,6 +216,9 @@ popularity _ _ O
 of _ _ O
 programming _ _ O
 languages _ _ O
+
+
+ _ _ O
 https _ _ O
 : _ _ O
 / _ _ O
@@ -191,6 +227,9 @@ www.tiobe.com _ _ O
 / _ _ O
 tiobe-index _ _ O
 / _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 • _ _ O
 C _ _ O
@@ -235,6 +274,9 @@ interprets _ _ O
 the _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 difference _ _ O
@@ -324,7 +366,13 @@ if _ _ O
 you _ _ O
 want _ _ O
 ! _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 : _ _ O
 Simple _ _ O
@@ -350,8 +398,17 @@ into _ _ O
 machine _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 file _ _ O
@@ -410,7 +467,13 @@ the _ _ O
 system _ _ O
 elsewhere _ _ O
 . _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 : _ _ O
 Simple _ _ O
@@ -454,7 +517,13 @@ program _ _ O
 elsewhere _ _ O
 . _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 break _ _ O
@@ -486,8 +555,14 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 util.o _ _ O
 8 _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 : _ _ O
 Simple _ _ O
@@ -516,13 +591,31 @@ called _ _ O
 linking _ _ B-Concept
 . _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 util.c _ _ O
+
+
+ _ _ O
 util.o _ _ O
+
+
+ _ _ O
 hello _ _ O
+
+
+ _ _ O
 stdio.o _ _ O
 External _ _ B-Concept
 Libraries _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 name _ _ O
@@ -576,6 +669,9 @@ pointers _ _ O
 later _ _ O
 ! _ _ O
 9 _ _ O
+
+
+ _ _ O
 It _ _ O
 's _ _ O
 just _ _ O
@@ -586,7 +682,13 @@ grinder _ _ O
 In _ _ O
 summary _ _ O
 : _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 code _ _ O
 goes _ _ O
 in _ _ O
@@ -596,6 +698,9 @@ object _ _ O
 files _ _ O
 come _ _ O
 out _ _ O
+
+
+ _ _ O
 Some _ _ O
 compilers _ _ O
 output _ _ O
@@ -638,6 +743,9 @@ a _ _ O
 bytecode _ _ B-Concept
 ) _ _ O
 10 _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 vs. _ _ O
 Interpretation _ _ O
@@ -645,10 +753,16 @@ C _ _ O
 ( _ _ O
 compiled _ _ O
 ) _ _ O
+
+
+ _ _ O
 Python _ _ O
 ( _ _ O
 interpreted _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Compiler _ _ B-Concept
 + _ _ O
@@ -659,6 +773,9 @@ into _ _ O
 machine _ _ B-Concept
 code _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Interpreter _ _ B-Concept
 is _ _ O
@@ -678,6 +795,9 @@ into _ _ O
 machine _ _ B-Concept
 code _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Machine _ _ B-Concept
 code _ _ I-Concept
@@ -712,6 +832,9 @@ those _ _ O
 new _ _ O
 systems _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 Python _ _ O
@@ -731,6 +854,9 @@ interpreter _ _ B-Concept
 Usually _ _ O
 slower _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Very _ _ O
 portable _ _ O
@@ -744,6 +870,9 @@ the _ _ O
 interpreter _ _ B-Concept
 . _ _ O
 11 _ _ O
+
+
+ _ _ O
 Compilation _ _ B-Concept
 vs. _ _ O
 Virtual _ _ O
@@ -794,6 +923,9 @@ successful _ _ O
 or _ _ O
 practical _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Instead _ _ O
 , _ _ O
@@ -837,6 +969,9 @@ JIT _ _ B-Concept
 ) _ _ O
 compilation _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -868,7 +1003,13 @@ any _ _ O
 time _ _ O
 soon _ _ O
 . _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 C _ _ O
 vs. _ _ O
 Java _ _ O
@@ -876,23 +1017,50 @@ C _ _ O
 ( _ _ O
 C99 _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 Java _ _ O
+
+
+ _ _ O
 Type _ _ O
 of _ _ O
 Language _ _ O
+
+
+ _ _ O
 Function _ _ B-Concept
 Oriented _ _ O
+
+
+ _ _ O
 Object _ _ O
 Oriented _ _ O
+
+
+ _ _ O
 Programming _ _ O
 Unit _ _ O
+
+
+ _ _ O
 Function _ _ B-Concept
+
+
+ _ _ O
 Class _ _ O
 = _ _ O
 Abstract _ _ B-Concept
 Data _ _ I-Concept
 Type _ _ I-Concept
+
+
+ _ _ O
 Compilation _ _ B-Concept
+
+
+ _ _ O
 gcc _ _ B-Concept
 hello.c _ _ O
 - _ _ O
@@ -900,6 +1068,9 @@ creates _ _ O
 machine _ _ O
 language _ _ O
 code _ _ O
+
+
+ _ _ O
 javac _ _ O
 Hello.java _ _ O
 - _ _ O
@@ -909,33 +1080,57 @@ virtual _ _ I-Concept
 machine _ _ I-Concept
 language _ _ O
 bytecode _ _ O
+
+
+ _ _ O
 Execution _ _ O
+
+
+ _ _ O
 a.out _ _ O
 - _ _ O
 loads _ _ O
 and _ _ O
 executes _ _ O
 program _ _ O
+
+
+ _ _ O
 java _ _ O
 Hello _ _ O
 - _ _ O
 interprets _ _ O
 bytecodes _ _ O
+
+
+ _ _ O
 Manual _ _ O
 ( _ _ O
 malloc _ _ O
 , _ _ O
 free _ _ O
 ) _ _ O
+
+
+ _ _ O
 Automatic _ _ O
 ( _ _ O
 garbage _ _ O
 collection _ _ O
 ) _ _ O
+
+
+ _ _ O
 hello _ _ O
 , _ _ O
 world _ _ O
+
+
+ _ _ O
 Storage _ _ O
+
+
+ _ _ O
 From _ _ O
 http _ _ O
 : _ _ O
@@ -948,7 +1143,13 @@ introcs _ _ O
 faq _ _ O
 / _ _ O
 c2java.html _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 C _ _ O
 vs. _ _ O
 Java _ _ O
@@ -957,32 +1158,65 @@ C _ _ O
 C99 _ _ O
 ) _ _ O
 or _ _ O
+
+
+ _ _ O
 Comments _ _ O
+
+
+ _ _ O
 Java _ _ O
+
+
+ _ _ O
 ... _ _ O
 end _ _ O
 of _ _ O
 line _ _ O
+
+
+ _ _ O
 or _ _ O
+
+
+ _ _ O
 ... _ _ O
 end _ _ O
 of _ _ O
 line _ _ O
+
+
+ _ _ O
 Constants _ _ O
 Preprocessor _ _ O
 Yes _ _ O
+
+
+ _ _ O
 No _ _ O
+
+
+ _ _ O
 Variable _ _ O
 declaration _ _ O
+
+
+ _ _ O
 Before _ _ O
 you _ _ O
 use _ _ O
 it _ _ O
+
+
+ _ _ O
 At _ _ O
 beginning _ _ O
 of _ _ O
 a _ _ O
 block _ _ O
+
+
+ _ _ O
 Variable _ _ O
 naming _ _ O
 conventions _ _ O
@@ -1001,10 +1235,22 @@ introcs _ _ O
 faq _ _ O
 / _ _ O
 c2java.html _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 Hello _ _ O
 World _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 C _ _ O
 Dialects _ _ O
 • _ _ O
@@ -1032,6 +1278,9 @@ changed _ _ O
 very _ _ O
 little _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 There _ _ O
 have _ _ O
@@ -1050,8 +1299,17 @@ ANSI _ _ O
 ISO _ _ O
 C _ _ O
 • _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 • _ _ O
 C99 _ _ O
 - _ _ O
@@ -1064,7 +1322,13 @@ and _ _ O
 single-line _ _ O
 comments _ _ O
 • _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 • _ _ O
 C11 _ _ O
 - _ _ O
@@ -1087,7 +1351,13 @@ threading _ _ O
 libraries _ _ O
 . _ _ O
 • _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 • _ _ O
 C18 _ _ O
 - _ _ O
@@ -1102,7 +1372,13 @@ C _ _ O
 standard _ _ O
 . _ _ O
 • _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
@@ -1134,6 +1410,9 @@ are _ _ O
 relevant _ _ O
 . _ _ O
 16 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ O
 Syntax _ _ O
@@ -1151,7 +1430,13 @@ and _ _ O
 C-like _ _ O
 syntaxes _ _ O
 . _ _ O
+
+
+ _ _ O
 17 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ O
 Pre-Processor _ _ O
@@ -1192,30 +1477,66 @@ to _ _ O
 more _ _ O
 code _ _ O
 ! _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 The _ _ O
 " _ _ O
 main _ _ O
 " _ _ O
 function _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Declaring _ _ O
 variables _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Casting _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 Integer _ _ O
 Sizes _ _ O
 - _ _ O
 Revisted _ _ O
 : _ _ O
 sizeof _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 Integer _ _ O
 Sizes _ _ O
 - _ _ O
 Revisted _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Integers _ _ O
 : _ _ O
 Python _ _ O
@@ -1227,6 +1548,9 @@ Language _ _ O
 Python _ _ O
 Java _ _ O
 C _ _ O
+
+
+ _ _ O
 sizeof _ _ O
 ( _ _ O
 int _ _ O
@@ -1256,6 +1580,9 @@ or _ _ O
 32 _ _ O
 or _ _ O
 64 _ _ O
+
+
+ _ _ O
 • _ _ O
 C _ _ O
 : _ _ O
@@ -1282,6 +1609,9 @@ good-enough _ _ O
 default _ _ O
 choice _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Only _ _ O
 guarantee _ _ O
@@ -1302,22 +1632,49 @@ could _ _ O
 be _ _ O
 64 _ _ O
 bits _ _ O
+
+
+ _ _ O
 ≥ _ _ O
+
+
+ _ _ O
 ≥ _ _ O
+
+
+ _ _ O
 > _ _ O
 = _ _ O
 32 _ _ O
 bits _ _ O
+
+
+ _ _ O
 • _ _ O
 Impacts _ _ O
 portability _ _ O
 between _ _ O
 architectures _ _ O
 24 _ _ O
+
+
+ _ _ O
 Constants _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 Enumerations _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Operators _ _ O
 : _ _ O
 Java _ _ O
@@ -1325,11 +1682,26 @@ stole _ _ O
 'em _ _ O
 from _ _ O
 here _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 Augmented _ _ O
 Operators _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Expressions _ _ O
 : _ _ O
 an _ _ O
@@ -1338,6 +1710,9 @@ of _ _ O
 frustration _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 C _ _ O
 often _ _ O
@@ -1366,12 +1741,18 @@ accommodates _ _ O
 that _ _ O
 operation _ _ O
 . _ _ O
+
+
+ _ _ O
 , _ _ O
 result _ _ O
 in _ _ O
 a _ _ O
 type _ _ O
 that _ _ O
+
+
+ _ _ O
 • _ _ O
 Specifically _ _ O
 , _ _ O
@@ -1407,7 +1788,13 @@ C _ _ O
 's _ _ O
 general _ _ O
 motto _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ O
 Syntax _ _ O
@@ -1426,7 +1813,13 @@ BE _ _ O
 the _ _ O
 program _ _ O
 . _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 Controlling _ _ O
 the _ _ O
 flow _ _ O
@@ -1435,7 +1828,13 @@ an _ _ O
 intro _ _ O
 to _ _ O
 spaghetti _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 Controlling _ _ O
 the _ _ O
 flow _ _ O
@@ -1463,6 +1862,9 @@ library _ _ O
 provides _ _ O
 one _ _ O
 in _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 Boolean _ _ O
@@ -1471,8 +1873,14 @@ are _ _ O
 actually _ _ O
 just _ _ O
 an _ _ O
+
+
+ _ _ O
 type _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 is _ _ O
@@ -1490,7 +1898,13 @@ consistent _ _ O
 yet _ _ O
 again _ _ O
 ! _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Controlling _ _ O
 the _ _ O
 flow _ _ O
@@ -1499,10 +1913,16 @@ Putting _ _ O
 it _ _ O
 Together _ _ O
 • _ _ O
+
+
+ _ _ O
 statements _ _ O
 therefore _ _ O
 take _ _ O
 an _ _ O
+
+
+ _ _ O
 and _ _ O
 not _ _ O
 a _ _ O
@@ -1512,6 +1932,9 @@ as _ _ O
 an _ _ O
 expression _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 the _ _ O
@@ -1530,13 +1953,22 @@ is _ _ O
 considered _ _ O
 true _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
+
+
+ _ _ O
 Throwing _ _ O
 us _ _ O
 all _ _ O
 for _ _ O
 a _ _ O
 loop _ _ O
+
+
+ _ _ O
 • _ _ O
 Most _ _ O
 loops _ _ O
@@ -1559,11 +1991,20 @@ course _ _ O
 the _ _ O
 expressions _ _ O
 are _ _ O
+
+
+ _ _ O
 typed _ _ O
 , _ _ O
 like _ _ O
+
+
+ _ _ O
 statements _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 loops _ _ O
@@ -1587,6 +2028,9 @@ within _ _ O
 • _ _ O
 ERROR _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1601,6 +2045,9 @@ Please _ _ O
 do _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Loops _ _ O
 have _ _ O
@@ -1613,6 +2060,9 @@ flow _ _ O
 : _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 will _ _ O
 end _ _ O
 the _ _ O
@@ -1630,6 +2080,9 @@ loop _ _ O
 entirely _ _ O
 . _ _ O
 34 _ _ O
+
+
+ _ _ O
 Loop _ _ O
 Refresher _ _ O
 : _ _ O
@@ -1639,7 +2092,13 @@ Do-While _ _ O
 , _ _ O
 For _ _ O
 Loops _ _ O
+
+
+ _ _ O
 35 _ _ O
+
+
+ _ _ O
 Taking _ _ O
 a _ _ O
 break _ _ O
@@ -1651,11 +2110,17 @@ up _ _ O
 The _ _ O
 properly _ _ O
 . _ _ O
+
+
+ _ _ O
 statement _ _ O
 requires _ _ O
 proper _ _ O
 placement _ _ O
 of _ _ O
+
+
+ _ _ O
 • _ _ O
 Starts _ _ O
 at _ _ O
@@ -1680,12 +2145,18 @@ if _ _ O
 there _ _ O
 is _ _ O
 no _ _ O
+
+
+ _ _ O
 to _ _ O
 work _ _ O
 . _ _ O
 between _ _ O
 them _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Sometimes _ _ O
 fall _ _ O
@@ -1707,6 +2178,9 @@ the _ _ O
 time _ _ O
 :/ _ _ O
 36 _ _ O
+
+
+ _ _ O
 Control _ _ O
 Flow _ _ O
 : _ _ O
@@ -1715,15 +2189,24 @@ Summary _ _ O
 Conditional _ _ O
 Blocks _ _ O
 : _ _ O
+
+
+ _ _ O
 Note _ _ O
 : _ _ O
 a _ _ O
+
+
+ _ _ O
 can _ _ O
 be _ _ O
 a _ _ O
 { _ _ O
 block _ _ O
 } _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
@@ -1734,6 +2217,9 @@ can _ _ O
 be _ _ O
 chained _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 Conventional _ _ O
 Loops _ _ O
@@ -1741,6 +2227,9 @@ Loops _ _ O
 • _ _ O
 • _ _ O
 37 _ _ O
+
+
+ _ _ O
 Control _ _ O
 Flow _ _ O
 : _ _ O
@@ -1749,24 +2238,42 @@ Summary _ _ O
 For _ _ O
 Loops _ _ O
 : _ _ O
+
+
+ _ _ O
 Note _ _ O
 : _ _ O
 a _ _ O
+
+
+ _ _ O
 can _ _ O
 be _ _ O
 a _ _ O
 { _ _ O
 block _ _ O
 } _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 • _ _ O
 Switch _ _ O
 : _ _ O
 • _ _ O
+
+
+ _ _ O
 • _ _ O
 38 _ _ O
+
+
+ _ _ O
 What _ _ O
 's _ _ O
 your _ _ O
@@ -1793,6 +2300,9 @@ the _ _ O
 name _ _ O
 . _ _ O
 • _ _ O
+
+
+ _ _ O
 is _ _ O
 used _ _ O
 when _ _ O
@@ -1824,6 +2334,9 @@ an _ _ O
 empty _ _ O
 list _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Functions _ _ O
 must _ _ O
@@ -1849,7 +2362,13 @@ between _ _ O
 files _ _ O
 soon _ _ O
 ! _ _ O
+
+
+ _ _ O
 39 _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 all _ _ O
@@ -1884,7 +2403,13 @@ data _ _ O
 types _ _ O
 together _ _ O
 : _ _ O
+
+
+ _ _ O
 40 _ _ O
+
+
+ _ _ O
 I _ _ O
 do _ _ O
 n't _ _ O
@@ -1926,7 +2451,13 @@ defines _ _ O
 new _ _ O
 types _ _ O
 . _ _ O
+
+
+ _ _ O
 41 _ _ O
+
+
+ _ _ O
 I _ _ O
 do _ _ O
 n't _ _ O
@@ -1957,8 +2488,14 @@ to _ _ O
 define _ _ O
 bool _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 And _ _ O
+
+
+ _ _ O
 types _ _ O
 , _ _ O
 although _ _ O
@@ -1973,6 +2510,9 @@ mix _ _ O
 match _ _ O
 them _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 Now _ _ O
 , _ _ O
@@ -2003,7 +2543,13 @@ value _ _ O
 without _ _ O
 complaint _ _ O
 ! _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 That _ _ O
 's _ _ O
 seriously _ _ O
@@ -2030,7 +2576,13 @@ That _ _ O
 's _ _ O
 C++ _ _ O
 ! _ _ O
+
+
+ _ _ O
 43 _ _ O
+
+
+ _ _ O
 Garbage _ _ O
 in _ _ O
 , _ _ O
@@ -2086,6 +2638,9 @@ the _ _ O
 other _ _ O
 hand _ _ O
 ... _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 default _ _ O
@@ -2124,12 +2679,18 @@ as _ _ O
 garbage _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 • _ _ O
 ALWAYS _ _ O
 INITIALIZE _ _ O
 YOUR _ _ O
 VARIABLES _ _ O
 44 _ _ O
+
+
+ _ _ O
 The _ _ O
 trouble _ _ O
 is _ _ O
@@ -2138,6 +2699,9 @@ up _ _ O
 on _ _ O
 us _ _ O
 ! _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 Hmm _ _ O
@@ -2155,7 +2719,13 @@ from _ _ O
 ? _ _ O
 Why _ _ O
 ? _ _ O
+
+
+ _ _ O
 45 _ _ O
+
+
+ _ _ O
 Where _ _ O
 's _ _ O
 that _ _ O
@@ -2239,6 +2809,9 @@ rather _ _ O
 the _ _ O
 OS _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 C _ _ O
 does _ _ O
@@ -2275,6 +2848,9 @@ on _ _ O
 your _ _ O
 face _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Now _ _ O
 , _ _ O
@@ -2286,7 +2862,13 @@ deeper _ _ O
 dive _ _ O
 into _ _ O
 ... _ _ O
+
+
+ _ _ O
 MEMORY _ _ O
 46 _ _ O
+
+
+ _ _ O
 
 

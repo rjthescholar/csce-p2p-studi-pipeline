@@ -3,18 +3,30 @@ self_training_1|cs0447|lec08
 
 # _ _ O
 8 _ _ O
+
+
+ _ _ O
 Bitwise _ _ O
 Operations _ _ O
 and _ _ O
 Bitfields _ _ O
+
+
+ _ _ O
 CS _ _ O
 0447 _ _ O
 Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Original _ _ O
 slides _ _ O
 by _ _ O
@@ -35,6 +47,9 @@ Fall _ _ O
 2020 _ _ O
 
 Announcements _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Logical _ _ O
@@ -72,6 +87,9 @@ a||b _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 class _ _ O
 Main _ _ O
 { _ _ O
@@ -103,19 +121,31 @@ a|b _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 is _ _ O
 the _ _ O
 output _ _ O
 ? _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 is _ _ O
 the _ _ O
 output _ _ O
 ? _ _ O
+
+
+ _ _ O
 5 _ _ O
 3 _ _ O
 
@@ -166,10 +196,22 @@ a _ _ O
 pattern _ _ O
 of _ _ O
 bits _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 4 _ _ O
 
@@ -202,12 +244,33 @@ on _ _ O
 turn _ _ O
 it _ _ O
 off _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
 can _ _ O
@@ -230,6 +293,9 @@ or _ _ O
 , _ _ O
 or _ _ O
 A _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Applying _ _ O
@@ -261,6 +327,9 @@ is _ _ O
 what _ _ O
 happens _ _ O
 : _ _ O
+
+
+ _ _ O
 ~ _ _ O
 0 _ _ O
 0 _ _ O
@@ -270,6 +339,9 @@ happens _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 = _ _ O
 1 _ _ O
 1 _ _ O
@@ -305,6 +377,9 @@ slide _ _ O
 is _ _ O
 too _ _ O
 much _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Let _ _ O
@@ -335,6 +410,9 @@ it _ _ O
 light _ _ O
 up _ _ O
 ? _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 AND _ _ O
@@ -361,13 +439,28 @@ number _ _ O
 of _ _ O
 ways _ _ O
 : _ _ O
+
+
+ _ _ O
 o _ _ O
 A _ _ O
 & _ _ O
 B _ _ O
+
+
+ _ _ O
 A∧B _ _ O
+
+
+ _ _ O
 A⋅B _ _ O
+
+
+ _ _ O
 AB _ _ O
+
+
+ _ _ O
 ● _ _ O
 if _ _ O
 we _ _ O
@@ -384,12 +477,18 @@ C _ _ O
 Java _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 Q _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
@@ -407,9 +506,15 @@ Q _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 = _ _ O
 0 _ _ O
 0 _ _ O
@@ -419,12 +524,21 @@ Q _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 we _ _ O
 did _ _ O
 8 _ _ O
@@ -448,6 +562,9 @@ it _ _ O
 light _ _ O
 up _ _ O
 ? _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 OR _ _ O
@@ -476,10 +593,22 @@ number _ _ O
 of _ _ O
 ways _ _ O
 : _ _ O
+
+
+ _ _ O
 o _ _ O
 A|B _ _ O
+
+
+ _ _ O
 A∨B _ _ O
+
+
+ _ _ O
 A+B _ _ O
+
+
+ _ _ O
 ● _ _ O
 if _ _ O
 we _ _ O
@@ -496,12 +625,18 @@ C _ _ O
 Java _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 Q _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
@@ -519,9 +654,15 @@ Q _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 = _ _ O
 1 _ _ O
 1 _ _ O
@@ -531,12 +672,21 @@ Q _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 We _ _ O
 did _ _ O
 8 _ _ O
@@ -567,6 +717,9 @@ turns _ _ O
 it _ _ O
 into _ _ O
 : _ _ O
+
+
+ _ _ O
 lui _ _ O
 at _ _ O
 , _ _ O
@@ -585,6 +738,9 @@ at _ _ O
 NEVER _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 at _ _ O
 is _ _ O
@@ -649,6 +805,9 @@ these _ _ O
 instructions _ _ O
 doing _ _ O
 tho _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 By _ _ O
@@ -682,6 +841,9 @@ zeroes _ _ O
 out _ _ O
 the _ _ O
 rest _ _ O
+
+
+ _ _ O
 lui _ _ O
 at _ _ O
 , _ _ O
@@ -699,6 +861,9 @@ and _ _ O
 its _ _ O
 zero-extended _ _ O
 immediate _ _ O
+
+
+ _ _ O
 ori _ _ O
 t0 _ _ O
 , _ _ O
@@ -708,19 +873,49 @@ at _ _ O
 11011110101011010000000000000000 _ _ O
 | _ _ O
 00000000000000001011111011101111 _ _ O
+
+
+ _ _ O
 11011110101011001011111011101111 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 F _ _ O
 12 _ _ O
 
 Bit _ _ O
 shifting _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Bit _ _ O
@@ -759,6 +954,9 @@ left _ _ O
 by _ _ O
 1 _ _ O
 … _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
@@ -787,6 +985,9 @@ bottom _ _ O
 0 _ _ O
 again _ _ O
 ! _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
@@ -841,6 +1042,9 @@ operator _ _ O
 for _ _ O
 left _ _ O
 shift _ _ O
+
+
+ _ _ O
 B _ _ O
 = _ _ O
 A _ _ O
@@ -857,6 +1061,9 @@ shifted _ _ O
 left _ _ O
 4 _ _ O
 bits _ _ O
+
+
+ _ _ O
 ● _ _ O
 MIPS _ _ O
 has _ _ O
@@ -868,6 +1075,9 @@ Left _ _ O
 Logical _ _ O
 ) _ _ O
 instruction _ _ O
+
+
+ _ _ O
 sll _ _ O
 t2 _ _ O
 , _ _ O
@@ -901,6 +1111,9 @@ are _ _ O
 not _ _ O
 variables _ _ O
 ! _ _ O
+
+
+ _ _ O
 sllv _ _ O
 t2 _ _ O
 , _ _ O
@@ -914,6 +1127,9 @@ t0 _ _ O
 < _ _ O
 < _ _ O
 t1 _ _ O
+
+
+ _ _ O
 ● _ _ O
 if _ _ O
 the _ _ O
@@ -937,6 +1153,9 @@ top _ _ O
 4 _ _ O
 bits _ _ O
 ? _ _ O
+
+
+ _ _ O
 0011 _ _ O
 0000 _ _ O
 0000 _ _ O
@@ -947,6 +1166,9 @@ bits _ _ O
 1111 _ _ O
 Bit _ _ O
 Bucket _ _ O
+
+
+ _ _ O
 the _ _ O
 bit _ _ O
 bucket _ _ O
@@ -1139,6 +1361,9 @@ too _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ● _ _ O
 C _ _ O
 / _ _ O
@@ -1155,6 +1380,9 @@ Shift _ _ O
 Right _ _ O
 Logical _ _ O
 ) _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Numbers _ _ O
@@ -1177,18 +1405,27 @@ and _ _ O
 see _ _ O
 what _ _ O
 happens _ _ O
+
+
+ _ _ O
 Binary _ _ O
 101 _ _ O
 1010 _ _ O
 10100 _ _ O
 101000 _ _ O
 1010000 _ _ O
+
+
+ _ _ O
 Decimal _ _ O
 5 _ _ O
 10 _ _ O
 20 _ _ O
 40 _ _ O
 80 _ _ O
+
+
+ _ _ O
 why _ _ O
 is _ _ O
 this _ _ O
@@ -1201,7 +1438,13 @@ if _ _ O
 I _ _ O
 gave _ _ O
 you _ _ O
+
+
+ _ _ O
 49018853 _ _ O
+
+
+ _ _ O
 how _ _ O
 do _ _ O
 you _ _ O
@@ -1216,12 +1459,18 @@ by _ _ O
 by _ _ O
 100000 _ _ O
 ? _ _ O
+
+
+ _ _ O
 something _ _ O
 very _ _ O
 similar _ _ O
 is _ _ O
 happening _ _ O
 here _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 a _ _ O
@@ -1299,6 +1548,9 @@ same _ _ O
 as _ _ O
 multiplying _ _ O
 … _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 a _ _ O
@@ -1374,6 +1626,9 @@ to _ _ O
 the _ _ O
 smallest _ _ O
 number _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 if _ _ O
@@ -1408,6 +1663,9 @@ is _ _ O
 ? _ _ O
 ▪ _ _ O
 Ohhhhh _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 < _ _ O
@@ -1590,6 +1848,9 @@ too _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ● _ _ O
 MIPS _ _ O
 uses _ _ O
@@ -1629,6 +1890,9 @@ this _ _ O
 ? _ _ O
 next _ _ O
 class _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 MIPS _ _ O
@@ -1640,55 +1904,94 @@ operations _ _ O
 Bitwise _ _ O
 logical _ _ O
 operators _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 not _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 ~b _ _ O
+
+
+ _ _ O
 or _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b|c _ _ O
+
+
+ _ _ O
 ori _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 imm _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b|imm _ _ O
+
+
+ _ _ O
 and _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 & _ _ O
 c _ _ O
+
+
+ _ _ O
 andi _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 imm _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 & _ _ O
 imm _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 MIPS _ _ O
@@ -1700,38 +2003,62 @@ shifts _ _ O
 Bitwise _ _ O
 logical _ _ O
 operators _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 sll _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 imm _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 < _ _ O
 < _ _ O
 imm _ _ O
+
+
+ _ _ O
 sllv _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 < _ _ O
 < _ _ O
 c _ _ O
+
+
+ _ _ O
 srl _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 imm _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
@@ -1742,24 +2069,36 @@ imm _ _ O
 zero _ _ O
 extension _ _ O
 ) _ _ O
+
+
+ _ _ O
 srlv _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 > _ _ O
 > _ _ O
 c _ _ O
+
+
+ _ _ O
 sra _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 imm _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
@@ -1770,29 +2109,47 @@ imm _ _ O
 sign _ _ O
 extension _ _ O
 ) _ _ O
+
+
+ _ _ O
 srav _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 = _ _ O
 b _ _ O
 > _ _ O
 > _ _ O
 c _ _ O
+
+
+ _ _ O
 ( _ _ O
 zero _ _ O
 extension _ _ O
 ) _ _ O
+
+
+ _ _ O
 ( _ _ O
 sign _ _ O
 extension _ _ O
 ) _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Bitfields _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 clicky _ _ O
@@ -1818,6 +2175,9 @@ value _ _ O
 in _ _ O
 v0 _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -1864,6 +2224,9 @@ known _ _ O
 as _ _ O
 bit _ _ O
 flags _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
@@ -1874,6 +2237,9 @@ R _ _ O
 L _ _ O
 D _ _ O
 U _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -1904,6 +2270,9 @@ in _ _ O
 one _ _ O
 value _ _ O
 ? _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -1936,14 +2305,38 @@ value _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 decimal _ _ O
 ? _ _ O
+
+
+ _ _ O
 red _ _ O
+
+
+ _ _ O
 green _ _ O
+
+
+ _ _ O
 blue _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 That _ _ O
 's _ _ O
 this _ _ O
@@ -1952,6 +2345,9 @@ color _ _ O
 in _ _ O
 RGB565 _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 The _ _ O
@@ -1971,6 +2367,9 @@ green _ _ O
 , _ _ O
 and _ _ O
 blue _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -2004,14 +2403,32 @@ blue _ _ O
 1 _ _ O
 1 _ _ O
 red _ _ O
+
+
+ _ _ O
 green _ _ O
+
+
+ _ _ O
 blue _ _ O
+
+
+ _ _ O
 Position _ _ O
 11 _ _ O
+
+
+ _ _ O
 Position _ _ O
 5 _ _ O
+
+
+ _ _ O
 Position _ _ O
 0 _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Whyyyyy _ _ O
@@ -2057,6 +2474,9 @@ less _ _ O
 space _ _ O
 in _ _ O
 cache _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 extremely _ _ O
 important _ _ O
@@ -2070,6 +2490,9 @@ talk _ _ O
 about _ _ O
 in _ _ O
 1541 _ _ O
+
+
+ _ _ O
 o _ _ O
 Is _ _ O
 faster _ _ O
@@ -2103,6 +2526,9 @@ references _ _ O
 to _ _ O
 multiple _ _ O
 registers _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 I _ _ O
@@ -2142,19 +2568,34 @@ to _ _ O
 do _ _ O
 that _ _ O
 ? _ _ O
+
+
+ _ _ O
 0 _ _ O
 ? _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 I _ _ O
@@ -2188,19 +2629,34 @@ to _ _ O
 do _ _ O
 that _ _ O
 ? _ _ O
+
+
+ _ _ O
 1 _ _ O
 ? _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 Turning _ _ O
@@ -2224,30 +2680,54 @@ the _ _ O
 same _ _ O
 operations _ _ O
 … _ _ O
+
+
+ _ _ O
 1 _ _ O
 ? _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Remember _ _ O
 this _ _ O
 ? _ _ O
+
+
+ _ _ O
 lui _ _ O
 at _ _ O
 , _ _ O
@@ -2261,15 +2741,45 @@ at _ _ O
 11011110101011010000000000000000 _ _ O
 | _ _ O
 00000000000000001011111011101111 _ _ O
+
+
+ _ _ O
 11011110101011011011111011101111 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 How _ _ O
@@ -2283,28 +2793,79 @@ bitfields _ _ O
 ? _ _ O
 15 _ _ O
 14 _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 11 _ _ O
 10 _ _ O
+
+
+ _ _ O
 red _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 green _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 5 _ _ O
 4 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 blue _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
@@ -2327,16 +2888,25 @@ blue _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 … _ _ O
 ● _ _ O
 hmm _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2348,6 +2918,9 @@ hmm _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2358,6 +2931,9 @@ hmm _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2370,22 +2946,6 @@ hmm _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2396,6 +2956,31 @@ hmm _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+ _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Left-shifting _ _ O
@@ -2464,6 +3049,9 @@ left _ _ O
 0 _ _ O
 … _ _ O
 ) _ _ O
+
+
+ _ _ O
 color _ _ O
 = _ _ O
 ( _ _ O
@@ -2482,6 +3070,9 @@ green _ _ O
 | _ _ O
 blue _ _ O
 ; _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Going _ _ O
@@ -2500,6 +3091,9 @@ three _ _ O
 separate _ _ O
 values _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -2545,6 +3139,9 @@ bits _ _ O
 to _ _ O
 0 _ _ O
 . _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
@@ -2583,6 +3180,9 @@ we _ _ O
 fix _ _ O
 that _ _ O
 ? _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 It _ _ O
@@ -2603,6 +3203,9 @@ field _ _ O
 at _ _ O
 position _ _ O
 0 _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -2641,6 +3244,9 @@ by _ _ O
 11 _ _ O
 and _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2668,6 +3274,9 @@ right _ _ O
 by _ _ O
 … _ _ O
 ? _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2687,6 +3296,9 @@ by _ _ O
 uh _ _ O
 oh _ _ O
 . _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Masquerade _ _ O
@@ -2755,6 +3367,9 @@ want _ _ O
 to _ _ O
 discard _ _ O
 ? _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2772,6 +3387,9 @@ discard _ _ O
 0 _ _ O
 0 _ _ O
 & _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2808,6 +3426,9 @@ this _ _ O
 is _ _ O
 the _ _ O
 mask _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 Coming _ _ O
@@ -2861,6 +3482,9 @@ it _ _ O
 's _ _ O
 … _ _ O
 ? _ _ O
+
+
+ _ _ O
 Size _ _ O
 ( _ _ O
 n _ _ O
@@ -2872,10 +3496,16 @@ Mask _ _ O
 4 _ _ O
 111112 _ _ O
 5 _ _ O
+
+
+ _ _ O
 2n _ _ O
 8 _ _ O
 16 _ _ O
 32 _ _ O
+
+
+ _ _ O
 Mask _ _ O
 in _ _ O
 decimal _ _ O
@@ -2964,6 +3594,9 @@ is _ _ O
 or _ _ O
 0x3F _ _ O
 ) _ _ O
+
+
+ _ _ O
 red _ _ O
 = _ _ O
 ( _ _ O
@@ -2992,6 +3625,9 @@ color _ _ O
 & _ _ O
 0x1F _ _ O
 ; _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 NOW _ _ O
@@ -3002,6 +3638,9 @@ let _ _ O
 's _ _ O
 extract _ _ O
 green _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -3040,6 +3679,9 @@ by _ _ O
 5 _ _ O
 and _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3062,6 +3704,9 @@ AND _ _ O
 with _ _ O
 0x3F _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3078,6 +3723,9 @@ with _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Ca _ _ O
@@ -3092,6 +3740,9 @@ sure _ _ O
 , _ _ O
 but _ _ O
 … _ _ O
+
+
+ _ _ O
 15 _ _ O
 14 _ _ O
 13 _ _ O
@@ -3131,6 +3782,9 @@ with _ _ O
 ! _ _ O
 ) _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3152,6 +3806,9 @@ right _ _ O
 by _ _ O
 5 _ _ O
 … _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3182,6 +3839,9 @@ it _ _ O
 < _ _ O
 5 _ _ O
 . _ _ O
+
+
+ _ _ O
 I _ _ O
 feel _ _ O
 like _ _ O
@@ -3189,6 +3849,9 @@ that _ _ O
 's _ _ O
 uglier _ _ O
 . _ _ O
+
+
+ _ _ O
 Experience _ _ O
 shows _ _ O
 me _ _ O
@@ -3232,6 +3895,9 @@ s0 _ _ O
 zero _ _ O
 , _ _ O
 0x1234 _ _ O
+
+
+ _ _ O
 3 _ _ O
 30 _ _ O
 29 _ _ O
@@ -3270,20 +3936,35 @@ zero _ _ O
 65 _ _ O
 00100000000100000001001000110100 _ _ O
 opcode _ _ O
+
+
+ _ _ O
 rs _ _ O
 It _ _ O
 ’s _ _ O
 addi _ _ O
 ! _ _ O
+
+
+ _ _ O
 rt _ _ O
 zero _ _ O
+
+
+ _ _ O
 imm _ _ O
 Load _ _ O
 into _ _ O
 this _ _ O
 register _ _ O
+
+
+ _ _ O
 This _ _ O
 number _ _ O
+
+
+ _ _ O
 ● _ _ O
 Using _ _ O
 these _ _ O

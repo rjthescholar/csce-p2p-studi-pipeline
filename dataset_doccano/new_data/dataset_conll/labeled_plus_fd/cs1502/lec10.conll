@@ -7,15 +7,27 @@ Machine _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 02 _ _ O
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 Example _ _ O
+
+
+ _ _ O
 Design _ _ O
 a _ _ O
 Turing _ _ B-Concept
@@ -41,7 +53,13 @@ string _ _ I-Concept
 w _ _ O
 : _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Zig-zag _ _ B-Concept
 across _ _ I-Concept
 the _ _ I-Concept
@@ -132,12 +150,21 @@ otherwise _ _ O
 , _ _ O
 accept _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 02 _ _ O
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 M1 _ _ O
@@ -156,47 +183,125 @@ w _ _ O
 Σ∗ _ _ B-Concept
 } _ _ O
 . _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 x _ _ B-Concept
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 R _ _ O
 x _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 # _ _ B-Concept
 →R _ _ I-Concept
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 q2 _ _ O
 # _ _ B-Concept
 →R _ _ I-Concept
+
+
+ _ _ O
 x→R _ _ B-Concept
+
+
+ _ _ O
 x→R _ _ B-Concept
+
+
+ _ _ O
 q8 _ _ O
 t _ _ B-Concept
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 # _ _ B-Concept
 →R _ _ I-Concept
+
+
+ _ _ O
 qaccept _ _ B-Concept
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 L _ _ O
 x _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
@@ -204,29 +309,56 @@ L _ _ O
 x _ _ B-Concept
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 q6 _ _ O
 # _ _ O
 →L _ _ O
 x→R _ _ B-Concept
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 q7 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 0 _ _ B-Concept
 , _ _ I-Concept
 1 _ _ I-Concept
 → _ _ I-Concept
 L _ _ I-Concept
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 02 _ _ O
+
+
+ _ _ O
 x→R _ _ B-Concept
+
+
+ _ _ O
 Turing _ _ B-Concept
 Machine _ _ I-Concept
 M1 _ _ O
@@ -272,6 +404,9 @@ to _ _ O
 the _ _ O
 right _ _ O
 direction _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
 A _ _ O
@@ -298,6 +433,9 @@ to _ _ O
 the _ _ O
 right _ _ O
 direction _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
@@ -330,6 +468,9 @@ is _ _ O
 1 _ _ O
 , _ _ O
 L _ _ O
+
+
+ _ _ O
 qreject _ _ O
 is _ _ O
 omitted _ _ O
@@ -369,61 +510,151 @@ read _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M1 _ _ O
 Computing _ _ O
 01#01 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 q2 _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q8 _ _ O
 t _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 L _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 L _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
@@ -431,23 +662,44 @@ L _ _ O
 x _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 q6 _ _ O
 # _ _ O
 →L _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q7 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q1 _ _ O
 01#01 _ _ O
 xq2 _ _ O
@@ -490,58 +742,145 @@ x _ _ O
 xx#xxq8 _ _ O
 t _ _ O
 xx#xxtqaccept _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M1 _ _ O
 Computing _ _ O
 01#10 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 q2 _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q8 _ _ O
 t _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 L _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 L _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
@@ -549,23 +888,44 @@ L _ _ O
 x _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 q6 _ _ O
 # _ _ O
 →L _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q7 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q1 _ _ O
 01#10 _ _ O
 xq2 _ _ O
@@ -577,6 +937,9 @@ x1#q4 _ _ O
 10 _ _ O
 x1#1qreject _ _ O
 0 _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M1 _ _ O
@@ -587,53 +950,137 @@ no _ _ O
 # _ _ O
 symbol _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 q2 _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q8 _ _ O
 t _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 R _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 # _ _ O
 →R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 L _ _ O
 x _ _ O
 , _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 L _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
@@ -641,23 +1088,44 @@ L _ _ O
 x _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 q6 _ _ O
 # _ _ O
 →L _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q7 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 0 _ _ O
 , _ _ O
 1 _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 q1 _ _ O
 01 _ _ O
 xq2 _ _ O
@@ -665,9 +1133,15 @@ xq2 _ _ O
 x1q2 _ _ O
 t _ _ O
 x1tqreject _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 Example _ _ O
+
+
+ _ _ O
 Design _ _ O
 a _ _ O
 Turing _ _ O
@@ -696,8 +1170,14 @@ w _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 Sweep _ _ O
 left _ _ O
 to _ _ O
@@ -758,12 +1238,21 @@ Go _ _ O
 to _ _ O
 stage _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Moving _ _ O
 the _ _ O
 Tape _ _ O
@@ -799,6 +1288,9 @@ that _ _ O
 x _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 This _ _ O
 will _ _ O
 result _ _ O
@@ -806,6 +1298,9 @@ in _ _ O
 an _ _ O
 infinite _ _ O
 loop _ _ O
+
+
+ _ _ O
 Recall _ _ O
 that _ _ O
 if _ _ O
@@ -847,6 +1342,9 @@ at _ _ O
 the _ _ O
 left-most _ _ O
 square _ _ O
+
+
+ _ _ O
 The _ _ O
 trick _ _ O
 is _ _ O
@@ -881,13 +1379,22 @@ t _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M2 _ _ O
 n _ _ O
+
+
+ _ _ O
 A _ _ O
 Turing _ _ O
 machine _ _ O
@@ -905,51 +1412,132 @@ n _ _ O
 . _ _ O
 0→L _ _ O
 x→L _ _ O
+
+
+ _ _ O
 → _ _ O
 t _ _ O
+
+
+ _ _ O
 →R _ _ O
 x→R _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 0→R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 q2 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 t _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 qreject _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x→R _ _ O
 q1 _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M2 _ _ O
@@ -999,102 +1587,267 @@ txxxq2 _ _ O
 t _ _ O
 txxxtqaccept _ _ O
 t _ _ O
+
+
+ _ _ O
 0→L _ _ O
 x→L _ _ O
+
+
+ _ _ O
 → _ _ O
 t _ _ O
+
+
+ _ _ O
 →R _ _ O
 x→R _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 q2 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 t _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 qreject _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x→R _ _ O
 q1 _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 0→R _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 M2 _ _ O
+
+
+ _ _ O
 Computing _ _ O
 000 _ _ O
 0→L _ _ O
 x→L _ _ O
+
+
+ _ _ O
 → _ _ O
 t _ _ O
+
+
+ _ _ O
 →R _ _ O
 x→R _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 q3 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 q2 _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 t _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 qreject _ _ O
+
+
+ _ _ O
 → _ _ O
+
+
+ _ _ O
 x→R _ _ O
 q1 _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 q5 _ _ O
+
+
+ _ _ O
 0→R _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 x _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q4 _ _ O
+
+
+ _ _ O
 x→R _ _ O
+
+
+ _ _ O
 →R _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 q1 _ _ O
 000 _ _ O
 q2 _ _ O
@@ -1105,9 +1858,15 @@ tx0q4 _ _ O
 t _ _ O
 tx0tqreject _ _ O
 t _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Designing _ _ O
 a _ _ O
 TM _ _ O
@@ -1141,6 +1900,9 @@ about _ _ O
 moving _ _ O
 tape _ _ O
 head _ _ O
+
+
+ _ _ O
 But _ _ O
 for _ _ O
 a _ _ O
@@ -1241,14 +2003,23 @@ over _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 Designing _ _ O
 a _ _ O
 TM _ _ O
 Solution _ _ O
 0→R _ _ O
+
+
+ _ _ O
 q1 _ _ O
 0 _ _ O
 → _ _ O
@@ -1260,18 +2031,33 @@ R _ _ O
 0 _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 0 _ _ O
 → _ _ O
 1 _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 q0 _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 1 _ _ O
 → _ _ O
 t _ _ O
 , _ _ O
 R _ _ O
+
+
+ _ _ O
 → _ _ O
 0 _ _ O
 , _ _ O
@@ -1281,24 +2067,54 @@ L _ _ O
 1 _ _ O
 → _ _ O
 L _ _ O
+
+
+ _ _ O
 q3 _ _ O
 t _ _ O
+
+
+ _ _ O
 → _ _ O
 1 _ _ O
 , _ _ O
 L _ _ O
+
+
+ _ _ O
 t _ _ O
+
+
+ _ _ O
 →L _ _ O
 qaccept _ _ O
+
+
+ _ _ O
 q2 _ _ O
+
+
+ _ _ O
 1→R _ _ O
 t _ _ O
+
+
+ _ _ O
 →L _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Turing _ _ O
 Machine _ _ O
 02 _ _ O
+
+
+ _ _ O
 
 

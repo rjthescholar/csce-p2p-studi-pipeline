@@ -148,11 +148,23 @@ performance _ _ O
 instructions _ _ O
 X _ _ O
 program _ _ O
+
+
+ _ _ O
 cycles _ _ O
 instruction _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 seconds _ _ O
 cycle _ _ O
+
+
+ _ _ O
 ● _ _ O
 Pipelining _ _ O
 focused _ _ O
@@ -202,11 +214,17 @@ than _ _ O
 a _ _ O
 cycle _ _ O
 ? _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Wide _ _ O
 Issue _ _ O
 Processors _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 From _ _ O
@@ -237,6 +255,9 @@ load _ _ O
 / _ _ O
 store _ _ O
 instruction _ _ O
+
+
+ _ _ O
 ● _ _ O
 Then _ _ O
 , _ _ O
@@ -290,19 +311,43 @@ for _ _ O
 loads _ _ O
 and _ _ O
 stores _ _ O
+
+
+ _ _ O
 I-Mem _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Pipeline _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Pipeline _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 D-Mem _ _ O
+
+
+ _ _ O
 ● _ _ O
 This _ _ O
 introduces _ _ O
@@ -326,10 +371,19 @@ Locations _ _ O
 ( _ _ O
 Solved _ _ O
 ) _ _ O
+
+
+ _ _ O
 I-Mem _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 ● _ _ O
 Two _ _ O
 instructions _ _ O
@@ -394,10 +448,22 @@ to _ _ O
 the _ _ O
 register _ _ O
 file _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 D-Mem _ _ O
 7 _ _ O
 
@@ -410,10 +476,19 @@ Units _ _ O
 Still _ _ O
 Remaining _ _ O
 ) _ _ O
+
+
+ _ _ O
 I-Mem _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 ● _ _ O
 Structural _ _ O
 hazard _ _ O
@@ -466,10 +541,22 @@ unit _ _ O
 to _ _ O
 access _ _ O
 memory _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 D-Mem _ _ O
 8 _ _ O
 
@@ -510,6 +597,9 @@ in _ _ O
 4 _ _ O
 cycles _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 $ _ _ O
 t0 _ _ O
@@ -568,30 +658,72 @@ t6 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 CC _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Pipeline _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 addi _ _ O
 t2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 add _ _ O
 t3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
 t4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 Mem _ _ O
 Pipeline _ _ O
+
+
+ _ _ O
 lw _ _ O
 t1 _ _ O
 sw _ _ O
 t5 _ _ O
 sw _ _ O
 t6 _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Structural _ _ O
@@ -618,6 +750,9 @@ to _ _ O
 the _ _ O
 data _ _ O
 dependencies _ _ O
+
+
+ _ _ O
 lw _ _ O
 $ _ _ O
 t0 _ _ O
@@ -676,30 +811,72 @@ t6 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 CC _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Pipeline _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 addi _ _ O
 t2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 add _ _ O
 t3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
 t4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 Mem _ _ O
 Pipeline _ _ O
+
+
+ _ _ O
 lw _ _ O
 t1 _ _ O
 sw _ _ O
 t5 _ _ O
 sw _ _ O
 t6 _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Why _ _ O
@@ -895,10 +1072,16 @@ will _ _ O
 learn _ _ O
 next _ _ O
 chapter _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 VLIW _ _ O
 Processors _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 VLIW _ _ O
@@ -956,6 +1139,9 @@ Operation _ _ O
 32 _ _ O
 bits _ _ O
 ) _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
@@ -964,6 +1150,9 @@ Operation _ _ O
 32 _ _ O
 bits _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 An _ _ O
 example _ _ O
@@ -979,6 +1168,9 @@ $ _ _ O
 t0 _ _ O
 , _ _ O
 -8 _ _ O
+
+
+ _ _ O
 lw _ _ O
 $ _ _ O
 t1 _ _ O
@@ -987,6 +1179,9 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Or _ _ O
 another _ _ O
@@ -995,6 +1190,9 @@ could _ _ O
 be _ _ O
 : _ _ O
 nop _ _ O
+
+
+ _ _ O
 lw _ _ O
 $ _ _ O
 t1 _ _ O
@@ -1011,16 +1209,31 @@ instruction _ _ O
 is _ _ O
 one _ _ O
 instruction _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 I-Mem _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
 Op _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Op _ _ O
+
+
+ _ _ O
 ● _ _ O
 For _ _ O
 all _ _ O
@@ -1042,11 +1255,26 @@ unit _ _ O
 through _ _ O
 the _ _ O
 pipeline _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 D-Mem _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 VLIW _ _ O
@@ -1115,37 +1343,97 @@ t6 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Inst _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Op _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
 Op _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 nop _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 addi _ _ O
 t2 _ _ O
+
+
+ _ _ O
 lw _ _ O
 t1 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 add _ _ O
 t3 _ _ O
+
+
+ _ _ O
 nop _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
 t4 _ _ O
+
+
+ _ _ O
 sw _ _ O
 t5 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 nop _ _ O
+
+
+ _ _ O
 sw _ _ O
 t6 _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 Each _ _ O
 square _ _ O
 is _ _ O
@@ -1234,39 +1522,93 @@ t5 _ _ O
 ( _ _ O
 $t3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Inst _ _ O
+
+
+ _ _ O
 ALU _ _ O
 Op _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
 Op _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 add _ _ O
 t4 _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 addi _ _ O
 t2 _ _ O
+
+
+ _ _ O
 lw _ _ O
 t1 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 add _ _ O
 t3 _ _ O
+
+
+ _ _ O
 sw _ _ O
 t6 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 nop _ _ O
+
+
+ _ _ O
 sw _ _ O
 t5 _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Same _ _ O
 program _ _ O
 with _ _ O
 4 _ _ O
 instructions _ _ O
 ! _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 VLIW _ _ O
@@ -1351,6 +1693,9 @@ compiler-controlled _ _ O
 forwarding _ _ O
 in _ _ O
 ISA _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Challenges _ _ O
@@ -1539,6 +1884,9 @@ around _ _ O
 this _ _ O
 problem _ _ O
 ? _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Making _ _ O
@@ -1767,6 +2115,9 @@ an _ _ O
 ultra _ _ O
 low-power _ _ O
 VLIW _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Scheduling _ _ O
@@ -1885,6 +2236,9 @@ the _ _ O
 same _ _ O
 cycle _ _ O
 ) _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Predicates _ _ O
@@ -1944,12 +2298,18 @@ $ _ _ O
 t0 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 Can _ _ O
 only _ _ O
 reorder _ _ O
 within _ _ O
 this _ _ O
 block _ _ O
+
+
+ _ _ O
 else _ _ O
 : _ _ O
 li _ _ O
@@ -1957,6 +2317,9 @@ $ _ _ O
 t0 _ _ O
 , _ _ O
 0 _ _ O
+
+
+ _ _ O
 o _ _ O
 Predicates _ _ O
 can _ _ O
@@ -2009,6 +2372,9 @@ $ _ _ O
 t1 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 Can _ _ O
 reorder _ _ O
 within _ _ O
@@ -2016,6 +2382,9 @@ a _ _ O
 larger _ _ O
 window _ _ O
 ! _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 But _ _ O
@@ -2093,19 +2462,31 @@ $ _ _ O
 s1 _ _ O
 , _ _ O
 loop _ _ O
+
+
+ _ _ O
 Can _ _ O
 only _ _ O
 reorder _ _ O
 within _ _ O
 this _ _ O
 block _ _ O
+
+
+ _ _ O
 … _ _ O
+
+
+ _ _ O
 This _ _ O
 block _ _ O
 is _ _ O
 off _ _ O
 limits _ _ O
 ! _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Compiler _ _ O
@@ -2125,6 +2506,9 @@ in _ _ O
 MIPS _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
@@ -2168,6 +2552,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 $ _ _ O
@@ -2209,6 +2596,9 @@ s1 _ _ O
 ! _ _ O
 = _ _ O
 0 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Loop _ _ O
 iterates _ _ O
@@ -2221,6 +2611,9 @@ s2 _ _ O
 to _ _ O
 each _ _ O
 element _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Compiler _ _ O
@@ -2238,6 +2631,9 @@ hide _ _ O
 the _ _ O
 use-after-load _ _ O
 hazard _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
@@ -2281,6 +2677,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
@@ -2324,6 +2723,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 dependence _ _ O
@@ -2370,6 +2772,9 @@ $ _ _ O
 s1 _ _ O
 , _ _ O
 -4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
 must _ _ O
@@ -2400,6 +2805,9 @@ t0 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Compiler _ _ O
@@ -2516,6 +2924,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
 ca _ _ O
@@ -2584,10 +2995,16 @@ loop _ _ O
 for _ _ O
 scheduling _ _ O
 ! _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Loop _ _ O
 unrolling _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 What _ _ O
@@ -2617,6 +3034,9 @@ X _ _ O
 number _ _ O
 of _ _ O
 iterations _ _ O
+
+
+ _ _ O
 for _ _ O
 ( _ _ O
 i _ _ O
@@ -2790,6 +3210,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
@@ -2861,6 +3284,9 @@ t1 _ _ O
 $s1 _ _ O
 ) _ _ O
 bne _ _ O
+
+
+ _ _ O
 $ _ _ O
 s1 _ _ O
 , _ _ O
@@ -2868,6 +3294,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 Instructions _ _ O
 are _ _ O
@@ -2903,6 +3332,9 @@ Loop _ _ O
 : _ _ O
 lw _ _ O
 lw _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -2917,6 +3349,9 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 addi _ _ O
 $ _ _ O
 s1 _ _ O
@@ -2935,6 +3370,9 @@ s1 _ _ O
 -4 _ _ O
 add _ _ O
 add _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -2951,8 +3389,14 @@ t1 _ _ O
 , _ _ O
 $ _ _ O
 s2 _ _ O
+
+
+ _ _ O
 sw _ _ O
 sw _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -2967,7 +3411,13 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 bne _ _ O
+
+
+ _ _ O
 $ _ _ O
 s1 _ _ O
 , _ _ O
@@ -2975,8 +3425,14 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 Reorder _ _ O
 ! _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
@@ -3046,6 +3502,9 @@ t1 _ _ O
 $s1 _ _ O
 ) _ _ O
 bne _ _ O
+
+
+ _ _ O
 $ _ _ O
 s1 _ _ O
 , _ _ O
@@ -3053,6 +3512,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 Interleaving _ _ O
 iterations _ _ O
@@ -3075,6 +3537,9 @@ Loop _ _ O
 : _ _ O
 lw _ _ O
 lw _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -3089,6 +3554,9 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 addi _ _ O
 $ _ _ O
 s1 _ _ O
@@ -3110,6 +3578,9 @@ add _ _ O
 sw _ _ O
 sw _ _ O
 bne _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -3140,11 +3611,20 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Merge _ _ O
+
+
+ _ _ O
 Loop _ _ O
 : _ _ O
 lw _ _ O
 lw _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -3159,6 +3639,9 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 addi _ _ O
 $ _ _ O
 s1 _ _ O
@@ -3169,6 +3652,9 @@ s1 _ _ O
 -8 _ _ O
 add _ _ O
 add _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -3185,8 +3671,14 @@ t1 _ _ O
 , _ _ O
 $ _ _ O
 s2 _ _ O
+
+
+ _ _ O
 sw _ _ O
 sw _ _ O
+
+
+ _ _ O
 $ _ _ O
 t0 _ _ O
 , _ _ O
@@ -3201,7 +3693,13 @@ t1 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 bne _ _ O
+
+
+ _ _ O
 $ _ _ O
 s1 _ _ O
 , _ _ O
@@ -3209,6 +3707,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 $ _ _ O
 s1 _ _ O
 , _ _ O
@@ -3216,6 +3717,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 Two _ _ O
 addi _ _ O
@@ -3390,6 +3894,9 @@ $ _ _ O
 zero _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 we _ _ O
@@ -3425,6 +3932,9 @@ for _ _ O
 1 _ _ O
 iteration _ _ O
 ! _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Let _ _ O
@@ -3503,6 +4013,9 @@ $ _ _ O
 0 _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
@@ -3571,6 +4084,9 @@ t3 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Inst _ _ O
 1 _ _ O
 2 _ _ O
@@ -3580,6 +4096,9 @@ Inst _ _ O
 6 _ _ O
 7 _ _ O
 8 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 we _ _ O
@@ -3682,6 +4201,9 @@ $ _ _ O
 0 _ _ O
 , _ _ O
 Loop _ _ O
+
+
+ _ _ O
 Load _ _ O
 / _ _ O
 Store _ _ O
@@ -3736,6 +4258,9 @@ t7 _ _ O
 ( _ _ O
 $s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Inst _ _ O
 1 _ _ O
 2 _ _ O
@@ -3745,6 +4270,9 @@ Inst _ _ O
 10 _ _ O
 … _ _ O
 16 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 we _ _ O
@@ -3914,6 +4442,9 @@ misses _ _ O
 
 List _ _ O
 Scheduling _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 How _ _ O
@@ -4072,14 +4603,35 @@ code _ _ O
 ? _ _ O
 3 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 That _ _ O
 means _ _ O
 , _ _ O
@@ -4110,9 +4662,15 @@ do _ _ O
 your _ _ O
 scheduling _ _ O
 . _ _ O
+
+
+ _ _ O
 total _ _ O
 7 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 Instruction _ _ O
@@ -4169,17 +4727,41 @@ can _ _ O
 shine _ _ O
 3 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 total _ _ O
 7 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Maximizing _ _ O
@@ -4279,6 +4861,9 @@ a _ _ O
 data _ _ O
 dependency _ _ O
 . _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 Read-After-Write _ _ O
@@ -4318,6 +4903,9 @@ code _ _ O
 : _ _ O
 RAW _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4331,7 +4919,13 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 Reorder _ _ O
+
+
+ _ _ O
 addi _ _ O
 t1 _ _ O
 , _ _ O
@@ -4345,6 +4939,9 @@ t0 _ _ O
 ( _ _ O
 s0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 The _ _ O
 code _ _ O
@@ -4380,6 +4977,9 @@ used _ _ O
 to _ _ O
 compute _ _ O
 t1 _ _ O
+
+
+ _ _ O
 43 _ _ O
 
 Write-After-Read _ _ O
@@ -4417,6 +5017,9 @@ code _ _ O
 : _ _ O
 WAR _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4437,7 +5040,13 @@ t0 _ _ O
 ( _ _ O
 s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Reorder _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4458,6 +5067,9 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 The _ _ O
 code _ _ O
@@ -4566,6 +5178,9 @@ form _ _ O
 NO _ _ O
 WAR _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4586,7 +5201,13 @@ t2 _ _ O
 ( _ _ O
 s1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Reorder _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4607,6 +5228,9 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Note _ _ O
 how _ _ O
@@ -4639,6 +5263,9 @@ more _ _ O
 WAR _ _ O
 dependencies _ _ O
 ! _ _ O
+
+
+ _ _ O
 45 _ _ O
 
 Write-After-Write _ _ O
@@ -4675,6 +5302,9 @@ code _ _ O
 : _ _ O
 WAW _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4695,7 +5325,13 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 Reorder _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4716,6 +5352,9 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 The _ _ O
 code _ _ O
@@ -4769,6 +5408,9 @@ some _ _ O
 other _ _ O
 register _ _ O
 ! _ _ O
+
+
+ _ _ O
 46 _ _ O
 
 Removing _ _ O
@@ -4807,6 +5449,9 @@ form _ _ O
 NO _ _ O
 WAW _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -4827,7 +5472,13 @@ t2 _ _ O
 t1 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 Reorder _ _ O
+
+
+ _ _ O
 lw _ _ O
 t1 _ _ O
 , _ _ O
@@ -4848,6 +5499,9 @@ t2 _ _ O
 t1 _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 SSA _ _ O
 form _ _ O
@@ -4950,13 +5604,31 @@ of _ _ O
 optimal _ _ O
 3 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 Can _ _ O
@@ -4966,9 +5638,15 @@ be _ _ O
 cyclic _ _ O
 ? _ _ O
 2 _ _ O
+
+
+ _ _ O
 total _ _ O
 7 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 48 _ _ O
 
 List _ _ O
@@ -5083,6 +5761,9 @@ n _ _ O
 = _ _ O
 processor _ _ O
 width _ _ O
+
+
+ _ _ O
 o _ _ O
 Graham _ _ O
 , _ _ O
@@ -5147,17 +5828,35 @@ O _ _ O
 ( _ _ O
 nlogn _ _ O
 ) _ _ O
+
+
+ _ _ O
 6 _ _ O
 Ready _ _ O
 instructions _ _ O
 List _ _ O
+
+
+ _ _ O
 5 _ _ O
 4 _ _ O
+
+
+ _ _ O
 Operation _ _ O
 1 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Operation _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
 1 _ _ O
 50 _ _ O
@@ -5185,13 +5884,22 @@ Operation _ _ O
 10 _ _ O
 12 _ _ O
 13 _ _ O
+
+
+ _ _ O
 Operation _ _ O
 2 _ _ O
 6 _ _ O
+
+
+ _ _ O
 5 _ _ O
 7 _ _ O
 9 _ _ O
 11 _ _ O
+
+
+ _ _ O
 ● _ _ O
 9 _ _ O
 cycles _ _ O
@@ -5213,6 +5921,9 @@ had _ _ O
 a _ _ O
 wider _ _ O
 processor _ _ O
+
+
+ _ _ O
 5 _ _ O
 4 _ _ O
 3 _ _ O

@@ -2,10 +2,16 @@ unlabeled|cs0449|lec10
 -DOCSTART- -X- -X- O
 
 10 _ _ O
+
+
+ _ _ O
 How _ _ O
 Programs _ _ O
 Are _ _ O
 Made _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -14,6 +20,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -33,6 +42,9 @@ in _ _ O
 the _ _ O
 blanks _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Compilation _ _ O
@@ -58,8 +70,17 @@ into _ _ O
 machine _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 file _ _ O
@@ -81,6 +102,9 @@ your _ _ O
 overall _ _ O
 project _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 machine _ _ O
@@ -141,8 +165,17 @@ reference _ _ O
 each _ _ O
 other _ _ O
 . _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 instance _ _ O
@@ -164,6 +197,9 @@ your _ _ O
 program _ _ O
 elsewhere _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 break _ _ O
@@ -195,6 +231,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 util.o _ _ O
 4 _ _ O
 
@@ -232,8 +271,17 @@ called _ _ O
 linking _ _ O
 . _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 hello _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 name _ _ O
@@ -254,6 +302,9 @@ now _ _ O
 filled _ _ O
 in _ _ O
 . _ _ O
+
+
+ _ _ O
 util.c _ _ O
 CS _ _ O
 / _ _ O
@@ -264,10 +315,19 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 util.o _ _ O
+
+
+ _ _ O
 stdio.o _ _ O
 External _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 • _ _ O
 Before _ _ O
 this _ _ O
@@ -298,7 +358,13 @@ grinder _ _ O
 In _ _ O
 summary _ _ O
 : _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 code _ _ O
 goes _ _ O
 in _ _ O
@@ -321,6 +387,9 @@ merges _ _ O
 code _ _ O
 together _ _ O
 . _ _ O
+
+
+ _ _ O
 Some _ _ O
 compilers _ _ O
 output _ _ O
@@ -379,6 +448,9 @@ Java _ _ O
 ) _ _ O
 • _ _ O
 foo.c _ _ O
+
+
+ _ _ O
 • _ _ O
 Output _ _ O
 : _ _ O
@@ -395,6 +467,9 @@ MIPS _ _ O
 ) _ _ O
 • _ _ O
 foo.s _ _ O
+
+
+ _ _ O
 • _ _ O
 First _ _ O
 there _ _ O
@@ -429,6 +504,9 @@ tigcc.ticalc.org _ _ O
 doc _ _ O
 / _ _ O
 cpp.html _ _ O
+
+
+ _ _ O
 • _ _ O
 Compiler _ _ O
 optimizations _ _ O
@@ -505,6 +583,9 @@ http _ _ O
 www.sigbus.info _ _ O
 / _ _ O
 how-i-wrote-a-self-hosting-ccompiler-in-40-days.html _ _ O
+
+
+ _ _ O
 • _ _ O
 Some _ _ O
 examples _ _ O
@@ -563,6 +644,9 @@ distance* _ _ O
 / _ _ O
 extra _ _ O
 bracket _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 The _ _ O
@@ -645,6 +729,9 @@ to _ _ O
 get _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
 ’s _ _ O
@@ -671,6 +758,9 @@ changed _ _ O
 ( _ _ O
 Faster _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Those _ _ O
 small _ _ O
@@ -698,6 +788,9 @@ programs _ _ O
 Shared _ _ O
 Libraries _ _ O
 ) _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 What _ _ O
@@ -913,6 +1006,9 @@ be _ _ O
 accessed _ _ O
 across _ _ O
 files _ _ O
+
+
+ _ _ O
 • _ _ O
 Relocation _ _ O
 Table _ _ O
@@ -954,6 +1050,9 @@ Both _ _ O
 internal _ _ O
 and _ _ O
 external _ _ O
+
+
+ _ _ O
 • _ _ O
 Each _ _ O
 file _ _ O
@@ -964,6 +1063,9 @@ symbol _ _ O
 and _ _ O
 relocation _ _ O
 tables _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 What _ _ O
@@ -995,47 +1097,95 @@ following _ _ O
 structure _ _ O
 : _ _ O
 Offset _ _ O
+
+
+ _ _ O
 Name _ _ O
+
+
+ _ _ O
 Description _ _ O
+
+
+ _ _ O
 Magic _ _ O
 Number _ _ O
+
+
+ _ _ O
 4 _ _ O
 bytes _ _ O
 : _ _ O
 A _ _ O
+
+
+ _ _ O
 Class _ _ O
+
+
+ _ _ O
 1 _ _ O
 byte _ _ O
 : _ _ O
+
+
+ _ _ O
 if _ _ O
 32-bit _ _ O
 , _ _ O
 0x2 _ _ O
 if _ _ O
 64-bit _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 1 _ _ O
 byte _ _ O
 : _ _ O
+
+
+ _ _ O
 if _ _ O
 little-endian _ _ O
 , _ _ O
 0x2 _ _ O
 if _ _ O
 big-endian _ _ O
+
+
+ _ _ O
 Version _ _ O
+
+
+ _ _ O
 1 _ _ O
 byte _ _ O
 : _ _ O
+
+
+ _ _ O
 for _ _ O
 the _ _ O
 current _ _ O
 version _ _ O
 . _ _ O
+
+
+ _ _ O
 ABI _ _ O
+
+
+ _ _ O
 1 _ _ O
 byte _ _ O
 : _ _ O
+
+
+ _ _ O
 for _ _ O
 System _ _ O
 V _ _ O
@@ -1044,27 +1194,51 @@ our _ _ O
 C _ _ O
 ABI _ _ O
 ) _ _ O
+
+
+ _ _ O
 Machine _ _ O
+
+
+ _ _ O
 2 _ _ O
 bytes _ _ O
 : _ _ O
+
+
+ _ _ O
 byte _ _ O
 followed _ _ O
 by _ _ O
 “ _ _ O
+
+
+ _ _ O
 is _ _ O
 x86 _ _ O
 , _ _ O
+
+
+ _ _ O
 is _ _ O
 MIPS _ _ O
 , _ _ O
+
+
+ _ _ O
 ” _ _ O
 in _ _ O
 ASCII _ _ O
+
+
+ _ _ O
 is _ _ O
 RISC-V _ _ O
 , _ _ O
 etc _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 What _ _ O
@@ -1134,6 +1308,9 @@ look _ _ O
 at _ _ O
 loading _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 Symbol _ _ O
@@ -1153,6 +1330,9 @@ by _ _ O
 other _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Symbols _ _ O
 can _ _ O
@@ -1174,6 +1354,9 @@ or _ _ O
 OS _ _ O
 areas _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
@@ -1214,7 +1397,13 @@ UNIX _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 a _ _ O
@@ -1225,6 +1414,9 @@ has _ _ O
 a _ _ O
 location _ _ O
 . _ _ O
+
+
+ _ _ O
 Here _ _ O
 it _ _ O
 is _ _ O
@@ -1236,6 +1428,9 @@ At _ _ O
 ) _ _ O
 bytes _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 ; _ _ O
@@ -1245,8 +1440,14 @@ symbols _ _ O
 • _ _ O
 Remember _ _ O
 the _ _ O
+
+
+ _ _ O
 keyword _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 forces _ _ O
@@ -1299,6 +1500,9 @@ to _ _ O
 see _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -1364,10 +1568,16 @@ UNIX _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 by _ _ O
 again _ _ O
 using _ _ O
 the _ _ O
+
+
+ _ _ O
 ) _ _ O
 This _ _ O
 symbol _ _ O
@@ -1385,6 +1595,9 @@ in _ _ O
 this _ _ O
 file _ _ O
 . _ _ O
+
+
+ _ _ O
 Our _ _ O
 static _ _ O
 function _ _ O
@@ -1393,6 +1606,9 @@ now _ _ O
 “ _ _ O
 LOCAL _ _ O
 ” _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 ; _ _ O
@@ -1432,21 +1648,39 @@ elsewhere _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Here _ _ O
 it _ _ O
 is _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 This _ _ O
 symbol _ _ O
 is _ _ O
 … _ _ O
 somewhere _ _ O
 . _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Final _ _ O
@@ -1501,6 +1735,9 @@ a _ _ O
 poor _ _ O
 design _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -1550,6 +1787,9 @@ functions _ _ O
 in _ _ O
 classes _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Always _ _ O
 initialize _ _ O
@@ -1557,6 +1797,9 @@ your _ _ O
 global _ _ O
 variables _ _ O
 ! _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Seeing _ _ O
@@ -1595,21 +1838,42 @@ file _ _ O
 ? _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 A _ _ O
 local _ _ O
 symbol _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 global _ _ O
 symbol _ _ O
 . _ _ O
+
+
+ _ _ O
 Referenced _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 linker _ _ O
 references _ _ O
@@ -1622,6 +1886,9 @@ compiles _ _ O
 the _ _ O
 executable _ _ O
 . _ _ O
+
+
+ _ _ O
 We _ _ O
 need _ _ O
 to _ _ O
@@ -1636,6 +1903,9 @@ to _ _ O
 a _ _ O
 symbol _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 global _ _ O
 symbol _ _ O
@@ -1648,9 +1918,15 @@ these _ _ O
 temporary _ _ O
 variables _ _ O
 . _ _ O
+
+
+ _ _ O
 Referenced _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Summing _ _ O
@@ -1659,14 +1935,32 @@ up _ _ O
 : _ _ O
 Playing _ _ O
 mad-libs _ _ O
+
+
+ _ _ O
 fibonacci.c _ _ O
+
+
+ _ _ O
 fibonacci.o _ _ O
+
+
+ _ _ O
 fibonacci _ _ O
+
+
+ _ _ O
 0x007c0e10 _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 main.c _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 compiler _ _ O
@@ -1703,12 +1997,18 @@ the _ _ O
 final _ _ O
 executable _ _ O
 . _ _ O
+
+
+ _ _ O
 main.o _ _ O
 21 _ _ O
 
 Static _ _ O
 Libraries _ _ O
 ( _ _ O
+
+
+ _ _ O
 files _ _ O
 ) _ _ O
 • _ _ O
@@ -1722,11 +2022,29 @@ library _ _ O
 with _ _ O
 others _ _ O
 … _ _ O
+
+
+ _ _ O
 util.c _ _ O
+
+
+ _ _ O
 tree.c _ _ O
+
+
+ _ _ O
 util.o _ _ O
+
+
+ _ _ O
 tree.o _ _ O
+
+
+ _ _ O
 my-lib.a _ _ O
+
+
+ _ _ O
 • _ _ O
 Instead _ _ O
 of _ _ O
@@ -1782,7 +2100,13 @@ files _ _ O
 we _ _ O
 need _ _ O
 . _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 util.c _ _ O
 CS _ _ O
 / _ _ O
@@ -1793,12 +2117,27 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 hello.o _ _ O
+
+
+ _ _ O
 util.o _ _ O
+
+
+ _ _ O
 hello _ _ O
+
+
+ _ _ O
 my-lib.a _ _ O
 External _ _ O
 Libraries _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 file _ _ O
@@ -1860,6 +2199,9 @@ this _ _ O
 , _ _ O
 too _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 The _ _ O
@@ -1889,6 +2231,9 @@ executable _ _ O
 into _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 That _ _ O
 system _ _ O
@@ -1905,6 +2250,9 @@ an _ _ O
 operating _ _ O
 system _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Memory _ _ O
@@ -1925,6 +2273,9 @@ segments _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 – _ _ O
 The _ _ O
 code _ _ O
@@ -1959,6 +2310,9 @@ zero _ _ O
 ” _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 segment _ _ O
@@ -2035,6 +2389,9 @@ We _ _ O
 get _ _ O
 there _ _ O
 ) _ _ O
+
+
+ _ _ O
 Kernel _ _ O
 Memory _ _ O
 stack _ _ O
@@ -2043,9 +2400,15 @@ unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ O
 .bss _ _ O
 .data _ _ O
+
+
+ _ _ O
 .text _ _ O
 26 _ _ O
 
@@ -2059,6 +2422,9 @@ the _ _ O
 ELF _ _ O
 executable _ _ O
 . _ _ O
+
+
+ _ _ O
 Our _ _ O
 lie _ _ O
 starts _ _ O
@@ -2070,6 +2436,9 @@ have _ _ O
 a _ _ O
 kernel _ _ O
 … _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 defines _ _ O
@@ -2083,6 +2452,9 @@ it _ _ O
 should _ _ O
 go _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 Place _ _ O
@@ -2139,6 +2511,9 @@ the _ _ O
 symbol _ _ O
 ) _ _ O
 • _ _ O
+
+
+ _ _ O
 will _ _ O
 call _ _ O
 main _ _ O
@@ -2151,6 +2526,9 @@ and _ _ O
 the _ _ O
 heap _ _ O
 . _ _ O
+
+
+ _ _ O
 Kernel _ _ O
 Memory _ _ O
 stack _ _ O
@@ -2159,9 +2537,15 @@ unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ O
 .bss _ _ O
 .data _ _ O
+
+
+ _ _ O
 .text _ _ O
 27 _ _ O
 
@@ -2221,7 +2605,13 @@ garbage _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 goes _ _ O
 into _ _ O
@@ -2231,6 +2621,9 @@ because _ _ O
 it _ _ O
 is _ _ O
 zero _ _ O
+
+
+ _ _ O
 This _ _ O
 does _ _ O
 not _ _ O
@@ -2245,6 +2638,9 @@ not _ _ O
 a _ _ O
 symbol _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 That _ _ O
@@ -2323,6 +2719,9 @@ to _ _ O
 the _ _ O
 executable _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 dynamic _ _ O
@@ -2407,6 +2806,9 @@ yanno _ _ O
 … _ _ O
 animated _ _ O
 . _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 Code _ _ O
@@ -2436,6 +2838,9 @@ memory _ _ O
 they _ _ O
 live _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 They _ _ O
 refer _ _ O
@@ -2468,6 +2873,9 @@ this _ _ O
 go _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 want _ _ O
@@ -2519,6 +2927,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 Kernel _ _ O
 Memory _ _ O
 stack _ _ O
@@ -2526,8 +2937,14 @@ libz.so _ _ O
 .data _ _ O
 libz.so _ _ O
 .text _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
+
+
+ _ _ O
 .text _ _ O
 31 _ _ O
 
@@ -2597,9 +3014,18 @@ the _ _ O
 libz.so _ _ O
 dynamic _ _ O
 library _ _ O
+
+
+ _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 We _ _ O
 do _ _ O
 n’t _ _ O
@@ -2610,6 +3036,9 @@ function _ _ O
 ultimately _ _ O
 is _ _ O
 … _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Solution _ _ O
@@ -2674,12 +3103,24 @@ are _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Solution _ _ O
@@ -2733,12 +3174,24 @@ linking _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x114b _ _ O
 + _ _ O
 0x5fe _ _ O
@@ -2777,6 +3230,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Taking _ _ O
@@ -2814,6 +3270,9 @@ uses _ _ O
 relative _ _ O
 addresses _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -2848,6 +3307,9 @@ or _ _ O
 PIE _ _ O
 ) _ _ O
 • _ _ O
+
+
+ _ _ O
 will _ _ O
 compile _ _ O
 code _ _ O
@@ -2859,6 +3321,9 @@ specify _ _ O
 the _ _ O
 flag _ _ O
 . _ _ O
+
+
+ _ _ O
 Who _ _ O
 does _ _ O
 n’t _ _ O
@@ -2867,6 +3332,9 @@ pie _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 generally _ _ O
@@ -2877,6 +3345,9 @@ creating _ _ O
 dynamic _ _ O
 libraries _ _ O
 . _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Running _ _ O
@@ -2965,6 +3436,9 @@ the _ _ O
 symbol _ _ O
 ) _ _ O
 • _ _ O
+
+
+ _ _ O
 will _ _ O
 call _ _ O
 main _ _ O
@@ -2977,6 +3451,9 @@ and _ _ O
 the _ _ O
 heap _ _ O
 . _ _ O
+
+
+ _ _ O
 Kernel _ _ O
 Memory _ _ O
 stack _ _ O
@@ -2984,9 +3461,15 @@ libz.so _ _ O
 .data _ _ O
 libz.so _ _ O
 .text _ _ O
+
+
+ _ _ O
 heap _ _ O
 .bss _ _ O
 .data _ _ O
+
+
+ _ _ O
 .text _ _ O
 36 _ _ O
 
@@ -3037,15 +3520,27 @@ it _ _ O
 is _ _ O
 running _ _ O
 ? _ _ O
+
+
+ _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Function _ _ O
 pointers _ _ O
 are _ _ O
 very _ _ O
 messy _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Plugins _ _ O
 are _ _ O
@@ -3053,6 +3548,9 @@ a _ _ O
 good _ _ O
 example _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 can _ _ O
@@ -3088,6 +3586,9 @@ refer _ _ O
 to _ _ O
 examples _ _ O
 . _ _ O
+
+
+ _ _ O
 Prints _ _ O
 to _ _ O
 the _ _ O
@@ -3098,11 +3599,17 @@ error _ _ O
 ” _ _ O
 buffer _ _ O
 . _ _ O
+
+
+ _ _ O
 Uses _ _ O
 the _ _ O
 lazy-loaded _ _ O
 function _ _ O
 . _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Investigating _ _ O
@@ -3134,13 +3641,25 @@ Can _ _ O
 not _ _ O
 see _ _ O
 the _ _ O
+
+
+ _ _ O
 / _ _ O
+
+
+ _ _ O
 lazy _ _ O
 loaded _ _ O
 libraries _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 Linking _ _ O
@@ -3183,12 +3702,21 @@ compile-time _ _ O
 using _ _ O
 our _ _ O
 normal _ _ O
+
+
+ _ _ O
 files _ _ O
 and _ _ O
 static _ _ O
 libraries _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 At _ _ O
 load-time _ _ O
@@ -3228,6 +3756,9 @@ services _ _ O
 libraries _ _ O
 lazily _ _ O
 . _ _ O
+
+
+ _ _ O
 ) _ _ O
 to _ _ O
 load _ _ O
@@ -3238,6 +3769,9 @@ Software _ _ O
 Licensing _ _ O
 Combining _ _ O
 code _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 So _ _ O
@@ -3261,6 +3795,9 @@ would _ _ O
 be _ _ O
 impractical _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -3284,6 +3821,9 @@ design _ _ O
 of _ _ O
 systems _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Disclaimer _ _ O
 : _ _ O
@@ -3314,6 +3854,9 @@ need _ _ O
 to _ _ O
 be _ _ O
 . _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 UNIX _ _ O
@@ -3351,6 +3894,9 @@ AT _ _ O
 T _ _ O
 intellectual _ _ O
 residue _ _ O
+
+
+ _ _ O
 • _ _ O
 Because _ _ O
 of _ _ O
@@ -3414,6 +3960,9 @@ WHAT _ _ O
 A _ _ O
 TIME _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Due _ _ O
 to _ _ O
@@ -3439,6 +3988,9 @@ the _ _ O
 money _ _ O
 maker _ _ O
 . _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 The _ _ O
@@ -3496,6 +4048,9 @@ to _ _ O
 commercialize _ _ O
 UNIX _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 source _ _ O
@@ -3534,6 +4089,9 @@ researchers _ _ O
 to _ _ O
 organize _ _ O
 . _ _ O
+
+
+ _ _ O
 43 _ _ O
 
 A _ _ O
@@ -3575,6 +4133,9 @@ to _ _ O
 the _ _ O
 system _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Richard _ _ O
 Stallman _ _ O
@@ -3623,6 +4184,9 @@ Foundation _ _ O
 ( _ _ O
 FSF _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 He _ _ O
 licenses _ _ O
@@ -3695,6 +4259,9 @@ with _ _ O
 without _ _ O
 changes _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 These _ _ O
 rules _ _ O
@@ -3747,6 +4314,9 @@ viral _ _ O
 ” _ _ O
 license _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 contract _ _ O
@@ -3793,6 +4363,9 @@ years _ _ O
 • _ _ O
 Yikes _ _ O
 . _ _ O
+
+
+ _ _ O
 45 _ _ O
 
 What _ _ O
@@ -3853,6 +4426,9 @@ derivative _ _ O
 • _ _ O
 AHHHHH _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 your _ _ O
@@ -3884,6 +4460,9 @@ library _ _ O
 are _ _ O
 GPL _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Special _ _ O
 exceptions _ _ O
@@ -3900,6 +4479,9 @@ and _ _ O
 application _ _ O
 software _ _ O
 . _ _ O
+
+
+ _ _ O
 Linux _ _ O
 is _ _ O
 licensed _ _ O
@@ -3936,6 +4518,9 @@ to _ _ O
 the _ _ O
 OS _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 User _ _ O
 programs _ _ O
@@ -3965,6 +4550,9 @@ them _ _ O
 THANK _ _ O
 GOODNESS _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Linux _ _ O
 has _ _ O
@@ -3990,6 +4578,9 @@ derivative _ _ O
 THANK _ _ O
 GOODNESS _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 But _ _ O
 some _ _ O
@@ -4054,6 +4645,9 @@ they _ _ O
 extend _ _ O
 … _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -4084,6 +4678,9 @@ software _ _ O
 / _ _ O
 hardware _ _ O
 exclusivity _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 they _ _ O
@@ -4124,6 +4721,9 @@ read _ _ O
 or _ _ O
 modified _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Are _ _ O
 we _ _ O

@@ -5,8 +5,14 @@ Intro _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Midterm _ _ O
 Review _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -15,6 +21,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -27,7 +36,13 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Topics _ _ O
 for _ _ O
 the _ _ O
@@ -47,6 +62,9 @@ Bitwise _ _ B-Concept
 operations _ _ I-Concept
 , _ _ O
 Endianness _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 C _ _ O
 Programming _ _ O
@@ -59,6 +77,9 @@ Strings _ _ O
 , _ _ O
 Memory _ _ B-Concept
 Management _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Machine-level _ _ B-Concept
 Representation _ _ I-Concept
@@ -79,6 +100,9 @@ Conventions _ _ I-Concept
 , _ _ O
 Buffer _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 • _ _ O
 Executables _ _ B-Concept
 • _ _ O
@@ -90,23 +114,44 @@ Linkers _ _ B-Concept
 , _ _ O
 Loaders _ _ B-Concept
 2 _ _ O
+
+
+ _ _ O
 Data _ _ B-Concept
 representation _ _ I-Concept
+
+
+ _ _ O
 Encoding _ _ O
 Integers _ _ O
 Two _ _ B-Concept
 's _ _ I-Concept
 Complement _ _ I-Concept
+
+
+ _ _ O
 Unsigned _ _ B-Concept
+
+
+ _ _ O
 B2U _ _ B-Concept
 ( _ _ O
 X _ _ O
 ) _ _ O
 = _ _ O
+
+
+ _ _ O
 w-1 _ _ O
+
+
+ _ _ O
  _ _ O
 xi _ _ O
 2 _ _ O
+
+
+ _ _ O
 B2 _ _ B-Concept
 T _ _ I-Concept
 ( _ _ O
@@ -116,10 +161,22 @@ X _ _ O
 - _ _ O
 xw-1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 w-1 _ _ O
+
+
+ _ _ O
 Sign _ _ B-Concept
 Bit _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Two _ _ B-Concept
 's _ _ I-Concept
@@ -132,42 +189,126 @@ w _ _ O
 ) _ _ O
 10 _ _ O
 = _ _ O
+
+
+ _ _ O
 -10 _ _ O
 = _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 -16 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 + _ _ O
  _ _ O
 xi _ _ O
 2 _ _ O
 i=0 _ _ O
+
+
+ _ _ O
 i=0 _ _ O
+
+
+ _ _ O
 -16 _ _ O
+
+
+ _ _ O
 w-2 _ _ O
+
+
+ _ _ O
 8+2 _ _ O
 = _ _ O
 10 _ _ O
+
+
+ _ _ O
 -16+4+2 _ _ O
 = _ _ O
 -10 _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 Unsigned _ _ B-Concept
 & _ _ O
 Signed _ _ B-Concept
@@ -190,6 +331,9 @@ X _ _ O
 1101 _ _ O
 1110 _ _ O
 1111 _ _ O
+
+
+ _ _ O
 B2U _ _ B-Concept
 ( _ _ O
 X _ _ O
@@ -210,6 +354,9 @@ X _ _ O
 13 _ _ O
 14 _ _ O
 15 _ _ O
+
+
+ _ _ O
 B2T _ _ B-Concept
 ( _ _ O
 X _ _ O
@@ -230,6 +377,9 @@ X _ _ O
 -3 _ _ O
 -2 _ _ O
 -1 _ _ O
+
+
+ _ _ O
 • _ _ O
 Equivalence _ _ O
 • _ _ O
@@ -238,6 +388,9 @@ encodings _ _ O
 for _ _ O
 nonnegative _ _ O
 values _ _ O
+
+
+ _ _ O
 • _ _ O
 Uniqueness _ _ O
 • _ _ O
@@ -269,16 +422,25 @@ is _ _ O
 cast _ _ O
 to _ _ O
 unsigned _ _ B-Concept
+
+
+ _ _ O
 Important _ _ O
 : _ _ O
 Numeric _ _ B-Concept
 Ranges _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Unsigned _ _ B-Concept
 Values _ _ O
 • _ _ O
 UMin _ _ B-Concept
 = _ _ O
+
+
+ _ _ O
 • _ _ O
 Two _ _ B-Concept
 's _ _ I-Concept
@@ -288,32 +450,65 @@ Values _ _ O
 TMin _ _ B-Concept
 = _ _ O
 -2w-1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 • _ _ O
 000 _ _ O
 ... _ _ O
 0 _ _ O
+
+
+ _ _ O
 • _ _ O
 UMax _ _ B-Concept
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 • _ _ O
 100 _ _ O
 ... _ _ O
 0 _ _ O
+
+
+ _ _ O
 • _ _ O
 TMax _ _ B-Concept
+
+
+ _ _ O
 2w _ _ O
 - _ _ O
 1 _ _ O
+
+
+ _ _ O
 • _ _ O
 111 _ _ O
 ... _ _ O
 1 _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 • _ _ O
 011 _ _ O
 ... _ _ O
 1 _ _ O
+
+
+ _ _ O
 • _ _ O
 Minus _ _ O
 1 _ _ O
@@ -331,12 +526,18 @@ TMax _ _ B-Concept
 TMin _ _ B-Concept
 -1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Decimal _ _ O
 65535 _ _ O
 32767 _ _ O
 -32768 _ _ O
 -1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Hex _ _ O
 FF _ _ O
 FF _ _ O
@@ -348,6 +549,9 @@ FF _ _ O
 FF _ _ O
 00 _ _ O
 00 _ _ O
+
+
+ _ _ O
 Binary _ _ O
 11111111 _ _ O
 11111111 _ _ O
@@ -359,9 +563,15 @@ Binary _ _ O
 11111111 _ _ O
 00000000 _ _ O
 00000000 _ _ O
+
+
+ _ _ O
 2w-1 _ _ O
 - _ _ O
 1 _ _ O
+
+
+ _ _ O
 Three _ _ O
 " _ _ O
 kinds _ _ O
@@ -373,13 +583,28 @@ numbers _ _ I-Concept
 s _ _ O
 exp _ _ O
 1 _ _ O
+
+
+ _ _ O
 00 _ _ O
 ... _ _ O
 00 _ _ O
+
+
+ _ _ O
 denormalized _ _ O
+
+
+ _ _ O
 frac _ _ O
 e-bits _ _ O
+
+
+ _ _ O
 f-bits _ _ O
+
+
+ _ _ O
 exp _ _ O
 ≠ _ _ O
 0 _ _ O
@@ -389,15 +614,30 @@ exp _ _ O
 11 _ _ O
 ... _ _ O
 11 _ _ O
+
+
+ _ _ O
 normalized _ _ O
+
+
+ _ _ O
 11 _ _ O
 ... _ _ O
 11 _ _ O
+
+
+ _ _ O
 special _ _ O
+
+
+ _ _ O
 " _ _ O
 Normalized _ _ O
 " _ _ O
 Values _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 : _ _ O
@@ -483,6 +723,9 @@ E _ _ O
 ... _ _ O
 1023 _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Significand _ _ B-Concept
 coded _ _ O
@@ -538,6 +781,9 @@ for _ _ O
 " _ _ O
 free _ _ B-Concept
 " _ _ O
+
+
+ _ _ O
 v _ _ O
 = _ _ O
 ( _ _ O
@@ -546,8 +792,14 @@ v _ _ O
 s _ _ O
 M _ _ O
 2E _ _ O
+
+
+ _ _ O
 Denormalized _ _ B-Concept
 Values _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Condition _ _ O
 : _ _ O
@@ -597,6 +849,9 @@ x _ _ O
 bits _ _ O
 of _ _ O
 frac _ _ O
+
+
+ _ _ O
 • _ _ O
 Cases _ _ O
 • _ _ O
@@ -627,6 +882,9 @@ and _ _ O
 why _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 exp _ _ O
 = _ _ O
@@ -646,6 +904,9 @@ to _ _ O
 0.0 _ _ O
 • _ _ O
 Equispaced _ _ O
+
+
+ _ _ O
 v _ _ O
 = _ _ O
 ( _ _ O
@@ -659,8 +920,14 @@ E _ _ O
 1 _ _ O
 - _ _ O
 Bias _ _ B-Concept
+
+
+ _ _ O
 Special _ _ B-Concept
 Values _ _ I-Concept
+
+
+ _ _ O
 • _ _ O
 Condition _ _ O
 : _ _ O
@@ -718,6 +985,9 @@ E.g. _ _ O
 -0.0 _ _ B-Concept
 = _ _ O
 - _ _ O
+
+
+ _ _ O
 • _ _ O
 Case _ _ O
 : _ _ O
@@ -737,6 +1007,9 @@ Not-a-Number _ _ B-Concept
 ( _ _ O
 NaN _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Represents _ _ O
 case _ _ O
@@ -762,6 +1035,9 @@ sqrt _ _ O
  _ _ O
  _ _ O
 0 _ _ O
+
+
+ _ _ O
 Casting _ _ O
 floats _ _ O
 to _ _ O
@@ -799,6 +1075,9 @@ int _ _ B-Concept
 f _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 • _ _ O
 ( _ _ O
 float _ _ B-Concept
@@ -820,6 +1099,9 @@ float _ _ B-Concept
 ) _ _ O
 i _ _ O
 ; _ _ O
+
+
+ _ _ O
 float _ _ B-Concept
 → _ _ O
 int _ _ B-Concept
@@ -873,6 +1155,9 @@ n't _ _ O
 have _ _ O
 integer _ _ O
 representations _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 other _ _ O
@@ -883,6 +1168,9 @@ will _ _ O
 be _ _ O
 rounding _ _ B-Concept
 errors _ _ I-Concept
+
+
+ _ _ O
 int _ _ B-Concept
 → _ _ O
 float _ _ B-Concept
@@ -935,6 +1223,9 @@ exact _ _ O
 floating _ _ O
 point _ _ O
 representations _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 about _ _ O
@@ -964,6 +1255,9 @@ print _ _ O
 " _ _ O
 true _ _ O
 " _ _ O
+
+
+ _ _ O
 Bitwise _ _ B-Concept
 Operations _ _ I-Concept
 • _ _ O
@@ -1005,6 +1299,9 @@ this _ _ O
 would _ _ O
 give _ _ O
 0x765432EF _ _ O
+
+
+ _ _ O
 Hint _ _ O
 : _ _ O
 use _ _ O
@@ -1012,7 +1309,13 @@ masking _ _ B-Concept
 and _ _ O
 bit _ _ B-Concept
 manipulation _ _ I-Concept
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Bitwise _ _ B-Concept
 Operations _ _ I-Concept
 • _ _ O
@@ -1054,6 +1357,9 @@ this _ _ O
 would _ _ O
 give _ _ O
 0x765432EF _ _ O
+
+
+ _ _ O
 1 _ _ O
 ) _ _ O
 How _ _ O
@@ -1066,11 +1372,17 @@ bytes _ _ O
 of _ _ O
 x _ _ O
 ? _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 & _ _ O
 0xFF _ _ O
 ) _ _ O
+
+
+ _ _ O
 2 _ _ O
 ) _ _ O
 How _ _ O
@@ -1083,11 +1395,17 @@ byte _ _ O
 of _ _ O
 y _ _ O
 ? _ _ O
+
+
+ _ _ O
 ( _ _ O
 y _ _ O
 & _ _ O
 ~0xFF _ _ O
 ) _ _ O
+
+
+ _ _ O
 3 _ _ O
 ) _ _ O
 How _ _ O
@@ -1095,6 +1413,9 @@ to _ _ O
 combine _ _ O
 them _ _ O
 ? _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 & _ _ O
@@ -1106,7 +1427,13 @@ y _ _ O
 & _ _ O
 ~0xFF _ _ O
 ) _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 Bitwise _ _ B-Concept
 Operations _ _ I-Concept
 • _ _ O
@@ -1122,6 +1449,9 @@ shifts _ _ B-Concept
 adders _ _ B-Concept
 only _ _ O
 ? _ _ O
+
+
+ _ _ O
 a _ _ O
 * _ _ O
 7 _ _ O
@@ -1144,6 +1474,9 @@ return _ _ O
 x*12 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Converted _ _ O
 to _ _ O
 x86 _ _ B-Concept
@@ -1170,6 +1503,9 @@ $ _ _ O
 , _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 # _ _ O
 t _ _ O
 = _ _ O
@@ -1180,7 +1516,13 @@ t _ _ O
 < _ _ O
 < _ _ O
 2 _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 Bitwise _ _ B-Concept
 Operations _ _ I-Concept
 • _ _ O
@@ -1238,6 +1580,9 @@ by _ _ O
 byte _ _ O
 b _ _ O
 : _ _ O
+
+
+ _ _ O
 unsigned _ _ B-Concept
 replace_byte _ _ O
 ( _ _ O
@@ -1252,6 +1597,9 @@ char _ _ O
 b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 replace_byte _ _ O
 ( _ _ O
 0x12345678 _ _ O
@@ -1274,7 +1622,13 @@ replace_byte _ _ O
 -- _ _ O
 > _ _ O
 0x123456AB _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Bitwise _ _ B-Concept
 Operations _ _ I-Concept
 • _ _ O
@@ -1306,6 +1660,9 @@ by _ _ O
 byte _ _ O
 b _ _ O
 : _ _ O
+
+
+ _ _ O
 unsigned _ _ B-Concept
 replace_byte _ _ O
 ( _ _ O
@@ -1328,6 +1685,9 @@ i _ _ O
 < _ _ O
 3 _ _ O
 ; _ _ O
+
+
+ _ _ O
 unsigned _ _ B-Concept
 mask _ _ O
 = _ _ O
@@ -1351,7 +1711,13 @@ itimes8 _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 Byte _ _ B-Concept
 Ordering _ _ I-Concept
 • _ _ O
@@ -1374,38 +1740,80 @@ is _ _ O
 0x100 _ _ O
 Big _ _ B-Concept
 Endian _ _ I-Concept
+
+
+ _ _ O
 0x100 _ _ O
 0x101 _ _ O
 0x102 _ _ O
 0x103 _ _ O
+
+
+ _ _ O
 01 _ _ O
 01 _ _ O
+
+
+ _ _ O
 Little _ _ B-Concept
 Endian _ _ I-Concept
+
+
+ _ _ O
 23 _ _ O
 23 _ _ O
+
+
+ _ _ O
 45 _ _ O
 45 _ _ O
+
+
+ _ _ O
 67 _ _ O
 67 _ _ O
+
+
+ _ _ O
 0x100 _ _ O
 0x101 _ _ O
 0x102 _ _ O
 0x103 _ _ O
+
+
+ _ _ O
 67 _ _ O
 67 _ _ O
+
+
+ _ _ O
 45 _ _ O
 45 _ _ O
+
+
+ _ _ O
 23 _ _ O
 23 _ _ O
+
+
+ _ _ O
 01 _ _ O
 01 _ _ O
+
+
+ _ _ O
 C _ _ O
 Programming _ _ O
+
+
+ _ _ O
 C _ _ O
 Memory _ _ O
 Layout _ _ O
 Analysis _ _ O
+
+
+ _ _ O
 s1 _ _ O
 [ _ _ O
 0 _ _ O
@@ -1413,6 +1821,9 @@ s1 _ _ O
 → _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 s2 _ _ O
 [ _ _ O
 0 _ _ O
@@ -1420,7 +1831,13 @@ s2 _ _ O
 → _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 C _ _ O
 Programming _ _ O
 • _ _ O
@@ -1486,6 +1903,9 @@ will _ _ O
 be _ _ O
 unreachable _ _ O
 28 _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 Consider _ _ O
@@ -1510,6 +1930,9 @@ values _ _ O
 6 _ _ O
 7 _ _ O
 8 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 main _ _ O
 ( _ _ O
@@ -1580,6 +2003,9 @@ return _ _ O
 0 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Which _ _ O
 lines _ _ O
 have _ _ O
@@ -1592,16 +2018,28 @@ you _ _ O
 fix _ _ O
 it _ _ O
 ? _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
 6 _ _ O
 7 _ _ O
 8 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 main _ _ O
 ( _ _ O
@@ -1682,10 +2120,16 @@ return _ _ O
 0 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 malloc _ _ B-Concept
 can _ _ O
 fail _ _ O
 ! _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 1 _ _ O
@@ -1696,6 +2140,9 @@ programming _ _ O
 6 _ _ O
 7 _ _ O
 8 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 main _ _ O
 ( _ _ O
@@ -1776,12 +2223,18 @@ return _ _ O
 0 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Allocated _ _ O
 memory _ _ O
 is _ _ O
 not _ _ O
 initialized _ _ O
 ! _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 1 _ _ O
@@ -1790,8 +2243,14 @@ programming _ _ O
 4 _ _ O
 5 _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
 8 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 main _ _ O
 ( _ _ O
@@ -1877,6 +2336,9 @@ return _ _ O
 0 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 All _ _ O
 allocated _ _ O
 memory _ _ O
@@ -1884,6 +2346,9 @@ must _ _ O
 be _ _ O
 freed _ _ O
 ! _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 What _ _ O
@@ -1899,6 +2364,9 @@ safe _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 * _ _ O
 safe_int_malloc _ _ O
@@ -1935,6 +2403,9 @@ return _ _ O
 pointer _ _ B-Concept
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 pointer _ _ B-Concept
 is _ _ O
 a _ _ O
@@ -1959,6 +2430,9 @@ this _ _ O
 function _ _ O
 not _ _ O
 outside _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 Passing _ _ O
@@ -1977,11 +2451,17 @@ of _ _ O
 int _ _ B-Concept
 * _ _ O
 pointer _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 * _ _ O
 safe_int_malloc _ _ O
@@ -2020,11 +2500,17 @@ return _ _ O
 pointer _ _ B-Concept
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 What _ _ O
 's _ _ O
 STILL _ _ O
 wrong _ _ O
 ? _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
 The _ _ O
@@ -2042,11 +2528,17 @@ the _ _ O
 function _ _ O
 's _ _ O
 execution _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 * _ _ O
 safe_int_malloc _ _ O
@@ -2085,6 +2577,9 @@ return _ _ O
 pointer _ _ B-Concept
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 & _ _ O
 pointer _ _ B-Concept
 is _ _ O
@@ -2098,13 +2593,22 @@ safe_int_malloc _ _ O
 's _ _ O
 frame _ _ O
 ! _ _ O
+
+
+ _ _ O
 C _ _ O
 programming _ _ O
+
+
+ _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 int _ _ B-Concept
 * _ _ O
 * _ _ O
@@ -2143,6 +2647,9 @@ return _ _ O
 pointer _ _ B-Concept
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Pointers _ _ O
 • _ _ O
 Pointer _ _ B-Concept
@@ -2170,6 +2677,9 @@ int _ _ B-Concept
 a _ _ O
 = _ _ O
 0x100 _ _ O
+
+
+ _ _ O
 * _ _ O
 a _ _ O
 = _ _ O
@@ -2205,8 +2715,14 @@ address _ _ O
 causes _ _ O
 segmentation _ _ O
 fault _ _ O
+
+
+ _ _ O
 x86 _ _ O
 programming _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -2216,6 +2732,9 @@ Manipulation _ _ O
 We _ _ O
 execute _ _ O
 : _ _ O
+
+
+ _ _ O
 mov _ _ O
 $ _ _ O
 0x449 _ _ O
@@ -2247,6 +2766,9 @@ in _ _ O
 % _ _ O
 rcx _ _ O
 ? _ _ O
+
+
+ _ _ O
 1 _ _ O
 ) _ _ O
 mov _ _ O
@@ -2280,6 +2802,9 @@ rcx _ _ O
 popq _ _ O
 % _ _ O
 rcx _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -2337,6 +2862,9 @@ Unknown _ _ O
 4 _ _ O
 ) _ _ O
 0x449 _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -2425,6 +2953,9 @@ rsi _ _ O
 +26 _ _ O
 > _ _ O
 : _ _ O
+
+
+ _ _ O
 cmp _ _ O
 je _ _ O
 sub _ _ O
@@ -2434,6 +2965,9 @@ add _ _ O
 retq _ _ O
 mov _ _ O
 retq _ _ O
+
+
+ _ _ O
 % _ _ O
 sil _ _ O
 , _ _ O
@@ -2468,6 +3002,9 @@ $ _ _ O
 edx _ _ O
 , _ _ O
 %eax _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -2496,6 +3033,9 @@ registers _ _ O
 are _ _ O
 always _ _ O
 correct _ _ O
+
+
+ _ _ O
 int _ _ O
 rsr _ _ O
 ( _ _ O
@@ -2536,6 +3076,9 @@ pos _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Reverse-engineer _ _ O
@@ -2636,6 +3179,9 @@ rax _ _ O
 .L1 _ _ O
 : _ _ O
 ret _ _ O
+
+
+ _ _ O
 long _ _ O
 mystery _ _ O
 ( _ _ O
@@ -2727,6 +3273,9 @@ _ _ _ O
 _ _ _ O
 _ _ _ O
 ; _ _ O
+
+
+ _ _ O
 } _ _ O
 } _ _ O
 else _ _ O
@@ -2759,6 +3308,9 @@ _ _ _ O
 _ _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 return _ _ O
 _ _ _ O
 _ _ _ O
@@ -2770,10 +3322,19 @@ _ _ _ O
 _ _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 43 _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 increment _ _ O
+
+
+ _ _ O
 long _ _ O
 increment _ _ O
 ( _ _ O
@@ -2807,6 +3368,9 @@ return _ _ O
 x _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 increment _ _ O
 : _ _ O
 movq _ _ O
@@ -2833,20 +3397,38 @@ rdi _ _ O
 ) _ _ O
 ret _ _ O
 44 _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 1st _ _ O
 arg _ _ O
 ( _ _ O
 p _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 2nd _ _ O
 arg _ _ O
 ( _ _ O
@@ -2854,12 +3436,21 @@ val _ _ O
 ) _ _ O
 , _ _ O
 y _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 x _ _ O
 , _ _ O
 return _ _ O
 value _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -2894,6 +3485,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Initial _ _ O
 Stack _ _ O
 Structure _ _ O
@@ -2903,6 +3497,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -2950,7 +3547,13 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 Return _ _ O
 address _ _ O
@@ -2987,6 +3590,9 @@ stack _ _ O
 by _ _ O
 call _ _ O
 call_incr _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -2996,6 +3602,9 @@ step _ _ O
 ) _ _ O
 Stack _ _ O
 Structure _ _ O
+
+
+ _ _ O
 long _ _ O
 call_incr _ _ O
 ( _ _ O
@@ -3023,7 +3632,13 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 ••• _ _ O
+
+
+ _ _ O
 Return _ _ O
 addr _ _ O
 < _ _ O
@@ -3076,18 +3691,30 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 Allocate _ _ O
 space _ _ O
 for _ _ O
 local _ _ O
 vars _ _ O
+
+
+ _ _ O
 449 _ _ O
 Unused _ _ O
+
+
+ _ _ O
 ⟵old _ _ O
 % _ _ O
 rsp _ _ O
 ⟵%rsp+8 _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 Setup _ _ O
 space _ _ O
@@ -3102,6 +3729,9 @@ space _ _ O
 on _ _ O
 the _ _ O
 stack _ _ O
+
+
+ _ _ O
 • _ _ O
 Compiler _ _ O
 allocated _ _ O
@@ -3119,6 +3749,9 @@ reasons _ _ O
 , _ _ O
 including _ _ O
 alignment _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3153,6 +3786,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -3161,6 +3797,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3208,8 +3847,14 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 449 _ _ O
 Unused _ _ O
+
+
+ _ _ O
 Set _ _ O
 up _ _ O
 parameters _ _ O
@@ -3217,6 +3862,9 @@ for _ _ O
 call _ _ O
 to _ _ O
 increment _ _ O
+
+
+ _ _ O
 Aside _ _ O
 : _ _ O
 movl _ _ O
@@ -3259,20 +3907,44 @@ than _ _ O
 a _ _ O
 movq _ _ O
 . _ _ O
+
+
+ _ _ O
 ⟵%rsp+8 _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 100 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3307,6 +3979,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -3315,6 +3990,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3387,6 +4065,9 @@ rsi _ _ O
 rdi _ _ O
 ) _ _ O
 ret _ _ O
+
+
+ _ _ O
 449 _ _ O
 Unused _ _ O
 Return _ _ O
@@ -3395,12 +4076,21 @@ addr _ _ O
 call_incr+ _ _ O
 ? _ _ O
 > _ _ O
+
+
+ _ _ O
 • _ _ O
 State _ _ O
 while _ _ O
 inside _ _ O
 increment _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 Return _ _ O
 address _ _ O
@@ -3420,20 +4110,44 @@ call _ _ O
 to _ _ O
 increment _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 100 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 48 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3443,6 +4157,9 @@ step _ _ O
 ) _ _ O
 Stack _ _ O
 Structure _ _ O
+
+
+ _ _ O
 long _ _ O
 call_incr _ _ O
 ( _ _ O
@@ -3470,12 +4187,18 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 ••• _ _ O
 Return _ _ O
 addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3523,6 +4246,9 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 549 _ _ O
 Unused _ _ O
 Return _ _ O
@@ -3531,7 +4257,13 @@ addr _ _ O
 call_incr+ _ _ O
 ? _ _ O
 > _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 State _ _ O
 while _ _ O
@@ -3545,6 +4277,9 @@ body _ _ O
 has _ _ O
 been _ _ O
 executed _ _ O
+
+
+ _ _ O
 increment _ _ O
 : _ _ O
 movq _ _ O
@@ -3586,22 +4321,52 @@ p _ _ O
 = _ _ O
 y _ _ O
 ret _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 449 _ _ O
+
+
+ _ _ O
 49 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3636,6 +4401,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -3644,6 +4412,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3691,10 +4462,25 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 ⟵%rsp+8 _ _ O
+
+
+ _ _ O
 Unused _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 After _ _ O
 returning _ _ O
@@ -3717,21 +4503,48 @@ been _ _ O
 popped _ _ O
 off _ _ O
 stack _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 449 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3766,6 +4579,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -3774,6 +4590,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3821,10 +4640,25 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 ⟵%rsp+8 _ _ O
+
+
+ _ _ O
 Unused _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 Update _ _ O
 % _ _ O
 rax _ _ O
@@ -3832,20 +4666,44 @@ to _ _ O
 contain _ _ O
 v1+v2 _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 549+449 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -3880,6 +4738,9 @@ v1 _ _ O
 v2 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -3888,6 +4749,9 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 call_incr _ _ O
 : _ _ O
 subq _ _ O
@@ -3935,32 +4799,65 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 549 _ _ O
 Unused _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
 ⟵old _ _ O
 % _ _ O
 rsp _ _ O
+
+
+ _ _ O
 De-allocate _ _ O
 space _ _ O
 for _ _ O
 local _ _ O
 vars _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 998 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -4041,6 +4938,9 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
@@ -4049,7 +4949,13 @@ addr _ _ O
 < _ _ O
 main+8 _ _ O
 > _ _ O
+
+
+ _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 State _ _ O
 just _ _ O
@@ -4060,20 +4966,44 @@ call _ _ O
 to _ _ O
 call_incr _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 998 _ _ O
+
+
+ _ _ O
 Procedure _ _ O
 Call _ _ O
 Example _ _ O
@@ -4155,11 +5085,17 @@ $ _ _ O
 % _ _ O
 rsp _ _ O
 ret _ _ O
+
+
+ _ _ O
 Final _ _ O
 Stack _ _ O
 Structure _ _ O
 ••• _ _ O
 ⟵%rsp _ _ O
+
+
+ _ _ O
 • _ _ O
 State _ _ O
 immediately _ _ O
@@ -4195,20 +5131,47 @@ not _ _ O
 shown _ _ O
 here _ _ O
 ) _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Use _ _ O
 ( _ _ O
 s _ _ O
 ) _ _ O
+
+
+ _ _ O
 % _ _ O
 rdi _ _ O
+
+
+ _ _ O
 & _ _ O
 v1 _ _ O
+
+
+ _ _ O
 % _ _ O
 rsi _ _ O
+
+
+ _ _ O
 549 _ _ O
+
+
+ _ _ O
 % _ _ O
 rax _ _ O
+
+
+ _ _ O
 998 _ _ O
+
+
+ _ _ O
 
 

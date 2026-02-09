@@ -51,8 +51,7 @@
                 "for",
                 "your",
                 "first",
-                "Object",
-                "SCANNERS"
+                "Object"
             ],
             "word_labels": [
                 "O",
@@ -61,6 +60,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "SCANNERS"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -180,7 +188,16 @@
         {
             "sentence": [
                 "Declaring",
-                "Objects",
+                "Objects"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Type",
                 "name",
                 "=",
@@ -188,7 +205,6 @@
                 ";"
             ],
             "word_labels": [
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1107,14 +1123,22 @@
             "sentence": [
                 "Let",
                 "\u2019s",
-                "Compile",
+                "Compile"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "?",
                 "?",
                 "?"
             ],
             "word_labels": [
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1838,7 +1862,16 @@
         {
             "sentence": [
                 "Function",
-                "Components",
+                "Components"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "1",
                 ".",
                 "2",
@@ -1850,11 +1883,43 @@
                 ".",
                 "Header",
                 "5",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Function",
                 "Body",
                 "6",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Visibility",
                 "type",
                 "(",
@@ -1885,62 +1950,9 @@
                 "b",
                 ")",
                 "c",
-                ")",
-                "Parameters",
-                "Type1",
-                "parameterName1",
-                "Type2",
-                "parameterName2",
-                "\u2026",
-                "Curly",
-                "Brackets",
-                "/",
-                "Braces",
-                "\u201c",
-                "{",
-                "}",
-                "\u201d",
-                "\u2013",
-                "return",
-                "a",
-                "value"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1976,16 +1988,64 @@
             ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "Parameters",
+                "Type1",
+                "parameterName1",
+                "Type2",
+                "parameterName2",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "Curly",
+                "Brackets",
+                "/",
+                "Braces",
+                "\u201c",
+                "{",
+                "}",
+                "\u201d",
+                "\u2013"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "return",
+                "a",
+                "value"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
             "sentence": [],

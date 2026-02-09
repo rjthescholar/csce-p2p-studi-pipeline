@@ -3,6 +3,9 @@ unlabeled|cs0447|lec10
 
 # _ _ O
 10 _ _ O
+
+
+ _ _ O
 The _ _ O
 Register _ _ O
 File _ _ O
@@ -10,14 +13,23 @@ and _ _ O
 Building _ _ O
 an _ _ O
 ALU _ _ O
+
+
+ _ _ O
 CS _ _ O
 0447 _ _ O
 Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Original _ _ O
 slides _ _ O
 by _ _ O
@@ -34,7 +46,13 @@ Childers _ _ O
 , _ _ O
 David _ _ O
 Wilkinson _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
@@ -46,23 +64,65 @@ out _ _ O
 the _ _ O
 flip-flops _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Remember _ _ O
 this _ _ O
 ? _ _ O
+
+
+ _ _ O
 Program _ _ O
+
+
+ _ _ O
 instruction _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Registers _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Unresolved _ _ O
 questions _ _ O
 : _ _ O
@@ -112,12 +172,21 @@ subtract _ _ O
 etc _ _ O
 . _ _ O
 ? _ _ O
+
+
+ _ _ O
 Datapath _ _ O
 Processor _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Zooming _ _ O
 in _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 add _ _ O
@@ -127,34 +196,61 @@ this _ _ O
 else _ _ O
 if _ _ O
 ... _ _ O
+
+
+ _ _ O
 fp _ _ O
 s4 _ _ O
 at _ _ O
 sp _ _ O
 eax _ _ O
 ? _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 t0 _ _ O
+
+
+ _ _ O
 Registers _ _ O
+
+
+ _ _ O
 registers _ _ O
 hold _ _ O
 the _ _ O
 values _ _ O
 being _ _ O
 computed _ _ O
+
+
+ _ _ O
 control _ _ O
 signals _ _ O
 ! _ _ O
+
+
+ _ _ O
 values _ _ O
 move _ _ O
 between _ _ O
 them _ _ O
+
+
+ _ _ O
 ... _ _ O
 oh _ _ O
 yeah _ _ O
 , _ _ O
 memory _ _ O
 too _ _ O
+
+
+ _ _ O
 the _ _ O
 control _ _ O
 tells _ _ O
@@ -166,12 +262,21 @@ do _ _ O
 , _ _ O
 and _ _ O
 when _ _ O
+
+
+ _ _ O
 + _ _ O
 -÷ _ _ O
 × _ _ O
 ⊕∫ _ _ O
 ☃ _ _ O
+
+
+ _ _ O
 & _ _ O
+
+
+ _ _ O
 ● _ _ O
 There _ _ O
 are _ _ O
@@ -183,7 +288,13 @@ of _ _ O
 any _ _ O
 CPU _ _ O
 : _ _ O
+
+
+ _ _ O
 Datapath _ _ O
+
+
+ _ _ O
 the _ _ O
 datapath _ _ O
 computes _ _ O
@@ -195,7 +306,13 @@ A _ _ O
 bit _ _ O
 less _ _ O
 abstract _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 ● _ _ O
 The _ _ O
 registers _ _ O
@@ -238,9 +355,18 @@ we _ _ O
 ’ll _ _ O
 see _ _ O
 ) _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 get _ _ O
@@ -251,6 +377,9 @@ two _ _ O
 registers _ _ O
 at _ _ O
 once _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 It _ _ O
@@ -277,10 +406,25 @@ special _ _ O
 purposes _ _ O
 or _ _ O
 behaviors _ _ O
+
+
+ _ _ O
 8086 _ _ O
+
+
+ _ _ O
 z80 _ _ O
+
+
+ _ _ O
 6502 _ _ O
+
+
+ _ _ O
 PDP8 _ _ O
+
+
+ _ _ O
 ax _ _ O
 bx _ _ O
 cx _ _ O
@@ -289,6 +433,9 @@ si _ _ O
 di _ _ O
 sp _ _ O
 bp _ _ O
+
+
+ _ _ O
 a _ _ O
 f _ _ O
 b _ _ O
@@ -300,14 +447,29 @@ l _ _ O
 ix _ _ O
 iy _ _ O
 sp _ _ O
+
+
+ _ _ O
 A _ _ O
 X _ _ O
 Y _ _ O
+
+
+ _ _ O
 AC _ _ O
+
+
+ _ _ O
 16 _ _ O
 bits _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 RISC _ _ O
 CPUs _ _ O
 usually _ _ O
@@ -346,6 +508,9 @@ r15 _ _ O
 32 _ _ O
 / _ _ O
 64 _ _ O
+
+
+ _ _ O
 r16 _ _ O
 r17 _ _ O
 r18 _ _ O
@@ -363,8 +528,14 @@ r28 _ _ O
 r29 _ _ O
 r30 _ _ O
 r31 _ _ O
+
+
+ _ _ O
 8 _ _ O
 bits _ _ O
+
+
+ _ _ O
 why _ _ O
 is _ _ O
 this _ _ O
@@ -389,6 +560,9 @@ or _ _ O
 at _ _ O
 a _ _ O
 time _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Tug-of-war _ _ O
@@ -402,6 +576,9 @@ by _ _ O
 many _ _ O
 competing _ _ O
 factors _ _ O
+
+
+ _ _ O
 compilers _ _ O
 love _ _ O
 lots _ _ O
@@ -478,12 +655,18 @@ switches _ _ O
 are _ _ O
 slower _ _ O
 . _ _ O
+
+
+ _ _ O
 read _ _ O
 4 _ _ O
 regs _ _ O
 and _ _ O
 write _ _ O
 2 _ _ O
+
+
+ _ _ O
 more _ _ O
 registers _ _ O
 means _ _ O
@@ -598,6 +781,9 @@ few _ _ O
 a _ _ O
 nice _ _ O
 middle-ground _ _ O
+
+
+ _ _ O
 ● _ _ O
 also _ _ O
 do _ _ O
@@ -638,6 +824,9 @@ you _ _ O
 just _ _ O
 being _ _ O
 presumptuous _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Soooo _ _ O
@@ -662,41 +851,110 @@ of _ _ O
 D _ _ O
 Flip-Flops _ _ O
 : _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 D _ _ O
 Flip-Flop _ _ O
+
+
+ _ _ O
 D _ _ O
 Flip-Flop _ _ O
+
+
+ _ _ O
 D _ _ O
 Flip-Flop _ _ O
+
+
+ _ _ O
 D _ _ O
 Flip-Flop _ _ O
+
+
+ _ _ O
 3rd _ _ O
 bit _ _ O
+
+
+ _ _ O
 2nd _ _ O
 bit _ _ O
+
+
+ _ _ O
 1st _ _ O
 bit _ _ O
+
+
+ _ _ O
 0th _ _ O
 bit _ _ O
+
+
+ _ _ O
 We _ _ O
 abstract _ _ O
 away _ _ O
 to _ _ O
 this _ _ O
 : _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 Thankfully _ _ O
 , _ _ O
 so _ _ O
@@ -719,23 +977,68 @@ of _ _ O
 those _ _ O
 together _ _ O
 : _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
 32 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Register _ _ O
+
+
+ _ _ O
 … _ _ O
 32 _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Register _ _ O
 10 _ _ O
 
@@ -774,6 +1077,9 @@ registers _ _ O
 are _ _ O
 accessed _ _ O
 ? _ _ O
+
+
+ _ _ O
 there _ _ O
 's _ _ O
 one _ _ O
@@ -795,18 +1101,36 @@ does _ _ O
 it _ _ O
 need _ _ O
 ? _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
 WE _ _ O
+
+
+ _ _ O
 how _ _ O
 about _ _ O
 a _ _ O
 write _ _ O
 enable _ _ O
 ? _ _ O
+
+
+ _ _ O
 rd _ _ O
+
+
+ _ _ O
 rs _ _ O
+
+
+ _ _ O
 rt _ _ O
+
+
+ _ _ O
 there _ _ O
 are _ _ O
 two _ _ O
@@ -821,6 +1145,9 @@ read _ _ O
 a _ _ O
 different _ _ O
 register _ _ O
+
+
+ _ _ O
 and _ _ O
 inputs _ _ O
 to _ _ O
@@ -828,6 +1155,9 @@ select _ _ O
 the _ _ O
 registers _ _ O
 ? _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Reading _ _ O
@@ -848,6 +1178,9 @@ choose _ _ O
 one _ _ O
 to _ _ O
 read _ _ O
+
+
+ _ _ O
 what _ _ O
 kind _ _ O
 of _ _ O
@@ -855,13 +1188,31 @@ component _ _ O
 chooses _ _ O
 ? _ _ O
 D _ _ O
+
+
+ _ _ O
 A _ _ O
 WE83 _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 29 _ _ O
 83 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 reading _ _ O
 from _ _ O
 a _ _ O
@@ -869,11 +1220,26 @@ register _ _ O
 is _ _ O
 technically _ _ O
 combinational _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 a _ _ O
 read _ _ O
 port _ _ O
@@ -920,6 +1286,9 @@ select _ _ O
 signal _ _ O
 again _ _ O
 … _ _ O
+
+
+ _ _ O
 when _ _ O
 should _ _ O
 we _ _ O
@@ -951,10 +1320,25 @@ A _ _ O
 , _ _ O
 top _ _ O
 ? _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 83 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 when _ _ O
 should _ _ O
 we _ _ O
@@ -966,12 +1350,27 @@ D _ _ O
 select _ _ O
 = _ _ O
 1 _ _ O
+
+
+ _ _ O
 WE _ _ O
 = _ _ O
 1 _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
 13 _ _ O
@@ -1010,11 +1409,29 @@ registers _ _ O
 at _ _ O
 once _ _ O
 . _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 83 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 A _ _ O
 only _ _ O
 the _ _ O
@@ -1025,10 +1442,25 @@ will _ _ O
 store _ _ O
 the _ _ O
 data _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 B _ _ O
 14 _ _ O
 
@@ -1062,17 +1494,41 @@ outputs _ _ O
 demux _ _ O
 ) _ _ O
 D _ _ O
+
+
+ _ _ O
 WE _ _ O
 0 _ _ O
 WE _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 83 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 WE _ _ O
 0 _ _ O
+
+
+ _ _ O
 a _ _ O
 write _ _ O
 port _ _ O
@@ -1103,11 +1559,26 @@ enable _ _ O
 to _ _ O
 one _ _ O
 register _ _ O
+
+
+ _ _ O
 Q _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 WE _ _ O
+
+
+ _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 The _ _ O
@@ -1144,25 +1615,55 @@ like _ _ O
 MIPS _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 WriteEnable _ _ O
 WriteData _ _ O
 Register1 _ _ O
 Register2 _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 32 _ _ O
 5 _ _ O
 5 _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 ReadData1 _ _ O
 ReadData2 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Diving _ _ O
 in _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
 have _ _ O
@@ -1184,9 +1685,18 @@ building _ _ O
 an _ _ O
 ALU _ _ O
 . _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Building _ _ O
@@ -1198,6 +1708,9 @@ Doing _ _ O
 the _ _ O
 stuff _ _ O
 . _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Starting _ _ O
@@ -1217,14 +1730,29 @@ adder _ _ O
 to _ _ O
 subtract _ _ O
 ? _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 A _ _ O
 B _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Starting _ _ O
@@ -1285,12 +1813,27 @@ Binvert _ _ O
 Carry _ _ O
 in _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 a _ _ O
@@ -1304,20 +1847,44 @@ ALU _ _ O
 – _ _ O
 Addition _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Put _ _ O
 it _ _ O
 in _ _ O
 a _ _ O
 box _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Result _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
 Carry _ _ O
 out _ _ O
@@ -1333,18 +1900,45 @@ Subtraction _ _ O
 Complement _ _ O
 1- _ _ O
 Invert _ _ O
+
+
+ _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2-Add _ _ O
 one _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Result _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
 Carry _ _ O
 out _ _ O
@@ -1397,6 +1991,9 @@ the _ _ O
 signal _ _ O
 Operation _ _ O
 : _ _ O
+
+
+ _ _ O
 ( _ _ O
 2-bits _ _ O
 ) _ _ O
@@ -1415,21 +2012,51 @@ ADD _ _ O
 11 _ _ O
 – _ _ O
 SLT _ _ O
+
+
+ _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
 2 _ _ O
+
+
+ _ _ O
 A _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1442,14 +2069,32 @@ ALU _ _ O
 – _ _ O
 Addition _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 10 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 The _ _ O
 other _ _ O
 outputs _ _ O
@@ -1457,18 +2102,45 @@ are _ _ O
 being _ _ O
 calculated _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 But _ _ O
 not _ _ O
 propagated _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1481,23 +2153,59 @@ ALU _ _ O
 – _ _ O
 Subtraction _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 10 _ _ O
+
+
+ _ _ O
 A _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1510,23 +2218,59 @@ ALU _ _ O
 – _ _ O
 AND _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 2 _ _ O
 00 _ _ O
+
+
+ _ _ O
 A _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1539,23 +2283,59 @@ ALU _ _ O
 – _ _ O
 OR _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 2 _ _ O
 01 _ _ O
+
+
+ _ _ O
 A _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1574,17 +2354,26 @@ Remember _ _ O
 Boolean _ _ O
 algebra _ _ O
 ? _ _ O
+
+
+ _ _ O
 𝐴 _ _ O
 + _ _ O
 𝐵 _ _ O
 = _ _ O
 𝐴. _ _ O
 𝐵 _ _ O
+
+
+ _ _ O
 𝐴𝐵 _ _ O
 = _ _ O
 𝐴 _ _ O
 + _ _ O
 𝐵 _ _ O
+
+
+ _ _ O
 𝐴 _ _ O
 𝐵 _ _ O
 𝐴 _ _ O
@@ -1618,6 +2407,9 @@ algebra _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 𝐴 _ _ O
 𝐵 _ _ O
 𝐴𝐵 _ _ O
@@ -1666,28 +2458,73 @@ another _ _ O
 inverter _ _ O
 and _ _ O
 mutex _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
 Binvert _ _ O
 1 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 01 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1702,25 +2539,67 @@ NOR _ _ O
 Ainvert _ _ O
 Binvert _ _ O
 1 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 Operation _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 X _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
 00 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
 Carry _ _ O
 out _ _ O
@@ -1740,7 +2619,13 @@ ALU _ _ O
 can _ _ O
 detect _ _ O
 overflow _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
+
+
+ _ _ O
 ● _ _ O
 Also _ _ O
 allows _ _ O
@@ -1779,15 +2664,33 @@ at _ _ O
 zero _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Operation _ _ O
 2 _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 ● _ _ O
 SLT _ _ O
 – _ _ O
@@ -1795,6 +2698,9 @@ Set _ _ O
 if _ _ O
 Less _ _ O
 Then _ _ O
+
+
+ _ _ O
 o _ _ O
 “ _ _ O
 Set _ _ O
@@ -1805,14 +2711,32 @@ if _ _ O
 a _ _ O
 < _ _ O
 b _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 o _ _ O
 “ _ _ O
 Set _ _ O
@@ -1823,8 +2747,17 @@ if _ _ O
 a _ _ O
 > _ _ O
 =b _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 Overflow _ _ O
 Carry _ _ O
 out _ _ O
@@ -1844,7 +2777,13 @@ ALU _ _ O
 can _ _ O
 detect _ _ O
 overflow _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
+
+
+ _ _ O
 ● _ _ O
 Also _ _ O
 allows _ _ O
@@ -1883,15 +2822,36 @@ at _ _ O
 zero _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 Operation _ _ O
 2 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 ● _ _ O
 SLT _ _ O
 – _ _ O
@@ -1899,6 +2859,9 @@ Set _ _ O
 if _ _ O
 Less _ _ O
 Then _ _ O
+
+
+ _ _ O
 o _ _ O
 “ _ _ O
 Set _ _ O
@@ -1909,15 +2872,39 @@ if _ _ O
 a _ _ O
 < _ _ O
 b _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 o _ _ O
 “ _ _ O
 Set _ _ O
@@ -1928,7 +2915,13 @@ if _ _ O
 a _ _ O
 > _ _ O
 =b _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 is _ _ O
@@ -1960,9 +2953,15 @@ OR _ _ O
 XOR _ _ O
 : _ _ O
 4ns _ _ O
+
+
+ _ _ O
 ( _ _ O
 26ns _ _ O
 ) _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Building _ _ O
@@ -1974,6 +2973,9 @@ Combine _ _ O
 multiple _ _ O
 1-bit _ _ O
 ALUs _ _ O
+
+
+ _ _ O
 ● _ _ O
 We _ _ O
 can _ _ O
@@ -2002,10 +3004,16 @@ about _ _ O
 the _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
 Bnegate _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
 can _ _ O
@@ -2013,59 +3021,164 @@ be _ _ O
 connected _ _ O
 to _ _ O
 Binvert _ _ O
+
+
+ _ _ O
 A0 _ _ O
 B0 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A1 _ _ O
 B1 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A2 _ _ O
 B2 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 2 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A31 _ _ O
 B31 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 ALU _ _ O
 31 _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Operation _ _ O
 10 _ _ O
+
+
+ _ _ O
 Result0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Result1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Result2 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Result31 _ _ O
 Set _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Implementing _ _ O
@@ -2102,22 +3215,46 @@ ALU0 _ _ O
 ’s _ _ O
 Less _ _ O
 input _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
 Bnegate _ _ O
 1 _ _ O
 0 _ _ O
 A0 _ _ O
 B0 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A1 _ _ O
 B1 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Could _ _ O
 we _ _ O
@@ -2137,47 +3274,131 @@ is _ _ O
 , _ _ O
 not _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A2 _ _ O
 B2 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 2 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 A31 _ _ O
 B31 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 ALU _ _ O
 31 _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 Operation _ _ O
 11 _ _ O
+
+
+ _ _ O
 Result0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Result1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Result2 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Result31 _ _ O
 Set _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 A _ _ O
@@ -2185,27 +3406,69 @@ A _ _ O
 ALU _ _ O
 Ainvert _ _ O
 Bnegate _ _ O
+
+
+ _ _ O
 4 _ _ O
 ALU _ _ O
 operation _ _ O
 A _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 32 _ _ O
 ALU _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 A0 _ _ O
 B0 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 Operation _ _ O
+
+
+ _ _ O
 Result0 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 0 _ _ O
+
+
+ _ _ O
 Zero _ _ O
 detection _ _ O
 is _ _ O
@@ -2221,45 +3484,114 @@ E.g. _ _ O
 beq _ _ O
 , _ _ O
 bne _ _ O
+
+
+ _ _ O
 A1 _ _ O
 B1 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 Result _ _ O
 Zero _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 A2 _ _ O
 B2 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 A31 _ _ O
 B31 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Less _ _ O
+
+
+ _ _ O
 Result1 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Zero _ _ O
+
+
+ _ _ O
 Result2 _ _ O
+
+
+ _ _ O
 ALU _ _ O
 2 _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 Carry _ _ O
 in _ _ O
+
+
+ _ _ O
 ALU _ _ O
 31 _ _ O
 Carry _ _ O
 out _ _ O
+
+
+ _ _ O
 Result31 _ _ O
 Set _ _ O
+
+
+ _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 As _ _ O
 we _ _ O
 saw _ _ O
@@ -2353,29 +3685,74 @@ project _ _ O
 ● _ _ O
 Whew _ _ O
 ! _ _ O
+
+
+ _ _ O
 Ainvert _ _ O
 Bnegate _ _ O
 1 _ _ O
 A _ _ O
+
+
+ _ _ O
 Operation _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 00 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 1 _ _ O
 B _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
+
+
+ _ _ O
 Result _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 < _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Carry _ _ O
 out _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 Zooming _ _ O
@@ -2430,28 +3807,70 @@ Datapath _ _ O
 ALU _ _ O
 operation _ _ O
 A _ _ O
+
+
+ _ _ O
 WriteEnable _ _ O
 WriteData _ _ O
 Register1 _ _ O
 Register2 _ _ O
 WriteRegister _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 5 _ _ O
 5 _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 32 _ _ O
 ALU _ _ O
+
+
+ _ _ O
 ReadData1 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Result _ _ O
 Zero _ _ O
 Overflow _ _ O
+
+
+ _ _ O
 ReadData2 _ _ O
+
+
+ _ _ O
 5 _ _ O
 37 _ _ O
 

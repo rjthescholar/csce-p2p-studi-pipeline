@@ -2,9 +2,18 @@
 -DOCSTART- -X- -X- O
 
 14 _ _ O
+
+
+ _ _ O
 The _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Hierarchy _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +22,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,6 +37,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 a _ _ O
@@ -38,7 +53,13 @@ a _ _ O
 safe _ _ O
 investment _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Wanting _ _ O
 Moore _ _ O
 and _ _ O
@@ -67,17 +88,32 @@ innovation _ _ O
 was _ _ O
 slower _ _ O
 . _ _ O
+
+
+ _ _ O
 Throughput _ _ B-Concept
+
+
+ _ _ O
 Innovation _ _ O
 starts _ _ O
 to _ _ O
 slow _ _ O
+
+
+ _ _ O
 The _ _ O
 CPU _ _ O
 overtakes _ _ O
 memory _ _ O
 performance _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Cost _ _ O
 of _ _ O
 DRAM _ _ B-Concept
@@ -87,42 +123,81 @@ in _ _ O
 2020 _ _ O
 • _ _ O
 8GiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 35 _ _ O
 - _ _ O
 70 _ _ O
+
+
+ _ _ O
 • _ _ O
 1TiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 50 _ _ O
 - _ _ O
 80 _ _ O
+
+
+ _ _ O
 • _ _ O
 16GiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 70 _ _ O
 - _ _ O
 100 _ _ O
+
+
+ _ _ O
 • _ _ O
 8TiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 200 _ _ O
 - _ _ O
 $ _ _ O
 300 _ _ O
+
+
+ _ _ O
 • _ _ O
 32GiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 140 _ _ O
 - _ _ O
 300 _ _ O
+
+
+ _ _ O
 • _ _ O
 16TiB _ _ O
+
+
+ _ _ O
 $ _ _ O
 400 _ _ O
 - _ _ O
 500 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 The _ _ O
 memory _ _ B-Concept
 hierarchy _ _ I-Concept
@@ -131,24 +206,39 @@ Faster _ _ O
 , _ _ O
 Denser _ _ O
 Expensive _ _ O
+
+
+ _ _ O
 L1 _ _ B-Concept
 Cache _ _ I-Concept
+
+
+ _ _ B-Concept
 Cheaper _ _ O
 , _ _ O
 Slower _ _ O
 , _ _ O
 Larger _ _ O
+
+
+ _ _ O
 ( _ _ O
-DRAM _ _ O
+DRAM _ _ B-Concept
 ) _ _ O
-Main _ _ O
-Memory _ _ O
-L2 _ _ O
-Cache _ _ O
-Local _ _ O
-Disk _ _ O
-Distributed _ _ O
-Storage _ _ O
+Main _ _ B-Concept
+Memory _ _ I-Concept
+
+
+ _ _ O
+L2 _ _ B-Concept
+Cache _ _ I-Concept
+
+
+ _ _ B-Concept
+Local _ _ B-Concept
+Disk _ _ I-Concept
+Distributed _ _ B-Concept
+Storage _ _ I-Concept
 ( _ _ O
 Do _ _ O
 n't _ _ O
@@ -156,24 +246,39 @@ forget _ _ O
 it _ _ O
 ! _ _ O
 ) _ _ O
-Tape _ _ O
+Tape _ _ B-Concept
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 The _ _ O
 hierarchy _ _ O
 of _ _ O
 speed _ _ O
+
+
+ _ _ O
 Faster _ _ O
 , _ _ O
 Denser _ _ O
 Expensive _ _ O
+
+
+ _ _ O
 Cheaper _ _ O
 , _ _ O
 Slower _ _ O
 , _ _ O
 Larger _ _ O
+
+
+ _ _ O
 A _ _ O
 " _ _ O
-cache _ _ O
+cache _ _ B-Concept
 " _ _ O
 is _ _ O
 used _ _ O
@@ -183,17 +288,23 @@ useful _ _ O
 data _ _ O
 closer _ _ O
 than _ _ O
-main _ _ O
-memory _ _ O
+main _ _ B-Concept
+memory _ _ I-Concept
 to _ _ O
 improve _ _ O
 speed _ _ O
 . _ _ O
-Registers _ _ O
-L1 _ _ O
-Cache _ _ O
-L2 _ _ O
-Cache _ _ O
+
+
+ _ _ O
+Registers _ _ B-Concept
+L1 _ _ B-Concept
+Cache _ _ I-Concept
+
+
+ _ _ B-Concept
+L2 _ _ B-Concept
+Cache _ _ I-Concept
 DRAM _ _ O
 is _ _ O
 simply _ _ O
@@ -216,7 +327,13 @@ it _ _ O
 ! _ _ O
 ) _ _ O
 Tape _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Hierarchy _ _ O
 : _ _ O
@@ -227,34 +344,73 @@ Not _ _ O
 drawn _ _ O
 to _ _ O
 scale _ _ O
+
+
+ _ _ O
 SRAM _ _ O
+
+
+ _ _ O
 DRAM _ _ O
+
+
+ _ _ O
 Static _ _ O
 Random _ _ O
 Access _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Dynamic _ _ O
 Random _ _ O
 Access _ _ O
 Memory _ _ O
+
+
+ _ _ O
 ~4 _ _ O
 MB _ _ O
 L2 _ _ O
 unified _ _ O
 cache _ _ O
+
+
+ _ _ O
 L1 _ _ O
 I-cache _ _ O
+
+
+ _ _ O
 ~8 _ _ O
 GB _ _ O
+
+
+ _ _ O
 ~500 _ _ O
 GB _ _ O
+
+
+ _ _ O
 Main _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Disk _ _ O
+
+
+ _ _ O
 32 _ _ O
 KB _ _ O
 CPU _ _ O
+
+
+ _ _ O
 Reg _ _ O
+
+
+ _ _ O
 Throughput _ _ O
 : _ _ O
 16 _ _ O
@@ -265,32 +421,56 @@ Latency _ _ O
 : _ _ O
 3 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 L1 _ _ O
 D-cache _ _ O
 8 _ _ O
 B _ _ O
 / _ _ O
 cycle _ _ O
+
+
+ _ _ O
 2 _ _ O
 B _ _ O
 / _ _ O
 cycle _ _ O
+
+
+ _ _ O
 1 _ _ O
 B _ _ O
 / _ _ O
 30 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 14 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 100 _ _ O
 cycles _ _ O
+
+
+ _ _ O
 millions _ _ O
+
+
+ _ _ O
 Miss _ _ O
 Penalty _ _ O
 ( _ _ O
 latency _ _ O
 ) _ _ O
 33x _ _ O
+
+
+ _ _ O
 Miss _ _ O
 Penalty _ _ O
 ( _ _ O
@@ -299,6 +479,9 @@ latency _ _ O
 10 _ _ O
 , _ _ O
 000x _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Caching _ _ O
 Cache _ _ O
@@ -313,16 +496,31 @@ use _ _ O
 more _ _ O
 of _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Experiment _ _ O
 : _ _ O
 Scientific _ _ O
 Maths _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 Practical _ _ O
 Performance _ _ O
 • _ _ O
@@ -347,6 +545,9 @@ The _ _ O
 Memory _ _ O
 Wall _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 order _ _ O
@@ -367,6 +568,9 @@ speed _ _ O
 of _ _ O
 RAM _ _ O
 . _ _ O
+
+
+ _ _ O
 " _ _ O
 That _ _ O
 's _ _ O
@@ -390,6 +594,9 @@ to _ _ O
 it _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Programs _ _ O
 use _ _ O
@@ -414,6 +621,9 @@ not _ _ O
 improve _ _ O
 . _ _ O
 10 _ _ O
+
+
+ _ _ O
 The _ _ O
 problem _ _ O
 : _ _ O
@@ -465,6 +675,9 @@ Wait _ _ O
 in _ _ O
 traffic _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Now _ _ O
 it _ _ O
@@ -515,7 +728,13 @@ bare _ _ O
 with _ _ O
 me _ _ O
 ) _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 Caching _ _ O
 : _ _ O
 Keeping _ _ O
@@ -540,6 +759,9 @@ on _ _ O
 your _ _ O
 bookshelf _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -572,6 +794,9 @@ the _ _ O
 bus _ _ O
 back _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Now _ _ O
 it _ _ O
@@ -614,6 +839,9 @@ Maybe _ _ O
 a _ _ O
 bookshelf _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 next _ _ O
@@ -628,6 +856,9 @@ be _ _ O
 nearby _ _ O
 . _ _ O
 12 _ _ O
+
+
+ _ _ O
 The _ _ O
 metaphorical _ _ O
 cache _ _ O
@@ -648,6 +879,9 @@ might _ _ O
 want _ _ O
 later _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 is _ _ O
@@ -687,7 +921,13 @@ old _ _ O
 book _ _ O
 off _ _ O
 . _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 cache _ _ O
 ( _ _ O
@@ -741,7 +981,13 @@ the _ _ O
 CPU _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 Data _ _ O
 , _ _ O
 the _ _ O
@@ -806,6 +1052,9 @@ into _ _ O
 the _ _ O
 register _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 it _ _ O
@@ -834,6 +1083,9 @@ hierarchy _ _ O
 ( _ _ O
 RAM _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Ram _ _ O
 copies _ _ O
@@ -852,7 +1104,13 @@ to _ _ O
 the _ _ O
 register _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 Missing _ _ O
 the _ _ O
 mark _ _ O
@@ -908,22 +1166,73 @@ cold _ _ O
 miss _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 • _ _ O
 These _ _ O
 are _ _ O
@@ -948,8 +1257,17 @@ a _ _ O
 memory _ _ O
 read _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 Hitting _ _ O
 the _ _ O
 target _ _ O
@@ -984,26 +1302,77 @@ a _ _ O
 cache _ _ O
 hit _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Your _ _ O
 best-case _ _ O
 scenario _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 These _ _ O
 avoid _ _ O
@@ -1034,9 +1403,21 @@ terms _ _ O
 of _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 17 _ _ O
+
+
+ _ _ O
 A _ _ O
 cache _ _ O
 half _ _ O
@@ -1059,11 +1440,29 @@ each _ _ O
 compulsory _ _ O
 miss _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 it _ _ O
@@ -1082,16 +1481,49 @@ the _ _ O
 next _ _ O
 miss _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 • _ _ O
 On _ _ O
 a _ _ O
@@ -1104,12 +1536,30 @@ data _ _ O
 from _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 8 _ _ O
 E _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Yet _ _ O
 , _ _ O
@@ -1124,6 +1574,9 @@ must _ _ O
 remove _ _ O
 one _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -1143,8 +1596,17 @@ than _ _ O
 the _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 Looking _ _ O
 closer _ _ O
 ... _ _ O
@@ -1184,16 +1646,49 @@ improve _ _ O
 our _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 • _ _ O
 There _ _ O
 is _ _ O
@@ -1212,16 +1707,49 @@ in _ _ O
 near _ _ O
 future _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 This _ _ O
 is _ _ O
@@ -1230,6 +1758,9 @@ caches _ _ O
 generally _ _ O
 capture _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1264,8 +1795,17 @@ nearby _ _ O
 in _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Exploring _ _ O
 space _ _ O
 ... _ _ O
@@ -1313,21 +1853,69 @@ the _ _ O
 cache _ _ O
 slot _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Just _ _ O
 a _ _ O
@@ -1349,6 +1937,9 @@ use _ _ O
 the _ _ O
 remainder _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Every _ _ O
 0th _ _ O
@@ -1388,7 +1979,13 @@ so _ _ O
 on _ _ O
 . _ _ O
 8 _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Direct _ _ O
 and _ _ O
 to _ _ O
@@ -1478,6 +2075,9 @@ as _ _ O
 shown _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Because _ _ O
 every _ _ O
@@ -1495,29 +2095,98 @@ a _ _ O
 direct-mapped _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 3 _ _ O
 8 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 Missing _ _ O
 your _ _ O
 connection _ _ O
@@ -1540,6 +2209,9 @@ for _ _ O
 this _ _ O
 cache _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 we _ _ O
@@ -1560,21 +2232,69 @@ our _ _ O
 directmapped _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Let _ _ O
 's _ _ O
@@ -1588,6 +2308,9 @@ in _ _ O
 that _ _ O
 order _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Accessing _ _ O
 address _ _ O
@@ -1597,9 +2320,15 @@ a _ _ O
 compulsory _ _ O
 miss _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
 5 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Address _ _ O
 5 _ _ O
@@ -1619,6 +2348,9 @@ n't _ _ O
 full _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 miss _ _ O
@@ -1638,8 +2370,17 @@ a _ _ O
 conflict _ _ O
 miss _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 How _ _ O
 big _ _ O
 is _ _ O
@@ -1701,23 +2442,71 @@ time _ _ O
 bytes _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
 64 _ _ O
 bytes _ _ O
+
+
+ _ _ O
 • _ _ O
 Therefore _ _ O
 , _ _ O
@@ -1775,9 +2564,18 @@ on _ _ O
 a _ _ O
 miss _ _ O
 ! _ _ O
+
+
+ _ _ O
 8 _ _ O
 bytes _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Block _ _ O
 size _ _ O
 helps _ _ O
@@ -1823,23 +2621,71 @@ to _ _ O
 , _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 D _ _ O
+
+
+ _ _ O
 E _ _ O
 64 _ _ O
 bytes _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
 's _ _ O
@@ -1886,6 +2732,9 @@ cache _ _ O
 hits _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 we _ _ O
@@ -1907,9 +2756,21 @@ compulsory _ _ O
 miss _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 Once _ _ O
 again _ _ O
 ... _ _ O
@@ -1922,6 +2783,9 @@ C _ _ O
 um _ _ O
 ... _ _ O
 programs _ _ O
+
+
+ _ _ O
 Allocates _ _ O
 matrices _ _ O
 . _ _ O
@@ -1943,10 +2807,16 @@ is _ _ O
 uninitialized _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 Iterates _ _ O
 through _ _ O
 column _ _ O
@@ -1958,7 +2828,13 @@ goes _ _ O
 through _ _ O
 row _ _ O
 ) _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 Once _ _ O
 again _ _ O
 ... _ _ O
@@ -2002,7 +2878,13 @@ Goes _ _ O
 across _ _ O
 row _ _ O
 ) _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Once _ _ O
 again _ _ O
 ... _ _ O
@@ -2042,7 +2924,13 @@ down _ _ O
 the _ _ O
 column _ _ O
 ) _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 The _ _ O
 Antagonist _ _ O
 • _ _ O
@@ -2075,6 +2963,9 @@ worst _ _ O
 spatial _ _ O
 locality _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
 's _ _ O
@@ -2108,6 +2999,9 @@ our _ _ O
 cache _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 cache _ _ O
 item _ _ O
@@ -2116,10 +3010,25 @@ holds _ _ O
 , _ _ O
 , _ _ O
 etc _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Cache _ _ O
 size _ _ O
 : _ _ O
@@ -2129,7 +3038,13 @@ bytes _ _ O
 per _ _ O
 block _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Performance _ _ O
 • _ _ O
@@ -2140,6 +3055,9 @@ make _ _ O
 computers _ _ O
 practical _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Why _ _ O
 ? _ _ O
@@ -2164,6 +3082,9 @@ was _ _ O
 times _ _ O
 slower _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Simply _ _ O
 : _ _ O
@@ -2182,6 +3103,9 @@ of _ _ O
 times _ _ O
 faster _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Consider _ _ O
 the _ _ O
@@ -2266,6 +3190,9 @@ to _ _ O
 cache _ _ O
 . _ _ O
 29 _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Performance _ _ O
 • _ _ O
@@ -2359,6 +3286,9 @@ memory _ _ O
 to _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Average _ _ O
 Memory _ _ O
@@ -2395,6 +3325,9 @@ HT _ _ O
 MR _ _ O
 × _ _ O
 MP _ _ O
+
+
+ _ _ O
 • _ _ O
 Assuming _ _ O
 a _ _ O
@@ -2462,7 +3395,13 @@ performance _ _ O
 . _ _ O
 Wow _ _ O
 . _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Layout _ _ O
 Summary _ _ O
@@ -2500,6 +3439,9 @@ fully _ _ O
 associative _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 A _ _ O
 direct-mapped _ _ O
@@ -2510,6 +3452,9 @@ go _ _ O
 into _ _ O
 slots _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 They _ _ O
 have _ _ O
@@ -2529,6 +3474,9 @@ a _ _ O
 hybrid _ _ O
 approach _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 , _ _ O
@@ -2571,6 +3519,9 @@ choice _ _ O
 . _ _ O
 ) _ _ O
 31 _ _ O
+
+
+ _ _ O
 Associativity _ _ O
 • _ _ O
 With _ _ O
@@ -2635,6 +3586,9 @@ a _ _ O
 1-way _ _ O
 cache _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 the _ _ O
@@ -2684,7 +3638,13 @@ number _ _ O
 of _ _ O
 ways _ _ O
 . _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 Another _ _ O
 way _ _ O
 of _ _ O
@@ -2698,6 +3658,9 @@ size _ _ O
 , _ _ O
 so _ _ O
 ... _ _ O
+
+
+ _ _ O
 On _ _ O
 a _ _ O
 fully _ _ O
@@ -2710,6 +3673,9 @@ to _ _ O
 the _ _ O
 same _ _ O
 set _ _ O
+
+
+ _ _ O
 On _ _ O
 a _ _ O
 direct-mapped _ _ O
@@ -2721,6 +3687,9 @@ to _ _ O
 a _ _ O
 different _ _ O
 set _ _ O
+
+
+ _ _ O
 On _ _ O
 a _ _ O
 n-way _ _ O
@@ -2733,7 +3702,13 @@ to _ _ O
 the _ _ O
 same _ _ O
 set _ _ O
+
+
+ _ _ O
 33 _ _ O
+
+
+ _ _ O
 Mapping _ _ O
 WT _ _ O
 F _ _ O
@@ -2741,6 +3716,9 @@ F _ _ O
 Cache _ _ O
 ! _ _ O
 ? _ _ O
+
+
+ _ _ O
 Sooo _ _ O
 ... _ _ O
 exactly _ _ O
@@ -2780,7 +3758,13 @@ cache _ _ O
 size _ _ O
 • _ _ O
 32KiB _ _ O
+
+
+ _ _ O
 64B _ _ O
+
+
+ _ _ O
 32KiB _ _ O
 215 _ _ O
 I _ _ O
@@ -2793,6 +3777,9 @@ need _ _ O
 = _ _ O
 512 _ _ O
 lines _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 many _ _ O
@@ -2828,6 +3815,9 @@ Block _ _ O
 # _ _ O
 bins _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
 's _ _ O
@@ -2835,7 +3825,13 @@ use _ _ O
 : _ _ O
 64B _ _ O
 ! _ _ O
+
+
+ _ _ O
 35 _ _ O
+
+
+ _ _ O
 Sooo _ _ O
 ... _ _ O
 exactly _ _ O
@@ -2844,6 +3840,9 @@ can _ _ O
 where _ _ O
 ? _ _ O
 64B _ _ O
+
+
+ _ _ O
 • _ _ O
 Let _ _ O
 's _ _ O
@@ -2855,6 +3854,9 @@ cache _ _ O
 size _ _ O
 • _ _ O
 32KiB _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 many _ _ O
@@ -2881,10 +3883,16 @@ use _ _ O
 : _ _ O
 64B _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Decrease _ _ O
 the _ _ O
 size _ _ O
+
+
+ _ _ O
 32KiB _ _ O
 215 _ _ O
 I _ _ O
@@ -2897,6 +3905,9 @@ need _ _ O
 = _ _ O
 512 _ _ O
 rows _ _ O
+
+
+ _ _ O
 • _ _ O
 + _ _ O
 rows _ _ O
@@ -2910,6 +3921,9 @@ memory _ _ O
 access _ _ O
 , _ _ O
 -locality _ _ O
+
+
+ _ _ O
 • _ _ O
 Increase _ _ O
 the _ _ O
@@ -2927,7 +3941,13 @@ access _ _ O
 , _ _ O
 + _ _ O
 locality _ _ O
+
+
+ _ _ O
 36 _ _ O
+
+
+ _ _ O
 How _ _ O
 many _ _ O
 sets _ _ O
@@ -2950,6 +3970,9 @@ amount _ _ O
 of _ _ O
 rows _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 fully _ _ O
@@ -2985,7 +4008,13 @@ groups _ _ O
 of _ _ O
 n-elements _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 s-1 _ _ O
 So _ _ O
 how _ _ O
@@ -3000,18 +4029,33 @@ set _ _ O
 has _ _ O
 n _ _ O
 rows _ _ O
+
+
+ _ _ O
 Still _ _ O
 512 _ _ O
 rows _ _ O
 ! _ _ O
+
+
+ _ _ O
 s= _ _ O
+
+
+ _ _ O
 # _ _ O
 rows _ _ O
 512 _ _ O
 = _ _ O
 n _ _ O
 n _ _ O
+
+
+ _ _ O
 37 _ _ O
+
+
+ _ _ O
 How _ _ O
 many _ _ O
 sets _ _ O
@@ -3025,8 +4069,17 @@ a _ _ O
 4-way _ _ O
 associative _ _ O
 cache _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 127 _ _ O
 So _ _ O
 how _ _ O
@@ -3041,10 +4094,16 @@ set _ _ O
 has _ _ O
 4 _ _ O
 rows _ _ O
+
+
+ _ _ O
 Still _ _ O
 512 _ _ O
 rows _ _ O
 ! _ _ O
+
+
+ _ _ O
 # _ _ O
 rows _ _ O
 512 _ _ O
@@ -3055,9 +4114,18 @@ n _ _ O
 = _ _ O
 128 _ _ O
 sets _ _ O
+
+
+ _ _ O
 38 _ _ O
+
+
+ _ _ O
 Address _ _ O
 Manipulation _ _ O
+
+
+ _ _ O
 Request _ _ O
 from _ _ O
 CPU _ _ O
@@ -3065,14 +4133,23 @@ CPU _ _ O
 Access _ _ O
 PT _ _ O
 : _ _ O
+
+
+ _ _ O
 n-bit _ _ O
 virtual _ _ O
 address _ _ O
 Virtual _ _ O
 Page _ _ O
 Number _ _ O
+
+
+ _ _ O
 Page _ _ O
 offset _ _ O
+
+
+ _ _ O
 TRANSLATION _ _ O
 m-bit _ _ O
 physical _ _ O
@@ -3083,16 +4160,31 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 Number _ _ O
 Cache _ _ O
 Tag _ _ O
+
+
+ _ _ O
 Page _ _ O
 offset _ _ O
+
+
+ _ _ O
 Set _ _ O
 Index _ _ O
+
+
+ _ _ O
 Offset _ _ O
+
+
+ _ _ O
 Using _ _ O
 our _ _ O
 example _ _ O
@@ -3125,6 +4217,9 @@ sets _ _ O
 128 _ _ O
 = _ _ O
 27 _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3134,74 +4229,185 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Physical _ _ O
 Page _ _ O
 Number _ _ O
+
+
+ _ _ O
 Page _ _ O
 offset _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Tag _ _ O
+
+
+ _ _ O
 Set _ _ O
 Index _ _ O
+
+
+ _ _ O
 Offset _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 Only _ _ O
 showing _ _ O
 2 _ _ O
@@ -3212,61 +4418,148 @@ set _ _ O
 slide _ _ O
 space _ _ O
 ) _ _ O
+
+
+ _ _ O
 Using _ _ O
 our _ _ O
 example _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3276,74 +4569,188 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Hit _ _ O
 ! _ _ O
+
+
+ _ _ O
 111111111111000000 _ _ O
+
+
+ _ _ O
 0000000 _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 Using _ _ O
 our _ _ O
 example _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3353,74 +4760,188 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Miss _ _ O
 ! _ _ O
+
+
+ _ _ O
 000000000000000000 _ _ O
+
+
+ _ _ O
 0000000 _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 Using _ _ O
 our _ _ O
 example _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3430,74 +4951,188 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Hit _ _ O
 ! _ _ O
+
+
+ _ _ O
 000100100011000000 _ _ O
+
+
+ _ _ O
 1000000 _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 Using _ _ O
 our _ _ O
 example _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3507,94 +5142,271 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 Miss _ _ O
 ! _ _ O
+
+
+ _ _ O
 101010101010010101 _ _ O
+
+
+ _ _ O
 0000000 _ _ O
+
+
+ _ _ O
 0xAAA _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 Offset _ _ O
 TAG _ _ O
+
+
+ _ _ O
 Set _ _ O
+
+
+ _ _ O
 valid _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0x000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x123 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x456 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 ( _ _ O
 64B _ _ O
 of _ _ O
 data _ _ O
 ) _ _ O
+
+
+ _ _ O
 Hit _ _ O
 ! _ _ O
+
+
+ _ _ O
 63 _ _ O
+
+
+ _ _ O
 62 _ _ O
+
+
+ _ _ O
 61 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0xF5 _ _ O
+
+
+ _ _ O
 0x32 _ _ O
+
+
+ _ _ O
 0x45 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0xFF _ _ O
+
+
+ _ _ O
 0xFE _ _ O
+
+
+ _ _ O
 0x00 _ _ O
+
+
+ _ _ O
 0x68 _ _ O
+
+
+ _ _ O
 0x67 _ _ O
+
+
+ _ _ O
 0x65 _ _ O
+
+
+ _ _ O
 25-bit _ _ O
 physical _ _ O
 address _ _ O
@@ -3604,18 +5416,48 @@ to _ _ O
 access _ _ O
 cache _ _ O
 : _ _ O
+
+
+ _ _ O
 111111111111000000 _ _ O
+
+
+ _ _ O
 0000010 _ _ O
+
+
+ _ _ O
 0xFFF _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 12 _ _ O
 bits _ _ O
+
+
+ _ _ O
 7 _ _ O
 bits _ _ O
+
+
+ _ _ O
 6 _ _ O
 bits _ _ O
+
+
+ _ _ O
 45 _ _ O
+
+
+ _ _ O
 Summary _ _ O
 • _ _ O
 The _ _ O
@@ -3655,6 +5497,9 @@ slow _ _ O
 big _ _ O
 , _ _ O
 cheap _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Hardware _ _ O
 designs _ _ O
@@ -3684,6 +5529,9 @@ for _ _ O
 slower _ _ O
 ones _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Caches _ _ O
 can _ _ O
@@ -3732,6 +5580,9 @@ in _ _ O
 that _ _ O
 slot _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Caches _ _ O
 attempt _ _ O
@@ -3762,6 +5613,12 @@ of _ _ O
 a _ _ O
 program _ _ O
 ! _ _ O
+
+
+ _ _ O
 46 _ _ O
+
+
+ _ _ O
 
 

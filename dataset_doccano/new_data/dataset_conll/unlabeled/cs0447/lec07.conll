@@ -9,6 +9,9 @@ Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Functions _ _ O
 and _ _ O
 the _ _ O
@@ -29,8 +32,14 @@ Childers _ _ O
 , _ _ O
 David _ _ O
 Wilkinson _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
@@ -131,10 +140,16 @@ at _ _ O
 any _ _ O
 point _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Class _ _ O
 announcements _ _ O
+
+
+ _ _ O
 • _ _ O
 Project _ _ O
 1 _ _ O
@@ -148,11 +163,17 @@ have _ _ O
 3 _ _ O
 weeks _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Do _ _ O
 n’t _ _ O
 forget _ _ O
 ! _ _ O
+
+
+ _ _ O
 o _ _ O
 In _ _ O
 the _ _ O
@@ -181,6 +202,9 @@ and _ _ O
 do _ _ O
 them _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Have _ _ O
 you _ _ O
@@ -193,10 +217,16 @@ o _ _ O
 You _ _ O
 should _ _ O
 ! _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Calling _ _ O
 conventions _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 What _ _ O
@@ -257,6 +287,9 @@ caller _ _ O
 and _ _ O
 the _ _ O
 callee _ _ O
+
+
+ _ _ O
 void _ _ O
 fork _ _ O
 ( _ _ O
@@ -267,7 +300,13 @@ knife _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 caller _ _ O
+
+
+ _ _ O
 void _ _ O
 knife _ _ O
 ( _ _ O
@@ -275,7 +314,13 @@ knife _ _ O
 { _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 callee _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 The _ _ O
@@ -323,26 +368,50 @@ instruction _ _ O
 is _ _ O
 a _ _ O
 word _ _ O
+
+
+ _ _ O
 time _ _ O
+
+
+ _ _ O
 PC _ _ O
 0x8000 _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 0x8008 _ _ O
 0x800C _ _ O
 0x8010 _ _ O
 0x8000 _ _ O
+
+
+ _ _ O
 ? _ _ O
 0x8014 _ _ O
+
+
+ _ _ O
 Address _ _ O
 top _ _ O
 : _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 lw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 ( _ _ O
 s0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x8004 _ _ O
 add _ _ O
 t0 _ _ O
@@ -404,14 +473,26 @@ Actually _ _ O
 interact _ _ O
 with _ _ O
 pc _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 Meaning _ _ O
+
+
+ _ _ O
 beq _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -423,12 +504,18 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 bne _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -440,24 +527,36 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 blt _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
 < _ _ O
 b _ _ O
 ) _ _ O
+
+
+ _ _ O
 ble _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -469,24 +568,36 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 bgt _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
 > _ _ O
 b _ _ O
 ) _ _ O
+
+
+ _ _ O
 bge _ _ O
 a _ _ O
 , _ _ O
 b _ _ O
 , _ _ O
 label _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 a _ _ O
@@ -498,14 +609,23 @@ b _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 { _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 { _ _ O
 goto _ _ O
 label _ _ O
 } _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 The _ _ O
@@ -539,6 +659,9 @@ do _ _ O
 we _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 void _ _ O
 fork _ _ O
 ( _ _ O
@@ -552,6 +675,9 @@ spoon++ _ _ O
 ; _ _ O
 } _ _ O
 caller _ _ O
+
+
+ _ _ O
 void _ _ O
 knife _ _ O
 ( _ _ O
@@ -563,6 +689,9 @@ spatula-- _ _ O
 ; _ _ O
 } _ _ O
 callee _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 MIPS _ _ O
@@ -583,6 +712,9 @@ jal _ _ O
 jump _ _ O
 and _ _ O
 link _ _ O
+
+
+ _ _ O
 void _ _ O
 main _ _ O
 ( _ _ O
@@ -593,11 +725,17 @@ func _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 main _ _ O
 : _ _ O
 label _ _ O
 jal _ _ O
 func _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 MIPS _ _ O
@@ -618,6 +756,9 @@ jal _ _ O
 jump _ _ O
 and _ _ O
 link _ _ O
+
+
+ _ _ O
 PC _ _ O
 0x8004 _ _ O
 What _ _ O
@@ -641,6 +782,9 @@ will _ _ O
 we _ _ O
 go _ _ O
 ? _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 li _ _ O
 a0 _ _ O
@@ -656,6 +800,9 @@ v0 _ _ O
 10 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 func _ _ O
 : _ _ O
 0x8C30 _ _ O
@@ -724,6 +871,9 @@ to _ _ O
 address _ _ O
 in _ _ O
 register _ _ O
+
+
+ _ _ O
 void _ _ O
 main _ _ O
 ( _ _ O
@@ -734,12 +884,18 @@ func _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 main _ _ O
 : _ _ O
 label _ _ O
 jal _ _ O
 func _ _ O
 label _ _ O
+
+
+ _ _ O
 void _ _ O
 func _ _ O
 ( _ _ O
@@ -748,11 +904,20 @@ func _ _ O
 return _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 func _ _ O
 : _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 return _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 MIPS _ _ O
@@ -775,6 +940,9 @@ to _ _ O
 address _ _ O
 in _ _ O
 register _ _ O
+
+
+ _ _ O
 Now _ _ O
 we _ _ O
 're _ _ O
@@ -795,6 +963,9 @@ return _ _ O
 address _ _ O
 ra _ _ O
 0x8008 _ _ O
+
+
+ _ _ O
 jr _ _ O
 ra _ _ O
 copies _ _ O
@@ -811,11 +982,20 @@ ALL _ _ O
 it _ _ O
 does _ _ O
 . _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 li _ _ O
+
+
+ _ _ O
 a0 _ _ O
 , _ _ O
 10 _ _ O
+
+
+ _ _ O
 0x8004 _ _ O
 jal _ _ O
 func _ _ O
@@ -826,6 +1006,9 @@ v0 _ _ O
 10 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 func _ _ O
 : _ _ O
 0x8C30 _ _ O
@@ -844,6 +1027,9 @@ Arguments _ _ O
 and _ _ O
 Return _ _ O
 Values _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 It _ _ O
@@ -868,6 +1054,9 @@ higher _ _ O
 level _ _ O
 language _ _ O
 … _ _ O
+
+
+ _ _ O
 we _ _ O
 use _ _ O
 particular _ _ O
@@ -1043,6 +1232,9 @@ return _ _ O
 arguments _ _ O
 in _ _ O
 v-registers _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 To _ _ O
@@ -1097,6 +1289,9 @@ go _ _ O
 anywhere _ _ O
 ! _ _ O
 add_nums _ _ O
+
+
+ _ _ O
 ● _ _ O
 Functions _ _ O
 should _ _ O
@@ -1130,6 +1325,9 @@ o _ _ O
 … _ _ O
 and _ _ O
 conventions _ _ O
+
+
+ _ _ O
 Amazing _ _ O
 function _ _ O
 that _ _ O
@@ -1169,6 +1367,9 @@ Outputs _ _ O
 Numbers _ _ O
 added _ _ O
 together _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Let _ _ O
@@ -1185,6 +1386,9 @@ main _ _ O
 do _ _ O
 this _ _ O
 : _ _ O
+
+
+ _ _ O
 v0=add_nums _ _ O
 ( _ _ O
 3 _ _ O
@@ -1194,6 +1398,9 @@ print _ _ O
 ( _ _ O
 v0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 li _ _ O
 a0 _ _ O
 , _ _ O
@@ -1215,6 +1422,9 @@ v0 _ _ O
 syscall _ _ O
 Careful _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 do _ _ O
@@ -1292,10 +1502,16 @@ know _ _ O
 _ _ _ O
 / _ _ O
 ¯ _ _ O
+
+
+ _ _ O
 It _ _ O
 ’s _ _ O
 a _ _ O
 rhinophant _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Input _ _ O
@@ -1310,6 +1526,9 @@ write _ _ O
 the _ _ O
 function _ _ O
 : _ _ O
+
+
+ _ _ O
 int _ _ O
 add_nums _ _ O
 ( _ _ O
@@ -1357,6 +1576,9 @@ that _ _ O
 we _ _ O
 return _ _ O
 ? _ _ O
+
+
+ _ _ O
 add_nums _ _ O
 : _ _ O
 add _ _ O
@@ -1369,10 +1591,22 @@ _ _ _ O
 _ _ _ O
 _ _ _ O
 jr _ _ O
+
+
+ _ _ O
 v0 _ _ O
 ra _ _ O
+
+
+ _ _ O
 a0 _ _ O
+
+
+ _ _ O
 a1 _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 More _ _ O
@@ -1382,6 +1616,9 @@ Saved _ _ O
 and _ _ O
 Unsaved _ _ O
 registers _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Let _ _ O
@@ -1400,6 +1637,9 @@ function _ _ O
 to _ _ O
 change _ _ O
 it _ _ O
+
+
+ _ _ O
 .data _ _ O
 counter _ _ O
 : _ _ O
@@ -1432,11 +1672,17 @@ t0 _ _ O
 ) _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 then _ _ O
 we _ _ O
 can _ _ O
 call _ _ O
 it _ _ O
+
+
+ _ _ O
 main _ _ O
 : _ _ O
 jal _ _ O
@@ -1445,6 +1691,9 @@ jal _ _ O
 increment _ _ O
 jal _ _ O
 increment _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Everything _ _ O
@@ -1484,6 +1733,9 @@ a _ _ O
 for _ _ O
 loop _ _ O
 ) _ _ O
+
+
+ _ _ O
 li _ _ O
 t0 _ _ O
 , _ _ O
@@ -1516,6 +1768,9 @@ a _ _ O
 do-while _ _ O
 loop _ _ O
 ) _ _ O
+
+
+ _ _ O
 if _ _ O
 we _ _ O
 run _ _ O
@@ -1543,6 +1798,9 @@ what _ _ O
 it _ _ O
 sees _ _ O
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Scribbling _ _ O
@@ -1599,6 +1857,9 @@ and _ _ O
 the _ _ O
 callee _ _ O
 … _ _ O
+
+
+ _ _ O
 a _ _ O
 caller _ _ O
 can _ _ O
@@ -1640,6 +1901,9 @@ trash _ _ O
 those _ _ O
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Another _ _ O
@@ -1674,6 +1938,9 @@ exactly _ _ O
 as _ _ O
 they _ _ O
 were _ _ O
+
+
+ _ _ O
 functions _ _ O
 are _ _ O
 required _ _ O
@@ -1691,11 +1958,17 @@ they _ _ O
 were _ _ O
 called _ _ O
 . _ _ O
+
+
+ _ _ O
 Saved _ _ O
 s0-s7 _ _ O
 sp _ _ O
 ra _ _ O
 * _ _ O
+
+
+ _ _ O
 anyone _ _ O
 can _ _ O
 change _ _ O
@@ -1723,6 +1996,9 @@ you _ _ O
 called _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 * _ _ O
 ra _ _ O
 is _ _ O
@@ -1776,14 +2052,23 @@ in _ _ O
 these _ _ O
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 ... _ _ O
 jal _ _ O
 ... _ _ O
+
+
+ _ _ O
 increment _ _ O
 Unsaved _ _ O
 v0-v1 _ _ O
 a0-a3 _ _ O
 t0-t9 _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Why _ _ O
@@ -1798,6 +2083,9 @@ this _ _ O
 code _ _ O
 again _ _ O
 … _ _ O
+
+
+ _ _ O
 t0 _ _ O
 is _ _ O
 our _ _ O
@@ -1808,6 +2096,9 @@ everything _ _ O
 's _ _ O
 fiiiine _ _ O
 . _ _ O
+
+
+ _ _ O
 li _ _ O
 t0 _ _ O
 , _ _ O
@@ -1853,6 +2144,9 @@ an _ _ O
 s _ _ O
 register _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Using _ _ O
@@ -1866,6 +2160,9 @@ an _ _ O
 s _ _ O
 register _ _ O
 … _ _ O
+
+
+ _ _ O
 s0 _ _ O
 is _ _ O
 our _ _ O
@@ -1876,6 +2173,9 @@ everything _ _ O
 's _ _ O
 fiiiine _ _ O
 . _ _ O
+
+
+ _ _ O
 li _ _ O
 s0 _ _ O
 , _ _ O
@@ -1914,6 +2214,9 @@ fine _ _ O
 . _ _ O
 loop_end _ _ O
 : _ _ O
+
+
+ _ _ O
 but _ _ O
 s _ _ O
 registers _ _ O
@@ -1928,6 +2231,9 @@ do _ _ O
 this _ _ O
 automatically _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Do _ _ O
@@ -1951,8 +2257,17 @@ run _ _ O
 this _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 0x0000 _ _ O
 After _ _ O
@@ -1961,6 +2276,9 @@ fork _ _ O
 : _ _ O
 0x8020 _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 After _ _ O
 jal _ _ O
 spoon _ _ O
@@ -1971,10 +2289,16 @@ jr _ _ O
 ra _ _ O
 : _ _ O
 0x8024 _ _ O
+
+
+ _ _ O
 0x8024 _ _ O
 fork _ _ O
 : _ _ O
 0x8024 _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 jal _ _ O
 fork _ _ O
@@ -1991,6 +2315,9 @@ spoon _ _ O
 0x8024 _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 ... _ _ O
 ... _ _ O
 After _ _ O
@@ -2015,12 +2342,21 @@ jr _ _ O
 ra _ _ O
 : _ _ O
 0x8024 _ _ O
+
+
+ _ _ O
 0x8024 _ _ O
+
+
+ _ _ O
 After _ _ O
 jr _ _ O
 ra _ _ O
 : _ _ O
 0x8024 _ _ O
+
+
+ _ _ O
 0x8024 _ _ O
 27 _ _ O
 
@@ -2123,6 +2459,9 @@ things _ _ O
 in _ _ O
 memory _ _ O
 ! _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 ( _ _ O
@@ -2130,8 +2469,14 @@ yes _ _ O
 , _ _ O
 memory _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 Stack _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 One _ _ O
@@ -2201,9 +2546,21 @@ it _ _ O
 somewhere _ _ O
 else _ _ O
 . _ _ O
+
+
+ _ _ O
 P1 _ _ O
+
+
+ _ _ O
 P1 _ _ O
+
+
+ _ _ O
 Trash _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 One _ _ O
@@ -2285,9 +2642,21 @@ put _ _ O
 it _ _ O
 back _ _ O
 . _ _ O
+
+
+ _ _ O
 P1 _ _ O
+
+
+ _ _ O
 P1 _ _ O
+
+
+ _ _ O
 Trash _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 One _ _ O
@@ -2358,9 +2727,18 @@ is _ _ O
 the _ _ O
 stack _ _ O
 . _ _ O
+
+
+ _ _ O
 P2 _ _ O
+
+
+ _ _ O
 P2 _ _ O
 P1 _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 What _ _ O
@@ -2454,8 +2832,17 @@ by _ _ O
 the _ _ O
 OS _ _ O
 too _ _ O
+
+
+ _ _ O
 Stack _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Program _ _ O
 33 _ _ O
 
@@ -2530,15 +2917,27 @@ points _ _ O
 to _ _ O
 . _ _ O
 0xF004 _ _ O
+
+
+ _ _ O
 sp _ _ O
+
+
+ _ _ O
 ... _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 0x00000000 _ _ O
 0xF000 _ _ O
 0x00000000 _ _ O
 0xEFFC _ _ O
 0xC0DEBEEF _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Doing _ _ O
@@ -2566,16 +2965,25 @@ up _ _ O
 ? _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 sub _ _ O
 sp _ _ O
 , _ _ O
 sp _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ... _ _ O
 ... _ _ O
 0xF008 _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 ● _ _ O
 then _ _ O
 , _ _ O
@@ -2588,12 +2996,21 @@ that _ _ O
 sp _ _ O
 holds _ _ O
 . _ _ O
+
+
+ _ _ O
 sw _ _ O
+
+
+ _ _ O
 ra _ _ O
 , _ _ O
 ( _ _ O
 sp _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 now _ _ O
 the _ _ O
@@ -2627,7 +3044,13 @@ as _ _ O
 we _ _ O
 want _ _ O
 ! _ _ O
+
+
+ _ _ O
 sp _ _ O
+
+
+ _ _ O
 0xF004 _ _ O
 0x00000000 _ _ O
 0xF000 _ _ O
@@ -2635,6 +3058,9 @@ sp _ _ O
 0xEFFC _ _ O
 0xC0DEBEEF _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Going _ _ O
@@ -2673,12 +3099,21 @@ reverse _ _ O
 ra _ _ O
 0xC0DEBEEF _ _ O
 0xABAD1DEA _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 ra _ _ O
 , _ _ O
 ( _ _ O
 sp _ _ O
 ) _ _ O
+
+
+ _ _ O
 ... _ _ O
 ... _ _ O
 0xF008 _ _ O
@@ -2687,6 +3122,9 @@ sp _ _ O
 0x00000000 _ _ O
 0xF000 _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 ● _ _ O
 then _ _ O
 , _ _ O
@@ -2701,12 +3139,18 @@ up _ _ O
 down _ _ O
 ? _ _ O
 whatever _ _ O
+
+
+ _ _ O
 add _ _ O
 sp _ _ O
 , _ _ O
 sp _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ● _ _ O
 now _ _ O
 we _ _ O
@@ -2728,9 +3172,18 @@ it _ _ O
 was _ _ O
 before _ _ O
 ! _ _ O
+
+
+ _ _ O
 sp _ _ O
+
+
+ _ _ O
 0xEFFC _ _ O
 0xC0DEBEEF _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 Shortening _ _ O
@@ -2782,8 +3235,14 @@ things _ _ O
 for _ _ O
 you _ _ O
 ! _ _ O
+
+
+ _ _ O
 push _ _ O
 ra _ _ O
+
+
+ _ _ O
 subi _ _ O
 sp _ _ O
 , _ _ O
@@ -2796,7 +3255,13 @@ ra _ _ O
 ( _ _ O
 sp _ _ O
 ) _ _ O
+
+
+ _ _ O
 pop _ _ O
+
+
+ _ _ O
 lw _ _ O
 ra _ _ O
 , _ _ O
@@ -2809,7 +3274,13 @@ sp _ _ O
 sp _ _ O
 , _ _ O
 4 _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 these _ _ O
 are _ _ O
 pseudo-ops _ _ O
@@ -2832,16 +3303,31 @@ not _ _ O
 just _ _ O
 ra _ _ O
 ! _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Toes _ _ O
 = _ _ O
 protected _ _ O
 sp _ _ O
+
+
+ _ _ O
 0x8004 _ _ O
 stuff _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 0x0000 _ _ O
 After _ _ O
@@ -2850,6 +3336,9 @@ fork _ _ O
 : _ _ O
 0x8020 _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 Then _ _ O
 we _ _ O
 push _ _ O
@@ -2863,14 +3352,26 @@ jal _ _ O
 spoon _ _ O
 : _ _ O
 0x8040 _ _ O
+
+
+ _ _ O
 0x802C _ _ O
+
+
+ _ _ O
 After _ _ O
 spoon _ _ O
 jr _ _ O
 ra _ _ O
 : _ _ O
 0x802C _ _ O
+
+
+ _ _ O
 0x802C _ _ O
+
+
+ _ _ O
 Then _ _ O
 we _ _ O
 pop _ _ O
@@ -2879,25 +3380,46 @@ off _ _ O
 the _ _ O
 stack _ _ O
 ! _ _ O
+
+
+ _ _ O
 Before _ _ O
 fork _ _ O
 jr _ _ O
 ra _ _ O
 : _ _ O
 0x8034 _ _ O
+
+
+ _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 After _ _ O
 fork _ _ O
 jr _ _ O
 ra _ _ O
 : _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 0x8004 _ _ O
+
+
+ _ _ O
 0x8000 _ _ O
 jal _ _ O
 fork _ _ O
 : _ _ O
+
+
+ _ _ O
 fork _ _ O
+
+
+ _ _ O
 0x8020 _ _ O
 push _ _ O
 ra _ _ O
@@ -2910,11 +3432,23 @@ pop _ _ O
 jr _ _ O
 spoon _ _ O
 : _ _ O
+
+
+ _ _ O
 ra _ _ O
 ra _ _ O
+
+
+ _ _ O
 0x8040 _ _ O
 jr _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 Writing _ _ O
@@ -2930,6 +3464,9 @@ a _ _ O
 simple _ _ O
 structure _ _ O
 : _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Give _ _ O
@@ -2967,16 +3504,28 @@ stack _ _ O
 . _ _ O
 Return _ _ O
 ! _ _ O
+
+
+ _ _ O
 push _ _ O
 ra _ _ O
+
+
+ _ _ O
 your _ _ O
 code _ _ O
 goes _ _ O
 here _ _ O
 pop _ _ O
 jr _ _ O
+
+
+ _ _ O
 ra _ _ O
 ra _ _ O
+
+
+ _ _ O
 ● _ _ O
 Push _ _ O
 everything _ _ O
@@ -2993,6 +3542,9 @@ at _ _ O
 the _ _ O
 end _ _ O
 ! _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 What _ _ O
@@ -3009,6 +3561,9 @@ a _ _ O
 simple _ _ O
 structure _ _ O
 : _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Give _ _ O
@@ -3029,6 +3584,9 @@ to _ _ O
 the _ _ O
 stack _ _ O
 . _ _ O
+
+
+ _ _ O
 2b _ _ O
 . _ _ O
 Save _ _ O
@@ -3062,6 +3620,9 @@ stack _ _ O
 . _ _ O
 Return _ _ O
 ! _ _ O
+
+
+ _ _ O
 push _ _ O
 ra _ _ O
 push _ _ O
@@ -3076,6 +3637,9 @@ pop _ _ O
 ra _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 ● _ _ O
 Push _ _ O
 everything _ _ O
@@ -3111,6 +3675,9 @@ braces _ _ O
 around _ _ O
 a _ _ O
 function _ _ O
+
+
+ _ _ O
 spoon _ _ O
 : _ _ O
 pushes _ _ O
@@ -3155,6 +3722,9 @@ make _ _ O
 it _ _ O
 more _ _ O
 complicated _ _ O
+
+
+ _ _ O
 never _ _ O
 push _ _ O
 or _ _ O
@@ -3162,6 +3732,9 @@ pop _ _ O
 anywhere _ _ O
 else _ _ O
 please _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 The _ _ O
@@ -3190,18 +3763,27 @@ just _ _ O
 like _ _ O
 ra _ _ O
 . _ _ O
+
+
+ _ _ O
 my_func _ _ O
 : _ _ O
 push _ _ O
 ra _ _ O
 push _ _ O
 s0 _ _ O
+
+
+ _ _ O
 moving _ _ O
 the _ _ O
 papers _ _ O
 off _ _ O
 the _ _ O
 desk _ _ O
+
+
+ _ _ O
 code _ _ O
 that _ _ O
 uses _ _ O
@@ -3215,12 +3797,21 @@ we _ _ O
 saved _ _ O
 it _ _ O
 ! _ _ O
+
+
+ _ _ O
 pop _ _ O
 pop _ _ O
 jr _ _ O
+
+
+ _ _ O
 s0 _ _ O
 ra _ _ O
 ra _ _ O
+
+
+ _ _ O
 putting _ _ O
 the _ _ O
 papers _ _ O
@@ -3232,6 +3823,9 @@ in _ _ O
 reverse _ _ O
 order _ _ O
 ! _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 Oh _ _ O
@@ -3309,6 +3903,9 @@ function _ _ O
 ▪ _ _ O
 Only _ _ O
 ! _ _ O
+
+
+ _ _ O
 my_func _ _ O
 : _ _ O
 push _ _ O
@@ -3336,14 +3933,26 @@ it _ _ O
 up _ _ O
 : _ _ O
 Terminology _ _ O
+
+
+ _ _ O
 myFunction _ _ O
 : _ _ O
 push _ _ O
 ra _ _ O
+
+
+ _ _ O
 Activation _ _ O
 Frame _ _ O
+
+
+ _ _ O
 push _ _ O
 s0 _ _ O
+
+
+ _ _ O
 Contains _ _ O
 : _ _ O
 ⚫ _ _ O
@@ -3368,23 +3977,50 @@ etc _ _ O
 ⚫ _ _ O
 Local _ _ O
 Variables _ _ O
+
+
+ _ _ O
 # _ _ O
 my _ _ O
 code _ _ O
 pop _ _ O
 s0 _ _ O
+
+
+ _ _ O
 Function _ _ O
 Prologue _ _ O
+
+
+ _ _ O
 pop _ _ O
 ra _ _ O
 jr _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 Function _ _ O
 Epilogue _ _ O
+
+
+ _ _ O
 0xffff _ _ O
+
+
+ _ _ O
 Stack _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 44 _ _ O
@@ -3396,6 +4032,9 @@ on _ _ O
 your _ _ O
 own _ _ O
 ) _ _ O
+
+
+ _ _ O
 45 _ _ O
 
 Sooooo _ _ O
@@ -3453,6 +4092,9 @@ might _ _ O
 solve _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 46 _ _ O
 
 The _ _ O
@@ -3559,6 +4201,9 @@ allocate _ _ O
 memory _ _ O
 on-demand _ _ O
 ? _ _ O
+
+
+ _ _ O
 47 _ _ O
 
 Our _ _ O
@@ -3665,6 +4310,9 @@ array _ _ O
 base _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 Program _ _ O
 48 _ _ O
 
@@ -3770,11 +4418,26 @@ at _ _ O
 it _ _ O
 go _ _ O
 ! _ _ O
+
+
+ _ _ O
 0x46f0 _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x4100 _ _ O
 0x4000 _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 49 _ _ O
@@ -3791,6 +4454,9 @@ Now _ _ O
 consider _ _ O
 functions _ _ O
 . _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 we _ _ O
@@ -3887,6 +4553,9 @@ for _ _ O
 remembering _ _ O
 ra _ _ O
 ? _ _ O
+
+
+ _ _ O
 50 _ _ O
 
 Remembering _ _ O
@@ -3902,6 +4571,9 @@ it _ _ O
 in _ _ O
 another _ _ O
 register _ _ O
+
+
+ _ _ O
 myFunction _ _ O
 : _ _ O
 move _ _ O
@@ -3926,6 +4598,9 @@ ra _ _ O
 t0 _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 However _ _ O
 : _ _ O
 • _ _ O
@@ -4025,6 +4700,9 @@ that _ _ O
 heap _ _ O
 thing _ _ O
 . _ _ O
+
+
+ _ _ O
 ● _ _ O
 So _ _ O
 ca _ _ O
@@ -4086,9 +4764,21 @@ in _ _ O
 our _ _ O
 memory _ _ O
 ! _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x4000 _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 52 _ _ O
@@ -4186,6 +4876,9 @@ very _ _ O
 trash _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 do _ _ O
@@ -4218,6 +4911,9 @@ subtracting _ _ O
 to _ _ O
 allocate _ _ O
 … _ _ O
+
+
+ _ _ O
 53 _ _ O
 
 Solving _ _ O
@@ -4238,6 +4934,9 @@ not _ _ O
 create _ _ O
 gaps _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 Good _ _ O
 [ _ _ O
@@ -4316,11 +5015,26 @@ lost _ _ O
 our _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 Stack _ _ O
 0x8000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x4000 _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 54 _ _ O
@@ -4440,9 +5154,21 @@ problem _ _ O
 , _ _ O
 then _ _ O
 . _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 0x4000 _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 55 _ _ O
@@ -4567,8 +5293,17 @@ your _ _ O
 Memory _ _ O
 mind _ _ O
 . _ _ O
+
+
+ _ _ O
 0x4000 _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 Program _ _ O
 0x0000 _ _ O
 56 _ _ O

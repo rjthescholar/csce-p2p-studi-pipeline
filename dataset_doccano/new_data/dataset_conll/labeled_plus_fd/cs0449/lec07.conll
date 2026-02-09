@@ -2,10 +2,16 @@
 -DOCSTART- -X- -X- O
 
 7 _ _ O
+
+
+ _ _ O
 Introduction _ _ O
 to _ _ O
 x86 _ _ B-Concept
 asm _ _ B-Concept
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -14,6 +20,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -26,6 +35,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 Assembly _ _ O
 Refresher _ _ O
 What _ _ O
@@ -35,7 +47,13 @@ forgotten _ _ O
 is _ _ O
 art _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 What _ _ O
 is _ _ O
 " _ _ O
@@ -81,6 +99,9 @@ simple _ _ O
 in _ _ O
 concept _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Each _ _ O
 CPU _ _ O
@@ -112,6 +133,9 @@ A _ _ O
 RISC _ _ B-Concept
 processor _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
@@ -126,7 +150,13 @@ A _ _ O
 CISC _ _ B-Concept
 processor _ _ O
 . _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 What _ _ O
 is _ _ O
 " _ _ O
@@ -149,6 +179,9 @@ place _ _ O
 to _ _ O
 another _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Despite _ _ O
 being _ _ O
@@ -159,6 +192,9 @@ move _ _ O
 , _ _ O
 ugh _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Surprise _ _ O
 ! _ _ O
@@ -173,6 +209,9 @@ set _ _ O
 of _ _ B-Concept
 instructions _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 processor _ _ O
@@ -181,6 +220,9 @@ be _ _ O
 made _ _ O
 simpler _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 command _ _ O
@@ -191,6 +233,9 @@ a _ _ O
 numerical _ _ O
 representation _ _ O
 . _ _ O
+
+
+ _ _ O
 Compute _ _ O
 t0+0 _ _ O
 Put _ _ O
@@ -198,6 +243,9 @@ into _ _ O
 " _ _ O
 a0 _ _ O
 " _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 processor _ _ O
@@ -227,7 +275,13 @@ much _ _ O
 greater _ _ O
 detail _ _ O
 . _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Assembly _ _ O
 vs. _ _ O
 Machine _ _ B-Concept
@@ -274,10 +328,19 @@ language _ _ I-Concept
 . _ _ O
 MIPS _ _ O
 asm _ _ B-Concept
+
+
+ _ _ O
 MIPS _ _ O
 machine _ _ B-Concept
 language _ _ I-Concept
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 Is _ _ O
 Assembly _ _ O
 Useful _ _ O
@@ -331,7 +394,13 @@ a _ _ O
 particular _ _ O
 CPU _ _ O
 . _ _ O
+
+
+ _ _ O
 --- _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -350,6 +419,9 @@ on _ _ O
 new _ _ O
 things _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Yet _ _ O
 : _ _ O
@@ -396,7 +468,13 @@ away _ _ O
 • _ _ O
 And _ _ O
 ... _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Architecture _ _ O
 Sits _ _ O
 at _ _ O
@@ -405,57 +483,114 @@ Hardware _ _ O
 Interface _ _ O
 Source _ _ O
 code _ _ O
+
+
+ _ _ O
 Compiler _ _ O
+
+
+ _ _ O
 Architecture _ _ O
+
+
+ _ _ O
 Applications _ _ O
 / _ _ O
 algorithms _ _ O
+
+
+ _ _ O
 Perform _ _ O
 optimizations _ _ O
 , _ _ O
 generate _ _ O
 instructions _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 set _ _ O
+
+
+ _ _ O
 Different _ _ O
 implementations _ _ O
+
+
+ _ _ O
 Intel _ _ O
 Pentium _ _ O
 4 _ _ O
+
+
+ _ _ O
 C _ _ O
 Language _ _ O
 Program _ _ O
 A _ _ O
+
+
+ _ _ O
 Hardware _ _ O
+
+
+ _ _ O
 Intel _ _ O
 Core _ _ O
 2 _ _ O
+
+
+ _ _ O
 GCC _ _ O
+
+
+ _ _ O
 x86 _ _ B-Concept
 - _ _ B-Concept
 64 _ _ I-Concept
+
+
+ _ _ O
 Intel _ _ O
 Core _ _ O
 i7 _ _ O
 AMD _ _ O
 Opteron _ _ O
+
+
+ _ _ O
 Program _ _ O
 B _ _ O
+
+
+ _ _ O
 AMD _ _ O
 Athlon _ _ O
 Clang _ _ O
+
+
+ _ _ O
 Your _ _ O
 program _ _ O
+
+
+ _ _ O
 ARMv8 _ _ O
 ( _ _ O
 AArch64 _ _ O
 / _ _ O
 A64 _ _ O
 ) _ _ O
+
+
+ _ _ O
 ARM _ _ O
 Cortex-A53 _ _ O
 Apple _ _ O
 A7 _ _ O
+
+
+ _ _ O
 Practical _ _ O
 Applications _ _ O
 of _ _ B-Concept
@@ -536,6 +671,9 @@ assembly _ _ O
 for _ _ O
 this _ _ O
 ! _ _ O
+
+
+ _ _ O
 I _ _ O
 'm _ _ O
 not _ _ O
@@ -577,6 +715,9 @@ a _ _ O
 browser _ _ O
 emulator _ _ O
 ) _ _ O
+
+
+ _ _ O
 x86 _ _ O
 ( _ _ O
 NASM _ _ O
@@ -586,13 +727,22 @@ Syntax _ _ O
 , _ _ O
 MS-DOS _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Practical _ _ O
 Applications _ _ O
 of _ _ O
 Assembly _ _ O
 : _ _ O
 Debugging _ _ O
+
+
+ _ _ O
 • _ _ O
 Programs _ _ O
 written _ _ O
@@ -613,6 +763,9 @@ into _ _ O
 machine _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -642,6 +795,9 @@ at _ _ O
 a _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 programs _ _ O
@@ -683,6 +839,9 @@ radare _ _ O
 , _ _ O
 etc _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
@@ -699,6 +858,9 @@ future _ _ O
 assignment _ _ O
 ! _ _ O
 9 _ _ O
+
+
+ _ _ O
 Basics _ _ O
 of _ _ O
 x86 _ _ O
@@ -714,7 +876,13 @@ what _ _ O
 ... _ _ O
 in _ _ O
 Assembly _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Set _ _ O
 Architecture _ _ O
@@ -749,6 +917,9 @@ what _ _ O
 we _ _ O
 mean _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 ISA _ _ O
@@ -799,6 +970,9 @@ to _ _ O
 encode _ _ O
 instructions _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 ISA _ _ O
@@ -834,7 +1008,13 @@ virtual _ _ O
 hypothetical _ _ O
 ISAs _ _ O
 ) _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 Types _ _ O
 of _ _ O
 ISAs _ _ O
@@ -876,6 +1056,9 @@ that _ _ O
 make _ _ O
 machine _ _ O
 code _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 small _ _ O
@@ -897,7 +1080,13 @@ RISC-V _ _ O
 is _ _ O
 very _ _ O
 RISCy _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 Types _ _ O
 of _ _ O
 ISAs _ _ O
@@ -928,6 +1117,9 @@ days _ _ O
 before _ _ O
 compilers _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Lots _ _ O
 of _ _ O
@@ -974,6 +1166,9 @@ an _ _ O
 array _ _ O
 access _ _ O
 " _ _ O
+
+
+ _ _ O
 • _ _ O
 Without _ _ O
 these _ _ O
@@ -1002,6 +1197,9 @@ is _ _ O
 very _ _ O
 CISCy _ _ O
 13 _ _ O
+
+
+ _ _ O
 Types _ _ O
 of _ _ O
 ISAs _ _ O
@@ -1044,6 +1242,9 @@ might _ _ O
 be _ _ O
 longer _ _ O
 ) _ _ O
+
+
+ _ _ O
 " _ _ O
 Hackers _ _ O
 " _ _ O
@@ -1108,7 +1309,13 @@ can _ _ O
 get _ _ O
 complicated _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 x86 _ _ O
 • _ _ O
 Descended _ _ O
@@ -1159,6 +1366,9 @@ new _ _ O
 x86 _ _ O
 CPU _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 ISA _ _ O
@@ -1215,7 +1425,13 @@ not _ _ O
 writing _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 x86 _ _ O
 Registers _ _ O
 ( _ _ O
@@ -1249,6 +1465,9 @@ in _ _ O
 binary _ _ O
 form _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Unlike _ _ O
 MIPS _ _ O
@@ -1267,20 +1486,41 @@ Called _ _ O
 partial _ _ O
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 Denoted _ _ O
 by _ _ O
 % _ _ O
+
+
+ _ _ O
 Stack _ _ O
 Pointer _ _ O
+
+
+ _ _ O
 16-bit _ _ O
 register _ _ O
 names _ _ O
+
+
+ _ _ O
 32-bit _ _ O
 register _ _ O
 names _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 general _ _ O
 purpose _ _ O
+
+
+ _ _ O
 32-bit _ _ O
 OLD _ _ O
 Registers _ _ O
@@ -1290,68 +1530,170 @@ bits _ _ O
 wide _ _ O
 8 _ _ O
 bits _ _ O
+
+
+ _ _ O
 32 _ _ O
 bits _ _ O
+
+
+ _ _ O
 16 _ _ O
 bits _ _ O
+
+
+ _ _ O
 % _ _ O
 eax _ _ O
+
+
+ _ _ O
 % _ _ O
 ax _ _ O
+
+
+ _ _ O
 % _ _ O
 ah _ _ O
+
+
+ _ _ O
 % _ _ O
 al _ _ O
+
+
+ _ _ O
 accumulate _ _ O
+
+
+ _ _ O
 % _ _ O
 ecx _ _ O
+
+
+ _ _ O
 % _ _ O
 cx _ _ O
+
+
+ _ _ O
 % _ _ O
 ch _ _ O
+
+
+ _ _ O
 % _ _ O
 cl _ _ O
+
+
+ _ _ O
 counter _ _ O
+
+
+ _ _ O
 % _ _ O
 edx _ _ O
+
+
+ _ _ O
 % _ _ O
 dx _ _ O
+
+
+ _ _ O
 % _ _ O
 dh _ _ O
+
+
+ _ _ O
 % _ _ O
 dl _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 % _ _ O
 ebx _ _ O
+
+
+ _ _ O
 % _ _ O
 bx _ _ O
+
+
+ _ _ O
 % _ _ O
 bh _ _ O
+
+
+ _ _ O
 % _ _ O
 bl _ _ O
+
+
+ _ _ O
 base _ _ O
+
+
+ _ _ O
 % _ _ O
 esi _ _ O
+
+
+ _ _ O
 % _ _ O
 si _ _ O
+
+
+ _ _ O
 source _ _ O
 index _ _ O
+
+
+ _ _ O
 % _ _ O
 edi _ _ O
+
+
+ _ _ O
 % _ _ O
 di _ _ O
+
+
+ _ _ O
 destination _ _ O
 index _ _ O
+
+
+ _ _ O
 % _ _ O
 esp _ _ O
+
+
+ _ _ O
 % _ _ O
 sp _ _ O
+
+
+ _ _ O
 stack _ _ O
 pointer _ _ O
+
+
+ _ _ O
 % _ _ O
 ebp _ _ O
+
+
+ _ _ O
 % _ _ O
 bp _ _ O
+
+
+ _ _ O
 base _ _ O
 pointer _ _ O
 16-bit _ _ O
@@ -1361,12 +1703,18 @@ registers _ _ O
 backwards _ _ O
 compatibility _ _ O
 ) _ _ O
+
+
+ _ _ O
 Name _ _ O
 Origin _ _ O
 ( _ _ O
 mostly _ _ O
 obsolete _ _ O
 ) _ _ O
+
+
+ _ _ O
 x86 _ _ O
 Registers _ _ O
 ( _ _ O
@@ -1408,6 +1756,9 @@ be _ _ O
 read _ _ O
 directly _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 There _ _ O
 is _ _ O
@@ -1460,6 +1811,9 @@ an _ _ O
 operation _ _ O
 overflowed _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 And _ _ O
 some _ _ O
@@ -1484,6 +1838,9 @@ go _ _ O
 over _ _ O
 . _ _ O
 18 _ _ O
+
+
+ _ _ O
 x86 _ _ O
 Instruction _ _ O
 Types _ _ O
@@ -1551,8 +1908,17 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 MIPS _ _ O
+
+
+ _ _ O
 Immediates _ _ O
 ( _ _ O
 prefixed _ _ O
@@ -1567,6 +1933,9 @@ parens _ _ O
 ) _ _ O
 Memory _ _ O
 store _ _ O
+
+
+ _ _ O
 Displacement _ _ O
 ( _ _ O
 can _ _ O
@@ -1575,7 +1944,13 @@ be _ _ O
 , _ _ O
 etc _ _ O
 ) _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Complex _ _ O
 Addressing _ _ O
 • _ _ O
@@ -1619,6 +1994,9 @@ instruction _ _ O
 CISC _ _ O
 ) _ _ O
 • _ _ O
+
+
+ _ _ O
 : _ _ O
 Base _ _ O
 + _ _ O
@@ -1646,6 +2024,9 @@ optional _ _ O
 ; _ _ O
 i.e. _ _ O
 , _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -1657,16 +2038,28 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 does _ _ O
 just _ _ O
 Index _ _ O
 Scalar _ _ O
+
+
+ _ _ O
 MIPS _ _ O
+
+
+ _ _ O
 " _ _ O
 Load _ _ O
 Effective _ _ O
 Address _ _ O
 " _ _ O
+
+
+ _ _ O
 LEA _ _ O
 simply _ _ O
 computes _ _ O
@@ -1676,7 +2069,13 @@ no _ _ O
 memory _ _ O
 access _ _ O
 ) _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Complex _ _ O
 Addressing _ _ O
 : _ _ O
@@ -1731,6 +2130,9 @@ following _ _ O
 do _ _ O
 ? _ _ O
 • _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -1742,6 +2144,9 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 " _ _ O
 Load _ _ O
 Effective _ _ O
@@ -1750,6 +2155,9 @@ Address _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 LEA _ _ O
 simply _ _ O
 computes _ _ O
@@ -1762,7 +2170,13 @@ very _ _ O
 specific _ _ O
 math _ _ O
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 x86 _ _ O
 Instruction _ _ O
 Qualifiers _ _ O
@@ -1806,6 +2220,9 @@ even _ _ O
 sections _ _ O
 sometimes _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 assembler _ _ O
@@ -1837,7 +2254,13 @@ figures _ _ O
 it _ _ O
 out _ _ O
 " _ _ O
+
+
+ _ _ O
 MIPS64 _ _ O
+
+
+ _ _ O
 " _ _ O
 quad _ _ O
 word _ _ O
@@ -1875,7 +2298,13 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 Hello _ _ O
 World _ _ O
 ! _ _ O
@@ -1895,11 +2324,20 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 MIPS _ _ O
 ( _ _ O
 MARS _ _ O
 ) _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Doing _ _ O
 some _ _ O
 x86 _ _ O
@@ -1928,8 +2366,17 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 MIPS _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 However _ _ O
 , _ _ O
 x86 _ _ O
@@ -1952,18 +2399,30 @@ the _ _ O
 bitsize _ _ O
 . _ _ O
 • _ _ O
+
+
+ _ _ O
 ( _ _ O
 64-bit _ _ O
 ) _ _ O
 , _ _ O
+
+
+ _ _ O
 ( _ _ O
 32-bit _ _ O
 ) _ _ O
 , _ _ O
+
+
+ _ _ O
 ( _ _ O
 16-bit _ _ O
 ) _ _ O
 , _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -1975,6 +2434,9 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 ) _ _ O
+
+
+ _ _ O
 ( _ _ O
 8-bit _ _ O
 ) _ _ O
@@ -1987,19 +2449,31 @@ extended _ _ O
 ! _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 MIPS _ _ O
+
+
+ _ _ O
 Arithmetic _ _ O
 shift _ _ O
 ( _ _ O
 sign _ _ O
 extends _ _ O
 ) _ _ O
+
+
+ _ _ O
 Logical _ _ O
 shift _ _ O
 ( _ _ O
 zero _ _ O
 extends _ _ O
 ) _ _ O
+
+
+ _ _ O
 8-bit _ _ O
 register _ _ O
 aliases _ _ O
@@ -2007,7 +2481,13 @@ are _ _ O
 not _ _ O
 commonly _ _ O
 used _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 Assembly _ _ O
 Interlude _ _ O
 Here _ _ O
@@ -2024,7 +2504,13 @@ some _ _ O
 existing _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Why _ _ O
 write _ _ O
 assembly _ _ O
@@ -2057,6 +2543,9 @@ this _ _ O
 for _ _ O
 you _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 will _ _ O
@@ -2064,11 +2553,17 @@ create _ _ O
 a _ _ O
 file _ _ O
 called _ _ O
+
+
+ _ _ O
 which _ _ O
 looks _ _ O
 ... _ _ O
 messy _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 has _ _ O
@@ -2094,7 +2589,13 @@ meaning _ _ O
 from _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 Looking _ _ O
 at _ _ O
 C _ _ O
@@ -2122,6 +2623,9 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 main _ _ O
 has _ _ O
 n't _ _ O
@@ -2130,9 +2634,21 @@ shown _ _ O
 up _ _ O
 yet _ _ O
 ... _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Disassembly _ _ O
 - _ _ O
 See _ _ O
@@ -2167,6 +2683,9 @@ we _ _ O
 go _ _ O
 backward _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -2194,6 +2713,9 @@ objdump _ _ O
 , _ _ O
 gdb _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Using _ _ O
 a _ _ O
@@ -2207,6 +2729,9 @@ code _ _ O
 section _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 will _ _ O
@@ -2214,7 +2739,13 @@ create _ _ O
 a _ _ O
 file _ _ O
 called _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -2242,6 +2773,9 @@ well _ _ O
 nonexistent _ _ O
 . _ _ O
 29 _ _ O
+
+
+ _ _ O
 And _ _ O
 ... _ _ O
 here _ _ O
@@ -2268,8 +2802,17 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 Machine _ _ O
 code _ _ O
 ( _ _ O
@@ -2279,6 +2822,9 @@ bytes _ _ O
 Instruction _ _ O
 address _ _ O
 30 _ _ O
+
+
+ _ _ O
 Looking _ _ O
 deeper _ _ O
 • _ _ O
@@ -2311,6 +2857,9 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ) _ _ O
 Preserves _ _ O
 ( _ _ O
@@ -2355,6 +2904,9 @@ value _ _ O
 is _ _ O
 in _ _ O
 ) _ _ O
+
+
+ _ _ O
 Instructions _ _ O
 have _ _ O
 varying _ _ O
@@ -2373,7 +2925,13 @@ with _ _ O
 MIPS _ _ O
 / _ _ O
 RISC-V. _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 Brought _ _ O
 to _ _ O
 you _ _ O
@@ -2441,6 +2999,9 @@ different _ _ O
 C _ _ O
 ABI _ _ O
  _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 our _ _ O
@@ -2522,7 +3083,13 @@ worth _ _ O
 going _ _ O
 over _ _ O
 . _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 reference _ _ O
@@ -2543,5 +3110,8 @@ x86 _ _ O
 - _ _ O
 64-psABI-1.0.pdf _ _ O
 32 _ _ O
+
+
+ _ _ O
 
 

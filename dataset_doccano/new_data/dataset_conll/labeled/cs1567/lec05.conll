@@ -5,8 +5,14 @@ Joy _ _ B-concept
 Node _ _ I-concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
@@ -74,6 +80,9 @@ js1 _ _ O
 rosrun _ _ O
 joy _ _ B-concept
 joy_node _ _ B-concept
+
+
+ _ _ O
 Make _ _ O
 sure _ _ O
 roscore _ _ O
@@ -99,19 +108,31 @@ following _ _ O
 /rosout_agg _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 Xbox _ _ O
 360 _ _ O
 Controller _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 Topic _ _ O
 joy _ _ B-concept
+
+
+ _ _ O
 The _ _ O
 joy _ _ B-concept
 node _ _ I-concept
@@ -147,6 +168,9 @@ components _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 Data _ _ O
 structure _ _ O
 named _ _ O
@@ -165,8 +189,14 @@ of _ _ O
 integers _ _ O
 named _ _ O
 buttons _ _ B-concept
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
@@ -213,12 +243,21 @@ left _ _ O
 Button _ _ B-concept
 stick _ _ O
 right _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 axes _ _ O
+
+
+ _ _ O
 Array _ _ O
 of _ _ O
 floating-point _ _ O
@@ -280,13 +319,22 @@ key _ _ O
 up _ _ O
 / _ _ O
 down _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 Topic _ _ O
 joy _ _ B-concept
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 if _ _ O
@@ -316,6 +364,9 @@ rostopic _ _ O
 echo _ _ O
 -c _ _ O
 joy _ _ B-concept
+
+
+ _ _ O
 you _ _ O
 may _ _ O
 not _ _ O
@@ -397,13 +448,22 @@ buttons _ _ B-concept
 , _ _ O
 0 _ _ O
 ] _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 Topic _ _ O
 joy _ _ B-concept
+
+
+ _ _ O
 To _ _ O
 import _ _ O
 the _ _ O
@@ -440,6 +500,9 @@ from _ _ O
 sensor_msgs.msg _ _ O
 import _ _ O
 Joy _ _ O
+
+
+ _ _ O
 To _ _ O
 subscribe _ _ O
 to _ _ O
@@ -468,12 +531,21 @@ Joy _ _ O
 , _ _ O
 callback _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
 Example _ _ O
+
+
+ _ _ O
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -547,8 +619,14 @@ _ _ _ O
 testJoy _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
@@ -583,6 +661,9 @@ from _ _ O
 geometry_msgs.msg _ _ O
 import _ _ O
 Twist _ _ B-concept
+
+
+ _ _ O
 To _ _ O
 create _ _ O
 a _ _ O
@@ -603,6 +684,9 @@ command _ _ O
 Twist _ _ B-concept
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 We _ _ O
 will _ _ O
 only _ _ O
@@ -632,6 +716,9 @@ the _ _ O
 robot _ _ O
 moves _ _ O
 backward _ _ O
+
+
+ _ _ O
 command.angular.z _ _ O
 Value _ _ O
 can _ _ O
@@ -660,6 +747,9 @@ its _ _ O
 right _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
@@ -689,6 +779,9 @@ topic _ _ O
 commands _ _ O
 / _ _ O
 velocity _ _ O
+
+
+ _ _ O
 Examples _ _ O
 : _ _ O
 If _ _ O
@@ -714,6 +807,9 @@ command.linear.x _ _ O
 command.angular.z _ _ O
 = _ _ O
 0.0 _ _ O
+
+
+ _ _ O
 For _ _ O
 example _ _ O
 , _ _ O
@@ -741,6 +837,9 @@ command.linear.x _ _ O
 command.angular.z _ _ O
 = _ _ O
 0.5 _ _ O
+
+
+ _ _ O
 For _ _ O
 example _ _ O
 , _ _ O
@@ -766,8 +865,14 @@ command.linear.x _ _ O
 command.angular.z _ _ O
 = _ _ O
 0.5 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 
@@ -817,10 +922,16 @@ command _ _ O
 rosrun _ _ O
 rviz _ _ O
 rviz _ _ O
+
+
+ _ _ O
 In _ _ O
 rviz _ _ O
 1 _ _ O
 2 _ _ O
+
+
+ _ _ O
 On _ _ O
 the _ _ O
 left _ _ O
@@ -842,6 +953,9 @@ Add _ _ O
 and _ _ O
 choose _ _ O
 RobotModel _ _ O
+
+
+ _ _ O
 You _ _ O
 should _ _ O
 see _ _ O
@@ -874,8 +988,14 @@ according _ _ O
 to _ _ O
 the _ _ O
 command _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Joy _ _ B-concept
 Node _ _ I-concept
 

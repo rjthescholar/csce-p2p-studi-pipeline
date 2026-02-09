@@ -666,32 +666,6 @@
                 "while",
                 "(",
                 "condition",
-                ")",
-                "for",
-                "(",
-                "int",
-                "counter",
-                "=",
-                "start",
-                ";",
-                "condition",
-                ";",
-                "counter",
-                "increment",
-                ")",
-                "{",
-                "/",
-                "/",
-                "Do",
-                "stuff",
-                "}",
-                "/",
-                "/",
-                "end",
-                "loop",
-                "for",
-                "(",
-                "condition",
                 ")"
             ],
             "word_labels": [
@@ -722,6 +696,40 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "for",
+                "(",
+                "int",
+                "counter",
+                "=",
+                "start",
+                ";",
+                "condition",
+                ";",
+                "counter",
+                "increment",
+                ")",
+                "{",
+                "/",
+                "/",
+                "Do",
+                "stuff",
+                "}",
+                "/",
+                "/",
+                "end",
+                "loop",
+                "for",
+                "(",
+                "condition",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1034,7 +1042,20 @@
                 "Test",
                 "It",
                 "on",
-                "List",
+                "List"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "int",
                 "[",
                 "]",
@@ -1052,11 +1073,6 @@
                 ";"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1159,16 +1175,7 @@
                 "/",
                 "End",
                 "class",
-                "Test",
-                "What",
-                "is",
-                "the",
-                "output",
-                "?",
-                "Now",
-                "at",
-                "\"",
-                "+"
+                "Test"
             ],
             "word_labels": [
                 "O",
@@ -1253,11 +1260,36 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "What",
+                "is",
+                "the",
+                "output",
+                "?"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Now",
+                "at",
+                "\"",
+                "+"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1338,13 +1370,7 @@
                 "through",
                 "a",
                 "variable",
-                ".",
-                "\u2022",
-                "While",
-                "loops",
-                "are",
-                "used",
-                "otherwise"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -1398,6 +1424,20 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "While",
+                "loops",
+                "are",
+                "used",
+                "otherwise"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1935,54 +1975,7 @@
                 "System.out.println",
                 "(",
                 "\"Counting",
-                "...",
-                "Now",
-                "at",
-                "\"",
-                "+",
-                "listList",
-                "[",
-                "i",
-                "]",
-                ")",
-                ";",
-                "}",
-                "/",
-                "/",
-                "end",
-                "loop",
-                "for",
-                "(",
-                "i",
-                "<",
-                "list.length",
-                ")",
-                "}",
-                "/",
-                "/",
-                "end",
-                "method",
-                "main",
-                "}",
-                "/",
-                "/",
-                "end",
-                "class",
-                "Test",
-                "There",
-                "is",
-                "only",
-                "one",
-                "loop",
-                ".",
-                "How",
-                "do",
-                "we",
-                "write",
-                "the",
-                "next",
-                "one",
-                "?"
+                "..."
             ],
             "word_labels": [
                 "O",
@@ -2051,6 +2044,65 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Now",
+                "at",
+                "\"",
+                "+",
+                "listList",
+                "[",
+                "i",
+                "]",
+                ")",
+                ";"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "}",
+                "/",
+                "/",
+                "end",
+                "loop",
+                "for",
+                "(",
+                "i",
+                "<",
+                "list.length",
+                ")",
+                "}",
+                "/",
+                "/",
+                "end",
+                "method",
+                "main",
+                "}",
+                "/",
+                "/",
+                "end",
+                "class",
+                "Test"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2074,16 +2126,28 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "There",
+                "is",
+                "only",
+                "one",
+                "loop",
+                ".",
+                "How",
+                "do",
+                "we",
+                "write",
+                "the",
+                "next",
+                "one",
+                "?"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2943,33 +3007,9 @@
                 "/",
                 "End",
                 "class",
-                "Test",
-                "For",
-                "convenience",
-                "sake",
-                ",",
-                "listList",
-                "\uf0e0",
-                "list",
-                "What",
-                "is",
-                "the",
-                "output",
-                "?"
+                "Test"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3111,6 +3151,38 @@
         },
         {
             "sentence": [
+                "",
+                "For",
+                "convenience",
+                "sake",
+                ",",
+                "listList",
+                "\uf0e0",
+                "list",
+                "What",
+                "is",
+                "the",
+                "output",
+                "?"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "It",
                 "works",
                 ",",
@@ -3128,18 +3200,6 @@
                 "O",
                 "O"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         },
         {
             "sentence": [],

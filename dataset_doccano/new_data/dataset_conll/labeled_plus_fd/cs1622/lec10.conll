@@ -7,6 +7,9 @@ CS _ _ O
 1622 _ _ O
 Jarrett _ _ O
 Billingsley _ _ O
+
+
+ _ _ O
 Class _ _ O
 Announcements _ _ O
 ● _ _ O
@@ -71,9 +74,21 @@ do _ _ O
 some _ _ O
 ADVANCED _ _ O
 TYPING _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Polymorphism _ _ B-Concept
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Poly _ _ O
 = _ _ O
 Many _ _ O
@@ -198,6 +213,9 @@ in _ _ O
 the _ _ O
 name _ _ O
 4 _ _ O
+
+
+ _ _ O
 Do _ _ B-Concept
 n't _ _ I-Concept
 repeat _ _ I-Concept
@@ -224,6 +242,9 @@ avoid _ _ O
 repeating _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 ArrayList _ _ O
 < _ _ O
 Integer _ _ O
@@ -309,6 +330,9 @@ type _ _ O
 of _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 we _ _ O
 can _ _ O
 even _ _ O
@@ -322,6 +346,9 @@ type _ _ O
 of _ _ O
 ArrayList _ _ O
 : _ _ O
+
+
+ _ _ O
 < _ _ O
 T _ _ O
 > _ _ O
@@ -335,6 +362,9 @@ T _ _ O
 list _ _ O
 ) _ _ O
 5 _ _ O
+
+
+ _ _ O
 What _ _ O
 type _ _ O
 is _ _ O
@@ -363,7 +393,13 @@ type _ _ O
 Object _ _ O
 Base _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 with _ _ O
 this _ _ O
 class _ _ B-Concept
@@ -382,6 +418,9 @@ hold _ _ O
 different _ _ O
 types _ _ O
 . _ _ O
+
+
+ _ _ O
 void _ _ O
 print _ _ O
 ( _ _ O
@@ -403,6 +442,9 @@ this _ _ O
 print _ _ O
 method _ _ O
 ? _ _ O
+
+
+ _ _ O
 I _ _ O
 guess _ _ O
 it _ _ O
@@ -413,12 +455,24 @@ of _ _ O
 types _ _ O
 ... _ _ O
 ? _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 " _ _ O
 Ad-Hoc _ _ O
 " _ _ O
 Polymorphism _ _ B-Concept
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 You _ _ O
 know _ _ O
 about _ _ O
@@ -564,7 +618,13 @@ by _ _ O
 a _ _ O
 compiler _ _ O
 ? _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 Implementing _ _ O
 overloading _ _ O
 in _ _ O
@@ -594,24 +654,51 @@ can _ _ O
 be _ _ O
 extended _ _ O
 . _ _ O
+
+
+ _ _ O
 Name _ _ O
+
+
+ _ _ O
 Referent _ _ O
+
+
+ _ _ O
 " _ _ O
 A _ _ O
 " _ _ O
+
+
+ _ _ O
 < _ _ O
 class _ _ O
 A _ _ O
 > _ _ O
+
+
+ _ _ O
 " _ _ O
 print _ _ O
 " _ _ O
+
+
+ _ _ O
 < _ _ O
 overload _ _ B-Concept
 set _ _ B-Concept
 > _ _ O
+
+
+ _ _ O
 Signature _ _ O
+
+
+ _ _ O
 Referent _ _ O
+
+
+ _ _ O
 now _ _ O
 a _ _ O
 name _ _ O
@@ -632,30 +719,51 @@ the _ _ O
 same _ _ O
 name _ _ O
 . _ _ O
+
+
+ _ _ O
 void _ _ O
 ( _ _ O
 int _ _ O
 ) _ _ O
+
+
+ _ _ O
 < _ _ O
 print _ _ O
 1 _ _ O
 > _ _ O
+
+
+ _ _ O
 void _ _ O
 ( _ _ O
 char _ _ O
 ) _ _ O
+
+
+ _ _ O
 < _ _ O
 print _ _ O
 2 _ _ O
 > _ _ O
+
+
+ _ _ O
 void _ _ O
 ( _ _ O
 String _ _ O
 ) _ _ O
+
+
+ _ _ O
 < _ _ O
 print _ _ O
 3 _ _ O
 > _ _ O
+
+
+ _ _ O
 now _ _ O
 , _ _ O
 when _ _ O
@@ -688,6 +796,9 @@ one _ _ O
 match _ _ O
 . _ _ O
 9 _ _ O
+
+
+ _ _ O
 More _ _ O
 than _ _ O
 one _ _ O
@@ -716,6 +827,9 @@ ints _ _ O
 to _ _ O
 floats _ _ O
 . _ _ O
+
+
+ _ _ O
 static _ _ O
 void _ _ O
 print _ _ O
@@ -770,6 +884,9 @@ this _ _ O
 is _ _ O
 ambiguous _ _ O
 . _ _ O
+
+
+ _ _ O
 you _ _ O
 do _ _ O
 n't _ _ O
@@ -793,7 +910,13 @@ own _ _ O
 implicit _ _ O
 conversions _ _ O
 . _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 Name _ _ B-Concept
 mangling _ _ I-Concept
 ● _ _ O
@@ -848,6 +971,9 @@ tools _ _ O
 can _ _ O
 use _ _ O
 . _ _ O
+
+
+ _ _ O
 void _ _ O
 print _ _ O
 ( _ _ O
@@ -921,9 +1047,18 @@ error _ _ O
 messages _ _ O
 ... _ _ O
 11 _ _ O
+
+
+ _ _ O
 Subtype _ _ B-Concept
 Polymorphism _ _ B-Concept
+
+
+ _ _ B-Concept
 12 _ _ O
+
+
+ _ _ O
 You _ _ O
 know _ _ O
 about _ _ O
@@ -933,9 +1068,9 @@ too _ _ O
 ! _ _ O
 ● _ _ O
 in _ _ O
-subtype _ _ O
-polymorphism _ _ O
-, _ _ O
+subtype _ _ B-Concept
+polymorphism _ _ B-Concept
+, _ _ B-Concept
 types _ _ O
 can _ _ O
 be _ _ O
@@ -962,13 +1097,13 @@ is _ _ O
 : _ _ O
 anywhere _ _ O
 a _ _ O
-base _ _ O
-type _ _ O
+base _ _ B-Concept
+type _ _ I-Concept
 is _ _ O
 expected _ _ O
 , _ _ O
 a _ _ O
-subtype _ _ O
+subtype _ _ B-Concept
 can _ _ O
 be _ _ O
 used _ _ O
@@ -976,6 +1111,9 @@ in _ _ O
 its _ _ O
 place _ _ O
 . _ _ O
+
+
+ _ _ O
 void _ _ O
 print _ _ O
 ( _ _ O
@@ -1043,6 +1181,9 @@ of _ _ O
 Object _ _ O
 . _ _ O
 13 _ _ O
+
+
+ _ _ O
 Interfaces _ _ O
 ● _ _ O
 Java _ _ O
@@ -1065,19 +1206,34 @@ of _ _ O
 interfaces _ _ O
 . _ _ O
 Object _ _ O
+
+
+ _ _ O
 Base _ _ O
-Comparable _ _ O
+
+
+ _ _ O
+Comparable _ _ B-Concept
+
+
+ _ _ O
 Cloneable _ _ O
+
+
+ _ _ O
 now _ _ O
 Base _ _ O
 is _ _ O
 a _ _ O
-subtype _ _ O
+subtype _ _ B-Concept
 of _ _ O
 three _ _ O
 other _ _ O
 types _ _ O
 . _ _ O
+
+
+ _ _ O
 we _ _ O
 write _ _ O
 these _ _ O
@@ -1097,7 +1253,7 @@ Base _ _ O
 Base _ _ O
 < _ _ O
 : _ _ O
-Comparable _ _ O
+Comparable _ _ B-Concept
 , _ _ O
 and _ _ O
 Base _ _ O
@@ -1105,6 +1261,9 @@ Base _ _ O
 : _ _ O
 Cloneable _ _ O
 . _ _ O
+
+
+ _ _ O
 but _ _ O
 interfaces _ _ O
 exist _ _ O
@@ -1112,8 +1271,8 @@ exist _ _ O
 outside _ _ O
 " _ _ O
 the _ _ O
-class _ _ O
-hierarchy _ _ O
+class _ _ B-Concept
+hierarchy _ _ I-Concept
 , _ _ O
 letting _ _ O
 us _ _ O
@@ -1128,7 +1287,13 @@ just _ _ O
 their _ _ O
 inheritance _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 Implementing _ _ O
 subtyping _ _ O
 in _ _ O
@@ -1143,7 +1308,7 @@ keep _ _ O
 track _ _ O
 of _ _ O
 the _ _ O
-subtype _ _ O
+subtype _ _ B-Concept
 relations _ _ O
 between _ _ O
 classes _ _ O
@@ -1197,7 +1362,7 @@ any _ _ O
 type _ _ O
 or _ _ O
 its _ _ O
-subtype _ _ O
+subtype _ _ B-Concept
 to _ _ O
 be _ _ O
 put _ _ O
@@ -1263,7 +1428,13 @@ ha _ _ O
 sure _ _ O
 yeah _ _ O
 right _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 But _ _ O
 it _ _ O
 's _ _ O
@@ -1318,6 +1489,9 @@ A _ _ O
 a _ _ O
 ) _ _ O
 ... _ _ O
+
+
+ _ _ O
 does _ _ O
 this _ _ O
 make _ _ O
@@ -1330,6 +1504,9 @@ you _ _ O
 'd _ _ O
 expect _ _ O
 ? _ _ O
+
+
+ _ _ O
 this _ _ O
 happens _ _ O
 because _ _ O
@@ -1400,6 +1577,9 @@ multiple _ _ O
 dispatch _ _ O
 . _ _ O
 16 _ _ O
+
+
+ _ _ O
 Implementing _ _ O
 subtyping _ _ O
 at _ _ O
@@ -1450,6 +1630,9 @@ superclasses _ _ O
 . _ _ O
 class _ _ O
 Object _ _ O
+
+
+ _ _ O
 class _ _ O
 A _ _ O
 { _ _ O
@@ -1463,42 +1646,96 @@ foo _ _ O
 { _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 layout _ _ O
+
+
+ _ _ O
 vtable _ _ O
+
+
+ _ _ O
 layout _ _ O
+
+
+ _ _ O
 vtable _ _ O
+
+
+ _ _ O
 vtable _ _ O
+
+
+ _ _ O
 < _ _ O
 Object _ _ O
 > _ _ O
+
+
+ _ _ O
 vtable _ _ O
+
+
+ _ _ O
 < _ _ O
 A _ _ O
 > _ _ O
+
+
+ _ _ O
 monitor _ _ O
+
+
+ _ _ O
 clone _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 monitor _ _ O
+
+
+ _ _ O
 clone _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 equals _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 equals _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 toString _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 toString _ _ O
 ( _ _ O
 ) _ _ O
 foo _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 any _ _ O
 A _ _ O
 reference _ _ O
@@ -1520,6 +1757,9 @@ the _ _ O
 beginning _ _ O
 . _ _ O
 17 _ _ O
+
+
+ _ _ O
 Subtyping _ _ O
 in _ _ O
 Rust _ _ O
@@ -1650,10 +1890,22 @@ runtime _ _ O
 . _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 Parametric _ _ O
 Polymorphism _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Static _ _ O
 and _ _ O
 Dynamic _ _ O
@@ -1687,10 +1939,16 @@ on _ _ O
 modern _ _ O
 CPUs _ _ O
 ... _ _ O
+
+
+ _ _ O
 o.toString _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 a0 _ _ O
 , _ _ O
@@ -1732,6 +1990,9 @@ t0 _ _ O
 # _ _ O
 indirect _ _ O
 call _ _ O
+
+
+ _ _ O
 three _ _ O
 dependent _ _ O
 loads _ _ O
@@ -1771,6 +2032,9 @@ instruction _ _ O
 pipeline _ _ O
 ! _ _ O
 20 _ _ O
+
+
+ _ _ O
 Parametric _ _ O
 polymorphism _ _ O
 to _ _ O
@@ -1809,6 +2073,9 @@ become _ _ O
 an _ _ O
 argument _ _ O
 . _ _ O
+
+
+ _ _ O
 fn _ _ O
 id _ _ O
 < _ _ O
@@ -1827,6 +2094,9 @@ return _ _ O
 t _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 a _ _ O
@@ -1852,6 +2122,9 @@ it _ _ O
 math _ _ O
 stuff _ _ O
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 not _ _ O
@@ -1921,6 +2194,9 @@ d _ _ O
 then _ _ O
 ? _ _ O
 21 _ _ O
+
+
+ _ _ O
 Using _ _ O
 parametrically _ _ O
 polymorphic _ _ O
@@ -1938,6 +2214,9 @@ the _ _ O
 type _ _ O
 arguments _ _ O
 . _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 : _ _ O
@@ -1971,6 +2250,9 @@ id _ _ O
 30 _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 the _ _ O
 : _ _ O
 : _ _ O
@@ -1985,6 +2267,9 @@ turbofish _ _ O
 " _ _ O
 🐟 _ _ O
 💨 _ _ O
+
+
+ _ _ O
 in _ _ O
 the _ _ O
 second _ _ O
@@ -2039,6 +2324,9 @@ i32 _ _ O
 > _ _ O
 . _ _ O
 22 _ _ O
+
+
+ _ _ O
 Monomorphization _ _ O
 ● _ _ O
 but _ _ O
@@ -2072,6 +2360,9 @@ version _ _ O
 of _ _ O
 itself _ _ O
 . _ _ O
+
+
+ _ _ O
 let _ _ O
 x _ _ O
 = _ _ O
@@ -2097,6 +2388,9 @@ id _ _ O
 " _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 id _ _ O
 : _ _ O
 : _ _ O
@@ -2116,6 +2410,9 @@ id _ _ O
 & _ _ O
 str _ _ O
 > _ _ O
+
+
+ _ _ O
 the _ _ O
 compiler _ _ O
 looks _ _ O
@@ -2172,7 +2469,13 @@ overloads _ _ O
 for _ _ O
 us _ _ O
 ! _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Generics _ _ O
 without _ _ O
 monomorphization _ _ O
@@ -2333,6 +2636,9 @@ so _ _ O
 whatever _ _ O
 ! _ _ O
 24 _ _ O
+
+
+ _ _ O
 Bounded _ _ O
 Quantification _ _ O
 ( _ _ O
@@ -2346,7 +2652,13 @@ actually _ _ O
 useful _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 ∀ _ _ O
 only _ _ O
 gets _ _ O
@@ -2509,7 +2821,13 @@ demonstrate _ _ O
 than _ _ O
 explain _ _ O
 . _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Bounded _ _ O
 quantification _ _ O
 in _ _ O
@@ -2520,6 +2838,9 @@ extends _ _ O
 in _ _ O
 generics _ _ O
 ? _ _ O
+
+
+ _ _ O
 < _ _ O
 T _ _ O
 extends _ _ O
@@ -2578,6 +2899,9 @@ same _ _ O
 type _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 max _ _ O
@@ -2632,6 +2956,9 @@ the _ _ O
 method _ _ O
 . _ _ O
 27 _ _ O
+
+
+ _ _ O
 Bounded _ _ O
 quantification _ _ O
 in _ _ O
@@ -2650,6 +2977,9 @@ Java _ _ O
 interfaces _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 fn _ _ O
 max _ _ O
 < _ _ O
@@ -2705,6 +3035,9 @@ the _ _ O
 same _ _ O
 way _ _ O
 : _ _ O
+
+
+ _ _ O
 println _ _ O
 ! _ _ O
 ( _ _ O
@@ -2745,7 +3078,13 @@ max _ _ O
 / _ _ O
 prints _ _ O
 4.4 _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 But _ _ O
 what _ _ O
 about _ _ O
@@ -2772,6 +3111,9 @@ yes _ _ O
 , _ _ O
 but _ _ O
 ... _ _ O
+
+
+ _ _ O
 Comparable _ _ O
 max _ _ O
 ( _ _ O
@@ -2813,6 +3155,9 @@ runtime _ _ O
 error _ _ O
 instead _ _ O
 : _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 max _ _ O
@@ -2858,8 +3203,17 @@ type-checking _ _ O
 * _ _ O
 . _ _ O
 29 _ _ O
+
+
+ _ _ O
 Summary _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 The _ _ O
 kinds _ _ O
 of _ _ O
@@ -3027,6 +3381,9 @@ the _ _ O
 object _ _ O
 . _ _ O
 31 _ _ O
+
+
+ _ _ O
 The _ _ O
 limits _ _ O
 of _ _ O
@@ -3066,6 +3423,9 @@ Box _ _ O
 in _ _ O
 Rust _ _ O
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 seemingly-simple _ _ O
 object _ _ O
@@ -3105,6 +3465,9 @@ to _ _ O
 mistakes _ _ O
 . _ _ O
 32 _ _ O
+
+
+ _ _ O
 Coloring _ _ O
 inside _ _ O
 the _ _ O
@@ -3193,6 +3556,12 @@ before _ _ O
 the _ _ O
 exam _ _ O
 ö _ _ O
+
+
+ _ _ O
 33 _ _ O
+
+
+ _ _ O
 
 

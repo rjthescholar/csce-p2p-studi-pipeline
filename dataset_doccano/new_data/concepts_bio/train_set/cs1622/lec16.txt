@@ -1,24 +1,24 @@
-source language
 abi
-backend
-target language
-flowchart
-lowering
-data flow analysis
-x86
-optimization
-intermediate representation
-frontend
 ast
 if
-machine code
-cfg
-isa
+backend
 assembly code
+source language
+data flow analysis
+codegen
+target language
+control flow analysis
+for
+machine code
+intermediate representation
 mips
 ir
-codegen
-control flow analysis
-semantic analysis
-for
+lowering
+optimization
 while
+frontend
+x86
+isa
+semantic analysis
+flowchart
+cfg

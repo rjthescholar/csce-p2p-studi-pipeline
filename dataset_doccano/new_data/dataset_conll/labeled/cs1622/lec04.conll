@@ -10,6 +10,9 @@ COE _ _ O
 1622 _ _ O
 Jarrett _ _ O
 Billingsley _ _ O
+
+
+ _ _ O
 Class _ _ O
 Announcements _ _ O
 ● _ _ O
@@ -40,11 +43,23 @@ iiiiiiit _ _ O
 > _ _ O
 : _ _ O
 V _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Beyond _ _ O
 Regular _ _ O
 Grammars _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Regular _ _ O
 ? _ _ O
 ● _ _ O
@@ -163,6 +178,9 @@ IntLit _ _ O
 digit _ _ O
 > _ _ O
 + _ _ O
+
+
+ _ _ O
 this _ _ O
 puts _ _ O
 strict _ _ O
@@ -192,6 +210,9 @@ and _ _ O
 implement _ _ O
 . _ _ O
 4 _ _ O
+
+
+ _ _ O
 Another _ _ O
 way _ _ O
 to _ _ O
@@ -211,13 +232,34 @@ these _ _ O
 rules _ _ O
 : _ _ O
 Program _ _ O
+
+
+ _ _ O
 Token _ _ B-Concept
+
+
+ _ _ O
 I _ _ O
 d _ _ O
+
+
+ _ _ O
 IdStart _ _ O
+
+
+ _ _ O
 Ws _ _ O
+
+
+ _ _ O
 IntLit _ _ O
+
+
+ _ _ O
 IdCont _ _ O
+
+
+ _ _ O
 now _ _ O
 it _ _ O
 becomes _ _ O
@@ -257,6 +299,9 @@ share _ _ O
 parents _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 but _ _ O
 ... _ _ O
 what _ _ O
@@ -268,6 +313,9 @@ that _ _ O
 requirement _ _ O
 ? _ _ O
 5 _ _ O
+
+
+ _ _ O
 A _ _ O
 whole _ _ O
 new _ _ O
@@ -358,7 +406,13 @@ us _ _ O
 this _ _ O
 power _ _ O
 . _ _ O
+
+
+ _ _ O
 Exp _ _ O
+
+
+ _ _ O
 but _ _ O
 power _ _ O
 comes _ _ O
@@ -405,6 +459,9 @@ context-free _ _ O
 languages _ _ O
 ! _ _ O
 6 _ _ O
+
+
+ _ _ O
 So _ _ O
 what _ _ O
 can _ _ O
@@ -457,6 +514,9 @@ inside _ _ O
 other _ _ O
 ones _ _ O
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 cat _ _ O
 ( _ _ O
@@ -487,9 +547,15 @@ y _ _ O
 3 _ _ O
 ) _ _ O
 ) _ _ O
+
+
+ _ _ O
 and _ _ O
 statements _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 x _ _ O
 = _ _ O
@@ -509,6 +575,9 @@ f _ _ O
 } _ _ O
 } _ _ O
 7 _ _ O
+
+
+ _ _ O
 But _ _ O
 what _ _ O
 ca _ _ O
@@ -598,6 +667,9 @@ STILL _ _ O
 THIS _ _ O
 THING _ _ O
 THOUGH _ _ O
+
+
+ _ _ O
 int _ _ O
 y _ _ O
 = _ _ O
@@ -615,6 +687,9 @@ String _ _ O
 > _ _ O
 l _ _ O
 ; _ _ O
+
+
+ _ _ O
 to _ _ O
 properly _ _ O
 parse _ _ O
@@ -648,8 +723,17 @@ parsing _ _ B-Concept
 kludges _ _ O
 . _ _ O
 8 _ _ O
+
+
+ _ _ O
 ASTs _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 From _ _ O
 lexical _ _ O
 to _ _ O
@@ -693,10 +777,25 @@ program _ _ O
 . _ _ O
 source _ _ O
 code _ _ O
+
+
+ _ _ O
 Lexer _ _ B-Concept
+
+
+ _ _ O
 tokens _ _ O
+
+
+ _ _ O
 Parser _ _ B-Concept
+
+
+ _ _ O
 tree _ _ O
+
+
+ _ _ O
 the _ _ O
 parser _ _ B-Concept
 typically _ _ O
@@ -745,6 +844,9 @@ a _ _ O
 program _ _ O
 . _ _ O
 10 _ _ O
+
+
+ _ _ O
 A _ _ O
 tree _ _ O
 of _ _ O
@@ -784,6 +886,9 @@ characters _ _ O
 or _ _ O
 tokens _ _ O
 . _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 x _ _ O
@@ -796,32 +901,77 @@ y _ _ O
 else _ _ O
 return _ _ O
 ; _ _ O
+
+
+ _ _ O
 IfElseStmt _ _ O
 cond _ _ O
+
+
+ _ _ O
 IdentExp _ _ O
 name _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 F _ _ O
+
+
+ _ _ O
 CallExp _ _ O
+
+
+ _ _ O
 " _ _ O
 x _ _ O
 " _ _ O
+
+
+ _ _ O
 callee _ _ O
+
+
+ _ _ O
 ReturnStmt _ _ O
+
+
+ _ _ O
 args _ _ O
 [ _ _ O
 ] _ _ O
+
+
+ _ _ O
 value _ _ O
+
+
+ _ _ O
 ø _ _ O
 IdentExp _ _ O
 name _ _ O
+
+
+ _ _ O
 " _ _ O
 y _ _ O
 " _ _ O
+
+
+ _ _ O
 IntExp _ _ O
 value _ _ O
+
+
+ _ _ O
 2 _ _ O
 11 _ _ O
+
+
+ _ _ O
 Why _ _ O
 is _ _ O
 it _ _ O
@@ -869,7 +1019,13 @@ y _ _ O
 else _ _ O
 return _ _ O
 ; _ _ O
+
+
+ _ _ O
 IfElse _ _ O
+
+
+ _ _ O
 Rust _ _ O
 if _ _ O
 x _ _ O
@@ -884,6 +1040,9 @@ else _ _ O
 { _ _ O
 return _ _ O
 } _ _ O
+
+
+ _ _ O
 Lua _ _ O
 if _ _ O
 x _ _ O
@@ -914,11 +1073,26 @@ else _ _ O
 return _ _ O
 return _ _ O
 endif _ _ O
+
+
+ _ _ O
 Ident _ _ O
+
+
+ _ _ O
 Call _ _ O
+
+
+ _ _ O
 Ident _ _ O
+
+
+ _ _ O
 Return _ _ O
 Int _ _ O
+
+
+ _ _ O
 of _ _ O
 course _ _ O
 , _ _ O
@@ -939,6 +1113,9 @@ just _ _ O
 fluff _ _ O
 . _ _ O
 12 _ _ O
+
+
+ _ _ O
 Values _ _ O
 , _ _ O
 expressions _ _ O
@@ -983,9 +1160,15 @@ a _ _ O
 value _ _ O
 . _ _ O
 2.8 _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
+
+
+ _ _ O
 sin _ _ O
 ( _ _ O
 2 _ _ O
@@ -1000,7 +1183,13 @@ i _ _ O
 " _ _ O
 ; _ _ O
 " _ _ O
+
+
+ _ _ O
 obj.field _ _ O
+
+
+ _ _ O
 when _ _ O
 you _ _ O
 execute _ _ O
@@ -1012,8 +1201,14 @@ you _ _ O
 do _ _ O
 n't _ _ O
 . _ _ O
+
+
+ _ _ O
 return _ _ O
 ; _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 ... _ _ O
@@ -1021,6 +1216,9 @@ if _ _ O
 ... _ _ O
 else _ _ O
 ... _ _ O
+
+
+ _ _ O
 printf _ _ O
 ( _ _ O
 "hi _ _ O
@@ -1034,6 +1232,9 @@ printf _ _ O
 statements _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 but _ _ O
 there _ _ O
 are _ _ O
@@ -1068,7 +1269,13 @@ parsing _ _ O
 and _ _ O
 semantics _ _ O
 . _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 What _ _ O
 about _ _ O
 Rust _ _ O
@@ -1216,10 +1423,19 @@ term _ _ O
 . _ _ O
 :) _ _ O
 14 _ _ O
+
+
+ _ _ O
 Trees _ _ O
 in _ _ O
 Rust _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 In _ _ O
 Java _ _ O
 ... _ _ O
@@ -1275,6 +1491,9 @@ t _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Node _ _ O
 < _ _ O
 Integer _ _ O
@@ -1309,6 +1528,9 @@ Node _ _ O
 7 _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 left _ _ O
 and _ _ O
 right _ _ O
@@ -1352,10 +1574,22 @@ pointing _ _ O
 to _ _ O
 anything _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 2 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 Doing _ _ O
 it _ _ O
 in _ _ O
@@ -1399,6 +1633,9 @@ value _ _ O
 T _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 it _ _ O
 says _ _ O
 this _ _ O
@@ -1445,6 +1682,9 @@ value _ _ O
 T _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 great _ _ O
 , _ _ O
 it _ _ O
@@ -1458,6 +1698,9 @@ it _ _ O
 mean _ _ O
 tho _ _ O
 17 _ _ O
+
+
+ _ _ O
 I _ _ O
 would _ _ O
 not _ _ O
@@ -1544,13 +1787,34 @@ the _ _ O
 heap _ _ O
 Call _ _ O
 Stack _ _ O
+
+
+ _ _ O
 Heap _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 the _ _ O
 Box _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 I _ _ O
 mean _ _ O
 , _ _ O
@@ -1570,6 +1834,9 @@ for _ _ O
 the _ _ O
 example _ _ O
 . _ _ O
+
+
+ _ _ O
 okay _ _ O
 , _ _ O
 let _ _ O
@@ -1582,7 +1849,13 @@ T _ _ O
 > _ _ O
 then _ _ O
 ! _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 Curses _ _ O
 ! _ _ O
 Foiled _ _ O
@@ -1636,6 +1909,9 @@ value _ _ O
 T _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 let _ _ O
 a _ _ O
 = _ _ O
@@ -1662,9 +1938,18 @@ left _ _ O
 : _ _ O
 ......... _ _ O
 uhhhhhhhh _ _ O
+
+
+ _ _ O
 5 _ _ O
 2 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 what _ _ O
 do _ _ O
 we _ _ O
@@ -1694,6 +1979,9 @@ impossible _ _ O
 to _ _ O
 construct _ _ O
 ! _ _ O
+
+
+ _ _ O
 so _ _ O
 we _ _ O
 need _ _ O
@@ -1736,6 +2024,9 @@ T _ _ O
 > _ _ O
 . _ _ O
 19 _ _ O
+
+
+ _ _ O
 Option _ _ O
 < _ _ O
 Box _ _ O
@@ -1816,6 +2107,9 @@ value _ _ O
 T _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 let _ _ O
 mut _ _ O
 a _ _ O
@@ -1854,6 +2148,9 @@ new _ _ O
 ) _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 and _ _ O
 now _ _ O
 we _ _ O
@@ -1886,9 +2183,18 @@ aka _ _ O
 null _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 2 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 this _ _ O
 code _ _ O
 is _ _ O
@@ -1898,6 +2204,9 @@ rust_trees _ _ O
 example _ _ O
 . _ _ O
 20 _ _ O
+
+
+ _ _ O
 A _ _ O
 brief _ _ O
 digression _ _ O
@@ -1974,13 +2283,25 @@ crash _ _ O
 your _ _ O
 program _ _ O
 ! _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 Defining _ _ O
 and _ _ O
 using _ _ O
 an _ _ O
 AST _ _ O
+
+
+ _ _ O
 22 _ _ O
+
+
+ _ _ O
 Before _ _ O
 we _ _ O
 get _ _ O
@@ -2023,6 +2344,9 @@ evaluating _ _ O
 it _ _ O
 . _ _ O
 × _ _ O
+
+
+ _ _ O
 how _ _ O
 we _ _ O
 get _ _ O
@@ -2049,12 +2373,30 @@ lecture _ _ O
 , _ _ O
 but _ _ O
 ... _ _ O
+
+
+ _ _ O
 ÷ _ _ O
+
+
+ _ _ O
 + _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 -40 _ _ O
+
+
+ _ _ O
 if _ _ O
 the _ _ O
 expression _ _ O
@@ -2069,6 +2411,9 @@ fun _ _ O
 with _ _ O
 it _ _ O
 ! _ _ O
+
+
+ _ _ O
 ( _ _ O
 2 _ _ O
 / _ _ O
@@ -2082,6 +2427,9 @@ it _ _ O
 * _ _ O
 -40 _ _ O
 23 _ _ O
+
+
+ _ _ O
 Representing _ _ O
 this _ _ O
 tree _ _ O
@@ -2149,6 +2497,9 @@ has _ _ O
 two _ _ O
 operands _ _ O
 " _ _ O
+
+
+ _ _ O
 ● _ _ O
 when _ _ O
 you _ _ O
@@ -2217,12 +2568,18 @@ AstNode _ _ O
 } _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 look _ _ O
 , _ _ O
 no _ _ O
 Options _ _ O
 ! _ _ O
 24 _ _ O
+
+
+ _ _ O
 Recursion _ _ O
 Refresher _ _ O
 ● _ _ O
@@ -2260,6 +2617,9 @@ juniors _ _ O
 and _ _ O
 seniors _ _ O
 : _ _ O
+
+
+ _ _ O
 local _ _ O
 variables _ _ O
 are _ _ O
@@ -2316,6 +2676,9 @@ every _ _ O
 recursion _ _ O
 gets _ _ O
 its _ _ O
+
+
+ _ _ O
 own _ _ O
 copy _ _ O
 of _ _ O
@@ -2333,6 +2696,9 @@ share _ _ O
 that _ _ O
 variable _ _ O
 . _ _ O
+
+
+ _ _ O
 Stack _ _ O
 sum _ _ O
 ( _ _ O
@@ -2369,7 +2735,13 @@ sum _ _ O
 x _ _ O
 = _ _ O
 1 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 Trees _ _ O
 ♥ _ _ O
 Recursion _ _ O
@@ -2408,8 +2780,17 @@ a _ _ O
 multiplication _ _ O
 ? _ _ O
 × _ _ O
+
+
+ _ _ O
 ÷ _ _ O
+
+
+ _ _ O
 -40 _ _ O
+
+
+ _ _ O
 the _ _ O
 first _ _ O
 two _ _ O
@@ -2425,10 +2806,22 @@ the _ _ O
 two _ _ O
 children _ _ O
 . _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 + _ _ O
 3 _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 evaluate _ _ O
@@ -2452,7 +2845,13 @@ RHS _ _ O
 multiply _ _ O
 them _ _ O
 together _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 that _ _ O
 's _ _ O
 it _ _ O
@@ -2477,6 +2876,9 @@ AstNode _ _ O
 eval _ _ O
 ) _ _ O
 26 _ _ O
+
+
+ _ _ O
 What _ _ O
 else _ _ O
 could _ _ O
@@ -2523,13 +2925,28 @@ division _ _ O
 the _ _ O
 root _ _ O
 . _ _ O
+
+
+ _ _ O
 ÷ _ _ O
 + _ _ O
 3 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
 3 _ _ O
+
+
+ _ _ O
 of _ _ O
 course _ _ O
 , _ _ O
@@ -2545,12 +2962,30 @@ can _ _ O
 special-case _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 ÷ _ _ O
+
+
+ _ _ O
 ÷ _ _ O
 2 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 what _ _ O
@@ -2563,8 +2998,14 @@ the _ _ O
 example _ _ O
 does _ _ O
 ! _ _ O
+
+
+ _ _ O
 2 _ _ O
 27 _ _ O
+
+
+ _ _ O
 What _ _ O
 if _ _ O
 the _ _ O
@@ -2690,7 +3131,13 @@ stuff _ _ O
 with _ _ O
 them _ _ O
 ! _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Ok _ _ O
 , _ _ O
 but _ _ O
@@ -2760,6 +3207,12 @@ in _ _ O
 a _ _ O
 week _ _ O
 ! _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 
 

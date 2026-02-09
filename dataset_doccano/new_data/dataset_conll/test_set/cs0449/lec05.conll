@@ -2,9 +2,15 @@
 -DOCSTART- -X- -X- O
 
 5 _ _ O
+
+
+ _ _ O
 Introduction _ _ O
 to _ _ O
 Memory _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +19,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,6 +34,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 Memory _ _ O
 Model _ _ O
@@ -43,7 +55,13 @@ pointers _ _ O
 for _ _ O
 you _ _ O
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -57,12 +75,18 @@ series _ _ O
 of _ _ O
 bits _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 can _ _ O
@@ -74,6 +98,9 @@ bytes _ _ O
 or _ _ O
 words _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
@@ -89,7 +116,13 @@ can _ _ O
 be _ _ O
 read _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -109,11 +142,17 @@ know _ _ O
 the _ _ O
 workaround _ _ O
 ! _ _ O
+
+
+ _ _ O
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 • _ _ O
 With _ _ O
 byte-addressable _ _ B-Concept
@@ -174,11 +213,20 @@ add _ _ O
 new _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 3 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -206,6 +254,9 @@ called _ _ O
 " _ _ O
 text _ _ B-Concept
 " _ _ O
+
+
+ _ _ O
 • _ _ O
 Where _ _ O
 in _ _ O
@@ -229,6 +280,9 @@ is _ _ O
 usually _ _ O
 largest _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 How _ _ O
 do _ _ O
@@ -253,23 +307,38 @@ in _ _ O
 the _ _ O
 moment _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 4 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -284,12 +353,18 @@ few _ _ O
 known _ _ O
 properties _ _ O
 : _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 It _ _ O
 likely _ _ O
@@ -308,17 +383,29 @@ program _ _ O
 can _ _ O
 start _ _ O
 . _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 5 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -370,23 +457,38 @@ section _ _ O
 is _ _ O
 fixed _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 6 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -435,18 +537,27 @@ Allocates _ _ O
 lower _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 Stack _ _ B-Concept
 Allocation _ _ B-Concept
@@ -473,15 +584,27 @@ freed _ _ O
 on _ _ O
 return _ _ O
 ) _ _ O
+
+
+ _ _ O
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 7 _ _ O
+
+
+ _ _ O
 Revisiting _ _ O
 our _ _ O
 past _ _ O
 troubles _ _ O
 : _ _ O
+
+
+ _ _ O
 4 _ _ O
 . _ _ O
 Stack _ _ B-Concept
@@ -503,6 +626,9 @@ there _ _ O
 . _ _ O
 Stack _ _ B-Concept
 Allocation _ _ B-Concept
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Function _ _ B-Concept
@@ -528,7 +654,13 @@ from _ _ O
 ? _ _ O
 Why _ _ O
 ? _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -572,24 +704,42 @@ detail _ _ O
 very _ _ O
 soon _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 😱 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 Can _ _ O
 an _ _ O
 emoji _ _ O
@@ -607,31 +757,73 @@ matter _ _ O
 Compiler _ _ O
 and _ _ O
 version _ _ O
+
+
+ _ _ O
 Success _ _ O
+
+
+ _ _ O
 gcc _ _ O
 main.c _ _ O
 -std=c99 _ _ O
+
+
+ _ _ O
 😔 _ _ O
+
+
+ _ _ O
 gcc _ _ O
 main.c _ _ O
 -std=c11 _ _ O
+
+
+ _ _ O
 😔 _ _ O
+
+
+ _ _ O
 gcc _ _ O
 main.c _ _ O
 -std=c18 _ _ O
+
+
+ _ _ O
 😔 _ _ O
+
+
+ _ _ O
 clang _ _ O
 main.c _ _ O
 -std=c99 _ _ O
+
+
+ _ _ O
 😔 _ _ O
+
+
+ _ _ O
 clang _ _ O
 main.c _ _ O
 -std=c11 _ _ O
+
+
+ _ _ O
 😃 _ _ O
+
+
+ _ _ O
 clang _ _ O
 main.c _ _ O
 -std=c18 _ _ O
+
+
+ _ _ O
 😃 _ _ O
+
+
+ _ _ O
 # _ _ O
 include _ _ O
 < _ _ O
@@ -676,6 +868,9 @@ Hello _ _ O
 😱 _ _ O
 is _ _ O
 3 _ _ O
+
+
+ _ _ O
 Answer _ _ O
 : _ _ O
 So _ _ O
@@ -695,6 +890,9 @@ fun _ _ O
 ) _ _ O
 ! _ _ O
 10 _ _ O
+
+
+ _ _ O
 Pointers _ _ O
 They _ _ O
 point _ _ O
@@ -713,7 +911,13 @@ are _ _ O
 things _ _ O
 ! _ _ O
 ? _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 The _ _ O
 " _ _ O
 Memory _ _ B-Concept
@@ -757,6 +961,9 @@ a _ _ O
 memory _ _ B-Concept
 address _ _ I-Concept
 . _ _ B-Concept
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -797,20 +1004,41 @@ at _ _ O
 the _ _ O
 end _ _ O
 . _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 Interpreting _ _ O
 Pointers _ _ O
 : _ _ O
 Basics _ _ O
 👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 3.14159 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 • _ _ O
 Pointers _ _ O
 can _ _ O
@@ -831,18 +1059,33 @@ is _ _ O
 there _ _ O
 . _ _ O
 13 _ _ O
+
+
+ _ _ O
 Interpreting _ _ O
 Pointers _ _ O
 : _ _ O
 Hmm _ _ O
 👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 3.14159 _ _ O
+
+
+ _ _ O
 42 _ _ O
 or _ _ O
 0.1543e10 _ _ O
@@ -850,6 +1093,9 @@ or _ _ O
 -8 _ _ O
 ) _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Pointers _ _ O
 can _ _ O
@@ -873,7 +1119,13 @@ information _ _ O
 is _ _ O
 there _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 Interpreting _ _ O
 Pointers _ _ O
 : _ _ O
@@ -882,19 +1134,37 @@ Sign _ _ O
 of _ _ O
 Trouble _ _ O
 👉 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 Help _ _ O
 I _ _ O
 'm _ _ O
 Lost _ _ O
 ! _ _ O
+
+
+ _ _ O
 👉 _ _ O
+
+
+ _ _ O
 3.14159 _ _ O
+
+
+ _ _ O
  _ _ O
+
+
+ _ _ O
 42 _ _ O
 or _ _ O
 0.1543e10 _ _ O
@@ -902,6 +1172,9 @@ or _ _ O
 -8 _ _ O
 ) _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Without _ _ O
 the _ _ O
@@ -931,6 +1204,9 @@ for _ _ O
 you _ _ O
 . _ _ O
 15 _ _ O
+
+
+ _ _ O
 Dereferencing _ _ O
 Pointers _ _ O
 : _ _ O
@@ -980,12 +1256,27 @@ the _ _ O
 dereference _ _ B-Concept
 operator _ _ I-Concept
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
+👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
 👉 _ _ O
-👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
 16 _ _ O
+
+
+ _ _ O
 Dereferencing _ _ O
 Pointers _ _ O
 : _ _ O
@@ -1033,6 +1324,9 @@ say _ _ O
 the _ _ O
 least _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Generally _ _ O
 , _ _ O
@@ -1059,13 +1353,25 @@ warnings _ _ O
 in _ _ O
 practice _ _ O
 ) _ _ O
+
+
+ _ _ O
 👉 _ _ O
 👉 _ _ O
 👉 _ _ O
 🤔 _ _ O
 👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
+
+
+ _ _ O
 17 _ _ O
+
+
+ _ _ O
 Referencing _ _ O
 Data _ _ O
 : _ _ O
@@ -1120,6 +1426,9 @@ references _ _ O
 to _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 use _ _ O
@@ -1127,11 +1436,23 @@ the _ _ O
 reference _ _ B-Concept
 operator _ _ I-Concept
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 👉 _ _ O
+
+
+ _ _ O
 👉 _ _ O
 👉 _ _ O
 18 _ _ O
+
+
+ _ _ O
 Turtles _ _ O
 all _ _ O
 the _ _ O
@@ -1139,6 +1460,26 @@ way _ _ O
 down _ _ O
 👉 _ _ O
 _ _ _ O
+
+
+ _ _ O
+👉 _ _ O
+_ _ _ O
+👉 _ _ O
+_ _ _ O
+
+
+ _ _ O
+👉 _ _ O
+_ _ _ O
+
+
+ _ _ O
+👉 _ _ O
+_ _ _ O
+
+
+ _ _ O
 👉 _ _ O
 _ _ _ O
 👉 _ _ O
@@ -1147,19 +1488,23 @@ _ _ _ O
 _ _ _ O
 👉 _ _ O
 _ _ _ O
-👉 _ _ O
-_ _ _ O
-👉 _ _ O
-_ _ _ O
-👉 _ _ O
-_ _ _ O
-👉 _ _ O
-_ _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Removing _ _ O
 the _ _ O
 emoji _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Like _ _ O
 skipping _ _ O
 rocks _ _ O
@@ -1167,31 +1512,103 @@ on _ _ O
 the _ _ O
 lake _ _ O
 ... _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 03 _ _ O
+
+
+ _ _ O
 04 _ _ O
+
+
+ _ _ O
 05 _ _ O
+
+
+ _ _ O
 06 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 07 _ _ O
+
+
+ _ _ O
 08 _ _ O
+
+
+ _ _ O
 09 _ _ O
+
+
+ _ _ O
 0A _ _ O
+
+
+ _ _ O
 0B _ _ O
+
+
+ _ _ O
 0C _ _ O
+
+
+ _ _ O
 0D _ _ O
+
+
+ _ _ O
 0E _ _ O
+
+
+ _ _ O
 0F _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 4 _ _ O
 data _ _ O
+
+
+ _ _ O
 dataptr _ _ O
 21 _ _ O
+
+
+ _ _ O
 Like _ _ O
 skipping _ _ O
 rocks _ _ O
@@ -1199,33 +1616,108 @@ on _ _ O
 the _ _ O
 lake _ _ O
 ... _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 02 _ _ O
+
+
+ _ _ O
 03 _ _ O
+
+
+ _ _ O
 04 _ _ O
+
+
+ _ _ O
 05 _ _ O
+
+
+ _ _ O
 06 _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 07 _ _ O
+
+
+ _ _ O
 08 _ _ O
+
+
+ _ _ O
 09 _ _ O
+
+
+ _ _ O
 0A _ _ O
+
+
+ _ _ O
 0B _ _ O
+
+
+ _ _ O
 0C _ _ O
+
+
+ _ _ O
 4 _ _ O
 data _ _ O
+
+
+ _ _ O
 0D _ _ O
+
+
+ _ _ O
 0E _ _ O
+
+
+ _ _ O
 0F _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 A _ _ O
 dataptr _ _ O
+
+
+ _ _ O
 dataptrptr _ _ O
 22 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -1272,23 +1764,38 @@ Or _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 23 _ _ O
+
+
+ _ _ O
 Arrays _ _ O
 It _ _ O
 is _ _ O
@@ -1302,7 +1809,13 @@ need _ _ O
 : _ _ O
 Arrays _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 Many _ _ O
 ducks _ _ O
 lined _ _ O
@@ -1321,6 +1834,9 @@ span _ _ O
 of _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -1331,6 +1847,9 @@ on _ _ O
 the _ _ O
 stack _ _ B-Concept
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 can _ _ O
@@ -1341,6 +1860,9 @@ on _ _ O
 the _ _ O
 heap _ _ B-Concept
 : _ _ O
+
+
+ _ _ O
 writing _ _ O
 in _ _ O
 a _ _ O
@@ -1354,7 +1876,13 @@ the _ _ O
 cast _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 Initialization _ _ O
 • _ _ O
 You _ _ O
@@ -1382,6 +1910,9 @@ on _ _ O
 the _ _ O
 stack _ _ B-Concept
 : _ _ O
+
+
+ _ _ O
 • _ _ O
 And _ _ O
 the _ _ O
@@ -1400,15 +1931,27 @@ a _ _ O
 loop _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 Q _ _ O
 : _ _ O
 Why _ _ O
 is _ _ O
 using _ _ O
+
+
+ _ _ O
 important _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Carelessness _ _ O
 means _ _ O
 the _ _ O
@@ -1430,6 +1973,9 @@ betrayal _ _ O
 " _ _ O
 by _ _ O
 wilkie _ _ O
+
+
+ _ _ O
 • _ _ O
 Remember _ _ O
 : _ _ O
@@ -1458,6 +2004,9 @@ are _ _ O
 not _ _ O
 reliable _ _ O
 : _ _ O
+
+
+ _ _ O
 Stack _ _ B-Concept
 allocation _ _ B-Concept
 Arrays _ _ O
@@ -1481,12 +2030,18 @@ oh _ _ O
 no _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 may _ _ O
 work _ _ O
 sometimes _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 calling _ _ O
@@ -1504,6 +2059,9 @@ trust _ _ O
 it _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Instead _ _ O
 : _ _ O
@@ -1522,6 +2080,9 @@ next _ _ O
 slide _ _ O
 ) _ _ O
 27 _ _ O
+
+
+ _ _ O
 Appropriate _ _ O
 use _ _ O
 of _ _ O
@@ -1550,12 +2111,18 @@ arguments _ _ O
 by _ _ O
 reference _ _ O
 " _ _ O
+
+
+ _ _ O
 Pointers _ _ O
 can _ _ O
 indeed _ _ O
 be _ _ O
 array-like _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 Heap _ _ B-Concept
 allocation _ _ B-Concept
 ! _ _ O
@@ -1590,7 +2157,13 @@ of _ _ O
 to _ _ O
 powers_of_two _ _ O
 ? _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Quick _ _ O
 notes _ _ O
 on _ _ O
@@ -1645,6 +2218,9 @@ their _ _ O
 original _ _ O
 sources _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1686,7 +2262,13 @@ is _ _ O
 the _ _ O
 address _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 Careful _ _ O
 ! _ _ O
 No _ _ O
@@ -1760,6 +2342,9 @@ execute _ _ O
 arbitrarily _ _ O
 code _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 What _ _ O
 if _ _ O
 this _ _ O
@@ -1767,6 +2352,9 @@ is _ _ O
 too _ _ O
 big _ _ O
 ? _ _ O
+
+
+ _ _ O
 A _ _ O
 simple _ _ O
 mistake _ _ O
@@ -1779,7 +2367,13 @@ write _ _ O
 to _ _ O
 it _ _ O
 ! _ _ O
+
+
+ _ _ O
 30 _ _ O
+
+
+ _ _ O
 Pointer _ _ B-Concept
 arithmetic _ _ B-Concept
 ( _ _ O
@@ -1812,6 +2406,9 @@ with _ _ O
 math _ _ O
 operations _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Ideally _ _ O
 pointers _ _ O
@@ -1847,9 +2444,15 @@ between _ _ O
 two _ _ O
 values _ _ O
 . _ _ O
+
+
+ _ _ O
 in _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Therefore _ _ O
 , _ _ O
@@ -1876,7 +2479,13 @@ a _ _ O
 compiler _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 Pointer _ _ B-Concept
 arithmetic _ _ B-Concept
 in _ _ O
@@ -1894,6 +2503,9 @@ expressing _ _ O
 a _ _ O
 pointer _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 The _ _ O
 ( _ _ O
 postfix-increment _ _ B-Concept
@@ -1927,7 +2539,13 @@ it _ _ O
 often _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 The _ _ O
 C _ _ B-Concept
 Memory _ _ I-Concept
@@ -1974,23 +2592,38 @@ Or _ _ O
 on _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 Potential _ _ O
 Layout _ _ O
 ( _ _ O
 32-bit _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
 currently _ _ O
 unused _ _ O
 but _ _ O
 available _ _ O
 memory _ _ O
+
+
+ _ _ O
 heap _ _ B-Concept
 static _ _ B-Concept
 data _ _ B-Concept
+
+
+ _ _ O
 code _ _ B-Concept
 33 _ _ O
+
+
+ _ _ O
 Strings _ _ O
 No _ _ O
 longer _ _ O
@@ -1998,7 +2631,13 @@ just _ _ O
 for _ _ O
 cats _ _ O
 ! _ _ O
+
+
+ _ _ O
 34 _ _ O
+
+
+ _ _ O
 Strings _ _ O
 • _ _ O
 They _ _ O
@@ -2032,6 +2671,9 @@ pointers _ _ O
 to _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Text _ _ B-Concept
 is _ _ O
@@ -2040,8 +2682,14 @@ as _ _ O
 an _ _ O
 array _ _ B-Concept
 of _ _ O
+
+
+ _ _ O
 elements _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Representing _ _ O
 text _ _ B-Concept
@@ -2069,6 +2717,9 @@ and _ _ O
 Greek _ _ O
 • _ _ O
 Hence _ _ O
+
+
+ _ _ O
 being _ _ O
 the _ _ O
 C _ _ O
@@ -2076,6 +2727,9 @@ integer _ _ O
 byte _ _ B-Concept
 type _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Extended _ _ O
 for _ _ O
@@ -2091,6 +2745,9 @@ for _ _ O
 certain _ _ O
 languages _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Unicode _ _ B-Concept
 mostly _ _ O
@@ -2115,7 +2772,13 @@ a _ _ O
 byte _ _ B-Concept
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 35 _ _ O
+
+
+ _ _ O
 How _ _ O
 long _ _ O
 is _ _ O
@@ -2172,6 +2835,9 @@ source _ _ O
 of _ _ O
 bugs _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -2210,6 +2876,9 @@ A _ _ O
 sentinel _ _ O
 value _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Strings _ _ O
 in _ _ O
@@ -2265,7 +2934,13 @@ n _ _ O
 time _ _ O
 cost _ _ O
 . _ _ O
+
+
+ _ _ O
 36 _ _ O
+
+
+ _ _ O
 The _ _ O
 string _ _ B-Concept
 literal _ _ B-Concept
@@ -2332,6 +3007,9 @@ immutable _ _ O
 string _ _ B-Concept
 is _ _ O
 a _ _ O
+
+
+ _ _ O
 Let _ _ O
 's _ _ O
 ignore _ _ O
@@ -2342,6 +3020,9 @@ this _ _ O
 for _ _ O
 now _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 variable _ _ B-Concept
 is _ _ O
@@ -2367,6 +3048,9 @@ static _ _ B-Concept
 data _ _ B-Concept
 segment _ _ O
 ! _ _ O
+
+
+ _ _ O
 How _ _ O
 long _ _ O
 is _ _ O
@@ -2380,6 +3064,9 @@ out _ _ O
 . _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 standard _ _ O
 library _ _ O
 function _ _ B-Concept
@@ -2390,6 +3077,9 @@ of _ _ O
 a _ _ O
 string _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -2419,7 +3109,13 @@ out _ _ O
 the _ _ O
 sentinel _ _ O
 : _ _ O
+
+
+ _ _ O
 38 _ _ O
+
+
+ _ _ O
 When _ _ O
 good _ _ O
 strings _ _ O
@@ -2452,6 +3148,9 @@ sees _ _ O
 a _ _ O
 0 _ _ O
 . _ _ O
+
+
+ _ _ O
 This _ _ O
 syntax _ _ O
 copies _ _ O
@@ -2477,6 +3176,9 @@ it _ _ O
 is _ _ O
 immutable _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 length _ _ O
 here _ _ O
@@ -2490,7 +3192,13 @@ in _ _ O
 the _ _ O
 stack _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 39 _ _ O
+
+
+ _ _ O
 Using _ _ O
 stronger _ _ O
 strings _ _ O
@@ -2526,6 +3234,9 @@ a _ _ O
 maximum _ _ O
 length _ _ O
 . _ _ O
+
+
+ _ _ O
 strnlen _ _ B-Concept
 will _ _ O
 stop _ _ O
@@ -2541,7 +3252,13 @@ see _ _ O
 a _ _ O
 sentinel _ _ O
 . _ _ O
+
+
+ _ _ O
 40 _ _ O
+
+
+ _ _ O
 Comparing _ _ O
 " _ _ O
 Apples _ _ O
@@ -2556,11 +3273,17 @@ you _ _ O
 compare _ _ O
 strings _ _ O
 using _ _ O
+
+
+ _ _ O
 it _ _ O
 compares _ _ O
 the _ _ O
 addresses _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Since _ _ O
 string _ _ B-Concept
@@ -2586,7 +3309,13 @@ the _ _ O
 same _ _ O
 string _ _ B-Concept
 ! _ _ O
+
+
+ _ _ O
 41 _ _ O
+
+
+ _ _ O
 Comparing _ _ O
 " _ _ O
 Apples _ _ O
@@ -2627,7 +3356,13 @@ Java _ _ O
 when _ _ O
 considering _ _ O
 versus _ _ O
+
+
+ _ _ O
 42 _ _ O
+
+
+ _ _ O
 Comparing _ _ O
 " _ _ O
 Apples _ _ O
@@ -2647,7 +3382,13 @@ the _ _ O
 standard _ _ O
 library _ _ O
 's _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 will _ _ O
@@ -2687,6 +3428,9 @@ difference _ _ O
 is _ _ O
 0 _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Therefore _ _ O
 , _ _ O
@@ -2704,6 +3448,9 @@ n _ _ O
 time _ _ O
 complexity _ _ O
 . _ _ O
+
+
+ _ _ O
 will _ _ O
 return _ _ O
 0 _ _ O
@@ -2713,7 +3460,13 @@ strings _ _ O
 are _ _ O
 equal _ _ O
 . _ _ O
+
+
+ _ _ O
 43 _ _ O
+
+
+ _ _ O
 Appropriate _ _ O
 string _ _ O
 construction _ _ O
@@ -2758,6 +3511,9 @@ Empty _ _ O
 but _ _ O
 spacious _ _ O
 . _ _ O
+
+
+ _ _ O
 is _ _ O
 the _ _ O
 bounded _ _ O
@@ -2766,7 +3522,13 @@ of _ _ O
 Overwrites _ _ O
 string _ _ O
 . _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 is _ _ O
 the _ _ O
 bounded _ _ O
@@ -2781,6 +3543,9 @@ existing _ _ O
 string _ _ O
 . _ _ O
 44 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 / _ _ O
 Strings _ _ O
@@ -2793,11 +3558,17 @@ Allocation _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 Returns _ _ O
 pointer _ _ O
 to _ _ O
 length _ _ O
 bytes _ _ O
+
+
+ _ _ O
 Returns _ _ O
 pointer _ _ O
 to _ _ O
@@ -2820,6 +3591,9 @@ can _ _ O
 be _ _ O
 allocated _ _ O
 elsewhere _ _ O
+
+
+ _ _ O
 • _ _ O
 Strings _ _ O
 • _ _ O
@@ -2838,6 +3612,9 @@ the _ _ O
 bounded _ _ O
 forms _ _ O
 . _ _ O
+
+
+ _ _ O
 Copies _ _ O
 src _ _ O
 to _ _ O
@@ -2892,7 +3669,13 @@ max _ _ O
 ' _ _ O
 bytes _ _ O
 . _ _ O
+
+
+ _ _ O
 45 _ _ O
+
+
+ _ _ O
 Input _ _ O
 / _ _ O
 Output _ _ O
@@ -2904,6 +3687,9 @@ Input _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 • _ _ O
 Output _ _ O
 • _ _ O
@@ -2913,6 +3699,9 @@ Output _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 Copies _ _ O
 string _ _ O
 input _ _ O
@@ -2952,6 +3741,9 @@ into _ _ O
 int _ _ O
 variable _ _ O
 . _ _ O
+
+
+ _ _ O
 updates _ _ O
 your _ _ O
 variable _ _ O
@@ -3032,13 +3824,22 @@ unsigned _ _ O
 long _ _ O
 variable _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Lots _ _ O
 more _ _ O
 variations _ _ O
 ! _ _ O
 Generally _ _ O
+
+
+ _ _ O
 and _ _ O
+
+
+ _ _ O
 share _ _ O
 terms _ _ O
 . _ _ O
@@ -3046,7 +3847,13 @@ Look _ _ O
 them _ _ O
 up _ _ O
 ! _ _ O
+
+
+ _ _ O
 46 _ _ O
+
+
+ _ _ O
 Structures _ _ O
 It _ _ O
 may _ _ O
@@ -3059,7 +3866,13 @@ it _ _ O
 has _ _ O
 style _ _ O
 . _ _ O
+
+
+ _ _ O
 47 _ _ O
+
+
+ _ _ O
 Quick _ _ O
 note _ _ O
 on _ _ O
@@ -3109,7 +3922,13 @@ want _ _ O
 them _ _ O
 dynamically _ _ O
 . _ _ O
+
+
+ _ _ O
 48 _ _ O
+
+
+ _ _ O
 Pointing _ _ O
 to _ _ O
 structure _ _ O
@@ -3128,6 +3947,9 @@ syntax _ _ O
 works _ _ O
 only _ _ O
 on _ _ O
+
+
+ _ _ O
 is _ _ O
 pointers _ _ O
 and _ _ O
@@ -3135,7 +3957,13 @@ dereferences _ _ O
 a _ _ O
 field _ _ O
 . _ _ O
+
+
+ _ _ O
 49 _ _ O
+
+
+ _ _ O
 Pointing _ _ O
 to _ _ O
 structure _ _ O
@@ -3149,6 +3977,9 @@ If _ _ O
 you _ _ O
 want _ _ O
 a _ _ O
+
+
+ _ _ O
 is _ _ O
 what _ _ O
 names _ _ O
@@ -3160,11 +3991,20 @@ type _ _ O
 you _ _ O
 can _ _ O
 use _ _ O
+
+
+ _ _ O
 to _ _ O
 do _ _ O
 so _ _ O
 : _ _ O
+
+
+ _ _ O
 50 _ _ O
+
+
+ _ _ O
 It _ _ O
 took _ _ O
 humanity _ _ O
@@ -3178,6 +4018,9 @@ NULL _ _ O
 pointer _ _ O
 error _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 So _ _ O
 , _ _ O
@@ -3228,7 +4071,13 @@ to _ _ O
 use _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 51 _ _ O
+
+
+ _ _ O
 When _ _ O
 malloc _ _ O
 ... _ _ O
@@ -3247,7 +4096,13 @@ made _ _ O
 , _ _ O
 malloc _ _ O
 returns _ _ O
+
+
+ _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 your _ _ O
@@ -3261,7 +4116,13 @@ check _ _ O
 for _ _ O
 this _ _ O
 . _ _ O
+
+
+ _ _ O
 52 _ _ O
+
+
+ _ _ O
 When _ _ O
 malloc _ _ O
 ... _ _ O
@@ -3272,9 +4133,15 @@ You _ _ O
 can _ _ O
 check _ _ O
 if _ _ O
+
+
+ _ _ O
 is _ _ O
 null _ _ O
 with _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 might _ _ O
@@ -3315,12 +4182,24 @@ of _ _ O
 the _ _ O
 value _ _ O
 of _ _ O
+
+
+ _ _ O
 which _ _ O
 is _ _ O
 usually _ _ O
+
+
+ _ _ O
 anyway _ _ O
 . _ _ O
+
+
+ _ _ O
 53 _ _ O
+
+
+ _ _ O
 Examples _ _ O
 Some _ _ O
 nice _ _ O
@@ -3329,35 +4208,68 @@ that _ _ O
 address _ _ O
 addressing _ _ O
 ! _ _ O
+
+
+ _ _ O
 54 _ _ O
+
+
+ _ _ O
 Summing _ _ O
 it _ _ O
 all _ _ O
 up _ _ O
 . _ _ O
+
+
+ _ _ O
 55 _ _ O
+
+
+ _ _ O
 Searching _ _ O
 for _ _ O
 values _ _ O
+
+
+ _ _ O
 Remember _ _ O
 that _ _ O
+
+
+ _ _ O
 wants _ _ O
 pointers _ _ O
 to _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 56 _ _ O
+
+
+ _ _ O
 Paving _ _ O
 a _ _ O
 new _ _ O
 path _ _ O
+
+
+ _ _ O
 Remember _ _ O
 that _ _ O
+
+
+ _ _ O
 wants _ _ O
 pointers _ _ O
 to _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 When _ _ O
 it _ _ O
 sees _ _ O
@@ -3381,7 +4293,13 @@ to _ _ O
 do _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 57 _ _ O
+
+
+ _ _ O
 Paving _ _ O
 a _ _ O
 new _ _ O
@@ -3393,6 +4311,9 @@ of _ _ O
 directories _ _ O
 ! _ _ O
 ) _ _ O
+
+
+ _ _ O
 will _ _ O
 resize _ _ O
 the _ _ O
@@ -3419,6 +4340,12 @@ on _ _ O
 your _ _ O
 own _ _ O
 ! _ _ O
+
+
+ _ _ O
 58 _ _ O
+
+
+ _ _ O
 
 

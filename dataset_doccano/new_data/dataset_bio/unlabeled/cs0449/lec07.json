@@ -5,11 +5,31 @@
     "data": [
         {
             "sentence": [
-                "7",
+                "7"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Introduction",
                 "to",
                 "x86",
-                "asm",
+                "asm"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "CS",
                 "/",
                 "COE",
@@ -17,7 +37,23 @@
                 "Introduction",
                 "to",
                 "Systems",
-                "Software",
+                "Software"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Luis",
                 "Oliveira",
                 "(",
@@ -44,18 +80,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O"
             ]
         },
@@ -69,8 +93,7 @@
                 "\u2026",
                 "is",
                 "art",
-                ".",
-                "2"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -81,6 +104,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "2"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -131,101 +163,9 @@
                 "simple",
                 "in",
                 "concept",
-                ".",
-                "\u2022",
-                "Each",
-                "CPU",
-                "chooses",
-                "its",
-                "own",
-                "machine",
-                "code",
-                "(",
-                "and",
-                "therefore",
-                "its",
-                "own",
-                "style",
-                "of",
-                "assembly",
-                "language",
-                ")",
-                "\u2022",
-                "We",
-                "used",
-                "MIPS",
-                "in",
-                "CS",
-                "447",
-                ".",
-                "\u2022",
-                "A",
-                "RISC",
-                "processor",
-                ".",
-                "\u2022",
-                "We",
-                "will",
-                "compare",
-                "that",
-                "to",
-                "x86",
-                "today",
-                "!",
-                "\u2022",
-                "A",
-                "CISC",
-                "processor",
-                ".",
-                "3"
+                "."
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -275,107 +215,38 @@
         },
         {
             "sentence": [
-                "What",
-                "is",
-                "\u201c",
-                "Assembly",
-                "\u201d",
+                "",
                 "\u2022",
-                "Involves",
-                "very",
-                "simple",
-                "commands",
-                ".",
-                "\u2022",
-                "This",
-                "command",
-                "copies",
-                "data",
-                "from",
-                "one",
-                "place",
-                "to",
-                "another",
-                ".",
-                "\u2022",
-                "Despite",
-                "being",
-                "called",
-                "\u201c",
-                "move",
-                "\u201d",
-                ",",
-                "ugh",
-                "!",
-                "\u2022",
-                "Surprise",
-                "!",
-                "It",
-                "\u2019s",
-                "actually",
-                "shorthand",
-                "for",
-                "a",
-                "different",
-                "set",
+                "Each",
+                "CPU",
+                "chooses",
+                "its",
+                "own",
+                "machine",
+                "code",
+                "(",
+                "and",
+                "therefore",
+                "its",
+                "own",
+                "style",
                 "of",
-                "instructions",
-                ".",
+                "assembly",
+                "language",
+                ")",
                 "\u2022",
-                "The",
-                "processor",
-                "can",
-                "be",
-                "made",
-                "simpler",
-                ".",
-                "\u2022",
-                "This",
-                "command",
-                "gets",
-                "transformed",
-                "into",
-                "a",
-                "numerical",
-                "representation",
-                ".",
-                "Compute",
-                "t0+0",
-                "Put",
-                "into",
-                "\u201c",
-                "a0",
-                "\u201d",
-                "\u2022",
-                "The",
-                "processor",
-                "then",
-                "interprets",
-                "the",
-                "binary",
-                "representation",
-                ".",
-                "\u2022",
-                "That",
-                "\u2019s",
-                "essentially",
-                "all",
-                "a",
-                "computer",
-                "does",
-                "!",
-                "\u2022",
+                "We",
+                "used",
+                "MIPS",
+                "in",
                 "CS",
                 "447",
-                "looks",
-                "at",
-                "this",
-                "in",
-                "much",
-                "greater",
-                "detail",
                 ".",
-                "4"
+                "\u2022",
+                "A",
+                "RISC",
+                "processor",
+                "."
             ],
             "word_labels": [
                 "O",
@@ -409,6 +280,28 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "We",
+                "will",
+                "compare",
+                "that",
+                "to",
+                "x86",
+                "today",
+                "!",
+                "\u2022",
+                "A",
+                "CISC",
+                "processor",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -423,7 +316,45 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "3"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "What",
+                "is",
+                "\u201c",
+                "Assembly",
+                "\u201d",
+                "\u2022",
+                "Involves",
+                "very",
+                "simple",
+                "commands",
+                ".",
+                "\u2022",
+                "This",
+                "command",
+                "copies",
+                "data",
+                "from",
+                "one",
+                "place",
+                "to",
+                "another",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -445,6 +376,24 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Despite",
+                "being",
+                "called",
+                "\u201c",
+                "move",
+                "\u201d",
+                ",",
+                "ugh",
+                "!"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -455,6 +404,28 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Surprise",
+                "!",
+                "It",
+                "\u2019s",
+                "actually",
+                "shorthand",
+                "for",
+                "a",
+                "different",
+                "set",
+                "of",
+                "instructions",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -469,6 +440,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "The",
+                "processor",
+                "can",
+                "be",
+                "made",
+                "simpler",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -477,6 +464,131 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "This",
+                "command",
+                "gets",
+                "transformed",
+                "into",
+                "a",
+                "numerical",
+                "representation",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Compute",
+                "t0+0",
+                "Put",
+                "into",
+                "\u201c",
+                "a0",
+                "\u201d"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "The",
+                "processor",
+                "then",
+                "interprets",
+                "the",
+                "binary",
+                "representation",
+                ".",
+                "\u2022",
+                "That",
+                "\u2019s",
+                "essentially",
+                "all",
+                "a",
+                "computer",
+                "does",
+                "!",
+                "\u2022",
+                "CS",
+                "447",
+                "looks",
+                "at",
+                "this",
+                "in",
+                "much",
+                "greater",
+                "detail",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "4"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -528,11 +640,7 @@
                 "language",
                 ".",
                 "MIPS",
-                "asm",
-                "MIPS",
-                "machine",
-                "language",
-                "5"
+                "asm"
             ],
             "word_labels": [
                 "O",
@@ -580,9 +688,29 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS",
+                "machine",
+                "language"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "5"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -641,141 +769,9 @@
                 "a",
                 "particular",
                 "CPU",
-                ".",
-                "---",
-                "\u2022",
-                "So",
-                ",",
-                "large",
-                "programs",
-                "have",
-                "to",
-                "be",
-                "rewritten",
-                "(",
-                "usually",
-                ")",
-                "to",
-                "work",
-                "on",
-                "new",
-                "things",
-                ".",
-                "\u2022",
-                "Yet",
-                ":",
-                "good",
-                "for",
-                "specialized",
-                "stuff",
-                ".",
-                "\u2022",
-                "Critical",
-                "paths",
-                "and",
-                "\u201c",
-                "boot",
-                "\u201d",
-                "code",
-                "in",
-                "Kernels",
-                "/",
-                "Operating",
-                "Systems",
-                "\u2022",
-                "HPC",
-                "(",
-                "simulators",
-                ",",
-                "supercomputer",
-                "stuff",
-                ")",
-                "\u2022",
-                "Real-time",
-                "programs",
-                "(",
-                "video",
-                "games",
-                ";",
-                "tho",
-                "increasingly",
-                "less",
-                "/",
-                "abstracted",
-                "away",
-                ")",
-                "\u2022",
-                "And",
-                "\u2026",
-                "6"
+                "."
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -833,65 +829,107 @@
         },
         {
             "sentence": [
-                "Architecture",
-                "Sits",
-                "at",
-                "the",
-                "Hardware",
-                "Interface",
-                "Source",
-                "code",
-                "Compiler",
-                "Architecture",
-                "Applications",
-                "/",
-                "algorithms",
-                "Perform",
-                "optimizations",
+                "",
+                "---"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "So",
                 ",",
-                "generate",
-                "instructions",
-                "Instruction",
-                "set",
-                "Different",
-                "implementations",
-                "Intel",
-                "Pentium",
-                "4",
-                "C",
-                "Language",
-                "Program",
-                "A",
-                "Hardware",
-                "Intel",
-                "Core",
-                "2",
-                "GCC",
-                "x86",
-                "-",
-                "64",
-                "Intel",
-                "Core",
-                "i7",
-                "AMD",
-                "Opteron",
-                "Program",
-                "B",
-                "AMD",
-                "Athlon",
-                "Clang",
-                "Your",
-                "program",
-                "ARMv8",
+                "large",
+                "programs",
+                "have",
+                "to",
+                "be",
+                "rewritten",
                 "(",
-                "AArch64",
-                "/",
-                "A64",
+                "usually",
                 ")",
-                "ARM",
-                "Cortex-A53",
-                "Apple",
-                "A7"
+                "to",
+                "work",
+                "on",
+                "new",
+                "things",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Yet",
+                ":",
+                "good",
+                "for",
+                "specialized",
+                "stuff",
+                ".",
+                "\u2022",
+                "Critical",
+                "paths",
+                "and",
+                "\u201c",
+                "boot",
+                "\u201d",
+                "code",
+                "in",
+                "Kernels",
+                "/",
+                "Operating",
+                "Systems",
+                "\u2022",
+                "HPC",
+                "(",
+                "simulators",
+                ",",
+                "supercomputer",
+                "stuff",
+                ")",
+                "\u2022",
+                "Real-time",
+                "programs",
+                "(",
+                "video",
+                "games",
+                ";",
+                "tho",
+                "increasingly",
+                "less",
+                "/",
+                "abstracted",
+                "away",
+                ")",
+                "\u2022",
+                "And",
+                "\u2026"
             ],
             "word_labels": [
                 "O",
@@ -940,6 +978,31 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "6"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Architecture",
+                "Sits",
+                "at",
+                "the",
+                "Hardware",
+                "Interface",
+                "Source",
+                "code"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -947,7 +1010,248 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Compiler"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Architecture"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Applications",
+                "/",
+                "algorithms"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Perform",
+                "optimizations",
+                ",",
+                "generate",
+                "instructions"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Instruction",
+                "set"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Different",
+                "implementations"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Intel",
+                "Pentium",
+                "4"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "C",
+                "Language",
+                "Program",
+                "A"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Hardware"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Intel",
+                "Core",
+                "2"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "GCC"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "x86",
+                "-",
+                "64"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Intel",
+                "Core",
+                "i7",
+                "AMD",
+                "Opteron"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Program",
+                "B"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "AMD",
+                "Athlon",
+                "Clang"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Your",
+                "program"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "ARMv8",
+                "(",
+                "AArch64",
+                "/",
+                "A64",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "ARM",
+                "Cortex-A53",
+                "Apple",
+                "A7"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1036,7 +1340,94 @@
                 "assembly",
                 "for",
                 "this",
-                "!",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "I",
                 "\u2019m",
                 "not",
@@ -1077,108 +1468,9 @@
                 "a",
                 "browser",
                 "emulator",
-                ")",
-                "x86",
-                "(",
-                "NASM",
-                "/",
-                "Intel",
-                "Syntax",
-                ",",
-                "MS-DOS",
-                ")",
-                "8"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1225,12 +1517,61 @@
         },
         {
             "sentence": [
+                "",
+                "x86",
+                "(",
+                "NASM",
+                "/",
+                "Intel",
+                "Syntax",
+                ",",
+                "MS-DOS",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "8"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Practical",
                 "Applications",
                 "of",
                 "Assembly",
                 ":",
-                "Debugging",
+                "Debugging"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "Programs",
                 "written",
@@ -1250,7 +1591,35 @@
                 "into",
                 "machine",
                 "code",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "You",
                 "can",
@@ -1279,7 +1648,44 @@
                 "at",
                 "a",
                 "time",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "When",
                 "programs",
@@ -1320,95 +1726,9 @@
                 "radare",
                 ",",
                 "etc",
-                ")",
-                "\u2022",
-                "We",
-                "will",
-                "apply",
-                "this",
-                "knowledge",
-                "(",
-                "using",
-                "gdb",
-                ")",
-                "in",
-                "a",
-                "future",
-                "assignment",
-                "!",
-                "9"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1455,22 +1775,23 @@
         },
         {
             "sentence": [
-                "Basics",
-                "of",
-                "x86",
-                "Assembly",
-                "x86",
-                "really",
-                "puts",
-                "the",
-                "\u2026",
-                "you",
-                "know",
-                "what",
-                "\u2026",
+                "",
+                "\u2022",
+                "We",
+                "will",
+                "apply",
+                "this",
+                "knowledge",
+                "(",
+                "using",
+                "gdb",
+                ")",
                 "in",
-                "Assembly",
-                "10"
+                "a",
+                "future",
+                "assignment",
+                "!",
+                "9"
             ],
             "word_labels": [
                 "O",
@@ -1487,6 +1808,53 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Basics",
+                "of",
+                "x86",
+                "Assembly",
+                "x86",
+                "really",
+                "puts",
+                "the",
+                "\u2026",
+                "you",
+                "know",
+                "what",
+                "\u2026",
+                "in",
+                "Assembly"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "10"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1526,7 +1894,48 @@
                 "what",
                 "we",
                 "mean",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "The",
                 "ISA",
@@ -1576,43 +1985,7 @@
                 "to",
                 "encode",
                 "instructions",
-                ".",
-                "\u2022",
-                "The",
-                "ISA",
-                "does",
-                "not",
-                "define",
-                ":",
-                "\u2022",
-                "How",
-                "to",
-                "design",
-                "the",
-                "hardware",
-                "!",
-                "\u2022",
-                "\u2026",
-                "if",
-                "there",
-                "'s",
-                "any",
-                "hardware",
-                "at",
-                "all",
-                "(",
-                "think",
-                "of",
-                "Java",
-                ",",
-                "etc",
-                ":",
-                "virtual",
-                "/",
-                "hypothetical",
-                "ISAs",
-                ")",
-                "11"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -1665,6 +2038,49 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "The",
+                "ISA",
+                "does",
+                "not",
+                "define",
+                ":",
+                "\u2022",
+                "How",
+                "to",
+                "design",
+                "the",
+                "hardware",
+                "!",
+                "\u2022",
+                "\u2026",
+                "if",
+                "there",
+                "'s",
+                "any",
+                "hardware",
+                "at",
+                "all",
+                "(",
+                "think",
+                "of",
+                "Java",
+                ",",
+                "etc",
+                ":",
+                "virtual",
+                "/",
+                "hypothetical",
+                "ISAs",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1700,39 +2116,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "11"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -1779,7 +2171,55 @@
                 "that",
                 "make",
                 "machine",
-                "code",
+                "code"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "A",
                 "small",
@@ -1800,8 +2240,7 @@
                 ")",
                 "is",
                 "very",
-                "RISCy",
-                "12"
+                "RISCy"
             ],
             "word_labels": [
                 "O",
@@ -1820,6 +2259,141 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "12"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Types",
+                "of",
+                "ISAs",
+                ":",
+                "CISC",
+                "\u2022",
+                "CISC",
+                ":",
+                "\"",
+                "Complex",
+                "Instruction",
+                "Set",
+                "Computer",
+                "\"",
+                "\u2022",
+                "ISA",
+                "designed",
+                "for",
+                "humans",
+                "to",
+                "write",
+                "asm",
+                ".",
+                "\u2022",
+                "From",
+                "the",
+                "days",
+                "before",
+                "compilers",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Lots",
+                "of",
+                "instructions",
+                "and",
+                "ways",
+                "to",
+                "use",
+                "them",
+                "\u2022",
+                "Complex",
+                "(",
+                "multi-step",
+                ")",
+                "instructions",
+                "to",
+                "shorten",
+                "and",
+                "simplify",
+                "programs",
+                ".",
+                "\u2022",
+                "\"",
+                "search",
+                "a",
+                "string",
+                "for",
+                "a",
+                "character",
+                "\"",
+                "\u2022",
+                "\"",
+                "copy",
+                "memory",
+                "blocks",
+                "\"",
+                "\u2022",
+                "\"",
+                "check",
+                "the",
+                "bounds",
+                "of",
+                "an",
+                "array",
+                "access",
+                "\u201c"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1871,82 +2445,7 @@
         },
         {
             "sentence": [
-                "Types",
-                "of",
-                "ISAs",
-                ":",
-                "CISC",
-                "\u2022",
-                "CISC",
-                ":",
-                "\"",
-                "Complex",
-                "Instruction",
-                "Set",
-                "Computer",
-                "\"",
-                "\u2022",
-                "ISA",
-                "designed",
-                "for",
-                "humans",
-                "to",
-                "write",
-                "asm",
-                ".",
-                "\u2022",
-                "From",
-                "the",
-                "days",
-                "before",
-                "compilers",
-                "!",
-                "\u2022",
-                "Lots",
-                "of",
-                "instructions",
-                "and",
-                "ways",
-                "to",
-                "use",
-                "them",
-                "\u2022",
-                "Complex",
-                "(",
-                "multi-step",
-                ")",
-                "instructions",
-                "to",
-                "shorten",
-                "and",
-                "simplify",
-                "programs",
-                ".",
-                "\u2022",
-                "\"",
-                "search",
-                "a",
-                "string",
-                "for",
-                "a",
-                "character",
-                "\"",
-                "\u2022",
-                "\"",
-                "copy",
-                "memory",
-                "blocks",
-                "\"",
-                "\u2022",
-                "\"",
-                "check",
-                "the",
-                "bounds",
-                "of",
-                "an",
-                "array",
-                "access",
-                "\u201c",
+                "",
                 "\u2022",
                 "Without",
                 "these",
@@ -1977,81 +2476,6 @@
                 "13"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2126,7 +2550,56 @@
                 "might",
                 "be",
                 "longer",
-                ")",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u201c",
                 "Hackers",
                 "\u201d",
@@ -2190,8 +2663,7 @@
                 "can",
                 "get",
                 "complicated",
-                ".",
-                "14"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -2258,47 +2730,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "14"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2354,7 +2794,64 @@
                 "new",
                 "x86",
                 "CPU",
-                "!",
+                "!"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "This",
                 "ISA",
@@ -2410,8 +2907,7 @@
                 "not",
                 "writing",
                 "it",
-                ".",
-                "15"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -2470,55 +2966,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "15"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -2557,69 +3013,9 @@
                 "in",
                 "binary",
                 "form",
-                ".",
-                "\u2022",
-                "Unlike",
-                "MIPS",
-                ",",
-                "you",
-                "can",
-                "refer",
-                "to",
-                "parts",
-                "of",
-                "each",
-                "register",
-                ".",
-                "\u2022",
-                "Called",
-                "partial",
-                "registers",
-                ".",
-                "Denoted",
-                "by",
-                "%",
-                "Stack",
-                "Pointer",
-                "16-bit",
-                "register",
-                "names",
-                "32-bit",
-                "register",
-                "names",
-                "16"
+                "."
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2657,94 +3053,25 @@
         },
         {
             "sentence": [
-                "general",
-                "purpose",
-                "32-bit",
-                "OLD",
-                "Registers",
-                "\u2013",
-                "32",
-                "bits",
-                "wide",
-                "8",
-                "bits",
-                "32",
-                "bits",
-                "16",
-                "bits",
-                "%",
-                "eax",
-                "%",
-                "ax",
-                "%",
-                "ah",
-                "%",
-                "al",
-                "accumulate",
-                "%",
-                "ecx",
-                "%",
-                "cx",
-                "%",
-                "ch",
-                "%",
-                "cl",
-                "counter",
-                "%",
-                "edx",
-                "%",
-                "dx",
-                "%",
-                "dh",
-                "%",
-                "dl",
-                "data",
-                "%",
-                "ebx",
-                "%",
-                "bx",
-                "%",
-                "bh",
-                "%",
-                "bl",
-                "base",
-                "%",
-                "esi",
-                "%",
-                "si",
-                "source",
-                "index",
-                "%",
-                "edi",
-                "%",
-                "di",
-                "destination",
-                "index",
-                "%",
-                "esp",
-                "%",
-                "sp",
-                "stack",
-                "pointer",
-                "%",
-                "ebp",
-                "%",
-                "bp",
-                "base",
-                "pointer",
-                "16-bit",
-                "virtual",
+                "",
+                "\u2022",
+                "Unlike",
+                "MIPS",
+                ",",
+                "you",
+                "can",
+                "refer",
+                "to",
+                "parts",
+                "of",
+                "each",
+                "register",
+                ".",
+                "\u2022",
+                "Called",
+                "partial",
                 "registers",
-                "(",
-                "backwards",
-                "compatibility",
-                ")",
-                "Name",
-                "Origin",
-                "(",
-                "mostly",
-                "obsolete",
-                ")"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -2765,6 +3092,97 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Denoted",
+                "by",
+                "%"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Stack",
+                "Pointer"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "16-bit",
+                "register",
+                "names"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "32-bit",
+                "register",
+                "names"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "16"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "general",
+                "purpose"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "32-bit",
+                "OLD",
+                "Registers",
+                "\u2013",
+                "32",
+                "bits",
+                "wide",
+                "8",
+                "bits"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2774,6 +3192,411 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "32",
+                "bits"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "16",
+                "bits"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "eax"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ax"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ah"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "al"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "accumulate"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ecx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "cx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ch"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "cl"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "counter"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "edx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "dx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "dh"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "dl"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "data"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ebx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "bx"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "bh"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "bl"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "base"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "esi"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "si"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "source",
+                "index"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "edi"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "di"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "destination",
+                "index"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "esp"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "sp"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "stack",
+                "pointer"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "ebp"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "%",
+                "bp"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "base",
+                "pointer",
+                "16-bit",
+                "virtual",
+                "registers",
+                "(",
+                "backwards",
+                "compatibility",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2783,51 +3606,20 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Name",
+                "Origin",
+                "(",
+                "mostly",
+                "obsolete",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2879,7 +3671,55 @@
                 "be",
                 "read",
                 "directly",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "There",
                 "is",
@@ -2931,31 +3771,7 @@
                 "an",
                 "operation",
                 "overflowed",
-                ".",
-                "\u2022",
-                "And",
-                "some",
-                "extra",
-                "registers",
-                "for",
-                "vector",
-                "math",
-                ",",
-                "floating",
-                "point",
-                "math",
-                ",",
-                "and",
-                "for",
-                "OS",
-                "usage",
-                "we",
-                "wo",
-                "n\u2019t",
-                "go",
-                "over",
-                ".",
-                "18"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -3010,46 +3826,38 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "And",
+                "some",
+                "extra",
+                "registers",
+                "for",
+                "vector",
+                "math",
+                ",",
+                "floating",
+                "point",
+                "math",
+                ",",
+                "and",
+                "for",
+                "OS",
+                "usage",
+                "we",
+                "wo",
+                "n\u2019t",
+                "go",
+                "over",
+                ".",
+                "18"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3145,59 +3953,9 @@
                 "&",
                 "T",
                 "syntax",
-                ")",
-                ")",
-                "MIPS",
-                "Immediates",
-                "(",
-                "prefixed",
-                "by",
-                "$",
-                ")",
-                "Memory",
-                "load",
-                "(",
-                "within",
-                "parens",
-                ")",
-                "Memory",
-                "store",
-                "Displacement",
-                "(",
-                "can",
-                "be",
-                "-4",
-                ",",
-                "etc",
-                ")",
-                "19"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3269,6 +4027,96 @@
         },
         {
             "sentence": [
+                "",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Immediates",
+                "(",
+                "prefixed",
+                "by",
+                "$",
+                ")",
+                "Memory",
+                "load",
+                "(",
+                "within",
+                "parens",
+                ")",
+                "Memory",
+                "store"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Displacement",
+                "(",
+                "can",
+                "be",
+                "-4",
+                ",",
+                "etc",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "19"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Complex",
                 "Addressing",
                 "\u2022",
@@ -3311,65 +4159,7 @@
                 "(",
                 "CISC",
                 ")",
-                "\u2022",
-                ":",
-                "Base",
-                "+",
-                "(",
-                "Index",
-                "Scalar",
-                ")",
-                "where",
-                "Scalar",
-                "must",
-                "be",
-                "1",
-                ",",
-                "2",
-                ",",
-                "4",
-                "or",
-                "8",
-                "\u2022",
-                "The",
-                "fields",
-                "are",
-                "all",
-                "optional",
-                ";",
-                "i.e.",
-                ",",
-                "x86",
-                "-",
-                "64",
-                "(",
-                "gas",
-                "/",
-                "AT",
-                "&",
-                "T",
-                "syntax",
-                ")",
-                "does",
-                "just",
-                "Index",
-                "Scalar",
-                "MIPS",
-                "\u201c",
-                "Load",
-                "Effective",
-                "Address",
-                "\u201d",
-                "LEA",
-                "simply",
-                "computes",
-                "address",
-                "(",
-                "no",
-                "memory",
-                "access",
-                ")",
-                "20"
+                "\u2022"
             ],
             "word_labels": [
                 "O",
@@ -3414,6 +4204,41 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                ":",
+                "Base",
+                "+",
+                "(",
+                "Index",
+                "Scalar",
+                ")",
+                "where",
+                "Scalar",
+                "must",
+                "be",
+                "1",
+                ",",
+                "2",
+                ",",
+                "4",
+                "or",
+                "8",
+                "\u2022",
+                "The",
+                "fields",
+                "are",
+                "all",
+                "optional",
+                ";",
+                "i.e.",
+                ","
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3441,6 +4266,25 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "x86",
+                "-",
+                "64",
+                "(",
+                "gas",
+                "/",
+                "AT",
+                "&",
+                "T",
+                "syntax",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3452,6 +4296,67 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "does",
+                "just",
+                "Index",
+                "Scalar"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u201c",
+                "Load",
+                "Effective",
+                "Address",
+                "\u201d"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "LEA",
+                "simply",
+                "computes",
+                "address",
+                "(",
+                "no",
+                "memory",
+                "access",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3461,16 +4366,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "20"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -3530,39 +4434,7 @@
                 "following",
                 "do",
                 "?",
-                "\u2022",
-                "x86",
-                "-",
-                "64",
-                "(",
-                "gas",
-                "/",
-                "AT",
-                "&",
-                "T",
-                "syntax",
-                ")",
-                "\u201c",
-                "Load",
-                "Effective",
-                "Address",
-                "\u201d",
-                "?",
-                "?",
-                "?",
-                "LEA",
-                "simply",
-                "computes",
-                "address",
-                "\u2026",
-                "it",
-                "\u2019s",
-                "just",
-                "very",
-                "specific",
-                "math",
-                ".",
-                "21"
+                "\u2022"
             ],
             "word_labels": [
                 "O",
@@ -3618,6 +4490,80 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "x86",
+                "-",
+                "64",
+                "(",
+                "gas",
+                "/",
+                "AT",
+                "&",
+                "T",
+                "syntax",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u201c",
+                "Load",
+                "Effective",
+                "Address",
+                "\u201d",
+                "?",
+                "?",
+                "?"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "LEA",
+                "simply",
+                "computes",
+                "address",
+                "\u2026",
+                "it",
+                "\u2019s",
+                "just",
+                "very",
+                "specific",
+                "math",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3630,25 +4576,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "21"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -3697,7 +4633,57 @@
                 "8-bit",
                 "sections",
                 "sometimes",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "The",
                 "assembler",
@@ -3728,8 +4714,56 @@
                 "figures",
                 "it",
                 "out",
-                "\u201d",
-                "MIPS64",
+                "\u201d"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS64"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u201c",
                 "quad",
                 "word",
@@ -3766,85 +4800,9 @@
                 "Spring",
                 "2019",
                 "/",
-                "2020",
-                "22"
+                "2020"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3887,6 +4845,16 @@
         },
         {
             "sentence": [
+                "",
+                "22"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Hello",
                 "World",
                 "!",
@@ -3905,12 +4873,7 @@
                 "&",
                 "T",
                 "syntax",
-                ")",
-                "MIPS",
-                "(",
-                "MARS",
-                ")",
-                "23"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -3931,10 +4894,31 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS",
+                "(",
+                "MARS",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "23"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -3968,9 +4952,7 @@
                 "&",
                 "T",
                 "syntax",
-                ")",
-                "MIPS",
-                "24"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -4000,7 +4982,25 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "24"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -4028,121 +5028,9 @@
                 "the",
                 "bitsize",
                 ".",
-                "\u2022",
-                "(",
-                "64-bit",
-                ")",
-                ",",
-                "(",
-                "32-bit",
-                ")",
-                ",",
-                "(",
-                "16-bit",
-                ")",
-                ",",
-                "x86",
-                "-",
-                "64",
-                "(",
-                "gas",
-                "/",
-                "AT",
-                "&",
-                "T",
-                "syntax",
-                ")",
-                "(",
-                "8-bit",
-                ")",
-                "(",
-                "rest",
-                "of",
-                "field",
-                "zero",
-                "extended",
-                "!",
-                "!",
-                ")",
-                "MIPS",
-                "Arithmetic",
-                "shift",
-                "(",
-                "sign",
-                "extends",
-                ")",
-                "Logical",
-                "shift",
-                "(",
-                "zero",
-                "extends",
-                ")",
-                "8-bit",
-                "register",
-                "aliases",
-                "are",
-                "not",
-                "commonly",
-                "used",
-                "25"
+                "\u2022"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -4169,6 +5057,198 @@
         },
         {
             "sentence": [
+                "",
+                "(",
+                "64-bit",
+                ")",
+                ","
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "(",
+                "32-bit",
+                ")",
+                ","
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "(",
+                "16-bit",
+                ")",
+                ","
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "x86",
+                "-",
+                "64",
+                "(",
+                "gas",
+                "/",
+                "AT",
+                "&",
+                "T",
+                "syntax",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "(",
+                "8-bit",
+                ")",
+                "(",
+                "rest",
+                "of",
+                "field",
+                "zero",
+                "extended",
+                "!",
+                "!",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "MIPS"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Arithmetic",
+                "shift",
+                "(",
+                "sign",
+                "extends",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Logical",
+                "shift",
+                "(",
+                "zero",
+                "extends",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "8-bit",
+                "register",
+                "aliases",
+                "are",
+                "not",
+                "commonly",
+                "used"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "25"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Assembly",
                 "Interlude",
                 "Here",
@@ -4184,8 +5264,7 @@
                 "some",
                 "existing",
                 "code",
-                ".",
-                "26"
+                "."
             ],
             "word_labels": [
                 "O",
@@ -4203,6 +5282,15 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "26"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -4240,85 +5328,9 @@
                 "this",
                 "for",
                 "you",
-                ":",
-                "\u2022",
-                "This",
-                "will",
-                "create",
-                "a",
-                "file",
-                "called",
-                "which",
-                "looks",
-                "\u2026",
-                "messy",
-                ".",
-                "\u2022",
-                "It",
-                "has",
-                "a",
-                "ton",
-                "of",
-                "messy",
-                "specific",
-                "stuff",
-                "wedged",
-                "in",
-                "there",
-                ".",
-                "\u2022",
-                "But",
-                "you",
-                "can",
-                "generally",
-                "pull",
-                "apart",
-                "some",
-                "meaning",
-                "from",
-                "it",
-                ".",
-                "27"
+                ":"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -4355,6 +5367,114 @@
         },
         {
             "sentence": [
+                "",
+                "\u2022",
+                "This",
+                "will",
+                "create",
+                "a",
+                "file",
+                "called"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "which",
+                "looks",
+                "\u2026",
+                "messy",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "It",
+                "has",
+                "a",
+                "ton",
+                "of",
+                "messy",
+                "specific",
+                "stuff",
+                "wedged",
+                "in",
+                "there",
+                ".",
+                "\u2022",
+                "But",
+                "you",
+                "can",
+                "generally",
+                "pull",
+                "apart",
+                "some",
+                "meaning",
+                "from",
+                "it",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "27"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Looking",
                 "at",
                 "C",
@@ -4381,18 +5501,7 @@
                 "&",
                 "T",
                 "syntax",
-                ",",
-                "main",
-                "has",
-                "n\u2019t",
-                "even",
-                "shown",
-                "up",
-                "yet",
-                "\u2026",
-                ")",
-                "C",
-                "28"
+                ","
             ],
             "word_labels": [
                 "O",
@@ -4421,6 +5530,22 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "main",
+                "has",
+                "n\u2019t",
+                "even",
+                "shown",
+                "up",
+                "yet",
+                "\u2026"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4429,8 +5554,35 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                ")"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "C"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "28"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -4470,82 +5622,7 @@
                 "we",
                 "go",
                 "backward",
-                "?",
-                "\u2022",
-                "You",
-                "can",
-                "take",
-                "any",
-                "compiled",
-                "program",
-                "and",
-                "emit",
-                "the",
-                "assembly",
-                ".",
-                "\u2022",
-                "Many",
-                "tools",
-                "can",
-                "help",
-                "you",
-                "do",
-                "this",
-                "(",
-                "radare",
-                ",",
-                "objdump",
-                ",",
-                "gdb",
-                ")",
-                "\u2022",
-                "Using",
-                "a",
-                "tool",
-                "called",
-                "objdump",
-                "(",
-                "only",
-                "disassembles",
-                "code",
-                "section",
-                ")",
-                ":",
-                "\u2022",
-                "This",
-                "will",
-                "create",
-                "a",
-                "file",
-                "called",
-                ".",
-                "\u2022",
-                "You",
-                "can",
-                "glance",
-                "at",
-                "it",
-                "and",
-                "notice",
-                "that",
-                "it",
-                "does",
-                "not",
-                "have",
-                "names",
-                ".",
-                "\u2022",
-                "And",
-                "labels",
-                "are",
-                "a",
-                "bit",
-                ",",
-                "well",
-                ",",
-                "nonexistent",
-                ".",
-                "29"
+                "?"
             ],
             "word_labels": [
                 "O",
@@ -4581,6 +5658,41 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "You",
+                "can",
+                "take",
+                "any",
+                "compiled",
+                "program",
+                "and",
+                "emit",
+                "the",
+                "assembly",
+                ".",
+                "\u2022",
+                "Many",
+                "tools",
+                "can",
+                "help",
+                "you",
+                "do",
+                "this",
+                "(",
+                "radare",
+                ",",
+                "objdump",
+                ",",
+                "gdb",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4608,6 +5720,27 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Using",
+                "a",
+                "tool",
+                "called",
+                "objdump",
+                "(",
+                "only",
+                "disassembles",
+                "code",
+                "section",
+                ")",
+                ":"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4621,6 +5754,21 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "This",
+                "will",
+                "create",
+                "a",
+                "file",
+                "called"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4628,7 +5776,51 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "."
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "You",
+                "can",
+                "glance",
+                "at",
+                "it",
+                "and",
+                "notice",
+                "that",
+                "it",
+                "does",
+                "not",
+                "have",
+                "names",
+                ".",
+                "\u2022",
+                "And",
+                "labels",
+                "are",
+                "a",
+                "bit",
+                ",",
+                "well",
+                ",",
+                "nonexistent",
+                ".",
+                "29"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4686,18 +5878,7 @@
                 "&",
                 "T",
                 "syntax",
-                ",",
-                ")",
-                "C",
-                "Machine",
-                "code",
-                "(",
-                "in",
-                "bytes",
-                ")",
-                "Instruction",
-                "address",
-                "30"
+                ","
             ],
             "word_labels": [
                 "O",
@@ -4725,8 +5906,43 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                ")"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "C"
+            ],
+            "word_labels": [
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Machine",
+                "code",
+                "(",
+                "in",
+                "bytes",
+                ")",
+                "Instruction",
+                "address",
+                "30"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4772,7 +5988,46 @@
                 "&",
                 "T",
                 "syntax",
-                ",",
+                ","
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 ")",
                 "Preserves",
                 "(",
@@ -4816,26 +6071,7 @@
                 "value",
                 "is",
                 "in",
-                ")",
-                "Instructions",
-                "have",
-                "varying",
-                "size",
-                "So",
-                ",",
-                "the",
-                "next",
-                "instruction",
-                "address",
-                "is",
-                "irregular",
-                ".",
-                "Compare",
-                "with",
-                "MIPS",
-                "/",
-                "RISC-V.",
-                "31"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -4882,6 +6118,32 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Instructions",
+                "have",
+                "varying",
+                "size",
+                "So",
+                ",",
+                "the",
+                "next",
+                "instruction",
+                "address",
+                "is",
+                "irregular",
+                ".",
+                "Compare",
+                "with",
+                "MIPS",
+                "/",
+                "RISC-V."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -4900,37 +6162,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "31"
+            ],
+            "word_labels": [
                 "O",
                 "O"
             ]
@@ -5003,7 +6243,81 @@
                 "different",
                 "C",
                 "ABI",
-                "\uf04c",
+                "\uf04c"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "\u2022",
                 "In",
                 "our",
@@ -5084,117 +6398,9 @@
                 "worth",
                 "going",
                 "over",
-                ".",
-                ")",
-                "\u2022",
-                "For",
-                "reference",
-                ":",
-                "https",
-                ":",
-                "/",
-                "/",
-                "github.com",
-                "/",
-                "hjl-tools",
-                "/",
-                "x86-psABI",
-                "/",
-                "wiki",
-                "/",
-                "x86",
-                "-",
-                "64-psABI-1.0.pdf",
-                "32"
+                "."
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -5280,16 +6486,62 @@
             ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                ")"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "\u2022",
+                "For",
+                "reference",
+                ":",
+                "https",
+                ":",
+                "/",
+                "/",
+                "github.com",
+                "/",
+                "hjl-tools",
+                "/",
+                "x86-psABI",
+                "/",
+                "wiki",
+                "/",
+                "x86",
+                "-",
+                "64-psABI-1.0.pdf",
+                "32"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
             "sentence": [],

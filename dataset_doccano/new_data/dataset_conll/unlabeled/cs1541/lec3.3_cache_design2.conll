@@ -17,6 +17,9 @@ Parameter _ _ O
 Write-Through _ _ O
 vs. _ _ O
 Write-Back _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Writes _ _ O
@@ -36,6 +39,9 @@ x _ _ O
 = _ _ O
 24 _ _ O
 initially _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -52,8 +58,14 @@ t0 _ _ O
 , _ _ O
 & _ _ O
 x _ _ O
+
+
+ _ _ O
 # _ _ O
 x++ _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 will _ _ O
@@ -92,29 +104,92 @@ value _ _ O
 24 _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 V _ _ O
 000 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
+
+
+ _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
 011 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 100 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 101 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 110 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 111 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Tag _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 111 _ _ O
+
+
+ _ _ O
 25 _ _ O
 24 _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 can _ _ O
@@ -152,6 +227,9 @@ cache _ _ O
 
 Write-Through _ _ O
 Policy _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Policy _ _ O
@@ -221,54 +299,147 @@ in _ _ O
 time _ _ O
 ! _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 94 _ _ O
 93 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 24 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
 94 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Write-through _ _ O
@@ -348,56 +519,149 @@ no _ _ O
 write _ _ O
 allocate _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 94 _ _ O
 93 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 000 _ _ O
 111 _ _ O
+
+
+ _ _ O
 24 _ _ O
 94 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
 94 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Write-through _ _ O
@@ -456,59 +720,158 @@ all _ _ O
 problems _ _ O
 ? _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 94 _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 24 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
 94 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Write-through _ _ O
@@ -524,6 +887,9 @@ solve _ _ O
 all _ _ O
 problems _ _ O
 . _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Write _ _ O
@@ -630,6 +996,9 @@ bandwidth-intensive _ _ O
 
 Write-Back _ _ O
 Policy _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Policy _ _ O
@@ -730,6 +1099,9 @@ back _ _ O
 on _ _ O
 eviction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Cache _ _ O
 V _ _ O
 D _ _ O
@@ -742,26 +1114,80 @@ Data _ _ O
 0 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 000001 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
 10 _ _ O
 
@@ -813,6 +1239,9 @@ from _ _ O
 hitting _ _ O
 in _ _ O
 cache _ _ O
+
+
+ _ _ O
 ● _ _ O
 Unlike _ _ O
 write-through _ _ O
@@ -882,6 +1311,9 @@ going _ _ O
 be _ _ O
 overwritten _ _ O
 ? _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Write-back _ _ O
@@ -928,20 +1360,35 @@ word _ _ O
 V _ _ O
 D _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 Tag _ _ O
+
+
+ _ _ O
 Data _ _ O
 first _ _ O
 word _ _ O
 ( _ _ O
 written _ _ O
 ) _ _ O
+
+
+ _ _ O
 second _ _ O
 word _ _ O
 ( _ _ O
 not _ _ O
 written _ _ O
 ) _ _ O
+
+
+ _ _ O
 o _ _ O
 After _ _ O
 allocate _ _ O
@@ -1040,64 +1487,160 @@ to _ _ O
 address _ _ O
 1110102 _ _ O
 ? _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 111 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Policy _ _ O
@@ -1141,66 +1684,162 @@ compared _ _ O
 to _ _ O
 write-through _ _ O
 ? _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 24 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Policy _ _ O
@@ -1247,66 +1886,168 @@ past _ _ O
 the _ _ O
 store _ _ O
 ) _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Policy _ _ O
@@ -1410,65 +2151,164 @@ it _ _ O
 later _ _ O
 ? _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Policy _ _ O
@@ -1531,22 +2371,40 @@ Memory _ _ O
 eventually _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
@@ -1556,55 +2414,139 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 111 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Policy _ _ O
@@ -1638,65 +2580,146 @@ to _ _ O
 the _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -1704,16 +2727,43 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Policy _ _ O
@@ -1776,67 +2826,148 @@ Buffer _ _ O
 ! _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -1844,16 +2975,43 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Policy _ _ O
@@ -1899,66 +3057,144 @@ store _ _ O
 latency _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -1966,15 +3202,39 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Write-back _ _ O
@@ -2006,79 +3266,181 @@ the _ _ O
 way _ _ O
 to _ _ O
 Memory _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
 21 _ _ O
 
@@ -2142,79 +3504,178 @@ clean _ _ O
 ) _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 111 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 25 _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
 22 _ _ O
 
@@ -2277,79 +3738,178 @@ space _ _ O
 . _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
 000 _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 0 _ _ O
 111 _ _ O
 000 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 25 _ _ O
 93 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
 23 _ _ O
 
@@ -2380,27 +3940,51 @@ filled _ _ O
 with _ _ O
 block _ _ O
 25 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2409,36 +3993,87 @@ Data _ _ O
 0 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 010 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 25 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -2446,15 +4081,39 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Write-back _ _ O
@@ -2507,22 +4166,40 @@ victim _ _ O
 caches _ _ O
 L1 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 L2 _ _ O
 Cache _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 000 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2531,41 +4208,95 @@ Data _ _ O
 0 _ _ O
 0 _ _ O
 111 _ _ O
+
+
+ _ _ O
 001 _ _ O
 0 _ _ O
 0 _ _ O
 25 _ _ O
+
+
+ _ _ O
 010 _ _ O
 1 _ _ O
 1 _ _ O
 111 _ _ O
+
+
+ _ _ O
 Memory _ _ O
 25 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 Write _ _ O
 Buffer _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 93 _ _ O
+
+
+ _ _ O
 V _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 V _ _ O
 D _ _ O
 Tag _ _ O
 Data _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
@@ -2573,15 +4304,39 @@ Data _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 111010 _ _ O
+
+
+ _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 94 _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Impact _ _ O
@@ -2603,6 +4358,9 @@ rate _ _ O
 miss _ _ O
 penalty _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Write-through _ _ O
 caches _ _ O
@@ -2757,6 +4515,9 @@ Parameter _ _ O
 Blocking _ _ O
 vs. _ _ O
 Non-blocking _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Blocking _ _ O
@@ -2810,6 +4571,9 @@ quickly _ _ O
 return _ _ O
 to _ _ O
 Idle _ _ O
+
+
+ _ _ O
 ● _ _ O
 But _ _ O
 how _ _ O
@@ -2831,16 +4595,28 @@ requests _ _ O
 concurrently _ _ O
 Cache _ _ O
 Miss _ _ O
+
+
+ _ _ O
 ● _ _ O
 Blocking _ _ O
 caches _ _ O
 : _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
 Memory _ _ O
 Stall _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Cache _ _ O
 Stall _ _ O
@@ -2848,17 +4624,29 @@ on _ _ O
 Miss _ _ O
 Hit _ _ O
 Use _ _ O
+
+
+ _ _ O
 ● _ _ O
 Hit _ _ O
 under _ _ O
 miss _ _ O
 : _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
 Memory _ _ O
 Stall _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Cache _ _ O
 Stall _ _ O
@@ -2866,19 +4654,31 @@ on _ _ O
 Miss _ _ O
 Miss _ _ O
 Use _ _ O
+
+
+ _ _ O
 ● _ _ O
 Miss _ _ O
 under _ _ O
 miss _ _ O
 : _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
 Memory _ _ O
 Stall _ _ O
 Memory _ _ O
 Stall _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Non-blocking _ _ O
@@ -2893,17 +4693,29 @@ on _ _ O
 Miss _ _ O
 Hit _ _ O
 Use _ _ O
+
+
+ _ _ O
 ● _ _ O
 Hit _ _ O
 under _ _ O
 miss _ _ O
 : _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
 Memory _ _ O
 Stall _ _ O
+
+
+ _ _ O
 Cache _ _ O
 Cache _ _ O
 Stall _ _ O
@@ -2911,19 +4723,34 @@ on _ _ O
 Miss _ _ O
 Miss _ _ O
 Use _ _ O
+
+
+ _ _ O
 ● _ _ O
 Miss _ _ O
 under _ _ O
 miss _ _ O
 : _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 CPU _ _ O
 Compute _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Stall _ _ O
 Memory _ _ O
 Stall _ _ O
+
+
+ _ _ O
 ● _ _ O
 Non-blocking _ _ O
 cache _ _ O
@@ -3042,6 +4869,9 @@ execution _ _ O
 is _ _ O
 severely _ _ O
 stymied _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Cache _ _ O
@@ -3052,6 +4882,9 @@ Parameter _ _ O
 Unified _ _ O
 vs. _ _ O
 Split _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Problem _ _ O
@@ -3083,8 +4916,17 @@ and _ _ O
 code _ _ O
 Code _ _ O
 I-Cache _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 D-Cache _ _ O
+
+
+ _ _ O
 If _ _ O
 our _ _ O
 working _ _ O
@@ -3114,7 +4956,13 @@ of _ _ O
 data _ _ O
 space _ _ O
 . _ _ O
+
+
+ _ _ O
 Code _ _ O
+
+
+ _ _ O
 If _ _ O
 our _ _ O
 working _ _ O
@@ -3144,7 +4992,13 @@ of _ _ O
 code _ _ O
 space _ _ O
 . _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Impact _ _ O
@@ -3165,6 +5019,9 @@ the _ _ O
 cache _ _ O
 into _ _ O
 one _ _ O
+
+
+ _ _ O
 ● _ _ O
 AMAT _ _ O
 = _ _ O
@@ -3291,6 +5148,9 @@ Parameter _ _ O
 Private _ _ O
 vs. _ _ O
 Shared _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Private _ _ O
@@ -3311,6 +5171,9 @@ to _ _ O
 organize _ _ O
 the _ _ O
 cache _ _ O
+
+
+ _ _ O
 ● _ _ O
 Private _ _ O
 caches _ _ O
@@ -3324,14 +5187,29 @@ uses _ _ O
 its _ _ O
 own _ _ O
 cache _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 ● _ _ O
 Shared _ _ O
 cache _ _ O
@@ -3343,9 +5221,15 @@ share _ _ O
 one _ _ O
 big _ _ O
 cache _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 Shared _ _ O
@@ -3396,14 +5280,29 @@ its _ _ O
 own _ _ O
 private _ _ O
 cache _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 ● _ _ O
 Shared _ _ O
 cache _ _ O
@@ -3416,9 +5315,15 @@ entire _ _ O
 shared _ _ O
 cache _ _ O
 ! _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 37 _ _ O
 
 Banking _ _ O
@@ -3453,9 +5358,15 @@ to _ _ O
 simultaneous _ _ O
 access _ _ O
 ? _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 o _ _ O
 Could _ _ O
 add _ _ O
@@ -3469,17 +5380,35 @@ is _ _ O
 more _ _ O
 cost _ _ O
 effective _ _ O
+
+
+ _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Each _ _ O
 bank _ _ O
@@ -3520,17 +5449,35 @@ are _ _ O
 interleaved _ _ O
 between _ _ O
 banks _ _ O
+
+
+ _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 o _ _ O
 Blocks _ _ O
 0 _ _ O
@@ -3596,6 +5543,9 @@ distributed _ _ O
 → _ _ O
 less _ _ O
 hazards _ _ O
+
+
+ _ _ O
 39 _ _ O
 
 Shared _ _ O
@@ -3639,14 +5589,29 @@ in _ _ O
 nearby _ _ O
 private _ _ O
 cache _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 ● _ _ O
 Shared _ _ O
 cache _ _ O
@@ -3657,17 +5622,35 @@ distributed _ _ O
 to _ _ O
 remote _ _ O
 banks _ _ O
+
+
+ _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 Shared _ _ O
@@ -3681,17 +5664,26 @@ Remember _ _ O
 this _ _ O
 picture _ _ O
 ? _ _ O
+
+
+ _ _ O
 2 _ _ O
 / _ _ O
 20 _ _ O
 / _ _ O
 2017 _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
 1541 _ _ O
 term _ _ O
 2174 _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 Impact _ _ O
@@ -3711,6 +5703,9 @@ rate _ _ O
 miss _ _ O
 penalty _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Impact _ _ O
 of _ _ O
@@ -3798,6 +5793,9 @@ avoid _ _ O
 DRAM _ _ O
 access _ _ O
 . _ _ O
+
+
+ _ _ O
 42 _ _ O
 
 Cache _ _ O
@@ -3818,39 +5816,87 @@ in _ _ O
 our _ _ O
 Linux _ _ O
 server _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 ● _ _ O
 Intel _ _ O
 rebrands _ _ O
@@ -3863,6 +5909,9 @@ the _ _ O
 Smart _ _ O
 Cache _ _ O
 ” _ _ O
+
+
+ _ _ O
 43 _ _ O
 
 Cache _ _ O
@@ -3871,6 +5920,9 @@ Parameter _ _ O
 10 _ _ O
 : _ _ O
 Prefetching _ _ O
+
+
+ _ _ O
 44 _ _ O
 
 Prefetching _ _ O
@@ -4064,7 +6116,13 @@ common _ _ O
 14 _ _ O
 18 _ _ O
 1C _ _ O
+
+
+ _ _ O
 Sequential _ _ O
+
+
+ _ _ O
 00 _ _ O
 04 _ _ O
 08 _ _ O
@@ -4073,8 +6131,14 @@ Sequential _ _ O
 14 _ _ O
 18 _ _ O
 1C _ _ O
+
+
+ _ _ O
 Reverse _ _ O
 sequential _ _ O
+
+
+ _ _ O
 00 _ _ O
 04 _ _ O
 08 _ _ O
@@ -4083,6 +6147,9 @@ sequential _ _ O
 14 _ _ O
 18 _ _ O
 1C _ _ O
+
+
+ _ _ O
 Strided _ _ O
 sequential _ _ O
 ( _ _ O
@@ -4101,6 +6168,9 @@ of _ _ O
 structs _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 04 _ _ O
 lw _ _ O
 08 _ _ O
@@ -4148,21 +6218,69 @@ good _ _ O
 start _ _ O
 . _ _ O
 n-7 _ _ O
+
+
+ _ _ O
 n-6 _ _ O
+
+
+ _ _ O
 n-5 _ _ O
+
+
+ _ _ O
 n-4 _ _ O
+
+
+ _ _ O
 n-3 _ _ O
+
+
+ _ _ O
 n-2 _ _ O
+
+
+ _ _ O
 n-1 _ _ O
+
+
+ _ _ O
 n _ _ O
+
+
+ _ _ O
 40C0 _ _ O
+
+
+ _ _ O
 40C4 _ _ O
+
+
+ _ _ O
 40C8 _ _ O
+
+
+ _ _ O
 40CC _ _ O
+
+
+ _ _ O
 40D0 _ _ O
+
+
+ _ _ O
 40D4 _ _ O
+
+
+ _ _ O
 40D8 _ _ O
+
+
+ _ _ O
 40DC _ _ O
+
+
+ _ _ O
 ● _ _ O
 Some _ _ O
 subtractors _ _ O
@@ -4184,21 +6302,66 @@ same _ _ O
 Some _ _ O
 detection _ _ O
 logic _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 Stride _ _ O
 Detector _ _ O
+
+
+ _ _ O
 47 _ _ O
 
 Where _ _ O
@@ -4248,6 +6411,9 @@ linked-list _ _ O
 traversal _ _ O
 looks _ _ O
 like _ _ O
+
+
+ _ _ O
 00 _ _ O
 04 _ _ O
 08 _ _ O
@@ -4271,6 +6437,9 @@ different _ _ O
 cache _ _ O
 blocks _ _ O
 ) _ _ O
+
+
+ _ _ O
 o _ _ O
 Other _ _ O
 pointer-chasing _ _ O
@@ -4310,6 +6479,9 @@ traversal _ _ O
 
 Mystery _ _ O
 Solved _ _ O
+
+
+ _ _ O
 ● _ _ O
 How _ _ O
 come _ _ O
@@ -4350,6 +6522,9 @@ GB _ _ O
 exceeds _ _ O
 any _ _ O
 cache _ _ O
+
+
+ _ _ O
 ● _ _ O
 The _ _ O
 answer _ _ O
@@ -4505,6 +6680,9 @@ reduce _ _ O
 misses _ _ O
 drastically _ _ O
 ! _ _ O
+
+
+ _ _ O
 50 _ _ O
 
 

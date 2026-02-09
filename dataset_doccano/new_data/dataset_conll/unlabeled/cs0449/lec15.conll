@@ -2,9 +2,18 @@ unlabeled|cs0449|lec15
 -DOCSTART- -X- -X- O
 
 15 _ _ O
+
+
+ _ _ O
 Threads _ _ O
 and _ _ O
+
+
+ _ _ O
 Synchronization _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +22,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -42,6 +54,9 @@ loom _ _ O
 ? _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Our _ _ O
@@ -79,6 +94,9 @@ scheduling _ _ O
 each _ _ O
 task _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 saw _ _ O
@@ -102,6 +120,9 @@ consider _ _ O
 our _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 time _ _ O
@@ -150,7 +171,13 @@ powerful _ _ O
 but _ _ O
 inflexible _ _ O
 . _ _ O
+
+
+ _ _ O
 is _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 OS _ _ O
@@ -178,6 +205,9 @@ data _ _ O
 among _ _ O
 tasks _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 thread _ _ O
@@ -224,11 +254,17 @@ Dolly _ _ O
 … _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ O
 call _ _ O
 in _ _ O
 action _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Copies _ _ O
 the _ _ O
@@ -249,7 +285,13 @@ a _ _ O
 unique _ _ O
 ID _ _ O
 ) _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -259,41 +301,83 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 Child _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 4356 _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 6567 _ _ O
+
+
+ _ _ O
 Page _ _ O
 Table _ _ O
 A _ _ O
+
+
+ _ _ O
 Page _ _ O
 Table _ _ O
 B _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Dolly _ _ O
@@ -351,37 +435,67 @@ same _ _ O
 data _ _ O
 . _ _ O
 Process _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 4356 _ _ O
 Page _ _ O
 Table _ _ O
 A _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 • _ _ O
@@ -416,14 +530,23 @@ more _ _ O
 prevalent _ _ O
 standard _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 will _ _ O
 be _ _ O
 reviewing _ _ O
 the _ _ O
+
+
+ _ _ O
 standard _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 C11 _ _ O
@@ -455,6 +578,9 @@ language _ _ O
 emulate _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Still _ _ O
 very _ _ O
@@ -462,6 +588,9 @@ useful _ _ O
 to _ _ O
 learn _ _ O
 ! _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 POSIX _ _ O
@@ -522,6 +651,9 @@ fully _ _ O
 implement _ _ O
 POSIX _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 POSIX _ _ O
 standardizes _ _ O
@@ -578,7 +710,13 @@ a _ _ O
 thread _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 is _ _ O
@@ -588,32 +726,53 @@ threaded _ _ O
 program _ _ O
 . _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 This _ _ O
 function _ _ O
 runs _ _ O
 in _ _ O
 a _ _ O
 thread _ _ O
+
+
+ _ _ O
 Holds _ _ O
 the _ _ O
 thread _ _ O
 ID _ _ O
 . _ _ O
+
+
+ _ _ O
 The _ _ O
 thread _ _ O
 function _ _ O
+
+
+ _ _ O
 Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 Function _ _ O
 argument _ _ O
+
+
+ _ _ O
 is _ _ O
 within _ _ O
 the _ _ O
 main _ _ O
 thread _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 function _ _ O
@@ -695,11 +854,20 @@ finish _ _ O
 . _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 never _ _ O
 happens _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -735,6 +903,9 @@ prints _ _ O
 its _ _ O
 message _ _ O
 . _ _ O
+
+
+ _ _ O
 In _ _ O
 the _ _ O
 end _ _ O
@@ -751,13 +922,22 @@ exited _ _ O
 potentially _ _ O
 prematurely _ _ O
 . _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Being _ _ O
 considerate _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 “ _ _ O
@@ -765,6 +945,9 @@ str _ _ O
 ” _ _ O
 argument _ _ O
 . _ _ O
+
+
+ _ _ O
 waits _ _ O
 for _ _ O
 the _ _ O
@@ -786,6 +969,9 @@ again _ _ O
 optional _ _ O
 flags _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 , _ _ O
@@ -817,8 +1003,14 @@ to _ _ O
 happen _ _ O
 only _ _ O
 after _ _ O
+
+
+ _ _ O
 completes _ _ O
 . _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Sharing _ _ O
@@ -826,10 +1018,19 @@ is _ _ O
 caring _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thread _ _ O
 function _ _ O
 increments _ _ O
+
+
+ _ _ O
 • _ _ O
 Unlike _ _ O
 process-level _ _ O
@@ -868,6 +1069,9 @@ sees _ _ O
 that _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Threads _ _ O
 share _ _ O
@@ -888,6 +1092,9 @@ increments _ _ O
 , _ _ O
 too _ _ O
 ! _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 They _ _ O
 only _ _ O
@@ -909,7 +1116,13 @@ a _ _ O
 vengeance _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thread _ _ O
 function _ _ O
 might _ _ O
@@ -918,6 +1131,9 @@ interrupted _ _ O
 before _ _ O
 the _ _ O
 print _ _ O
+
+
+ _ _ O
 Then _ _ O
 main _ _ O
 thread _ _ O
@@ -935,10 +1151,19 @@ happened _ _ O
 ? _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thread _ _ O
 function _ _ O
 increments _ _ O
+
+
+ _ _ O
 • _ _ O
 Since _ _ O
 the _ _ O
@@ -1002,12 +1227,18 @@ prints _ _ O
 it _ _ O
 again _ _ O
 ! _ _ O
+
+
+ _ _ O
 Main _ _ O
 thread _ _ O
 increments _ _ O
 , _ _ O
 too _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 only _ _ O
@@ -1027,6 +1258,9 @@ what _ _ O
 the _ _ O
 word _ _ O
 … _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Synchronization _ _ O
@@ -1041,6 +1275,9 @@ Stop _ _ O
 Hammer _ _ O
 time _ _ O
 ! _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 A _ _ O
@@ -1103,6 +1340,9 @@ and _ _ O
 competing _ _ O
 interests _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 order _ _ O
@@ -1141,6 +1381,9 @@ are _ _ O
 called _ _ O
 semaphores _ _ O
 . _ _ O
+
+
+ _ _ O
 16 _ _ O
 Photo _ _ O
 by _ _ O
@@ -1174,6 +1417,9 @@ the _ _ O
 early _ _ O
 1960s _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 counter _ _ O
@@ -1223,6 +1469,9 @@ counter _ _ O
 is _ _ O
 0 _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 These _ _ O
 operations _ _ O
@@ -1272,8 +1521,17 @@ the _ _ O
 derailing _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 creates _ _ O
 a _ _ O
 new _ _ O
@@ -1340,15 +1598,27 @@ the _ _ O
 initial _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 Critical _ _ O
 Section _ _ O
+
+
+ _ _ O
 • _ _ O
 Here _ _ O
 it _ _ O
 is _ _ O
 1 _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 decrements _ _ O
 the _ _ O
 counter _ _ O
@@ -1363,7 +1633,13 @@ counter _ _ O
 is _ _ O
 0 _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 increments _ _ O
 the _ _ O
 counter _ _ O
@@ -1375,6 +1651,9 @@ a _ _ O
 thread _ _ O
 waiting _ _ O
 at _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Semaphores _ _ O
@@ -1384,7 +1663,13 @@ the _ _ O
 derailing _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 both _ _ O
@@ -1409,8 +1694,14 @@ lock _ _ O
 other _ _ O
 waits _ _ O
 . _ _ O
+
+
+ _ _ O
 Critical _ _ O
 Section _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 other _ _ O
@@ -1436,6 +1727,9 @@ thread _ _ O
 can _ _ O
 go _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 lock _ _ O
@@ -1469,6 +1763,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Here _ _ O
 , _ _ O
@@ -1496,9 +1793,18 @@ the _ _ O
 derailing _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Critical _ _ O
 Section _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Mutex _ _ O
@@ -1538,6 +1844,9 @@ covers _ _ O
 and _ _ O
 1 _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 mutex _ _ O
@@ -1574,6 +1883,9 @@ at _ _ O
 a _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 There _ _ O
 are _ _ O
@@ -1603,6 +1915,9 @@ unlocks _ _ O
 the _ _ O
 mutex _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 mutex _ _ O
@@ -1627,6 +1942,9 @@ more _ _ O
 general _ _ O
 semaphore _ _ O
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 A _ _ O
@@ -1637,7 +1955,13 @@ the _ _ O
 derailing _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Mutexes _ _ O
 are _ _ O
@@ -1663,16 +1987,34 @@ easier _ _ O
 to _ _ O
 understand _ _ O
 . _ _ O
+
+
+ _ _ O
 Critical _ _ O
 Section _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 mutex _ _ O
 similarly _ _ O
 to _ _ O
+
+
+ _ _ O
 creates _ _ O
 the _ _ O
 . _ _ O
+
+
+ _ _ O
 and _ _ O
 do _ _ O
 the _ _ O
@@ -1693,9 +2035,18 @@ the _ _ O
 derailing _ _ O
 C _ _ O
 ( _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Critical _ _ O
 Section _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Strategies _ _ O
@@ -1765,6 +2116,9 @@ that _ _ O
 intermediate _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1811,6 +2165,9 @@ very _ _ O
 muddy _ _ O
 puddle _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Everybody _ _ O
@@ -1893,6 +2250,9 @@ need _ _ O
 to _ _ O
 coordinate _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Multiplexing _ _ O
 the _ _ O
@@ -1950,6 +2310,9 @@ the _ _ O
 same _ _ O
 time _ _ O
 . _ _ O
+
+
+ _ _ O
 Not _ _ O
 fine _ _ O
 if _ _ O
@@ -1969,6 +2332,9 @@ way _ _ O
 to _ _ O
 proceed _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 there _ _ O
@@ -1997,6 +2363,9 @@ way _ _ O
 ▪ _ _ O
 Forever _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Deadlock _ _ O
 occurs _ _ O
@@ -2013,6 +2382,9 @@ making _ _ O
 no _ _ O
 progress _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Synchronization _ _ O
@@ -2056,6 +2428,9 @@ letting _ _ O
 others _ _ O
 go _ _ O
 . _ _ O
+
+
+ _ _ O
 With _ _ O
 synchronization _ _ O
 , _ _ O
@@ -2084,6 +2459,9 @@ Beyond _ _ O
 defining _ _ O
 order _ _ O
 , _ _ O
+
+
+ _ _ O
 synchronization _ _ O
 helps _ _ O
 avoid _ _ O
@@ -2121,6 +2499,9 @@ is _ _ O
 perpetually _ _ O
 delayed _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 some _ _ O
@@ -2140,6 +2521,9 @@ for _ _ O
 other _ _ O
 tasks _ _ O
 . _ _ O
+
+
+ _ _ O
 When _ _ O
 nobody _ _ O
 yields _ _ O
@@ -2174,12 +2558,18 @@ light _ _ O
 , _ _ O
 you _ _ O
 rely _ _ O
+
+
+ _ _ O
 on _ _ O
 people _ _ O
 being _ _ O
 nice _ _ O
 . _ _ O
 :( _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 Starvation _ _ O
@@ -2250,6 +2640,9 @@ might _ _ O
 not _ _ O
 run _ _ O
 ! _ _ O
+
+
+ _ _ O
 • _ _ O
 Preventing _ _ O
 starvation _ _ O
@@ -2308,6 +2701,9 @@ in _ _ O
 the _ _ O
 front _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 That _ _ O
 ’s _ _ O
@@ -2323,6 +2719,9 @@ very _ _ O
 difficult _ _ O
 problem _ _ O
 ! _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 Livelock _ _ O
@@ -2379,6 +2778,9 @@ ahead _ _ O
 of _ _ O
 them _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 is _ _ O
@@ -2403,6 +2805,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 Careful _ _ O
@@ -2436,6 +2841,9 @@ an _ _ O
 arbitrary _ _ O
 priority _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 All _ _ O
 threads _ _ O
@@ -2475,6 +2883,9 @@ everybody _ _ O
 is _ _ O
 starving _ _ O
 . _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 Deadlock _ _ O
@@ -2512,6 +2923,9 @@ ZZZZZZZZ _ _ O
 ZZZZZZZZ _ _ O
 ” _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 contrast _ _ O
@@ -2553,6 +2967,9 @@ actively _ _ O
 achieving _ _ O
 nothing _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Detecting _ _ O
 that _ _ O
@@ -2598,6 +3015,9 @@ detection _ _ O
 and _ _ O
 resolution _ _ O
 . _ _ O
+
+
+ _ _ O
 34 _ _ O
 
 Solving _ _ O
@@ -2658,6 +3078,9 @@ to _ _ O
 handle _ _ O
 them _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 wide _ _ O
@@ -2738,6 +3161,9 @@ summary _ _ O
 Thread _ _ O
 creation _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 • _ _ O
 Join _ _ O
 threads _ _ O
@@ -2747,10 +3173,16 @@ until _ _ O
 complete _ _ O
 ) _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 • _ _ O
 Getting _ _ O
 thread _ _ O
 ID _ _ O
+
+
+ _ _ O
 Waits _ _ O
 for _ _ O
 the _ _ O
@@ -2759,6 +3191,9 @@ thread _ _ O
 to _ _ O
 end _ _ O
 . _ _ O
+
+
+ _ _ O
 Returns _ _ O
 the _ _ O
 thread _ _ O
@@ -2768,7 +3203,13 @@ the _ _ O
 current _ _ O
 thread _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 • _ _ O
 Thread _ _ O
 destruction _ _ O
@@ -2777,6 +3218,9 @@ explicit _ _ O
 ) _ _ O
 ▪ _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 Attempts _ _ O
 to _ _ O
 preemptively _ _ O
@@ -2794,6 +3238,9 @@ the _ _ O
 provided _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 synchronization _ _ O
@@ -2839,8 +3286,14 @@ other _ _ O
 threads _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 ▪ _ _ O
+
+
+ _ _ O
 Decrements _ _ O
 counter _ _ O
 unless _ _ O
@@ -2856,6 +3309,9 @@ waits _ _ O
 Increments _ _ O
 counter _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Mutexes _ _ O
 ▪ _ _ O
@@ -2866,6 +3322,9 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 Creates _ _ O
 a _ _ O
 mutex _ _ O
@@ -2913,6 +3372,9 @@ within _ _ O
 the _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Synchronization _ _ O
 primitives _ _ O
@@ -3005,6 +3467,9 @@ to _ _ O
 each _ _ O
 other _ _ O
 . _ _ O
+
+
+ _ _ O
 38 _ _ O
 
 

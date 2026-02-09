@@ -5,12 +5,21 @@ Blob _ _ B-concept
 Detection _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
 Blob _ _ B-concept
+
+
+ _ _ O
 A _ _ O
 blob _ _ B-concept
 in _ _ O
@@ -35,6 +44,9 @@ properties _ _ O
 : _ _ O
 Color _ _ O
 Brightness _ _ O
+
+
+ _ _ O
 A _ _ O
 robot _ _ O
 can _ _ O
@@ -76,8 +88,14 @@ center _ _ O
 of _ _ O
 the _ _ O
 region _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
@@ -92,6 +110,9 @@ the _ _ O
 following _ _ O
 image _ _ O
 : _ _ O
+
+
+ _ _ O
 How _ _ O
 to _ _ O
 detect _ _ O
@@ -105,12 +126,18 @@ image _ _ O
 ? _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
 Filter _ _ B-concept
 Selected _ _ O
 Color _ _ O
+
+
+ _ _ O
 Image _ _ O
 generally _ _ O
 comes _ _ O
@@ -163,8 +190,14 @@ between _ _ O
 100 _ _ O
 to _ _ O
 110 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
@@ -179,8 +212,14 @@ every _ _ O
 color _ _ O
 but _ _ O
 red _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
@@ -192,14 +231,23 @@ Blob _ _ B-concept
 Detect _ _ O
 connected _ _ O
 regions _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ B-concept
 Detection _ _ O
 
 Filter _ _ B-concept
 Selected _ _ O
 Color _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 an _ _ O
@@ -250,6 +298,9 @@ chrominance _ _ O
 color _ _ O
 ) _ _ O
 components _ _ O
+
+
+ _ _ O
 Conversion _ _ O
 between _ _ O
 RGB _ _ O
@@ -315,6 +366,9 @@ straightforward _ _ O
 × _ _ O
 𝐵 _ _ O
 ) _ _ O
+
+
+ _ _ O
 where _ _ O
 𝑅 _ _ O
 , _ _ O
@@ -328,8 +382,14 @@ between _ _ O
 0.0 _ _ O
 and _ _ O
 1.0 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -404,6 +464,9 @@ close _ _ O
 to _ _ O
 each _ _ O
 other _ _ O
+
+
+ _ _ O
 Surrounding _ _ O
 environment _ _ O
 may _ _ O
@@ -411,6 +474,9 @@ have _ _ O
 the _ _ O
 same _ _ O
 color _ _ O
+
+
+ _ _ O
 Same _ _ O
 object _ _ O
 may _ _ O
@@ -447,12 +513,21 @@ small _ _ O
 number _ _ O
 of _ _ O
 colors _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Applications _ _ O
+
+
+ _ _ O
 Object _ _ O
 Recognition _ _ O
 and _ _ O
@@ -471,6 +546,9 @@ a _ _ O
 line _ _ O
 Object _ _ O
 avoidance _ _ O
+
+
+ _ _ O
 Robot _ _ O
 Location _ _ O
 / _ _ O
@@ -488,8 +566,14 @@ multi-colors _ _ O
 ) _ _ O
 represent _ _ O
 locations _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -560,6 +644,9 @@ topic _ _ O
 camera _ _ O
 / _ _ O
 image_raw _ _ O
+
+
+ _ _ O
 To _ _ O
 start _ _ O
 gscam _ _ O
@@ -573,6 +660,9 @@ command _ _ O
 roslaunch _ _ O
 gscam _ _ O
 v4l.launch _ _ O
+
+
+ _ _ O
 A _ _ O
 series _ _ O
 of _ _ O
@@ -598,8 +688,14 @@ v4l _ _ O
 camera _ _ O
 / _ _ O
 image_raw _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -630,6 +726,9 @@ from _ _ O
 sensor_msg.msgs _ _ O
 import _ _ O
 Image _ _ O
+
+
+ _ _ O
 The _ _ O
 Image _ _ O
 message _ _ O
@@ -714,6 +813,9 @@ R _ _ O
 ... _ _ O
 ] _ _ O
 ) _ _ O
+
+
+ _ _ O
 Lucky _ _ O
 us _ _ O
 , _ _ O
@@ -726,8 +828,14 @@ process _ _ O
 images _ _ O
 directly _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -814,8 +922,14 @@ data _ _ O
 isColorImageReady _ _ B-concept
 = _ _ O
 True _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -961,13 +1075,22 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 cmvision _ _ O
 Node _ _ O
+
+
+ _ _ O
 cmvision _ _ B-concept
 node _ _ O
 detects _ _ B-concept
@@ -1003,6 +1126,9 @@ be _ _ O
 camera _ _ O
 / _ _ O
 image_raw _ _ O
+
+
+ _ _ O
 Obtains _ _ O
 user _ _ O
 defined _ _ O
@@ -1022,6 +1148,9 @@ on _ _ O
 the _ _ O
 topic _ _ B-concept
 /blobs _ _ I-concept
+
+
+ _ _ O
 cmvision _ _ O
 package _ _ B-concept
 also _ _ I-concept
@@ -1058,12 +1187,21 @@ color _ _ O
 information _ _ O
 and _ _ O
 threshold _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 colorgui _ _ O
+
+
+ _ _ O
 Before _ _ B-concept
 running _ _ I-concept
 colorgui _ _ O
@@ -1098,6 +1236,9 @@ v4l _ _ I-concept
 camera _ _ I-concept
 / _ _ O
 image_raw _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 the _ _ O
@@ -1125,12 +1266,21 @@ image _ _ O
 from _ _ O
 your _ _ O
 camera _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 colorgui _ _ O
+
+
+ _ _ O
 After _ _ O
 clicking _ _ B-concept
 on _ _ O
@@ -1203,8 +1353,14 @@ color _ _ O
 to _ _ O
 be _ _ O
 detected _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1213,8 +1369,14 @@ Example _ _ B-concept
 First _ _ I-concept
 couple _ _ I-concept
 clicks _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1227,8 +1389,14 @@ around _ _ O
 the _ _ O
 desired _ _ O
 object _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1243,8 +1411,14 @@ about _ _ O
 RGB _ _ O
 and _ _ O
 YUV _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1320,6 +1494,9 @@ thresholds _ _ O
 : _ _ O
 126 _ _ O
 ) _ _ O
+
+
+ _ _ O
 cmvision _ _ O
 node _ _ O
 can _ _ B-concept
@@ -1397,6 +1574,9 @@ thresholds _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1459,6 +1639,9 @@ thresholds _ _ O
 : _ _ O
 113 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Each _ _ O
 line _ _ O
 under _ _ O
@@ -1533,12 +1716,21 @@ among _ _ O
 multiple _ _ O
 detected _ _ O
 blobs _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ B-concept
 Kosiyatrakul _ _ I-concept
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 colors.txt _ _ O
+
+
+ _ _ O
 Consider _ _ O
 the _ _ O
 following _ _ O
@@ -1597,6 +1789,9 @@ thresholds _ _ O
 : _ _ O
 113 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Each _ _ O
 line _ _ O
 under _ _ O
@@ -1627,6 +1822,9 @@ YUV _ _ O
 threshold _ _ O
 from _ _ O
 colorgui _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ B-concept
 the _ _ I-concept
@@ -1646,8 +1844,14 @@ thresholds _ _ O
 and _ _ O
 so _ _ O
 on _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1679,7 +1883,10 @@ src _ _ O
 cmvision _ _ O
 / _ _ O
 cmvision.launch _ _ B-concept
-to _ _ B-concept
+
+
+ _ _ B-concept
+to _ _ I-concept
 your _ _ I-concept
 .. _ _ O
 /mypackage _ _ O
@@ -1718,6 +1925,9 @@ mypackage _ _ O
 / _ _ O
 colors.txt _ _ O
 " _ _ O
+
+
+ _ _ O
 If _ _ O
 you _ _ O
 put _ _ O
@@ -1758,6 +1968,9 @@ running _ _ B-concept
 value="false _ _ I-concept
 " _ _ O
 otherwise _ _ O
+
+
+ _ _ O
 Under _ _ O
 node _ _ O
 name="cmvision _ _ O
@@ -1778,6 +1991,9 @@ image_raw _ _ O
 " _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -1962,12 +2178,21 @@ output="screen _ _ O
 < _ _ O
 /launch _ _ O
 > _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Blobs.msgs _ _ O
+
+
+ _ _ O
 cmvision _ _ B-concept
 node _ _ O
 publishes _ _ B-concept
@@ -1986,6 +2211,9 @@ from _ _ O
 cmvision.msg _ _ O
 import _ _ B-concept
 Blobs _ _ I-concept
+
+
+ _ _ O
 A _ _ O
 message _ _ B-concept
 of _ _ I-concept
@@ -2034,7 +2262,10 @@ data _ _ I-concept
 of _ _ O
 type _ _ O
 Blob _ _ B-concept
-Note _ _ I-concept
+
+
+ _ _ I-concept
+Note _ _ O
 : _ _ O
 Blob _ _ B-concept
 ( _ _ I-concept
@@ -2047,8 +2278,14 @@ another _ _ O
 type _ _ O
 of _ _ O
 message _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2074,6 +2311,9 @@ import _ _ B-concept
 Blobs _ _ I-concept
 , _ _ O
 Blob _ _ O
+
+
+ _ _ O
 A _ _ O
 message _ _ B-concept
 of _ _ B-concept
@@ -2200,6 +2440,9 @@ the _ _ O
 region _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2209,25 +2452,55 @@ Blob.msgs _ _ O
 , _ _ O
 0 _ _ O
 ) _ _ O
-left _ _ B-concept
+
+
+ _ _ B-concept
+left _ _ I-concept
+
+
+ _ _ O
 right _ _ O
+
+
+ _ _ O
 top _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 , _ _ O
 y _ _ O
 ) _ _ O
+
+
+ _ _ O
 bottom _ _ O
+
+
+ _ _ O
 blob _ _ O
+
+
+ _ _ O
 image _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ B-concept
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Problem _ _ O
 Solving _ _ O
 Ideas _ _ O
+
+
+ _ _ O
 How _ _ O
 to _ _ O
 filter _ _ O
@@ -2255,6 +2528,9 @@ objects _ _ O
 Variable _ _ O
 size _ _ O
 objects _ _ O
+
+
+ _ _ O
 If _ _ O
 we _ _ O
 know _ _ O
@@ -2301,8 +2577,14 @@ noise _ _ B-concept
 from _ _ I-concept
 camera _ _ O
 ? _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2310,6 +2592,9 @@ Visualize _ _ O
 Blobs _ _ O
 using _ _ O
 OpenCV _ _ O
+
+
+ _ _ O
 Sometimes _ _ O
 we _ _ O
 need _ _ O
@@ -2340,7 +2625,10 @@ blobs _ _ O
 in _ _ O
 to _ _ O
 one _ _ O
-We _ _ B-concept
+
+
+ _ _ B-concept
+We _ _ I-concept
 may _ _ I-concept
 need _ _ O
 to _ _ O
@@ -2379,8 +2667,14 @@ Foreground _ _ O
 / _ _ O
 background _ _ O
 filtering _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2470,6 +2764,9 @@ isBlobsInfoReady _ _ O
 True _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2477,7 +2774,10 @@ Visualize _ _ O
 Blobs _ _ O
 using _ _ O
 OpenCV _ _ B-concept
-def _ _ I-concept
+
+
+ _ _ I-concept
+def _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
@@ -2557,8 +2857,14 @@ rospy.is_shutdown _ _ O
 ) _ _ O
 : _ _ O
 : _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2686,14 +2992,23 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Blob _ _ O
 Detection _ _ O
 Algorithm _ _ B-concept
+
+
+ _ _ O
 Given _ _ O
 an _ _ O
 image _ _ O
@@ -2708,6 +3023,9 @@ used _ _ O
 1 _ _ O
 2 _ _ O
 3 _ _ O
+
+
+ _ _ O
 Blur _ _ O
 the _ _ O
 image _ _ O
@@ -2731,13 +3049,22 @@ connected _ _ O
 to _ _ O
 each _ _ O
 other _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Gaussian _ _ O
 Blur _ _ O
+
+
+ _ _ O
 One _ _ B-concept
 of _ _ I-concept
 the _ _ I-concept
@@ -2749,10 +3076,16 @@ is _ _ O
 called _ _ O
 Gaussian _ _ O
 blur _ _ O
+
+
+ _ _ O
 3x3 _ _ B-concept
 5x5 _ _ I-concept
 7x7 _ _ I-concept
-The _ _ I-concept
+
+
+ _ _ I-concept
+The _ _ O
 new _ _ O
 RGB _ _ O
 values _ _ O
@@ -2783,8 +3116,14 @@ the _ _ O
 Gaussian _ _ O
 normal _ _ O
 distribution _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -2803,6 +3142,9 @@ that _ _ O
 cmvision _ _ O
 uses _ _ O
 YUV _ _ B-concept
+
+
+ _ _ I-concept
 Once _ _ I-concept
 a _ _ O
 filter _ _ O
@@ -2843,6 +3185,9 @@ in _ _ O
 a _ _ O
 given _ _ O
 range _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 0 _ _ O
@@ -2854,6 +3199,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2863,6 +3211,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2872,6 +3223,9 @@ Example _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2881,6 +3235,9 @@ Example _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2890,24 +3247,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
@@ -2917,6 +3259,33 @@ Example _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2926,6 +3295,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2935,6 +3307,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2944,6 +3319,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2953,6 +3331,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2962,6 +3343,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -2971,6 +3355,9 @@ Example _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 For _ _ O
 simplicity _ _ O
 , _ _ O
@@ -2992,6 +3379,9 @@ bottom _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -3029,6 +3419,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3038,6 +3431,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3047,6 +3443,9 @@ bottom _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3056,6 +3455,9 @@ bottom _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3065,24 +3467,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 1 _ _ O
 1 _ _ O
@@ -3092,6 +3479,33 @@ bottom _ _ O
 0 _ _ O
 1 _ _ O
 0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3101,6 +3515,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3110,6 +3527,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3119,6 +3539,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3128,6 +3551,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3137,6 +3563,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3146,6 +3575,9 @@ bottom _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Once _ _ O
 the _ _ O
 first _ _ O
@@ -3154,10 +3586,16 @@ is _ _ O
 found _ _ O
 : _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 Record _ _ O
 this _ _ O
 coordinate _ _ O
@@ -3201,6 +3639,9 @@ will _ _ I-concept
 be _ _ O
 calculated _ _ B-concept
 later _ _ O
+
+
+ _ _ O
 Now _ _ O
 , _ _ O
 our _ _ O
@@ -3218,6 +3659,9 @@ is _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -3276,6 +3720,9 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3285,6 +3732,9 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3294,6 +3744,9 @@ to _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3303,6 +3756,9 @@ to _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3312,28 +3768,9 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
-0 _ _ O
-0 _ _ O
-1 _ _ O
-1 _ _ O
-1 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3341,6 +3778,35 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3350,6 +3816,9 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3357,6 +3826,11 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3366,6 +3840,9 @@ to _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Currently _ _ O
 Blob _ _ O
 is _ _ O
@@ -3401,17 +3878,26 @@ is _ _ O
 ] _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
-0 _ _ B-concept
+
+
+ _ _ B-concept
 0 _ _ I-concept
 0 _ _ I-concept
+0 _ _ I-concept
 1 _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3421,6 +3907,9 @@ Detection _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3447,6 +3936,9 @@ empty _ _ O
 3 _ _ O
 4 _ _ O
 5 _ _ O
+
+
+ _ _ O
 Dequeue _ _ O
 the _ _ O
 first _ _ O
@@ -3482,6 +3974,9 @@ back _ _ O
 to _ _ O
 step _ _ O
 1 _ _ O
+
+
+ _ _ O
 Once _ _ O
 the _ _ O
 queue _ _ O
@@ -3511,6 +4006,9 @@ blob _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3520,6 +4018,9 @@ blob _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3529,6 +4030,9 @@ blob _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3538,6 +4042,9 @@ blob _ _ O
 1 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3547,6 +4054,9 @@ blob _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3556,8 +4066,14 @@ blob _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3567,6 +4083,9 @@ Kosiyatrakul _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3576,6 +4095,9 @@ Kosiyatrakul _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3585,6 +4107,9 @@ Kosiyatrakul _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3594,17 +4119,26 @@ Kosiyatrakul _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
-0 _ _ B-concept
+
+
+ _ _ B-concept
 0 _ _ I-concept
 0 _ _ I-concept
+0 _ _ I-concept
 1 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3614,6 +4148,9 @@ Detection _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3623,6 +4160,9 @@ Detection _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -3754,6 +4294,9 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 parameter _ _ O
 ( _ _ O
@@ -3776,6 +4319,9 @@ numbers _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -3926,14 +4472,23 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 Filter _ _ O
 Unwanted _ _ O
 Pixels _ _ B-concept
+
+
+ _ _ O
 Unwanted _ _ O
 pixels _ _ O
 can _ _ O
@@ -4030,6 +4585,9 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 lower_bound _ _ O
 and _ _ O
@@ -4045,8 +4603,14 @@ R _ _ O
 in _ _ O
 this _ _ O
 case _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4056,15 +4620,24 @@ Pixels _ _ O
 Masked _ _ O
 Image _ _ O
 : _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 SimpleBlobDetector _ _ O
 ( _ _ O
 ) _ _ O
-OpenCV _ _ B-concept
+
+
+ _ _ B-concept
+OpenCV _ _ I-concept
 supplies _ _ O
 the _ _ O
 SimpleBlobDetector _ _ O
@@ -4080,8 +4653,14 @@ a _ _ B-concept
 given _ _ I-concept
 parameter _ _ O
 : _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4173,15 +4752,24 @@ cv2.SimpleBlobDetector_create _ _ B-concept
 ( _ _ O
 params _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 SimpleBlobDetector _ _ O
 ( _ _ O
 ) _ _ O
-Then _ _ B-concept
+
+
+ _ _ B-concept
+Then _ _ I-concept
 we _ _ O
 can _ _ O
 use _ _ O
@@ -4234,6 +4822,9 @@ Keypoints _ _ O
 , _ _ O
 kp_image _ _ O
 ) _ _ O
+
+
+ _ _ O
 To _ _ O
 extract _ _ O
 blobs _ _ O
@@ -4245,8 +4836,14 @@ at _ _ O
 the _ _ O
 keypoints _ _ O
 variable _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4265,15 +4862,24 @@ the _ _ O
 original _ _ O
 image _ _ O
 : _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 SimpleBlobDetector _ _ O
 ( _ _ O
 ) _ _ O
-The _ _ B-concept
+
+
+ _ _ B-concept
+The _ _ I-concept
 SimpleBlobDetector _ _ O
 ( _ _ O
 ) _ _ O
@@ -4312,8 +4918,14 @@ are _ _ O
 hard _ _ O
 to _ _ O
 understand _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4321,6 +4933,9 @@ Blob _ _ O
 Detection _ _ O
 using _ _ B-concept
 Contour _ _ O
+
+
+ _ _ O
 Another _ _ B-concept
 method _ _ I-concept
 is _ _ O
@@ -4375,14 +4990,23 @@ findContours _ _ O
 ) _ _ O
 is _ _ O
 given _ _ B-concept
+
+
+ _ _ I-concept
 Thumrongsak _ _ I-concept
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
 findContours _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 findContours _ _ B-concept
 ( _ _ O
 ) _ _ O
@@ -4496,8 +5120,14 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4517,6 +5147,9 @@ into _ _ O
 the _ _ B-concept
 original _ _ I-concept
 image _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 there _ _ O
@@ -4541,6 +5174,9 @@ inside _ _ I-concept
 another _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4729,8 +5365,14 @@ _ _ _ O
 main _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 
@@ -4748,8 +5390,14 @@ that _ _ I-concept
 are _ _ O
 inside _ _ O
 another _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Blob _ _ O
 Detection _ _ O
 

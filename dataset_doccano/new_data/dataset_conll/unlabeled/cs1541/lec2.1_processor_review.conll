@@ -30,21 +30,45 @@ do _ _ O
 ? _ _ O
 NOT _ _ O
 gate _ _ O
+
+
+ _ _ O
 Multiplexer _ _ O
 ( _ _ O
 MUX _ _ O
 ) _ _ O
 32 _ _ O
+
+
+ _ _ O
 AND _ _ O
 gate _ _ O
+
+
+ _ _ O
 32 _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 OR _ _ O
 gate _ _ O
+
+
+ _ _ O
 XOR _ _ O
 gate _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 32 _ _ O
+
+
+ _ _ O
 These _ _ O
 wires _ _ O
 carry _ _ O
@@ -53,12 +77,18 @@ bits _ _ O
 at _ _ O
 once _ _ O
 . _ _ O
+
+
+ _ _ O
 Blue _ _ O
 wires _ _ O
 are _ _ O
 control _ _ O
 signals _ _ O
 . _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Uses _ _ O
@@ -91,40 +121,142 @@ for _ _ O
 Decoder _ _ O
 Q0 _ _ O
 A _ _ O
+
+
+ _ _ O
 Q1 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 Q2 _ _ O
 Q3 _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 Q0 _ _ O
+
+
+ _ _ O
 Q1 _ _ O
+
+
+ _ _ O
 Q2 _ _ O
+
+
+ _ _ O
 Q3 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 o _ _ O
 You _ _ O
 can _ _ O
@@ -141,6 +273,9 @@ decoder _ _ O
 for _ _ O
 it _ _ O
 ! _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Uses _ _ O
@@ -159,11 +294,26 @@ to _ _ O
 two _ _ O
 points _ _ O
 A _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 = _ _ O
 B _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 ● _ _ O
 Can _ _ O
 not _ _ O
@@ -184,11 +334,23 @@ between _ _ O
 the _ _ O
 two _ _ O
 + _ _ O
+
+
+ _ _ O
 Path _ _ O
 A _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 Path _ _ O
 B _ _ O
+
+
+ _ _ O
 Mux _ _ O
 control _ _ O
 = _ _ O
@@ -200,6 +362,9 @@ A _ _ O
 for _ _ O
 path _ _ O
 B _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Gates _ _ O
@@ -211,12 +376,21 @@ transistors _ _ O
 of _ _ O
 course _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 NOT _ _ O
 gate _ _ O
+
+
+ _ _ O
 • _ _ O
 NAND _ _ O
 gate _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 The _ _ O
@@ -236,9 +410,21 @@ between _ _ O
 and _ _ O
 1 _ _ O
 : _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 time _ _ O
+
+
+ _ _ O
 ● _ _ O
 Bits _ _ O
 are _ _ O
@@ -313,21 +499,51 @@ speed _ _ O
 . _ _ O
 5 _ _ O
 ns _ _ O
+
+
+ _ _ O
 A _ _ O
 D _ _ O
 Q _ _ O
+
+
+ _ _ O
 EN _ _ O
+
+
+ _ _ O
 B _ _ O
 D _ _ O
 Q _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 IN _ _ O
+
+
+ _ _ O
 5 _ _ O
 ns _ _ O
+
+
+ _ _ O
 OUT _ _ O
+
+
+ _ _ O
 EN _ _ O
 Select _ _ O
+
+
+ _ _ O
 o _ _ O
 The _ _ O
 ALU _ _ O
@@ -386,6 +602,9 @@ ns _ _ O
 100 _ _ O
 MHz _ _ O
 ? _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 MIPS _ _ O
@@ -414,6 +633,9 @@ the _ _ O
 following _ _ O
 usage _ _ O
 conventions _ _ O
+
+
+ _ _ O
 o _ _ O
 But _ _ O
 really _ _ O
@@ -454,6 +676,9 @@ $ _ _ O
 fp _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 Register _ _ O
 number _ _ O
 Usage _ _ O
@@ -571,45 +796,165 @@ of _ _ O
 232 _ _ O
 bytes _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 Addr _ _ O
+
+
+ _ _ O
 Data _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x3F _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x3F00 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x3F002A08 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0x00 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 0x2A08 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 0x47F426B9 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 0x2A _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 0x47F4 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 0x08 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 0x26B9 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 0x47 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 0xF4 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 0x26 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 0xB9 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 same _ _ O
@@ -646,16 +991,25 @@ MIPS _ _ O
 ISA _ _ O
 - _ _ O
 Memory _ _ O
+
+
+ _ _ O
 • _ _ O
 Loads _ _ O
 move _ _ O
 data _ _ O
 from _ _ O
+
+
+ _ _ O
 memory _ _ O
 into _ _ O
 the _ _ O
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 lw _ _ O
 $ _ _ O
 t0 _ _ O
@@ -664,15 +1018,33 @@ t0 _ _ O
 ( _ _ O
 $s4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 0x0000CAFE _ _ O
 0x0000BEEF _ _ O
+
+
+ _ _ O
 s4 _ _ O
+
+
+ _ _ O
 0x00000004 _ _ O
+
+
+ _ _ O
 Registers _ _ O
+
+
+ _ _ O
 registers _ _ O
 into _ _ O
 memory _ _ O
 . _ _ O
+
+
+ _ _ O
 sw _ _ O
 $ _ _ O
 t0 _ _ O
@@ -681,6 +1053,9 @@ t0 _ _ O
 ( _ _ O
 $s4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 the _ _ O
@@ -699,7 +1074,13 @@ s4 _ _ O
 8 _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 t0 _ _ O
+
+
+ _ _ O
 • _ _ O
 Stores _ _ O
 move _ _ O
@@ -712,29 +1093,80 @@ is _ _ O
 the _ _ O
 SOURCE _ _ O
 ! _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x3F002A08 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 0x47F426B9 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 0x00000000 _ _ O
+
+
+ _ _ O
 $ _ _ O
 s4 _ _ O
 + _ _ O
 8 _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 0x0000BEEF _ _ O
+
+
+ _ _ O
 $ _ _ O
 s4 _ _ O
 + _ _ O
 12 _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 0x0000DEAD _ _ O
 0x0000BEEF _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 lw _ _ O
+
+
+ _ _ O
 sw _ _ O
+
+
+ _ _ O
 Memory _ _ O
 12 _ _ O
 
@@ -755,6 +1187,9 @@ flow _ _ O
 of _ _ O
 execution _ _ O
 . _ _ O
+
+
+ _ _ O
 _ _ _ O
 top _ _ O
 : _ _ O
@@ -770,6 +1205,9 @@ code _ _ O
 j _ _ O
 _ _ _ O
 top _ _ O
+
+
+ _ _ O
 li _ _ O
 $ _ _ O
 s0 _ _ O
@@ -800,6 +1238,9 @@ loop _ _ O
 jr _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 j _ _ O
 : _ _ O
 jumps _ _ O
@@ -809,6 +1250,9 @@ jumps _ _ O
 to _ _ O
 _ _ _ O
 top _ _ O
+
+
+ _ _ O
 bne _ _ O
 : _ _ O
 jumps _ _ O
@@ -836,8 +1280,14 @@ zero _ _ O
 continues _ _ O
 to _ _ O
 jr _ _ O
+
+
+ _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Phases _ _ O
@@ -922,6 +1372,9 @@ results _ _ O
 to _ _ O
 the _ _ O
 registers _ _ O
+
+
+ _ _ O
 ● _ _ O
 Sometimes _ _ O
 these _ _ O
@@ -931,26 +1384,65 @@ chopped _ _ O
 into _ _ O
 smaller _ _ O
 stages _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 A _ _ O
 simple _ _ O
 single-cycle _ _ O
 implementation _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 ● _ _ O
 An _ _ O
 instruction _ _ O
@@ -968,12 +1460,18 @@ WB _ _ O
 in _ _ O
 one _ _ O
 cycle _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 " _ _ O
 Minimal _ _ O
 MIPS _ _ O
 " _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 It _ _ O
@@ -991,6 +1489,9 @@ pedagogical _ _ O
 teaching _ _ O
 ) _ _ O
 purposes _ _ O
+
+
+ _ _ O
 ● _ _ O
 Contains _ _ O
 only _ _ O
@@ -1053,6 +1554,9 @@ decoded _ _ O
 from _ _ O
 the _ _ O
 instruction _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 The _ _ O
@@ -1069,33 +1573,90 @@ of _ _ O
 the _ _ O
 5-phase _ _ O
 implementation _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 dst _ _ O
 src1 _ _ O
 src2 _ _ O
+
+
+ _ _ O
 RegDataSrc _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 sxt _ _ O
+
+
+ _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Control _ _ O
@@ -1230,24 +1791,54 @@ or _ _ O
 / _ _ O
 slt _ _ O
 work _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 add _ _ O
 t0 _ _ O
 , _ _ O
 t3 _ _ O
 , _ _ O
 s0 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 next _ _ O
 instruction _ _ O
 t0 _ _ O
@@ -1257,39 +1848,93 @@ src1 _ _ O
 s0 _ _ O
 src2 _ _ O
 Register _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 File _ _ O
+
+
+ _ _ O
 RegDataSrc _ _ O
 from _ _ O
 ALU _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
 enable _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 sxt _ _ O
+
+
+ _ _ O
 disable _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 from _ _ O
 reg _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
 add _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 How _ _ O
 an _ _ O
 lw _ _ O
 works _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 lw _ _ O
 s4 _ _ O
 , _ _ O
@@ -1297,9 +1942,18 @@ s4 _ _ O
 ( _ _ O
 s0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 next _ _ O
 instruction _ _ O
 s4 _ _ O
@@ -1308,10 +1962,19 @@ s0src1 _ _ O
 x _ _ O
 src2 _ _ O
 Register _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 File _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
 RegDataSrc _ _ O
 enable _ _ O
@@ -1321,27 +1984,63 @@ Mem _ _ O
 sxt _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 disable _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 from _ _ O
 imm _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
 add _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 How _ _ O
 an _ _ O
 sw _ _ O
 works _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 sw _ _ O
 t3 _ _ O
 , _ _ O
@@ -1349,9 +2048,18 @@ t3 _ _ O
 ( _ _ O
 sp _ _ O
 ) _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 next _ _ O
 instruction _ _ O
 x _ _ O
@@ -1360,10 +2068,19 @@ spsrc1 _ _ O
 t3 _ _ O
 src2 _ _ O
 Register _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 File _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
 RegDataSrc _ _ O
 disable _ _ O
@@ -1372,12 +2089,27 @@ x _ _ O
 sxt _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 enable _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 from _ _ O
 imm _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
 add _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 What _ _ O
@@ -1442,8 +2174,17 @@ When _ _ O
 instruction _ _ O
 not _ _ O
 beq _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 PCSrc _ _ O
@@ -1473,27 +2214,54 @@ PC _ _ O
 PC _ _ O
 + _ _ O
 4 _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 How _ _ O
 a _ _ O
 beq _ _ O
 works _ _ O
+
+
+ _ _ O
 beq _ _ O
 t0 _ _ O
 , _ _ O
 t1 _ _ O
 , _ _ O
 loop _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Take _ _ O
 green _ _ O
 PC _ _ O
@@ -1512,34 +2280,79 @@ t0 _ _ O
 ! _ _ O
 = _ _ O
 t1 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
 loop _ _ O
+
+
+ _ _ O
 x _ _ O
 dst _ _ O
 t0 _ _ O
 src1 _ _ O
 t1 _ _ O
 src2 _ _ O
+
+
+ _ _ O
 RegDataSrc _ _ O
 x _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 RegWrite _ _ O
 disable _ _ O
+
+
+ _ _ O
 imm _ _ O
 field _ _ O
+
+
+ _ _ O
 sxt _ _ O
+
+
+ _ _ O
 MemWrite _ _ O
+
+
+ _ _ O
 disable _ _ O
+
+
+ _ _ O
 ALUSrc _ _ O
+
+
+ _ _ O
 from _ _ O
 reg _ _ O
+
+
+ _ _ O
 ALUOp _ _ O
 sub _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 What _ _ O
@@ -1558,8 +2371,17 @@ the _ _ O
 PCSrc _ _ O
 mux _ _ O
 . _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
 top _ _ O
+
+
+ _ _ O
 PC+4 _ _ O
 PC+4+imm _ _ O
 jump _ _ O
@@ -1569,6 +2391,9 @@ now _ _ O
 2 _ _ O
 bits _ _ O
 ) _ _ O
+
+
+ _ _ O
 PCSrc _ _ O
 25 _ _ O
 
@@ -1578,20 +2403,56 @@ Implementation _ _ O
 is _ _ O
 not _ _ O
 Optimal _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Memory _ _ O
+
+
+ _ _ O
 Control _ _ O
+
+
+ _ _ O
 PC _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 Data _ _ O
 Memory _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 ● _ _ O
 Why _ _ O
 ? _ _ O
@@ -1716,6 +2577,9 @@ done _ _ O
 in _ _ O
 4 _ _ O
 ns _ _ O
+
+
+ _ _ O
 Q _ _ O
 ) _ _ O
 If _ _ O
@@ -1756,6 +2620,9 @@ only _ _ O
 of _ _ O
 instructions _ _ O
 ! _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 A _ _ O
@@ -1775,18 +2642,45 @@ use _ _ O
 of _ _ O
 internal _ _ O
 latches _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 ID _ _ O
 Ins _ _ O
 . _ _ O
 Decoder _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 WB _ _ O
 28 _ _ O
 
@@ -2030,6 +2924,9 @@ pipeline _ _ O
 similar _ _ O
 concept _ _ O
 ) _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 

@@ -177,6 +177,9 @@ have _ _ O
 shared _ _ O
 data _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 Dataraces _ _ O
 ! _ _ O
@@ -206,6 +209,9 @@ go _ _ O
 over _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Review _ _ O
@@ -358,6 +364,9 @@ Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -371,9 +380,15 @@ shared _ _ O
 1 _ _ O
 shared _ _ O
 1 _ _ O
+
+
+ _ _ O
 shared++ _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 • _ _ O
 You _ _ O
 may _ _ O
@@ -406,15 +421,24 @@ shared _ _ O
 becoming _ _ O
 2 _ _ O
 . _ _ O
+
+
+ _ _ O
 shared++ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -427,11 +451,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared _ _ O
@@ -445,6 +487,9 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared _ _ O
@@ -458,12 +503,18 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -476,11 +527,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -495,6 +564,9 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared _ _ O
@@ -508,12 +580,18 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -526,11 +604,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared② _ _ O
@@ -542,6 +638,9 @@ R1 _ _ O
 shared _ _ O
 = _ _ O
 R1 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -556,14 +655,23 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -576,11 +684,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared② _ _ O
@@ -592,6 +718,9 @@ R1 _ _ O
 shared _ _ O
 = _ _ O
 R1 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -607,14 +736,23 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -627,11 +765,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared② _ _ O
@@ -643,6 +799,9 @@ R1 _ _ O
 shared _ _ O
 = _ _ O
 R1 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -658,14 +817,23 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Review _ _ O
 : _ _ O
 Datarace _ _ O
 Example _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -678,11 +846,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared② _ _ O
@@ -694,6 +880,9 @@ R1 _ _ O
 shared _ _ O
 = _ _ O
 R1 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -710,8 +899,14 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Review _ _ O
@@ -744,6 +939,9 @@ its _ _ O
 own _ _ O
 copy _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 When _ _ O
 two _ _ O
@@ -756,11 +954,29 @@ shared _ _ O
 = _ _ O
 1 _ _ O
 R1 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 R1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 ① _ _ O
 R1 _ _ O
 = _ _ O
@@ -777,6 +993,9 @@ shared _ _ O
 R1 _ _ O
 Thread _ _ O
 1 _ _ O
+
+
+ _ _ O
 R1 _ _ O
 = _ _ O
 shared② _ _ O
@@ -788,6 +1007,9 @@ R1 _ _ O
 shared _ _ O
 = _ _ O
 R1⑥ _ _ O
+
+
+ _ _ O
 • _ _ O
 End _ _ O
 result _ _ O
@@ -809,8 +1031,14 @@ type _ _ O
 of _ _ O
 interleaving _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thread _ _ O
 2 _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 Review _ _ O
@@ -872,6 +1100,9 @@ main _ _ O
 { _ _ O
 … _ _ O
 } _ _ O
+
+
+ _ _ O
 bash-4.2 _ _ O
 $ _ _ O
 . _ _ O
@@ -883,6 +1114,9 @@ $ _ _ O
 . _ _ O
 / _ _ O
 datarace _ _ O
+
+
+ _ _ O
 shared=2000000 _ _ O
 bash-4.2 _ _ O
 $ _ _ O
@@ -890,6 +1124,9 @@ $ _ _ O
 / _ _ O
 datarace _ _ O
 shared=2000000 _ _ O
+
+
+ _ _ O
 • _ _ O
 Data _ _ O
 race _ _ O
@@ -918,6 +1155,9 @@ place _ _ O
 replication _ _ O
 happens _ _ O
 ! _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Caching _ _ O
@@ -937,46 +1177,103 @@ processors _ _ O
 and _ _ O
 memory _ _ O
 ? _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Caching _ _ O
@@ -995,52 +1292,118 @@ fetches _ _ O
 shared _ _ O
 for _ _ O
 incrementing _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 Caching _ _ O
@@ -1058,52 +1421,118 @@ shared _ _ O
 times _ _ O
 to _ _ O
 100 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 100 _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Caching _ _ O
@@ -1125,56 +1554,128 @@ fetches _ _ O
 shared _ _ O
 from _ _ O
 L3 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 100 _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
 0 _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 Caching _ _ O
@@ -1192,56 +1693,128 @@ shared _ _ O
 times _ _ O
 to _ _ O
 10 _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 100 _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
 10 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
 0 _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Caching _ _ O
@@ -1266,56 +1839,128 @@ CPU _ _ O
 are _ _ O
 incoherent _ _ O
 . _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 100 _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
 10 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
 0 _ _ O
+
+
+ _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 Private _ _ O
 L2 _ _ O
 $ _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 * _ _ O
 All _ _ O
 caches _ _ O
 are _ _ O
 write-back _ _ O
+
+
+ _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Cache _ _ O
@@ -1350,18 +1995,36 @@ of _ _ O
 data _ _ O
 . _ _ O
 shared _ _ O
+
+
+ _ _ O
 0 _ _ O
 Bank _ _ O
 0 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 1 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bank _ _ O
 3 _ _ O
+
+
+ _ _ O
 Shared _ _ O
 L3 _ _ O
 $ _ _ O
+
+
+ _ _ O
 o _ _ O
 The _ _ O
 problem _ _ O
@@ -1411,10 +2074,16 @@ for _ _ O
 same _ _ O
 location _ _ O
 ! _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Cache _ _ O
 Coherence _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Cache _ _ O
@@ -1500,6 +2169,9 @@ copies _ _ O
 ( _ _ O
 eventually _ _ O
 ) _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 How _ _ O
@@ -1523,13 +2195,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -1544,10 +2225,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -1556,6 +2243,9 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 Q _ _ O
 ) _ _ O
 What _ _ O
@@ -1603,6 +2293,9 @@ is _ _ O
 still _ _ O
 0 _ _ O
 ! _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Scenario _ _ O
@@ -1626,13 +2319,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -1647,10 +2349,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -1659,22 +2367,55 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 false _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 flag _ _ O
 false _ _ O
+
+
+ _ _ O
 Let _ _ O
 ’s _ _ O
 assume _ _ O
@@ -1692,6 +2433,9 @@ CPU _ _ O
 L1 _ _ O
 caches _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Scenario _ _ O
@@ -1715,13 +2459,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -1736,10 +2489,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -1748,22 +2507,55 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 flag _ _ O
 false _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
 updates _ _ O
@@ -1776,6 +2568,9 @@ to _ _ O
 and _ _ O
 true _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Scenario _ _ O
@@ -1799,13 +2594,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -1820,10 +2624,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -1832,22 +2642,55 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 flag _ _ O
 false _ _ O
+
+
+ _ _ O
 Now _ _ O
 the _ _ O
 cached _ _ O
@@ -1899,13 +2742,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -1920,10 +2772,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -1932,28 +2790,58 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Invalidate _ _ O
 for _ _ O
 flag _ _ O
 flag _ _ O
 true _ _ O
+
+
+ _ _ O
 Invalidate _ _ O
 for _ _ O
 data _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
 false _ _ O
+
+
+ _ _ O
 The _ _ O
 invalidate _ _ O
 messages _ _ O
@@ -2005,13 +2893,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2026,10 +2923,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2038,28 +2941,58 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Fetch _ _ O
 for _ _ O
 flag _ _ O
 flag _ _ O
 true _ _ O
+
+
+ _ _ O
 Invalidate _ _ O
 for _ _ O
 data _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
 true _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
 fetches _ _ O
@@ -2108,13 +3041,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2129,10 +3071,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2141,28 +3089,61 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Fetch _ _ O
 for _ _ O
 flag _ _ O
 flag _ _ O
+
+
+ _ _ O
 Invalidate _ _ O
 for _ _ O
 data _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
 true _ _ O
+
+
+ _ _ O
 Since _ _ O
 flag _ _ O
 is _ _ O
@@ -2206,13 +3187,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2227,10 +3217,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2239,20 +3235,50 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 false _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 Let _ _ O
 ’s _ _ O
 assume _ _ O
@@ -2304,13 +3330,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2325,10 +3360,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2337,10 +3378,19 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Queue _ _ O
 lw _ _ O
@@ -2350,16 +3400,40 @@ flag _ _ O
 ( _ _ O
 miss _ _ O
 ) _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
+
+
+ _ _ O
 false _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 beq _ _ O
 r1 _ _ O
 , _ _ O
@@ -2379,6 +3453,9 @@ call _ _ O
 println _ _ O
 on _ _ O
 r2 _ _ O
+
+
+ _ _ O
 Instead _ _ O
 of _ _ O
 stalling _ _ O
@@ -2437,13 +3514,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2458,10 +3544,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2470,10 +3562,19 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Queue _ _ O
 lw _ _ O
@@ -2483,19 +3584,40 @@ flag _ _ O
 ( _ _ O
 miss _ _ O
 ) _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
 true _ _ O
+
+
+ _ _ O
 Fetch _ _ O
 for _ _ O
 flag _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 beq _ _ O
 r1 _ _ O
 , _ _ O
@@ -2504,7 +3626,13 @@ zero _ _ O
 , _ _ O
 _ _ _ O
 loop _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 lw _ _ O
 r2 _ _ O
 , _ _ O
@@ -2512,11 +3640,20 @@ data _ _ O
 ( _ _ O
 hit _ _ O
 ) _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 call _ _ O
 println _ _ O
 on _ _ O
 r2 _ _ O
+
+
+ _ _ O
 Now _ _ O
 let _ _ O
 ’s _ _ O
@@ -2583,13 +3720,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2604,10 +3750,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2616,10 +3768,19 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 CPU _ _ O
 0 _ _ O
+
+
+ _ _ O
 CPU _ _ O
 1 _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 Queue _ _ O
 lw _ _ O
@@ -2629,19 +3790,43 @@ flag _ _ O
 ( _ _ O
 miss _ _ O
 ) _ _ O
+
+
+ _ _ O
 data _ _ O
 42 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 Fetch _ _ O
 for _ _ O
 flag _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 data _ _ O
 0 _ _ O
+
+
+ _ _ O
 L1 _ _ O
 $ _ _ O
+
+
+ _ _ O
 beq _ _ O
 r1 _ _ O
 , _ _ O
@@ -2650,7 +3835,13 @@ zero _ _ O
 , _ _ O
 _ _ _ O
 loop _ _ O
+
+
+ _ _ O
 flag _ _ O
+
+
+ _ _ O
 lw _ _ O
 r2 _ _ O
 , _ _ O
@@ -2658,11 +3849,20 @@ data _ _ O
 ( _ _ O
 hit _ _ O
 ) _ _ O
+
+
+ _ _ O
 true _ _ O
+
+
+ _ _ O
 call _ _ O
 println _ _ O
 on _ _ O
 r2 _ _ O
+
+
+ _ _ O
 Since _ _ O
 r1 _ _ O
 = _ _ O
@@ -2713,13 +3913,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2734,10 +3943,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2746,6 +3961,9 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 • _ _ O
 A _ _ O
 memory _ _ O
@@ -2816,6 +4034,9 @@ stores _ _ O
 and _ _ O
 loads _ _ O
 out-of-order _ _ O
+
+
+ _ _ O
 • _ _ O
 Intel _ _ O
 , _ _ O
@@ -2869,13 +4090,22 @@ false _ _ O
 . _ _ O
 Producer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 Consumer _ _ O
 Thread _ _ O
+
+
+ _ _ O
 data _ _ O
 = _ _ O
 = _ _ O
 42 _ _ O
 ; _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 flag _ _ O
@@ -2890,10 +4120,16 @@ wait _ _ O
 * _ _ O
 / _ _ O
 } _ _ O
+
+
+ _ _ O
 flag _ _ O
 = _ _ O
 true _ _ O
 ; _ _ O
+
+
+ _ _ O
 System.out.println _ _ O
 ( _ _ O
 “data= _ _ O
@@ -2902,6 +4138,9 @@ System.out.println _ _ O
 data _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 • _ _ O
 Regardless _ _ O
 of _ _ O
@@ -2938,6 +4177,9 @@ that _ _ O
 eventually _ _ O
 is _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 property _ _ O
@@ -2946,6 +4188,9 @@ called _ _ O
 cache _ _ O
 coherence _ _ O
 . _ _ O
+
+
+ _ _ O
 35 _ _ O
 
 Implementing _ _ O
@@ -2964,6 +4209,9 @@ to _ _ O
 all _ _ O
 caches _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 Cache _ _ O
 coherence _ _ O
@@ -3051,6 +4299,9 @@ contains _ _ O
 no _ _ O
 data _ _ O
 . _ _ O
+
+
+ _ _ O
 36 _ _ O
 
 MSI _ _ O
@@ -3059,32 +4310,68 @@ Cache _ _ O
 Coherence _ _ O
 Protocol _ _ O
 Processor _ _ O
+
+
+ _ _ O
 Snoop _ _ O
 tag _ _ O
+
+
+ _ _ O
 Cache _ _ O
 tag _ _ O
 and _ _ O
 data _ _ O
+
+
+ _ _ O
 Processor _ _ O
+
+
+ _ _ O
 Snoop _ _ O
 tag _ _ O
+
+
+ _ _ O
 Cache _ _ O
 tag _ _ O
 and _ _ O
 data _ _ O
+
+
+ _ _ O
 Processor _ _ O
+
+
+ _ _ O
 Snoop _ _ O
 tag _ _ O
+
+
+ _ _ O
 Cache _ _ O
 tag _ _ O
 and _ _ O
 data _ _ O
+
+
+ _ _ O
 Single _ _ O
 bus _ _ O
+
+
+ _ _ O
 Memory _ _ O
+
+
+ _ _ O
 I _ _ O
 / _ _ O
 O _ _ O
+
+
+ _ _ O
 ● _ _ O
 Each _ _ O
 processor _ _ O
@@ -3179,7 +4466,13 @@ monitoring _ _ O
 that _ _ O
 bus _ _ O
 activity _ _ O
+
+
+ _ _ O
 Event _ _ O
+
+
+ _ _ O
 In _ _ O
 P1 _ _ O
 ’s _ _ O
@@ -3187,6 +4480,9 @@ cache _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
+
+
+ _ _ O
 P1 _ _ O
 writes _ _ O
 10 _ _ O
@@ -3237,6 +4533,9 @@ A _ _ O
 write _ _ O
 miss _ _ O
 ) _ _ O
+
+
+ _ _ O
 In _ _ O
 P2 _ _ O
 ’s _ _ O
@@ -3253,6 +4552,9 @@ write _ _ O
 in _ _ O
 P1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3261,9 +4563,15 @@ A _ _ O
 ( _ _ O
 modified _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3272,9 +4580,15 @@ A _ _ O
 ( _ _ O
 modified _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
+
+
+ _ _ O
 Read _ _ O
 A _ _ O
 ( _ _ O
@@ -3283,6 +4597,9 @@ read _ _ O
 in _ _ O
 P2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3291,6 +4608,9 @@ A _ _ O
 ( _ _ O
 shared _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3299,6 +4619,9 @@ A _ _ O
 ( _ _ O
 shared _ _ O
 ) _ _ O
+
+
+ _ _ O
 Invalidate _ _ O
 A _ _ O
 ( _ _ O
@@ -3307,9 +4630,15 @@ write _ _ O
 in _ _ O
 P2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3318,9 +4647,15 @@ A _ _ O
 ( _ _ O
 modified _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3338,6 +4673,9 @@ write _ _ O
 in _ _ O
 P1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
  _ _ O
 A _ _ O
@@ -3346,6 +4684,9 @@ A _ _ O
 ( _ _ O
 modified _ _ O
 ) _ _ O
+
+
+ _ _ O
 L _ _ O
 = _ _ O
 invalid _ _ O
@@ -3369,21 +4710,48 @@ in _ _ O
 blue _ _ O
 Read _ _ O
 Write _ _ O
+
+
+ _ _ O
 Read _ _ O
 BusRead _ _ O
+
+
+ _ _ O
 BusRead _ _ O
+
+
+ _ _ O
 Modified _ _ O
+
+
+ _ _ O
 Shared _ _ O
+
+
+ _ _ O
 Write _ _ O
 BusReadX _ _ O
 BusReadX _ _ O
 BusInvalidate _ _ O
 Write _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 Read _ _ O
 • _ _ O
+
+
+ _ _ O
 Invalid _ _ O
+
+
+ _ _ O
 BusRead _ _ O
 : _ _ O
 Read _ _ O
@@ -3441,6 +4809,9 @@ shared _ _ O
 lines _ _ O
 in _ _ O
 system _ _ O
+
+
+ _ _ O
 BusRead _ _ O
 BusReadX _ _ O
 BusInvalidate _ _ O
@@ -3448,6 +4819,9 @@ BusInvalidate _ _ O
 
 TLB _ _ O
 Coherence _ _ O
+
+
+ _ _ O
 40 _ _ O
 
 How _ _ O
@@ -3523,6 +4897,9 @@ course _ _ O
 much _ _ O
 much _ _ O
 slower _ _ O
+
+
+ _ _ O
 41 _ _ O
 
 TLB _ _ O
@@ -3574,6 +4951,9 @@ of _ _ O
 significant _ _ O
 performance _ _ O
 overhead _ _ O
+
+
+ _ _ O
 * _ _ O
 Courtesy _ _ O
 of _ _ O

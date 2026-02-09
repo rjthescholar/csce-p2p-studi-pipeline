@@ -11,6 +11,9 @@ COE _ _ O
 1550 _ _ O
 Spring _ _ O
 2022 _ _ O
+
+
+ _ _ O
 Sherif _ _ O
 Khattab _ _ O
 ksm73@pitt.edu _ _ O
@@ -59,6 +62,9 @@ on _ _ O
 2 _ _ O
 / _ _ O
 28 _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -85,6 +91,9 @@ algorithm _ _ O
 Sleepy _ _ O
 Barbers _ _ O
 problem _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -100,6 +109,9 @@ Points _ _ O
 Checked _ _ O
 on _ _ O
 Tophat _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -150,8 +162,14 @@ producers-consumers _ _ O
 problem _ _ O
 Worker _ _ O
 Process _ _ O
+
+
+ _ _ O
 Customer _ _ O
 Process _ _ O
+
+
+ _ _ O
 struct _ _ O
 mysems _ _ O
 sems _ _ O
@@ -160,6 +178,9 @@ buff.consume _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 struct _ _ O
 mysems _ _ O
 sems _ _ O
@@ -167,60 +188,96 @@ sems _ _ O
 new _ _ O
 struct _ _ O
 mysems _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV1a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 buff.produce _ _ O
 ( _ _ O
 sems _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV1b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV1a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 do _ _ O
 work _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV1b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV2a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 get _ _ O
 work _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV2b _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 up _ _ O
 ( _ _ O
 sems.RV2a _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 / _ _ O
 / _ _ O
 check-in _ _ O
 for _ _ O
 next _ _ O
 customer _ _ O
+
+
+ _ _ O
 down _ _ O
 ( _ _ O
 sems.RV2b _ _ O
@@ -229,6 +286,9 @@ sems.RV2b _ _ O
 / _ _ O
 / _ _ O
 leave _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -249,6 +309,9 @@ implement _ _ O
 condition _ _ O
 variables _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
 Reflect _ _ O
 more _ _ O
@@ -274,6 +337,9 @@ with _ _ O
 two _ _ O
 waiting _ _ O
 queues _ _ O
+
+
+ _ _ O
 struct _ _ O
 Lock _ _ O
 { _ _ O
@@ -298,7 +364,13 @@ Release _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 nextCount _ _ O
@@ -306,21 +378,39 @@ nextCount _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 Acquire _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 next.up _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 mutex.down _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 nextCount-- _ _ O
 ; _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 } _ _ O
 else _ _ O
 mutex.up _ _ O
@@ -362,16 +452,25 @@ nextCount _ _ O
 > _ _ O
 0 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Signal _ _ O
 ( _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 next.up _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 semCount _ _ O
@@ -379,34 +478,55 @@ semCount _ _ O
 0 _ _ O
 ) _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 nextCount-- _ _ O
 ; _ _ O
+
+
+ _ _ O
 condSem.up _ _ O
 ( _ _ O
 ) _ _ O
 lk- _ _ O
 > _ _ O
 nextCount++ _ _ O
+
+
+ _ _ O
 else _ _ O
 { _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 next.down _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 mutex.up _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lk- _ _ O
 > _ _ O
 nextCount _ _ O
 — _ _ O
+
+
+ _ _ O
 } _ _ O
 semCount++ _ _ O
 ; _ _ O
@@ -417,6 +537,9 @@ condSem.down _ _ O
 semCount-- _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 } _ _ O
 } _ _ O
 
@@ -425,6 +548,9 @@ and _ _ O
 Condition _ _ O
 Variable _ _ O
 Implementation _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -439,6 +565,9 @@ locks _ _ O
 with _ _ O
 semaphores _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 mutex _ _ O
 to _ _ O
@@ -448,7 +577,13 @@ within _ _ O
 the _ _ O
 lock _ _ O
 bounds _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Use _ _ O
 next _ _ O
 to _ _ O
@@ -464,7 +599,13 @@ priority _ _ O
 why _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 nextCount _ _ O
 indicates _ _ O
 whether _ _ O
@@ -474,6 +615,9 @@ any _ _ O
 higher _ _ O
 priority _ _ O
 waiters _ _ O
+
+
+ _ _ O
 class _ _ O
 Lock _ _ O
 { _ _ O
@@ -531,6 +675,9 @@ mutex.up _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -544,6 +691,9 @@ Implementing _ _ O
 condition _ _ O
 variables _ _ O
 • _ _ O
+
+
+ _ _ O
 Are _ _ O
 these _ _ O
 Hoare _ _ O
@@ -551,7 +701,13 @@ or _ _ O
 Mesa _ _ O
 semantics _ _ O
 ? _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 Can _ _ O
 there _ _ O
 be _ _ O
@@ -563,6 +719,9 @@ a _ _ O
 single _ _ O
 Lock _ _ O
 ? _ _ O
+
+
+ _ _ O
 class _ _ O
 Condition _ _ O
 { _ _ O
@@ -625,6 +784,9 @@ semCount _ _ O
 1 _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 Condition _ _ O
 : _ _ O
 : _ _ O
@@ -664,6 +826,9 @@ nextCount _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -677,6 +842,9 @@ Process _ _ O
 Synchronization _ _ O
 inside _ _ O
 Monitors _ _ O
+
+
+ _ _ O
 CS _ _ O
 1550 _ _ O
 – _ _ O
@@ -694,6 +862,9 @@ Code _ _ O
 Walkthrough _ _ O
 at _ _ O
 : _ _ O
+
+
+ _ _ O
 https _ _ O
 : _ _ O
 / _ _ O
@@ -708,6 +879,9 @@ ProcessSynchronization _ _ O
 / _ _ O
 Slides _ _ O
 / _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -718,6 +892,9 @@ Systems _ _ O
 – _ _ O
 Sherif _ _ O
 Khattab _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Reflections _ _ O
@@ -783,6 +960,9 @@ locking _ _ O
 the _ _ O
 mutex _ _ O
 lock _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 need _ _ O

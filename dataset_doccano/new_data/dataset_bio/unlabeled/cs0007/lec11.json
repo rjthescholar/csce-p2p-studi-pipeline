@@ -335,18 +335,7 @@
                 "\uf0a5",
                 "1",
                 "1",
-                "1",
-                "\uf0e5",
-                "n",
-                "\uf03d1",
-                "\uf02b",
-                "2",
-                "\uf02b",
-                "3",
-                "\uf02b",
-                "...",
-                "n",
-                "\uf03d1"
+                "1"
             ],
             "word_labels": [
                 "O",
@@ -375,6 +364,25 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\uf0e5",
+                "n",
+                "\uf03d1",
+                "\uf02b",
+                "2",
+                "\uf02b",
+                "3",
+                "\uf02b",
+                "...",
+                "n",
+                "\uf03d1"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -992,27 +1000,7 @@
                 "need",
                 "to",
                 "keep",
-                "track",
-                "int",
-                "currElement",
-                "=",
-                "0",
-                ";",
-                "\u2013",
-                "starts",
-                "at",
-                "0",
-                "\u2013",
-                "not",
-                "equal",
-                "to",
-                "the",
-                "end",
-                "!",
-                "currElement",
-                "!",
-                "=",
-                "list.length"
+                "track"
             ],
             "word_labels": [
                 "O",
@@ -1052,6 +1040,43 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "int",
+                "currElement",
+                "=",
+                "0",
+                ";"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2013",
+                "starts",
+                "at",
+                "0",
+                "\u2013",
+                "not",
+                "equal",
+                "to",
+                "the",
+                "end",
+                "!"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1063,11 +1088,18 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "currElement",
+                "!",
+                "=",
+                "list.length"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1256,22 +1288,6 @@
                 "currElement",
                 "]",
                 ")",
-                ";",
-                "\u2022",
-                "How",
-                "do",
-                "we",
-                "move",
-                "to",
-                "the",
-                "next",
-                "one",
-                "?",
-                "currElement",
-                "=",
-                "currElement",
-                "+",
-                "1",
                 ";"
             ],
             "word_labels": [
@@ -1342,6 +1358,30 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "How",
+                "do",
+                "we",
+                "move",
+                "to",
+                "the",
+                "next",
+                "one",
+                "?",
+                "currElement",
+                "=",
+                "currElement",
+                "+",
+                "1",
+                ";"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2416,32 +2456,6 @@
                 "while",
                 "(",
                 "condition",
-                ")",
-                "for",
-                "(",
-                "int",
-                "counter",
-                "=",
-                "start",
-                ";",
-                "condition",
-                ";",
-                "counter",
-                "increment",
-                ")",
-                "{",
-                "/",
-                "/",
-                "Do",
-                "stuff",
-                "}",
-                "/",
-                "/",
-                "end",
-                "loop",
-                "for",
-                "(",
-                "condition",
                 ")"
             ],
             "word_labels": [
@@ -2472,6 +2486,40 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "for",
+                "(",
+                "int",
+                "counter",
+                "=",
+                "start",
+                ";",
+                "condition",
+                ";",
+                "counter",
+                "increment",
+                ")",
+                "{",
+                "/",
+                "/",
+                "Do",
+                "stuff",
+                "}",
+                "/",
+                "/",
+                "end",
+                "loop",
+                "for",
+                "(",
+                "condition",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2588,18 +2636,6 @@
                 "O",
                 "O"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         },
         {
             "sentence": [],

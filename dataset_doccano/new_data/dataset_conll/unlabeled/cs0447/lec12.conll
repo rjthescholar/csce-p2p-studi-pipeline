@@ -3,6 +3,9 @@ unlabeled|cs0447|lec12
 
 # _ _ O
 12 _ _ O
+
+
+ _ _ O
 Controlling _ _ O
 the _ _ O
 PC _ _ O
@@ -22,14 +25,23 @@ Childers _ _ O
 , _ _ O
 David _ _ O
 Wilkinson _ _ O
+
+
+ _ _ O
 CS _ _ O
 0447 _ _ O
 Introduction _ _ O
 to _ _ O
 Computer _ _ O
 Programming _ _ O
+
+
+ _ _ O
 Luís _ _ O
 Oliveira _ _ O
+
+
+ _ _ O
 Fall _ _ O
 2020 _ _ O
 
@@ -51,6 +63,9 @@ should _ _ O
 talk _ _ O
 to _ _ O
 me _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Assemblers _ _ O
@@ -62,6 +77,9 @@ machine-code _ _ O
 sausage _ _ O
 is _ _ O
 made _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 What _ _ O
@@ -69,6 +87,9 @@ is _ _ O
 machine _ _ O
 code _ _ O
 ? _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Something _ _ O
@@ -108,28 +129,61 @@ three _ _ O
 instruction _ _ O
 formats _ _ O
 . _ _ O
+
+
+ _ _ O
 R _ _ O
 opcode _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 I _ _ O
 opcode _ _ O
 31 _ _ O
+
+
+ _ _ O
 rs _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 J _ _ O
 opcode _ _ O
 31 _ _ O
+
+
+ _ _ O
 21 _ _ O
 20 _ _ O
+
+
+ _ _ O
 16 _ _ O
 15 _ _ O
+
+
+ _ _ O
 rt _ _ O
 21 _ _ O
 20 _ _ O
+
+
+ _ _ O
 rs _ _ O
+
+
+ _ _ O
 the _ _ O
 opcode _ _ O
 ( _ _ O
@@ -145,15 +199,36 @@ is _ _ O
 . _ _ O
 11 _ _ O
 10 _ _ O
+
+
+ _ _ O
 rd _ _ O
+
+
+ _ _ O
 6 _ _ O
 5 _ _ O
+
+
+ _ _ O
 shamt _ _ O
 funct _ _ O
+
+
+ _ _ O
 16 _ _ O
 15 _ _ O
+
+
+ _ _ O
 rt _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 add _ _ O
 rd _ _ O
 , _ _ O
@@ -166,18 +241,39 @@ rd _ _ O
 rs _ _ O
 , _ _ O
 shamt _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 beq _ _ O
 rs _ _ O
 , _ _ O
 rt _ _ O
 , _ _ O
 offset _ _ O
+
+
+ _ _ O
 immediate _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 target _ _ O
+
+
+ _ _ O
 jal _ _ O
 target _ _ O
 5 _ _ O
@@ -214,39 +310,87 @@ CPU _ _ O
 's _ _ O
 components _ _ O
 . _ _ O
+
+
+ _ _ O
 Register _ _ O
 File _ _ O
 WE _ _ O
+
+
+ _ _ O
 add _ _ O
 t0 _ _ O
 , _ _ O
 t1 _ _ O
 , _ _ O
 t2 _ _ O
+
+
+ _ _ O
 ALU _ _ O
+
+
+ _ _ O
 rd _ _ O
+
+
+ _ _ O
 rs _ _ O
+
+
+ _ _ O
 rt _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 " _ _ O
 add _ _ O
 " _ _ O
+
+
+ _ _ O
 gets _ _ O
 encoded _ _ O
 as _ _ O
 … _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 21 _ _ O
 20 _ _ O
+
+
+ _ _ O
 16 _ _ O
 15 _ _ O
+
+
+ _ _ O
 11 _ _ O
 10 _ _ O
+
+
+ _ _ O
 6 _ _ O
 5 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 000000 _ _ O
 01001 _ _ O
 01010 _ _ O
@@ -259,6 +403,9 @@ How _ _ O
 It _ _ O
 's _ _ O
 Made _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 So _ _ O
@@ -267,17 +414,44 @@ know _ _ O
 the _ _ O
 assembler _ _ O
 li _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 0 _ _ O
+
+
+ _ _ O
 Address _ _ O
+
+
+ _ _ O
 Instruction _ _ O
+
+
+ _ _ O
 0x00400000 _ _ O
+
+
+ _ _ O
 0x24100000 _ _ O
+
+
+ _ _ O
 0x00400004 _ _ O
+
+
+ _ _ O
 0x00102021 _ _ O
+
+
+ _ _ O
 move _ _ O
 a0 _ _ O
 , _ _ O
@@ -335,6 +509,9 @@ syscall _ _ O
 jr _ _ O
 ra _ _ O
 0x00400028 _ _ O
+
+
+ _ _ O
 0x0C100008 _ _ O
 0x22100001 _ _ O
 0x2A010005 _ _ O
@@ -365,21 +542,54 @@ instruction _ _ O
 output _ _ O
 its _ _ O
 encoding _ _ O
+
+
+ _ _ O
 addi _ _ O
 s0 _ _ O
 , _ _ O
 s0 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 splut _ _ O
+
+
+ _ _ O
 opcode _ _ O
+
+
+ _ _ O
 rs _ _ O
+
+
+ _ _ O
 rt _ _ O
+
+
+ _ _ O
 imm _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0x22100001 _ _ O
 But _ _ O
 what _ _ O
@@ -389,6 +599,9 @@ and _ _ O
 the _ _ O
 data _ _ O
 segment _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 How _ _ O
@@ -522,6 +735,9 @@ fixups _ _ O
 ! _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 .data _ _ O
 0 _ _ O
 : _ _ O
@@ -532,6 +748,9 @@ DEADBEEF _ _ O
 8 _ _ O
 : _ _ O
 12345678 _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 Yum _ _ O
@@ -589,6 +808,9 @@ is _ _ O
 CS0449 _ _ O
 stuff _ _ O
 ! _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 What _ _ O
@@ -649,6 +871,9 @@ ID _ _ O
 } _ _ O
 LPAREN _ _ O
 , _ _ O
+
+
+ _ _ O
 AST _ _ O
 ( _ _ O
 Abstract _ _ O
@@ -697,7 +922,13 @@ argv _ _ O
 " _ _ O
 } _ _ O
 ] _ _ O
+
+
+ _ _ O
 if _ _ O
+
+
+ _ _ O
 KEYWORD _ _ O
 ( _ _ O
 "int _ _ O
@@ -707,14 +938,23 @@ KEYWORD _ _ O
 ... _ _ O
 < _ _ O
 argc _ _ O
+
+
+ _ _ O
 … _ _ O
 2 _ _ O
 fatal _ _ O
+
+
+ _ _ O
 call _ _ O
 " _ _ O
 gimme _ _ O
 arguments _ _ O
 " _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 It _ _ O
@@ -742,6 +982,9 @@ to _ _ O
 produce _ _ O
 machine _ _ O
 code _ _ O
+
+
+ _ _ O
 /\ _ _ O
 / _ _ O
 \ _ _ O
@@ -1061,7 +1304,13 @@ code _ _ O
 \ _ _ O
 / _ _ O
 \ _ _ O
+
+
+ _ _ O
 hello.c _ _ O
+
+
+ _ _ O
 code _ _ O
 goes _ _ O
 in _ _ O
@@ -1071,6 +1320,9 @@ object _ _ O
 files _ _ O
 come _ _ O
 out _ _ O
+
+
+ _ _ O
 these _ _ O
 days _ _ O
 , _ _ O
@@ -1093,11 +1345,17 @@ of _ _ O
 platform-independent _ _ O
 assembly _ _ O
 code _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Jumps _ _ O
 and _ _ O
 Branches _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Maybe _ _ O
@@ -1116,6 +1374,9 @@ into _ _ O
 two _ _ O
 groups _ _ O
 . _ _ O
+
+
+ _ _ O
 jumps _ _ O
 make _ _ O
 execution _ _ O
@@ -1124,6 +1385,9 @@ to _ _ O
 one _ _ O
 specific _ _ O
 place _ _ O
+
+
+ _ _ O
 branches _ _ O
 make _ _ O
 execution _ _ O
@@ -1133,14 +1397,23 @@ one _ _ O
 of _ _ O
 two _ _ O
 places _ _ O
+
+
+ _ _ O
 j _ _ O
 end _ _ O
+
+
+ _ _ O
 bne _ _ O
 s1 _ _ O
 , _ _ O
 t0 _ _ O
 , _ _ O
 top _ _ O
+
+
+ _ _ O
 but _ _ O
 .. _ _ O
 why _ _ O
@@ -1153,6 +1426,9 @@ operands _ _ O
 of _ _ O
 each _ _ O
 . _ _ O
+
+
+ _ _ O
 15 _ _ O
 
 A _ _ O
@@ -1208,6 +1484,9 @@ jumps _ _ O
 are _ _ O
 used _ _ O
 . _ _ O
+
+
+ _ _ O
 now _ _ O
 think _ _ O
 about _ _ O
@@ -1218,6 +1497,9 @@ branches _ _ O
 are _ _ O
 used _ _ O
 . _ _ O
+
+
+ _ _ O
 how _ _ O
 far _ _ O
 away _ _ O
@@ -1229,6 +1511,9 @@ likely _ _ O
 to _ _ O
 be _ _ O
 ? _ _ O
+
+
+ _ _ O
 how _ _ O
 far _ _ O
 away _ _ O
@@ -1257,6 +1542,9 @@ branches _ _ O
 are _ _ O
 relative _ _ O
 . _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
 move _ _ O
@@ -1278,6 +1566,9 @@ s0 _ _ O
 , _ _ O
 top _ _ O
 ... _ _ O
+
+
+ _ _ O
 jumps _ _ O
 just _ _ O
 set _ _ O
@@ -1288,9 +1579,15 @@ a _ _ O
 new _ _ O
 value _ _ O
 . _ _ O
+
+
+ _ _ O
 PC _ _ O
 = _ _ O
 0x800400B0 _ _ O
+
+
+ _ _ O
 PC _ _ O
 + _ _ O
 = _ _ O
@@ -1309,6 +1606,9 @@ or _ _ O
 do _ _ O
 nothing _ _ O
 . _ _ O
+
+
+ _ _ O
 jumps _ _ O
 need _ _ O
 a _ _ O
@@ -1334,6 +1634,9 @@ and _ _ O
 I _ _ O
 instructions _ _ O
 ! _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 More _ _ O
@@ -1358,11 +1661,20 @@ again _ _ O
 Address _ _ O
 in _ _ O
 hex _ _ O
+
+
+ _ _ O
 and _ _ O
 in _ _ O
 binary _ _ O
+
+
+ _ _ O
 0x78000000 _ _ O
 0x78000004 _ _ O
+
+
+ _ _ O
 0111 _ _ O
 1000 _ _ O
 0000 _ _ O
@@ -1379,8 +1691,14 @@ binary _ _ O
 0000 _ _ O
 0000 _ _ O
 0100 _ _ O
+
+
+ _ _ O
 0x78000008 _ _ O
 0x7800000C _ _ O
+
+
+ _ _ O
 0111 _ _ O
 1000 _ _ O
 0000 _ _ O
@@ -1417,6 +1735,9 @@ always _ _ O
 end _ _ O
 in _ _ O
 00 _ _ O
+
+
+ _ _ O
 since _ _ O
 every _ _ O
 instruction _ _ O
@@ -1445,6 +1766,9 @@ next _ _ O
 , _ _ O
 boss _ _ O
 ? _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Remember _ _ O
@@ -1458,6 +1782,9 @@ these _ _ O
 instructions _ _ O
 run _ _ O
 ? _ _ O
+
+
+ _ _ O
 most _ _ O
 instructions _ _ O
 change _ _ O
@@ -1473,6 +1800,9 @@ li _ _ O
 v0 _ _ O
 , _ _ O
 1 _ _ O
+
+
+ _ _ O
 li _ _ O
 s0 _ _ O
 , _ _ O
@@ -1532,11 +1862,20 @@ two _ _ O
 choices _ _ O
 , _ _ O
 conditionally _ _ O
+
+
+ _ _ O
 20 _ _ O
 
 Forwarrrrrrrrd _ _ O
 MARCH _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 ● _ _ O
 moving _ _ O
 ahead _ _ O
@@ -1564,12 +1903,21 @@ state _ _ O
 + _ _ O
 1 _ _ O
 :D _ _ O
+
+
+ _ _ O
 size _ _ O
 of _ _ O
 one _ _ O
 instruction _ _ O
+
+
+ _ _ O
 00100004 _ _ O
 PC _ _ O
+
+
+ _ _ O
 how _ _ O
 big _ _ O
 are _ _ O
@@ -1577,13 +1925,25 @@ instructions _ _ O
 in _ _ O
 MIPS _ _ O
 ? _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Arbitrary _ _ O
 locatiooooon _ _ O
 MARCH _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 ● _ _ O
 jumps _ _ O
 ( _ _ O
@@ -1625,12 +1985,21 @@ do _ _ O
 we _ _ O
 choose _ _ O
 ? _ _ O
+
+
+ _ _ O
 jump _ _ O
 target _ _ O
 PC _ _ O
 Source _ _ O
+
+
+ _ _ O
 00100004 _ _ O
 PC _ _ O
+
+
+ _ _ O
 PC _ _ O
 Source _ _ O
 ( _ _ O
@@ -1668,13 +2037,31 @@ J-type _ _ O
 instruction _ _ O
 format _ _ O
 : _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 opcode _ _ O
+
+
+ _ _ O
 target _ _ O
 00100004 _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 26 _ _ O
@@ -1688,10 +2075,16 @@ is _ _ O
 32 _ _ O
 bits _ _ O
 . _ _ O
+
+
+ _ _ O
 WHAT _ _ O
 DO _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 23 _ _ O
 
 Do _ _ O
@@ -1753,16 +2146,37 @@ here _ _ O
 's _ _ O
 a _ _ O
 j. _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 0x243C007 _ _ O
 < _ _ O
 < _ _ O
 2 _ _ O
+
+
+ _ _ O
 0x90F001C _ _ O
+
+
+ _ _ O
 what _ _ O
 does _ _ O
 this _ _ O
@@ -1779,6 +2193,9 @@ too _ _ O
 far _ _ O
 away _ _ O
 ? _ _ O
+
+
+ _ _ O
 78000008 _ _ O
 790F001C _ _ O
 PC _ _ O
@@ -1817,6 +2234,9 @@ instruction _ _ O
 is _ _ O
 in _ _ O
 address _ _ O
+
+
+ _ _ O
 YXXXXXXX _ _ O
 ● _ _ O
 It _ _ O
@@ -1825,32 +2245,65 @@ reach _ _ O
 from _ _ O
 address _ _ O
 : _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 000010 _ _ O
 ● _ _ O
 To _ _ O
 address _ _ O
 : _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 Y0000000 _ _ O
 0x0000000 _ _ O
 < _ _ O
 < _ _ O
 2 _ _ O
 0x0000000 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 000010 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 YFFFFFFC _ _ O
 0x3FFFFFF _ _ O
 < _ _ O
 < _ _ O
 2 _ _ O
 0xFFFFFFC _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 If _ _ O
@@ -1877,8 +2330,17 @@ t0 _ _ O
 zero _ _ O
 , _ _ O
 a_label_far_far_away _ _ O
+
+
+ _ _ O
 j _ _ O
+
+
+ _ _ O
 a_label_far_far_away _ _ O
+
+
+ _ _ O
 ● _ _ O
 There _ _ O
 is _ _ O
@@ -1904,7 +2366,13 @@ register _ _ O
 ra _ _ O
 ? _ _ O
 jr _ _ O
+
+
+ _ _ O
 ra _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 If _ _ O
@@ -1916,19 +2384,34 @@ far _ _ O
 away _ _ O
 … _ _ O
 j _ _ O
+
+
+ _ _ O
 a_label_far_far_away _ _ O
+
+
+ _ _ O
 la _ _ O
 jr _ _ O
 beq _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 a_label_far_far_away _ _ O
 t0 _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 zero _ _ O
 , _ _ O
 a_label_far_far_away _ _ O
+
+
+ _ _ O
 bne _ _ O
 t0 _ _ O
 , _ _ O
@@ -1945,6 +2428,9 @@ t0 _ _ O
 _ _ _ O
 skip_jump _ _ O
 : _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 If _ _ O
@@ -1956,13 +2442,25 @@ far _ _ O
 away _ _ O
 … _ _ O
 jal _ _ O
+
+
+ _ _ O
 a_label_far_far_away _ _ O
+
+
+ _ _ O
 la _ _ O
 jalr _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 a_label_far_far_away _ _ O
 t0 _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 Relative _ _ O
@@ -1974,18 +2472,51 @@ a _ _ O
 number _ _ O
 line _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 you _ _ O
 are _ _ O
 here _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 if _ _ O
 you _ _ O
 want _ _ O
@@ -2007,6 +2538,9 @@ what _ _ O
 the _ _ O
 pattern _ _ O
 ? _ _ O
+
+
+ _ _ O
 9 _ _ O
 10 _ _ O
 11 _ _ O
@@ -2016,13 +2550,22 @@ pattern _ _ O
 15 _ _ O
 16 _ _ O
 17 _ _ O
+
+
+ _ _ O
 how _ _ O
 about _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 destination _ _ O
 - _ _ O
 source _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 MIPS _ _ O
@@ -2058,6 +2601,9 @@ at _ _ O
 address _ _ O
 00 _ _ O
 … _ _ O
+
+
+ _ _ O
 00 _ _ O
 : _ _ O
 beq _ _ O
@@ -2110,6 +2656,9 @@ we _ _ O
 get _ _ O
 there _ _ O
 ? _ _ O
+
+
+ _ _ O
 PC _ _ O
 + _ _ O
 = _ _ O
@@ -2155,18 +2704,48 @@ only _ _ O
 16 _ _ O
 bits _ _ O
 … _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 21 _ _ O
 20 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 16 _ _ O
 15 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x0002 _ _ O
+
+
+ _ _ O
 0x0008 _ _ O
 > _ _ O
 > _ _ O
@@ -2198,6 +2777,9 @@ a _ _ O
 negative _ _ O
 number _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 The _ _ O
@@ -2257,6 +2839,9 @@ end _ _ O
 10 _ _ O
 : _ _ O
 ... _ _ O
+
+
+ _ _ O
 the _ _ O
 branch _ _ O
 offset _ _ O
@@ -2283,22 +2868,55 @@ address _ _ O
 ) _ _ O
 = _ _ O
 8 _ _ O
+
+
+ _ _ O
 31 _ _ O
+
+
+ _ _ O
 26 _ _ O
 25 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 21 _ _ O
 20 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 16 _ _ O
 15 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0x0002 _ _ O
+
+
+ _ _ O
 0x0008 _ _ O
 > _ _ O
 > _ _ O
 2 _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 

@@ -2,9 +2,15 @@
 -DOCSTART- -X- -X- O
 
 12 _ _ O
+
+
+ _ _ O
 How _ _ O
 Programs _ _ O
 Reproduce _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +19,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,6 +34,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 Creating _ _ O
 Processes _ _ O
 Forks _ _ O
@@ -44,7 +56,13 @@ a _ _ O
 system _ _ B-Concept
 call _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 This _ _ O
 is _ _ O
 a _ _ O
@@ -93,6 +111,9 @@ of _ _ O
 its _ _ O
 parent _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 can _ _ O
@@ -149,6 +170,9 @@ now _ _ O
 multiple _ _ O
 paths _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 We _ _ O
 will _ _ O
@@ -160,16 +184,25 @@ action _ _ O
 soon _ _ O
 . _ _ O
 3 _ _ O
+
+
+ _ _ O
 Here _ _ O
 's _ _ O
 Dolly _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ B-Concept
 call _ _ I-Concept
 in _ _ O
 action _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Copies _ _ O
 the _ _ O
@@ -190,37 +223,79 @@ a _ _ O
 unique _ _ O
 ID _ _ O
 ) _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 Child _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 CPU _ _ B-Concept
 State _ _ I-Concept
 A _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 CPU _ _ B-Concept
 State _ _ I-Concept
 B _ _ O
 : _ _ O
 Registers _ _ B-Concept
 , _ _ O
+
+
+ _ _ O
 PID _ _ B-Concept
 : _ _ O
 4356 _ _ O
+
+
+ _ _ O
 PID _ _ B-Concept
 : _ _ O
 6567 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Here _ _ O
 's _ _ O
 Dolly _ _ O
@@ -229,11 +304,17 @@ ID _ _ O
 tag _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ B-Concept
 call _ _ I-Concept
 in _ _ O
 action _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Updates _ _ O
 the _ _ O
@@ -264,30 +345,63 @@ process _ _ B-Concept
 ID _ _ B-Concept
 . _ _ O
 ( _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 Child _ _ O
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 stack _ _ B-Concept
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 CPU _ _ B-Concept
 State _ _ I-Concept
 A _ _ O
 : _ _ O
 Registers _ _ B-Concept
+
+
+ _ _ O
 CPU _ _ B-Concept
 State _ _ I-Concept
 B _ _ O
 : _ _ O
 Registers _ _ B-Concept
+
+
+ _ _ O
 PID _ _ B-Concept
 : _ _ O
 4356 _ _ O
+
+
+ _ _ O
 Ensures _ _ O
 each _ _ O
 process _ _ B-Concept
@@ -296,13 +410,28 @@ detect _ _ O
 which _ _ O
 it _ _ O
 is _ _ O
+
+
+ _ _ O
 ) _ _ O
 ) _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 PID _ _ B-Concept
 : _ _ O
 6567 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 A _ _ O
 small _ _ O
 fork _ _ B-Concept
@@ -326,7 +455,13 @@ when _ _ O
 is _ _ O
 called _ _ O
 . _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -356,6 +491,9 @@ child _ _ O
 and _ _ O
 parent _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Once _ _ O
 in _ _ O
@@ -368,6 +506,9 @@ in _ _ O
 the _ _ O
 child _ _ O
 process _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 starts _ _ O
@@ -384,6 +525,9 @@ Via _ _ O
 two _ _ O
 processes _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 does _ _ O
@@ -391,7 +535,13 @@ this _ _ O
 print _ _ O
 out _ _ O
 ? _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Children _ _ O
 first _ _ O
 ... _ _ O
@@ -405,7 +555,13 @@ process _ _ O
 goes _ _ O
 first _ _ O
 ... _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Then _ _ O
 it _ _ O
@@ -416,7 +572,13 @@ child _ _ O
 text _ _ O
 . _ _ O
 Child _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 • _ _ O
 Then _ _ O
 the _ _ O
@@ -437,6 +599,9 @@ the _ _ O
 parent _ _ O
 text _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -471,7 +636,13 @@ by _ _ O
 the _ _ O
 child _ _ O
 . _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 Two _ _ O
 roads _ _ O
 diverged _ _ O
@@ -489,6 +660,9 @@ NOT _ _ O
 SORRY _ _ O
 ) _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 I _ _ O
@@ -518,7 +692,13 @@ their _ _ O
 respective _ _ O
 text _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 The _ _ O
 good _ _ O
 , _ _ O
@@ -566,6 +746,9 @@ no _ _ O
 known _ _ O
 order _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 you _ _ O
@@ -579,8 +762,17 @@ can _ _ O
 do _ _ O
 so _ _ O
 with _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 yields _ _ O
 the _ _ O
 process _ _ O
@@ -631,7 +823,13 @@ by _ _ O
 its _ _ O
 pid _ _ O
 . _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 Waiting _ _ O
 is _ _ O
 such _ _ O
@@ -658,7 +856,13 @@ process _ _ O
 ends _ _ O
 . _ _ O
 Child _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 • _ _ O
 Therefore _ _ O
 , _ _ O
@@ -669,8 +873,14 @@ is _ _ O
 now _ _ O
 known _ _ O
 . _ _ O
+
+
+ _ _ O
 Always _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 If _ _ O
 the _ _ O
@@ -706,6 +916,9 @@ the _ _ O
 parent _ _ O
 continues _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 Nice _ _ O
 and _ _ O
@@ -713,10 +926,16 @@ well-known _ _ O
 behavior _ _ O
 ! _ _ O
 10 _ _ O
+
+
+ _ _ O
 Notes _ _ O
 on _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ O
 call _ _ O
 ends _ _ O
@@ -724,6 +943,9 @@ the _ _ O
 current _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 given _ _ O
@@ -779,6 +1001,9 @@ the _ _ O
 exit _ _ O
 code _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -811,7 +1036,13 @@ not _ _ O
 dead _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 Zombies _ _ O
 • _ _ O
 A _ _ O
@@ -840,6 +1071,9 @@ does _ _ O
 n't _ _ O
 need _ _ O
 it _ _ O
+
+
+ _ _ O
 • _ _ O
 As _ _ O
 long _ _ O
@@ -861,6 +1095,9 @@ around _ _ O
 , _ _ O
 too _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 These _ _ O
 are _ _ O
@@ -904,7 +1141,13 @@ subsidiary _ _ O
 of _ _ O
 EA _ _ O
 Games _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 The _ _ O
 night _ _ O
 of _ _ O
@@ -912,6 +1155,9 @@ the _ _ O
 living _ _ O
 dead _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 If _ _ O
 I _ _ O
@@ -953,7 +1199,13 @@ process _ _ O
 A _ _ O
 ZOMBIE _ _ O
 ! _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 Just _ _ O
 the _ _ O
 normal _ _ O
@@ -962,6 +1214,9 @@ of _ _ O
 dead _ _ O
 . _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1004,6 +1259,9 @@ only _ _ O
 the _ _ O
 child _ _ O
 process _ _ O
+
+
+ _ _ O
 No _ _ O
 zombies _ _ O
 here _ _ O
@@ -1011,7 +1269,13 @@ here _ _ O
 Just _ _ O
 orphans _ _ O
 ... _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 How _ _ O
 to _ _ O
 run _ _ O
@@ -1024,6 +1288,9 @@ When _ _ O
 you _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 a _ _ O
 process _ _ O
 , _ _ O
@@ -1035,6 +1302,9 @@ exact _ _ O
 copy _ _ O
 of _ _ O
 that _ _ O
+
+
+ _ _ O
 • _ _ O
 However _ _ O
 , _ _ O
@@ -1073,12 +1343,18 @@ the _ _ O
 existing _ _ O
 program _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 this _ _ O
 purpose _ _ O
 , _ _ O
 the _ _ O
+
+
+ _ _ O
 family _ _ O
 of _ _ O
 system _ _ O
@@ -1086,6 +1362,9 @@ calls _ _ O
 is _ _ O
 used _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 There _ _ O
 are _ _ O
@@ -1096,7 +1375,13 @@ of _ _ O
 exec _ _ O
 calls _ _ O
 ... _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 Invoking _ _ O
 the _ _ O
 OS _ _ O
@@ -1105,10 +1390,19 @@ loader _ _ O
 • _ _ O
 Using _ _ O
 the _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 system _ _ O
 call _ _ O
 . _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 call _ _ O
@@ -1135,6 +1429,9 @@ must _ _ O
 end _ _ O
 in _ _ O
 a _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 first _ _ O
@@ -1149,10 +1446,19 @@ its _ _ O
 own _ _ O
 path _ _ O
 ! _ _ O
+
+
+ _ _ O
 We _ _ O
 ran _ _ O
 " _ _ O
+
+
+ _ _ O
 " _ _ O
+
+
+ _ _ O
 Add _ _ O
 then _ _ O
 continued _ _ O
@@ -1160,7 +1466,13 @@ our _ _ O
 own _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 16 _ _ O
+
+
+ _ _ O
 Here _ _ O
 's _ _ O
 Dolly _ _ O
@@ -1180,11 +1492,17 @@ ask _ _ O
 . _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ O
 call _ _ O
 in _ _ O
 action _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 Copies _ _ O
 the _ _ O
@@ -1204,13 +1522,22 @@ a _ _ O
 unique _ _ O
 ID _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
+
+
+ _ _ O
 system _ _ O
 call _ _ O
 in _ _ O
 action _ _ O
 : _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 It _ _ O
 's _ _ O
@@ -1218,16 +1545,37 @@ a _ _ O
 goat _ _ O
 now _ _ O
 . _ _ O
+
+
+ _ _ O
 A _ _ O
+
+
+ _ _ O
 Parent _ _ O
+
+
+ _ _ O
 Child _ _ O
+
+
+ _ _ O
 stack _ _ O
+
+
+ _ _ O
 new _ _ O
 stack _ _ O
 stack _ _ O
+
+
+ _ _ O
 .bss _ _ O
 .data _ _ O
 .text _ _ O
+
+
+ _ _ O
 new _ _ O
 .bss _ _ O
 .bss _ _ O
@@ -1237,26 +1585,47 @@ new _ _ O
 new _ _ O
 .text _ _ O
 .text _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 A _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 CPU _ _ O
 State _ _ O
 B _ _ O
 : _ _ O
 Registers _ _ O
 , _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 4356 _ _ O
+
+
+ _ _ O
 PID _ _ O
 : _ _ O
 6567 _ _ O
+
+
+ _ _ O
 B _ _ O
+
+
+ _ _ O
 17 _ _ O
+
+
+ _ _ O
 Different _ _ O
 forms _ _ O
 of _ _ O
@@ -1282,6 +1651,9 @@ of _ _ O
 calling _ _ O
 it _ _ O
 . _ _ O
+
+
+ _ _ O
 called _ _ O
 with _ _ O
 an _ _ O
@@ -1309,10 +1681,16 @@ executable _ _ O
 combination _ _ O
 of _ _ O
 and _ _ O
+
+
+ _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 • _ _ O
 There _ _ O
 are _ _ O
@@ -1331,6 +1709,9 @@ strings _ _ O
 . _ _ O
 ▪ _ _ O
 18 _ _ O
+
+
+ _ _ O
 The _ _ O
 common _ _ O
 ancestor _ _ O
@@ -1381,11 +1762,20 @@ It _ _ O
 uses _ _ O
 / _ _ O
 ! _ _ O
+
+
+ _ _ O
 init _ _ O
+
+
+ _ _ O
 httpd _ _ O
 ( _ _ O
 daemon _ _ O
 ) _ _ O
+
+
+ _ _ O
 Orphans _ _ O
 get _ _ O
 adopted _ _ O
@@ -1394,6 +1784,9 @@ the _ _ O
 root _ _ O
 process _ _ O
 . _ _ O
+
+
+ _ _ O
 How _ _ O
 to _ _ O
 interact _ _ O
@@ -1406,11 +1799,20 @@ process _ _ O
 signals _ _ O
 ... _ _ O
 ) _ _ O
+
+
+ _ _ O
 Bash _ _ O
 ( _ _ O
 shell _ _ O
 ) _ _ O
+
+
+ _ _ O
 GUI _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 your _ _ O
@@ -1425,10 +1827,19 @@ same _ _ O
 thing _ _ O
 happens _ _ O
 . _ _ O
+
+
+ _ _ O
 . _ _ O
 / _ _ O
 app _ _ O
+
+
+ _ _ O
 child _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 You _ _ O
 use _ _ O
@@ -1450,6 +1861,9 @@ orphan _ _ O
 process _ _ O
 . _ _ O
 19 _ _ O
+
+
+ _ _ O
 An _ _ O
 extreme _ _ O
 attitude _ _ O
@@ -1489,9 +1903,15 @@ child _ _ O
 process _ _ O
 ends _ _ O
 using _ _ O
+
+
+ _ _ O
 or _ _ O
 via _ _ O
 main _ _ O
+
+
+ _ _ O
 • _ _ O
 What _ _ O
 if _ _ O
@@ -1502,6 +1922,9 @@ synchronize _ _ O
 smaller _ _ O
 events _ _ O
 ... _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 The _ _ O
 child _ _ O
@@ -1523,6 +1946,9 @@ process _ _ O
 running _ _ O
 longer _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 this _ _ O
@@ -1544,6 +1970,9 @@ one _ _ O
 another _ _ O
 . _ _ O
 20 _ _ O
+
+
+ _ _ O
 Inter-Process _ _ O
 Communication _ _ O
 IPC _ _ O
@@ -1556,7 +1985,13 @@ with _ _ O
 the _ _ O
 other _ _ O
 IPC _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 What _ _ O
 that _ _ O
 last _ _ O
@@ -1653,6 +2088,9 @@ at _ _ O
 this _ _ O
 later _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 Message _ _ O
 passing _ _ O
@@ -1686,6 +2124,9 @@ for _ _ O
 messages _ _ O
 . _ _ O
 22 _ _ O
+
+
+ _ _ O
 All _ _ O
 aboard _ _ O
 the _ _ O
@@ -1726,16 +2167,34 @@ a _ _ O
 few _ _ O
 : _ _ O
 Number _ _ O
+
+
+ _ _ O
 Name _ _ O
+
+
+ _ _ O
 Description _ _ O
+
+
+ _ _ O
 Default _ _ O
 Behavior _ _ O
+
+
+ _ _ O
 Interruption _ _ O
 - _ _ O
 Somebody _ _ O
 pressed _ _ O
 CTRL+C _ _ O
+
+
+ _ _ O
 Terminate _ _ O
+
+
+ _ _ O
 Kill _ _ O
 - _ _ O
 Somebody _ _ O
@@ -1744,21 +2203,39 @@ us _ _ O
 gone _ _ O
 ... _ _ O
  _ _ O
+
+
+ _ _ O
 Terminate _ _ O
+
+
+ _ _ O
 Memory _ _ O
 Violation _ _ O
 - _ _ O
 Oops _ _ O
 ! _ _ O
 Seg-fault _ _ O
+
+
+ _ _ O
 Terminate _ _ O
+
+
+ _ _ O
 Child _ _ O
 exited _ _ O
 - _ _ O
 Child _ _ O
 process _ _ O
 ended _ _ O
+
+
+ _ _ O
 Ignore _ _ O
+
+
+ _ _ O
 A _ _ O
 signal _ _ O
 that _ _ O
@@ -1768,8 +2245,17 @@ use _ _ O
 for _ _ O
 any _ _ O
 purpose _ _ O
+
+
+ _ _ O
 Ignore _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Talking _ _ O
 to _ _ O
 orphans _ _ O
@@ -1805,11 +2291,20 @@ its _ _ O
 i _ _ O
 d _ _ O
 . _ _ O
+
+
+ _ _ O
 C _ _ O
+
+
+ _ _ O
 The _ _ O
 parent _ _ O
 ended _ _ O
 . _ _ O
+
+
+ _ _ O
 But _ _ O
 not _ _ O
 the _ _ O
@@ -1821,19 +2316,34 @@ send _ _ O
 a _ _ O
 using _ _ O
 the _ _ O
+
+
+ _ _ O
 message _ _ O
 application _ _ O
 .. _ _ O
+
+
+ _ _ O
 And _ _ O
 the _ _ O
 child _ _ O
 is _ _ O
 gone _ _ O
 ! _ _ O
+
+
+ _ _ O
 24 _ _ O
+
+
+ _ _ O
 Receiving _ _ O
 Signals _ _ O
 C _ _ O
+
+
+ _ _ O
 • _ _ O
 The _ _ O
 standard _ _ O
@@ -1850,6 +2360,9 @@ a _ _ O
 particular _ _ O
 signal _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 This _ _ O
 example _ _ O
@@ -1894,9 +2407,15 @@ to _ _ O
 be _ _ O
 killed _ _ O
 using _ _ O
+
+
+ _ _ O
 now _ _ O
 . _ _ O
 25 _ _ O
+
+
+ _ _ O
 Waiting _ _ O
 for _ _ O
 a _ _ O
@@ -1928,7 +2447,13 @@ to _ _ O
 on _ _ O
 1 _ _ O
 . _ _ O
+
+
+ _ _ O
 . _ _ O
+
+
+ _ _ O
 is _ _ O
 initially _ _ O
 2 _ _ O
@@ -1968,12 +2493,18 @@ prints _ _ O
 its _ _ O
 message _ _ O
 . _ _ O
+
+
+ _ _ O
 6 _ _ O
 . _ _ O
 Repeat _ _ O
 ... _ _ O
 for _ _ O
 both _ _ O
+
+
+ _ _ O
 4 _ _ O
 . _ _ O
 Afterward _ _ O
@@ -1982,7 +2513,13 @@ the _ _ O
 parent _ _ O
 process _ _ O
 waits _ _ O
+
+
+ _ _ O
 26 _ _ O
+
+
+ _ _ O
 Let _ _ O
 's _ _ O
 look _ _ O
@@ -2003,6 +2540,9 @@ Parent _ _ O
 prints _ _ O
 Child _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Sets _ _ O
@@ -2019,8 +2559,14 @@ child _ _ O
 3 _ _ O
 . _ _ O
 Waits _ _ O
+
+
+ _ _ O
 Parent _ _ O
 0 _ _ O
+
+
+ _ _ O
 3 _ _ O
 . _ _ O
 Child _ _ O
@@ -2040,6 +2586,9 @@ parent _ _ O
 3 _ _ O
 . _ _ O
 Waits _ _ O
+
+
+ _ _ O
 4 _ _ O
 . _ _ O
 Parent _ _ O
@@ -2062,9 +2611,18 @@ child _ _ O
 Waits _ _ O
 5 _ _ O
 . _ _ O
+
+
+ _ _ O
 Repeat _ _ O
 ... _ _ O
+
+
+ _ _ O
 27 _ _ O
+
+
+ _ _ O
 If _ _ O
 you _ _ O
 are _ _ O
@@ -2085,6 +2643,9 @@ Parent _ _ O
 prints _ _ O
 Child _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Sets _ _ O
@@ -2101,8 +2662,14 @@ child _ _ O
 3 _ _ O
 . _ _ O
 Waits _ _ O
+
+
+ _ _ O
 Parent _ _ O
 0 _ _ O
+
+
+ _ _ O
 3 _ _ O
 . _ _ O
 Child _ _ O
@@ -2122,6 +2689,9 @@ variable _ _ O
 3 _ _ O
 . _ _ O
 Waits _ _ O
+
+
+ _ _ O
 Let _ _ O
 's _ _ O
 Mess _ _ O
@@ -2133,6 +2703,9 @@ Up _ _ O
 . _ _ O
 Parent _ _ O
 prints _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 Sets _ _ O
@@ -2151,12 +2724,21 @@ child _ _ O
 Waits _ _ O
 5 _ _ O
 . _ _ O
+
+
+ _ _ O
 OH _ _ O
 NO _ _ O
 ! _ _ O
 ! _ _ O
 ! _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 The _ _ O
 race _ _ O
 is _ _ O
@@ -2214,6 +2796,9 @@ is _ _ O
 not _ _ O
 guaranteed _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 When _ _ O
 you _ _ O
@@ -2263,7 +2848,13 @@ our _ _ O
 critical _ _ O
 section _ _ O
 ) _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 Summary _ _ O
 • _ _ O
 Today _ _ O
@@ -2328,6 +2919,9 @@ zombies _ _ O
 or _ _ O
 orphans _ _ O
 . _ _ O
+
+
+ _ _ O
 • _ _ O
 We _ _ O
 also _ _ O
@@ -2400,5 +2994,8 @@ not _ _ O
 guarantee _ _ O
 . _ _ O
 30 _ _ O
+
+
+ _ _ O
 
 

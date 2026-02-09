@@ -61,9 +61,15 @@ by _ _ O
 talking _ _ O
 about _ _ O
 … _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Operators _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Evaluating _ _ O
@@ -87,7 +93,13 @@ evaluate _ _ O
 it _ _ O
 : _ _ O
 * _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 I _ _ O
 think _ _ O
 you _ _ O
@@ -109,9 +121,18 @@ then _ _ O
 the _ _ O
 multiplication _ _ O
 . _ _ O
+
+
+ _ _ O
 + _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 but _ _ O
 we _ _ O
 're _ _ O
@@ -131,6 +152,9 @@ produce _ _ O
 this _ _ O
 AST _ _ O
 ? _ _ O
+
+
+ _ _ O
 5 _ _ O
 * _ _ O
 ( _ _ O
@@ -138,7 +162,13 @@ AST _ _ O
 + _ _ O
 3 _ _ O
 ) _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 why _ _ O
 did _ _ O
 we _ _ O
@@ -167,9 +197,21 @@ would _ _ O
 parse _ _ O
 as _ _ O
 : _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
 4 _ _ O
 
@@ -396,11 +438,17 @@ go _ _ O
 : _ _ O
 Operator _ _ O
 Prec _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
 * _ _ O
 c _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 ( _ _ O
@@ -408,15 +456,27 @@ b _ _ O
 * _ _ O
 c _ _ O
 ) _ _ O
+
+
+ _ _ O
 * _ _ O
 * _ _ O
+
+
+ _ _ O
 1st _ _ O
+
+
+ _ _ O
 a _ _ O
 * _ _ O
 * _ _ O
 b _ _ O
 * _ _ O
 c _ _ O
+
+
+ _ _ O
 ( _ _ O
 a _ _ O
 * _ _ O
@@ -425,13 +485,28 @@ b _ _ O
 ) _ _ O
 * _ _ O
 c _ _ O
+
+
+ _ _ O
 * _ _ O
 / _ _ O
 % _ _ O
+
+
+ _ _ O
 2nd _ _ O
+
+
+ _ _ O
 + _ _ O
 - _ _ O
+
+
+ _ _ O
 3rd _ _ O
+
+
+ _ _ O
 but _ _ O
 this _ _ O
 still _ _ O
@@ -453,11 +528,17 @@ to _ _ O
 each _ _ O
 other _ _ O
 : _ _ O
+
+
+ _ _ O
 27 _ _ O
 / _ _ O
 3 _ _ O
 / _ _ O
 9 _ _ O
+
+
+ _ _ O
 ( _ _ O
 27 _ _ O
 / _ _ O
@@ -510,6 +591,9 @@ evaluate _ _ O
 things _ _ O
 left-to-right _ _ O
 . _ _ O
+
+
+ _ _ O
 and _ _ O
 right-associative _ _ O
 operators _ _ O
@@ -523,11 +607,17 @@ evaluate _ _ O
 things _ _ O
 right-to-left _ _ O
 . _ _ O
+
+
+ _ _ O
 27 _ _ O
 / _ _ O
 3 _ _ O
 / _ _ O
 9 _ _ O
+
+
+ _ _ O
 2 _ _ O
 * _ _ O
 * _ _ O
@@ -535,6 +625,9 @@ right-to-left _ _ O
 * _ _ O
 * _ _ O
 4 _ _ O
+
+
+ _ _ O
 ( _ _ O
 27 _ _ O
 / _ _ O
@@ -542,6 +635,9 @@ right-to-left _ _ O
 ) _ _ O
 / _ _ O
 9 _ _ O
+
+
+ _ _ O
 2 _ _ O
 * _ _ O
 * _ _ O
@@ -551,6 +647,9 @@ right-to-left _ _ O
 * _ _ O
 4 _ _ O
 ) _ _ O
+
+
+ _ _ O
 in _ _ O
 other _ _ O
 words _ _ O
@@ -564,16 +663,37 @@ tree _ _ O
 branches _ _ O
 . _ _ O
 / _ _ O
+
+
+ _ _ O
 / _ _ O
 27 _ _ O
+
+
+ _ _ O
 * _ _ O
 * _ _ O
+
+
+ _ _ O
 9 _ _ O
 3 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 * _ _ O
 * _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
 7 _ _ O
 
@@ -721,6 +841,9 @@ parsing _ _ O
 error _ _ O
 instead _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Unary _ _ O
@@ -954,8 +1077,14 @@ a _ _ O
 table _ _ O
 : _ _ O
 Operator _ _ O
+
+
+ _ _ O
 Prec _ _ O
 Assoc _ _ O
+
+
+ _ _ O
 f _ _ O
 ( _ _ O
 ) _ _ O
@@ -964,8 +1093,17 @@ a _ _ O
 i _ _ O
 ] _ _ O
 o.f _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 ! _ _ O
 x _ _ O
 -x _ _ O
@@ -977,41 +1115,113 @@ x _ _ O
 + _ _ O
 x _ _ O
 --x _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 * _ _ O
 / _ _ O
 % _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 + _ _ O
 - _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 < _ _ O
 < _ _ O
 = _ _ O
 > _ _ O
 > _ _ O
 = _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 = _ _ O
 = _ _ O
 ! _ _ O
 = _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 & _ _ O
 & _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 || _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 L _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 R _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 a _ _ O
@@ -1038,11 +1248,17 @@ other _ _ O
 obscure _ _ O
 operators _ _ O
 ) _ _ O
+
+
+ _ _ O
 but _ _ O
 where _ _ O
 are _ _ O
 parentheses _ _ O
 ? _ _ O
+
+
+ _ _ O
 well _ _ O
 , _ _ O
 they _ _ O
@@ -1079,6 +1295,9 @@ a _ _ O
 grammar _ _ O
 for _ _ O
 expressions _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 A _ _ O
@@ -1131,7 +1350,13 @@ into _ _ O
 this _ _ O
 category _ _ O
 . _ _ O
+
+
+ _ _ O
 318 _ _ O
+
+
+ _ _ O
 identifiers _ _ O
 are _ _ O
 another _ _ O
@@ -1142,16 +1367,34 @@ name _ _ O
 single _ _ O
 things _ _ O
 . _ _ O
+
+
+ _ _ O
 " _ _ O
 hello _ _ O
 " _ _ O
 9.5 _ _ O
+
+
+ _ _ O
 ' _ _ O
 x _ _ O
 ' _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 main _ _ O
+
+
+ _ _ O
 System _ _ O
+
+
+ _ _ O
 last _ _ O
 , _ _ O
 we _ _ O
@@ -1215,6 +1458,9 @@ Exp _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 Terms _ _ O
@@ -1367,6 +1613,9 @@ x _ _ O
 ! _ _ O
 ! _ _ O
 x _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Expressions _ _ O
@@ -1439,6 +1688,9 @@ BinaryOp _ _ O
 ' _ _ O
 |…etc _ _ O
 . _ _ O
+
+
+ _ _ O
 but _ _ O
 what _ _ O
 about _ _ O
@@ -1463,6 +1715,9 @@ into _ _ O
 the _ _ O
 grammar _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 Wait _ _ O
@@ -1595,6 +1850,9 @@ Exp _ _ O
 ' _ _ O
 ) _ _ O
 ' _ _ O
+
+
+ _ _ O
 is _ _ O
 it _ _ O
 obvious _ _ O
@@ -1616,6 +1874,9 @@ of _ _ O
 these _ _ O
 operators _ _ O
 ? _ _ O
+
+
+ _ _ O
 what _ _ O
 if _ _ O
 , _ _ O
@@ -1754,10 +2015,16 @@ this _ _ O
 stuff _ _ O
 ? _ _ O
 ? _ _ O
+
+
+ _ _ O
 16 _ _ O
 
 Bottom-up _ _ O
 parsing _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 The _ _ O
@@ -1873,6 +2140,9 @@ up _ _ O
 the _ _ O
 tree _ _ O
 . _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Okay _ _ O
@@ -1897,6 +2167,9 @@ see _ _ O
 what _ _ O
 happens _ _ O
 : _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
@@ -1907,6 +2180,9 @@ eof _ _ O
 > _ _ O
 Token _ _ O
 Action _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
@@ -1914,21 +2190,42 @@ z _ _ O
 < _ _ O
 eof _ _ O
 > _ _ O
+
+
+ _ _ O
 LHS _ _ O
 = _ _ O
 parse _ _ O
 term _ _ O
+
+
+ _ _ O
 LHS _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 stop _ _ O
 looping _ _ O
 ! _ _ O
+
+
+ _ _ O
 y _ _ O
+
+
+ _ _ O
 ( _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
 ) _ _ O
+
+
+ _ _ O
 op _ _ O
 = _ _ O
 - _ _ O
@@ -1946,8 +2243,17 @@ LHS _ _ O
 op _ _ O
 RHS _ _ O
 ) _ _ O
+
+
+ _ _ O
 RHS _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 op _ _ O
 = _ _ O
 + _ _ O
@@ -1965,8 +2271,17 @@ LHS _ _ O
 op _ _ O
 RHS _ _ O
 ) _ _ O
+
+
+ _ _ O
 op _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 z _ _ O
 ( _ _ O
 ( _ _ O
@@ -2004,6 +2319,9 @@ left _ _ O
 like _ _ O
 this _ _ O
 . _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
@@ -2030,22 +2348,46 @@ input _ _ O
 for _ _ O
 this _ _ O
 ? _ _ O
+
+
+ _ _ O
 + _ _ O
 + _ _ O
+
+
+ _ _ O
 + _ _ O
 + _ _ O
 a _ _ O
+
+
+ _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
 * _ _ O
 z _ _ O
+
+
+ _ _ O
 e _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 d _ _ O
 + _ _ O
+
+
+ _ _ O
 c _ _ O
 b _ _ O
+
+
+ _ _ O
 and _ _ O
 it _ _ O
 builds _ _ O
@@ -2054,9 +2396,18 @@ it _ _ O
 bottom _ _ O
 up _ _ O
 ! _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 z _ _ O
 y _ _ O
+
+
+ _ _ O
 it _ _ O
 was _ _ O
 a _ _ O
@@ -2154,11 +2505,17 @@ it _ _ O
 's _ _ O
 the _ _ O
 next _ _ O
+
+
+ _ _ O
 operator _ _ O
 's _ _ O
 first _ _ O
 operand _ _ O
 . _ _ O
+
+
+ _ _ O
 so _ _ O
 , _ _ O
 we _ _ O
@@ -2194,6 +2551,9 @@ um _ _ O
 . _ _ O
 uh _ _ O
 . _ _ O
+
+
+ _ _ O
 wait _ _ O
 , _ _ O
 what _ _ O
@@ -2202,6 +2562,9 @@ we _ _ O
 do _ _ O
 then _ _ O
 ? _ _ O
+
+
+ _ _ O
 LHS _ _ O
 = _ _ O
 AstNode _ _ O
@@ -2217,6 +2580,9 @@ RHS _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Implicit _ _ O
@@ -2235,6 +2601,9 @@ a _ _ O
 different _ _ O
 way _ _ O
 … _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 ( _ _ O
@@ -2279,6 +2648,9 @@ goes _ _ O
 before _ _ O
 b _ _ O
 … _ _ O
+
+
+ _ _ O
 " _ _ O
 … _ _ O
 and _ _ O
@@ -2324,6 +2696,9 @@ is _ _ O
 to _ _ O
 recurse _ _ O
 . _ _ O
+
+
+ _ _ O
 ( _ _ O
 let _ _ O
 's _ _ O
@@ -2366,6 +2741,9 @@ for _ _ O
 it _ _ O
 : _ _ O
 + _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
@@ -2383,8 +2761,17 @@ a _ _ O
 is _ _ O
 parsed _ _ O
 . _ _ O
+
+
+ _ _ O
 f _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 b _ _ O
@@ -2410,7 +2797,13 @@ on _ _ O
 hold _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 4 _ _ O
 . _ _ O
 the _ _ O
@@ -2420,6 +2813,9 @@ multiplications _ _ O
 is _ _ O
 parsed _ _ O
 . _ _ O
+
+
+ _ _ O
 5 _ _ O
 . _ _ O
 that _ _ O
@@ -2455,11 +2851,26 @@ by _ _ O
 the _ _ O
 Loop _ _ O
 . _ _ O
+
+
+ _ _ O
 * _ _ O
+
+
+ _ _ O
 * _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 e _ _ O
+
+
+ _ _ O
 d _ _ O
 c _ _ O
 23 _ _ O
@@ -2610,6 +3021,9 @@ they _ _ O
 ’re _ _ O
 optional _ _ O
 ! _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 What _ _ O
@@ -2751,12 +3165,18 @@ b _ _ O
 * _ _ O
 c _ _ O
 ) _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Things _ _ O
 to _ _ O
 think _ _ O
 about _ _ O
+
+
+ _ _ O
 26 _ _ O
 
 Bottom-up _ _ O
@@ -2901,6 +3321,9 @@ n't _ _ O
 even _ _ O
 know _ _ O
 it _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Can _ _ O
@@ -3013,6 +3436,9 @@ use _ _ O
 bottom-up _ _ O
 for _ _ O
 expressions _ _ O
+
+
+ _ _ O
 28 _ _ O
 
 How _ _ O
@@ -3135,10 +3561,16 @@ use _ _ O
 bottom-up _ _ O
 parsing _ _ O
 . _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Syntactic _ _ O
 Sugar _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 Yummy _ _ O
@@ -3278,6 +3710,9 @@ someCollection _ _ O
 { _ _ O
 … _ _ O
 } _ _ O
+
+
+ _ _ O
 ● _ _ O
 becomes _ _ O
 something _ _ O
@@ -3313,6 +3748,9 @@ iter.next _ _ O
 ; _ _ O
 … _ _ O
 } _ _ O
+
+
+ _ _ O
 32 _ _ O
 
 How _ _ O
@@ -3392,6 +3830,9 @@ it _ _ O
 for _ _ O
 parsing _ _ O
 ! _ _ O
+
+
+ _ _ O
 33 _ _ O
 
 

@@ -469,27 +469,7 @@
                 "Non-static",
                 ":",
                 "Instance",
-                "variables",
-                "\u2022",
-                "Methods",
-                "(",
-                "originally",
-                "functions",
-                ")",
-                "\u2013",
-                "Static",
-                ":",
-                "Class",
-                "methods",
-                "\u2013",
-                "Non-static",
-                ":",
-                "Instance",
-                "methods",
-                "\u2013",
-                "Special",
-                ":",
-                "Constructor"
+                "variables"
             ],
             "word_labels": [
                 "O",
@@ -522,6 +502,34 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Methods",
+                "(",
+                "originally",
+                "functions",
+                ")",
+                "\u2013",
+                "Static",
+                ":",
+                "Class",
+                "methods",
+                "\u2013",
+                "Non-static",
+                ":",
+                "Instance",
+                "methods",
+                "\u2013",
+                "Special",
+                ":",
+                "Constructor"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -585,26 +593,7 @@
                 "assigned",
                 "outside",
                 "any",
-                "object",
-                "\u2022",
-                "Instance",
-                "variables",
-                "\u2013",
-                "Non-static",
-                "\u2013",
-                "Declared",
-                "by",
-                "each",
-                "object",
-                "construction",
-                ",",
-                "which",
-                "allows",
-                "them",
-                "to",
-                "contain",
-                "different",
-                "values"
+                "object"
             ],
             "word_labels": [
                 "O",
@@ -645,6 +634,33 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "\u2022",
+                "Instance",
+                "variables",
+                "\u2013",
+                "Non-static",
+                "\u2013",
+                "Declared",
+                "by",
+                "each",
+                "object",
+                "construction",
+                ",",
+                "which",
+                "allows",
+                "them",
+                "to",
+                "contain",
+                "different",
+                "values"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -809,14 +825,7 @@
                 "(",
                 "private",
                 "keyword",
-                ")",
-                "private",
-                "static",
-                "int",
-                "nextID",
-                "=",
-                "0",
-                ";"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -847,6 +856,21 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "private",
+                "static",
+                "int",
+                "nextID",
+                "=",
+                "0",
+                ";"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1133,7 +1157,15 @@
         },
         {
             "sentence": [
-                "Remember",
+                "Remember"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Source",
                 ":",
                 "http",
@@ -1364,7 +1396,16 @@
         {
             "sentence": [
                 "Function",
-                "Review",
+                "Review"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "1",
                 ".",
                 "2",
@@ -1376,11 +1417,43 @@
                 ".",
                 "Header",
                 "5",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Function",
                 "Body",
                 "6",
-                ".",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Visibility",
                 "type",
                 "(",
@@ -1411,25 +1484,7 @@
                 "b",
                 ")",
                 "c",
-                ")",
-                "Parameters",
-                "Type1",
-                "parameterName1",
-                "Type2",
-                "parameterName2",
-                "\u2026",
-                "Curly",
-                "Brackets",
-                "/",
-                "Braces",
-                "\u201c",
-                "{",
-                "}",
-                "\u201d",
-                "\u2013",
-                "return",
-                "a",
-                "value"
+                ")"
             ],
             "word_labels": [
                 "O",
@@ -1462,6 +1517,167 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Parameters",
+                "Type1",
+                "parameterName1",
+                "Type2",
+                "parameterName2",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Curly",
+                "Brackets",
+                "/",
+                "Braces",
+                "\u201c",
+                "{",
+                "}",
+                "\u201d",
+                "\u2013"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "return",
+                "a",
+                "value"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "Constructor"
+            ],
+            "word_labels": [
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "1",
+                ".",
+                "2",
+                ".",
+                "3",
+                ".",
+                "Function",
+                "4",
+                ".",
+                "Header",
+                "5",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Function",
+                "Body",
+                "6",
+                "."
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Visibility",
+                "type",
+                "(",
+                "public",
+                "/",
+                "protected",
+                "/",
+                "private",
+                ")",
+                "static",
+                "(",
+                "For",
+                "now",
+                ",",
+                "required",
+                ")",
+                "Return",
+                "Type",
+                "functionName",
+                "Same",
+                "name",
+                "as",
+                "the",
+                "class",
+                "Parentheses",
+                "\u201c",
+                "(",
+                ")",
+                "\u201d",
+                "\u2013",
+                "a",
+                ")",
+                "b",
+                ")",
+                "c",
+                ")"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1503,65 +1719,27 @@
         },
         {
             "sentence": [
-                "Constructor",
-                "1",
-                ".",
-                "2",
-                ".",
-                "3",
-                ".",
-                "Function",
-                "4",
-                ".",
-                "Header",
-                "5",
-                ".",
-                "Function",
-                "Body",
-                "6",
-                ".",
-                "Visibility",
-                "type",
-                "(",
-                "public",
-                "/",
-                "protected",
-                "/",
-                "private",
-                ")",
-                "static",
-                "(",
-                "For",
-                "now",
-                ",",
-                "required",
-                ")",
-                "Return",
-                "Type",
-                "functionName",
-                "Same",
-                "name",
-                "as",
-                "the",
-                "class",
-                "Parentheses",
-                "\u201c",
-                "(",
-                ")",
-                "\u201d",
-                "\u2013",
-                "a",
-                ")",
-                "b",
-                ")",
-                "c",
-                ")",
+                "",
                 "Parameters",
                 "Type1",
                 "parameterName1",
                 "Type2",
                 "parameterName2",
-                "\u2026",
+                "\u2026"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Curly",
                 "Brackets",
                 "/",
@@ -1570,10 +1748,7 @@
                 "{",
                 "}",
                 "\u201d",
-                "\u2013",
-                "return",
-                "a",
-                "value"
+                "\u2013"
             ],
             "word_labels": [
                 "O",
@@ -1585,64 +1760,17 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "return",
+                "a",
+                "value"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2342,18 +2470,6 @@
                 "O",
                 "O"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         },
         {
             "sentence": [],

@@ -6,9 +6,15 @@ File _ _ I-concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -46,6 +52,9 @@ Terminal _ _ O
 ROS _ _ O
 Master _ _ O
 roscore _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 2 _ _ O
 : _ _ O
@@ -54,6 +63,9 @@ Node _ _ O
 roslaunch _ _ O
 kobuki_node _ _ O
 minimal.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 3 _ _ O
 : _ _ O
@@ -62,6 +74,9 @@ Node _ _ O
 roslaunch _ _ O
 gscam _ _ O
 v4l.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 4 _ _ O
 : _ _ O
@@ -70,6 +85,9 @@ Node _ _ O
 roslaunch _ _ O
 mypackage _ _ O
 cmvision.launch _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 5 _ _ O
 : _ _ O
@@ -78,6 +96,9 @@ command _ _ O
 rosrun _ _ O
 mypackage _ _ O
 constant_command.py _ _ O
+
+
+ _ _ O
 Terminal _ _ O
 6 _ _ O
 : _ _ O
@@ -92,6 +113,9 @@ project2.py _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -100,6 +124,9 @@ Processes _ _ O
 for _ _ O
 One _ _ O
 Application _ _ O
+
+
+ _ _ O
 ROS _ _ O
 allows _ _ O
 you _ _ O
@@ -159,6 +186,9 @@ src _ _ O
 mypackage _ _ O
 / _ _ O
 launch _ _ O
+
+
+ _ _ O
 But _ _ O
 it _ _ O
 can _ _ O
@@ -172,9 +202,15 @@ package _ _ O
 mypackage _ _ O
 ) _ _ O
 directory _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -183,6 +219,9 @@ The _ _ O
 launch _ _ I-concept
 > _ _ I-concept
 Tag _ _ I-concept
+
+
+ _ _ O
 All _ _ O
 content _ _ O
 of _ _ O
@@ -211,9 +250,15 @@ a _ _ O
 comment _ _ O
 -- _ _ O
 > _ _ O
+
+
+ _ _ O
 < _ _ B-concept
 /launch _ _ I-concept
 > _ _ I-concept
+
+
+ _ _ O
 A _ _ O
 comment _ _ O
 must _ _ O
@@ -229,9 +274,15 @@ and _ _ O
 as _ _ O
 shown _ _ O
 above _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -240,6 +291,9 @@ The _ _ O
 include _ _ I-concept
 > _ _ I-concept
 Tag _ _ I-concept
+
+
+ _ _ O
 To _ _ O
 let _ _ O
 the _ _ O
@@ -285,6 +339,9 @@ minimal.launch" _ _ O
 < _ _ B-concept
 /launch _ _ I-concept
 > _ _ I-concept
+
+
+ _ _ O
 The _ _ O
 $ _ _ O
 ( _ _ O
@@ -322,9 +379,15 @@ under _ _ O
 the _ _ O
 launch _ _ O
 directory _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -382,7 +445,13 @@ nodelet_plugins.xml _ _ O
 examples _ _ O
 nodelet_pipeline.launch _ _ O
 package.xml _ _ O
+
+
+ _ _ O
 v4l.launch _ _ O
+
+
+ _ _ O
 Note _ _ O
 that _ _ O
 launch _ _ B-concept
@@ -430,9 +499,15 @@ v4l.launch" _ _ O
 < _ _ B-concept
 /launch _ _ I-concept
 > _ _ I-concept
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -481,6 +556,9 @@ type="constant_command.py" _ _ O
 < _ _ B-concept
 /launch _ _ I-concept
 > _ _ I-concept
+
+
+ _ _ O
 The _ _ O
 name _ _ O
 indicates _ _ O
@@ -516,6 +594,9 @@ when _ _ O
 it _ _ O
 is _ _ O
 initialized _ _ O
+
+
+ _ _ O
 The _ _ O
 pkg _ _ O
 indicates _ _ O
@@ -533,9 +614,15 @@ of _ _ O
 the _ _ O
 executable _ _ O
 file _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
@@ -659,6 +746,9 @@ cwd="node" _ _ O
 < _ _ B-concept
 /launch _ _ I-concept
 > _ _ I-concept
+
+
+ _ _ O
 Notes _ _ O
 : _ _ O
 If _ _ O
@@ -700,12 +790,18 @@ file _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 
 The _ _ O
 launch _ _ B-concept
 File _ _ I-concept
+
+
+ _ _ O
 To _ _ O
 use _ _ O
 the _ _ O
@@ -716,6 +812,9 @@ file _ _ I-concept
 roslaunch _ _ O
 mypackage _ _ O
 p2.launch _ _ O
+
+
+ _ _ O
 You _ _ O
 do _ _ O
 not _ _ O
@@ -742,6 +841,9 @@ execute _ _ O
 the _ _ O
 roscore _ _ O
 command _ _ O
+
+
+ _ _ O
 You _ _ O
 only _ _ O
 need _ _ O
@@ -769,9 +871,15 @@ by _ _ O
 the _ _ O
 launch _ _ B-concept
 file _ _ I-concept
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
+
+
+ _ _ O
 Launch _ _ B-concept
 File _ _ I-concept
 

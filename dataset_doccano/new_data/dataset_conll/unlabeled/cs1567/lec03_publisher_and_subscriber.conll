@@ -6,13 +6,22 @@ and _ _ O
 Subscriber _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 Publisher _ _ O
+
+
+ _ _ O
 A _ _ O
 publisher _ _ O
 publishes _ _ O
@@ -68,8 +77,14 @@ subscribers _ _ O
 ( _ _ O
 anonymous _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -176,6 +191,9 @@ except _ _ O
 rospy.ROSInterruptException _ _ O
 : _ _ O
 pass _ _ O
+
+
+ _ _ O
 Do _ _ O
 not _ _ O
 forget _ _ O
@@ -199,6 +217,9 @@ it _ _ O
 once _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -212,6 +233,9 @@ bin _ _ O
 / _ _ O
 env _ _ O
 python _ _ O
+
+
+ _ _ O
 If _ _ O
 you _ _ O
 try _ _ O
@@ -247,6 +271,9 @@ Python _ _ O
 interpreter _ _ O
 import _ _ O
 rospy _ _ O
+
+
+ _ _ O
 This _ _ O
 line _ _ O
 should _ _ O
@@ -270,6 +297,9 @@ from _ _ O
 std_msgs.msg _ _ O
 import _ _ O
 String _ _ O
+
+
+ _ _ O
 We _ _ O
 are _ _ O
 going _ _ O
@@ -293,6 +323,9 @@ msg.msg _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -310,6 +343,9 @@ String _ _ O
 , _ _ O
 queue_size=1 _ _ O
 ) _ _ O
+
+
+ _ _ O
 This _ _ O
 create _ _ O
 an _ _ O
@@ -383,6 +419,9 @@ talker _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
+
+
+ _ _ O
 Initialize _ _ O
 this _ _ O
 node _ _ O
@@ -395,6 +434,9 @@ be _ _ O
 anonymous _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -408,6 +450,9 @@ rospy.Rate _ _ O
 ) _ _ O
 # _ _ O
 10hz _ _ O
+
+
+ _ _ O
 Create _ _ O
 an _ _ O
 object _ _ O
@@ -438,6 +483,9 @@ the _ _ O
 frequency _ _ O
 in _ _ O
 Hertz _ _ O
+
+
+ _ _ O
 rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
@@ -471,6 +519,9 @@ rospy.is_shutdown _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
+
+
+ _ _ O
 A _ _ O
 loop _ _ O
 is _ _ O
@@ -531,11 +582,17 @@ executing _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 talker.py _ _ O
+
+
+ _ _ O
 hello_str _ _ O
 = _ _ O
 " _ _ O
@@ -548,6 +605,9 @@ s _ _ O
 rospy.get_time _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Create _ _ O
 a _ _ O
 string _ _ O
@@ -568,6 +628,9 @@ rospy.loginfo _ _ O
 ( _ _ O
 hello_str _ _ O
 ) _ _ O
+
+
+ _ _ O
 Print _ _ O
 the _ _ O
 message _ _ O
@@ -601,8 +664,14 @@ rqt _ _ O
 console _ _ O
 command _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -612,12 +681,18 @@ pub.publish _ _ O
 ( _ _ O
 hello_str _ _ O
 ) _ _ O
+
+
+ _ _ O
 Publish _ _ O
 the _ _ O
 message _ _ O
 rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Put _ _ O
 this _ _ O
 node _ _ O
@@ -655,6 +730,9 @@ except _ _ O
 rospy.ROSInterruptException _ _ O
 : _ _ O
 pass _ _ O
+
+
+ _ _ O
 Interrupt _ _ O
 may _ _ O
 be _ _ O
@@ -663,13 +741,22 @@ by _ _ O
 rospy.Rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 Subscriber _ _ O
+
+
+ _ _ O
 A _ _ O
 subscriber _ _ O
 subscribes _ _ O
@@ -727,13 +814,22 @@ publishers _ _ O
 ( _ _ O
 anonymous _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 listener.py _ _ O
+
+
+ _ _ O
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -813,6 +909,9 @@ _ _ _ O
 listener _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Do _ _ O
 not _ _ O
 forget _ _ O
@@ -827,8 +926,14 @@ chmod _ _ O
 x _ _ O
 talker.py _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -842,6 +947,9 @@ listener _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
+
+
+ _ _ O
 Initialize _ _ O
 this _ _ O
 node _ _ O
@@ -861,6 +969,9 @@ String _ _ O
 , _ _ O
 callback _ _ O
 ) _ _ O
+
+
+ _ _ O
 Subscribes _ _ O
 to _ _ O
 the _ _ O
@@ -899,6 +1010,9 @@ callback _ _ O
 rospy.spin _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Keeps _ _ O
 the _ _ O
 node _ _ O
@@ -913,6 +1027,9 @@ shutdown _ _ O
 . _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -922,6 +1039,9 @@ callback _ _ O
 ( _ _ O
 ) _ _ O
 Function _ _ O
+
+
+ _ _ O
 This _ _ O
 callback _ _ O
 ( _ _ O
@@ -962,6 +1082,9 @@ s _ _ O
 , _ _ O
 data.data _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 argument _ _ O
 data _ _ O
@@ -985,6 +1108,9 @@ type _ _ O
 string _ _ O
 named _ _ O
 data _ _ O
+
+
+ _ _ O
 To _ _ O
 access _ _ O
 the _ _ O
@@ -997,13 +1123,22 @@ data.data _ _ O
 like _ _ O
 C _ _ O
 structure _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 messenger.py _ _ O
+
+
+ _ _ O
 Sometimes _ _ O
 your _ _ O
 ROS _ _ O
@@ -1030,6 +1165,9 @@ to _ _ O
 a _ _ O
 new _ _ O
 topic _ _ O
+
+
+ _ _ O
 Example _ _ O
 : _ _ O
 Blob _ _ O
@@ -1071,6 +1209,9 @@ of _ _ O
 coordinates _ _ O
 of _ _ O
 blobs _ _ O
+
+
+ _ _ O
 This _ _ O
 type _ _ O
 of _ _ O
@@ -1099,8 +1240,14 @@ to _ _ O
 the _ _ O
 topic _ _ O
 chatter2 _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1199,8 +1346,14 @@ _ _ _ O
 messenger _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1259,6 +1412,9 @@ job _ _ O
 is _ _ O
 done _ _ O
 . _ _ O
+
+
+ _ _ O
 Generally _ _ O
 , _ _ O
 if _ _ O
@@ -1301,6 +1457,9 @@ rospy.is_shutdown _ _ O
 ) _ _ O
 : _ _ O
 : _ _ O
+
+
+ _ _ O
 Use _ _ O
 rospy.spin _ _ O
 ( _ _ O
@@ -1318,8 +1477,14 @@ rospy.is_shutdown _ _ O
 ) _ _ O
 : _ _ O
 pass _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1329,6 +1494,9 @@ vs _ _ O
 rospy.spin _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 You _ _ O
 should _ _ O
 use _ _ O
@@ -1368,6 +1536,9 @@ monitors _ _ O
 variable _ _ O
 values _ _ O
 . _ _ O
+
+
+ _ _ O
 Use _ _ O
 rospy.spin _ _ O
 ( _ _ O
@@ -1407,6 +1578,9 @@ back _ _ O
 to _ _ O
 sleep _ _ O
 . _ _ O
+
+
+ _ _ O
 Often _ _ O
 time _ _ O
 , _ _ O
@@ -1422,8 +1596,14 @@ is _ _ O
 not _ _ O
 clear _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1477,6 +1657,9 @@ may _ _ O
 keep _ _ O
 moving _ _ O
 non-stop _ _ O
+
+
+ _ _ O
 Cleanup _ _ O
 can _ _ O
 be _ _ O
@@ -1499,6 +1682,9 @@ rospy.on_shutdown _ _ O
 ( _ _ O
 cleanup _ _ O
 ) _ _ O
+
+
+ _ _ O
 When _ _ O
 the _ _ O
 program _ _ O
@@ -1535,8 +1721,14 @@ done _ _ O
 . _ _ O
 " _ _ O
 ) _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1628,6 +1820,9 @@ _ _ _ O
 listener _ _ O
 ( _ _ O
 ) _ _ O
+
+
+ _ _ O
 The _ _ O
 function _ _ O
 callback _ _ O
@@ -1647,8 +1842,14 @@ chatter _ _ O
 is _ _ O
 received _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1755,6 +1956,9 @@ copyImage _ _ O
 : _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1811,6 +2015,9 @@ of _ _ O
 a _ _ O
 specific _ _ O
 topic _ _ O
+
+
+ _ _ O
 Suppose _ _ O
 we _ _ O
 run _ _ O
@@ -1836,8 +2043,14 @@ talker.py _ _ O
 rosrun _ _ O
 mypackage _ _ O
 listener.py _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1846,6 +2059,9 @@ rostopic _ _ O
 Use _ _ O
 rostopic _ _ O
 list _ _ O
+
+
+ _ _ O
 to _ _ O
 list _ _ O
 the _ _ O
@@ -1859,10 +2075,16 @@ screen _ _ O
 /chatter _ _ O
 /rosout _ _ O
 /rosout_agg _ _ O
+
+
+ _ _ O
 Use _ _ O
 rostopic _ _ O
 echo _ _ O
 chatter _ _ O
+
+
+ _ _ O
 to _ _ O
 show _ _ O
 messages _ _ O
@@ -1899,6 +2121,9 @@ talker _ _ O
 : _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
@@ -1908,6 +2133,9 @@ Use _ _ O
 rostopic _ _ O
 info _ _ O
 chatter _ _ O
+
+
+ _ _ O
 to _ _ O
 show _ _ O
 information _ _ O
@@ -1947,10 +2175,16 @@ r2-d2 _ _ O
 : _ _ O
 35408 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Use _ _ O
 rostopic _ _ O
 type _ _ O
 chatter _ _ O
+
+
+ _ _ O
 to _ _ O
 show _ _ O
 the _ _ O
@@ -1962,6 +2196,9 @@ chatter _ _ O
 std_msgs _ _ O
 / _ _ O
 String _ _ O
+
+
+ _ _ O
 To _ _ O
 publish _ _ O
 the _ _ O
@@ -1988,12 +2225,18 @@ Blah _ _ O
 " _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
 Workspace _ _ O
 Directory _ _ O
+
+
+ _ _ O
 Your _ _ O
 workspace _ _ O
 directory _ _ O
@@ -2009,6 +2252,9 @@ cs1567 _ _ O
 src _ _ O
 / _ _ O
 mypackage _ _ O
+
+
+ _ _ O
 All _ _ O
 Python _ _ O
 program _ _ O
@@ -2028,6 +2274,9 @@ src _ _ O
 mypackage _ _ O
 / _ _ O
 scripts _ _ O
+
+
+ _ _ O
 or _ _ O
 any _ _ O
 subdirectory _ _ O
@@ -2053,6 +2302,9 @@ my _ _ O
 [ _ _ O
 Tab _ _ O
 ] _ _ O
+
+
+ _ _ O
 where _ _ O
 [ _ _ O
 Tab _ _ O
@@ -2065,8 +2317,14 @@ on _ _ O
 your _ _ O
 keyboard _ _ O
 . _ _ O
+
+
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
+
+
+ _ _ O
 Publisher _ _ O
 and _ _ O
 Subscriber _ _ O

@@ -68,6 +68,9 @@ take _ _ O
 all _ _ O
 105 _ _ O
 minutes _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Welcome _ _ O
@@ -75,6 +78,9 @@ to _ _ O
 the _ _ O
 Backend _ _ O
 ! _ _ O
+
+
+ _ _ O
 3 _ _ O
 
 Through _ _ O
@@ -173,6 +179,9 @@ the _ _ O
 AST _ _ O
 itself _ _ O
 . _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 What _ _ O
@@ -246,20 +255,38 @@ f _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 jal _ _ O
+
+
+ _ _ O
 f _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 5 _ _ O
 ; _ _ O
+
+
+ _ _ O
 li _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 5 _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 f _ _ O
 ( _ _ O
 x _ _ O
@@ -267,9 +294,15 @@ x _ _ O
 3 _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 add _ _ O
 jal _ _ O
+
+
+ _ _ O
 a0 _ _ O
 , _ _ O
 x _ _ O
@@ -404,6 +437,9 @@ code _ _ O
 look _ _ O
 like _ _ O
 ? _ _ O
+
+
+ _ _ O
 6 _ _ O
 
 It _ _ O
@@ -445,6 +481,9 @@ sw _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 add_ints _ _ O
 : _ _ O
 add _ _ O
@@ -473,6 +512,9 @@ sw _ _ O
 v0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 these _ _ O
 all _ _ O
 have _ _ O
@@ -504,6 +546,9 @@ the _ _ O
 code _ _ O
 quality _ _ O
 . _ _ O
+
+
+ _ _ O
 # _ _ O
 push _ _ O
 1 _ _ O
@@ -611,6 +656,9 @@ sw _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 Output _ _ O
@@ -750,6 +798,9 @@ for _ _ O
 correct _ _ O
 output _ _ O
 . _ _ O
+
+
+ _ _ O
 8 _ _ O
 
 Goals _ _ O
@@ -907,9 +958,15 @@ some _ _ O
 heavy _ _ O
 stuff _ _ O
 . _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 Runtime _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 From _ _ O
@@ -959,18 +1016,39 @@ do _ _ O
 at _ _ O
 runtime _ _ O
 . _ _ O
+
+
+ _ _ O
 C _ _ O
 ≅ _ _ O
 dynamic _ _ O
 dispatch _ _ O
+
+
+ _ _ O
 Java _ _ O
+
+
+ _ _ O
 reflection _ _ O
+
+
+ _ _ O
 class _ _ O
 loading _ _ O
+
+
+ _ _ O
 CPU _ _ O
+
+
+ _ _ O
 garbage _ _ O
 collection _ _ O
 exceptions _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 Does _ _ O
@@ -1134,21 +1212,36 @@ the _ _ O
 target _ _ O
 language _ _ O
 . _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 y _ _ O
+
+
+ _ _ O
 lw _ _ O
 sw _ _ O
+
+
+ _ _ O
 f _ _ O
 ( _ _ O
 x _ _ O
 ) _ _ O
+
+
+ _ _ O
 lw _ _ O
 a0 _ _ O
 , _ _ O
 x _ _ O
 jal _ _ O
 f _ _ O
+
+
+ _ _ O
 while _ _ O
 ( _ _ O
 x _ _ O
@@ -1156,12 +1249,18 @@ x _ _ O
 = _ _ O
 10 _ _ O
 ) _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 y _ _ O
 t0 _ _ O
 , _ _ O
 x _ _ O
+
+
+ _ _ O
 _ _ _ O
 top _ _ O
 : _ _ O
@@ -1303,6 +1402,9 @@ and _ _ O
 much _ _ O
 more _ _ O
 ! _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 The _ _ O
@@ -1341,12 +1443,21 @@ prereq _ _ O
 for _ _ O
 this _ _ O
 course _ _ O
+
+
+ _ _ O
 Standard _ _ O
 Library _ _ O
 ( _ _ O
 stdlib _ _ O
 ) _ _ O
+
+
+ _ _ O
 Runtime _ _ O
+
+
+ _ _ O
 the _ _ O
 standard _ _ O
 library _ _ O
@@ -1363,6 +1474,9 @@ but _ _ O
 non-critical _ _ O
 functionality _ _ O
 . _ _ O
+
+
+ _ _ O
 the _ _ O
 runtime _ _ O
 library _ _ O
@@ -1396,6 +1510,9 @@ is _ _ O
 std _ _ O
 " _ _ O
 . _ _ O
+
+
+ _ _ O
 in _ _ O
 a _ _ O
 lot _ _ O
@@ -1419,7 +1536,13 @@ to _ _ O
 sum _ _ O
 up _ _ O
 : _ _ O
+
+
+ _ _ O
 Compiler _ _ O
+
+
+ _ _ O
 ( _ _ O
 the _ _ O
 runtime _ _ O
@@ -1430,8 +1553,14 @@ on _ _ O
 it _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 AST _ _ O
 Backend _ _ O
+
+
+ _ _ O
 the _ _ O
 backend _ _ O
 generates _ _ O
@@ -1449,10 +1578,16 @@ to _ _ O
 the _ _ O
 ABI _ _ O
 . _ _ O
+
+
+ _ _ O
 Runtime _ _ O
 Library _ _ O
 Executable _ _ O
 Program _ _ O
+
+
+ _ _ O
 when _ _ O
 executed _ _ O
 , _ _ O
@@ -1471,6 +1606,9 @@ on _ _ O
 the _ _ O
 target _ _ O
 . _ _ O
+
+
+ _ _ O
 uhh _ _ O
 … _ _ O
 so _ _ O
@@ -1485,6 +1623,9 @@ anyway _ _ O
 16 _ _ O
 
 Codegen _ _ O
+
+
+ _ _ O
 17 _ _ O
 
 How _ _ O
@@ -1540,6 +1681,9 @@ cond _ _ O
 { _ _ O
 code _ _ O
 } _ _ O
+
+
+ _ _ O
 _ _ _ O
 top _ _ O
 : _ _ O
@@ -1558,6 +1702,9 @@ code _ _ O
 _ _ _ O
 end _ _ O
 : _ _ O
+
+
+ _ _ O
 other _ _ O
 parts _ _ O
 are _ _ O
@@ -1571,16 +1718,31 @@ where _ _ O
 and _ _ O
 when _ _ O
 . _ _ O
+
+
+ _ _ O
 Variables _ _ O
+
+
+ _ _ O
 Registers _ _ O
+
+
+ _ _ O
 x _ _ O
 i _ _ O
 ret _ _ O
 num_cats _ _ O
+
+
+ _ _ O
 s0 _ _ O
 s1 _ _ O
 t0 _ _ O
 t1 _ _ O
+
+
+ _ _ O
 just _ _ O
 keep _ _ O
 in _ _ O
@@ -1660,6 +1822,9 @@ clean _ _ O
 up _ _ O
 stack _ _ O
 return _ _ O
+
+
+ _ _ O
 how _ _ O
 big _ _ O
 does _ _ O
@@ -1707,6 +1872,9 @@ y _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 the _ _ O
 symbol _ _ O
 table _ _ O
@@ -1720,6 +1888,9 @@ variables _ _ O
 we _ _ O
 have _ _ O
 . _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Codegen _ _ O
@@ -1758,15 +1929,24 @@ f _ _ O
 ( _ _ O
 16 _ _ O
 ) _ _ O
+
+
+ _ _ O
 li _ _ O
 a0 _ _ O
 , _ _ O
 16 _ _ O
 jal _ _ O
 f _ _ O
+
+
+ _ _ O
 return _ _ O
 16 _ _ O
 ; _ _ O
+
+
+ _ _ O
 li _ _ O
 v0 _ _ O
 , _ _ O
@@ -1774,10 +1954,16 @@ v0 _ _ O
 j _ _ O
 _ _ _ O
 return _ _ O
+
+
+ _ _ O
 x _ _ O
 = _ _ O
 16 _ _ O
 ; _ _ O
+
+
+ _ _ O
 li _ _ O
 t0 _ _ O
 , _ _ O
@@ -1797,6 +1983,9 @@ local _ _ O
 , _ _ O
 or _ _ O
 … _ _ O
+
+
+ _ _ O
 li _ _ O
 t0 _ _ O
 , _ _ O
@@ -1811,6 +2000,9 @@ it _ _ O
 a _ _ O
 global _ _ O
 ! _ _ O
+
+
+ _ _ O
 the _ _ O
 same _ _ O
 expression _ _ O
@@ -2017,6 +2209,9 @@ well _ _ O
 Linking _ _ O
 and _ _ O
 Executables _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Abunchafunctions _ _ O
@@ -2085,6 +2280,9 @@ x _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 00 _ _ O
 : _ _ O
 li _ _ O
@@ -2167,6 +2365,9 @@ sp _ _ O
 : _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 what _ _ O
 addresses _ _ O
 should _ _ O
@@ -2186,6 +2387,9 @@ of _ _ O
 the _ _ O
 functions _ _ O
 ? _ _ O
+
+
+ _ _ O
 what _ _ O
 if _ _ O
 I _ _ O
@@ -2246,10 +2450,22 @@ dependencies _ _ O
 , _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 main _ _ O
+
+
+ _ _ O
 f _ _ O
 g _ _ O
+
+
+ _ _ O
 print_list _ _ O
+
+
+ _ _ O
 we _ _ O
 have _ _ O
 to _ _ O
@@ -2270,6 +2486,9 @@ is _ _ O
 called _ _ O
 linking _ _ O
 . _ _ O
+
+
+ _ _ O
 rather _ _ O
 than _ _ O
 the _ _ O
@@ -2294,6 +2513,9 @@ finish _ _ O
 the _ _ O
 job _ _ O
 . _ _ O
+
+
+ _ _ O
 24 _ _ O
 
 Symbolic _ _ O
@@ -2325,13 +2547,28 @@ name _ _ O
 main _ _ O
 f _ _ O
 blah _ _ O
+
+
+ _ _ O
 println _ _ O
+
+
+ _ _ O
 print_list _ _ O
+
+
+ _ _ O
 f _ _ O
+
+
+ _ _ O
 code _ _ O
 g _ _ O
 more _ _ O
 stuff _ _ O
+
+
+ _ _ O
 each _ _ O
 fragment _ _ O
 has _ _ O
@@ -2344,16 +2581,28 @@ what _ _ O
 it _ _ O
 references _ _ O
 . _ _ O
+
+
+ _ _ O
 g _ _ O
 blah _ _ O
 blah _ _ O
+
+
+ _ _ O
 print_list _ _ O
 if _ _ O
 { _ _ O
 } _ _ O
 else _ _ O
 print_list _ _ O
+
+
+ _ _ O
 ; _ _ O
+
+
+ _ _ O
 the _ _ O
 linker _ _ O
 serializes _ _ O
@@ -2367,6 +2616,9 @@ the _ _ O
 blanks _ _ O
 . _ _ O
 " _ _ O
+
+
+ _ _ O
 it _ _ O
 can _ _ O
 also _ _ O
@@ -2387,6 +2639,9 @@ the _ _ O
 stdlib _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Relocations _ _ O
@@ -2477,6 +2732,9 @@ syscall _ _ O
 : _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 Reloc _ _ O
 { _ _ O
 addr _ _ O
@@ -2511,6 +2769,9 @@ g _ _ O
 " _ _ O
 , _ _ O
 } _ _ O
+
+
+ _ _ O
 After _ _ O
 loading _ _ O
 8000 _ _ O
@@ -2545,6 +2806,9 @@ syscall _ _ O
 : _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ O
 if _ _ O
 this _ _ O
 code _ _ O
@@ -2634,8 +2898,14 @@ a _ _ O
 branch-and-link _ _ O
 instruction _ _ O
 : _ _ O
+
+
+ _ _ O
 bal _ _ O
 func _ _ O
+
+
+ _ _ O
 and _ _ O
 load _ _ O
 / _ _ O
@@ -2650,6 +2920,9 @@ the _ _ O
 base _ _ O
 register _ _ O
 : _ _ O
+
+
+ _ _ O
 lw _ _ O
 t0 _ _ O
 , _ _ O
@@ -2657,6 +2930,9 @@ t0 _ _ O
 ( _ _ O
 pc _ _ O
 ) _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Debugging _ _ O
@@ -2875,6 +3151,9 @@ like _ _ O
 this _ _ O
 : _ _ O
 header _ _ O
+
+
+ _ _ O
 a _ _ O
 header _ _ O
 that _ _ O
@@ -2884,7 +3163,13 @@ type _ _ O
 of _ _ O
 the _ _ O
 file _ _ O
+
+
+ _ _ O
 symbols _ _ O
+
+
+ _ _ O
 a _ _ O
 symbol _ _ O
 table _ _ O
@@ -2895,10 +3180,22 @@ kinds _ _ O
 , _ _ O
 addresses _ _ O
 ) _ _ O
+
+
+ _ _ O
 relocs _ _ O
+
+
+ _ _ O
 relocation _ _ O
 records _ _ O
+
+
+ _ _ O
 .text _ _ O
+
+
+ _ _ O
 and _ _ O
 then _ _ O
 multiple _ _ O
@@ -2923,8 +3220,14 @@ constants _ _ O
 , _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 .data _ _ O
 .debug _ _ O
+
+
+ _ _ O
 and _ _ O
 optional _ _ O
 debug _ _ O
@@ -2952,7 +3255,13 @@ kinds _ _ O
 of _ _ O
 files _ _ O
 : _ _ O
+
+
+ _ _ O
 hello.exe _ _ O
+
+
+ _ _ O
 object _ _ O
 files _ _ O
 : _ _ O
@@ -2975,6 +3284,9 @@ together _ _ O
 can _ _ O
 produce _ _ O
 … _ _ O
+
+
+ _ _ O
 an _ _ O
 executable _ _ O
 , _ _ O
@@ -2996,6 +3308,9 @@ loaded _ _ O
 , _ _ O
 or _ _ O
 … _ _ O
+
+
+ _ _ O
 a _ _ O
 library _ _ O
 ( _ _ O
@@ -3016,6 +3331,9 @@ entry _ _ O
 point _ _ O
 . _ _ O
 hello.dll _ _ O
+
+
+ _ _ O
 instead _ _ O
 , _ _ O
 it _ _ O
@@ -3028,6 +3346,9 @@ by _ _ O
 other _ _ O
 files _ _ O
 . _ _ O
+
+
+ _ _ O
 30 _ _ O
 
 So _ _ O
@@ -3175,6 +3496,9 @@ not _ _ O
 a _ _ O
 requirement _ _ O
 . _ _ O
+
+
+ _ _ O
 31 _ _ O
 
 

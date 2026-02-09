@@ -2,9 +2,15 @@
 -DOCSTART- -X- -X- O
 
 8 _ _ O
+
+
+ _ _ O
 Investigating _ _ O
 the _ _ O
 Code _ _ O
+
+
+ _ _ O
 CS _ _ O
 / _ _ O
 COE _ _ O
@@ -13,6 +19,9 @@ Introduction _ _ O
 to _ _ O
 Systems _ _ O
 Software _ _ O
+
+
+ _ _ O
 Luis _ _ O
 Oliveira _ _ O
 ( _ _ O
@@ -25,6 +34,9 @@ and _ _ O
 Vinicius _ _ O
 Petrucci _ _ O
 ) _ _ O
+
+
+ _ _ O
 Going _ _ O
 with _ _ O
 the _ _ O
@@ -32,7 +44,13 @@ Flow _ _ O
 Tracing _ _ O
 the _ _ O
 footsteps _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Bringing _ _ O
 back _ _ O
 our _ _ O
@@ -100,6 +118,9 @@ different _ _ O
 C _ _ O
 ABI _ _ O
  _ _ O
+
+
+ _ _ O
 • _ _ O
 In _ _ O
 our _ _ O
@@ -181,7 +202,13 @@ worth _ _ O
 going _ _ O
 over _ _ O
 . _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 • _ _ O
 For _ _ O
 reference _ _ O
@@ -202,6 +229,9 @@ x86 _ _ O
 - _ _ O
 64-psABI-1.0.pdf _ _ O
 3 _ _ O
+
+
+ _ _ O
 Function _ _ O
 , _ _ O
 function _ _ O
@@ -227,6 +257,9 @@ function _ _ O
 • _ _ O
 • _ _ O
 C _ _ O
+
+
+ _ _ O
 is _ _ O
 the _ _ O
 return _ _ O
@@ -242,10 +275,16 @@ address _ _ O
 of _ _ O
 this _ _ O
 frame _ _ O
+
+
+ _ _ O
 What _ _ O
 goes _ _ O
 here _ _ O
 ? _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -257,8 +296,17 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 Oh _ _ O
 , _ _ O
 that _ _ O
@@ -310,8 +358,14 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 - _ _ O
 ) _ _ O
+
+
+ _ _ O
 - _ _ O
 Preserves _ _ O
 ( _ _ O
@@ -347,6 +401,9 @@ be _ _ O
 in _ _ O
 order _ _ O
 ) _ _ O
+
+
+ _ _ O
 Resets _ _ O
 caller _ _ O
 activation _ _ O
@@ -358,7 +415,13 @@ value _ _ O
 is _ _ O
 in _ _ O
 ) _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 These _ _ O
 are _ _ O
 actual _ _ O
@@ -422,7 +485,13 @@ makes _ _ O
 it _ _ O
 unique _ _ O
 . _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 Who _ _ O
 controls _ _ O
 the _ _ O
@@ -433,19 +502,37 @@ is _ _ O
 a _ _ O
 • _ _ O
 • _ _ O
+
+
+ _ _ O
 will _ _ O
 set _ _ O
 will _ _ O
 set _ _ O
+
+
+ _ _ O
 • _ _ O
+
+
+ _ _ O
 group _ _ O
 set _ _ O
+
+
+ _ _ O
 or _ _ O
+
+
+ _ _ O
 controls _ _ O
 the _ _ O
 flow _ _ O
 followed _ _ O
 by _ _ O
+
+
+ _ _ O
 based _ _ O
 on _ _ O
 the _ _ O
@@ -469,6 +556,9 @@ but _ _ O
 less _ _ O
 useful _ _ O
 ) _ _ O
+
+
+ _ _ O
 ( _ _ O
 program _ _ O
 counter _ _ O
@@ -478,6 +568,9 @@ an _ _ O
 address _ _ O
 based _ _ O
 on _ _ O
+
+
+ _ _ O
 • _ _ O
 Often _ _ O
 it _ _ O
@@ -490,6 +583,9 @@ just _ _ O
 interpret _ _ O
 the _ _ O
 C _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -501,18 +597,39 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ( _ _ O
+
+
+ _ _ O
 is _ _ O
+
+
+ _ _ O
 ) _ _ O
 ) _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 Who _ _ O
 controls _ _ O
 the _ _ O
 • _ _ O
+
+
+ _ _ O
 controls _ _ O
 the _ _ O
 flow _ _ O
+
+
+ _ _ O
 has _ _ O
 bits _ _ O
 that _ _ O
@@ -539,6 +656,9 @@ set _ _ O
 if _ _ O
 overflow _ _ O
 occurred _ _ O
+
+
+ _ _ O
 • _ _ O
 Each _ _ O
 jump _ _ O
@@ -549,6 +669,9 @@ different _ _ O
 Jumps _ _ O
 when _ _ O
 C _ _ O
+
+
+ _ _ O
 Works _ _ O
 because _ _ O
 of _ _ O
@@ -573,6 +696,9 @@ about _ _ O
 it _ _ O
 abstractly _ _ O
 ) _ _ O
+
+
+ _ _ O
 - _ _ O
 set _ _ O
 if _ _ O
@@ -587,6 +713,9 @@ bit _ _ O
 operation _ _ O
 has _ _ O
 carry _ _ O
+
+
+ _ _ O
 patterns _ _ O
 . _ _ O
 ( _ _ O
@@ -598,7 +727,13 @@ up _ _ O
 - _ _ O
 set _ _ O
 if _ _ O
+
+
+ _ _ O
 or _ _ O
+
+
+ _ _ O
 x86 _ _ O
 - _ _ O
 64 _ _ O
@@ -610,7 +745,13 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 Perform _ _ O
 x _ _ O
 - _ _ O
@@ -680,7 +821,13 @@ in _ _ O
 these _ _ O
 cases _ _ O
 ) _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 cmp _ _ O
 , _ _ O
 simplifying _ _ O
@@ -725,12 +872,18 @@ if _ _ O
 x _ _ O
 > _ _ O
 0 _ _ O
+
+
+ _ _ O
 Jump _ _ O
 if _ _ O
 x _ _ O
 > _ _ O
 = _ _ O
 y _ _ O
+
+
+ _ _ O
 We _ _ O
 negate _ _ O
 the _ _ O
@@ -745,18 +898,30 @@ skip _ _ O
 the _ _ O
 code _ _ O
 ! _ _ O
+
+
+ _ _ O
 Jump _ _ O
 if _ _ O
 x _ _ O
 < _ _ O
 y _ _ O
+
+
+ _ _ O
 Jump _ _ O
 if _ _ O
 x _ _ O
 ! _ _ O
 = _ _ O
 y _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 test _ _ O
 ... _ _ O
 adding _ _ O
@@ -764,6 +929,9 @@ some _ _ O
 new _ _ O
 confusion _ _ O
 • _ _ O
+
+
+ _ _ O
 is _ _ O
 somewhat _ _ O
 stranger _ _ O
@@ -786,6 +954,9 @@ sets _ _ O
 flags _ _ O
 on _ _ O
 result _ _ O
+
+
+ _ _ O
 • _ _ O
 Thankfully _ _ O
 , _ _ O
@@ -843,8 +1014,14 @@ We _ _ O
 negate _ _ O
 the _ _ O
 condition _ _ O
+
+
+ _ _ O
 ) _ _ O
 ... _ _ O
+
+
+ _ _ O
 Jump _ _ O
 if _ _ O
 x _ _ O
@@ -854,6 +1031,9 @@ x _ _ O
 ( _ _ O
 ? _ _ O
 ) _ _ O
+
+
+ _ _ O
 Jump _ _ O
 if _ _ O
 x _ _ O
@@ -872,7 +1052,13 @@ Spring _ _ O
 2019 _ _ O
 / _ _ O
 2020 _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 Patterns _ _ O
 • _ _ O
 Control _ _ O
@@ -880,7 +1066,13 @@ flow _ _ O
 is _ _ O
 a _ _ O
 C _ _ O
+
+
+ _ _ O
 / _ _ O
+
+
+ _ _ O
 before _ _ O
 a _ _ O
 - _ _ O
@@ -896,13 +1088,25 @@ AT _ _ O
 T _ _ O
 syntax _ _ O
 , _ _ O
+
+
+ _ _ O
 ) _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 Altogether _ _ O
 now _ _ O
 ... _ _ O
 Working _ _ O
 backward _ _ O
+
+
+ _ _ O
 Negate _ _ O
 logic _ _ O
 to _ _ O
@@ -911,6 +1115,9 @@ form _ _ O
 if _ _ O
 " _ _ O
 logic _ _ O
+
+
+ _ _ O
 Negate _ _ O
 logic _ _ O
 to _ _ O
@@ -919,7 +1126,13 @@ form _ _ O
 if _ _ O
 " _ _ O
 logic _ _ O
+
+
+ _ _ O
 12 _ _ O
+
+
+ _ _ O
 Deduction _ _ O
 , _ _ O
 dear _ _ O
@@ -927,10 +1140,16 @@ watson _ _ O
 No _ _ O
 use _ _ O
 of _ _ O
+
+
+ _ _ O
 ... _ _ O
 likely _ _ O
 no _ _ O
 arguments _ _ O
+
+
+ _ _ O
 Two _ _ O
 stack _ _ O
 allocations _ _ O
@@ -949,20 +1168,35 @@ likely _ _ O
 , _ _ O
 -2 _ _ O
 ) _ _ O
+
+
+ _ _ O
 Looking _ _ O
 at _ _ O
+
+
+ _ _ O
 ... _ _ O
 This _ _ O
 simply _ _ O
 returns _ _ O
 zero _ _ O
 . _ _ O
+
+
+ _ _ O
 13 _ _ O
+
+
+ _ _ O
 Conventional _ _ O
 wisdom _ _ O
 : _ _ O
 counting _ _ O
 arguments _ _ O
+
+
+ _ _ O
 Readies _ _ O
 ... _ _ O
 second _ _ O
@@ -991,11 +1225,17 @@ A _ _ O
 function _ _ O
 call _ _ O
 . _ _ O
+
+
+ _ _ O
 Still _ _ O
 have _ _ O
 to _ _ O
 follow _ _ O
 the _ _ O
+
+
+ _ _ O
 to _ _ O
 the _ _ O
 assembly _ _ O
@@ -1003,12 +1243,21 @@ of _ _ O
 the _ _ O
 function _ _ O
 . _ _ O
+
+
+ _ _ O
 14 _ _ O
+
+
+ _ _ O
 Conventional _ _ O
 wisdom _ _ O
 : _ _ O
 counting _ _ O
 arguments _ _ O
+
+
+ _ _ O
 Copies _ _ O
 ... _ _ O
 function _ _ O
@@ -1039,6 +1288,12 @@ is _ _ O
 a _ _ O
 32-bit _ _ O
 return _ _ O
+
+
+ _ _ O
 15 _ _ O
+
+
+ _ _ O
 
 

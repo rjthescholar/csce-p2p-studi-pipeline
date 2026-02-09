@@ -9,17 +9,32 @@ CS _ _ O
 1622 _ _ O
 Jarrett _ _ O
 Billingsley _ _ O
+
+
+ _ _ O
 Class _ _ O
 Announcements _ _ O
 ● _ _ O
 ? _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 Quick _ _ O
 Recap _ _ O
 Our _ _ O
 Calling _ _ B-Concept
 Convention _ _ I-Concept
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 Caller _ _ B-Concept
 ● _ _ O
 remember _ _ O
@@ -76,11 +91,17 @@ sw _ _ O
 v0 _ _ B-Concept
 , _ _ O
 glob _ _ O
+
+
+ _ _ O
 push _ _ O
 the _ _ O
 two _ _ O
 arguments _ _ B-Concept
 ... _ _ O
+
+
+ _ _ O
 call _ _ O
 the _ _ O
 function _ _ O
@@ -95,6 +116,9 @@ if _ _ O
 any _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 and _ _ O
 remember _ _ O
 the _ _ O
@@ -127,6 +151,9 @@ the _ _ O
 same _ _ O
 . _ _ O
 4 _ _ O
+
+
+ _ _ O
 Callee _ _ B-Concept
 ● _ _ O
 every _ _ O
@@ -182,16 +209,31 @@ i _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 y _ _ O
+
+
+ _ _ O
 4 _ _ O
 ( _ _ O
 fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 x _ _ O
+
+
+ _ _ O
 0 _ _ O
 ( _ _ O
 fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 arguments _ _ B-Concept
 are _ _ O
 accessed _ _ O
@@ -201,8 +243,14 @@ offsets _ _ O
 from _ _ O
 fp _ _ B-Concept
 ; _ _ O
+
+
+ _ _ O
 fp _ _ B-Concept
 ra _ _ B-Concept
+
+
+ _ _ O
 i _ _ O
 z _ _ O
 these _ _ O
@@ -219,6 +267,9 @@ fp _ _ B-Concept
 ra _ _ B-Concept
 registers _ _ O
 . _ _ O
+
+
+ _ _ O
 -12 _ _ O
 ( _ _ O
 fp _ _ B-Concept
@@ -248,6 +299,9 @@ the _ _ O
 stack _ _ B-Concept
 . _ _ O
 5 _ _ O
+
+
+ _ _ O
 Prologue _ _ B-Concept
 and _ _ O
 Epilogue _ _ B-Concept
@@ -326,6 +380,9 @@ sp _ _ B-Concept
 x _ _ O
 jr _ _ O
 ra _ _ O
+
+
+ _ _ B-Concept
 here _ _ O
 , _ _ O
 n _ _ O
@@ -340,8 +397,8 @@ of _ _ O
 all _ _ O
 locals _ _ O
 and _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 . _ _ O
 and _ _ O
 here _ _ O
@@ -358,25 +415,34 @@ of _ _ O
 all _ _ O
 locals _ _ O
 , _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 , _ _ O
 and _ _ O
-arguments _ _ O
+arguments _ _ B-Concept
 . _ _ O
 this _ _ O
 leaves _ _ O
 the _ _ O
-stack _ _ O
+stack _ _ B-Concept
 completely _ _ O
 clean _ _ O
 . _ _ O
 6 _ _ O
+
+
+ _ _ O
 The _ _ O
 Code _ _ O
 Inside _ _ O
 Functions _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 Not _ _ O
 a _ _ O
 tutorial _ _ O
@@ -456,7 +522,7 @@ just _ _ O
 a _ _ O
 bunch _ _ O
 of _ _ O
-codegen-related _ _ O
+codegen-related _ _ B-Concept
 ideas _ _ O
 . _ _ O
 ● _ _ O
@@ -483,9 +549,15 @@ too _ _ O
 much _ _ O
 away _ _ O
 ;) _ _ O
+
+
+ _ _ O
 8 _ _ O
-Block _ _ O
-statements _ _ O
+
+
+ _ _ O
+Block _ _ B-Concept
+statements _ _ I-Concept
 ● _ _ O
 the _ _ O
 body _ _ O
@@ -526,6 +598,9 @@ stmt2 _ _ O
 ; _ _ O
 stmt3 _ _ O
 ; _ _ O
+
+
+ _ _ O
 code _ _ O
 for _ _ O
 stmt1 _ _ O
@@ -535,6 +610,9 @@ stmt2 _ _ O
 code _ _ O
 for _ _ O
 stmt3 _ _ O
+
+
+ _ _ O
 } _ _ O
 this _ _ O
 works _ _ O
@@ -543,8 +621,8 @@ the _ _ O
 runtime _ _ O
 semantics _ _ O
 of _ _ O
-block _ _ O
-statements _ _ O
+block _ _ B-Concept
+statements _ _ I-Concept
 are _ _ O
 a _ _ O
 very _ _ O
@@ -571,10 +649,13 @@ all _ _ O
 statements _ _ O
 ... _ _ O
 9 _ _ O
+
+
+ _ _ O
 Accessing _ _ O
 variables _ _ O
 ● _ _ O
-HLLs _ _ O
+HLLs _ _ B-Concept
 hide _ _ O
 how _ _ O
 variables _ _ O
@@ -601,7 +682,13 @@ x _ _ O
 = _ _ O
 1 _ _ O
 ; _ _ O
+
+
+ _ _ O
 } _ _ O
+
+
+ _ _ O
 here _ _ O
 we _ _ O
 store _ _ O
@@ -615,12 +702,18 @@ t0 _ _ O
 , _ _ O
 -12 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 g _ _ O
 = _ _ O
 2 _ _ O
 ; _ _ O
+
+
+ _ _ O
 here _ _ O
 we _ _ O
 store _ _ O
@@ -633,11 +726,17 @@ sw _ _ O
 t0 _ _ O
 , _ _ O
 g _ _ O
+
+
+ _ _ O
 print_i _ _ O
 ( _ _ O
 x _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 here _ _ O
 we _ _ O
 load _ _ O
@@ -651,13 +750,19 @@ t0 _ _ O
 , _ _ O
 -12 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
+
+
+ _ _ O
 print_i _ _ O
 ( _ _ O
 g _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 here _ _ O
 we _ _ O
 load _ _ O
@@ -671,8 +776,11 @@ t0 _ _ O
 , _ _ O
 g _ _ O
 10 _ _ O
-Evaluating _ _ O
-expressions _ _ O
+
+
+ _ _ O
+Evaluating _ _ B-Concept
+expressions _ _ I-Concept
 ● _ _ O
 things _ _ O
 start _ _ O
@@ -682,21 +790,30 @@ really _ _ O
 tricky _ _ O
 here _ _ O
 . _ _ O
+
+
+ _ _ O
 g _ _ O
 = _ _ O
 x _ _ O
 + _ _ O
 y _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 lw _ _ O
 add _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 0 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 now _ _ O
 we _ _ O
@@ -708,7 +825,7 @@ t1 _ _ O
 , _ _ O
 4 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t0 _ _ O
 , _ _ O
@@ -729,6 +846,9 @@ expression _ _ O
 t0 _ _ O
 , _ _ O
 g _ _ O
+
+
+ _ _ O
 the _ _ O
 order _ _ O
 we _ _ O
@@ -743,6 +863,9 @@ registers _ _ O
 we _ _ O
 need _ _ O
 . _ _ O
+
+
+ _ _ O
 g _ _ O
 = _ _ O
 x _ _ O
@@ -751,23 +874,29 @@ y _ _ O
 + _ _ O
 z _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 lw _ _ O
 add _ _ O
 lw _ _ O
 add _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 0 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t1 _ _ O
 , _ _ O
 4 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t0 _ _ O
 , _ _ O
@@ -778,7 +907,7 @@ t1 _ _ O
 , _ _ O
 8 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t0 _ _ O
 , _ _ O
@@ -788,6 +917,9 @@ t1 _ _ O
 t0 _ _ O
 , _ _ O
 g _ _ O
+
+
+ _ _ O
 lw _ _ O
 lw _ _ O
 or _ _ O
@@ -796,23 +928,26 @@ lw _ _ O
 add _ _ O
 add _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 0 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t1 _ _ O
 , _ _ O
 4 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t2 _ _ O
 , _ _ O
 8 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 t0 _ _ O
 , _ _ O
@@ -828,11 +963,14 @@ t0 _ _ O
 , _ _ O
 g _ _ O
 11 _ _ O
+
+
+ _ _ O
 The _ _ O
 need _ _ O
 for _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 ● _ _ O
 once _ _ O
 you _ _ O
@@ -848,6 +986,9 @@ kinds _ _ O
 of _ _ O
 complicated _ _ O
 . _ _ O
+
+
+ _ _ O
 g _ _ O
 = _ _ O
 x _ _ O
@@ -856,25 +997,34 @@ f _ _ O
 ( _ _ O
 ) _ _ O
 ; _ _ O
+
+
+ _ _ O
 lw _ _ O
 jal _ _ O
 add _ _ O
 sw _ _ O
+
+
+ _ _ O
 t0 _ _ O
 , _ _ O
 0 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 f _ _ O
 t0 _ _ O
 , _ _ O
 t0 _ _ O
 , _ _ O
-v0 _ _ O
+v0 _ _ B-Concept
 t0 _ _ O
 , _ _ O
 g _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 bad _ _ O
@@ -884,9 +1034,12 @@ we _ _ O
 are _ _ O
 violating _ _ O
 the _ _ O
-ATV _ _ O
-rule _ _ O
+ATV _ _ B-Concept
+rule _ _ I-Concept
 . _ _ O
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 because _ _ O
@@ -928,7 +1081,7 @@ s _ _ O
 registers _ _ O
 for _ _ O
 some _ _ O
-temporaries _ _ O
+temporaries _ _ B-Concept
 , _ _ O
 so _ _ O
 their _ _ O
@@ -954,11 +1107,14 @@ registers _ _ O
 and _ _ O
 ignore _ _ O
 the _ _ O
-t _ _ O
-registers _ _ O
+t _ _ B-Concept
+registers _ _ I-Concept
 altogether _ _ O
 . _ _ O
 12 _ _ O
+
+
+ _ _ O
 A _ _ O
 little _ _ O
 detour _ _ O
@@ -984,7 +1140,7 @@ first _ _ O
 imagine _ _ O
 evaluating _ _ O
 an _ _ O
-AST _ _ O
+AST _ _ B-Concept
 by _ _ O
 pushing _ _ O
 and _ _ O
@@ -992,7 +1148,7 @@ popping _ _ O
 things _ _ O
 on _ _ O
 a _ _ O
-stack _ _ O
+stack _ _ B-Concept
 , _ _ O
 instead _ _ O
 of _ _ O
@@ -1006,18 +1162,36 @@ a _ _ O
 + _ _ O
 b _ _ O
 ; _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 push _ _ O
 a _ _ O
+
+
+ _ _ O
 2 _ _ O
 . _ _ O
 push _ _ O
 b _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 g _ _ O
+
+
+ _ _ O
 + _ _ O
 a _ _ O
+
+
+ _ _ O
 3 _ _ O
 . _ _ O
 pop _ _ O
@@ -1025,21 +1199,39 @@ them _ _ O
 , _ _ O
 push _ _ O
 sum _ _ O
+
+
+ _ _ O
 b _ _ O
 b _ _ O
+
+
+ _ _ O
 let _ _ O
 's _ _ O
 evaluate _ _ O
 the _ _ O
 assignment _ _ O
 's _ _ O
-rhs _ _ O
+rhs _ _ B-Concept
 . _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
+
+
+ _ _ O
 you _ _ O
 can _ _ O
 use _ _ O
@@ -1063,6 +1255,9 @@ examples _ _ O
 . _ _ O
 ) _ _ O
 13 _ _ O
+
+
+ _ _ O
 Ok _ _ O
 ? _ _ O
 And _ _ O
@@ -1080,7 +1275,7 @@ can _ _ O
 map _ _ O
 that _ _ O
 imaginary _ _ O
-stack _ _ O
+stack _ _ B-Concept
 onto _ _ O
 the _ _ O
 registers _ _ O
@@ -1091,21 +1286,54 @@ a _ _ O
 + _ _ O
 b _ _ O
 ; _ _ O
+
+
+ _ _ O
 s1 _ _ O
+
+
+ _ _ O
 = _ _ O
+
+
+ _ _ O
 s0 _ _ O
 g _ _ O
+
+
+ _ _ O
 a _ _ O
+
+
+ _ _ O
 s0 _ _ O
+
+
+ _ _ O
 b _ _ O
 a _ _ O
+
+
+ _ _ O
 s0 _ _ O
+
+
+ _ _ O
 a _ _ O
 + _ _ O
 b _ _ O
+
+
+ _ _ O
 + _ _ O
 a _ _ O
+
+
+ _ _ O
 b _ _ O
+
+
+ _ _ O
 this _ _ O
 tells _ _ O
 us _ _ O
@@ -1117,15 +1345,21 @@ each _ _ O
 value _ _ O
 into _ _ O
 ! _ _ O
+
+
+ _ _ O
 lw _ _ O
 lw _ _ O
 add _ _ O
 sw _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 0 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 # _ _ O
 a _ _ O
@@ -1133,7 +1367,7 @@ s1 _ _ O
 , _ _ O
 4 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 # _ _ O
 b _ _ O
@@ -1145,6 +1379,9 @@ s1 _ _ O
 s0 _ _ O
 , _ _ O
 g _ _ O
+
+
+ _ _ O
 but _ _ O
 now _ _ O
 we _ _ O
@@ -1160,27 +1397,30 @@ allowed _ _ O
 to _ _ O
 use _ _ O
 the _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 , _ _ O
 we _ _ O
 must _ _ O
 save _ _ O
 the _ _ O
-caller _ _ O
+caller _ _ B-Concept
 's _ _ O
 versions _ _ O
 of _ _ O
 them _ _ O
 . _ _ O
 14 _ _ O
+
+
+ _ _ O
 The _ _ O
 last _ _ O
 piece _ _ O
 of _ _ O
 the _ _ O
-calling _ _ O
-convention _ _ O
+calling _ _ B-Concept
+convention _ _ I-Concept
 ● _ _ O
 only _ _ O
 after _ _ O
@@ -1198,8 +1438,8 @@ we _ _ O
 know _ _ O
 how _ _ O
 many _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 it _ _ O
 needs _ _ O
 . _ _ O
@@ -1212,17 +1452,29 @@ more _ _ O
 part _ _ O
 of _ _ O
 the _ _ O
-stack _ _ O
-frame _ _ O
+stack _ _ B-Concept
+frame _ _ B-Concept
 : _ _ O
 y _ _ O
+
+
+ _ _ O
 x _ _ O
-fp _ _ O
-fp _ _ O
-ra _ _ O
+
+
+ _ _ O
+fp _ _ B-Concept
+
+
+ _ _ O
+fp _ _ B-Concept
+ra _ _ B-Concept
+
+
+ _ _ O
 in _ _ O
 the _ _ O
-prologue _ _ O
+prologue _ _ B-Concept
 , _ _ O
 we _ _ O
 will _ _ O
@@ -1232,52 +1484,70 @@ store _ _ O
 each _ _ O
 of _ _ O
 these _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 to _ _ O
 the _ _ O
-stack _ _ O
+stack _ _ B-Concept
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
 and _ _ O
 in _ _ O
 the _ _ O
-epilogue _ _ O
-, _ _ O
+epilogue _ _ B-Concept
+, _ _ I-Concept
 we _ _ O
 will _ _ O
 load _ _ O
 them _ _ O
 back _ _ O
 . _ _ O
+
+
+ _ _ O
 i _ _ O
+
+
+ _ _ O
 z _ _ O
 s1 _ _ O
 s0 _ _ O
+
+
+ _ _ O
 we _ _ O
 have _ _ O
 to _ _ O
 save _ _ O
 the _ _ O
-caller _ _ O
+caller _ _ B-Concept
 's _ _ O
 values _ _ O
 of _ _ O
 any _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 this _ _ O
 function _ _ O
 uses _ _ O
 . _ _ O
-sp _ _ O
+
+
+ _ _ O
+sp _ _ B-Concept
+
+
+ _ _ O
 this _ _ O
 is _ _ O
 how _ _ O
 the _ _ O
-saved _ _ O
-register _ _ O
-contract _ _ O
+saved _ _ B-Concept
+register _ _ I-Concept
+contract _ _ I-Concept
 works _ _ O
 . _ _ O
 I _ _ O
@@ -1294,17 +1564,20 @@ relevant _ _ O
 now _ _ O
 . _ _ O
 15 _ _ O
+
+
+ _ _ O
 Some _ _ O
 last _ _ O
-register _ _ O
-allocation _ _ O
+register _ _ B-Concept
+allocation _ _ I-Concept
 thoughts _ _ O
 ● _ _ O
 can _ _ O
 we _ _ O
 use _ _ O
-t _ _ O
-registers _ _ O
+t _ _ B-Concept
+registers _ _ I-Concept
 at _ _ O
 all _ _ O
 ? _ _ O
@@ -1350,7 +1623,7 @@ simple _ _ O
 look _ _ O
 at _ _ O
 the _ _ O
-AST _ _ O
+AST _ _ B-Concept
 " _ _ O
 to _ _ O
 the _ _ O
@@ -1362,8 +1635,8 @@ there _ _ O
 are _ _ O
 no _ _ O
 " _ _ O
-function _ _ O
-call _ _ O
+function _ _ B-Concept
+call _ _ I-Concept
 " _ _ O
 nodes _ _ O
 , _ _ O
@@ -1390,8 +1663,8 @@ fewer _ _ O
 or _ _ O
 no _ _ O
 ) _ _ O
-s _ _ O
-registers _ _ O
+s _ _ B-Concept
+registers _ _ I-Concept
 , _ _ O
 meaning _ _ O
 less _ _ O
@@ -1409,8 +1682,8 @@ there _ _ O
 are _ _ O
 only _ _ O
 8 _ _ O
-saved _ _ O
-registers _ _ O
+saved _ _ B-Concept
+registers _ _ I-Concept
 ( _ _ O
 s0 _ _ O
 .. _ _ O
@@ -1430,8 +1703,8 @@ o _ _ O
 well _ _ O
 , _ _ O
 this _ _ O
-register _ _ O
-allocation _ _ O
+register _ _ B-Concept
+allocation _ _ I-Concept
 scheme _ _ O
 will _ _ O
 work _ _ O
@@ -1467,20 +1740,23 @@ others _ _ O
 , _ _ O
 like _ _ O
 using _ _ O
-a _ _ O
-registers _ _ O
+a _ _ B-Concept
+registers _ _ I-Concept
 for _ _ O
-arguments _ _ O
+arguments _ _ B-Concept
 instead _ _ O
 of _ _ O
 the _ _ O
-stack _ _ O
+stack _ _ B-Concept
 ) _ _ O
 . _ _ O
 16 _ _ O
-Control _ _ O
-flow _ _ O
-statements _ _ O
+
+
+ _ _ O
+Control _ _ B-Concept
+flow _ _ I-Concept
+statements _ _ I-Concept
 ● _ _ O
 assuming _ _ O
 we _ _ O
@@ -1495,13 +1771,13 @@ surprisingly _ _ O
 tricky _ _ O
 bit _ _ O
 is _ _ O
-control _ _ O
-flow _ _ O
-statements _ _ O
+control _ _ B-Concept
+flow _ _ I-Concept
+statements _ _ I-Concept
 : _ _ O
-conditionals _ _ O
+conditionals _ _ B-Concept
 and _ _ O
-loops _ _ O
+loops _ _ B-Concept
 . _ _ O
 o _ _ O
 specifically _ _ O
@@ -1538,17 +1814,23 @@ i _ _ O
 { _ _ O
 ... _ _ O
 } _ _ O
+
+
+ _ _ O
 lw _ _ O
 bge _ _ O
 ... _ _ O
 _ _ _ O
 end _ _ O
 : _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 -16 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 s0 _ _ O
 , _ _ O
@@ -1556,6 +1838,9 @@ s0 _ _ O
 , _ _ O
 _ _ _ O
 end _ _ O
+
+
+ _ _ O
 getting _ _ O
 the _ _ O
 condition _ _ O
@@ -1582,11 +1867,14 @@ beq _ _ O
 _ _ _ O
 end _ _ O
 : _ _ O
+
+
+ _ _ O
 s0 _ _ O
 , _ _ O
 -16 _ _ O
 ( _ _ O
-fp _ _ O
+fp _ _ B-Concept
 ) _ _ O
 s1 _ _ O
 , _ _ O
@@ -1602,12 +1890,18 @@ zero _ _ O
 , _ _ O
 _ _ _ O
 end _ _ O
+
+
+ _ _ O
 17 _ _ O
-Lazy _ _ O
-operators _ _ O
+
+
+ _ _ O
+Lazy _ _ B-Concept
+operators _ _ I-Concept
 ( _ _ O
 " _ _ O
-short-circuiting _ _ O
+short-circuiting _ _ B-Concept
 " _ _ O
 ) _ _ O
 ● _ _ O
@@ -1618,15 +1912,15 @@ in _ _ O
 most _ _ O
 languages _ _ O
 , _ _ O
-logical _ _ O
-and _ _ O
+logical _ _ B-Concept
+and _ _ I-Concept
 and _ _ O
 or _ _ O
 will _ _ O
 only _ _ O
 evaluate _ _ O
 their _ _ O
-rhs _ _ O
+rhs _ _ B-Concept
 if _ _ O
 they _ _ O
 have _ _ O
@@ -1668,6 +1962,9 @@ condition _ _ O
 is _ _ O
 true _ _ O
 ? _ _ O
+
+
+ _ _ O
 lw _ _ O
 s0 _ _ O
 , _ _ O
@@ -1723,7 +2020,13 @@ true _ _ O
 _ _ _ O
 end _ _ O
 : _ _ O
+
+
+ _ _ O
 18 _ _ O
+
+
+ _ _ O
 You _ _ O
 can _ _ O
 assign _ _ O
@@ -1848,9 +2151,21 @@ for _ _ O
 a _ _ O
 loop _ _ O
 " _ _ O
+
+
+ _ _ O
 19 _ _ O
+
+
+ _ _ O
 Arrays _ _ O
+
+
+ _ _ O
 20 _ _ O
+
+
+ _ _ O
 Adding _ _ O
 features _ _ O
 is _ _ O
@@ -1976,7 +2291,13 @@ slightly _ _ O
 different _ _ O
 syntax _ _ O
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
+
+
+ _ _ O
 Minimum _ _ O
 Viable _ _ O
 Product _ _ O
@@ -2040,6 +2361,9 @@ int _ _ O
 10 _ _ O
 ] _ _ O
 ; _ _ O
+
+
+ _ _ O
 this _ _ O
 syntax _ _ O
 might _ _ O
@@ -2081,6 +2405,9 @@ a _ _ O
 = _ _ O
 5 _ _ O
 ; _ _ O
+
+
+ _ _ O
 I _ _ O
 think _ _ O
 it _ _ O
@@ -2107,6 +2434,9 @@ i _ _ O
 ) _ _ O
 ; _ _ O
 } _ _ O
+
+
+ _ _ O
 and _ _ O
 this _ _ O
 is _ _ O
@@ -2114,6 +2444,9 @@ familiar _ _ O
 too _ _ O
 ! _ _ O
 22 _ _ O
+
+
+ _ _ O
 Lexing _ _ O
 and _ _ O
 Parsing _ _ O
@@ -2156,6 +2489,9 @@ int _ _ O
 ; _ _ O
 10 _ _ O
 ] _ _ O
+
+
+ _ _ O
 New _ _ O
 : _ _ O
 ' _ _ O
@@ -2189,6 +2525,9 @@ Exp _ _ O
 ' _ _ O
 ] _ _ O
 ' _ _ O
+
+
+ _ _ O
 a _ _ O
 [ _ _ O
 0 _ _ O
@@ -2196,6 +2535,9 @@ a _ _ O
 = _ _ O
 5 _ _ O
 ; _ _ O
+
+
+ _ _ O
 PostfixOp _ _ O
 : _ _ O
 FuncCall _ _ O
@@ -2212,6 +2554,9 @@ Exp _ _ O
 ' _ _ O
 ] _ _ O
 ' _ _ O
+
+
+ _ _ O
 one _ _ O
 more _ _ O
 important _ _ O
@@ -2238,6 +2583,9 @@ fields _ _ O
 . _ _ O
 Type _ _ O
 : _ _ O
+
+
+ _ _ O
 fn _ _ O
 f _ _ O
 ( _ _ O
@@ -2249,6 +2597,9 @@ int _ _ O
 ) _ _ O
 ArrayType _ _ O
 : _ _ O
+
+
+ _ _ O
 VoidType _ _ O
 | _ _ O
 ' _ _ O
@@ -2275,7 +2626,13 @@ Type _ _ O
 ' _ _ O
 ] _ _ O
 ' _ _ O
+
+
+ _ _ O
 23 _ _ O
+
+
+ _ _ O
 Semantic _ _ O
 analysis _ _ O
 : _ _ O
@@ -2306,11 +2663,20 @@ T _ _ O
 ; _ _ O
 n _ _ O
 ] _ _ O
+
+
+ _ _ O
 a _ _ O
 [ _ _ O
 i _ _ O
 ] _ _ O
+
+
+ _ _ O
 a.length _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 n _ _ O
 must _ _ O
@@ -2383,6 +2749,9 @@ lhs _ _ O
 of _ _ O
 = _ _ O
 24 _ _ O
+
+
+ _ _ O
 More _ _ O
 semantics _ _ O
 : _ _ O
@@ -2410,11 +2779,20 @@ T _ _ O
 ; _ _ O
 n _ _ O
 ] _ _ O
+
+
+ _ _ O
 a _ _ O
 [ _ _ O
 i _ _ O
 ] _ _ O
+
+
+ _ _ O
 a.length _ _ O
+
+
+ _ _ O
 ▪ _ _ O
 dynamically _ _ O
 allocates _ _ O
@@ -2488,6 +2866,9 @@ length _ _ O
 of _ _ O
 a. _ _ O
 25 _ _ O
+
+
+ _ _ O
 Runtime _ _ O
 representation _ _ O
 : _ _ O
@@ -2535,6 +2916,9 @@ Bytes _ _ O
 ) _ _ O
 each _ _ O
 : _ _ O
+
+
+ _ _ O
 A _ _ O
 [ _ _ O
 0 _ _ O
@@ -2542,26 +2926,62 @@ A _ _ O
 byte _ _ O
 offset _ _ O
 : _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 A _ _ O
 [ _ _ O
 1 _ _ O
 ] _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 A _ _ O
 [ _ _ O
 2 _ _ O
 ] _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 8 _ _ O
+
+
+ _ _ O
 9 _ _ O
+
+
+ _ _ O
 10 _ _ O
 11 _ _ O
+
+
+ _ _ O
 given _ _ O
 a _ _ O
 pointer _ _ O
@@ -2597,6 +3017,9 @@ of _ _ O
 one _ _ O
 item _ _ O
 . _ _ O
+
+
+ _ _ O
 here _ _ O
 , _ _ O
 S _ _ O
@@ -2616,6 +3039,9 @@ of _ _ O
 item _ _ O
 i. _ _ O
 26 _ _ O
+
+
+ _ _ O
 Runtime _ _ O
 representation _ _ O
 : _ _ O
@@ -2658,6 +3084,9 @@ int _ _ O
 ] _ _ O
 ; _ _ O
 3 _ _ O
+
+
+ _ _ O
 the _ _ O
 length _ _ O
 comes _ _ O
@@ -2668,9 +3097,21 @@ up _ _ O
 4 _ _ O
 bytes _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 so _ _ O
 now _ _ O
 our _ _ O
@@ -2718,6 +3159,9 @@ in _ _ O
 general _ _ O
 . _ _ O
 ) _ _ O
+
+
+ _ _ O
 now _ _ O
 we _ _ O
 have _ _ O
@@ -2747,6 +3191,9 @@ int _ _ O
 ] _ _ O
 ? _ _ O
 27 _ _ O
+
+
+ _ _ O
 Runtime _ _ O
 library _ _ O
 : _ _ O
@@ -2886,7 +3333,13 @@ it _ _ O
 ; _ _ O
 etc _ _ O
 . _ _ O
+
+
+ _ _ O
 28 _ _ O
+
+
+ _ _ O
 Codegen _ _ O
 ● _ _ O
 finally _ _ O
@@ -2908,6 +3361,9 @@ a _ _ O
 [ _ _ O
 i _ _ O
 ] _ _ O
+
+
+ _ _ O
 generated _ _ O
 as _ _ O
 a _ _ O
@@ -2956,6 +3412,9 @@ then _ _ O
 load _ _ O
 / _ _ O
 store _ _ O
+
+
+ _ _ O
 and _ _ O
 we _ _ O
 're _ _ O
@@ -2969,7 +3428,13 @@ has _ _ O
 arrays _ _ O
 now _ _ O
 ! _ _ O
+
+
+ _ _ O
 29 _ _ O
+
+
+ _ _ O
 Or _ _ O
 does _ _ O
 it _ _ O
@@ -3136,5 +3601,8 @@ about _ _ O
 here _ _ O
 . _ _ O
 30 _ _ O
+
+
+ _ _ O
 
 

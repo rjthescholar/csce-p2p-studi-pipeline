@@ -8,18 +8,34 @@
                 "Kobuki",
                 "Node",
                 "Thumrongsak",
-                "Kosiyatrakul",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -48,7 +64,36 @@
                 "Bumper",
                 "switches",
                 "Buttons",
-                "LEDs",
+                "LEDs"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "To",
                 "control",
                 "a",
@@ -71,7 +116,38 @@
                 "information",
                 "about",
                 "the",
-                "robot",
+                "robot"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "To",
                 "start",
                 "a",
@@ -85,7 +161,29 @@
                 ":",
                 "roslaunch",
                 "kobuki_node",
-                "minimal.launch",
+                "minimal.launch"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "To",
                 "ensure",
                 "the",
@@ -109,11 +207,7 @@
                 "executing",
                 "the",
                 "above",
-                "command",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "command"
             ],
             "word_labels": [
                 "O",
@@ -140,66 +234,28 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -247,143 +303,9 @@
                 "/",
                 "commands",
                 "/",
-                "velocity",
-                "We",
-                "simply",
-                "publish",
-                "data",
-                "to",
-                "the",
-                "above",
-                "topics",
-                "to",
-                "control",
-                "the",
-                "robot",
-                "The",
-                "kobuki",
-                "node",
-                "publishes",
-                "to",
-                "the",
-                "following",
-                "topic",
-                ":",
-                "/odom",
-                "/mobile_base",
-                "/",
-                "events",
-                "/",
-                "bumper",
-                "/mobile_base",
-                "/",
-                "events",
-                "/",
-                "button",
-                "We",
-                "simply",
-                "subscribe",
-                "to",
-                "the",
-                "above",
-                "topics",
-                "to",
-                "receive",
-                "data",
-                "from",
-                "the",
-                "robot",
-                "There",
-                "are",
-                "more",
-                "topics",
-                "related",
-                "to",
-                "kobuki",
-                "node",
-                "but",
-                "we",
-                "will",
-                "only",
-                "focus",
-                "on",
-                "topics",
-                "listed",
-                "above",
-                ".",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "velocity"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -429,6 +351,164 @@
         },
         {
             "sentence": [
+                "",
+                "We",
+                "simply",
+                "publish",
+                "data",
+                "to",
+                "the",
+                "above",
+                "topics",
+                "to",
+                "control",
+                "the",
+                "robot",
+                "The",
+                "kobuki",
+                "node",
+                "publishes",
+                "to",
+                "the",
+                "following",
+                "topic",
+                ":",
+                "/odom",
+                "/mobile_base",
+                "/",
+                "events",
+                "/",
+                "bumper",
+                "/mobile_base",
+                "/",
+                "events",
+                "/",
+                "button"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "We",
+                "simply",
+                "subscribe",
+                "to",
+                "the",
+                "above",
+                "topics",
+                "to",
+                "receive",
+                "data",
+                "from",
+                "the",
+                "robot",
+                "There",
+                "are",
+                "more",
+                "topics",
+                "related",
+                "to",
+                "kobuki",
+                "node",
+                "but",
+                "we",
+                "will",
+                "only",
+                "focus",
+                "on",
+                "topics",
+                "listed",
+                "above",
+                ".",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Sounds",
                 "A",
                 "Kobuki",
@@ -454,7 +534,40 @@
                 "/",
                 "commands",
                 "/",
-                "sound",
+                "sound"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "To",
                 "recognize",
                 "a",
@@ -471,7 +584,32 @@
                 "from",
                 "kobuki_msgs.msg",
                 "import",
-                "Sound",
+                "Sound"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "Sound",
                 "message",
                 "consists",
@@ -522,9 +660,7 @@
                 "cleaning",
                 "end",
                 "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
@@ -578,48 +714,16 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -731,17 +835,9 @@
                 "except",
                 "rospy.ROSInterruptException",
                 ":",
-                "pass",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "pass"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -851,6 +947,30 @@
         },
         {
             "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "LEDs",
                 "There",
                 "are",
@@ -893,60 +1013,7 @@
                 "/",
                 "commands",
                 "/",
-                "led2",
-                "To",
-                "recognize",
-                "a",
-                "message",
-                "of",
-                "type",
-                "Led",
-                ",",
-                "we",
-                "need",
-                "to",
-                "import",
-                "it",
-                "from",
-                "kobuki_msgs.msg",
-                "import",
-                "Led",
-                "Led",
-                "message",
-                "consists",
-                "of",
-                "only",
-                "one",
-                "component",
-                "named",
-                "value",
-                "Simply",
-                "set",
-                "the",
-                "value",
-                "and",
-                "publish",
-                "Values",
-                ":",
-                "0",
-                "-",
-                "Black",
-                "(",
-                "Off",
-                ")",
-                "1",
-                "-",
-                "Green",
-                "2",
-                "-",
-                "Orange",
-                "3",
-                "-",
-                "Red",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "led2"
             ],
             "word_labels": [
                 "O",
@@ -991,6 +1058,90 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "To",
+                "recognize",
+                "a",
+                "message",
+                "of",
+                "type",
+                "Led",
+                ",",
+                "we",
+                "need",
+                "to",
+                "import",
+                "it",
+                "from",
+                "kobuki_msgs.msg",
+                "import",
+                "Led"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Led",
+                "message",
+                "consists",
+                "of",
+                "only",
+                "one",
+                "component",
+                "named",
+                "value",
+                "Simply",
+                "set",
+                "the",
+                "value",
+                "and",
+                "publish",
+                "Values",
+                ":",
+                "0",
+                "-",
+                "Black",
+                "(",
+                "Off",
+                ")",
+                "1",
+                "-",
+                "Green",
+                "2",
+                "-",
+                "Orange",
+                "3",
+                "-",
+                "Red",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1025,23 +1176,16 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -1206,17 +1350,9 @@
                 "except",
                 "rospy.ROSInterruptException",
                 ":",
-                "pass",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "pass"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1379,6 +1515,30 @@
         },
         {
             "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Bumpers",
                 "There",
                 "are",
@@ -1419,86 +1579,7 @@
                 "/",
                 "events",
                 "/",
-                "bumper",
-                "Need",
-                "to",
-                "import",
-                "the",
-                "message",
-                "of",
-                "type",
-                "BumperEvent",
-                "as",
-                "usual",
-                ":",
-                "from",
-                "kobuki_msgs.msg",
-                "import",
-                "BumperEvent",
-                "BumperEvent",
-                "consists",
-                "of",
-                "two",
-                "components",
-                ":",
-                "bumper",
-                "with",
-                "the",
-                "following",
-                "possible",
-                "values",
-                ":",
-                "0",
-                "-",
-                "Left",
-                "1",
-                "-",
-                "Center",
-                "2",
-                "-",
-                "Right",
-                "state",
-                "with",
-                "the",
-                "following",
-                "possible",
-                "values",
-                ":",
-                "0",
-                "-",
-                "Released",
-                "1",
-                "-",
-                "Pressed",
-                "Simply",
-                "subscribe",
-                "to",
-                "the",
-                "topic",
-                "to",
-                "receive",
-                "the",
-                "message",
-                ":",
-                "rospy.Subscriber",
-                "(",
-                "'",
-                "/",
-                "mobile_base",
-                "/",
-                "events",
-                "/",
-                "bumper",
-                "'",
-                ",",
-                "BumperEvent",
-                ",",
-                "bumperCallback",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "bumper"
             ],
             "word_labels": [
                 "O",
@@ -1541,6 +1622,29 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Need",
+                "to",
+                "import",
+                "the",
+                "message",
+                "of",
+                "type",
+                "BumperEvent",
+                "as",
+                "usual",
+                ":",
+                "from",
+                "kobuki_msgs.msg",
+                "import",
+                "BumperEvent"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1556,6 +1660,36 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "BumperEvent",
+                "consists",
+                "of",
+                "two",
+                "components",
+                ":",
+                "bumper",
+                "with",
+                "the",
+                "following",
+                "possible",
+                "values",
+                ":",
+                "0",
+                "-",
+                "Left",
+                "1",
+                "-",
+                "Center",
+                "2",
+                "-",
+                "Right"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1578,6 +1712,27 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "state",
+                "with",
+                "the",
+                "following",
+                "possible",
+                "values",
+                ":",
+                "0",
+                "-",
+                "Released",
+                "1",
+                "-",
+                "Pressed"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1591,6 +1746,41 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Simply",
+                "subscribe",
+                "to",
+                "the",
+                "topic",
+                "to",
+                "receive",
+                "the",
+                "message",
+                ":",
+                "rospy.Subscriber",
+                "(",
+                "'",
+                "/",
+                "mobile_base",
+                "/",
+                "events",
+                "/",
+                "bumper",
+                "'",
+                ",",
+                "BumperEvent",
+                ",",
+                "bumperCallback",
+                ")",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -1618,6 +1808,16 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -1768,17 +1968,9 @@
                 ":",
                 "bumperExample",
                 "(",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -1927,6 +2119,30 @@
         },
         {
             "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Buttons",
                 "Kobuki",
                 "robot",
@@ -1964,89 +2180,7 @@
                 "/",
                 "events",
                 "/",
-                "button",
-                "Your",
-                "program",
-                "must",
-                "import",
-                "the",
-                "message",
-                "type",
-                "ButtonEvent",
-                "as",
-                "shown",
-                "below",
-                ":",
-                "from",
-                "kobuki_msgs.msg",
-                "import",
-                "ButtonEvent",
-                "The",
-                "message",
-                "of",
-                "type",
-                "ButtonEvent",
-                "consists",
-                "of",
-                "two",
-                "components",
-                ":",
-                "button",
-                "with",
-                "the",
-                "following",
-                "possible",
-                "values",
-                ":",
-                "0",
-                "-",
-                "B0",
-                "1",
-                "-",
-                "B1",
-                "2",
-                "-",
-                "B2",
-                "state",
-                "with",
-                "the",
-                "following",
-                "possible",
-                "values",
-                ":",
-                "0",
-                "-",
-                "released",
-                "1",
-                "-",
-                "pressed",
-                "Simply",
-                "subscribe",
-                "to",
-                "the",
-                "topic",
-                "as",
-                "usual",
-                ":",
-                "rospy.Subscriber",
-                "(",
-                "'",
-                "/",
-                "mobile_base",
-                "/",
-                "events",
-                "/",
-                "button",
-                "'",
-                ",",
-                "ButtonEvent",
-                ",",
-                "bumperCallback",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "button"
             ],
             "word_labels": [
                 "O",
@@ -2086,6 +2220,30 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Your",
+                "program",
+                "must",
+                "import",
+                "the",
+                "message",
+                "type",
+                "ButtonEvent",
+                "as",
+                "shown",
+                "below",
+                ":",
+                "from",
+                "kobuki_msgs.msg",
+                "import",
+                "ButtonEvent"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2102,6 +2260,40 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "The",
+                "message",
+                "of",
+                "type",
+                "ButtonEvent",
+                "consists",
+                "of",
+                "two",
+                "components",
+                ":",
+                "button",
+                "with",
+                "the",
+                "following",
+                "possible",
+                "values",
+                ":",
+                "0",
+                "-",
+                "B0",
+                "1",
+                "-",
+                "B1",
+                "2",
+                "-",
+                "B2"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2128,6 +2320,27 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "state",
+                "with",
+                "the",
+                "following",
+                "possible",
+                "values",
+                ":",
+                "0",
+                "-",
+                "released",
+                "1",
+                "-",
+                "pressed"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2141,6 +2354,39 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Simply",
+                "subscribe",
+                "to",
+                "the",
+                "topic",
+                "as",
+                "usual",
+                ":",
+                "rospy.Subscriber",
+                "(",
+                "'",
+                "/",
+                "mobile_base",
+                "/",
+                "events",
+                "/",
+                "button",
+                "'",
+                ",",
+                "ButtonEvent",
+                ",",
+                "bumperCallback",
+                ")",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2166,6 +2412,16 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -2313,17 +2569,9 @@
                 ":",
                 "bumperExample",
                 "(",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -2469,6 +2717,30 @@
         },
         {
             "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Odometry",
                 "Represents",
                 "an",
@@ -2493,27 +2765,7 @@
                 "and",
                 "orientation",
                 ":",
-                "position.x",
-                "orientation.z",
-                "position.y",
-                "Kobuki",
-                "Information",
-                "from",
-                "an",
-                "odometry",
-                "allows",
-                "us",
-                "to",
-                "move",
-                "the",
-                "robot",
-                "with",
-                "better",
-                "precision",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "position.x"
             ],
             "word_labels": [
                 "O",
@@ -2540,6 +2792,59 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "orientation.z"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "position.y"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki"
+            ],
+            "word_labels": [
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Information",
+                "from",
+                "an",
+                "odometry",
+                "allows",
+                "us",
+                "to",
+                "move",
+                "the",
+                "robot",
+                "with",
+                "better",
+                "precision",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2555,9 +2860,16 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -2647,28 +2959,7 @@
                 "z",
                 ",",
                 "and",
-                "w",
-                "For",
-                "a",
-                "Kobuki",
-                "robot",
-                ":",
-                "pose.pose.position.z",
-                "is",
-                "always",
-                "0",
-                "pose.pose.orientation.x",
-                "is",
-                "always",
-                "0",
-                "pose.pose.orientation.y",
-                "is",
-                "always",
-                "0",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                "w"
             ],
             "word_labels": [
                 "O",
@@ -2753,6 +3044,31 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "For",
+                "a",
+                "Kobuki",
+                "robot",
+                ":",
+                "pose.pose.position.z",
+                "is",
+                "always",
+                "0",
+                "pose.pose.orientation.x",
+                "is",
+                "always",
+                "0",
+                "pose.pose.orientation.y",
+                "is",
+                "always",
+                "0"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -2770,8 +3086,28 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -2902,17 +3238,9 @@
                 "multiply",
                 "by",
                 "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node",
-                "180",
-                "\ud835\udf0b"
+                "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3041,6 +3369,30 @@
         },
         {
             "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "180",
+                "\ud835\udf0b"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Reset",
                 "Kobuki",
                 "\u2019s",
@@ -3071,7 +3423,45 @@
                 "/",
                 "commands",
                 "/",
-                "reset_odometry",
+                "reset_odometry"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
                 "You",
                 "must",
                 "make",
@@ -3166,47 +3556,9 @@
                 ":",
                 "resetter",
                 "(",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3307,6 +3659,30 @@
         },
         {
             "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
                 "Odometry",
                 "Topic",
                 ":",
@@ -3352,53 +3728,7 @@
                 "(",
                 "data",
                 ")",
-                ":",
-                "data.pose.pose.position.x",
-                "is",
-                "the",
-                "position",
-                "of",
-                "the",
-                "robot",
-                "from",
-                "the",
-                "origin",
-                "along",
-                "the",
-                "x-axis",
-                "data.pose.pose.position.y",
-                "is",
-                "the",
-                "position",
-                "of",
-                "the",
-                "robot",
-                "from",
-                "the",
-                "origin",
-                "along",
-                "the",
-                "y-axis",
-                "data.pose.pose.orientation.z",
-                "together",
-                "with",
-                "data.pose.pose.orientation.w",
-                "is",
-                "the",
-                "direction",
-                "where",
-                "the",
-                "robot",
-                "is",
-                "facing",
-                "(",
-                "quaternion",
-                ")",
-                ".",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                ":"
             ],
             "word_labels": [
                 "O",
@@ -3446,6 +3776,56 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "data.pose.pose.position.x",
+                "is",
+                "the",
+                "position",
+                "of",
+                "the",
+                "robot",
+                "from",
+                "the",
+                "origin",
+                "along",
+                "the",
+                "x-axis",
+                "data.pose.pose.position.y",
+                "is",
+                "the",
+                "position",
+                "of",
+                "the",
+                "robot",
+                "from",
+                "the",
+                "origin",
+                "along",
+                "the",
+                "y-axis",
+                "data.pose.pose.orientation.z",
+                "together",
+                "with",
+                "data.pose.pose.orientation.w",
+                "is",
+                "the",
+                "direction",
+                "where",
+                "the",
+                "robot",
+                "is",
+                "facing",
+                "(",
+                "quaternion",
+                ")",
+                "."
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O",
@@ -3488,8 +3868,28 @@
                 "O",
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
                 "O",
                 "O",
+                "O"
+            ]
+        },
+        {
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
                 "O",
                 "O",
                 "O"
@@ -3645,17 +4045,9 @@
                 ":",
                 "odomExample",
                 "(",
-                ")",
-                "Thumrongsak",
-                "Kosiyatrakul",
-                "Kobuki",
-                "Node"
+                ")"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
                 "O",
                 "O",
                 "O",
@@ -3808,16 +4200,28 @@
             ]
         },
         {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "Thumrongsak",
+                "Kosiyatrakul"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
-            "sentence": [],
-            "word_labels": []
-        },
-        {
-            "sentence": [],
-            "word_labels": []
+            "sentence": [
+                "",
+                "Kobuki",
+                "Node"
+            ],
+            "word_labels": [
+                "O",
+                "O",
+                "O"
+            ]
         },
         {
             "sentence": [],

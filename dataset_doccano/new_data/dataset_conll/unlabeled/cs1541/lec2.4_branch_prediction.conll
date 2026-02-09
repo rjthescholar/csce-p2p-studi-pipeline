@@ -12,6 +12,9 @@ Ahn _ _ O
 
 Branch _ _ O
 Prediction _ _ O
+
+
+ _ _ O
 2 _ _ O
 
 Solution _ _ O
@@ -69,6 +72,9 @@ without _ _ O
 comparing _ _ O
 registers _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 What _ _ O
 would _ _ O
@@ -151,16 +157,25 @@ a _ _ O
 correctness _ _ O
 issue _ _ O
 Time _ _ O
+
+
+ _ _ O
 blt _ _ O
 s0 _ _ O
 , _ _ O
 10 _ _ O
 , _ _ O
 top _ _ O
+
+
+ _ _ O
 la _ _ O
 a0 _ _ O
 , _ _ O
 done_msg _ _ O
+
+
+ _ _ O
 jal _ _ O
 printf _ _ O
 s0 _ _ O
@@ -173,27 +188,93 @@ move _ _ O
 a0 _ _ O
 , _ _ O
 s0 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 4 _ _ O
 
 Taken _ _ O
@@ -309,6 +390,9 @@ before _ _ O
 fetch _ _ O
 → _ _ O
 bubble _ _ O
+
+
+ _ _ O
 ● _ _ O
 Both _ _ O
 are _ _ O
@@ -321,6 +405,9 @@ ways _ _ O
 to _ _ O
 predict _ _ O
 ! _ _ O
+
+
+ _ _ O
 5 _ _ O
 
 Types _ _ O
@@ -358,6 +445,9 @@ inaccuracy _ _ O
 of _ _ O
 compiler _ _ O
 predictions _ _ O
+
+
+ _ _ O
 ● _ _ O
 Dynamic _ _ O
 Branch _ _ O
@@ -556,6 +646,9 @@ to _ _ O
 limited _ _ O
 ) _ _ O
 entries _ _ O
+
+
+ _ _ O
 7 _ _ O
 
 The _ _ O
@@ -569,10 +662,19 @@ Hash _ _ O
 PC _ _ O
 : _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 = _ _ O
 = _ _ O
 ? _ _ O
+
+
+ _ _ O
 entry _ _ O
 = _ _ O
 Hash _ _ O
@@ -599,37 +701,112 @@ else _ _ O
 NextPC _ _ O
 = _ _ O
 PC+4 _ _ O
+
+
+ _ _ O
 # _ _ O
+
+
+ _ _ O
 Branch _ _ O
 PC _ _ O
+
+
+ _ _ O
 Pred _ _ O
 . _ _ O
+
+
+ _ _ O
 0 _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 1 _ _ O
 0x007FC60C _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 2 _ _ O
 0x007FA058 _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 4 _ _ O
 0x007FC380 _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
 ? _ _ O
+
+
+ _ _ O
 To _ _ O
 filter _ _ O
 out _ _ O
@@ -750,6 +927,9 @@ wait _ _ O
 until _ _ O
 ID _ _ O
 stage _ _ O
+
+
+ _ _ O
 ● _ _ O
 That _ _ O
 introduces _ _ O
@@ -758,6 +938,9 @@ bubble _ _ O
 for _ _ O
 taken _ _ O
 branches _ _ O
+
+
+ _ _ O
 9 _ _ O
 
 The _ _ O
@@ -775,6 +958,9 @@ target _ _ O
 for _ _ O
 each _ _ O
 branch _ _ O
+
+
+ _ _ O
 ● _ _ O
 BTB _ _ O
 is _ _ O
@@ -814,6 +1000,9 @@ target _ _ O
 to _ _ O
 be _ _ O
 decoded _ _ O
+
+
+ _ _ O
 10 _ _ O
 
 The _ _ O
@@ -827,10 +1016,19 @@ Hash _ _ O
 PC _ _ O
 : _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 = _ _ O
 = _ _ O
 ? _ _ O
+
+
+ _ _ O
 entry _ _ O
 = _ _ O
 Hash _ _ O
@@ -851,35 +1049,104 @@ else _ _ O
 NextPC _ _ O
 = _ _ O
 PC+4 _ _ O
+
+
+ _ _ O
 # _ _ O
+
+
+ _ _ O
 Branch _ _ O
 PC _ _ O
+
+
+ _ _ O
 Branch _ _ O
 Target _ _ O
+
+
+ _ _ O
 0 _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 0x007FA03C _ _ O
+
+
+ _ _ O
 1 _ _ O
 0x007FC60C _ _ O
+
+
+ _ _ O
 0x007FC704 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0x007FA058 _ _ O
+
+
+ _ _ O
 0x007FA040 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 4 _ _ O
 0x007FC380 _ _ O
+
+
+ _ _ O
 ... _ _ O
 0x007FC398 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 11 _ _ O
 
 BHT _ _ O
@@ -892,10 +1159,19 @@ Hash _ _ O
 PC _ _ O
 : _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 = _ _ O
 = _ _ O
 ? _ _ O
+
+
+ _ _ O
 entry _ _ O
 = _ _ O
 Hash _ _ O
@@ -922,45 +1198,144 @@ else _ _ O
 NextPC _ _ O
 = _ _ O
 PC+4 _ _ O
+
+
+ _ _ O
 # _ _ O
+
+
+ _ _ O
 Branch _ _ O
 PC _ _ O
+
+
+ _ _ O
 Pred _ _ O
 . _ _ O
+
+
+ _ _ O
 Branch _ _ O
 Target _ _ O
+
+
+ _ _ O
 0 _ _ O
 0x007FA004 _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 0x007FA03C _ _ O
+
+
+ _ _ O
 1 _ _ O
 0x007FC60C _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 0x007FC704 _ _ O
+
+
+ _ _ O
 2 _ _ O
 0x007FA058 _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 0x007FA040 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 4 _ _ O
 0x007FC380 _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 0x007FC398 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 12 _ _ O
 
 Branch _ _ O
@@ -985,42 +1360,81 @@ Instruction _ _ O
 memory _ _ O
 and _ _ O
 BTB _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 no _ _ O
 ID _ _ O
+
+
+ _ _ O
 no _ _ O
+
+
+ _ _ O
 Set _ _ O
 PC _ _ O
 = _ _ O
 PC+4 _ _ O
+
+
+ _ _ O
 Is _ _ O
 instruction _ _ O
 a _ _ O
 branch _ _ O
 ? _ _ O
+
+
+ _ _ O
 Normal _ _ O
 instruction _ _ O
 execution _ _ O
+
+
+ _ _ O
 Entry _ _ O
 found _ _ O
 in _ _ O
 BTB _ _ O
 ? _ _ O
+
+
+ _ _ O
 yes _ _ O
 Branch _ _ O
 taken _ _ O
 ? _ _ O
+
+
+ _ _ O
 no _ _ O
 Record _ _ O
 the _ _ O
 entry _ _ O
 in _ _ O
 BTB _ _ O
+
+
+ _ _ O
 yes _ _ O
+
+
+ _ _ O
 no _ _ O
 yes _ _ O
+
+
+ _ _ O
 Branch _ _ O
 predictor _ _ O
+
+
+ _ _ O
 Set _ _ O
 PC _ _ O
 = _ _ O
@@ -1028,10 +1442,16 @@ predicted _ _ O
 target _ _ O
 or _ _ O
 PC+4 _ _ O
+
+
+ _ _ O
 Prediction _ _ O
 was _ _ O
 correct _ _ O
 ? _ _ O
+
+
+ _ _ O
 1 _ _ O
 . _ _ O
 PC _ _ O
@@ -1054,34 +1474,73 @@ the _ _ O
 entry _ _ O
 in _ _ O
 BTB _ _ O
+
+
+ _ _ O
 condition _ _ O
 target _ _ O
 IF.Flush _ _ O
+
+
+ _ _ O
 M _ _ O
 u _ _ O
 x _ _ O
+
+
+ _ _ O
 PC _ _ O
 + _ _ O
 4 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 yes _ _ O
 Normal _ _ O
 instruction _ _ O
 execution _ _ O
+
+
+ _ _ O
 P _ _ O
 C _ _ O
+
+
+ _ _ O
 + _ _ O
+
+
+ _ _ O
 Registers _ _ O
+
+
+ _ _ O
 Instruction _ _ O
 memory _ _ O
+
+
+ _ _ O
 IF _ _ O
 / _ _ O
 ID _ _ O
+
+
+ _ _ O
 Immediate _ _ O
 constant _ _ O
+
+
+ _ _ O
 ID _ _ O
 / _ _ O
 EX _ _ O
+
+
+ _ _ O
 13 _ _ O
 
 Limitations _ _ O
@@ -1105,6 +1564,9 @@ a _ _ O
 good _ _ O
 decision _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 Take _ _ O
 a _ _ O
@@ -1167,34 +1629,121 @@ i _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 this _ _ O
 branch _ _ O
 is _ _ O
@@ -1210,6 +1759,9 @@ every _ _ O
 5 _ _ O
 branches _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 It _ _ O
 would _ _ O
@@ -1245,6 +1797,9 @@ do _ _ O
 n’t _ _ O
 flip _ _ O
 immediately _ _ O
+
+
+ _ _ O
 14 _ _ O
 
 2-bit _ _ O
@@ -1258,9 +1813,15 @@ of _ _ O
 2-bit _ _ O
 predictor _ _ O
 : _ _ O
+
+
+ _ _ O
 change _ _ O
 in _ _ O
 prediction _ _ O
+
+
+ _ _ O
 ● _ _ O
 Can _ _ O
 be _ _ O
@@ -1310,6 +1871,9 @@ our _ _ O
 previous _ _ O
 example _ _ O
 ? _ _ O
+
+
+ _ _ O
 ● _ _ O
 Our _ _ O
 previous _ _ O
@@ -1369,34 +1933,121 @@ i _ _ O
 ; _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 this _ _ O
 branch _ _ O
 is _ _ O
@@ -1413,6 +2064,9 @@ every _ _ O
 5 _ _ O
 branches _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Does _ _ O
 it _ _ O
@@ -1503,6 +2157,9 @@ j _ _ O
 { _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 You _ _ O
 get _ _ O
 the _ _ O
@@ -1513,33 +2170,117 @@ single _ _ O
 time _ _ O
 ! _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ● _ _ O
 And _ _ O
 a _ _ O
@@ -1571,6 +2312,9 @@ j _ _ O
 { _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 You _ _ O
 get _ _ O
 the _ _ O
@@ -1581,7 +2325,13 @@ other _ _ O
 time _ _ O
 ! _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 NT _ _ O
 NT _ _ O
 NT _ _ O
@@ -1594,20 +2344,65 @@ NT _ _ O
 NT _ _ O
 NT _ _ O
 NT _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 o _ _ O
 Would _ _ O
 a _ _ O
@@ -1729,6 +2524,9 @@ of _ _ O
 all _ _ O
 branches _ _ O
 ) _ _ O
+
+
+ _ _ O
 ● _ _ O
 Maintaining _ _ O
 longer _ _ O
@@ -1758,6 +2556,9 @@ maintained _ _ O
 at _ _ O
 all _ _ O
 times _ _ O
+
+
+ _ _ O
 18 _ _ O
 
 Local _ _ O
@@ -1798,6 +2599,9 @@ j _ _ O
 { _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Predict _ _ O
 with _ _ O
 branch _ _ O
@@ -1808,33 +2612,117 @@ local _ _ O
 branch _ _ O
 history _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ● _ _ O
 Local _ _ O
 branch _ _ O
@@ -1910,6 +2798,9 @@ T _ _ O
 Prediction _ _ O
 : _ _ O
 NT _ _ O
+
+
+ _ _ O
 19 _ _ O
 
 Local _ _ O
@@ -1950,6 +2841,9 @@ j _ _ O
 { _ _ O
 } _ _ O
 } _ _ O
+
+
+ _ _ O
 Predict _ _ O
 with _ _ O
 branch _ _ O
@@ -1960,33 +2854,117 @@ local _ _ O
 branch _ _ O
 history _ _ O
 Predicted _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 - _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 Actual _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 T _ _ O
+
+
+ _ _ O
 NT _ _ O
+
+
+ _ _ O
 ● _ _ O
 Local _ _ O
 branch _ _ O
@@ -2149,7 +3127,13 @@ j _ _ O
 ) _ _ O
 { _ _ O
 } _ _ O
+
+
+ _ _ O
 current _ _ O
+
+
+ _ _ O
 Knowing _ _ O
 result _ _ O
 of _ _ O
@@ -2166,6 +3150,9 @@ predicting _ _ O
 current _ _ O
 branch _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 This _ _ O
 is _ _ O
@@ -2179,6 +3166,9 @@ all _ _ O
 branches _ _ O
 ) _ _ O
 . _ _ O
+
+
+ _ _ O
 ● _ _ O
 Can _ _ O
 be _ _ O
@@ -2192,6 +3182,9 @@ n’t _ _ O
 capture _ _ O
 pattern _ _ O
 . _ _ O
+
+
+ _ _ O
 21 _ _ O
 
 Unified _ _ O
@@ -2307,12 +3300,21 @@ each _ _ O
 branch _ _ O
 PC _ _ O
 ) _ _ O
+
+
+ _ _ O
 22 _ _ O
 
 Correlating _ _ O
 Predictors _ _ O
 Hash _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 PC _ _ O
 # _ _ O
 Tags _ _ O
@@ -2354,6 +3356,9 @@ T _ _ O
 3 _ _ O
 ... _ _ O
 ... _ _ O
+
+
+ _ _ O
 Global _ _ O
 BHR _ _ O
 T _ _ O
@@ -2369,44 +3374,155 @@ T _ _ O
 NT _ _ O
 , _ _ O
 … _ _ O
+
+
+ _ _ O
 # _ _ O
+
+
+ _ _ O
 Tags _ _ O
+
+
+ _ _ O
 Pred _ _ O
 . _ _ O
+
+
+ _ _ O
 Branch _ _ O
 Target _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 PC+History _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 0x007FA03C _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 PC+History _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 0x007FC704 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 PC+History _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 0x007FA040 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 01 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 PC+History _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 0x007FC398 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 00 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 10 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 11 _ _ O
+
+
+ _ _ O
 ... _ _ O
+
+
+ _ _ O
 ● _ _ O
 Can _ _ O
 reach _ _ O
@@ -2480,6 +3596,9 @@ address _ _ O
 in _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 ● _ _ O
 Why _ _ O
 is _ _ O
@@ -2631,6 +3750,9 @@ Easy _ _ O
 jr _ _ O
 $ _ _ O
 ra _ _ O
+
+
+ _ _ O
 ● _ _ O
 On _ _ O
 misprediction _ _ O
@@ -2650,6 +3772,9 @@ is _ _ O
 for _ _ O
 prediction _ _ O
 anyway _ _ O
+
+
+ _ _ O
 40CC00 _ _ O
 46280C _ _ O
 4AB108 _ _ O
@@ -2659,6 +3784,9 @@ anyway _ _ O
 000000 _ _ O
 000000 _ _ O
 000000 _ _ O
+
+
+ _ _ O
 25 _ _ O
 
 Performance _ _ O
@@ -2678,6 +3806,9 @@ a _ _ O
 p _ _ O
 * _ _ O
 K _ _ O
+
+
+ _ _ O
 o _ _ O
 CPInch _ _ O
 : _ _ O
@@ -2712,6 +3843,9 @@ penalty _ _ O
 per _ _ O
 pipeline _ _ O
 flush _ _ O
+
+
+ _ _ O
 ● _ _ O
 With _ _ O
 deep _ _ O
@@ -2764,6 +3898,9 @@ CPInch _ _ O
 cycles _ _ O
 per _ _ O
 instruction _ _ O
+
+
+ _ _ O
 ● _ _ O
 If _ _ O
 , _ _ O
@@ -2803,6 +3940,9 @@ these _ _ O
 26 _ _ O
 
 Predication _ _ O
+
+
+ _ _ O
 27 _ _ O
 
 Branch _ _ O
@@ -2827,6 +3967,9 @@ is _ _ O
 hard _ _ O
 to _ _ O
 predict _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s1 _ _ O
@@ -2852,8 +3995,14 @@ s3 _ _ O
 + _ _ O
 s0 _ _ O
 ; _ _ O
+
+
+ _ _ O
 blt _ _ O
 li _ _ O
+
+
+ _ _ O
 s1 _ _ O
 , _ _ O
 0 _ _ O
@@ -2862,6 +4011,9 @@ top _ _ O
 s2 _ _ O
 , _ _ O
 0 _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
 add _ _ O
@@ -2882,9 +4034,18 @@ s0 _ _ O
 10 _ _ O
 , _ _ O
 top _ _ O
+
+
+ _ _ O
 Mispredict _ _ O
+
+
+ _ _ O
 Flush _ _ O
 ! _ _ O
+
+
+ _ _ O
 ● _ _ O
 On _ _ O
 a _ _ O
@@ -2971,6 +4132,9 @@ versions _ _ O
 for _ _ O
 all _ _ O
 instructions _ _ O
+
+
+ _ _ O
 ● _ _ O
 Example _ _ O
 of _ _ O
@@ -3032,6 +4196,9 @@ if _ _ O
 p1 _ _ O
 is _ _ O
 true _ _ O
+
+
+ _ _ O
 ● _ _ O
 Now _ _ O
 there _ _ O
@@ -3054,6 +4221,9 @@ converted _ _ O
 to _ _ O
 data _ _ O
 dependencies _ _ O
+
+
+ _ _ O
 29 _ _ O
 
 Code _ _ O
@@ -3066,6 +4236,9 @@ are _ _ O
 no _ _ O
 branches _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s1 _ _ O
@@ -3091,6 +4264,9 @@ s3 _ _ O
 + _ _ O
 s0 _ _ O
 ; _ _ O
+
+
+ _ _ O
 pge _ _ O
 p1 _ _ O
 , _ _ O
@@ -3123,6 +4299,9 @@ s0 _ _ O
 10 _ _ O
 , _ _ O
 top _ _ O
+
+
+ _ _ O
 ● _ _ O
 Drawback _ _ O
 : _ _ O
@@ -3194,36 +4373,99 @@ other _ _ O
 data _ _ O
 dependencies _ _ O
 Time _ _ O
+
+
+ _ _ O
 0 _ _ O
+
+
+ _ _ O
 1 _ _ O
+
+
+ _ _ O
 2 _ _ O
+
+
+ _ _ O
 3 _ _ O
+
+
+ _ _ O
 4 _ _ O
+
+
+ _ _ O
 pge _ _ O
 p1 _ _ O
 , _ _ O
 0 _ _ O
 , _ _ O
 s1 _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 IF _ _ O
+
+
+ _ _ O
 ID _ _ O
+
+
+ _ _ O
 EX _ _ O
+
+
+ _ _ O
 MEM _ _ O
+
+
+ _ _ O
 li.p _ _ O
 s2 _ _ O
 , _ _ O
 0 _ _ O
 , _ _ O
 p1 _ _ O
+
+
+ _ _ O
 5 _ _ O
+
+
+ _ _ O
 6 _ _ O
+
+
+ _ _ O
 7 _ _ O
+
+
+ _ _ O
 WB _ _ O
+
+
+ _ _ O
 ● _ _ O
 With _ _ O
 data _ _ O
@@ -3270,6 +4512,9 @@ instruction _ _ O
 more _ _ O
 freely _ _ O
 ! _ _ O
+
+
+ _ _ O
 if _ _ O
 ( _ _ O
 s1 _ _ O
@@ -3295,12 +4540,21 @@ s3 _ _ O
 + _ _ O
 s0 _ _ O
 ; _ _ O
+
+
+ _ _ O
 pge _ _ O
+
+
+ _ _ O
 p1 _ _ O
 , _ _ O
 0 _ _ O
 , _ _ O
 s1 _ _ O
+
+
+ _ _ O
 top _ _ O
 : _ _ O
 add _ _ O
@@ -3327,6 +4581,9 @@ s2 _ _ O
 0 _ _ O
 , _ _ O
 p1 _ _ O
+
+
+ _ _ O
 ● _ _ O
 Low-power _ _ O
 compiler-scheduled _ _ O
@@ -3351,6 +4608,9 @@ hard _ _ O
 to _ _ O
 predict _ _ O
 branches _ _ O
+
+
+ _ _ O
 ● _ _ O
 So _ _ O
 how _ _ O
