@@ -43,11 +43,13 @@ def get_course_data(data_path, do_merge=False):
 	sentences = dict()
 	labels = dict()
 	# for dir in Path(data_path).glob('*'):
+	print(Path(data_path).glob('**/*.json'))
 	for filename in Path(data_path).glob('**/*.json'):
 		path = filename
+		print(filename)
 		if os.path.isfile(path):
 			f = open(path)
-			#print(path, f)
+			print(path, f)
 			file_data = json.load(f)
 			course = file_data['course']
 			lec = file_data['lec']
@@ -82,8 +84,10 @@ def get_fs_data(data_path, do_merge=False):
 	sentences = dict()
 	labels = dict()
 	# for dir in Path(data_path).glob('*'):
+	print(Path(data_path).glob('**/*.json'))
 	for filename in Path(data_path).glob('**/*.json'):
 		path = filename
+		print(filename)
 		if os.path.isfile(path):
 			f = open(path)
 			#print(path, f)

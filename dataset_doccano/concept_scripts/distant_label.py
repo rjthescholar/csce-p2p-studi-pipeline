@@ -75,13 +75,10 @@ def label_json(json, text_in, concept_set_file, use_keyword_extraction=True, fil
 	if use_keyword_extraction:
 		keyword_set = get_keywords(text_in)
 		concept_set = concept_set.union(keyword_set)
-<<<<<<< HEAD
 	# for i in range(len(json)):
 	# 	json['data'][i]['word_labels'] = ['O' for label in json['data'][i]['word_labels']]
-=======
 	for i in range(len(json['data'])): # was: for i in range(len(json)):
 		json['data'][i]['word_labels'] = ['O' for label in json['data'][i]['word_labels']]
->>>>>>> 522ad8c391a24e35c5147f68184ea03f599c0536
 	for j, slides in enumerate(json['data']):
 		k = 0
 		for i in range(len(slides['sentence'])):

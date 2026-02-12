@@ -101,10 +101,16 @@ if __name__ == "__main__":
 	stats = {}
 	do_training = True
 	if do_training:
-		model = XLNetForTokenClassification.from_pretrained(args.model,
+		if args.model:
+			model = XLNetForTokenClassification.from_pretrained(args.model,
 													num_labels=len(id2label),
 													id2label=id2label,
 													label2id=label2id)
+		else:
+			model = XLNetForTokenClassification.from_pretrained('xlnet-base-cased',
+														num_labels=len(id2label),
+														id2label=id2label,
+														label2id=label2id)
 		model.to(device)
 		optimizer = torch.optim.Adam(params=model.parameters(), lr=LEARNING_RATE)
 
@@ -125,7 +131,7 @@ if __name__ == "__main__":
 			#print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
 
 			#bio_stats = classification_report([labels], [predictions], output_dict=True)
-			concept_stats = eval_concepts(model, test_course_block_loader[course])
+			concept_stats = eval_concepts_course(model, test_course_block_loader[course])
 			stats[course] = concept_stats
 
 		print("--------------- PER FILE ---------------")
@@ -133,7 +139,7 @@ if __name__ == "__main__":
 			print(f"== File: {file} ==")
 			_, labels, predictions, chunk_stats = valid(model, loader)
 			#print(sklmet.classification_report(labels, predictions, target_names=["B", "I", "O"]))
-			print(classification_report([labels], [predictions]))
+			#print(classification_report([labels], [predictions]))
 
 			#bio_stats = classification_report([labels], [predictions], output_dict=True)
 			concept_stats = eval_concepts(model, [test_file_loader[file]])

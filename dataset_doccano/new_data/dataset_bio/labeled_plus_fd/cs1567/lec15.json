@@ -12,8 +12,8 @@
                 "tkosiyat@cs.pitt.edu"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -21,7 +21,6 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -29,24 +28,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "Multiple",
                 "Processes",
                 "for",
@@ -83,6 +71,8 @@
                 "roscore"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -121,7 +111,6 @@
         },
         {
             "sentence": [
-                "",
                 "Terminal",
                 "2",
                 ":",
@@ -139,13 +128,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Terminal",
                 "3",
                 ":",
@@ -163,13 +150,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Terminal",
                 "4",
                 ":",
@@ -187,13 +172,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Terminal",
                 "5",
                 ":",
@@ -211,13 +194,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Terminal",
                 "6",
                 ":",
@@ -247,24 +228,13 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "Multiple",
                 "Processes",
                 "for",
@@ -272,6 +242,8 @@
                 "Application"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -281,7 +253,6 @@
         },
         {
             "sentence": [
-                "",
                 "ROS",
                 "allows",
                 "you",
@@ -376,13 +347,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -407,7 +377,6 @@
         },
         {
             "sentence": [
-                "",
                 "But",
                 "it",
                 "can",
@@ -435,13 +404,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -449,24 +416,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "<",
                 "launch",
@@ -474,16 +430,17 @@
                 "Tag"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "All",
                 "content",
                 "of",
@@ -525,15 +482,14 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -547,21 +503,18 @@
         },
         {
             "sentence": [
-                "",
                 "<",
                 "/launch",
                 ">"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "comment",
                 "must",
@@ -593,13 +546,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -607,24 +558,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "<",
                 "include",
@@ -632,16 +572,17 @@
                 "Tag"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "To",
                 "let",
                 "the",
@@ -692,24 +633,22 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
                 "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -718,9 +657,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -732,14 +671,14 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X"
+                "O",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "$",
                 "(",
@@ -808,9 +747,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -821,7 +759,6 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -829,24 +766,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "<",
                 "include",
@@ -903,11 +829,13 @@
                 "package.xml"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -961,17 +889,14 @@
         },
         {
             "sentence": [
-                "",
                 "v4l.launch"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Note",
                 "that",
                 "launch",
@@ -1023,10 +948,8 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1042,9 +965,10 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1054,8 +978,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1066,14 +990,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1081,24 +1004,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "<",
                 "node",
@@ -1146,40 +1058,31 @@
                 ">"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1188,14 +1091,24 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X"
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "name",
                 "indicates",
@@ -1267,13 +1180,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "pkg",
                 "indicates",
@@ -1309,13 +1220,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1323,24 +1232,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "<",
                 "node",
@@ -1463,11 +1361,13 @@
                 ">"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1480,9 +1380,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1491,8 +1391,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1512,8 +1412,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1531,8 +1431,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1550,8 +1450,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1567,8 +1467,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1580,14 +1480,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Notes",
                 ":",
                 "If",
@@ -1671,37 +1570,27 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
-                "File"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "File",
                 "The",
                 "launch",
                 "File"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
-                "X",
-                "X"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "To",
                 "use",
                 "the",
@@ -1718,9 +1607,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1729,7 +1617,6 @@
         },
         {
             "sentence": [
-                "",
                 "You",
                 "do",
                 "not",
@@ -1776,9 +1663,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1789,7 +1675,6 @@
         },
         {
             "sentence": [
-                "",
                 "You",
                 "only",
                 "need",
@@ -1844,14 +1729,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1859,25 +1742,18 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Launch",
                 "File"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X"
+                "B",
+                "I"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         }
     ]
 }

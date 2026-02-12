@@ -81,3 +81,32 @@ def eval_concepts(model, deck_loader_list):
   f1 = 2 * (p * r) / (p + r) if p + r > 0 else 0
   print(f"precision: {p}, recall: {r}, F1: {f1}")
   return {"concept_precision": p, "concept_recall": r, "concept_f1": f1}
+
+def eval_concepts_course(model, deck_loader_list):
+  tp, fp, fn = 0, 0, 0
+  inf_eng = inflect.engine()
+  concepts = set()
+  gold_concepts = set()
+  for deck_loader in deck_loader_list:
+    pred_ds = get_predictions(model, deck_loader)
+    concepts |= extract_concepts(pred_ds)
+    gold_concepts |= extract_concepts(pred_ds, gold=True)
+  print(f"unprocessed predicted concepts for file: {concepts}")
+  print(f"unprocessed actual concepts for file: {gold_concepts}")
+  concepts = {inf_eng.singular_noun(item.lower()) if (item[0:1].isalnum() and inf_eng.singular_noun(item.lower())) else item.lower() for item in concepts if len(item) > 0}
+  gold_concepts = {inf_eng.singular_noun(item.lower()) if (item[0:1].isalnum() and inf_eng.singular_noun(item.lower())) else item.lower() for item in gold_concepts if len(item) > 0}
+  print(f"predicted concepts for file: {concepts}")
+  print(f"actual concepts for file: {gold_concepts}")
+  fn_concepts = gold_concepts - concepts
+  tp_concepts = gold_concepts & concepts
+  fp_concepts = concepts - gold_concepts
+  print(f"TP: {tp_concepts};\n FP: {fp_concepts};\n FN: {fn_concepts}")
+  tp_c, fp_c, fn_c = eval_deck(concepts, gold_concepts)
+  tp += tp_c
+  fp += fp_c
+  fn += fn_c
+  p = tp / (tp + fp) if tp + fp > 0 else 0
+  r = tp / (tp + fn) if tp + fn > 0 else 0
+  f1 = 2 * (p * r) / (p + r) if p + r > 0 else 0
+  print(f"precision: {p}, recall: {r}, F1: {f1}")
+  return {"concept_precision": p, "concept_recall": r, "concept_f1": f1}

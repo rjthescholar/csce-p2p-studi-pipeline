@@ -5,6 +5,11 @@ from pathlib import Path
 import json
 import argparse
 
+def set_default(obj):
+    if isinstance(obj, set):
+        return list(obj)
+    raise TypeError
+
 def extract_concepts(dataset):
 	concepts=set()
 	concept=""
@@ -36,14 +41,23 @@ def extract_concepts(dataset):
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", help = "File Input", type=Path)
 parser.add_argument("-o", "--output", help = "File Output", type=Path)
+parser.add_argument("-l", "--list", help = "Is JSONL",  action='store_true')
 args = parser.parse_args(sys.argv[1:])
-
+concepts = []
 if args.file:
 	with open(args.file, 'rb') as f:
 		text = f.read()
 processed = json.loads(text)
-concepts = extract_concepts(processed)
+if args.list:
+	for i in processed:
+		concepts.append(extract_concepts(i))
+else:
+	concepts = extract_concepts(processed)
+
 print(concepts)
 if args.output:
 	with open(args.output, 'w') as f2:
-		f2.writelines(concepts)
+		if args.list:
+			f2.write(json.dumps(concepts, default=set_default))
+		else:
+			f2.writelines(concepts)

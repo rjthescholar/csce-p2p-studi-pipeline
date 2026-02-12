@@ -44,7 +44,7 @@ def tokenize_and_preserve_labels(sentence, text_labels, tokenizer):
 MAX_LEN = 512
 TRAIN_BATCH_SIZE = 4
 VALID_BATCH_SIZE = 2
-EPOCHS = 50
+EPOCHS = 5
 LEARNING_RATE = 1e-05
 MAX_GRAD_NORM = 10
 

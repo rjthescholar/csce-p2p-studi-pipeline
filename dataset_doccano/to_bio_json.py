@@ -14,11 +14,11 @@ def word_tokenize(tokens):
 def bio_stripped(string):
 	if string == 'O':
 		return 'O'
-	if string == 'B-Concept':
+	if string[0] == 'B':
 		return 'B'
-	if string == 'I-Concept':
+	if string[0] == 'I':
 		return 'I'
-	return 'X'
+	return string
 
 if __name__=="__main__":
 	parser = argparse.ArgumentParser()
@@ -32,16 +32,20 @@ if __name__=="__main__":
 			text = f.read()
 			line_text=text.split('\n')
 			segment, course, lec = line_text[0].split('|')
+			prev_row = 'x'
 			for row in line_text[1:]:
 				if row == '':
-					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
 				srow = row.split(' ')
 				if srow[0] == '-DOCSTART-':
-					#bio_list.append({"sentence": [], 'word_labels': []})
+					bio_list.append({"sentence": [], 'word_labels': []})
+					continue
+				if srow[0] == '':
+					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
 				bio_list[-1]['sentence'].append(srow[0])
 				bio_list[-1]['word_labels'].append(bio_stripped(srow[3]))
+				prev_row = row
 				
 	
 	if args.out:

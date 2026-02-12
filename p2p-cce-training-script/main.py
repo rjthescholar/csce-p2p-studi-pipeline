@@ -85,13 +85,15 @@ if __name__ == "__main__":
 	self_training_loader_1 = DataLoader(self_training_set_1, **train_params)
 	self_training_loader_2 = DataLoader(self_training_set_2, **train_params)
 	self_training_loader = DataLoader(self_training_set, **train_params)
-		
+
+	print(args)
 
 	if not (args.labeled_path or (args.test_path and args.train_path)):
 		parser.error("Neither labeled or test and train sets specified.")
 
 	if args.labeled_path:
 		sentences, labels = get_course_data(args.labeled_path, args.merge)
+		print(sentences)
 		course_list = [*sentences]
 		exclude = [(course_list[i], course_list[(i+1) % 7]) for i in range(len(course_list))]
 		if args.distant_path:
@@ -171,7 +173,7 @@ if __name__ == "__main__":
 		#The test dataset, but separated by file.
 		sentences, labels = get_fs_data(args.test_path, args.merge)
 		test_block_datasets = [pd.DataFrame(({'sentence': sentences[file], 'word_labels': labels[file]})) for file in sentences]
-
+		print(test_block_datasets)
 		# Prepare the train dataset.
 		sentences, labels = get_data(args.train_path, args.merge)
 		train_dataset = pd.DataFrame({'sentence': sentences, 'word_labels': labels})
@@ -257,7 +259,7 @@ if __name__ == "__main__":
 				save_path.parent.mkdir(exist_ok=True, parents=True)
 				model.save_pretrained(save_path)
 
-			print("=============== P2P MODEL TRAINING ================")
+			"""print("=============== P2P MODEL TRAINING ================")
 
 			model_1 = copy.deepcopy(model)
 			model_2 = copy.deepcopy(model)
@@ -319,11 +321,11 @@ if __name__ == "__main__":
 				save_path = args.out / timestamp_str / "p2p" / course_list[experiment_count]
 				save_path.parent.mkdir(exist_ok=True, parents=True)
 				model_best.save_pretrained(save_path)
-
+		"""
 
 	print("<============= FINAL EVALUATION ==================>")
 	print(stats)
-	print(p2p_stats)
+	#print(p2p_stats)
 
 
 

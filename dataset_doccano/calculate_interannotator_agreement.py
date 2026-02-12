@@ -19,9 +19,9 @@ def word_tokenize(tokens):
 def bio_to_num(string):
     if string == 'O':
         return 0
-    if string == 'B-Concept':
+    if string == 'B':
         return 1
-    if string == 'I-Concept':
+    if string == 'I':
         return 2
     return -1
 
@@ -29,13 +29,14 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", help = "File Folder Input", type=Path)
     args = parser.parse_args(sys.argv[1:])
-    files = Path(args.file).glob('**/*.json')
+    files = Path(args.file).glob('**/*.jsonl')
     labels = []
     for file in files:
         if file:
             with open(file, 'rb') as f:
                 text = f.read()
                 labels.append(json.loads(text))
+    print(labels)
     deck_indexed_labels = []
     flattened_labels = dict()
     for i in range(len(labels)):

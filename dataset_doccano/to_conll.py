@@ -31,7 +31,7 @@ nlp.tokenizer = custom_tokenizer(nlp)
 def word_tokenize(text):
     ignore_chars = ["\n", "\n\n"]
     tokenized = [token.text for token in nlp(text.replace("''", '"').replace("``", '"'))]
-    tokenized = list(filter(lambda x: not x.isspace(), tokenized))
+    tokenized = list(filter(lambda x: '\n\n' in x or not x.isspace(), tokenized))
     print(tokenized)
     return tokenized
 
@@ -49,5 +49,6 @@ if __name__=="__main__":
     with open(args.out, 'w') as f:
         f.write(f"{segment}|{course}|{lec}\n")
         for line in dataset.to_conll2003(tokenizer=word_tokenize):
-            f.write(line['data'] + "\n")
+            if line['data'] !=  '\n _ _ O':
+                f.write(line['data'] + "\n")
     

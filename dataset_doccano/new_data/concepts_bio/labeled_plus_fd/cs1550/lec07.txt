@@ -1,15 +1,15 @@
-signal
-down
-lock
-semaphore
-up
-wait
-broadcast
 semaphore-based
-consumer
+bounded buffer
+problem
+down
+broadcast
+up
+lock
+condition variable
 spinlock
 mutex
-condition variable
-bounded buffer
 producer
-problem
+semaphore
+signal
+wait
+consumer
