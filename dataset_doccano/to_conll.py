@@ -31,7 +31,7 @@ nlp.tokenizer = custom_tokenizer(nlp)
 def word_tokenize(text):
     ignore_chars = ["\n", "\n\n"]
     tokenized = [token.text for token in nlp(text.replace("''", '"').replace("``", '"'))]
-    tokenized = list(filter(lambda x: '\n\n' in x or not x.isspace(), tokenized))
+    tokenized = list(filter(lambda x: '\f' in x or not x.isspace(), tokenized))
     print(tokenized)
     return tokenized
 

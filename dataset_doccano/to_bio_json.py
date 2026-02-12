@@ -40,7 +40,7 @@ if __name__=="__main__":
 				if srow[0] == '-DOCSTART-':
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
-				if srow[0] == '':
+				if '\f' in srow[0]:
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
 				bio_list[-1]['sentence'].append(srow[0])
