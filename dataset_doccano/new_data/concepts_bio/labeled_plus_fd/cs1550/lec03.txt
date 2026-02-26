@@ -1,23 +1,23 @@
-non-critical section
+critical section
+priority inversion
+spinning
+counting semaphore
 atomic instruction
 spinlock
-wakeup
-memory barrier
 unlock
-testandset
+blocking
+down
+memory barrier
+wakeup
+non-critical section
+p
+semaphore
 lock
 up
-critical region
-critical section
-semaphore
-down
-spinning
 swap
-priority inversion
-blocking
-smp
-v
-counting semaphore
-p
 busy waiting
+smp
+testandset
 __sync_synchronize ()
+v
+critical region

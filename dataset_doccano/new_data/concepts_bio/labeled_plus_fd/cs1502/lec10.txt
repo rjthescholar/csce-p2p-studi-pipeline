@@ -1,18 +1,18 @@
-cross off symbols
-σ∗
+language b
+input string
+# symbol
 zig-zag across the tape
 x
-γ
-# →r
-reject
-language b
-x→r
-# symbol
-input string
-t
+σ
+0,1 → l
 1 → x,r
 turing machine
+reject
 accept
-0,1 → l
+# →r
+cross off symbols
+x→r
 qaccept
-σ
+t
+γ
+σ∗

@@ -1,12 +1,23 @@
-data.buttons
-buttons
-/joy
-joy node
-button
-"joy
+joystick
+type twist
+axis
+joy_node node
+axes
+command.angular.z
+topic joy
+robot
+topic
 twist
-testjoy
-kobuki_softnode
-joy_node
+button
+ros
+command.linear.x
+message
+type joy
+header
+kobuki robot
+joy node
+simulator
+buttons
+rviz
 joy
 kobuki
