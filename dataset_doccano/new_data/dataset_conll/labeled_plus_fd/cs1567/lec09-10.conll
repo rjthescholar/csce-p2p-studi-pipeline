@@ -1,8 +1,8 @@
-['train_set', 'labeled']|cs1567|lec09-10
+['train_set', 'labeled_plus_fd']|cs1567|lec09-10
 -DOCSTART- -X- -X- O
 
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -13,18 +13,18 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 
-Blob _ _ B-concept
+Blob _ _ B-Concept
 
 
  _ _ O
 A _ _ O
-blob _ _ B-concept
+blob _ _ B-Concept
 in _ _ O
-computer _ _ O
-vision _ _ O
+computer _ _ B-Concept
+vision _ _ I-Concept
 is _ _ O
 a _ _ O
 region _ _ O
@@ -60,12 +60,12 @@ color _ _ O
 by _ _ O
 simply _ _ O
 find _ _ O
-blobs _ _ B-concept
+blobs _ _ B-Concept
 of _ _ O
 that _ _ O
 color _ _ O
 A _ _ O
-blob _ _ B-concept
+blob _ _ B-Concept
 usually _ _ O
 defined _ _ O
 as _ _ O
@@ -75,9 +75,9 @@ region _ _ O
 with _ _ O
 information _ _ O
 : _ _ O
-Width _ _ B-concept
+Width _ _ O
 and _ _ O
-Height _ _ B-concept
+Height _ _ O
 Number _ _ O
 of _ _ O
 pixels _ _ O
@@ -96,14 +96,14 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 
 How _ _ O
 to _ _ O
 Detect _ _ O
 a _ _ O
-Blob _ _ B-concept
+Blob _ _ B-Concept
 ? _ _ O
 Consider _ _ O
 the _ _ O
@@ -129,10 +129,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 
-Filter _ _ B-concept
+Filter _ _ B-Concept
 Selected _ _ O
 Color _ _ O
 
@@ -142,8 +142,8 @@ Image _ _ O
 generally _ _ O
 comes _ _ O
 in _ _ O
-RGB _ _ O
-format _ _ O
+RGB _ _ B-Concept
+format _ _ I-Concept
 Each _ _ O
 pixel _ _ O
 is _ _ O
@@ -159,7 +159,7 @@ green _ _ O
 and _ _ O
 blue _ _ O
 To _ _ O
-filter _ _ B-concept
+filter _ _ B-Concept
 out _ _ O
 a _ _ O
 specific _ _ O
@@ -198,15 +198,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
+Blob _ _ O
 Detection _ _ O
 
 How _ _ O
 to _ _ O
 Detect _ _ O
 a _ _ O
-Blob _ _ B-concept
-Filter _ _ B-concept
+Blob _ _ B-Concept
+Filter _ _ B-Concept
 out _ _ O
 every _ _ O
 color _ _ O
@@ -220,17 +220,17 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 
 How _ _ O
 to _ _ O
 Detect _ _ O
 a _ _ O
-Blob _ _ B-concept
-Detect _ _ O
-connected _ _ O
-regions _ _ O
+Blob _ _ B-Concept
+Detect _ _ B-Concept
+connected _ _ I-Concept
+regions _ _ I-Concept
 
 
  _ _ O
@@ -239,10 +239,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Blob _ _ B-concept
-Detection _ _ O
+Blob _ _ B-Concept
+Detection _ _ I-Concept
 
-Filter _ _ B-concept
+Filter _ _ B-Concept
 Selected _ _ O
 Color _ _ O
 
@@ -270,19 +270,19 @@ have _ _ O
 more _ _ O
 brightness _ _ O
 In _ _ O
-computer _ _ O
-vision _ _ O
+computer _ _ B-Concept
+vision _ _ I-Concept
 , _ _ O
 we _ _ O
 prefer _ _ O
-YUV _ _ O
-format _ _ O
+YUV _ _ B-Concept
+format _ _ I-Concept
 : _ _ O
 Y _ _ O
 stands _ _ O
 for _ _ O
 the _ _ O
-luminance _ _ O
+luminance _ _ B-Concept
 component _ _ O
 ( _ _ O
 the _ _ O
@@ -293,7 +293,7 @@ and _ _ O
 V _ _ O
 are _ _ O
 the _ _ O
-chrominance _ _ O
+chrominance _ _ B-Concept
 ( _ _ O
 color _ _ O
 ) _ _ O
@@ -303,9 +303,9 @@ components _ _ O
  _ _ O
 Conversion _ _ O
 between _ _ O
-RGB _ _ O
+RGB _ _ B-Concept
 and _ _ O
-YUV _ _ O
+YUV _ _ B-Concept
 is _ _ O
 straightforward _ _ O
 : _ _ O
@@ -397,10 +397,10 @@ Problems _ _ O
 with _ _ O
 Blob _ _ O
 Detection _ _ O
-If _ _ B-concept
-we _ _ I-concept
-have _ _ O
-two _ _ O
+If _ _ B-Concept
+we _ _ I-Concept
+have _ _ I-Concept
+two _ _ I-Concept
 objects _ _ O
 with _ _ O
 the _ _ O
@@ -413,7 +413,7 @@ two _ _ O
 blobs _ _ O
 will _ _ O
 be _ _ O
-detected _ _ B-concept
+detected _ _ B-Concept
 If _ _ O
 we _ _ O
 have _ _ O
@@ -427,14 +427,14 @@ one _ _ O
 blobs _ _ O
 may _ _ O
 be _ _ O
-detected _ _ B-concept
+detected _ _ B-Concept
 Lighting _ _ O
-effects _ _ O
-color _ _ O
-Filtered _ _ O
-regions _ _ B-concept
-may _ _ I-concept
-not _ _ I-concept
+effects _ _ B-Concept
+color _ _ I-Concept
+Filtered _ _ I-Concept
+regions _ _ B-Concept
+may _ _ I-Concept
+not _ _ I-Concept
 connect _ _ O
 with _ _ O
 each _ _ O
@@ -445,16 +445,16 @@ more _ _ O
 blobs _ _ O
 but _ _ O
 on _ _ O
-the _ _ B-concept
-same _ _ I-concept
+the _ _ B-Concept
+same _ _ I-Concept
 object _ _ O
 If _ _ O
 all _ _ O
 blobs _ _ O
 come _ _ O
 from _ _ O
-the _ _ B-concept
-same _ _ I-concept
+the _ _ B-Concept
+same _ _ I-Concept
 object _ _ O
 , _ _ O
 they _ _ O
@@ -486,7 +486,7 @@ detected _ _ O
 if _ _ O
 lighting _ _ O
 change _ _ O
-Increase _ _ O
+Increase _ _ B-Concept
 the _ _ O
 range _ _ O
 of _ _ O
@@ -506,7 +506,7 @@ in _ _ O
 restricted _ _ O
 lighting _ _ O
 and _ _ O
-surrounding _ _ O
+surrounding _ _ B-Concept
 environment _ _ O
 has _ _ O
 small _ _ O
@@ -529,14 +529,14 @@ Applications _ _ O
 
  _ _ O
 Object _ _ O
-Recognition _ _ O
-and _ _ O
-Tracking _ _ O
-: _ _ O
-Soccer _ _ O
-: _ _ O
-Ball _ _ O
-and _ _ O
+Recognition _ _ B-Concept
+and _ _ I-Concept
+Tracking _ _ I-Concept
+: _ _ I-Concept
+Soccer _ _ I-Concept
+: _ _ I-Concept
+Ball _ _ I-Concept
+and _ _ I-Concept
 goal _ _ O
 posts _ _ O
 Navigation _ _ O
@@ -579,15 +579,15 @@ Detection _ _ O
 
 Integrated _ _ O
 Web _ _ O
-Camera _ _ O
-To _ _ O
-detect _ _ O
-blobs _ _ O
+Camera _ _ B-Concept
+To _ _ I-Concept
+detect _ _ I-Concept
+blobs _ _ I-Concept
 , _ _ O
 we _ _ O
 need _ _ O
-an _ _ B-concept
-image _ _ I-concept
+an _ _ B-Concept
+image _ _ I-Concept
 or _ _ O
 a _ _ O
 series _ _ O
@@ -598,11 +598,11 @@ will _ _ O
 use _ _ O
 integrated _ _ O
 Web _ _ O
-camera _ _ O
-of _ _ O
-your _ _ O
-given _ _ O
-laptop _ _ O
+camera _ _ B-Concept
+of _ _ I-Concept
+your _ _ I-Concept
+given _ _ I-Concept
+laptop _ _ I-Concept
 To _ _ O
 access _ _ O
 the _ _ O
@@ -610,21 +610,21 @@ web _ _ O
 cam _ _ O
 , _ _ O
 we _ _ O
-need _ _ O
-another _ _ O
+need _ _ B-Concept
+another _ _ I-Concept
 node _ _ O
 called _ _ O
 gscam _ _ O
 gscam _ _ O
-node _ _ B-concept
-communicate _ _ I-concept
-with _ _ O
+node _ _ B-Concept
+communicate _ _ I-Concept
+with _ _ B-Concept
 integrated _ _ O
 Web _ _ O
-cam _ _ O
-Capture _ _ O
-video _ _ O
-and _ _ O
+cam _ _ B-Concept
+Capture _ _ I-Concept
+video _ _ I-Concept
+and _ _ I-Concept
 turn _ _ O
 them _ _ O
 into _ _ O
@@ -643,28 +643,28 @@ topic _ _ O
 / _ _ O
 camera _ _ O
 / _ _ O
-image_raw _ _ O
+image_raw _ _ B-Concept
 
 
- _ _ O
-To _ _ O
-start _ _ O
-gscam _ _ O
+ _ _ I-Concept
+To _ _ I-Concept
+start _ _ I-Concept
+gscam _ _ I-Concept
 node _ _ O
 , _ _ O
 use _ _ O
-the _ _ O
-following _ _ O
+the _ _ B-Concept
+following _ _ I-Concept
 command _ _ O
 : _ _ O
 roslaunch _ _ O
 gscam _ _ O
-v4l.launch _ _ O
+v4l.launch _ _ B-Concept
 
 
- _ _ O
-A _ _ O
-series _ _ O
+ _ _ I-Concept
+A _ _ I-Concept
+series _ _ I-Concept
 of _ _ O
 images _ _ O
 can _ _ O
@@ -673,10 +673,10 @@ viewed _ _ O
 using _ _ O
 image_view _ _ O
 node _ _ O
-as _ _ O
-follows _ _ O
-: _ _ O
-rosrun _ _ O
+as _ _ B-Concept
+follows _ _ I-Concept
+: _ _ I-Concept
+rosrun _ _ I-Concept
 image_view _ _ O
 image_view _ _ O
 image _ _ O
@@ -701,14 +701,14 @@ Detection _ _ O
 
 Image _ _ O
 Message _ _ O
-Images _ _ O
-published _ _ O
-by _ _ O
-gscam _ _ O
+Images _ _ B-Concept
+published _ _ I-Concept
+by _ _ B-Concept
+gscam _ _ I-Concept
 node _ _ O
 has _ _ O
-type _ _ B-concept
-sensor_msg _ _ I-concept
+type _ _ B-Concept
+sensor_msg _ _ I-Concept
 / _ _ O
 Image.msgs _ _ O
 If _ _ O
@@ -730,67 +730,67 @@ Image _ _ O
 
  _ _ O
 The _ _ O
-Image _ _ O
-message _ _ O
-consists _ _ O
-of _ _ O
-the _ _ O
+Image _ _ B-Concept
+message _ _ I-Concept
+consists _ _ B-Concept
+of _ _ I-Concept
+the _ _ I-Concept
 following _ _ O
 components _ _ O
 : _ _ O
 header _ _ O
 : _ _ O
-Information _ _ B-concept
-about _ _ I-concept
+Information _ _ O
+about _ _ O
 message _ _ O
 height _ _ O
 : _ _ O
 Image _ _ O
-height _ _ B-concept
-( _ _ I-concept
+height _ _ O
+( _ _ O
 number _ _ O
-of _ _ B-concept
-rows _ _ I-concept
+of _ _ O
+rows _ _ O
 ) _ _ O
 width _ _ O
 : _ _ O
 Image _ _ O
-width _ _ B-concept
-( _ _ I-concept
+width _ _ O
+( _ _ O
 number _ _ O
-of _ _ B-concept
-columns _ _ I-concept
+of _ _ O
+columns _ _ O
 ) _ _ O
 encoding _ _ O
 : _ _ O
 Type _ _ O
-of _ _ B-concept
-encoding _ _ I-concept
-is_bigendian _ _ B-concept
-: _ _ I-concept
-Is _ _ I-concept
-this _ _ B-concept
-data _ _ I-concept
-bigendian _ _ I-concept
+of _ _ O
+encoding _ _ O
+is_bigendian _ _ O
+: _ _ O
+Is _ _ O
+this _ _ O
+data _ _ O
+bigendian _ _ O
 step _ _ O
 : _ _ O
 How _ _ O
 many _ _ O
-bytes _ _ B-concept
+bytes _ _ O
 in _ _ O
 a _ _ O
 row _ _ O
 data _ _ O
 : _ _ O
 A _ _ O
-one-dimensional _ _ B-concept
+one-dimensional _ _ O
 array _ _ O
 of _ _ O
 data _ _ O
 . _ _ O
 The _ _ O
-number _ _ B-concept
-of _ _ I-concept
+number _ _ O
+of _ _ O
 elements _ _ O
 is _ _ O
 step _ _ O
@@ -799,10 +799,10 @@ rows _ _ O
 ( _ _ O
 [ _ _ O
 B _ _ O
-, _ _ B-concept
-G _ _ I-concept
-, _ _ I-concept
-R _ _ I-concept
+, _ _ O
+G _ _ O
+, _ _ O
+R _ _ O
 , _ _ O
 B _ _ O
 , _ _ O
@@ -844,34 +844,34 @@ Image _ _ O
 from _ _ O
 Camera _ _ O
 using _ _ O
-OpenCV _ _ O
-We _ _ O
+OpenCV _ _ B-Concept
+We _ _ I-Concept
 can _ _ O
-create _ _ O
-our _ _ O
+create _ _ B-Concept
+our _ _ I-Concept
 own _ _ O
 image _ _ O
 viewer _ _ O
-from _ _ O
-camera _ _ O
-using _ _ O
-OpenCV _ _ O
-First _ _ O
+from _ _ B-Concept
+camera _ _ I-Concept
+using _ _ I-Concept
+OpenCV _ _ B-Concept
+First _ _ I-Concept
 , _ _ O
-we _ _ O
-need _ _ O
+we _ _ B-Concept
+need _ _ I-Concept
 to _ _ O
 convert _ _ O
 a _ _ O
 color _ _ O
 image _ _ O
-message _ _ O
-into _ _ O
-OpenCV _ _ O
-format _ _ O
-Then _ _ O
-, _ _ O
-simply _ _ O
+message _ _ B-Concept
+into _ _ I-Concept
+OpenCV _ _ I-Concept
+format _ _ I-Concept
+Then _ _ B-Concept
+, _ _ I-Concept
+simply _ _ I-Concept
 display _ _ O
 the _ _ O
 image _ _ O
@@ -913,13 +913,13 @@ data _ _ O
 ) _ _ O
 : _ _ O
 global _ _ O
-colorImage _ _ B-concept
+colorImage _ _ O
 , _ _ O
 isColorImageReady _ _ O
 colorImage _ _ O
 = _ _ O
 data _ _ O
-isColorImageReady _ _ B-concept
+isColorImageReady _ _ O
 = _ _ O
 True _ _ O
 
@@ -938,10 +938,10 @@ Image _ _ O
 from _ _ O
 Camera _ _ O
 using _ _ O
-OpenCV _ _ O
-Code _ _ O
-Example _ _ O
-( _ _ O
+OpenCV _ _ B-Concept
+Code _ _ I-Concept
+Example _ _ B-Concept
+( _ _ I-Concept
 continue _ _ O
 ) _ _ O
 : _ _ O
@@ -1091,13 +1091,13 @@ Node _ _ O
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ O
-detects _ _ B-concept
-blobs _ _ I-concept
+cmvision _ _ B-Concept
+node _ _ I-Concept
+detects _ _ O
+blobs _ _ O
 of _ _ O
 colors _ _ O
-from _ _ B-concept
+from _ _ O
 Image _ _ O
 message _ _ O
 Subscribes _ _ O
@@ -1138,7 +1138,7 @@ about _ _ O
 blobs _ _ O
 to _ _ O
 be _ _ O
-detected _ _ B-concept
+detected _ _ O
 Publishes _ _ O
 information _ _ O
 about _ _ O
@@ -1146,22 +1146,22 @@ detect _ _ O
 blobs _ _ O
 on _ _ O
 the _ _ O
-topic _ _ B-concept
-/blobs _ _ I-concept
+topic _ _ O
+/blobs _ _ O
 
 
  _ _ O
 cmvision _ _ O
-package _ _ B-concept
-also _ _ I-concept
-supplies _ _ I-concept
+package _ _ O
+also _ _ O
+supplies _ _ O
 a _ _ O
 tool _ _ O
 named _ _ O
 colorgui _ _ O
 Allows _ _ O
-user _ _ B-concept
-to _ _ I-concept
+user _ _ O
+to _ _ O
 pick _ _ O
 a _ _ O
 range _ _ O
@@ -1178,8 +1178,8 @@ image _ _ O
 of _ _ O
 detect _ _ O
 blobs _ _ O
-associated _ _ B-concept
-with _ _ I-concept
+associated _ _ O
+with _ _ O
 picked _ _ O
 color _ _ O
 Supplies _ _ O
@@ -1202,38 +1202,38 @@ colorgui _ _ O
 
 
  _ _ O
-Before _ _ B-concept
-running _ _ I-concept
+Before _ _ B-Concept
+running _ _ I-Concept
 colorgui _ _ O
 node _ _ O
 , _ _ O
-make _ _ B-concept
-sure _ _ I-concept
-your _ _ O
+make _ _ B-Concept
+sure _ _ I-Concept
+your _ _ I-Concept
 roscore _ _ O
 and _ _ O
-gscam _ _ O
-is _ _ O
-running _ _ B-concept
-To _ _ I-concept
-run _ _ I-concept
+gscam _ _ B-Concept
+is _ _ I-Concept
+running _ _ I-Concept
+To _ _ B-Concept
+run _ _ I-Concept
 colorgui _ _ O
 , _ _ O
 use _ _ O
-the _ _ B-concept
-following _ _ I-concept
+the _ _ B-Concept
+following _ _ I-Concept
 command _ _ O
 : _ _ O
 rosrun _ _ O
 cmvision _ _ O
-colorgui _ _ B-concept
-image _ _ I-concept
-: _ _ I-concept
-= _ _ B-concept
-/ _ _ I-concept
-v4l _ _ I-concept
-/ _ _ I-concept
-camera _ _ I-concept
+colorgui _ _ B-Concept
+image _ _ I-Concept
+: _ _ I-Concept
+= _ _ B-Concept
+/ _ _ I-Concept
+v4l _ _ I-Concept
+/ _ _ I-Concept
+camera _ _ I-Concept
 / _ _ O
 image_raw _ _ O
 
@@ -1247,17 +1247,17 @@ in _ _ O
 topic _ _ O
 /v4l _ _ O
 / _ _ O
-camera _ _ O
-/ _ _ O
-image_raw _ _ O
-is _ _ O
-published _ _ O
-by _ _ O
+camera _ _ B-Concept
+/ _ _ I-Concept
+image_raw _ _ I-Concept
+is _ _ I-Concept
+published _ _ I-Concept
+by _ _ I-Concept
 gscam _ _ O
 node _ _ O
 A _ _ O
-windows _ _ B-concept
-will _ _ O
+windows _ _ B-Concept
+will _ _ I-Concept
 pop-up _ _ O
 and _ _ O
 shows _ _ O
@@ -1269,8 +1269,8 @@ camera _ _ O
 
 
  _ _ O
-Thumrongsak _ _ O
-Kosiyatrakul _ _ O
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
 
 
  _ _ O
@@ -1282,7 +1282,7 @@ colorgui _ _ O
 
  _ _ O
 After _ _ O
-clicking _ _ B-concept
+clicking _ _ B-Concept
 on _ _ O
 the _ _ O
 object _ _ O
@@ -1306,8 +1306,8 @@ a _ _ O
 detected _ _ O
 blob _ _ O
 Move _ _ O
-object _ _ B-concept
-around _ _ I-concept
+object _ _ B-Concept
+around _ _ I-Concept
 to _ _ O
 see _ _ O
 whether _ _ O
@@ -1345,8 +1345,8 @@ YUV _ _ O
 ) _ _ O
 will _ _ O
 be _ _ O
-use _ _ O
-to _ _ O
+use _ _ B-Concept
+to _ _ I-Concept
 set _ _ O
 the _ _ O
 color _ _ O
@@ -1365,9 +1365,9 @@ Blob _ _ O
 Detection _ _ O
 
 colorgui _ _ O
-Example _ _ B-concept
-First _ _ I-concept
-couple _ _ I-concept
+Example _ _ B-Concept
+First _ _ I-Concept
+couple _ _ I-Concept
 clicks _ _ O
 
 
@@ -1381,8 +1381,8 @@ Blob _ _ O
 Detection _ _ O
 
 colorgui _ _ O
-Example _ _ B-concept
-Couple _ _ I-concept
+Example _ _ B-Concept
+Couple _ _ I-Concept
 more _ _ O
 clicks _ _ O
 around _ _ O
@@ -1401,8 +1401,8 @@ Blob _ _ O
 Detection _ _ O
 
 colorgui _ _ O
-Example _ _ B-concept
-Couple _ _ I-concept
+Example _ _ B-Concept
+Couple _ _ I-Concept
 more _ _ O
 and _ _ O
 take _ _ O
@@ -1414,8 +1414,8 @@ YUV _ _ O
 
 
  _ _ O
-Thumrongsak _ _ O
-Kosiyatrakul _ _ O
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ B-Concept
 
 
  _ _ O
@@ -1424,11 +1424,11 @@ Detection _ _ O
 
 colors.txt _ _ O
 For _ _ O
-cmvision _ _ O
-node _ _ O
+cmvision _ _ B-Concept
+node _ _ I-Concept
 , _ _ O
-color _ _ B-concept
-information _ _ I-concept
+color _ _ B-Concept
+information _ _ I-Concept
 should _ _ O
 be _ _ O
 stored _ _ O
@@ -1448,11 +1448,11 @@ file _ _ O
 is _ _ O
 colors.txt _ _ O
 A _ _ O
-color _ _ O
-file _ _ O
-consists _ _ O
-of _ _ O
-two _ _ O
+color _ _ B-Concept
+file _ _ I-Concept
+consists _ _ I-Concept
+of _ _ B-Concept
+two _ _ I-Concept
 parts _ _ O
 [ _ _ O
 colors _ _ O
@@ -1462,8 +1462,8 @@ and _ _ O
 thresholds _ _ O
 ] _ _ O
 as _ _ O
-shown _ _ O
-below _ _ O
+shown _ _ B-Concept
+below _ _ I-Concept
 : _ _ O
 [ _ _ O
 colors _ _ O
@@ -1482,12 +1482,12 @@ BrightGreen _ _ O
 thresholds _ _ O
 ] _ _ O
 ( _ _ O
-151 _ _ O
-: _ _ O
-163 _ _ O
-, _ _ O
-85 _ _ O
-: _ _ O
+151 _ _ B-Concept
+: _ _ I-Concept
+163 _ _ I-Concept
+, _ _ I-Concept
+85 _ _ I-Concept
+: _ _ I-Concept
 91 _ _ O
 , _ _ O
 121 _ _ O
@@ -1499,10 +1499,10 @@ thresholds _ _ O
  _ _ O
 cmvision _ _ O
 node _ _ O
-can _ _ B-concept
-be _ _ I-concept
-used _ _ I-concept
-to _ _ O
+can _ _ B-Concept
+be _ _ I-Concept
+used _ _ I-Concept
+to _ _ I-Concept
 detect _ _ O
 more _ _ O
 than _ _ O
@@ -1521,10 +1521,10 @@ and _ _ O
 thresholds _ _ O
 ] _ _ O
 [ _ _ O
-colors _ _ O
-] _ _ O
-( _ _ O
-150 _ _ O
+colors _ _ B-Concept
+] _ _ I-Concept
+( _ _ I-Concept
+150 _ _ I-Concept
 , _ _ O
 166 _ _ O
 , _ _ O
@@ -1547,12 +1547,12 @@ Green _ _ O
 thresholds _ _ O
 ] _ _ O
 ( _ _ O
-151 _ _ O
-: _ _ O
-163 _ _ O
-, _ _ O
-85 _ _ O
-: _ _ O
+151 _ _ B-Concept
+: _ _ I-Concept
+163 _ _ I-Concept
+, _ _ I-Concept
+85 _ _ I-Concept
+: _ _ I-Concept
 91 _ _ O
 , _ _ O
 121 _ _ O
@@ -1581,17 +1581,17 @@ Blob _ _ O
 Detection _ _ O
 
 colors.txt _ _ O
-Consider _ _ O
-the _ _ O
-following _ _ O
+Consider _ _ B-Concept
+the _ _ I-Concept
+following _ _ I-Concept
 color _ _ O
 file _ _ O
 : _ _ O
 [ _ _ O
-colors _ _ O
-] _ _ O
-( _ _ O
-150 _ _ O
+colors _ _ B-Concept
+] _ _ I-Concept
+( _ _ I-Concept
+150 _ _ I-Concept
 , _ _ O
 166 _ _ O
 , _ _ O
@@ -1614,12 +1614,12 @@ Green _ _ O
 thresholds _ _ O
 ] _ _ O
 ( _ _ O
-151 _ _ O
-: _ _ O
-163 _ _ O
-, _ _ O
-85 _ _ O
-: _ _ O
+151 _ _ B-Concept
+: _ _ I-Concept
+163 _ _ I-Concept
+, _ _ I-Concept
+85 _ _ I-Concept
+: _ _ I-Concept
 91 _ _ O
 , _ _ O
 121 _ _ O
@@ -1677,7 +1677,7 @@ used _ _ O
 to _ _ O
 blob _ _ O
 region _ _ O
-0.000000 _ _ B-concept
+0.000000 _ _ B-Concept
 : _ _ O
 Not _ _ O
 being _ _ O
@@ -1708,8 +1708,8 @@ the _ _ O
 blob _ _ O
 which _ _ O
 can _ _ O
-be _ _ B-concept
-used _ _ I-concept
+be _ _ B-Concept
+used _ _ I-Concept
 to _ _ O
 distinguish _ _ O
 among _ _ O
@@ -1719,8 +1719,8 @@ blobs _ _ O
 
 
  _ _ O
-Thumrongsak _ _ B-concept
-Kosiyatrakul _ _ I-concept
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
 
 
  _ _ O
@@ -1731,17 +1731,17 @@ colors.txt _ _ O
 
 
  _ _ O
-Consider _ _ O
-the _ _ O
-following _ _ O
+Consider _ _ B-Concept
+the _ _ I-Concept
+following _ _ I-Concept
 color _ _ O
 file _ _ O
 : _ _ O
 [ _ _ O
-colors _ _ O
-] _ _ O
-( _ _ O
-150 _ _ O
+colors _ _ B-Concept
+] _ _ I-Concept
+( _ _ I-Concept
+150 _ _ I-Concept
 , _ _ O
 166 _ _ O
 , _ _ O
@@ -1764,12 +1764,12 @@ Green _ _ O
 thresholds _ _ O
 ] _ _ O
 ( _ _ O
-151 _ _ O
-: _ _ O
-163 _ _ O
-, _ _ O
-85 _ _ O
-: _ _ O
+151 _ _ B-Concept
+: _ _ I-Concept
+163 _ _ I-Concept
+, _ _ I-Concept
+85 _ _ I-Concept
+: _ _ I-Concept
 91 _ _ O
 , _ _ O
 121 _ _ O
@@ -1798,9 +1798,9 @@ under _ _ O
 [ _ _ O
 thresholds _ _ O
 ] _ _ O
-consists _ _ O
-of _ _ O
-the _ _ O
+consists _ _ B-Concept
+of _ _ I-Concept
+the _ _ I-Concept
 following _ _ O
 : _ _ O
 ( _ _ O
@@ -1820,14 +1820,14 @@ maxV _ _ O
 The _ _ O
 YUV _ _ O
 threshold _ _ O
-from _ _ O
-colorgui _ _ O
+from _ _ B-Concept
+colorgui _ _ B-Concept
 
 
- _ _ O
+ _ _ I-Concept
 Note _ _ O
-that _ _ B-concept
-the _ _ I-concept
+that _ _ B-Concept
+the _ _ I-Concept
 first _ _ O
 line _ _ O
 of _ _ O
@@ -1856,13 +1856,13 @@ Blob _ _ O
 Detection _ _ O
 
 cmvision.launch _ _ O
-Parameters _ _ B-concept
-of _ _ O
-cmvision _ _ O
+Parameters _ _ B-Concept
+of _ _ I-Concept
+cmvision _ _ I-Concept
 are _ _ O
-needed _ _ B-concept
-to _ _ I-concept
-be _ _ I-concept
+needed _ _ B-Concept
+to _ _ I-Concept
+be _ _ I-Concept
 set _ _ O
 First _ _ O
 , _ _ O
@@ -1882,12 +1882,12 @@ src _ _ O
 / _ _ O
 cmvision _ _ O
 / _ _ O
-cmvision.launch _ _ B-concept
+cmvision.launch _ _ O
 
 
- _ _ B-concept
-to _ _ I-concept
-your _ _ I-concept
+ _ _ O
+to _ _ O
+your _ _ O
 .. _ _ O
 /mypackage _ _ O
 directory _ _ O
@@ -1904,10 +1904,10 @@ Under _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-color_file _ _ B-concept
-" _ _ I-concept
-, _ _ I-concept
-change _ _ I-concept
+color_file _ _ O
+" _ _ O
+, _ _ O
+change _ _ O
 its _ _ O
 value _ _ O
 to _ _ O
@@ -1933,8 +1933,8 @@ you _ _ O
 put _ _ O
 colors.txt _ _ O
 in _ _ O
-different _ _ O
-directory _ _ O
+different _ _ B-Concept
+directory _ _ I-Concept
 , _ _ O
 adjust _ _ O
 it _ _ O
@@ -1943,10 +1943,10 @@ Under _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-debug_on _ _ B-concept
-" _ _ I-concept
-, _ _ I-concept
-change _ _ I-concept
+debug_on _ _ O
+" _ _ O
+, _ _ O
+change _ _ O
 the _ _ O
 value _ _ O
 to _ _ O
@@ -1964,8 +1964,8 @@ blobs _ _ O
 while _ _ O
 cmvision _ _ O
 is _ _ O
-running _ _ B-concept
-value="false _ _ I-concept
+running _ _ B-Concept
+value="false _ _ I-Concept
 " _ _ O
 otherwise _ _ O
 
@@ -1975,9 +1975,9 @@ Under _ _ O
 node _ _ O
 name="cmvision _ _ O
 " _ _ O
-change _ _ B-concept
-the _ _ I-concept
-args _ _ I-concept
+change _ _ B-Concept
+the _ _ I-Concept
+args _ _ I-Concept
 to _ _ O
 args="image _ _ O
 : _ _ O
@@ -1998,11 +1998,11 @@ Blob _ _ O
 Detection _ _ O
 
 cmvision.launch _ _ O
-Your _ _ B-concept
-cmvision.launch _ _ I-concept
-should _ _ B-concept
-look _ _ I-concept
-like _ _ O
+Your _ _ B-Concept
+cmvision.launch _ _ I-Concept
+should _ _ B-Concept
+look _ _ I-Concept
+like _ _ I-Concept
 the _ _ O
 following _ _ O
 : _ _ O
@@ -2024,9 +2024,9 @@ file _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-color_file _ _ B-concept
-" _ _ I-concept
-type="string _ _ I-concept
+color_file _ _ O
+" _ _ O
+type="string _ _ O
 " _ _ O
 value=" _ _ O
 / _ _ O
@@ -2059,9 +2059,9 @@ off _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-debug_on _ _ B-concept
-" _ _ I-concept
-type="bool _ _ I-concept
+debug_on _ _ O
+" _ _ O
+type="bool _ _ O
 " _ _ O
 value="true" _ _ O
 / _ _ O
@@ -2081,9 +2081,9 @@ off _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-color_cal_on _ _ B-concept
-" _ _ I-concept
-type="bool _ _ I-concept
+color_cal_on _ _ O
+" _ _ O
+type="bool _ _ O
 " _ _ O
 value="false" _ _ O
 / _ _ O
@@ -2101,8 +2101,8 @@ filtering _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-mean_shift_on _ _ B-concept
-" _ _ I-concept
+mean_shift_on _ _ O
+" _ _ O
 type="bool _ _ O
 " _ _ O
 value="false" _ _ O
@@ -2124,7 +2124,7 @@ image _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-spatial_radius_pix _ _ B-concept
+spatial_radius_pix _ _ O
 " _ _ O
 type="double _ _ O
 " _ _ O
@@ -2146,7 +2146,7 @@ image-- _ _ O
 param _ _ O
 name="cmvision _ _ O
 / _ _ O
-color_radius_pix _ _ B-concept
+color_radius_pix _ _ O
 " _ _ O
 type="double _ _ O
 " _ _ O
@@ -2157,7 +2157,7 @@ value="40.0" _ _ O
 node _ _ O
 name="cmvision _ _ O
 " _ _ O
-pkg="cmvision _ _ B-concept
+pkg="cmvision _ _ O
 " _ _ O
 type="cmvision _ _ O
 " _ _ O
@@ -2193,9 +2193,9 @@ Blobs.msgs _ _ O
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ O
-publishes _ _ B-concept
+cmvision _ _ B-Concept
+node _ _ I-Concept
+publishes _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
@@ -2203,77 +2203,77 @@ type _ _ O
 Blobs _ _ O
 Again _ _ O
 , _ _ O
-import _ _ B-concept
-it _ _ I-concept
+import _ _ O
+it _ _ O
 first _ _ O
 : _ _ O
 from _ _ O
 cmvision.msg _ _ O
-import _ _ B-concept
-Blobs _ _ I-concept
+import _ _ O
+Blobs _ _ O
 
 
  _ _ O
 A _ _ O
-message _ _ B-concept
-of _ _ I-concept
-type _ _ I-concept
+message _ _ O
+of _ _ O
+type _ _ O
 Blobs _ _ O
 consists _ _ O
-of _ _ B-concept
-various _ _ I-concept
+of _ _ O
+various _ _ O
 components _ _ O
 : _ _ O
 header _ _ O
 : _ _ O
 Message _ _ O
-header _ _ B-concept
+header _ _ O
 image_width _ _ O
 : _ _ O
-The _ _ B-concept
-width _ _ I-concept
-of _ _ I-concept
-the _ _ I-concept
-image _ _ B-concept
-in _ _ I-concept
+The _ _ O
+width _ _ O
+of _ _ O
+the _ _ O
+image _ _ O
+in _ _ O
 pixels _ _ O
 image_height _ _ O
 : _ _ O
-The _ _ B-concept
-height _ _ I-concept
-of _ _ I-concept
+The _ _ O
+height _ _ O
+of _ _ O
 the _ _ O
-image _ _ B-concept
-in _ _ I-concept
+image _ _ O
+in _ _ O
 pixels _ _ O
 blob_count _ _ O
 : _ _ O
 The _ _ O
-number _ _ B-concept
+number _ _ O
 of _ _ O
 detected _ _ O
 blobs _ _ O
 blobs _ _ O
 : _ _ O
 An _ _ O
-array _ _ B-concept
-of _ _ B-concept
-data _ _ I-concept
+array _ _ O
+of _ _ O
+data _ _ O
 of _ _ O
 type _ _ O
-Blob _ _ B-concept
+Blob _ _ O
 
 
- _ _ I-concept
+ _ _ O
 Note _ _ O
 : _ _ O
-Blob _ _ B-concept
-( _ _ I-concept
-with _ _ I-concept
+Blob _ _ O
+( _ _ O
+with _ _ O
 out _ _ O
-s _ _ B-concept
-) _ _ I-concept
-is _ _ I-concept
+s _ _ O
+) _ _ O
+is _ _ O
 another _ _ O
 type _ _ O
 of _ _ O
@@ -2290,38 +2290,38 @@ Blob _ _ O
 Detection _ _ O
 
 Blob.msgs _ _ O
-Blob.msgs _ _ B-concept
-stores _ _ O
-information _ _ B-concept
+Blob.msgs _ _ B-Concept
+stores _ _ I-Concept
+information _ _ B-Concept
 about _ _ O
 each _ _ O
 blob _ _ O
 detected _ _ O
-by _ _ B-concept
-cmvision _ _ I-concept
+by _ _ B-Concept
+cmvision _ _ I-Concept
 node _ _ O
-Must _ _ B-concept
-be _ _ I-concept
-explicitly _ _ I-concept
+Must _ _ B-Concept
+be _ _ I-Concept
+explicitly _ _ I-Concept
 imported _ _ O
 : _ _ O
 from _ _ O
 cmvision.msg _ _ O
-import _ _ B-concept
-Blobs _ _ I-concept
+import _ _ O
+Blobs _ _ O
 , _ _ O
 Blob _ _ O
 
 
  _ _ O
 A _ _ O
-message _ _ B-concept
-of _ _ B-concept
-type _ _ I-concept
+message _ _ B-Concept
+of _ _ B-Concept
+type _ _ I-Concept
 Blob _ _ O
 consists _ _ O
-of _ _ B-concept
-various _ _ I-concept
+of _ _ B-Concept
+various _ _ I-Concept
 components _ _ O
 : _ _ O
 name _ _ O
@@ -2336,11 +2336,11 @@ specified _ _ O
 in _ _ O
 colors.txt _ _ O
 ( _ _ O
-String _ _ O
-) _ _ O
-red _ _ O
-: _ _ O
-The _ _ O
+String _ _ B-Concept
+) _ _ I-Concept
+red _ _ I-Concept
+: _ _ I-Concept
+The _ _ I-Concept
 value _ _ O
 of _ _ O
 red _ _ O
@@ -2366,7 +2366,7 @@ blob _ _ O
 ( _ _ O
 number _ _ O
 of _ _ O
-pixels _ _ B-concept
+pixels _ _ O
 ) _ _ O
 x _ _ O
 : _ _ O
@@ -2383,7 +2383,7 @@ y _ _ O
 : _ _ O
 The _ _ O
 y _ _ O
-coordinate _ _ B-concept
+coordinate _ _ O
 of _ _ O
 the _ _ O
 center _ _ O
@@ -2393,8 +2393,8 @@ blob _ _ O
 left _ _ O
 : _ _ O
 The _ _ O
-x _ _ B-concept
-coordinate _ _ I-concept
+x _ _ O
+coordinate _ _ O
 of _ _ O
 the _ _ O
 left _ _ O
@@ -2454,12 +2454,12 @@ Blob.msgs _ _ O
 ) _ _ O
 
 
- _ _ B-concept
-left _ _ I-concept
+ _ _ B-Concept
+left _ _ I-Concept
 
 
- _ _ O
-right _ _ O
+ _ _ I-Concept
+right _ _ I-Concept
 
 
  _ _ O
@@ -2487,7 +2487,7 @@ image _ _ O
 
 
  _ _ O
-Thumrongsak _ _ B-concept
+Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
@@ -2505,7 +2505,7 @@ How _ _ O
 to _ _ O
 filter _ _ O
 out _ _ O
-environment _ _ B-concept
+environment _ _ B-Concept
 ? _ _ O
 How _ _ O
 do _ _ O
@@ -2518,8 +2518,8 @@ more _ _ O
 blobs _ _ O
 are _ _ O
 on _ _ O
-the _ _ B-concept
-same _ _ I-concept
+the _ _ B-Concept
+same _ _ I-Concept
 object _ _ O
 ? _ _ O
 Fixed _ _ O
@@ -2540,8 +2540,8 @@ these _ _ O
 blobs _ _ O
 are _ _ O
 on _ _ O
-the _ _ B-concept
-same _ _ I-concept
+the _ _ B-Concept
+same _ _ I-Concept
 object _ _ O
 , _ _ O
 how _ _ O
@@ -2573,13 +2573,13 @@ How _ _ O
 to _ _ O
 filter _ _ O
 out _ _ O
-noise _ _ B-concept
-from _ _ I-concept
-camera _ _ O
-? _ _ O
+noise _ _ B-Concept
+from _ _ I-Concept
+camera _ _ B-Concept
+? _ _ I-Concept
 
 
- _ _ O
+ _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -2591,30 +2591,30 @@ Detection _ _ O
 Visualize _ _ O
 Blobs _ _ O
 using _ _ O
-OpenCV _ _ O
+OpenCV _ _ B-Concept
 
 
- _ _ O
-Sometimes _ _ O
-we _ _ O
-need _ _ O
+ _ _ I-Concept
+Sometimes _ _ B-Concept
+we _ _ I-Concept
+need _ _ I-Concept
 to _ _ O
 process _ _ O
 blobs _ _ O
 : _ _ O
 Filter _ _ O
-out _ _ B-concept
-blobs _ _ I-concept
-that _ _ B-concept
+out _ _ B-Concept
+blobs _ _ I-Concept
+that _ _ B-Concept
 are _ _ O
-too _ _ B-concept
-smalls _ _ I-concept
+too _ _ B-Concept
+smalls _ _ I-Concept
 Filter _ _ O
 out _ _ O
-blobs _ _ B-concept
-that _ _ I-concept
+blobs _ _ B-Concept
+that _ _ I-Concept
 are _ _ O
-outside _ _ B-concept
+outside _ _ B-Concept
 of _ _ O
 region _ _ O
 of _ _ O
@@ -2627,9 +2627,9 @@ to _ _ O
 one _ _ O
 
 
- _ _ B-concept
-We _ _ I-concept
-may _ _ I-concept
+ _ _ B-Concept
+We _ _ I-Concept
+may _ _ I-Concept
 need _ _ O
 to _ _ O
 see _ _ O
@@ -2640,7 +2640,7 @@ an _ _ O
 image _ _ O
 OpenCV _ _ O
 provides _ _ O
-libraries _ _ O
+libraries _ _ B-Concept
 for _ _ O
 Computer _ _ O
 Vision _ _ O
@@ -2681,14 +2681,14 @@ Detection _ _ O
 Visualize _ _ O
 Blobs _ _ O
 using _ _ O
-OpenCV _ _ O
-# _ _ O
+OpenCV _ _ B-Concept
+# _ _ I-Concept
 ! _ _ O
 /usr _ _ O
 / _ _ O
-bin _ _ O
-/ _ _ O
-env _ _ O
+bin _ _ B-Concept
+/ _ _ I-Concept
+env _ _ I-Concept
 python _ _ O
 import _ _ O
 roslib _ _ O
@@ -2710,13 +2710,13 @@ CvBridge _ _ O
 CvBridgeError _ _ O
 from _ _ O
 cmvision.msg _ _ O
-import _ _ B-concept
-Blobs _ _ I-concept
+import _ _ O
+Blobs _ _ O
 , _ _ O
 Blob _ _ O
-colorImage _ _ B-concept
-= _ _ B-concept
-Image _ _ I-concept
+colorImage _ _ O
+= _ _ O
+Image _ _ O
 ( _ _ O
 ) _ _ O
 isColorImageReady _ _ O
@@ -2724,10 +2724,10 @@ isColorImageReady _ _ O
 False _ _ O
 blobsInfo _ _ O
 = _ _ O
-Blobs _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
-isBlobsInfoReady _ _ I-concept
+Blobs _ _ O
+( _ _ O
+) _ _ O
+isBlobsInfoReady _ _ O
 = _ _ O
 False _ _ O
 def _ _ O
@@ -2773,30 +2773,30 @@ Detection _ _ O
 Visualize _ _ O
 Blobs _ _ O
 using _ _ O
-OpenCV _ _ B-concept
+OpenCV _ _ B-Concept
 
 
- _ _ I-concept
+ _ _ I-Concept
 def _ _ O
-main _ _ O
-( _ _ O
-) _ _ O
-: _ _ O
-global _ _ O
+main _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+: _ _ I-Concept
+global _ _ I-Concept
 colorImage _ _ O
 , _ _ O
 isColorImageReady _ _ O
 , _ _ O
 blobsInfo _ _ O
 , _ _ O
-isBlobsInfoReady _ _ B-concept
-rospy.init_node _ _ B-concept
+isBlobsInfoReady _ _ O
+rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
 showBlobs _ _ O
 ' _ _ O
 , _ _ O
-anonymous=True _ _ B-concept
+anonymous=True _ _ O
 ) _ _ O
 rospy.Subscriber _ _ O
 ( _ _ O
@@ -2807,7 +2807,7 @@ blobs _ _ O
 , _ _ O
 Blobs _ _ O
 , _ _ O
-updateBlobsInfo _ _ B-concept
+updateBlobsInfo _ _ O
 ) _ _ O
 rospy.Subscriber _ _ O
 ( _ _ O
@@ -2871,14 +2871,14 @@ Detection _ _ O
 Visualize _ _ O
 Blobs _ _ O
 using _ _ O
-OpenCV _ _ O
-def _ _ O
+OpenCV _ _ B-Concept
+def _ _ I-Concept
 main _ _ O
-( _ _ O
-) _ _ O
-: _ _ O
-: _ _ O
-while _ _ O
+( _ _ B-Concept
+) _ _ I-Concept
+: _ _ I-Concept
+: _ _ I-Concept
+while _ _ I-Concept
 not _ _ O
 rospy.is_shutdown _ _ O
 ( _ _ O
@@ -2909,17 +2909,17 @@ colorImage _ _ O
 " _ _ O
 blobsCopy _ _ O
 = _ _ O
-copy.deepcopy _ _ B-concept
+copy.deepcopy _ _ O
 ( _ _ O
 blobsInfo _ _ O
 ) _ _ O
 for _ _ O
-b _ _ B-concept
-in _ _ I-concept
-blobsCopy.blobs _ _ I-concept
-: _ _ B-concept
-cv2.rectangle _ _ I-concept
-( _ _ B-concept
+b _ _ O
+in _ _ O
+blobsCopy.blobs _ _ O
+: _ _ O
+cv2.rectangle _ _ O
+( _ _ O
 color_image _ _ O
 , _ _ O
 ( _ _ O
@@ -3005,13 +3005,13 @@ Detection _ _ O
 
 Blob _ _ O
 Detection _ _ O
-Algorithm _ _ B-concept
+Algorithm _ _ B-Concept
 
 
- _ _ O
-Given _ _ O
-an _ _ O
-image _ _ O
+ _ _ I-Concept
+Given _ _ I-Concept
+an _ _ I-Concept
+image _ _ I-Concept
 , _ _ O
 the _ _ O
 following _ _ O
@@ -3029,13 +3029,13 @@ used _ _ O
 Blur _ _ O
 the _ _ O
 image _ _ O
-to _ _ O
-reduce _ _ O
+to _ _ B-Concept
+reduce _ _ I-Concept
 noise _ _ O
 Filter _ _ O
-out _ _ O
-all _ _ O
-pixels _ _ B-concept
+out _ _ B-Concept
+all _ _ I-Concept
+pixels _ _ B-Concept
 that _ _ O
 are _ _ O
 out-of-range _ _ O
@@ -3065,33 +3065,33 @@ Blur _ _ O
 
 
  _ _ O
-One _ _ B-concept
-of _ _ I-concept
-the _ _ I-concept
-most _ _ I-concept
+One _ _ B-Concept
+of _ _ I-Concept
+the _ _ I-Concept
+most _ _ I-Concept
 popular _ _ O
 blur _ _ O
 algorithm _ _ O
-is _ _ O
-called _ _ O
+is _ _ B-Concept
+called _ _ I-Concept
 Gaussian _ _ O
 blur _ _ O
 
 
  _ _ O
-3x3 _ _ B-concept
-5x5 _ _ I-concept
-7x7 _ _ I-concept
+3x3 _ _ B-Concept
+5x5 _ _ I-Concept
+7x7 _ _ I-Concept
 
 
- _ _ I-concept
+ _ _ I-Concept
 The _ _ O
 new _ _ O
 RGB _ _ O
 values _ _ O
 of _ _ O
-the _ _ O
-pixel _ _ O
+the _ _ B-Concept
+pixel _ _ I-Concept
 at _ _ O
 center _ _ O
 is _ _ O
@@ -3102,7 +3102,7 @@ of _ _ O
 RGB _ _ O
 of _ _ O
 pixels _ _ O
-around _ _ O
+around _ _ B-Concept
 it _ _ O
 The _ _ O
 weight _ _ O
@@ -3129,29 +3129,29 @@ Detection _ _ O
 
 Filter _ _ O
 Filter _ _ O
-can _ _ B-concept
-be _ _ I-concept
-done _ _ I-concept
-based _ _ B-concept
+can _ _ B-Concept
+be _ _ I-Concept
+done _ _ I-Concept
+based _ _ B-Concept
 on _ _ O
 RGB _ _ O
 or _ _ O
 YUV _ _ O
-Recall _ _ O
-that _ _ O
-cmvision _ _ O
+Recall _ _ B-Concept
+that _ _ I-Concept
+cmvision _ _ B-Concept
 uses _ _ O
-YUV _ _ B-concept
+YUV _ _ B-Concept
 
 
- _ _ I-concept
-Once _ _ I-concept
+ _ _ I-Concept
+Once _ _ I-Concept
 a _ _ O
-filter _ _ O
+filter _ _ B-Concept
 is _ _ O
-applied _ _ B-concept
-, _ _ I-concept
-we _ _ I-concept
+applied _ _ B-Concept
+, _ _ I-Concept
+we _ _ I-Concept
 should _ _ O
 get _ _ O
 a _ _ O
@@ -3367,8 +3367,8 @@ a _ _ O
 blob _ _ O
 is _ _ O
 a _ _ O
-4-tuple _ _ B-concept
-( _ _ I-concept
+4-tuple _ _ B-Concept
+( _ _ I-Concept
 left _ _ O
 , _ _ O
 right _ _ O
@@ -3388,11 +3388,11 @@ Detection _ _ O
 A _ _ O
 Blob _ _ O
 Detection _ _ O
-Algorithm _ _ B-concept
-First _ _ O
-, _ _ O
-we _ _ O
-need _ _ O
+Algorithm _ _ B-Concept
+First _ _ I-Concept
+, _ _ I-Concept
+we _ _ I-Concept
+need _ _ I-Concept
 to _ _ O
 search _ _ O
 for _ _ O
@@ -3610,14 +3610,14 @@ the _ _ O
 next _ _ O
 blob _ _ O
 Construct _ _ O
-a _ _ B-concept
-new _ _ I-concept
+a _ _ B-Concept
+new _ _ I-Concept
 blob _ _ O
 ( _ _ O
 data _ _ O
 ) _ _ O
-Left _ _ B-concept
-and _ _ I-concept
+Left _ _ B-Concept
+and _ _ I-Concept
 right _ _ O
 are _ _ O
 5 _ _ O
@@ -3631,13 +3631,13 @@ Center _ _ O
 width _ _ O
 , _ _ O
 and _ _ O
-height _ _ B-concept
-of _ _ I-concept
+height _ _ O
+of _ _ O
 the _ _ O
-blob _ _ B-concept
-will _ _ I-concept
+blob _ _ O
+will _ _ O
 be _ _ O
-calculated _ _ B-concept
+calculated _ _ B-Concept
 later _ _ O
 
 
@@ -3653,9 +3653,9 @@ is _ _ O
 , _ _ O
 5 _ _ O
 , _ _ O
-1 _ _ B-concept
-, _ _ I-concept
-1 _ _ I-concept
+1 _ _ B-Concept
+, _ _ I-Concept
+1 _ _ I-Concept
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
@@ -3668,8 +3668,8 @@ Detection _ _ O
 A _ _ O
 Blob _ _ O
 Detection _ _ O
-Algorithm _ _ B-concept
-Next _ _ O
+Algorithm _ _ B-Concept
+Next _ _ I-Concept
 , _ _ O
 set _ _ O
 the _ _ O
@@ -3691,8 +3691,8 @@ found _ _ O
 Adjust _ _ O
 the _ _ O
 blob _ _ O
-accordingly _ _ B-concept
-Add _ _ I-concept
+accordingly _ _ B-Concept
+Add _ _ I-Concept
 coordinate _ _ O
 ( _ _ O
 x _ _ O
@@ -3851,9 +3851,9 @@ is _ _ O
 , _ _ O
 6 _ _ O
 , _ _ O
-1 _ _ B-concept
-, _ _ I-concept
-2 _ _ I-concept
+1 _ _ O
+, _ _ O
+2 _ _ O
 ) _ _ O
 Queue _ _ O
 is _ _ O
@@ -3885,10 +3885,10 @@ Blob _ _ O
 Detection _ _ O
 
 
- _ _ B-concept
-0 _ _ I-concept
-0 _ _ I-concept
-0 _ _ I-concept
+ _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
 1 _ _ O
 1 _ _ O
 0 _ _ O
@@ -3923,10 +3923,10 @@ Detection _ _ O
 A _ _ O
 Blob _ _ O
 Detection _ _ O
-Algorithm _ _ B-concept
-Repeat _ _ O
-until _ _ O
-the _ _ O
+Algorithm _ _ B-Concept
+Repeat _ _ I-Concept
+until _ _ I-Concept
+the _ _ I-Concept
 queue _ _ O
 is _ _ O
 empty _ _ O
@@ -3995,9 +3995,9 @@ blob _ _ O
 , _ _ O
 1 _ _ O
 , _ _ O
-7 _ _ B-concept
-) _ _ I-concept
-0 _ _ I-concept
+7 _ _ B-Concept
+) _ _ I-Concept
+0 _ _ I-Concept
 0 _ _ O
 0 _ _ O
 0 _ _ O
@@ -4126,22 +4126,22 @@ Blob _ _ O
 Detection _ _ O
 
 
- _ _ B-concept
-0 _ _ I-concept
-0 _ _ I-concept
-0 _ _ I-concept
-1 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
+ _ _ B-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+1 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
 
 
- _ _ O
-0 _ _ O
-0 _ _ O
-0 _ _ O
+ _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
+0 _ _ I-Concept
 1 _ _ O
 1 _ _ O
 0 _ _ O
@@ -4175,30 +4175,30 @@ Detection _ _ O
 
 Blob _ _ O
 Detection _ _ O
-using _ _ B-concept
-OpenCV _ _ O
-First _ _ O
+using _ _ B-Concept
+OpenCV _ _ I-Concept
+First _ _ I-Concept
 , _ _ O
-we _ _ O
-need _ _ O
+we _ _ B-Concept
+need _ _ I-Concept
 to _ _ O
 blur _ _ O
 an _ _ O
 image _ _ O
-using _ _ O
+using _ _ B-Concept
 the _ _ O
 GaussianBlur _ _ O
 ( _ _ O
 ) _ _ O
-function _ _ B-concept
-The _ _ I-concept
-following _ _ O
+function _ _ B-Concept
+The _ _ I-Concept
+following _ _ I-Concept
 code _ _ O
 blurs _ _ O
 an _ _ O
 image _ _ O
-and _ _ O
-display _ _ O
+and _ _ B-Concept
+display _ _ I-Concept
 : _ _ O
 import _ _ O
 cv2 _ _ O
@@ -4221,9 +4221,9 @@ blur_image _ _ O
 = _ _ O
 cv2.GaussianBlur _ _ O
 ( _ _ O
-color_image _ _ B-concept
-, _ _ I-concept
-( _ _ I-concept
+color_image _ _ O
+, _ _ O
+( _ _ O
 5 _ _ O
 , _ _ O
 5 _ _ O
@@ -4329,8 +4329,8 @@ Convert _ _ O
 RGB _ _ O
 to _ _ O
 YUV _ _ O
-OpenCV _ _ O
-supplies _ _ O
+OpenCV _ _ B-Concept
+supplies _ _ I-Concept
 the _ _ O
 cvtColor _ _ O
 ( _ _ O
@@ -4366,9 +4366,9 @@ blur_image _ _ O
 = _ _ O
 cv2.GaussianBlur _ _ O
 ( _ _ O
-color_image _ _ B-concept
-, _ _ I-concept
-( _ _ I-concept
+color_image _ _ O
+, _ _ O
+( _ _ O
 5 _ _ O
 , _ _ O
 5 _ _ O
@@ -4485,7 +4485,7 @@ Detection _ _ O
 
 Filter _ _ O
 Unwanted _ _ O
-Pixels _ _ B-concept
+Pixels _ _ B-Concept
 
 
  _ _ O
@@ -4495,9 +4495,9 @@ can _ _ O
 be _ _ O
 filtered _ _ O
 out _ _ O
-using _ _ B-concept
-the _ _ I-concept
-inRange _ _ I-concept
+using _ _ B-Concept
+the _ _ I-Concept
+inRange _ _ I-Concept
 ( _ _ O
 ) _ _ O
 function _ _ O
@@ -4523,9 +4523,9 @@ blur_image _ _ O
 = _ _ O
 cv2.GaussianBlur _ _ O
 ( _ _ O
-color_image _ _ B-concept
-, _ _ I-concept
-( _ _ I-concept
+color_image _ _ O
+, _ _ O
+( _ _ O
 5 _ _ O
 , _ _ O
 5 _ _ O
@@ -4616,41 +4616,41 @@ Detection _ _ O
 
 Filter _ _ O
 Unwanted _ _ O
-Pixels _ _ O
+Pixels _ _ B-Concept
 Masked _ _ O
 Image _ _ O
 : _ _ O
 
 
  _ _ O
-Thumrongsak _ _ O
-Kosiyatrakul _ _ O
+Thumrongsak _ _ B-Concept
+Kosiyatrakul _ _ I-Concept
 
 
  _ _ O
 Blob _ _ O
 Detection _ _ O
 
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
+SimpleBlobDetector _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 
 
- _ _ B-concept
-OpenCV _ _ I-concept
-supplies _ _ O
-the _ _ O
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
-function _ _ B-concept
-which _ _ O
+ _ _ I-Concept
+OpenCV _ _ I-Concept
+supplies _ _ I-Concept
+the _ _ B-Concept
+SimpleBlobDetector _ _ I-Concept
+( _ _ B-Concept
+) _ _ I-Concept
+function _ _ I-Concept
+which _ _ I-Concept
 detects _ _ O
 blobs _ _ O
 based _ _ O
 on _ _ O
-a _ _ B-concept
-given _ _ I-concept
+a _ _ B-Concept
+given _ _ I-Concept
 parameter _ _ O
 : _ _ O
 
@@ -4664,11 +4664,11 @@ Kosiyatrakul _ _ O
 Blob _ _ O
 Detection _ _ O
 
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
-Parameters _ _ B-concept
-First _ _ O
+SimpleBlobDetector _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+Parameters _ _ I-Concept
+First _ _ I-Concept
 we _ _ O
 need _ _ O
 to _ _ O
@@ -4678,7 +4678,7 @@ parameter _ _ O
 : _ _ O
 params _ _ O
 = _ _ O
-cv2.SimpleBlobDetector_Params _ _ B-concept
+cv2.SimpleBlobDetector_Params _ _ O
 ( _ _ O
 ) _ _ O
 params.minThreshold _ _ O
@@ -4689,8 +4689,8 @@ params.maxThreshold _ _ O
 255 _ _ O
 params.filterByArea _ _ O
 = _ _ O
-True _ _ B-concept
-params.minArea _ _ I-concept
+True _ _ O
+params.minArea _ _ O
 = _ _ O
 50 _ _ O
 params.maxArea _ _ O
@@ -4698,21 +4698,21 @@ params.maxArea _ _ O
 256 _ _ O
 * _ _ O
 256 _ _ O
-params.filterByCircularity _ _ B-concept
-= _ _ I-concept
+params.filterByCircularity _ _ O
+= _ _ O
 False _ _ O
 params.minCircularity _ _ O
 = _ _ O
 0.1 _ _ O
-params.filterByConvexity _ _ B-concept
-= _ _ I-concept
-False _ _ I-concept
+params.filterByConvexity _ _ O
+= _ _ O
+False _ _ O
 params.minConvexity _ _ O
 = _ _ O
 0.9 _ _ O
 params.filterByInertia _ _ O
-= _ _ B-concept
-False _ _ I-concept
+= _ _ O
+False _ _ O
 params.minInertiaRatio _ _ O
 = _ _ O
 0.5 _ _ O
@@ -4742,13 +4742,13 @@ detector _ _ O
 = _ _ O
 cv2.SimpleBlobDetector _ _ O
 ( _ _ O
-params _ _ B-concept
+params _ _ O
 ) _ _ O
 else _ _ O
 : _ _ O
 detector _ _ O
 = _ _ O
-cv2.SimpleBlobDetector_create _ _ B-concept
+cv2.SimpleBlobDetector_create _ _ O
 ( _ _ O
 params _ _ O
 ) _ _ O
@@ -4763,16 +4763,16 @@ Kosiyatrakul _ _ O
 Blob _ _ O
 Detection _ _ O
 
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
+SimpleBlobDetector _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 
 
- _ _ B-concept
-Then _ _ I-concept
-we _ _ O
-can _ _ O
-use _ _ O
+ _ _ I-Concept
+Then _ _ I-Concept
+we _ _ I-Concept
+can _ _ I-Concept
+use _ _ I-Concept
 the _ _ O
 detector _ _ O
 object _ _ O
@@ -4781,16 +4781,16 @@ detect _ _ O
 blobs _ _ O
 from _ _ O
 masked _ _ O
-image _ _ B-concept
-keypoints _ _ B-concept
-= _ _ O
-detector.detect _ _ O
+image _ _ B-Concept
+keypoints _ _ B-Concept
+= _ _ I-Concept
+detector.detect _ _ I-Concept
 ( _ _ O
 255 _ _ O
 - _ _ O
 mask_image _ _ O
 ) _ _ O
-kp_image _ _ B-concept
+kp_image _ _ O
 = _ _ O
 cv2.drawKeypoints _ _ O
 ( _ _ O
@@ -4798,12 +4798,12 @@ blur_image _ _ O
 , _ _ O
 keypoints _ _ O
 , _ _ O
-np.array _ _ O
-( _ _ O
-[ _ _ O
-] _ _ O
-) _ _ O
-, _ _ O
+np.array _ _ B-Concept
+( _ _ I-Concept
+[ _ _ I-Concept
+] _ _ I-Concept
+) _ _ I-Concept
+, _ _ I-Concept
 ( _ _ O
 0 _ _ O
 , _ _ O
@@ -4820,26 +4820,26 @@ cv2.imshow _ _ O
 Keypoints _ _ O
 ' _ _ O
 , _ _ O
-kp_image _ _ O
-) _ _ O
+kp_image _ _ B-Concept
+) _ _ I-Concept
 
 
- _ _ O
-To _ _ O
+ _ _ I-Concept
+To _ _ I-Concept
 extract _ _ O
 blobs _ _ O
-information _ _ B-concept
-, _ _ I-concept
-simply _ _ I-concept
+information _ _ B-Concept
+, _ _ I-Concept
+simply _ _ I-Concept
 look _ _ O
 at _ _ O
 the _ _ O
 keypoints _ _ O
-variable _ _ O
+variable _ _ B-Concept
 
 
- _ _ O
-Thumrongsak _ _ O
+ _ _ I-Concept
+Thumrongsak _ _ I-Concept
 Kosiyatrakul _ _ O
 
 
@@ -4847,12 +4847,12 @@ Kosiyatrakul _ _ O
 Blob _ _ O
 Detection _ _ O
 
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
-Result _ _ B-concept
-from _ _ O
-the _ _ O
+SimpleBlobDetector _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+Result _ _ I-Concept
+from _ _ I-Concept
+the _ _ I-Concept
 drawKeypoints _ _ O
 ( _ _ O
 ) _ _ O
@@ -4873,19 +4873,19 @@ Kosiyatrakul _ _ O
 Blob _ _ O
 Detection _ _ O
 
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
+SimpleBlobDetector _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 
 
- _ _ B-concept
-The _ _ I-concept
-SimpleBlobDetector _ _ O
-( _ _ O
-) _ _ O
-function _ _ B-concept
-is _ _ O
-good _ _ O
+ _ _ I-Concept
+The _ _ I-Concept
+SimpleBlobDetector _ _ I-Concept
+( _ _ B-Concept
+) _ _ I-Concept
+function _ _ I-Concept
+is _ _ I-Concept
+good _ _ I-Concept
 for _ _ O
 round _ _ O
 object _ _ O
@@ -4909,12 +4909,12 @@ blob _ _ O
 , _ _ O
 it _ _ O
 only _ _ O
-show _ _ B-concept
-a _ _ I-concept
+show _ _ B-Concept
+a _ _ I-Concept
 small _ _ O
 keypoint _ _ O
-Parameters _ _ O
-are _ _ O
+Parameters _ _ B-Concept
+are _ _ I-Concept
 hard _ _ O
 to _ _ O
 understand _ _ O
@@ -4931,26 +4931,26 @@ Detection _ _ O
 
 Blob _ _ O
 Detection _ _ O
-using _ _ B-concept
-Contour _ _ O
+using _ _ B-Concept
+Contour _ _ I-Concept
 
 
- _ _ O
-Another _ _ B-concept
-method _ _ I-concept
+ _ _ I-Concept
+Another _ _ B-Concept
+method _ _ I-Concept
 is _ _ O
 to _ _ O
 detect _ _ O
 contours _ _ O
 of _ _ O
-masked _ _ B-concept
-image _ _ I-concept
+masked _ _ B-Concept
+image _ _ I-Concept
 A _ _ O
-contour _ _ B-concept
-is _ _ O
-a _ _ O
-curve _ _ B-concept
-joining _ _ I-concept
+contour _ _ B-Concept
+is _ _ I-Concept
+a _ _ I-Concept
+curve _ _ B-Concept
+joining _ _ I-Concept
 all _ _ O
 the _ _ O
 continuous _ _ O
@@ -4970,8 +4970,8 @@ The _ _ O
 contours _ _ O
 are _ _ O
 a _ _ O
-useful _ _ B-concept
-tool _ _ I-concept
+useful _ _ B-Concept
+tool _ _ I-Concept
 for _ _ O
 shape _ _ O
 analysis _ _ O
@@ -4984,16 +4984,16 @@ In _ _ O
 OpenCV _ _ O
 , _ _ O
 the _ _ O
-function _ _ O
-findContours _ _ O
+function _ _ B-Concept
+findContours _ _ I-Concept
 ( _ _ O
 ) _ _ O
-is _ _ O
-given _ _ B-concept
+is _ _ B-Concept
+given _ _ I-Concept
 
 
- _ _ I-concept
-Thumrongsak _ _ I-concept
+ _ _ I-Concept
+Thumrongsak _ _ I-Concept
 Kosiyatrakul _ _ O
 
 
@@ -5006,14 +5006,14 @@ findContours _ _ O
 ) _ _ O
 
 
- _ _ O
-findContours _ _ B-concept
-( _ _ O
+ _ _ B-Concept
+findContours _ _ I-Concept
+( _ _ I-Concept
 ) _ _ O
-example _ _ B-concept
-: _ _ I-concept
-def _ _ I-concept
-main _ _ O
+example _ _ B-Concept
+: _ _ I-Concept
+def _ _ I-Concept
+main _ _ I-Concept
 ( _ _ O
 ) _ _ O
 : _ _ O
@@ -5033,9 +5033,9 @@ blur_image _ _ O
 = _ _ O
 cv2.GaussianBlur _ _ O
 ( _ _ O
-color_image _ _ B-concept
-, _ _ I-concept
-( _ _ I-concept
+color_image _ _ O
+, _ _ O
+( _ _ O
 5 _ _ O
 , _ _ O
 5 _ _ O
@@ -5050,27 +5050,27 @@ Contour _ _ O
 Image _ _ O
 ' _ _ O
 ) _ _ O
-( _ _ B-concept
-cnts _ _ I-concept
-, _ _ I-concept
+( _ _ O
+cnts _ _ O
+, _ _ O
 _ _ _ O
 ) _ _ O
 = _ _ O
 cv2.findContours _ _ O
 ( _ _ O
-mask_image.copy _ _ B-concept
-( _ _ B-concept
-) _ _ I-concept
-, _ _ I-concept
-cv2.RETR_TREE _ _ I-concept
+mask_image.copy _ _ O
+( _ _ O
+) _ _ O
+, _ _ O
+cv2.RETR_TREE _ _ O
 , _ _ O
 cv2.CHAIN_APPROX_SIMPLE _ _ O
 ) _ _ O
 cv2.drawContours _ _ O
 ( _ _ O
-blur_image _ _ B-concept
-, _ _ I-concept
-cnts _ _ I-concept
+blur_image _ _ O
+, _ _ O
+cnts _ _ O
 , _ _ O
 -1 _ _ O
 , _ _ O
@@ -5091,7 +5091,7 @@ Contour _ _ O
 Image _ _ O
 ' _ _ O
 , _ _ O
-blur_image _ _ B-concept
+blur_image _ _ O
 ) _ _ O
 cv2.waitKey _ _ O
 ( _ _ O
@@ -5134,18 +5134,18 @@ Detection _ _ O
 drawContours _ _ O
 ( _ _ O
 ) _ _ O
-Use _ _ O
-the _ _ B-concept
-drawContours _ _ I-concept
+Use _ _ B-Concept
+the _ _ I-Concept
+drawContours _ _ I-Concept
 ( _ _ O
 ) _ _ O
-to _ _ O
-draw _ _ B-concept
-all _ _ I-concept
-contours _ _ I-concept
+to _ _ B-Concept
+draw _ _ I-Concept
+all _ _ I-Concept
+contours _ _ I-Concept
 into _ _ O
-the _ _ B-concept
-original _ _ I-concept
+the _ _ B-Concept
+original _ _ I-Concept
 image _ _ O
 
 
@@ -5156,21 +5156,21 @@ there _ _ O
 are _ _ O
 contours _ _ O
 inside _ _ O
-other _ _ B-concept
-contours _ _ I-concept
+other _ _ B-Concept
+contours _ _ I-Concept
 We _ _ O
-need _ _ O
-bounding _ _ O
+need _ _ B-Concept
+bounding _ _ I-Concept
 box _ _ O
-for _ _ O
-each _ _ O
-contour _ _ O
+for _ _ B-Concept
+each _ _ I-Concept
+contour _ _ I-Concept
 and _ _ O
-eliminate _ _ B-concept
-contours _ _ I-concept
+eliminate _ _ B-Concept
+contours _ _ I-Concept
 that _ _ O
-are _ _ B-concept
-inside _ _ I-concept
+are _ _ B-Concept
+inside _ _ I-Concept
 another _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
@@ -5183,18 +5183,18 @@ Detection _ _ O
 findContours _ _ O
 ( _ _ O
 ) _ _ O
-with _ _ O
-hierarchy _ _ B-concept
+with _ _ B-Concept
+hierarchy _ _ I-Concept
 Filter _ _ O
 out _ _ O
 some _ _ O
 contours _ _ O
 def _ _ O
-main _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
-: _ _ I-concept
-color_image _ _ I-concept
+main _ _ O
+( _ _ O
+) _ _ O
+: _ _ O
+color_image _ _ O
 = _ _ O
 cv2.imread _ _ O
 ( _ _ O
@@ -5210,9 +5210,9 @@ blur_image _ _ O
 = _ _ O
 cv2.GaussianBlur _ _ O
 ( _ _ O
-color_image _ _ B-concept
-, _ _ I-concept
-( _ _ I-concept
+color_image _ _ O
+, _ _ O
+( _ _ O
 5 _ _ O
 , _ _ O
 5 _ _ O
@@ -5234,11 +5234,11 @@ hierarchy _ _ O
 = _ _ O
 cv2.findContours _ _ O
 ( _ _ O
-mask_image.copy _ _ B-concept
-( _ _ B-concept
-) _ _ I-concept
-, _ _ I-concept
-cv2.RETR_TREE _ _ I-concept
+mask_image.copy _ _ O
+( _ _ O
+) _ _ O
+, _ _ O
+cv2.RETR_TREE _ _ O
 , _ _ O
 cv2.CHAIN_APPROX_SIMPLE _ _ O
 ) _ _ O
@@ -5266,10 +5266,10 @@ cv2.contourArea _ _ O
 ( _ _ O
 c _ _ O
 ) _ _ O
-< _ _ B-concept
-100 _ _ I-concept
-: _ _ I-concept
-continue _ _ I-concept
+< _ _ O
+100 _ _ O
+: _ _ O
+continue _ _ O
 if _ _ O
 not _ _ O
 hierarchy _ _ O
@@ -5379,14 +5379,14 @@ Detection _ _ O
 drawContours _ _ O
 ( _ _ O
 ) _ _ O
-After _ _ B-concept
-filtering _ _ I-concept
+After _ _ B-Concept
+filtering _ _ I-Concept
 out _ _ O
 small _ _ O
 contours _ _ O
 and _ _ O
-those _ _ B-concept
-that _ _ I-concept
+those _ _ B-Concept
+that _ _ I-Concept
 are _ _ O
 inside _ _ O
 another _ _ O

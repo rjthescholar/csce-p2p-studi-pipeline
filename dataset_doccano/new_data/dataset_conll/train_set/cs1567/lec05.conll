@@ -1,8 +1,8 @@
-['train_set', 'labeled']|cs1567|lec05
+['train_set', 'labeled_plus_fd']|cs1567|lec05
 -DOCSTART- -X- -X- O
 
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -13,17 +13,17 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-Joy _ _ B-concept
-Node _ _ I-concept
-joy_node _ _ B-concept
-node _ _ O
+Joy _ _ B-Concept
+Node _ _ I-Concept
+joy_node _ _ B-Concept
+node _ _ I-Concept
 communicates _ _ O
 with _ _ O
 a _ _ O
-joystick _ _ O
+joystick _ _ B-Concept
 connected _ _ O
 via _ _ O
 a _ _ O
@@ -37,7 +37,7 @@ receive _ _ O
 data _ _ O
 from _ _ O
 a _ _ O
-joystick _ _ O
+joystick _ _ B-Concept
 , _ _ O
 simply _ _ O
 subscribe _ _ O
@@ -45,14 +45,14 @@ for _ _ O
 messages _ _ O
 from _ _ O
 the _ _ O
-topic _ _ O
+topic _ _ B-Concept
 named _ _ O
-joy _ _ B-concept
+joy _ _ B-Concept
 To _ _ O
 start _ _ O
 a _ _ O
-joy _ _ B-concept
-node _ _ I-concept
+joy _ _ B-Concept
+node _ _ I-Concept
 , _ _ O
 use _ _ O
 the _ _ O
@@ -67,7 +67,7 @@ screen _ _ O
 : _ _ O
 rosparam _ _ O
 set _ _ O
-joy_node _ _ B-concept
+joy_node _ _ O
 / _ _ O
 dev _ _ O
 " _ _ O
@@ -78,8 +78,8 @@ input _ _ O
 js1 _ _ O
 " _ _ O
 rosrun _ _ O
-joy _ _ B-concept
-joy_node _ _ B-concept
+joy _ _ B-Concept
+joy_node _ _ O
 
 
  _ _ O
@@ -103,7 +103,7 @@ the _ _ O
 following _ _ O
 : _ _ O
 /diagnostics _ _ O
-/joy _ _ B-concept
+/joy _ _ O
 /rosout _ _ O
 /rosout_agg _ _ O
 Thumrongsak _ _ O
@@ -111,8 +111,8 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 Xbox _ _ O
 360 _ _ O
@@ -125,36 +125,36 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-Topic _ _ O
-joy _ _ B-concept
+Topic _ _ B-Concept
+joy _ _ I-Concept
 
 
  _ _ O
 The _ _ O
-joy _ _ B-concept
-node _ _ I-concept
+joy _ _ B-Concept
+node _ _ I-Concept
 publishes _ _ O
-joystick _ _ O
+joystick _ _ B-Concept
 data _ _ O
 to _ _ O
 a _ _ O
 topic _ _ O
 named _ _ O
-joy _ _ B-concept
+joy _ _ B-Concept
 The _ _ O
 type _ _ O
 of _ _ O
-message _ _ O
+message _ _ B-Concept
 is _ _ O
-Joy _ _ B-concept
+Joy _ _ B-Concept
 The _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Joy _ _ B-concept
+type _ _ B-Concept
+Joy _ _ I-Concept
 is _ _ O
 a _ _ O
 data _ _ O
@@ -174,21 +174,21 @@ components _ _ O
 Data _ _ O
 structure _ _ O
 named _ _ O
-header _ _ O
+header _ _ B-Concept
 , _ _ O
 Array _ _ O
 of _ _ O
 floating-point _ _ O
 numbers _ _ O
 named _ _ O
-axes _ _ O
+axes _ _ B-Concept
 , _ _ O
 and _ _ O
 Array _ _ O
 of _ _ O
 integers _ _ O
 named _ _ O
-buttons _ _ B-concept
+buttons _ _ B-Concept
 
 
  _ _ O
@@ -197,22 +197,22 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-buttons _ _ B-concept
+buttons _ _ B-Concept
 Array _ _ O
 of _ _ O
 integers _ _ O
 named _ _ O
-buttons _ _ B-concept
+buttons _ _ B-Concept
 are _ _ O
 organized _ _ O
 as _ _ O
 follows _ _ O
 : _ _ O
 Index _ _ O
-Button _ _ B-concept
+Button _ _ B-Concept
 name _ _ O
 on _ _ O
 the _ _ O
@@ -236,11 +236,11 @@ start _ _ O
 8 _ _ O
 power _ _ O
 9 _ _ O
-Button _ _ B-concept
+Button _ _ B-Concept
 stick _ _ O
 left _ _ O
 10 _ _ O
-Button _ _ B-concept
+Button _ _ B-Concept
 stick _ _ O
 right _ _ O
 
@@ -251,10 +251,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-axes _ _ O
+axes _ _ B-Concept
 
 
  _ _ O
@@ -263,14 +263,14 @@ of _ _ O
 floating-point _ _ O
 numbers _ _ O
 named _ _ O
-axes _ _ O
+axes _ _ B-Concept
 are _ _ O
 organized _ _ O
 as _ _ O
 follows _ _ O
 : _ _ O
 Index _ _ O
-Button _ _ B-concept
+Button _ _ B-Concept
 name _ _ O
 on _ _ O
 the _ _ O
@@ -279,14 +279,14 @@ controller _ _ O
 Left _ _ O
 / _ _ O
 Right _ _ O
-Axis _ _ O
+Axis _ _ B-Concept
 stick _ _ O
 left _ _ O
 1 _ _ O
 Up _ _ O
 / _ _ O
 Down _ _ O
-Axis _ _ O
+Axis _ _ B-Concept
 stick _ _ O
 left _ _ O
 2 _ _ O
@@ -295,14 +295,14 @@ LT _ _ O
 Left _ _ O
 / _ _ O
 Right _ _ O
-Axis _ _ O
+Axis _ _ B-Concept
 stick _ _ O
 right _ _ O
 4 _ _ O
 Up _ _ O
 / _ _ O
 Down _ _ O
-Axis _ _ O
+Axis _ _ B-Concept
 stick _ _ O
 right _ _ O
 5 _ _ O
@@ -327,11 +327,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-Topic _ _ O
-joy _ _ B-concept
+Topic _ _ B-Concept
+joy _ _ I-Concept
 
 
  _ _ O
@@ -341,7 +341,7 @@ if _ _ O
 the _ _ O
 state _ _ O
 of _ _ O
-joystick _ _ O
+joystick _ _ B-Concept
 does _ _ O
 not _ _ O
 change _ _ O
@@ -353,8 +353,8 @@ be _ _ O
 published _ _ O
 to _ _ O
 the _ _ O
-topic _ _ O
-joy _ _ B-concept
+topic _ _ B-Concept
+joy _ _ I-Concept
 If _ _ O
 you _ _ O
 run _ _ O
@@ -363,7 +363,7 @@ command _ _ O
 rostopic _ _ O
 echo _ _ O
 -c _ _ O
-joy _ _ B-concept
+joy _ _ O
 
 
  _ _ O
@@ -376,7 +376,7 @@ If _ _ O
 you _ _ O
 press _ _ O
 the _ _ O
-button _ _ B-concept
+button _ _ O
 A _ _ O
 , _ _ O
 you _ _ O
@@ -387,7 +387,7 @@ as _ _ O
 shown _ _ O
 below _ _ O
 : _ _ O
-header _ _ O
+header _ _ B-Concept
 : _ _ O
 seq _ _ O
 : _ _ O
@@ -404,7 +404,7 @@ frame_id _ _ O
 : _ _ O
 ` _ _ O
 ' _ _ O
-axes _ _ O
+axes _ _ B-Concept
 : _ _ O
 [ _ _ O
 -0.0 _ _ O
@@ -423,7 +423,7 @@ axes _ _ O
 , _ _ O
 0.0 _ _ O
 ] _ _ O
-buttons _ _ B-concept
+buttons _ _ B-Concept
 : _ _ O
 [ _ _ O
 1 _ _ O
@@ -456,11 +456,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
-Topic _ _ O
-joy _ _ B-concept
+Topic _ _ B-Concept
+joy _ _ I-Concept
 
 
  _ _ O
@@ -469,7 +469,7 @@ import _ _ O
 the _ _ O
 data _ _ O
 structure _ _ O
-joy _ _ B-concept
+joy _ _ B-Concept
 to _ _ O
 your _ _ O
 Python _ _ O
@@ -499,7 +499,7 @@ rospy _ _ O
 from _ _ O
 sensor_msgs.msg _ _ O
 import _ _ O
-Joy _ _ O
+Joy _ _ B-Concept
 
 
  _ _ O
@@ -507,11 +507,11 @@ To _ _ O
 subscribe _ _ O
 to _ _ O
 the _ _ O
-topic _ _ O
-joy _ _ B-concept
+topic _ _ B-Concept
+joy _ _ I-Concept
 of _ _ O
-type _ _ O
-Joy _ _ B-concept
+type _ _ B-Concept
+Joy _ _ I-Concept
 , _ _ O
 use _ _ O
 the _ _ O
@@ -524,7 +524,7 @@ script _ _ O
 : _ _ O
 rospy.Subscriber _ _ O
 ( _ _ O
-"joy _ _ B-concept
+"joy _ _ O
 " _ _ O
 , _ _ O
 Joy _ _ O
@@ -539,8 +539,8 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 Example _ _ O
 
@@ -559,7 +559,7 @@ rospy _ _ O
 from _ _ O
 sensor_msgs.msg _ _ O
 import _ _ O
-Joy _ _ O
+Joy _ _ B-Concept
 def _ _ O
 callback _ _ O
 ( _ _ O
@@ -567,7 +567,7 @@ data _ _ O
 ) _ _ O
 : _ _ O
 print _ _ O
-data.buttons _ _ B-concept
+data.buttons _ _ O
 [ _ _ O
 0 _ _ O
 ] _ _ O
@@ -577,7 +577,7 @@ data.axes _ _ O
 0 _ _ O
 ] _ _ O
 def _ _ O
-testJoy _ _ B-concept
+testJoy _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
@@ -590,10 +590,10 @@ anonymous=True _ _ O
 ) _ _ O
 rospy.Subscriber _ _ O
 ( _ _ O
-"joy _ _ B-concept
+"joy _ _ O
 " _ _ O
 , _ _ O
-Joy _ _ B-concept
+Joy _ _ B-Concept
 , _ _ O
 callback _ _ O
 ) _ _ O
@@ -627,14 +627,14 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 Controlling _ _ O
 a _ _ O
-Kobuki _ _ B-concept
+Kobuki _ _ B-Concept
 A _ _ O
-robot _ _ O
+robot _ _ B-Concept
 can _ _ O
 be _ _ O
 controlled _ _ O
@@ -643,14 +643,14 @@ sending _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Twist _ _ B-concept
+type _ _ B-Concept
+Twist _ _ I-Concept
 To _ _ O
 import _ _ O
 the _ _ O
 data _ _ O
 structure _ _ O
-Twist _ _ B-concept
+Twist _ _ B-Concept
 , _ _ O
 use _ _ O
 the _ _ O
@@ -660,7 +660,7 @@ command _ _ O
 from _ _ O
 geometry_msgs.msg _ _ O
 import _ _ O
-Twist _ _ B-concept
+Twist _ _ B-Concept
 
 
  _ _ O
@@ -671,8 +671,8 @@ variable _ _ O
 named _ _ O
 command _ _ O
 of _ _ O
-type _ _ O
-Twist _ _ B-concept
+type _ _ B-Concept
+Twist _ _ I-Concept
 , _ _ O
 use _ _ O
 the _ _ O
@@ -681,7 +681,7 @@ command _ _ O
 : _ _ O
 command _ _ O
 = _ _ O
-Twist _ _ B-concept
+Twist _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -694,7 +694,7 @@ use _ _ O
 two _ _ O
 components _ _ O
 : _ _ O
-command.linear.x _ _ O
+command.linear.x _ _ B-Concept
 Value _ _ O
 can _ _ O
 be _ _ O
@@ -719,7 +719,7 @@ backward _ _ O
 
 
  _ _ O
-command.angular.z _ _ O
+command.angular.z _ _ B-Concept
 Value _ _ O
 can _ _ O
 be _ _ O
@@ -750,29 +750,29 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 Controlling _ _ O
 a _ _ O
-Kobuki _ _ B-concept
+Kobuki _ _ B-Concept
 To _ _ O
 control _ _ O
 the _ _ O
-robot _ _ O
+robot _ _ B-Concept
 , _ _ O
 the _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Twist _ _ B-concept
+type _ _ B-Concept
+Twist _ _ I-Concept
 must _ _ O
 be _ _ O
 publish _ _ O
 to _ _ O
 the _ _ O
 following _ _ O
-topic _ _ O
+topic _ _ B-Concept
 : _ _ O
 /mobile_base _ _ O
 / _ _ O
@@ -801,10 +801,10 @@ at _ _ O
 half _ _ O
 speed _ _ O
 : _ _ O
-command.linear.x _ _ O
+command.linear.x _ _ B-Concept
 = _ _ O
 0.5 _ _ O
-command.angular.z _ _ O
+command.angular.z _ _ B-Concept
 = _ _ O
 0.0 _ _ O
 
@@ -831,10 +831,10 @@ at _ _ O
 half _ _ O
 speed _ _ O
 : _ _ O
-command.linear.x _ _ O
+command.linear.x _ _ B-Concept
 = _ _ O
 0.0 _ _ O
-command.angular.z _ _ O
+command.angular.z _ _ B-Concept
 = _ _ O
 0.5 _ _ O
 
@@ -859,10 +859,10 @@ the _ _ O
 same _ _ O
 time _ _ O
 : _ _ O
-command.linear.x _ _ O
+command.linear.x _ _ B-Concept
 = _ _ O
 0.5 _ _ O
-command.angular.z _ _ O
+command.angular.z _ _ B-Concept
 = _ _ O
 0.5 _ _ O
 
@@ -873,22 +873,22 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 Use _ _ O
-Simulator _ _ O
+Simulator _ _ B-Concept
 ( _ _ O
 for _ _ O
 now _ _ O
 ) _ _ O
-ROS _ _ O
+ROS _ _ B-Concept
 allows _ _ O
 you _ _ O
 to _ _ O
 see _ _ O
 how _ _ O
-robot _ _ O
+robot _ _ B-Concept
 moves _ _ O
 in _ _ O
 a _ _ O
@@ -906,7 +906,7 @@ console _ _ O
 screen _ _ O
 : _ _ O
 roslaunch _ _ O
-kobuki_softnode _ _ B-concept
+kobuki_softnode _ _ O
 full.launch _ _ O
 Open _ _ O
 a _ _ O
@@ -920,13 +920,13 @@ following _ _ O
 command _ _ O
 : _ _ O
 rosrun _ _ O
-rviz _ _ O
-rviz _ _ O
+rviz _ _ B-Concept
+rviz _ _ B-Concept
 
 
  _ _ O
 In _ _ O
-rviz _ _ O
+rviz _ _ B-Concept
 1 _ _ O
 2 _ _ O
 
@@ -963,8 +963,8 @@ an _ _ O
 image _ _ O
 of _ _ O
 a _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 on _ _ O
 your _ _ O
 screen _ _ O
@@ -978,10 +978,10 @@ publish _ _ O
 a _ _ O
 command _ _ O
 of _ _ O
-type _ _ O
-Twist _ _ B-concept
+type _ _ B-Concept
+Twist _ _ I-Concept
 , _ _ O
-robot _ _ O
+robot _ _ B-Concept
 will _ _ O
 move _ _ O
 according _ _ O
@@ -996,8 +996,8 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Joy _ _ B-concept
-Node _ _ I-concept
+Joy _ _ B-Concept
+Node _ _ I-Concept
 
 
 

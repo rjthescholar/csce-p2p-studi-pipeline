@@ -1,8 +1,8 @@
-['train_set', 'labeled']|cs1567|lec14
+['train_set', 'labeled_plus_fd']|cs1567|lec14
 -DOCSTART- -X- -X- O
 
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
@@ -15,12 +15,12 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Tracking _ _ B-concept
-an _ _ O
-Object _ _ O
+Tracking _ _ B-Concept
+an _ _ I-Concept
+Object _ _ I-Concept
 
 
  _ _ O
@@ -67,10 +67,10 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Tracking _ _ B-concept
+Tracking _ _ O
 an _ _ O
 Object _ _ O
 Again _ _ O
@@ -95,9 +95,9 @@ point-of-view _ _ O
 
  _ _ O
 The _ _ O
-object _ _ O
-detection _ _ O
-node _ _ O
+object _ _ B-Concept
+detection _ _ I-Concept
+node _ _ I-Concept
 may _ _ O
 say _ _ O
 it _ _ O
@@ -116,12 +116,12 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-Tracking _ _ B-concept
-an _ _ O
-Object _ _ O
+Tracking _ _ B-Concept
+an _ _ I-Concept
+Object _ _ I-Concept
 The _ _ O
 goal _ _ O
 is _ _ O
@@ -152,9 +152,9 @@ point-of-view _ _ O
 
  _ _ O
 The _ _ O
-object _ _ O
-detection _ _ O
-node _ _ O
+object _ _ B-Concept
+detection _ _ I-Concept
+node _ _ I-Concept
 may _ _ O
 say _ _ O
 it _ _ O
@@ -173,12 +173,12 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-Tracking _ _ B-concept
-an _ _ O
-Object _ _ O
+Tracking _ _ B-Concept
+an _ _ I-Concept
+Object _ _ I-Concept
 
 
  _ _ O
@@ -318,19 +318,19 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Tracking _ _ B-concept
-an _ _ O
-Object _ _ O
+Tracking _ _ B-Concept
+an _ _ I-Concept
+Object _ _ I-Concept
 This _ _ O
 simplified _ _ O
 method _ _ O
 is _ _ O
 suitable _ _ O
 for _ _ O
-tracking _ _ B-concept
+tracking _ _ O
 a _ _ O
 stationary _ _ O
 object _ _ O
@@ -369,8 +369,8 @@ Eventually _ _ O
 the _ _ O
 robot _ _ O
 will _ _ O
-loose _ _ B-concept
-track _ _ I-concept
+loose _ _ O
+track _ _ O
 of _ _ O
 the _ _ O
 object _ _ O
@@ -410,8 +410,8 @@ The _ _ O
 robot _ _ O
 will _ _ O
 not _ _ O
-loose _ _ B-concept
-track _ _ I-concept
+loose _ _ O
+track _ _ O
 of _ _ O
 the _ _ O
 object _ _ O
@@ -479,17 +479,17 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Control _ _ B-concept
-System _ _ I-concept
+Control _ _ B-Concept
+System _ _ I-Concept
 
 
  _ _ O
 A _ _ O
-control _ _ B-concept
-system _ _ I-concept
+control _ _ B-Concept
+system _ _ I-Concept
 is _ _ O
 a _ _ O
 device _ _ O
@@ -519,8 +519,8 @@ robot _ _ O
 application _ _ O
 , _ _ O
 the _ _ O
-control _ _ B-concept
-system _ _ I-concept
+control _ _ B-Concept
+system _ _ I-Concept
 is _ _ O
 the _ _ O
 software _ _ O
@@ -556,11 +556,11 @@ right _ _ O
  _ _ O
 Type _ _ O
 of _ _ O
-Control _ _ B-concept
-Systems _ _ I-concept
+Control _ _ B-Concept
+Systems _ _ I-Concept
 : _ _ O
-Open _ _ B-concept
-Loop _ _ I-concept
+Open _ _ B-Concept
+Loop _ _ I-Concept
 : _ _ O
 Output _ _ O
 is _ _ O
@@ -571,8 +571,8 @@ on _ _ O
 the _ _ O
 current _ _ O
 input _ _ O
-Closed _ _ B-concept
-Loop _ _ I-concept
+Closed _ _ B-Concept
+Loop _ _ I-Concept
 : _ _ O
 Current _ _ O
 output _ _ O
@@ -586,7 +586,7 @@ are _ _ O
 made _ _ O
 based _ _ O
 on _ _ O
-feedback _ _ O
+feedback _ _ B-Concept
 
 
  _ _ O
@@ -596,11 +596,11 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Open _ _ B-concept
-Loop _ _ I-concept
+Open _ _ B-Concept
+Loop _ _ I-Concept
 Examples _ _ O
 
 
@@ -653,15 +653,15 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
 Distance _ _ O
 
-Open _ _ B-concept
-Loop _ _ I-concept
+Open _ _ B-Concept
+Loop _ _ I-Concept
 Examples _ _ O
 Lab _ _ O
 ( _ _ O
@@ -716,7 +716,7 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
 
@@ -724,8 +724,8 @@ Control _ _ O
 angular.z _ _ O
 −0.5 _ _ O
 
-Open _ _ B-concept
-Loop _ _ I-concept
+Open _ _ B-Concept
+Loop _ _ I-Concept
 Examples _ _ O
 Lab _ _ O
 ( _ _ O
@@ -790,8 +790,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
@@ -808,13 +808,13 @@ angular.z _ _ O
 angular.z _ _ O
 −0.8 _ _ O
 
-Open _ _ B-concept
-Loop _ _ I-concept
+Open _ _ B-Concept
+Loop _ _ I-Concept
 Examples _ _ O
 Lab _ _ O
 ( _ _ O
 Mouse _ _ O
-Tracker _ _ B-concept
+Tracker _ _ O
 ) _ _ O
 : _ _ O
 For _ _ O
@@ -827,7 +827,7 @@ turn _ _ O
 speed _ _ O
 should _ _ O
 be _ _ O
-proportional _ _ O
+proportional _ _ B-Concept
 to _ _ O
 the _ _ O
 distance _ _ O
@@ -881,8 +881,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
@@ -897,21 +897,21 @@ delta _ _ O
 
 Problems _ _ O
 with _ _ O
-Open _ _ B-concept
-Loop _ _ I-concept
-Control _ _ O
+Open _ _ B-Concept
+Loop _ _ I-Concept
+Control _ _ I-Concept
 
 
  _ _ O
 Problem _ _ O
 with _ _ O
 object _ _ O
-tracking _ _ B-concept
+tracking _ _ O
 and _ _ O
 line _ _ O
 following _ _ O
 application _ _ O
-Oscillation _ _ O
+Oscillation _ _ B-Concept
 : _ _ O
 Hard _ _ O
 to _ _ O
@@ -930,7 +930,7 @@ speed _ _ O
 the _ _ O
 robot _ _ O
 may _ _ O
-oscillate _ _ O
+oscillate _ _ B-Concept
 trying _ _ O
 to _ _ O
 keep _ _ O
@@ -952,7 +952,7 @@ enough _ _ O
 
 
  _ _ O
-Overcompensate _ _ O
+Overcompensate _ _ B-Concept
 : _ _ O
 Over _ _ O
 shoot _ _ O
@@ -960,7 +960,7 @@ the _ _ O
 target _ _ O
 ( _ _ O
 cause _ _ O
-oscillations _ _ O
+oscillations _ _ B-Concept
 ) _ _ O
 
 
@@ -971,23 +971,23 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ O
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Closed _ _ B-concept
-Loop _ _ I-concept
-Control _ _ O
+Closed _ _ B-Concept
+Loop _ _ I-Concept
+Control _ _ I-Concept
 
 
  _ _ O
-Closed _ _ B-concept
-Loop _ _ I-concept
-Control _ _ O
+Closed _ _ B-Concept
+Loop _ _ I-Concept
+Control _ _ I-Concept
 Input _ _ O
 
 
  _ _ O
-Controller _ _ O
+Controller _ _ B-Concept
 
 
  _ _ O
@@ -995,11 +995,11 @@ Output _ _ O
 
 
  _ _ O
-Error _ _ O
+Error _ _ B-Concept
 
 
  _ _ O
-Feedback _ _ O
+Feedback _ _ B-Concept
 
 
  _ _ O
@@ -1013,7 +1013,7 @@ signal _ _ O
 to _ _ O
 minimize _ _ O
 the _ _ O
-error _ _ O
+error _ _ B-Concept
 Example _ _ O
 : _ _ O
 In _ _ O
@@ -1065,19 +1065,19 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
-Proportional-Integral-Derivative _ _ B-concept
-( _ _ I-concept
-PID _ _ I-concept
-) _ _ I-concept
-Controller _ _ O
+Proportional-Integral-Derivative _ _ B-Concept
+( _ _ O
+PID _ _ B-Concept
+) _ _ O
+Controller _ _ B-Concept
 is _ _ O
 a _ _ O
 closed _ _ O
@@ -1090,8 +1090,8 @@ t _ _ O
 ) _ _ O
 be _ _ O
 the _ _ O
-control _ _ O
-value _ _ O
+control _ _ B-Concept
+value _ _ I-Concept
 at _ _ O
 time _ _ O
 t _ _ O
@@ -1110,7 +1110,7 @@ t _ _ O
 ) _ _ O
 be _ _ O
 the _ _ O
-error _ _ O
+error _ _ B-Concept
 at _ _ O
 time _ _ O
 t _ _ O
@@ -1213,15 +1213,15 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ B-Concept
 : _ _ O
 
 
@@ -1280,12 +1280,12 @@ following _ _ O
 
 
  _ _ O
-Proportional _ _ B-concept
+Proportional _ _ B-Concept
 : _ _ O
 magnitude _ _ O
 of _ _ O
 the _ _ O
-error _ _ O
+error _ _ B-Concept
 ( _ _ O
 e _ _ O
 ( _ _ O
@@ -1293,7 +1293,7 @@ t _ _ O
 ) _ _ O
 ) _ _ O
 Rt _ _ O
-Integral _ _ B-concept
+Integral _ _ O
 : _ _ O
 accumulated _ _ O
 magnitude _ _ O
@@ -1310,7 +1310,7 @@ dt _ _ O
 ) _ _ O
 , _ _ O
 and _ _ O
-Differential _ _ B-concept
+Differential _ _ O
 : _ _ O
 speed _ _ O
 of _ _ O
@@ -1354,17 +1354,17 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-Proportional _ _ B-concept
+Proportional _ _ B-Concept
 
 
  _ _ O
-Proportional _ _ B-concept
+Proportional _ _ B-Concept
 portion _ _ O
 of _ _ O
-PID _ _ B-concept
+PID _ _ B-Concept
 Kp _ _ O
 e _ _ O
 ( _ _ O
@@ -1384,7 +1384,7 @@ the _ _ O
 magnitude _ _ O
 of _ _ O
 the _ _ O
-error _ _ O
+error _ _ B-Concept
 The _ _ O
 larger _ _ O
 the _ _ O
@@ -1419,14 +1419,14 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-Differential _ _ B-concept
-Differential _ _ B-concept
+Differential _ _ B-Concept
+Differential _ _ B-Concept
 portion _ _ O
 of _ _ O
-PID _ _ B-concept
+PID _ _ B-Concept
 Kd _ _ O
 
 
@@ -1478,7 +1478,7 @@ the _ _ O
 rate _ _ O
 of _ _ O
 the _ _ O
-error _ _ O
+error _ _ B-Concept
 will _ _ O
 be _ _ O
 different _ _ O
@@ -1497,8 +1497,8 @@ t _ _ O
 ) _ _ O
 To _ _ O
 prevent _ _ O
-over _ _ B-concept
-compensate _ _ I-concept
+over _ _ O
+compensate _ _ O
 , _ _ O
 we _ _ O
 should _ _ O
@@ -1551,11 +1551,11 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
+PID _ _ O
 Control _ _ O
 
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
  _ _ O
@@ -1637,17 +1637,17 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
-Integral _ _ B-concept
+Integral _ _ B-Concept
 
 
  _ _ O
-Integral _ _ B-concept
+Integral _ _ B-Concept
 portion _ _ O
 of _ _ O
-PID _ _ B-concept
+PID _ _ B-Concept
 Z _ _ O
 t _ _ O
 Ki _ _ O
@@ -1668,7 +1668,7 @@ is _ _ O
 the _ _ O
 accumulating _ _ O
 of _ _ O
-error _ _ O
+error _ _ B-Concept
 over _ _ O
 time _ _ O
 This _ _ O
@@ -1682,7 +1682,7 @@ This _ _ O
 also _ _ O
 helps _ _ O
 with _ _ O
-drifting _ _ O
+drifting _ _ B-Concept
 
 
  _ _ O
@@ -1692,8 +1692,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 Find _ _ O
 the _ _ O
@@ -1708,8 +1708,8 @@ Kd _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 Z _ _ O
 t _ _ O
 z _ _ O
@@ -1789,7 +1789,7 @@ until _ _ O
 the _ _ O
 robot _ _ O
 start _ _ O
-oscillating _ _ B-concept
+oscillating _ _ B-Concept
 
 
  _ _ O
@@ -1813,7 +1813,7 @@ until _ _ O
 the _ _ O
 robot _ _ O
 stop _ _ O
-oscillating _ _ B-concept
+oscillating _ _ B-Concept
 
 
  _ _ O
@@ -1831,8 +1831,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-PID _ _ B-concept
-Control _ _ O
+PID _ _ B-Concept
+Control _ _ I-Concept
 
 
 

@@ -1,187 +1,243 @@
-Blob
-Blob
+Blob Detection
+Blob Detection
 Blob
 blob
+computer vision
 blobs
 blob
-Width
-Height
+Blob Detection
 Blob
-Blob
-Blob
+Blob Detection
 Filter
+RGB format
 filter
 Blob
-Blob
 Filter
+Blob Detection
 Blob
-Blob
-Blob
+Detect connected regions
+Blob Detection
 Filter
+computer vision
+YUV format
+luminance
+chrominance
+RGB
+YUV
 
-Pr
-If w
+Problems wit
+If we have two
 etect
 tecte
+s color
+
 s may no
 e sam
  the 
 
-Ap
+Increas
+rroundin
 
-In
+Applications
+ion and Tracking:
+Soccer: Ball 
+
+Integrated W
+Camera
+To detect blob
 an im
+amera of your given 
+d anoth
 e com
-unica
- the 
+unicate wi
+cam
+Capture video 
+ge_raw
+
+To start gsca
+ the follo
 h
 
 A 
+ as
+follows:
+ro
 
-Im
+Image Messag
+mages publish
+d by g
 type
+senso
+e mes
+onsists of th
 
-tion a
-eight 
-of row
-dth (
-f col
-of encod
-endian: 
-s this data 
-byte
-ensi
-r of
-,G,R
+View Image f
+enCV
+W
+reate 
+om camera us
+enCV
+F
+e need
+sage into OpenCV
+fo
+hen, s
 
-Vi
-olor
-geRe
+View Image f
+enCV
+C
+mple (
 
-Vi
-
-cm
-cmvision
-etects b
+cmvision Nod
+cmvision node
+etects blobs 
  from
+ubscribes to 
+your choic
 ected
 pic /
+mvision pack
 e also s
  user to
 d wit
+rongsak K
 
-co
+colorgui
+
+Be
 e runnin
-make sur
+make sure you
+am is r
 g
 To 
 he follo
 ui image
 =/v4l/ca
-ndows
+ra/image_raw is
+published b
+indows will
+gsak K
 
-co
+colorgui
+
+Af
  clickin
 t ar
+e t
 
-co
+colorgui Exa
 e
 First 
 
-co
+colorgui Exa
 e
 Couple
 
-co
+colorgui Exa
 e
 Couple
+umr
+k K
 
-co
-color in
-an be us
+colors.txt
+F
+cmvision n
+color informa
+lor file c
+ists of two
+shown belo
+1:163, 85:
+an be used to
+lors]
+(150
+1:163, 85:
 
-co
+colors.txt
+C
+ider the f
+lors]
+(150
+1:163, 85:
 0000
 be u
 sak K
 
-co
+colors.txt
+
+
+sider the 
+lors]
+(150
+1:163, 85:
+sists of t
+rom
+colorgui
+
 that the
+ so on
 
-cm
+Th
 
-Paramet
+cmvision.lau
+
+Parameters of 
 eded to 
-on.launc
-
-
-to you
-file", c
-on", cha
+ifferent d
 ning
 val
 e the ar
 
-cm
+Your cmvision.
+ should look li
 
-Your cm
- should 
-file" ty
-on" type
-cal_on" 
-hift_on"
-l_radius
-radius_p
-cmvision
+Blobs.msgs
 
-Bl
-ision
-ublishes
-port 
-port Blo
+
+ision node
+ublishes a me
+n, import 
 e of 
 of va
- heade
-e width of 
-age i
-he height of
-mage i
- num
  arra
  of d
-ob
-
-
 b (w
 s) i
 
-Bl
-msgs
-s in
+Blob.msgs
+Bl
+msgs stor
+s informa
 y
 cm
-ust be e
-port Blo
+ust be explic
 messa
  of 
 f va
- pix
-oord
-x co
+ring)
+red: 
 
-Bl
+Blob.msgs
+(0
 
 
-le
-umro
+left
 
-Pr
+r
+
+Problem Solv
 ronmen
 e sam
 e sam
 e from
+ra?
 
-Vi
+
+
+Visualize Bl
+nCV
+
+
+es we 
 ut bl
 s that
 too s
@@ -190,182 +246,183 @@ outsi
 
 
 We 
+ libra
 
-Vi
-port Blo
-orIma
- = I
-bs()
+Visualize Bl
+nCV
+#
+in/env
 
-InfoR
-= Fal
-:
-glo
-obsIn
-blobs
-a
-isB
-oRea
-= Tru
-
-Vi
+Visualize Bl
 nCV
 
 
-obsIn
-rospy
-us=Tr
-updat
-obsIn
-y.Sub
-or no
+n():
+g
 
-Vi
-y.dee
-b in 
+Visualize Bl
+nCV
+d
+():
 :
-cv2
-angle
 
-Bl
-Algo
+
+Blob Detecti
+Algorithm
+
+Given an imag
+to r
+t all
 pixels
 
-Ga
+Gaussian Blu
 One of the mo
+is c
 3x3
 5x5
 7x7
 
+he 
+rou
 
-
-Fi
+Filter
+Filte
 an be 
 one ba
+ll 
+ cm
 UV
 
 Once
+ter
 ed, we
 le
 (
 
-A 
-Algo
+A Blob Detec
+Algorithm
+First, we need
 a ne
 t an
-ht of
-lob wi
 lcul
 1, 1
 
-A 
-Algo
+A Blob Detec
+Algorithm
+Next
 y
 Ad
-1, 2
-
-0
-0
-Algo
+Algorithm
+Repeat until t
 7)
 0
 
 0
 0
-usin
+0
+1
+0
+0
+0
+using OpenCV
+F
+e need
+sing
 function
-The
-lor_image, (
+The f
+and d
 
-Co
-lor_image, (
+Convert RGB 
+CV 
+lie
+ the c
 
-Fi
+Filter Unwan
  Pixel
 ing the 
-lor_image, (
 
-Fi
+Filter Unwan
+ Pixel
+Thumrongsak 
 
-Si
+SimpleBlobDe
+tor()
 
-Ope
-func
+OpenCV suppli
+ the S
+tor() function
+which
 a giv
 
-Si
-Para
-rams
-True
-p
-rity =
-ty = F
- = Fal
-rams
-eate
+SimpleBlobDe
+tor() Parameters
+Firs
 
-Si
+SimpleBlobDe
+tor()
 
-The
+Then we can u
 ed im
-ypoint
-imag
+ypoints = de
+rray([]),
+image)
+
+T
 on, s
+ble
 
-Si
-Resu
+Thum
 
-Si
+SimpleBlobDe
+tor()
+Result from th
 
-The
-func
+SimpleBlobDe
+tor()
+
+The SimpleBlo
+tor() function is go
 how 
+ters are
 
-Bl
-usin
+Blob Detecti
+using Contour
+
 r metho
 ked imag
-contou
+contour is a
 rve joi
 useful t
-iven
+ction 
+is given
 
-Th
+Thu
 
-fi
-dContour
-ple:
-def
-lor_image, (
+findContours
 
-(cnts,
-mage.cop
-(), 
-mage, cn
- blur_i
+findContours(
+example:
+def m
 
-dr
-the draw
-raw all 
+drawContours
+Use the drawCo
+to draw all co
 he
 origi
  other c
+d boundi
+r each conto
 minate 
 re insid
 
-fi
- hierarc
+findContours
+ith hierarchy
+ conto
 in():
 co
-lor_image, (
-mage.cop
-(),
 
-< 100:
-
-
-dr
-r filter
+drawContours
+After filterin
 ose that
 
 

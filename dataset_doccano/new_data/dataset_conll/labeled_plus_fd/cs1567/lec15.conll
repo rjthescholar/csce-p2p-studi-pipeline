@@ -1,8 +1,8 @@
-['train_set', 'labeled']|cs1567|lec15
+['train_set', 'labeled_plus_fd']|cs1567|lec15
 -DOCSTART- -X- -X- O
 
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 tkosiyat@cs.pitt.edu _ _ O
@@ -15,8 +15,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 Multiple _ _ O
 Processes _ _ O
@@ -116,8 +116,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 Multiple _ _ O
 Processes _ _ O
@@ -144,14 +144,14 @@ processes _ _ O
 You _ _ O
 need _ _ O
 a _ _ O
-launch _ _ O
-file _ _ O
+launch _ _ B-Concept
+file _ _ I-Concept
 In _ _ O
 ROS _ _ O
 , _ _ O
 a _ _ O
-launch _ _ O
-file _ _ O
+launch _ _ B-Concept
+file _ _ I-Concept
 is _ _ O
 a _ _ O
 text _ _ O
@@ -160,18 +160,18 @@ with _ _ O
 XML _ _ O
 style _ _ O
 ( _ _ O
-tags _ _ B-concept
+tags _ _ O
 ) _ _ O
 with _ _ O
 the _ _ O
 extension _ _ O
-.launch _ _ B-concept
+.launch _ _ O
 Traditionally _ _ O
 located _ _ O
 in _ _ O
 the _ _ O
-launch _ _ O
-directory _ _ O
+launch _ _ B-Concept
+directory _ _ I-Concept
 under _ _ O
 your _ _ O
 package _ _ O
@@ -211,14 +211,14 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
-Tag _ _ I-concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
+Tag _ _ I-Concept
 
 
  _ _ O
@@ -233,34 +233,34 @@ be _ _ O
 surrounded _ _ O
 by _ _ O
 the _ _ O
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
-tag _ _ I-concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
+tag _ _ I-Concept
 : _ _ O
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
 < _ _ O
 ! _ _ O
 -- _ _ O
 This _ _ O
 is _ _ O
 a _ _ O
-comment _ _ O
+comment _ _ B-Concept
 -- _ _ O
 > _ _ O
 
 
  _ _ O
-< _ _ B-concept
-/launch _ _ I-concept
-> _ _ I-concept
+< _ _ O
+/launch _ _ O
+> _ _ O
 
 
  _ _ O
 A _ _ O
-comment _ _ O
+comment _ _ B-Concept
 must _ _ O
 be _ _ O
 surrounded _ _ O
@@ -283,36 +283,36 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-< _ _ B-concept
-include _ _ I-concept
-> _ _ I-concept
-Tag _ _ I-concept
+< _ _ B-Concept
+include _ _ I-Concept
+> _ _ I-Concept
+Tag _ _ I-Concept
 
 
  _ _ O
 To _ _ O
 let _ _ O
 the _ _ O
-launch _ _ B-concept
-file _ _ I-concept
-execute _ _ O
+launch _ _ B-Concept
+file _ _ I-Concept
+execute _ _ I-Concept
 another _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 , _ _ O
 use _ _ O
 the _ _ O
-< _ _ B-concept
-include _ _ I-concept
-> _ _ I-concept
-tag _ _ I-concept
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
+< _ _ B-Concept
+include _ _ I-Concept
+> _ _ I-Concept
+tag _ _ I-Concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
 : _ _ O
 < _ _ O
 ! _ _ O
@@ -322,8 +322,8 @@ kobuki_node _ _ O
 minimal.launch _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-include _ _ I-concept
+< _ _ O
+include _ _ B-Concept
 file="$ _ _ O
 ( _ _ O
 find _ _ O
@@ -336,9 +336,9 @@ minimal.launch" _ _ O
 / _ _ O
 > _ _ O
 : _ _ O
-< _ _ B-concept
-/launch _ _ I-concept
-> _ _ I-concept
+< _ _ O
+/launch _ _ O
+> _ _ O
 
 
  _ _ O
@@ -371,14 +371,14 @@ node _ _ O
 package _ _ O
 , _ _ O
 the _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 is _ _ O
 located _ _ O
 under _ _ O
 the _ _ O
-launch _ _ O
-directory _ _ O
+launch _ _ B-Concept
+directory _ _ I-Concept
 
 
  _ _ O
@@ -388,14 +388,14 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-< _ _ B-concept
-include _ _ I-concept
-> _ _ I-concept
-Tag _ _ I-concept
+< _ _ B-Concept
+include _ _ I-Concept
+> _ _ I-Concept
+Tag _ _ I-Concept
 For _ _ O
 other _ _ O
 packages _ _ O
@@ -454,8 +454,8 @@ v4l.launch _ _ O
  _ _ O
 Note _ _ O
 that _ _ O
-launch _ _ B-concept
-files _ _ I-concept
+launch _ _ O
+files _ _ O
 of _ _ O
 gscam _ _ O
 package _ _ O
@@ -472,9 +472,9 @@ the _ _ O
 gscam _ _ O
 node _ _ O
 : _ _ O
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
 : _ _ O
 < _ _ O
 ! _ _ O
@@ -484,8 +484,8 @@ gscam _ _ O
 v4l.launch _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-include _ _ I-concept
+< _ _ O
+include _ _ B-Concept
 file="$ _ _ O
 ( _ _ O
 find _ _ O
@@ -496,9 +496,9 @@ v4l.launch" _ _ O
 / _ _ O
 > _ _ O
 : _ _ O
-< _ _ B-concept
-/launch _ _ I-concept
-> _ _ I-concept
+< _ _ O
+/launch _ _ O
+> _ _ O
 
 
  _ _ O
@@ -508,32 +508,32 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-< _ _ B-concept
-node _ _ I-concept
-> _ _ I-concept
-Tag _ _ I-concept
+< _ _ B-Concept
+node _ _ I-Concept
+> _ _ I-Concept
+Tag _ _ I-Concept
 To _ _ O
 let _ _ O
 the _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 execute _ _ O
 a _ _ O
-node _ _ O
+node _ _ B-Concept
 , _ _ O
 use _ _ O
 the _ _ O
-< _ _ B-concept
-node _ _ I-concept
-> _ _ I-concept
-tag _ _ I-concept
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
+< _ _ B-Concept
+node _ _ I-Concept
+> _ _ I-Concept
+tag _ _ I-Concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
 : _ _ O
 < _ _ O
 ! _ _ O
@@ -543,8 +543,8 @@ mypackage _ _ O
 constant_command.py _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-node _ _ I-concept
+< _ _ O
+node _ _ B-Concept
 name="constant_command _ _ O
 " _ _ O
 pkg="mypackage _ _ O
@@ -553,9 +553,9 @@ type="constant_command.py" _ _ O
 / _ _ O
 > _ _ O
 : _ _ O
-< _ _ B-concept
-/launch _ _ I-concept
-> _ _ I-concept
+< _ _ O
+/launch _ _ O
+> _ _ O
 
 
  _ _ O
@@ -623,14 +623,14 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-< _ _ B-concept
-node _ _ I-concept
-> _ _ I-concept
-Tag _ _ I-concept
+< _ _ B-Concept
+node _ _ I-Concept
+> _ _ I-Concept
+Tag _ _ O
 Let _ _ O
 ’s _ _ O
 put _ _ O
@@ -643,9 +643,9 @@ project _ _ O
 ( _ _ O
 p2.launch _ _ O
 ) _ _ O
-< _ _ B-concept
-launch _ _ I-concept
-> _ _ I-concept
+< _ _ B-Concept
+launch _ _ I-Concept
+> _ _ I-Concept
 < _ _ O
 ! _ _ O
 -- _ _ O
@@ -654,8 +654,8 @@ kobuki_node _ _ O
 minimal.launch _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-include _ _ I-concept
+< _ _ O
+include _ _ B-Concept
 file="$ _ _ O
 ( _ _ O
 find _ _ O
@@ -675,8 +675,8 @@ gscam _ _ O
 v4l.launch _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-include _ _ I-concept
+< _ _ O
+include _ _ B-Concept
 file="$ _ _ O
 ( _ _ O
 find _ _ O
@@ -694,8 +694,8 @@ mypackage _ _ O
 cmvision.launch _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-include _ _ I-concept
+< _ _ O
+include _ _ B-Concept
 file="$ _ _ O
 ( _ _ O
 find _ _ O
@@ -713,8 +713,8 @@ mypackage _ _ O
 constant_command.py _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-node _ _ I-concept
+< _ _ O
+node _ _ B-Concept
 name="constant_command _ _ O
 " _ _ O
 pkg="mypackage _ _ O
@@ -730,8 +730,8 @@ mypackage _ _ O
 project2.py _ _ O
 -- _ _ O
 > _ _ O
-< _ _ B-concept
-node _ _ I-concept
+< _ _ O
+node _ _ B-Concept
 name="project2 _ _ O
 " _ _ O
 pkg="mypackage _ _ O
@@ -743,9 +743,9 @@ output="screen _ _ O
 cwd="node" _ _ O
 / _ _ O
 > _ _ O
-< _ _ B-concept
-/launch _ _ I-concept
-> _ _ I-concept
+< _ _ O
+/launch _ _ O
+> _ _ O
 
 
  _ _ O
@@ -753,7 +753,7 @@ Notes _ _ O
 : _ _ O
 If _ _ O
 your _ _ O
-node _ _ O
+node _ _ B-Concept
 needs _ _ O
 to _ _ O
 show _ _ O
@@ -793,12 +793,12 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 The _ _ O
-launch _ _ B-concept
-File _ _ I-concept
+launch _ _ B-Concept
+File _ _ I-Concept
 
 
  _ _ O
@@ -806,8 +806,8 @@ To _ _ O
 use _ _ O
 the _ _ O
 previous _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 : _ _ O
 roslaunch _ _ O
 mypackage _ _ O
@@ -833,8 +833,8 @@ currently _ _ O
 running _ _ O
 , _ _ O
 the _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 will _ _ O
 also _ _ O
 execute _ _ O
@@ -869,8 +869,8 @@ program _ _ O
 executed _ _ O
 by _ _ O
 the _ _ O
-launch _ _ B-concept
-file _ _ I-concept
+launch _ _ B-Concept
+file _ _ I-Concept
 
 
  _ _ O
@@ -880,8 +880,8 @@ tkosiyat@cs.pitt.edu _ _ O
 
 
  _ _ O
-Launch _ _ B-concept
-File _ _ I-concept
+Launch _ _ B-Concept
+File _ _ I-Concept
 
 
 

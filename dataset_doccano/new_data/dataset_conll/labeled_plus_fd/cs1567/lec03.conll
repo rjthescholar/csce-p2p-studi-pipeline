@@ -1,9 +1,9 @@
-['train_set', 'labeled']|cs1567|lec03
+['train_set', 'labeled_plus_fd']|cs1567|lec03
 -DOCSTART- -X- -X- O
 
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -14,22 +14,22 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 
 
  _ _ O
 A _ _ O
-publisher _ _ B-concept
-publishes _ _ B-concept
+publisher _ _ B-Concept
+publishes _ _ B-Concept
 data _ _ O
 to _ _ O
-topics _ _ B-concept
+topics _ _ B-Concept
 A _ _ O
-publisher _ _ B-concept
+publisher _ _ B-Concept
 has _ _ O
 to _ _ O
 have _ _ O
@@ -41,7 +41,7 @@ debugging _ _ O
 purpose _ _ O
 ) _ _ O
 A _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 is _ _ O
 a _ _ O
 named _ _ O
@@ -54,7 +54,7 @@ as _ _ O
 well _ _ O
 ) _ _ O
 A _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 must _ _ O
 have _ _ O
 a _ _ O
@@ -73,9 +73,9 @@ to _ _ O
 care _ _ O
 who _ _ O
 are _ _ O
-subscribers _ _ B-concept
+subscribers _ _ B-Concept
 ( _ _ O
-anonymous _ _ O
+anonymous _ _ B-Concept
 ) _ _ O
 
 
@@ -85,11 +85,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-talker.py _ _ B-concept
+talker.py _ _ O
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -105,13 +105,13 @@ std_msgs.msg _ _ O
 import _ _ O
 String _ _ O
 def _ _ O
-talker _ _ B-concept
+talker _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
 pub _ _ O
 = _ _ O
-rospy.Publisher _ _ B-concept
+rospy.Publisher _ _ O
 ( _ _ O
 ' _ _ O
 chatter _ _ O
@@ -121,17 +121,17 @@ String _ _ O
 , _ _ O
 queue_size=1 _ _ O
 ) _ _ O
-rospy.init_node _ _ B-concept
+rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-talker _ _ B-concept
+talker _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
-rate _ _ B-concept
+rate _ _ O
 = _ _ O
-rospy.Rate _ _ B-concept
+rospy.Rate _ _ O
 ( _ _ O
 10 _ _ O
 ) _ _ O
@@ -184,7 +184,7 @@ _ _ _ O
 : _ _ O
 try _ _ O
 : _ _ O
-talker _ _ B-concept
+talker _ _ O
 ( _ _ O
 ) _ _ O
 except _ _ O
@@ -220,11 +220,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-talker.py _ _ B-concept
+talker.py _ _ O
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -242,7 +242,7 @@ try _ _ O
 to _ _ O
 create _ _ O
 a _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 using _ _ O
 Python _ _ O
 , _ _ O
@@ -281,7 +281,7 @@ be _ _ O
 in _ _ O
 all _ _ O
 Pyhton _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 It _ _ O
 imports _ _ O
 all _ _ O
@@ -330,11 +330,11 @@ Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
-talker.py _ _ B-concept
+talker.py _ _ O
 pub _ _ O
 = _ _ O
-rospy.Publisher _ _ O
-( _ _ O
+rospy.Publisher _ _ B-Concept
+( _ _ B-Concept
 ' _ _ O
 chatter _ _ O
 ' _ _ O
@@ -352,7 +352,7 @@ an _ _ O
 object _ _ O
 of _ _ O
 type _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
 can _ _ O
 be _ _ O
@@ -363,8 +363,8 @@ the _ _ O
 variable _ _ O
 named _ _ O
 pub _ _ O
-rospy.Publisher _ _ B-concept
-( _ _ O
+rospy.Publisher _ _ B-Concept
+( _ _ B-Concept
 ) _ _ O
 is _ _ O
 a _ _ O
@@ -374,7 +374,7 @@ First _ _ O
 Argument _ _ O
 : _ _ O
 The _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 name _ _ O
 ( _ _ O
 chatter _ _ O
@@ -385,7 +385,7 @@ Argument _ _ O
 The _ _ O
 type _ _ O
 of _ _ O
-message _ _ O
+message _ _ B-Concept
 ( _ _ O
 String _ _ O
 ) _ _ O
@@ -396,7 +396,7 @@ The _ _ O
 maximum _ _ O
 number _ _ O
 of _ _ O
-message _ _ O
+message _ _ B-Concept
 that _ _ O
 will _ _ O
 be _ _ O
@@ -404,17 +404,17 @@ stored _ _ O
 in _ _ O
 case _ _ O
 any _ _ O
-subscriber _ _ O
+subscriber _ _ B-Concept
 is _ _ O
 not _ _ O
 receiving _ _ O
 them _ _ O
 fast _ _ O
 enough _ _ O
-rospy.init_node _ _ B-concept
+rospy.init_node _ _ B-Concept
 ( _ _ O
 ' _ _ O
-talker _ _ B-concept
+talker _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -424,27 +424,27 @@ anonymous=True _ _ O
  _ _ O
 Initialize _ _ O
 this _ _ O
-node _ _ O
+node _ _ B-Concept
 with _ _ O
 the _ _ O
 name _ _ O
-talker _ _ B-concept
+talker _ _ O
 Should _ _ O
 be _ _ O
-anonymous _ _ O
+anonymous _ _ B-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-talker.py _ _ B-concept
-rate _ _ B-concept
+talker.py _ _ O
+rate _ _ O
 = _ _ O
-rospy.Rate _ _ B-concept
+rospy.Rate _ _ B-Concept
 ( _ _ O
 10 _ _ O
 ) _ _ O
@@ -458,7 +458,7 @@ an _ _ O
 object _ _ O
 of _ _ O
 type _ _ O
-Rate _ _ B-concept
+Rate _ _ O
 and _ _ O
 can _ _ O
 be _ _ O
@@ -468,8 +468,8 @@ by _ _ O
 the _ _ O
 variable _ _ O
 named _ _ O
-rate _ _ B-concept
-rospy.Rate _ _ B-concept
+rate _ _ O
+rospy.Rate _ _ O
 ( _ _ O
 ) _ _ O
 is _ _ O
@@ -486,7 +486,7 @@ Hertz _ _ O
 
 
  _ _ O
-rate.sleep _ _ B-concept
+rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
 will _ _ O
@@ -497,7 +497,7 @@ which _ _ O
 will _ _ O
 put _ _ O
 this _ _ O
-node _ _ B-concept
+node _ _ O
 to _ _ O
 sleep _ _ O
 for _ _ O
@@ -523,7 +523,7 @@ rospy.is_shutdown _ _ O
 
  _ _ O
 A _ _ O
-loop _ _ O
+loop _ _ B-Concept
 is _ _ O
 a _ _ O
 fairly _ _ O
@@ -532,14 +532,14 @@ rospy _ _ O
 construct _ _ O
 . _ _ O
 This _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 should _ _ O
 stop _ _ O
 if _ _ O
 it _ _ O
 gets _ _ O
 a _ _ O
-signal _ _ O
+signal _ _ B-Concept
 to _ _ O
 shutdown _ _ O
 . _ _ O
@@ -551,7 +551,7 @@ return _ _ O
 True _ _ O
 if _ _ O
 this _ _ O
-node _ _ B-concept
+node _ _ O
 gets _ _ O
 the _ _ O
 signal _ _ O
@@ -565,7 +565,7 @@ to _ _ O
 simply _ _ O
 shut _ _ O
 this _ _ O
-node _ _ O
+node _ _ B-Concept
 down _ _ O
 is _ _ O
 by _ _ O
@@ -576,7 +576,7 @@ the _ _ O
 console _ _ O
 that _ _ O
 this _ _ O
-node _ _ O
+node _ _ B-Concept
 is _ _ O
 executing _ _ O
 . _ _ O
@@ -585,11 +585,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-talker.py _ _ B-concept
+talker.py _ _ O
 
 
  _ _ O
@@ -633,25 +633,25 @@ hello_str _ _ O
  _ _ O
 Print _ _ O
 the _ _ O
-message _ _ O
+message _ _ B-Concept
 on _ _ O
 the _ _ O
 console _ _ O
 screen _ _ O
 that _ _ O
 this _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 is _ _ O
 executing _ _ O
 . _ _ O
 Store _ _ O
 the _ _ O
-message _ _ O
+message _ _ B-Concept
 into _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 ’s _ _ O
-log _ _ O
-file _ _ O
+log _ _ B-Concept
+file _ _ I-Concept
 Can _ _ O
 also _ _ O
 be _ _ O
@@ -672,22 +672,22 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-talker.py _ _ B-concept
-pub.publish _ _ B-concept
+talker.py _ _ O
+pub.publish _ _ O
 ( _ _ O
 hello_str _ _ O
 ) _ _ O
 
 
  _ _ O
-Publish _ _ B-concept
+Publish _ _ B-Concept
 the _ _ O
-message _ _ O
-rate.sleep _ _ B-concept
+message _ _ B-Concept
+rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -695,7 +695,7 @@ rate.sleep _ _ B-concept
  _ _ O
 Put _ _ O
 this _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 to _ _ O
 sleep _ _ O
 for _ _ O
@@ -723,7 +723,7 @@ _ _ _ O
 : _ _ O
 try _ _ O
 : _ _ O
-talker _ _ B-concept
+talker _ _ O
 ( _ _ O
 ) _ _ O
 except _ _ O
@@ -733,12 +733,12 @@ pass _ _ O
 
 
  _ _ O
-Interrupt _ _ O
+Interrupt _ _ B-Concept
 may _ _ O
 be _ _ O
 generated _ _ O
 by _ _ O
-rospy.Rate.sleep _ _ B-concept
+rospy.Rate.sleep _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -749,24 +749,24 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 
  _ _ O
 A _ _ O
-subscriber _ _ B-concept
-subscribes _ _ B-concept
+subscriber _ _ B-Concept
+subscribes _ _ B-Concept
 to _ _ O
 receive _ _ O
 data _ _ O
 from _ _ O
-topics _ _ B-concept
+topics _ _ B-Concept
 A _ _ O
-subscriber _ _ B-concept
+subscriber _ _ B-Concept
 has _ _ O
 to _ _ O
 have _ _ O
@@ -778,7 +778,7 @@ debugging _ _ O
 purpose _ _ O
 ) _ _ O
 A _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 is _ _ O
 a _ _ O
 named _ _ O
@@ -791,7 +791,7 @@ as _ _ O
 well _ _ O
 ) _ _ O
 A _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 must _ _ O
 have _ _ O
 a _ _ O
@@ -810,9 +810,9 @@ to _ _ O
 care _ _ O
 who _ _ O
 are _ _ O
-publishers _ _ B-concept
+publishers _ _ B-Concept
 ( _ _ O
-anonymous _ _ O
+anonymous _ _ B-Concept
 ) _ _ O
 
 
@@ -822,11 +822,11 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-listener.py _ _ B-concept
+listener.py _ _ O
 
 
  _ _ O
@@ -866,19 +866,19 @@ s _ _ O
 data.data _ _ O
 ) _ _ O
 def _ _ O
-listener _ _ B-concept
+listener _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
-rospy.init_node _ _ B-concept
+rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-listener _ _ B-concept
+listener _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
-rospy.Subscriber _ _ B-concept
+rospy.Subscriber _ _ O
 ( _ _ O
 "chatter _ _ O
 " _ _ O
@@ -887,9 +887,9 @@ String _ _ O
 , _ _ O
 callback _ _ O
 ) _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 if _ _ O
 _ _ _ O
 _ _ _ O
@@ -906,7 +906,7 @@ _ _ _ O
 _ _ _ O
 ' _ _ O
 : _ _ O
-listener _ _ B-concept
+listener _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -934,15 +934,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-listener.py _ _ B-concept
-rospy.init_node _ _ B-concept
+listener.py _ _ O
+rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-listener _ _ B-concept
+listener _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -952,15 +952,15 @@ anonymous=True _ _ O
  _ _ O
 Initialize _ _ O
 this _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 with _ _ O
 the _ _ O
 name _ _ O
-listener _ _ B-concept
+listener _ _ O
 Should _ _ O
 be _ _ O
 anonymous _ _ O
-rospy.Subscriber _ _ B-concept
+rospy.Subscriber _ _ O
 ( _ _ O
 "chatter _ _ O
 " _ _ O
@@ -972,17 +972,17 @@ callback _ _ O
 
 
  _ _ O
-Subscribes _ _ B-concept
+Subscribes _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 named _ _ O
 chatter _ _ O
 . _ _ O
 The _ _ O
 type _ _ O
 of _ _ O
-message _ _ O
+message _ _ B-Concept
 is _ _ O
 String _ _ O
 ( _ _ O
@@ -992,35 +992,35 @@ the _ _ O
 same _ _ O
 as _ _ O
 the _ _ O
-publisher _ _ B-concept
+publisher _ _ O
 ) _ _ O
 Every _ _ O
 time _ _ O
 a _ _ O
-message _ _ O
+message _ _ B-Concept
 is _ _ O
 received _ _ O
 , _ _ O
 call _ _ O
 the _ _ O
 function _ _ O
-callback _ _ O
-( _ _ O
-) _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+callback _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 
 
  _ _ O
 Keeps _ _ O
 the _ _ O
-node _ _ O
+node _ _ B-Concept
 from _ _ O
 exiting _ _ O
 until _ _ O
 the _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 has _ _ O
 been _ _ O
 shutdown _ _ O
@@ -1030,23 +1030,23 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 The _ _ O
-callback _ _ O
-( _ _ O
-) _ _ O
-Function _ _ O
+callback _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+Function _ _ I-Concept
 
 
  _ _ O
 This _ _ O
-callback _ _ O
-( _ _ O
-) _ _ O
-function _ _ O
+callback _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
+function _ _ I-Concept
 will _ _ O
 be _ _ O
 called _ _ O
@@ -1055,10 +1055,10 @@ time _ _ O
 it _ _ O
 receives _ _ O
 a _ _ O
-message _ _ O
+message _ _ B-Concept
 on _ _ O
 the _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 chatter _ _ O
 : _ _ O
 def _ _ O
@@ -1131,9 +1131,9 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 messenger.py _ _ O
 
@@ -1141,41 +1141,41 @@ messenger.py _ _ O
  _ _ O
 Sometimes _ _ O
 your _ _ O
-ROS _ _ O
-node _ _ B-concept
+ROS _ _ B-Concept
+node _ _ I-Concept
 may _ _ O
 behave _ _ O
 like _ _ O
 a _ _ O
 middle _ _ O
 man _ _ O
-Subscribes _ _ B-concept
+Subscribes _ _ B-Concept
 to _ _ O
 a _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 to _ _ O
 receive _ _ O
 data _ _ O
 Processes _ _ O
 data _ _ O
-Publishes _ _ B-concept
+Publishes _ _ B-Concept
 new _ _ O
 data _ _ O
 to _ _ O
 a _ _ O
 new _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 
 
  _ _ O
 Example _ _ O
 : _ _ O
-Blob _ _ O
-Detection _ _ O
-Subscribes _ _ B-concept
+Blob _ _ B-Concept
+Detection _ _ I-Concept
+Subscribes _ _ B-Concept
 to _ _ O
 a _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 to _ _ O
 receive _ _ O
 a _ _ O
@@ -1188,7 +1188,7 @@ image _ _ O
 received _ _ O
 , _ _ O
 find _ _ O
-blobs _ _ O
+blobs _ _ B-Concept
 of _ _ O
 a _ _ O
 specific _ _ O
@@ -1201,44 +1201,44 @@ middle _ _ O
 point _ _ O
 of _ _ O
 each _ _ O
-blob _ _ O
-Publishes _ _ B-concept
+blob _ _ B-Concept
+Publishes _ _ B-Concept
 an _ _ O
 array _ _ O
 of _ _ O
 coordinates _ _ O
 of _ _ O
-blobs _ _ O
+blobs _ _ B-Concept
 
 
  _ _ O
 This _ _ O
 type _ _ O
 of _ _ O
-node _ _ B-concept
-subscribes _ _ B-concept
+node _ _ B-Concept
+subscribes _ _ B-Concept
 as _ _ O
 well _ _ O
 as _ _ O
-publishes _ _ B-concept
+publishes _ _ B-Concept
 data _ _ O
 Example _ _ O
 : _ _ O
-messenger _ _ O
-node _ _ B-concept
-subscribe _ _ B-concept
+messenger _ _ B-Concept
+node _ _ I-Concept
+subscribe _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
+topic _ _ O
 chatter1 _ _ O
 and _ _ O
-publish _ _ B-concept
+publish _ _ B-Concept
 the _ _ O
 modified _ _ O
-message _ _ O
+message _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
+topic _ _ O
 chatter2 _ _ O
 
 
@@ -1248,9 +1248,9 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 messenger.py _ _ O
 # _ _ O
@@ -1269,7 +1269,7 @@ import _ _ O
 String _ _ O
 pub _ _ O
 = _ _ O
-rospy.Publisher _ _ B-concept
+rospy.Publisher _ _ O
 ( _ _ O
 ' _ _ O
 chatter2 _ _ O
@@ -1297,7 +1297,7 @@ s _ _ O
 " _ _ O
 % _ _ O
 data.data _ _ O
-pub.publish _ _ B-concept
+pub.publish _ _ O
 ( _ _ O
 messenger_str _ _ O
 ) _ _ O
@@ -1315,7 +1315,7 @@ messenger _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
-rospy.Subscriber _ _ B-concept
+rospy.Subscriber _ _ O
 ( _ _ O
 "chatter1 _ _ O
 " _ _ O
@@ -1324,9 +1324,9 @@ String _ _ O
 , _ _ O
 chatterCallback _ _ O
 ) _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ O
+( _ _ O
+) _ _ O
 if _ _ O
 _ _ _ O
 _ _ _ O
@@ -1354,16 +1354,16 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 Notes _ _ O
 about _ _ O
-Distributed _ _ O
-Computing _ _ O
-ROS _ _ B-concept
-environment _ _ I-concept
+Distributed _ _ B-Concept
+Computing _ _ I-Concept
+ROS _ _ O
+environment _ _ O
 is _ _ O
 similar _ _ O
 to _ _ O
@@ -1374,7 +1374,7 @@ Requires _ _ O
 a _ _ O
 number _ _ O
 of _ _ O
-processes _ _ O
+processes _ _ B-Concept
 to _ _ O
 work _ _ O
 together _ _ O
@@ -1385,7 +1385,7 @@ job _ _ O
 . _ _ O
 If _ _ O
 a _ _ O
-process _ _ O
+process _ _ B-Concept
 dies _ _ O
 , _ _ O
 the _ _ O
@@ -1403,7 +1403,7 @@ make _ _ O
 sure _ _ O
 that _ _ O
 each _ _ O
-process _ _ O
+process _ _ B-Concept
 is _ _ O
 alive _ _ O
 until _ _ O
@@ -1430,7 +1430,7 @@ exit _ _ O
 ) _ _ O
 . _ _ O
 In _ _ O
-ROS _ _ O
+ROS _ _ B-Concept
 , _ _ O
 there _ _ O
 are _ _ O
@@ -1443,7 +1443,7 @@ a _ _ O
 process _ _ O
 alive _ _ O
 . _ _ O
-Loop _ _ B-concept
+Loop _ _ B-Concept
 until _ _ O
 a _ _ O
 job _ _ O
@@ -1461,9 +1461,9 @@ rospy.is_shutdown _ _ O
 
  _ _ O
 Use _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 which _ _ O
 is _ _ O
 almost _ _ O
@@ -1485,15 +1485,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ O
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ O
 
-Loop _ _ B-concept
+Loop _ _ B-Concept
 vs _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 
 
  _ _ O
@@ -1501,11 +1501,11 @@ You _ _ O
 should _ _ O
 use _ _ O
 either _ _ O
-loop _ _ B-concept
+loop _ _ B-Concept
 or _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 but _ _ O
 not _ _ O
 both _ _ O
@@ -1515,7 +1515,7 @@ same _ _ O
 program _ _ O
 . _ _ O
 Use _ _ O
-loop _ _ B-concept
+loop _ _ B-Concept
 when _ _ O
 your _ _ O
 program _ _ O
@@ -1528,8 +1528,8 @@ doing _ _ O
 something _ _ O
 . _ _ O
 Continuously _ _ O
-publishes _ _ B-concept
-messages _ _ O
+publishes _ _ B-Concept
+messages _ _ B-Concept
 . _ _ O
 Continuously _ _ O
 monitors _ _ O
@@ -1540,9 +1540,9 @@ values _ _ O
 
  _ _ O
 Use _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 when _ _ O
 you _ _ O
 program _ _ O
@@ -1564,13 +1564,13 @@ it _ _ O
 is _ _ O
 available _ _ O
 ( _ _ O
-subscriber _ _ B-concept
+subscriber _ _ B-Concept
 ) _ _ O
 , _ _ O
-publish _ _ B-concept
+publish _ _ B-Concept
 just _ _ O
 one _ _ O
-message _ _ O
+message _ _ B-Concept
 , _ _ O
 and _ _ O
 go _ _ O
@@ -1587,11 +1587,11 @@ time _ _ O
 the _ _ O
 choice _ _ O
 of _ _ O
-loop _ _ B-concept
+loop _ _ B-Concept
 vs _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 is _ _ O
 not _ _ O
 clear _ _ O
@@ -1604,15 +1604,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
-Cleanup _ _ B-concept
+Cleanup _ _ B-Concept
 A _ _ O
 process _ _ O
 ( _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 ) _ _ O
 can _ _ O
 be _ _ O
@@ -1626,16 +1626,16 @@ the _ _ O
 kill _ _ O
 signal _ _ O
 from _ _ O
-ROS _ _ O
-master _ _ O
+ROS _ _ B-Concept
+master _ _ I-Concept
 Sometime _ _ O
 , _ _ O
 a _ _ O
 process _ _ O
 needs _ _ O
 to _ _ O
-clean _ _ O
-up _ _ O
+clean _ _ B-Concept
+up _ _ I-Concept
 before _ _ O
 exit _ _ O
 . _ _ O
@@ -1660,19 +1660,19 @@ non-stop _ _ O
 
 
  _ _ O
-Cleanup _ _ B-concept
+Cleanup _ _ B-Concept
 can _ _ O
 be _ _ O
 done _ _ O
 by _ _ O
 registering _ _ O
-shutdown _ _ O
-hooks _ _ O
+shutdown _ _ B-Concept
+hooks _ _ I-Concept
 : _ _ O
 def _ _ O
-cleanup _ _ B-concept
-( _ _ O
-) _ _ O
+cleanup _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 : _ _ O
 # _ _ O
 stop _ _ O
@@ -1680,7 +1680,7 @@ the _ _ O
 robot _ _ O
 rospy.on_shutdown _ _ O
 ( _ _ O
-cleanup _ _ B-concept
+cleanup _ _ O
 ) _ _ O
 
 
@@ -1698,15 +1698,15 @@ will _ _ O
 call _ _ O
 the _ _ O
 function _ _ O
-cleanup _ _ B-concept
-( _ _ O
-) _ _ O
+cleanup _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 first _ _ O
 and _ _ O
 then _ _ O
 exit _ _ O
 A _ _ O
-node _ _ B-concept
+node _ _ O
 can _ _ O
 manually _ _ O
 shut _ _ O
@@ -1729,17 +1729,17 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 About _ _ O
-Callback _ _ O
-Functions _ _ O
+Callback _ _ B-Concept
+Functions _ _ I-Concept
 Recall _ _ O
 the _ _ O
-listener _ _ B-concept
-node _ _ B-concept
+listener _ _ O
+node _ _ O
 . _ _ O
 # _ _ O
 ! _ _ O
@@ -1777,19 +1777,19 @@ s _ _ O
 data.data _ _ O
 ) _ _ O
 def _ _ O
-listener _ _ B-concept
+listener _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
-rospy.init_node _ _ B-concept
+rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-listener _ _ B-concept
+listener _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
 ) _ _ O
-rospy.Subscriber _ _ B-concept
+rospy.Subscriber _ _ O
 ( _ _ O
 "chatter _ _ O
 " _ _ O
@@ -1798,9 +1798,9 @@ String _ _ O
 , _ _ O
 callback _ _ O
 ) _ _ O
-rospy.spin _ _ B-concept
-( _ _ I-concept
-) _ _ I-concept
+rospy.spin _ _ O
+( _ _ O
+) _ _ O
 if _ _ O
 _ _ _ O
 _ _ _ O
@@ -1817,7 +1817,7 @@ _ _ _ O
 _ _ _ O
 ' _ _ O
 : _ _ O
-listener _ _ B-concept
+listener _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -1825,19 +1825,19 @@ listener _ _ B-concept
  _ _ O
 The _ _ O
 function _ _ O
-callback _ _ O
-( _ _ O
-) _ _ O
+callback _ _ B-Concept
+( _ _ I-Concept
+) _ _ I-Concept
 will _ _ O
 be _ _ O
 called _ _ O
 every _ _ O
 time _ _ O
 a _ _ O
-message _ _ O
+message _ _ B-Concept
 from _ _ O
 the _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 chatter _ _ O
 is _ _ O
 received _ _ O
@@ -1850,20 +1850,20 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 About _ _ O
-Callback _ _ O
-Functions _ _ O
+Callback _ _ B-Concept
+Functions _ _ I-Concept
 Rule _ _ O
 of _ _ O
 Thumb _ _ O
 : _ _ O
 A _ _ O
-callback _ _ O
-function _ _ O
+callback _ _ B-Concept
+function _ _ I-Concept
 should _ _ O
 be _ _ O
 as _ _ O
@@ -1892,10 +1892,10 @@ not _ _ O
 be _ _ O
 in _ _ O
 the _ _ O
-callback _ _ O
-function _ _ O
+callback _ _ B-Concept
+function _ _ I-Concept
 The _ _ O
-callback _ _ O
+callback _ _ B-Concept
 should _ _ O
 simply _ _ O
 update _ _ O
@@ -1959,23 +1959,23 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ O
 and _ _ O
 Subscriber _ _ O
 
-rostopic _ _ B-concept
-rostopic _ _ I-concept
-is _ _ B-concept
-a _ _ I-concept
+rostopic _ _ B-Concept
+rostopic _ _ I-Concept
+is _ _ B-Concept
+a _ _ I-Concept
 tool _ _ O
 related _ _ O
 to _ _ O
-topics _ _ O
-in _ _ O
-ROS _ _ O
-environment _ _ B-concept
-It _ _ I-concept
-allows _ _ I-concept
+topics _ _ B-Concept
+in _ _ I-Concept
+ROS _ _ I-Concept
+environment _ _ B-Concept
+It _ _ O
+allows _ _ O
 us _ _ O
 to _ _ O
 perform _ _ O
@@ -1986,47 +1986,47 @@ List _ _ O
 the _ _ O
 current _ _ O
 active _ _ O
-topics _ _ B-concept
-Show _ _ I-concept
+topics _ _ B-Concept
+Show _ _ I-Concept
 messages _ _ O
-publish _ _ B-concept
-to _ _ I-concept
-a _ _ I-concept
+publish _ _ B-Concept
+to _ _ I-Concept
+a _ _ I-Concept
 specific _ _ O
-topic _ _ B-concept
-on _ _ I-concept
-screen _ _ I-concept
-Publish _ _ B-concept
-a _ _ I-concept
-message _ _ I-concept
+topic _ _ B-Concept
+on _ _ I-Concept
+screen _ _ I-Concept
+Publish _ _ B-Concept
+a _ _ I-Concept
+message _ _ I-Concept
 to _ _ O
 a _ _ O
 specific _ _ O
-topic _ _ B-concept
-Show _ _ I-concept
+topic _ _ B-Concept
+Show _ _ I-Concept
 information _ _ O
 about _ _ O
 a _ _ O
 specific _ _ O
-topic _ _ B-concept
-Show _ _ I-concept
+topic _ _ B-Concept
+Show _ _ I-Concept
 type _ _ O
 of _ _ O
 a _ _ O
 specific _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 
 
- _ _ I-concept
-Suppose _ _ I-concept
+ _ _ I-Concept
+Suppose _ _ I-Concept
 we _ _ O
 run _ _ O
 the _ _ O
-talker _ _ B-concept
-and _ _ I-concept
-listener _ _ B-concept
-node _ _ I-concept
-using _ _ B-concept
+talker _ _ O
+and _ _ O
+listener _ _ O
+node _ _ O
+using _ _ B-Concept
 the _ _ O
 following _ _ O
 commands _ _ O
@@ -2036,29 +2036,29 @@ separate _ _ O
 console _ _ O
 screen _ _ O
 : _ _ O
-roscore _ _ B-concept
-rosrun _ _ I-concept
+roscore _ _ O
+rosrun _ _ O
 mypackage _ _ O
-talker.py _ _ B-concept
-rosrun _ _ I-concept
+talker.py _ _ O
+rosrun _ _ O
 mypackage _ _ O
-listener.py _ _ B-concept
+listener.py _ _ O
 
 
- _ _ I-concept
+ _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
-and _ _ I-concept
+Publisher _ _ B-Concept
+and _ _ I-Concept
 Subscriber _ _ O
 
-rostopic _ _ B-concept
-Use _ _ I-concept
-rostopic _ _ B-concept
-list _ _ I-concept
+rostopic _ _ B-Concept
+Use _ _ I-Concept
+rostopic _ _ B-Concept
+list _ _ I-Concept
 
 
  _ _ O
@@ -2066,9 +2066,9 @@ to _ _ O
 list _ _ O
 the _ _ O
 active _ _ O
-topics _ _ B-concept
-on _ _ I-concept
-the _ _ I-concept
+topics _ _ B-Concept
+on _ _ I-Concept
+the _ _ I-Concept
 console _ _ O
 screen _ _ O
 . _ _ O
@@ -2079,44 +2079,44 @@ screen _ _ O
 
  _ _ O
 Use _ _ O
-rostopic _ _ B-concept
-echo _ _ I-concept
+rostopic _ _ B-Concept
+echo _ _ I-Concept
 chatter _ _ O
 
 
  _ _ O
 to _ _ O
 show _ _ O
-messages _ _ O
-published _ _ B-concept
-to _ _ I-concept
-the _ _ I-concept
-topic _ _ B-concept
-chatter _ _ I-concept
+messages _ _ B-Concept
+published _ _ I-Concept
+to _ _ B-Concept
+the _ _ I-Concept
+topic _ _ B-Concept
+chatter _ _ I-Concept
 data _ _ O
 : _ _ O
 hello _ _ O
 from _ _ O
-talker _ _ B-concept
-1463668746.93 _ _ I-concept
+talker _ _ O
+1463668746.93 _ _ O
 --data _ _ O
 : _ _ O
 hello _ _ O
 from _ _ O
-talker _ _ B-concept
-1463668747.03 _ _ I-concept
+talker _ _ O
+1463668747.03 _ _ O
 --data _ _ O
 : _ _ O
 hello _ _ O
 from _ _ O
-talker _ _ B-concept
-1463668747.23 _ _ I-concept
+talker _ _ O
+1463668747.23 _ _ O
 --data _ _ O
 : _ _ O
 hello _ _ O
 from _ _ O
-talker _ _ B-concept
-1463668747.33 _ _ I-concept
+talker _ _ O
+1463668747.33 _ _ O
 -- _ _ O
 : _ _ O
 Thumrongsak _ _ O
@@ -2124,14 +2124,14 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
-and _ _ I-concept
+Publisher _ _ B-Concept
+and _ _ I-Concept
 Subscriber _ _ O
 
-rostopic _ _ B-concept
-Use _ _ I-concept
-rostopic _ _ B-concept
-info _ _ I-concept
+rostopic _ _ B-Concept
+Use _ _ I-Concept
+rostopic _ _ B-Concept
+info _ _ I-Concept
 chatter _ _ O
 
 
@@ -2141,17 +2141,17 @@ show _ _ O
 information _ _ O
 about _ _ O
 the _ _ O
-topic _ _ B-concept
-chatter _ _ I-concept
+topic _ _ B-Concept
+chatter _ _ I-Concept
 Type _ _ O
 : _ _ O
 std_msgs _ _ O
 / _ _ O
 String _ _ O
-Publishers _ _ B-concept
-: _ _ I-concept
-* _ _ I-concept
-/talker_4544_1463668570440 _ _ I-concept
+Publishers _ _ O
+: _ _ O
+* _ _ O
+/talker_4544_1463668570440 _ _ O
 ( _ _ O
 http _ _ O
 : _ _ O
@@ -2179,8 +2179,8 @@ r2-d2 _ _ O
 
  _ _ O
 Use _ _ O
-rostopic _ _ O
-type _ _ O
+rostopic _ _ B-Concept
+type _ _ I-Concept
 chatter _ _ O
 
 
@@ -2191,8 +2191,8 @@ the _ _ O
 type _ _ O
 of _ _ O
 the _ _ O
-topic _ _ O
-chatter _ _ O
+topic _ _ B-Concept
+chatter _ _ I-Concept
 std_msgs _ _ O
 / _ _ O
 String _ _ O
@@ -2212,8 +2212,8 @@ to _ _ O
 the _ _ O
 topic _ _ O
 chatter _ _ O
-rostopic _ _ O
-pub _ _ O
+rostopic _ _ B-Concept
+pub _ _ I-Concept
 /chatter _ _ O
 std_msgs _ _ O
 / _ _ O
@@ -2228,18 +2228,18 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ O
-and _ _ O
-Subscriber _ _ O
+Publisher _ _ B-Concept
+and _ _ I-Concept
+Subscriber _ _ B-Concept
 
-Workspace _ _ O
-Directory _ _ O
+Workspace _ _ B-Concept
+Directory _ _ I-Concept
 
 
  _ _ O
 Your _ _ O
-workspace _ _ O
-directory _ _ O
+workspace _ _ B-Concept
+directory _ _ I-Concept
 is _ _ O
 /home _ _ O
 / _ _ O
@@ -2325,9 +2325,9 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Publisher _ _ B-concept
+Publisher _ _ B-Concept
 and _ _ O
-Subscriber _ _ B-concept
+Subscriber _ _ B-Concept
 
 
 

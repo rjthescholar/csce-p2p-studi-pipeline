@@ -1,212 +1,146 @@
 Kobuki Node
 Kobuki Node
 Kobuki Node
-kobuki node
-Kobuki
-Bumper
+kobuki node 
+Kobuki robot
+Motors
+Bumper switches
 Buttons
 LEDs
+robot
+communicate
+with
 kobuki node
 kobuki node
 kobuki node
 kobuki_node
 odometry
 Kobuki Node
-Kobuki’s
-kobuki node
-sound
-led
-led
-kobuki node
-bumper
-button
-kobuki node
-Kobuki Node
-Sounds
 Kobuki
-Sound
-sound
-Sound
-kobuki
-Sound
-Sound
-button
+kobuki node
+kobuki node
+kobuki node
 Kobuki Node
 Sounds
-kobuki
-Sound
-Sounds
-sound
-sound
+sounds
+type Sound
+type Sound
 Sound
 Sound
+Kobuki Node
 Sounds
 Kobuki Node
 LEDs
 LEDs
-Kobuki
+Kobuki robot
 LED1
 LED2
 LED
-Led
+type Led
 LED1
-led1
 LED2
-led2
+type Led
 Led
-kobuki
 Led
 Kobuki Node
 LEDs
-kobuki
 Led
-leds
-led1
-Led
-led2
-Led
-led
-Led
-led
-led
-LEDs
 Kobuki Node
 Bumpers
 bumpers
-Kobuki
+Kobuki robot
 bumper
-Bumper
+type BumperEvent
+type BumperEvent
+BumperEvent
+BumperEvent
 bumper
-Bumper
-kobuki
-Bumper
-Bumper
-bumper
-bumper
-Bumper
-bumper
-Kobuki Node
+BumperEvent
 Bumpers
-kobuki
-Bumper
-bumper
-bumper
-bumper
-bumper
-bumper
-bumper
-bumper
-bumper
-bumper
-Bumper
-bumper
-bumper
+BumperEvent
+BumperEvent
 Kobuki Node
 Buttons
-Kobuki
+Kobuki robot
 buttons
 button
-Button
+ButtonEvent
+type ButtonEvent
+ButtonEvent
+type ButtonEvent
 button
-Button
-kobuki
-Button
-Button
-button
-button
-Button
-bumper
+ButtonEvent
 Kobuki Node
 Button
-kobuki
-Button
-button
-button
-button
-bumper
-button
-button
-Button
-button
-bumper
+ButtonEvent
 Kobuki Node
 Odometry
-Kobuki
+Kobuki robot
+position
+orientation
+position.x
+orientation.z
+position.y
 Kobuki
 odometry
 Kobuki Node
 Odometry
-Odometry
-Odometry
+Odometry message
 pose
 pose
 pose
 pose
+position
+orientation
 quaternion
-Kobuki
-pose
-pose
-pose
-pose
-pose
-pose
+Kobuki robot
 Kobuki Node
 Odometry
-Kobuki’s
+Kobuki
 odometry
 quaternion
 Quaternion
 quaternion
+roll
+pitch
+yaw
 Kobuki
- robot
+yaw
+yaw
+yaw
+arc
 ode
 
 180
 𝜋
 
-Odometry
+Odomet
 Often ti
-to 0
+ odometry to 0
 Thi
+sage to
+/mobi
+ase/commands/reset_odometry
 
 You mus
-,
-Empty,
 de
 
 Odomet
 Topic: /
-msg
-If y
-.pos
-tion
-.pos
-tion
-.ori
-ntat
-.ori
-ntat
+pose:
+om
+as follo
+of the r
+of the r
+n).
+
+Thumr
 de
 
 odom
 #
+sr/b
 from tf.
-n to degre
-.ori
-ntat
-.ori
-ntat
-.ori
-ntat
-.ori
-ntat
-n(q)
-# rol
-.pos
-tion
-.pos
-tion
- odomCal
 de
 
 

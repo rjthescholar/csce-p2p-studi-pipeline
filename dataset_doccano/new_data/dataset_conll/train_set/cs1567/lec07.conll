@@ -1,8 +1,8 @@
-['train_set', 'labeled']|cs1567|lec07
+['train_set', 'labeled_plus_fd']|cs1567|lec07
 -DOCSTART- -X- -X- O
 
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -13,51 +13,51 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 The _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
-communicates _ _ O
+kobuki _ _ B-Concept
+node _ _ I-Concept
+communicates _ _ I-Concept
 with _ _ O
 a _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 via _ _ O
 USB _ _ O
 Provide _ _ O
 hardware _ _ O
 abstractions _ _ O
-Motors _ _ O
+Motors _ _ B-Concept
 with _ _ O
 synchronization _ _ O
-Bumper _ _ B-concept
-switches _ _ O
-Buttons _ _ B-concept
-LEDs _ _ B-concept
+Bumper _ _ B-Concept
+switches _ _ I-Concept
+Buttons _ _ B-Concept
+LEDs _ _ B-Concept
 
 
  _ _ O
 To _ _ O
 control _ _ O
 a _ _ O
-robot _ _ O
+robot _ _ B-Concept
 , _ _ O
 simply _ _ O
-communicate _ _ O
-with _ _ O
+communicate _ _ B-Concept
+with _ _ B-Concept
 the _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 Publish _ _ O
 commands _ _ O
 to _ _ O
 the _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 Subscribe _ _ O
 for _ _ O
 information _ _ O
@@ -70,8 +70,8 @@ robot _ _ O
 To _ _ O
 start _ _ O
 a _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 , _ _ O
 use _ _ O
 the _ _ O
@@ -79,7 +79,7 @@ following _ _ O
 command _ _ O
 : _ _ O
 roslaunch _ _ O
-kobuki_node _ _ B-concept
+kobuki_node _ _ B-Concept
 minimal.launch _ _ O
 
 
@@ -92,7 +92,7 @@ of _ _ O
 the _ _ O
 robot _ _ O
 ’s _ _ O
-odometry _ _ B-concept
+odometry _ _ B-Concept
 , _ _ O
 the _ _ O
 robot _ _ O
@@ -116,19 +116,19 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Kobuki _ _ B-concept
-’s _ _ I-concept
+Kobuki _ _ B-Concept
+’s _ _ O
 Subscriptions _ _ O
 and _ _ O
 Publications _ _ O
 By _ _ O
 default _ _ O
 the _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 subscribes _ _ O
 to _ _ O
 the _ _ O
@@ -144,17 +144,17 @@ reset_odometry _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-sound _ _ B-concept
+sound _ _ O
 /mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led1 _ _ B-concept
+led1 _ _ O
 /mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led2 _ _ B-concept
+led2 _ _ O
 /mobile_base _ _ O
 / _ _ O
 commands _ _ O
@@ -176,8 +176,8 @@ control _ _ O
 the _ _ O
 robot _ _ O
 The _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 publishes _ _ O
 to _ _ O
 the _ _ O
@@ -189,12 +189,12 @@ topic _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 /mobile_base _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-button _ _ B-concept
+button _ _ O
 
 
  _ _ O
@@ -217,8 +217,8 @@ more _ _ O
 topics _ _ O
 related _ _ O
 to _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 but _ _ O
 we _ _ O
 will _ _ O
@@ -234,26 +234,26 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Sounds _ _ B-concept
+Sounds _ _ B-Concept
 A _ _ O
-Kobuki _ _ B-concept
+Kobuki _ _ O
 robot _ _ O
 has _ _ O
 an _ _ O
 ability _ _ O
 to _ _ O
 make _ _ O
-sounds _ _ O
+sounds _ _ B-Concept
 Simply _ _ O
 publish _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Sound _ _ B-concept
+type _ _ B-Concept
+Sound _ _ I-Concept
 to _ _ O
 the _ _ O
 topic _ _ O
@@ -262,7 +262,7 @@ named _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-sound _ _ B-concept
+sound _ _ O
 
 
  _ _ O
@@ -271,8 +271,8 @@ recognize _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Sound _ _ B-concept
+type _ _ B-Concept
+Sound _ _ I-Concept
 , _ _ O
 we _ _ O
 need _ _ O
@@ -280,13 +280,13 @@ to _ _ O
 import _ _ O
 it _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-Sound _ _ B-concept
+Sound _ _ B-Concept
 
 
  _ _ O
-Sound _ _ B-concept
+Sound _ _ B-Concept
 message _ _ O
 consists _ _ O
 of _ _ O
@@ -322,7 +322,7 @@ start _ _ O
 3 _ _ O
 - _ _ O
 press _ _ O
-button _ _ B-concept
+button _ _ O
 4 _ _ O
 - _ _ O
 error _ _ O
@@ -340,10 +340,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Sounds _ _ B-concept
+Sounds _ _ B-Concept
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -355,18 +355,18 @@ python _ _ O
 import _ _ O
 rospy _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-Sound _ _ B-concept
+Sound _ _ O
 def _ _ O
-sendSounds _ _ B-concept
+sendSounds _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
 rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-sound_sender _ _ B-concept
+sound_sender _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -381,10 +381,10 @@ mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-sound _ _ B-concept
+sound _ _ O
 ' _ _ O
 , _ _ O
-Sound _ _ B-concept
+Sound _ _ O
 , _ _ O
 queue_size=10 _ _ O
 ) _ _ O
@@ -399,7 +399,7 @@ pub.get_num_connections _ _ O
 pass _ _ O
 s _ _ O
 = _ _ O
-Sound _ _ B-concept
+Sound _ _ O
 ( _ _ O
 ) _ _ O
 for _ _ O
@@ -441,7 +441,7 @@ _ _ _ O
 : _ _ O
 try _ _ O
 : _ _ O
-sendSounds _ _ B-concept
+sendSounds _ _ O
 ( _ _ O
 ) _ _ O
 except _ _ O
@@ -456,52 +456,52 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-LEDs _ _ B-concept
+LEDs _ _ B-Concept
 There _ _ O
 are _ _ O
 two _ _ O
-LEDs _ _ B-concept
+LEDs _ _ B-Concept
 on _ _ O
 a _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 named _ _ O
-LED1 _ _ B-concept
+LED1 _ _ B-Concept
 and _ _ O
-LED2 _ _ B-concept
+LED2 _ _ B-Concept
 To _ _ O
 control _ _ O
 an _ _ O
-LED _ _ B-concept
+LED _ _ B-Concept
 , _ _ O
 simply _ _ O
 publish _ _ O
 a _ _ O
 message _ _ O
-type _ _ O
-Led _ _ B-concept
+type _ _ B-Concept
+Led _ _ I-Concept
 to _ _ O
 its _ _ O
 associate _ _ O
 topic _ _ O
 : _ _ O
-LED1 _ _ B-concept
+LED1 _ _ B-Concept
 : _ _ O
 /mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led1 _ _ B-concept
-LED2 _ _ B-concept
+led1 _ _ O
+LED2 _ _ B-Concept
 : _ _ O
 /mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led2 _ _ B-concept
+led2 _ _ O
 
 
  _ _ O
@@ -510,8 +510,8 @@ recognize _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-Led _ _ B-concept
+type _ _ B-Concept
+Led _ _ I-Concept
 , _ _ O
 we _ _ O
 need _ _ O
@@ -519,13 +519,13 @@ to _ _ O
 import _ _ O
 it _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-Led _ _ B-concept
+Led _ _ B-Concept
 
 
  _ _ O
-Led _ _ O
+Led _ _ B-Concept
 message _ _ O
 consists _ _ O
 of _ _ O
@@ -562,10 +562,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-LEDs _ _ B-concept
+LEDs _ _ B-Concept
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -577,9 +577,9 @@ python _ _ O
 import _ _ O
 rospy _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-Led _ _ B-concept
+Led _ _ B-Concept
 def _ _ O
 sendLEDs _ _ O
 ( _ _ O
@@ -588,7 +588,7 @@ sendLEDs _ _ O
 rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-leds_sender _ _ B-concept
+leds_sender _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -603,10 +603,10 @@ mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led1 _ _ B-concept
+led1 _ _ O
 ' _ _ O
 , _ _ O
-Led _ _ B-concept
+Led _ _ O
 , _ _ O
 queue_size=10 _ _ O
 ) _ _ O
@@ -620,10 +620,10 @@ mobile_base _ _ O
 / _ _ O
 commands _ _ O
 / _ _ O
-led2 _ _ B-concept
+led2 _ _ O
 ' _ _ O
 , _ _ O
-Led _ _ B-concept
+Led _ _ O
 , _ _ O
 queue_size=10 _ _ O
 ) _ _ O
@@ -643,9 +643,9 @@ pub2.get_num_connections _ _ O
 0 _ _ O
 : _ _ O
 pass _ _ O
-led _ _ B-concept
+led _ _ O
 = _ _ O
-Led _ _ B-concept
+Led _ _ O
 ( _ _ O
 ) _ _ O
 x _ _ O
@@ -657,7 +657,7 @@ x _ _ O
 = _ _ O
 -1 _ _ O
 : _ _ O
-led.value _ _ B-concept
+led.value _ _ O
 = _ _ O
 x _ _ O
 pub1.publish _ _ O
@@ -682,7 +682,7 @@ x _ _ O
 = _ _ O
 -1 _ _ O
 : _ _ O
-led.value _ _ B-concept
+led.value _ _ O
 = _ _ O
 x _ _ O
 pub2.publish _ _ O
@@ -716,7 +716,7 @@ _ _ _ O
 : _ _ O
 try _ _ O
 : _ _ O
-sendLEDs _ _ B-concept
+sendLEDs _ _ O
 ( _ _ O
 ) _ _ O
 except _ _ O
@@ -731,18 +731,18 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Bumpers _ _ B-concept
+Bumpers _ _ B-Concept
 There _ _ O
 are _ _ O
 three _ _ O
-bumpers _ _ B-concept
+bumpers _ _ B-Concept
 on _ _ O
 a _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 , _ _ O
 left _ _ O
 , _ _ O
@@ -752,7 +752,7 @@ and _ _ O
 right _ _ O
 If _ _ O
 a _ _ O
-bumper _ _ B-concept
+bumper _ _ B-Concept
 is _ _ O
 pressed _ _ O
 or _ _ O
@@ -764,8 +764,8 @@ publish _ _ O
 a _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-BumperEvent _ _ B-concept
+type _ _ B-Concept
+BumperEvent _ _ I-Concept
 to _ _ O
 the _ _ O
 topic _ _ O
@@ -774,7 +774,7 @@ topic _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 
 
  _ _ O
@@ -784,25 +784,25 @@ import _ _ O
 the _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-BumperEvent _ _ B-concept
+type _ _ B-Concept
+BumperEvent _ _ I-Concept
 as _ _ O
 usual _ _ O
 : _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-BumperEvent _ _ B-concept
+BumperEvent _ _ B-Concept
 
 
  _ _ O
-BumperEvent _ _ B-concept
+BumperEvent _ _ B-Concept
 consists _ _ O
 of _ _ O
 two _ _ O
 components _ _ O
 : _ _ O
-bumper _ _ B-concept
+bumper _ _ B-Concept
 with _ _ O
 the _ _ O
 following _ _ O
@@ -855,22 +855,22 @@ mobile_base _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 ' _ _ O
 , _ _ O
-BumperEvent _ _ B-concept
+BumperEvent _ _ B-Concept
 , _ _ O
-bumperCallback _ _ B-concept
+bumperCallback _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ O
+Node _ _ O
 
-Bumpers _ _ B-concept
+Bumpers _ _ B-Concept
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -882,11 +882,11 @@ python _ _ O
 import _ _ O
 rospy _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-BumperEvent _ _ B-concept
+BumperEvent _ _ B-Concept
 def _ _ O
-bumperCallback _ _ B-concept
+bumperCallback _ _ O
 ( _ _ O
 data _ _ O
 ) _ _ O
@@ -896,7 +896,7 @@ str _ _ O
 " _ _ O
 " _ _ O
 if _ _ O
-data.bumper _ _ B-concept
+data.bumper _ _ O
 = _ _ O
 = _ _ O
 0 _ _ O
@@ -907,11 +907,11 @@ str _ _ O
 + _ _ O
 " _ _ O
 Left _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 is _ _ O
 " _ _ O
 elif _ _ O
-data.bumper _ _ B-concept
+data.bumper _ _ O
 = _ _ O
 = _ _ O
 1 _ _ O
@@ -922,7 +922,7 @@ str _ _ O
 + _ _ O
 " _ _ O
 Center _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 is _ _ O
 " _ _ O
 else _ _ O
@@ -933,7 +933,7 @@ str _ _ O
 + _ _ O
 " _ _ O
 Right _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 is _ _ O
 " _ _ O
 if _ _ O
@@ -965,14 +965,14 @@ rospy.loginfo _ _ O
 str _ _ O
 ) _ _ O
 def _ _ O
-bumperExample _ _ B-concept
+bumperExample _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
 rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-bumper_example _ _ B-concept
+bumper_example _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -985,12 +985,12 @@ mobile_base _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-bumper _ _ B-concept
+bumper _ _ O
 ' _ _ O
 , _ _ O
-BumperEvent _ _ B-concept
+BumperEvent _ _ B-Concept
 , _ _ O
-bumperCallback _ _ B-concept
+bumperCallback _ _ O
 ) _ _ O
 rospy.spin _ _ O
 ( _ _ O
@@ -1011,7 +1011,7 @@ _ _ _ O
 _ _ _ O
 ' _ _ O
 : _ _ O
-bumperExample _ _ B-concept
+bumperExample _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -1022,16 +1022,16 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Buttons _ _ B-concept
-Kobuki _ _ B-concept
-robot _ _ O
+Buttons _ _ B-Concept
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 consists _ _ O
 of _ _ O
 three _ _ O
-buttons _ _ B-concept
+buttons _ _ B-Concept
 , _ _ O
 B0 _ _ O
 , _ _ O
@@ -1041,7 +1041,7 @@ and _ _ O
 B2 _ _ O
 If _ _ O
 a _ _ O
-button _ _ B-concept
+button _ _ B-Concept
 is _ _ O
 pressed _ _ O
 or _ _ O
@@ -1051,7 +1051,7 @@ a _ _ O
 message _ _ O
 of _ _ O
 type _ _ O
-ButtonEvent _ _ B-concept
+ButtonEvent _ _ B-Concept
 will _ _ O
 be _ _ O
 published _ _ O
@@ -1062,7 +1062,7 @@ topic _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-button _ _ B-concept
+button _ _ O
 
 
  _ _ O
@@ -1072,30 +1072,30 @@ must _ _ O
 import _ _ O
 the _ _ O
 message _ _ O
-type _ _ O
-ButtonEvent _ _ B-concept
+type _ _ B-Concept
+ButtonEvent _ _ I-Concept
 as _ _ O
 shown _ _ O
 below _ _ O
 : _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-ButtonEvent _ _ B-concept
+ButtonEvent _ _ B-Concept
 
 
  _ _ O
 The _ _ O
 message _ _ O
 of _ _ O
-type _ _ O
-ButtonEvent _ _ B-concept
+type _ _ B-Concept
+ButtonEvent _ _ I-Concept
 consists _ _ O
 of _ _ O
 two _ _ O
 components _ _ O
 : _ _ O
-button _ _ B-concept
+button _ _ B-Concept
 with _ _ O
 the _ _ O
 following _ _ O
@@ -1146,22 +1146,22 @@ mobile_base _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-button _ _ B-concept
+button _ _ O
 ' _ _ O
 , _ _ O
-ButtonEvent _ _ B-concept
+ButtonEvent _ _ B-Concept
 , _ _ O
-bumperCallback _ _ B-concept
+bumperCallback _ _ O
 ) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Button _ _ B-concept
+Button _ _ B-Concept
 # _ _ O
 ! _ _ O
 /usr _ _ O
@@ -1173,11 +1173,11 @@ python _ _ O
 import _ _ O
 rospy _ _ O
 from _ _ O
-kobuki_msgs.msg _ _ B-concept
+kobuki_msgs.msg _ _ O
 import _ _ O
-ButtonEvent _ _ B-concept
+ButtonEvent _ _ B-Concept
 def _ _ O
-buttonCallback _ _ B-concept
+buttonCallback _ _ O
 ( _ _ O
 data _ _ O
 ) _ _ O
@@ -1187,7 +1187,7 @@ str _ _ O
 " _ _ O
 " _ _ O
 if _ _ O
-data.button _ _ B-concept
+data.button _ _ O
 = _ _ O
 = _ _ O
 0 _ _ O
@@ -1201,7 +1201,7 @@ B0 _ _ O
 is _ _ O
 " _ _ O
 elif _ _ O
-data.button _ _ B-concept
+data.button _ _ O
 = _ _ O
 = _ _ O
 1 _ _ O
@@ -1253,14 +1253,14 @@ rospy.loginfo _ _ O
 str _ _ O
 ) _ _ O
 def _ _ O
-bumperExample _ _ B-concept
+bumperExample _ _ O
 ( _ _ O
 ) _ _ O
 : _ _ O
 rospy.init_node _ _ O
 ( _ _ O
 ' _ _ O
-button_example _ _ B-concept
+button_example _ _ O
 ' _ _ O
 , _ _ O
 anonymous=True _ _ O
@@ -1273,12 +1273,12 @@ mobile_base _ _ O
 / _ _ O
 events _ _ O
 / _ _ O
-button _ _ B-concept
+button _ _ O
 ' _ _ O
 , _ _ O
-ButtonEvent _ _ B-concept
+ButtonEvent _ _ O
 , _ _ O
-buttonCallback _ _ B-concept
+buttonCallback _ _ O
 ) _ _ O
 rospy.spin _ _ O
 ( _ _ O
@@ -1299,7 +1299,7 @@ _ _ _ O
 _ _ _ O
 ' _ _ O
 : _ _ O
-bumperExample _ _ B-concept
+bumperExample _ _ O
 ( _ _ O
 ) _ _ O
 
@@ -1310,10 +1310,10 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Odometry _ _ B-concept
+Odometry _ _ B-Concept
 Represents _ _ O
 an _ _ O
 estimate _ _ O
@@ -1325,38 +1325,38 @@ in _ _ O
 free _ _ O
 space _ _ O
 A _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 has _ _ O
 three _ _ O
 main _ _ O
 information _ _ O
 related _ _ O
 to _ _ O
-position _ _ O
+position _ _ B-Concept
 and _ _ O
-orientation _ _ O
+orientation _ _ B-Concept
 : _ _ O
-position.x _ _ O
+position.x _ _ B-Concept
 
 
  _ _ O
-orientation.z _ _ O
+orientation.z _ _ B-Concept
 
 
  _ _ O
-position.y _ _ O
+position.y _ _ B-Concept
 
 
  _ _ O
-Kobuki _ _ B-concept
+Kobuki _ _ B-Concept
 
 
  _ _ O
 Information _ _ O
 from _ _ O
 an _ _ O
-odometry _ _ B-concept
+odometry _ _ B-Concept
 allows _ _ O
 us _ _ O
 to _ _ O
@@ -1371,15 +1371,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ B-concept
-Node _ _ I-concept
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Odometry _ _ B-concept
+Odometry _ _ B-Concept
 Type _ _ O
 : _ _ O
 nav_mags _ _ O
 / _ _ O
-Odometry.msg _ _ B-concept
+Odometry.msg _ _ O
 The _ _ O
 component _ _ O
 that _ _ O
@@ -1388,12 +1388,12 @@ will _ _ O
 focus _ _ O
 on _ _ O
 in _ _ O
-Odometry _ _ B-concept
-message _ _ O
+Odometry _ _ B-Concept
+message _ _ I-Concept
 is _ _ O
-pose _ _ B-concept
+pose _ _ B-Concept
 The _ _ O
-pose _ _ B-concept
+pose _ _ B-Concept
 component _ _ O
 contains _ _ O
 two _ _ O
@@ -1404,20 +1404,20 @@ of _ _ O
 them _ _ O
 is _ _ O
 named _ _ O
-pose _ _ B-concept
+pose _ _ B-Concept
 ( _ _ O
 again _ _ O
 ) _ _ O
 The _ _ O
 inner _ _ O
-pose _ _ B-concept
+pose _ _ B-Concept
 component _ _ O
 consists _ _ O
 of _ _ O
 two _ _ O
 components _ _ O
 : _ _ O
-position _ _ O
+position _ _ B-Concept
 ( _ _ O
 in _ _ O
 meter _ _ O
@@ -1436,10 +1436,10 @@ y _ _ O
 , _ _ O
 and _ _ O
 z _ _ O
-orientation _ _ O
+orientation _ _ B-Concept
 ( _ _ O
 in _ _ O
-quaternion _ _ B-concept
+quaternion _ _ B-Concept
 ) _ _ O
 consists _ _ O
 of _ _ O
@@ -1462,10 +1462,10 @@ w _ _ O
  _ _ O
 For _ _ O
 a _ _ O
-Kobuki _ _ B-concept
-robot _ _ O
+Kobuki _ _ B-Concept
+robot _ _ I-Concept
 : _ _ O
-pose.pose.position.z _ _ B-concept
+pose.pose.position.z _ _ O
 is _ _ O
 always _ _ O
 0 _ _ O
@@ -1485,22 +1485,22 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ O
-Node _ _ O
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Odometry _ _ B-concept
+Odometry _ _ B-Concept
 Note _ _ O
 that _ _ O
 the _ _ O
 orientation _ _ O
 from _ _ O
-Kobuki _ _ B-concept
-’s _ _ I-concept
-odometry _ _ B-concept
+Kobuki _ _ B-Concept
+’s _ _ O
+odometry _ _ B-Concept
 is _ _ O
 in _ _ O
-quaternion _ _ B-concept
-Quaternion _ _ B-concept
+quaternion _ _ B-Concept
+Quaternion _ _ B-Concept
 is _ _ O
 a _ _ O
 unit _ _ O
@@ -1511,7 +1511,7 @@ objects _ _ O
 in _ _ O
 3D _ _ O
 A _ _ O
-quaternion _ _ B-concept
+quaternion _ _ B-Concept
 value _ _ O
 consists _ _ O
 of _ _ O
@@ -1530,15 +1530,15 @@ We _ _ O
 generally _ _ O
 familiar _ _ O
 with _ _ O
-roll _ _ O
+roll _ _ B-Concept
 , _ _ O
-pitch _ _ O
+pitch _ _ B-Concept
 , _ _ O
 and _ _ O
-yaw _ _ O
+yaw _ _ B-Concept
 Since _ _ O
 a _ _ O
-Kobuki _ _ B-concept
+Kobuki _ _ B-Concept
 can _ _ O
 only _ _ O
 turn _ _ O
@@ -1547,7 +1547,7 @@ the _ _ O
 Z-axis _ _ O
 , _ _ O
 only _ _ O
-yaw _ _ O
+yaw _ _ B-Concept
 is _ _ O
 applicable _ _ O
 We _ _ O
@@ -1587,7 +1587,7 @@ orientations _ _ O
 of _ _ O
 a _ _ O
 Kobuki _ _ O
-robot _ _ B-concept
+robot _ _ O
 are _ _ O
 always _ _ O
 0 _ _ O
@@ -1616,19 +1616,19 @@ Kosiyatrakul _ _ O
 
  _ _ O
 Kobuki _ _ O
-Node _ _ B-concept
+Node _ _ O
 
 
- _ _ I-concept
-180 _ _ I-concept
-𝜋 _ _ I-concept
+ _ _ O
+180 _ _ O
+𝜋 _ _ O
 
 Reset _ _ O
 Kobuki _ _ O
 ’s _ _ O
-Odometry _ _ B-concept
-Often _ _ B-concept
-time _ _ I-concept
+Odometry _ _ B-Concept
+Often _ _ B-Concept
+time _ _ I-Concept
 , _ _ O
 we _ _ O
 may _ _ O
@@ -1636,10 +1636,10 @@ want _ _ O
 to _ _ O
 reset _ _ O
 the _ _ O
-odometry _ _ O
-to _ _ B-concept
-0 _ _ I-concept
-This _ _ I-concept
+odometry _ _ B-Concept
+to _ _ I-Concept
+0 _ _ I-Concept
+This _ _ I-Concept
 can _ _ O
 be _ _ O
 done _ _ O
@@ -1647,18 +1647,18 @@ by _ _ O
 publishing _ _ O
 an _ _ O
 Empty _ _ O
-message _ _ O
-to _ _ O
-/mobile_base _ _ O
-/ _ _ O
-commands _ _ O
-/ _ _ O
-reset_odometry _ _ O
+message _ _ B-Concept
+to _ _ I-Concept
+/mobile_base _ _ I-Concept
+/ _ _ B-Concept
+commands _ _ I-Concept
+/ _ _ I-Concept
+reset_odometry _ _ I-Concept
 
 
- _ _ B-concept
-You _ _ I-concept
-must _ _ I-concept
+ _ _ I-Concept
+You _ _ I-Concept
+must _ _ I-Concept
 make _ _ O
 sure _ _ O
 that _ _ O
@@ -1705,9 +1705,9 @@ commands _ _ O
 / _ _ O
 reset_odometry _ _ O
 ' _ _ O
-, _ _ B-concept
-Empty _ _ I-concept
-, _ _ I-concept
+, _ _ O
+Empty _ _ O
+, _ _ O
 queue_size=10 _ _ O
 ) _ _ O
 rospy.init_node _ _ O
@@ -1764,11 +1764,11 @@ Kobuki _ _ O
 Node _ _ O
 
 Odometry _ _ O
-Topic _ _ B-concept
-: _ _ I-concept
-/odom _ _ I-concept
-Purpose _ _ O
-: _ _ O
+Topic _ _ B-Concept
+: _ _ I-Concept
+/odom _ _ I-Concept
+Purpose _ _ B-Concept
+: _ _ I-Concept
 Information _ _ O
 about _ _ O
 robot _ _ O
@@ -1779,9 +1779,9 @@ Type _ _ O
 : _ _ O
 nav_msgs _ _ O
 / _ _ O
-Odometry.msg _ _ B-concept
-If _ _ I-concept
-you _ _ I-concept
+Odometry.msg _ _ O
+If _ _ O
+you _ _ O
 create _ _ O
 a _ _ O
 function _ _ O
@@ -1799,9 +1799,9 @@ message _ _ O
 from _ _ O
 the _ _ O
 topic _ _ O
-/odom _ _ O
-as _ _ O
-follows _ _ O
+/odom _ _ B-Concept
+as _ _ I-Concept
+follows _ _ I-Concept
 : _ _ O
 def _ _ O
 odomCallback _ _ O
@@ -1812,13 +1812,13 @@ data _ _ O
 
 
  _ _ O
-data.pose.pose.position.x _ _ B-concept
+data.pose.pose.position.x _ _ O
 is _ _ O
 the _ _ O
 position _ _ O
-of _ _ O
-the _ _ O
-robot _ _ O
+of _ _ B-Concept
+the _ _ I-Concept
+robot _ _ I-Concept
 from _ _ O
 the _ _ O
 origin _ _ O
@@ -1829,9 +1829,9 @@ data.pose.pose.position.y _ _ O
 is _ _ O
 the _ _ O
 position _ _ O
-of _ _ O
-the _ _ O
-robot _ _ O
+of _ _ B-Concept
+the _ _ I-Concept
+robot _ _ I-Concept
 from _ _ O
 the _ _ O
 origin _ _ O
@@ -1851,13 +1851,13 @@ robot _ _ O
 is _ _ O
 facing _ _ O
 ( _ _ O
-quaternion _ _ O
-) _ _ O
-. _ _ O
+quaternion _ _ B-Concept
+) _ _ I-Concept
+. _ _ I-Concept
 
 
- _ _ O
-Thumrongsak _ _ O
+ _ _ I-Concept
+Thumrongsak _ _ I-Concept
 Kosiyatrakul _ _ O
 
 
@@ -1868,9 +1868,9 @@ Node _ _ O
 odom _ _ O
 # _ _ O
 ! _ _ O
-/usr _ _ O
-/ _ _ O
-bin _ _ O
+/usr _ _ B-Concept
+/ _ _ I-Concept
+bin _ _ I-Concept
 / _ _ O
 env _ _ O
 python _ _ O
@@ -1882,8 +1882,8 @@ from _ _ O
 nav_msgs.msg _ _ O
 import _ _ O
 Odometry _ _ O
-from _ _ B-concept
-tf.transformations _ _ I-concept
+from _ _ B-Concept
+tf.transformations _ _ I-Concept
 import _ _ O
 euler_from_quaternion _ _ O
 def _ _ O
@@ -1894,13 +1894,13 @@ data _ _ O
 : _ _ O
 # _ _ O
 Convert _ _ O
-quaternion _ _ B-concept
-to _ _ I-concept
-degree _ _ I-concept
+quaternion _ _ O
+to _ _ O
+degree _ _ O
 q _ _ O
 = _ _ O
 [ _ _ O
-data.pose.pose.orientation.x _ _ B-concept
+data.pose.pose.orientation.x _ _ O
 , _ _ O
 data.pose.pose.orientation.y _ _ O
 , _ _ O

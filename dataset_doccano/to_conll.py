@@ -31,7 +31,7 @@ nlp.tokenizer = custom_tokenizer(nlp)
 def word_tokenize(text):
     ignore_chars = ["\n", "\n\n"]
     tokenized = [token.text for token in nlp(text.replace("''", '"').replace("``", '"'))]
-    tokenized = list(filter(lambda x: '\f' in x or not x.isspace(), tokenized))
+    tokenized = list(filter(lambda x: '\n\n' in x or '\f' in x or not x.isspace(), tokenized))
     print(tokenized)
     return tokenized
 
@@ -39,16 +39,18 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", help = "File Input", type=Path)
     parser.add_argument("-o", "--out", help = "ConLL Output", type=Path)
+    parser.add_argument("-n", "--nosplit", help = "For doccano outputs that have not been split", action='store_true')
     args = parser.parse_args(sys.argv[1:])
-    with open(args.file, mode='r') as file:
-        parsed_data = json.loads(file.read())
-        segment=parsed_data['segment']
-        course=parsed_data['course']
-        lec=parsed_data['lec']
+    if not args.nosplit:
+        with open(args.file, mode='r') as file:
+            parsed_data = json.loads(file.read())
+            segment=parsed_data['segment']
+            course=parsed_data['course']
+            lec=parsed_data['lec']
     dataset = read_jsonl(filepath=args.file, dataset=NERDataset, encoding='utf-8')
     with open(args.out, 'w') as f:
-        f.write(f"{segment}|{course}|{lec}\n")
+        if not args.nosplit:
+            f.write(f"{segment}|{course}|{lec}\n")
         for line in dataset.to_conll2003(tokenizer=word_tokenize):
-            if line['data'] !=  '\n _ _ O':
-                f.write(line['data'] + "\n")
+            f.write(line['data'] + "\n")
     

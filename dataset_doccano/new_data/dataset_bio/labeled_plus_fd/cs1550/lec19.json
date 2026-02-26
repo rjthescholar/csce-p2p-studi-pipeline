@@ -975,16 +975,8 @@
             "sentence": [
                 "Page",
                 "frame",
-                "number"
-            ],
-            "word_labels": [
-                "B",
-                "I",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "number",
+                "",
                 "Page",
                 "0",
                 "Page",
@@ -1002,6 +994,10 @@
                 ")"
             ],
             "word_labels": [
+                "B",
+                "I",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1649,32 +1645,24 @@
             "sentence": [
                 "Page",
                 "frame",
-                "number"
-            ],
-            "word_labels": [
-                "B",
-                "I",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "number",
+                "",
                 "Page",
                 "frame",
-                "number"
-            ],
-            "word_labels": [
-                "B",
-                "I",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "number",
+                "",
                 "page",
                 "offset"
             ],
             "word_labels": [
+                "B",
+                "I",
+                "I",
+                "B",
+                "B",
+                "I",
+                "I",
+                "B",
                 "B",
                 "I"
             ]

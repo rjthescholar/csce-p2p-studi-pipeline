@@ -10,54 +10,46 @@ publisher
 topic
 topic
 subscribers
+anonymous
 publisher
 subscriber
-talker.py
-talker
-rospy.publisher
-rospy.init_node
-talker
-rate
-rospy.rate
-talker
 publisher
 subscriber
-talker.py
 node
 node
-talker.py
+rospy.publisher
+(
 publisher
 rospy.publisher
+(
 topic
+message
+message
+subscriber
 rospy.init_node
-talker
-talker
+node
+anonymous
 publisher
 subscriber
-talker.py
-rate
 rospy.rate
-rate
-rate
-rospy.rate
-rate.sleep
+loop
 node
-node
-node
-publisher
-subscriber
-talker.py
+signal
 node
 node
 publisher
 subscriber
-talker.py
-pub.publish
+message
+node
+message
+node
+log file
+publisher
+subscriber
 publish
-rate.sleep
+message
 node
-talker
-rospy.rate.sleep
+interrupt
 publisher
 subscriber
 subscriber
@@ -68,126 +60,123 @@ subscriber
 topic
 topic
 publishers
+anonymous
 publisher
 subscriber
-listener.py
-listener
-rospy.init_node
-listener
-rospy.subscriber
 rospy.spin ()
-listener
 publisher
 subscriber
-listener.py
-rospy.init_node
-listener
 node
-listener
-rospy.subscriber
 subscribes
 topic
-publisher
+message
+message
+callback ()
 rospy.spin ()
 node
+node
 publisher
 subscriber
+callback () function
+callback () function
+message
 topic
 publisher
 subscriber
-node
+ros node
 subscribes
 topic
 publishes
 topic
+blob detection
 subscribes
 topic
+blobs
+blob
 publishes
+blobs
 node
 subscribes
 publishes
-node
+messenger node
 subscribe
-topic
 publish
-topic
+message
 publisher
 subscriber
-rospy.publisher
-pub.publish
-rospy.subscriber
-rospy.spin ()
 publisher
 subscriber
-ros environment
+distributed computing
+processes
+process
+process
+ros
 loop
 rospy.spin ()
-publisher
-subscriber
 loop
 rospy.spin ()
 loop
 rospy.spin ()
 loop
 publishes
+messages
 rospy.spin ()
 subscriber
 publish
+message
 loop
 rospy.spin ()
 publisher
 subscriber
 cleanup
 node
+ros master
+clean up
 cleanup
-cleanup
-cleanup
-cleanup
-node
+shutdown hooks
+cleanup ()
+cleanup ()
 publisher
 subscriber
-listener
-node
-listener
-rospy.init_node
-listener
-rospy.subscriber
-rospy.spin ()
-listener
+callback functions
+callback ()
+message
 topic
 publisher
 subscriber
-publisher
+callback functions
+callback function
+callback function
+callback
 rostopic rostopic
 is a
-environment it allows
+topics in ros
+environment
 topics show
 publish to a
 topic on screen
 publish a message
 topic show
 topic show
-topic suppose
-talker and
-listener node
+topicsuppose
 using
-roscore rosrun
-talker.py rosrun
-listener.py
 publisher and
 rostopic use
 rostopic list
 topics on the
 rostopic echo
-published to the
+messages published
+to the
 topic chatter
-talker 1463668746.93
-talker 1463668747.03
-talker 1463668747.23
-talker 1463668747.33
 publisher and
 rostopic use
 rostopic info
 topic chatter
-publishers:* /talker_4544_1463668570440
+rostopic type
+topic chatter
+rostopic pub
+publisher and
+subscriber
+workspace directory
+workspace directory
 publisher

@@ -1,166 +1,121 @@
 kobuki node
 kobuki node
 kobuki node
-kobuki node
-kobuki
-bumper
+kobuki node communicates
+kobuki robot
+motors
+bumper switches
 buttons
 leds
+robot
+communicate
+with
 kobuki node
 kobuki node
 kobuki node
 kobuki_node
 odometry
 kobuki node
-kobuki’s
+kobuki
 kobuki node
-sound
-led1
-led2
 kobuki node
-bumper
-button
 kobuki node
 kobuki node
 sounds
-kobuki
+sounds
+type sound
+type sound
 sound
 sound
-sound
-kobuki_msgs.msg
-sound
-sound
-button
 kobuki node
 sounds
-kobuki_msgs.msg
-sound
-sendsounds
-sound_sender
-sound
-sound
-sound
-sendsounds
 kobuki node
 leds
 leds
-kobuki
+kobuki robot
 led1
 led2
 led
-led
-led1
+type led
 led1
 led2
-led2
+type led
 led
-kobuki_msgs.msg
 led
 kobuki node
 leds
-kobuki_msgs.msg
 led
-leds_sender
-led1
-led
-led2
-led
-led
-led
-led.value
-led.value
-sendleds
 kobuki node
 bumpers
 bumpers
-kobuki
+kobuki robot
+bumper
+type bumperevent
+type bumperevent
+bumperevent
+bumperevent
 bumper
 bumperevent
-bumper
-bumperevent
-kobuki_msgs.msg
-bumperevent
-bumperevent
-bumper
-bumper
-bumperevent
-bumpercallback
-kobuki node
 bumpers
-kobuki_msgs.msg
 bumperevent
-bumpercallback
-data.bumper
-bumper
-data.bumper
-bumper
-bumper
-bumperexample
-bumper_example
-bumper
 bumperevent
-bumpercallback
-bumperexample
 kobuki node
 buttons
-kobuki
+kobuki robot
 buttons
 button
 buttonevent
+type buttonevent
+buttonevent
+type buttonevent
 button
 buttonevent
-kobuki_msgs.msg
-buttonevent
-buttonevent
-button
-button
-buttonevent
-bumpercallback
 kobuki node
 button
-kobuki_msgs.msg
 buttonevent
-buttoncallback
-data.button
-data.button
-bumperexample
-button_example
-button
-buttonevent
-buttoncallback
-bumperexample
 kobuki node
 odometry
-kobuki
+kobuki robot
+position
+orientation
+position.x
+orientation.z
+position.y
 kobuki
 odometry
 kobuki node
 odometry
-odometry.msg
-odometry
+odometry message
 pose
 pose
 pose
 pose
+position
+orientation
 quaternion
+kobuki robot
+kobuki node
+odometry
 kobuki
-pose.pose.position.z
-odometry
-kobuki’s
 odometry
 quaternion
 quaternion
 quaternion
+roll
+pitch
+yaw
 kobuki
-robot
-node 180 𝜋
+yaw
 odometry
 often time
-to 0 this
-,empty,
+odometry to 0 this
+message to /mobile_base
+/commands/reset_odometryyou must
 topic:/odom
-odometry.msg if you
-data.pose.pose.position.x
+purpose:
+/odom as follows
+of the robot
+of the robot
+quaternion).thumrongsak
+/usr/bin
 from tf.transformations
-quaternion to degree
-data.pose.pose.orientation.x

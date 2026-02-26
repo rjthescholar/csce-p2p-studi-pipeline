@@ -422,15 +422,8 @@
         {
             "sentence": [
                 "L1",
-                "Cache"
-            ],
-            "word_labels": [
-                "B",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "Cache",
+                "",
                 "Cheaper",
                 ",",
                 "Slower",
@@ -438,6 +431,9 @@
                 "Larger"
             ],
             "word_labels": [
+                "B",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -464,15 +460,8 @@
         {
             "sentence": [
                 "L2",
-                "Cache"
-            ],
-            "word_labels": [
-                "B",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "Cache",
+                "",
                 "Local",
                 "Disk",
                 "Distributed",
@@ -487,6 +476,9 @@
                 "Tape"
             ],
             "word_labels": [
+                "B",
+                "I",
+                "B",
                 "B",
                 "I",
                 "B",
@@ -599,16 +591,8 @@
             "sentence": [
                 "Registers",
                 "L1",
-                "Cache"
-            ],
-            "word_labels": [
-                "B",
-                "B",
-                "I"
-            ]
-        },
-        {
-            "sentence": [
+                "Cache",
+                "",
                 "L2",
                 "Cache",
                 "DRAM",
@@ -635,6 +619,10 @@
                 "Tape"
             ],
             "word_labels": [
+                "B",
+                "B",
+                "I",
+                "B",
                 "B",
                 "I",
                 "O",

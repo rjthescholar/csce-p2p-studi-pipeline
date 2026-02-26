@@ -1,20 +1,24 @@
 joy node
 joy node
 joy node
-joy_node
-joy
-joy node
-joy_node
-joy
-joy_node
-/joy
-joy node
-joy node
+joy_node node
+joystick
+joystick
+topic
 joy
 joy node
 joy
+joy node
+joy node
+topic joy
+joy node
+joystick
 joy
+message
 joy
+type joy
+header
+axes
 buttons
 joy node
 buttons
@@ -23,35 +27,56 @@ button
 button
 button
 joy node
+axes
+axes
 button
+axis
+axis
+axis
+axis
 joy node
-joy
-joy
-joy
-button
+topic joy
+joystick
+topic joy
+header
+axes
 buttons
 joy node
+topic joy
 joy
 joy
-joy
-joy
-"joy
+topic joy
+type joy
 joy node
-data.buttons
-testjoy
-"joy
+joy
 joy
 joy node
 kobuki
+robot
+type twist
 twist
 twist
-twist
-twist
-twist
+type twist
+command.linear.x
+command.angular.z
 joy node
 kobuki
-twist
+robot
+type twist
+topic
+command.linear.x
+command.angular.z
+command.linear.x
+command.angular.z
+command.linear.x
+command.angular.z
 joy node
-kobuki_softnode
-kobuki
-twist
+simulator
+ros
+robot
+rviz
+rviz
+rviz
+kobuki robot
+type twist
+robot

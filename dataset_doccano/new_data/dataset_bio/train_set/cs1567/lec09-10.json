@@ -1,5 +1,5 @@
 {
-    "segment": "['train_set', 'labeled']",
+    "segment": "['train_set', 'labeled_plus_fd']",
     "course": "cs1567",
     "lec": "lec09-10",
     "data": [
@@ -11,47 +11,36 @@
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Blob"
             ],
             "word_labels": [
-                "X"
+                "B",
+                "I",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "blob",
                 "in",
@@ -79,11 +68,10 @@
             ],
             "word_labels": [
                 "O",
+                "B",
                 "O",
-                "X",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -107,7 +95,6 @@
         },
         {
             "sentence": [
-                "",
                 "A",
                 "robot",
                 "can",
@@ -164,14 +151,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -180,9 +165,10 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -197,30 +183,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "How",
                 "to",
                 "Detect",
@@ -234,11 +208,13 @@
                 ":"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -249,7 +225,6 @@
         },
         {
             "sentence": [
-                "",
                 "How",
                 "to",
                 "detect",
@@ -277,37 +252,27 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Filter",
                 "Selected",
                 "Color"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Image",
                 "generally",
                 "comes",
@@ -366,6 +331,8 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -381,10 +348,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -419,30 +383,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "How",
                 "to",
                 "Detect",
@@ -460,8 +412,10 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -471,30 +425,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "How",
                 "to",
                 "Detect",
@@ -505,55 +447,46 @@
                 "regions"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "O",
-                "O",
-                "O"
+                "B",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Filter",
                 "Selected",
                 "Color"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Note",
                 "that",
                 "an",
@@ -628,6 +561,19 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -638,21 +584,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -661,7 +593,6 @@
         },
         {
             "sentence": [
-                "",
                 "Conversion",
                 "between",
                 "RGB",
@@ -731,10 +662,9 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -799,7 +729,6 @@
         },
         {
             "sentence": [
-                "",
                 "where",
                 "\ud835\udc45",
                 ",",
@@ -827,36 +756,23 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Problems",
                 "with",
                 "Blob",
@@ -934,8 +850,25 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -949,29 +882,14 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -982,16 +900,16 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1005,7 +923,6 @@
         },
         {
             "sentence": [
-                "",
                 "Surrounding",
                 "environment",
                 "may",
@@ -1021,13 +938,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Same",
                 "object",
                 "may",
@@ -1075,6 +990,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1094,9 +1010,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1107,39 +1021,28 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Applications"
             ],
             "word_labels": [
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Object",
                 "Recognition",
                 "and",
@@ -1161,15 +1064,14 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1183,7 +1085,6 @@
         },
         {
             "sentence": [
-                "",
                 "Robot",
                 "Location",
                 "/",
@@ -1219,36 +1120,23 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Integrated",
                 "Web",
                 "Camera",
@@ -1315,80 +1203,7 @@
                 "/",
                 "camera",
                 "/",
-                "image_raw"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "image_raw",
                 "",
                 "To",
                 "start",
@@ -1402,27 +1217,7 @@
                 ":",
                 "roslaunch",
                 "gscam",
-                "v4l.launch"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "v4l.launch",
                 "",
                 "A",
                 "series",
@@ -1455,6 +1250,52 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "B",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1466,6 +1307,43 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1481,30 +1359,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Image",
                 "Message",
                 "Images",
@@ -1538,12 +1404,14 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "B",
+                "I",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1565,7 +1433,6 @@
         },
         {
             "sentence": [
-                "",
                 "The",
                 "Image",
                 "message",
@@ -1653,6 +1520,11 @@
             ],
             "word_labels": [
                 "O",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1664,57 +1536,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -1723,10 +1544,55 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -1741,7 +1607,6 @@
         },
         {
             "sentence": [
-                "",
                 "Lucky",
                 "us",
                 ",",
@@ -1767,36 +1632,23 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "View",
                 "Image",
                 "from",
@@ -1889,16 +1741,34 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1947,52 +1817,24 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "View",
                 "Image",
                 "from",
@@ -2144,8 +1986,10 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2283,41 +2127,30 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "cmvision",
                 "Node"
             ],
             "word_labels": [
                 "O",
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "cmvision",
                 "node",
                 "detects",
@@ -2355,14 +2188,13 @@
                 "image_raw"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2395,7 +2227,6 @@
         },
         {
             "sentence": [
-                "",
                 "Obtains",
                 "user",
                 "defined",
@@ -2427,7 +2258,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -2435,13 +2265,12 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X"
+                "O",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "cmvision",
                 "package",
                 "also",
@@ -2482,16 +2311,6 @@
             "word_labels": [
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -2508,8 +2327,17 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2521,39 +2349,28 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colorgui"
             ],
             "word_labels": [
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Before",
                 "running",
                 "colorgui",
@@ -2590,46 +2407,44 @@
                 "image_raw"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Note",
                 "that",
                 "the",
@@ -2667,18 +2482,17 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2691,39 +2505,28 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colorgui"
             ],
             "word_labels": [
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "After",
                 "clicking",
                 "on",
@@ -2799,9 +2602,7 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2824,9 +2625,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2864,7 +2665,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2875,30 +2677,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colorgui",
                 "Example",
                 "First",
@@ -2907,38 +2697,28 @@
             ],
             "word_labels": [
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colorgui",
                 "Example",
                 "Couple",
@@ -2951,8 +2731,10 @@
             ],
             "word_labels": [
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2963,30 +2745,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colorgui",
                 "Example",
                 "Couple",
@@ -3001,8 +2771,10 @@
             ],
             "word_labels": [
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3015,30 +2787,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O"
+                "B",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colors.txt",
                 "For",
                 "cmvision",
@@ -3117,13 +2877,11 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3143,6 +2901,22 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3161,24 +2935,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3189,7 +2951,6 @@
         },
         {
             "sentence": [
-                "",
                 "cmvision",
                 "node",
                 "can",
@@ -3271,12 +3032,10 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3295,10 +3054,10 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3321,11 +3080,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3351,18 +3111,8 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colors.txt",
                 "Consider",
                 "the",
@@ -3427,6 +3177,17 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3449,21 +3210,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3487,7 +3239,6 @@
         },
         {
             "sentence": [
-                "",
                 "Each",
                 "line",
                 "under",
@@ -3599,9 +3350,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3631,8 +3380,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3643,39 +3393,28 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "colors.txt"
             ],
             "word_labels": [
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Consider",
                 "the",
                 "following",
@@ -3736,6 +3475,17 @@
                 ")"
             ],
             "word_labels": [
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3758,24 +3508,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3799,7 +3537,6 @@
         },
         {
             "sentence": [
-                "",
                 "Each",
                 "line",
                 "under",
@@ -3829,44 +3566,7 @@
                 "YUV",
                 "threshold",
                 "from",
-                "colorgui"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "colorgui",
                 "",
                 "Note",
                 "that",
@@ -3891,8 +3591,38 @@
             "word_labels": [
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3913,30 +3643,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "cmvision.launch",
                 "Parameters",
                 "of",
@@ -3968,19 +3686,15 @@
             ],
             "word_labels": [
                 "O",
-                "X",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3994,12 +3708,17 @@
                 "O",
                 "O",
                 "O",
-                "X"
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "to",
                 "your",
                 "..",
@@ -4041,9 +3760,6 @@
                 "\""
             ],
             "word_labels": [
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4060,10 +3776,12 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -4085,7 +3803,6 @@
         },
         {
             "sentence": [
-                "",
                 "If",
                 "you",
                 "put",
@@ -4133,21 +3850,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4165,15 +3869,26 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Under",
                 "node",
                 "name=\"cmvision",
@@ -4200,10 +3915,9 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4221,18 +3935,8 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "cmvision.launch",
                 "Your",
                 "cmvision.launch",
@@ -4417,12 +4121,13 @@
             ],
             "word_labels": [
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4443,9 +4148,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4478,9 +4180,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4500,9 +4199,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4520,8 +4216,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4543,7 +4237,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4565,7 +4258,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -4576,7 +4268,21 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -4601,39 +4307,28 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Blobs.msgs"
             ],
             "word_labels": [
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "cmvision",
                 "node",
                 "publishes",
@@ -4654,10 +4349,8 @@
                 "Blobs"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4665,19 +4358,19 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X"
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "message",
                 "of",
@@ -4730,58 +4423,56 @@
             "word_labels": [
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
-                "X"
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Note",
                 ":",
                 "Blob",
@@ -4797,16 +4488,15 @@
                 "message"
             ],
             "word_labels": [
-                "X",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -4815,30 +4505,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Blob.msgs",
                 "Blob.msgs",
                 "stores",
@@ -4864,32 +4542,33 @@
             ],
             "word_labels": [
                 "O",
-                "X",
-                "O",
-                "X",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "message",
                 "of",
@@ -5019,14 +4698,14 @@
             ],
             "word_labels": [
                 "O",
+                "B",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5040,6 +4719,11 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -5071,7 +4755,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5088,7 +4771,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5096,10 +4778,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5149,67 +4827,44 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Blob.msgs",
                 "(",
                 "0",
                 ",",
                 "0",
-                ")"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
-                "left"
-            ],
-            "word_labels": [
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "left",
                 "",
                 "right"
             ],
             "word_labels": [
                 "O",
-                "O"
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "top"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "(",
                 "x",
                 ",",
@@ -5221,66 +4876,47 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "bottom"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "blob"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "image"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "X",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Problem",
                 "Solving",
                 "Ideas"
@@ -5288,12 +4924,13 @@
             "word_labels": [
                 "O",
                 "O",
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "How",
                 "to",
                 "filter",
@@ -5327,9 +4964,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -5341,8 +4976,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -5355,7 +4991,6 @@
         },
         {
             "sentence": [
-                "",
                 "If",
                 "we",
                 "know",
@@ -5401,60 +5036,7 @@
                 "noise",
                 "from",
                 "camera",
-                "?"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "?",
                 "",
                 "Thumrongsak",
                 "Kosiyatrakul"
@@ -5462,37 +5044,63 @@
             "word_labels": [
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Visualize",
                 "Blobs",
                 "using",
-                "OpenCV"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "OpenCV",
                 "",
                 "Sometimes",
                 "we",
@@ -5523,44 +5131,7 @@
                 "blobs",
                 "in",
                 "to",
-                "one"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "one",
                 "",
                 "We",
                 "may",
@@ -5603,9 +5174,33 @@
                 "filtering"
             ],
             "word_labels": [
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "B",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -5616,7 +5211,20 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -5647,30 +5255,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Visualize",
                 "Blobs",
                 "using",
@@ -5764,6 +5360,14 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -5791,13 +5395,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5805,10 +5402,11 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -5849,32 +5447,12 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Visualize",
                 "Blobs",
                 "using",
-                "OpenCV"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "OpenCV",
                 "",
                 "def",
                 "main",
@@ -5958,7 +5536,19 @@
                 ":"
             ],
             "word_labels": [
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -5971,14 +5561,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -5989,7 +5571,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -6043,30 +5627,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Visualize",
                 "Blobs",
                 "using",
@@ -6198,6 +5770,14 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -6234,17 +5814,11 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -6321,24 +5895,10 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
-                "",
-                "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
                 "O",
                 "O"
             ]
@@ -6347,16 +5907,9 @@
             "sentence": [
                 "Blob",
                 "Detection",
-                "Algorithm"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Blob",
+                "Detection",
+                "Algorithm",
                 "",
                 "Given",
                 "an",
@@ -6378,6 +5931,11 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -6393,7 +5951,6 @@
         },
         {
             "sentence": [
-                "",
                 "Blur",
                 "the",
                 "image",
@@ -6422,14 +5979,13 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -6447,41 +6003,30 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Gaussian",
                 "Blur"
             ],
             "word_labels": [
                 "O",
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "One",
                 "of",
                 "the",
@@ -6495,36 +6040,24 @@
                 "blur"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "3x3",
                 "5x5",
-                "7x7"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "7x7",
                 "",
                 "The",
                 "new",
@@ -6559,7 +6092,17 @@
                 "distribution"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -6570,14 +6113,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -6595,30 +6131,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Filter",
                 "Filter",
                 "can",
@@ -6633,28 +6157,7 @@
                 "that",
                 "cmvision",
                 "uses",
-                "YUV"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "YUV",
                 "",
                 "Once",
                 "a",
@@ -6698,14 +6201,31 @@
                 "range"
             ],
             "word_labels": [
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "B",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "B",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -6743,7 +6263,6 @@
         },
         {
             "sentence": [
-                "",
                 "Example",
                 ":",
                 "0",
@@ -6767,13 +6286,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -6793,13 +6310,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -6819,13 +6334,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -6845,13 +6358,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -6871,13 +6382,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -6897,13 +6406,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -6923,13 +6430,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -6949,13 +6454,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -6975,13 +6478,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7001,13 +6502,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7027,13 +6526,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7053,13 +6550,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7079,13 +6574,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7105,13 +6598,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "For",
                 "simplicity",
                 ",",
@@ -7144,9 +6635,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -7161,18 +6651,8 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "A",
                 "Blob",
                 "Detection",
@@ -7212,11 +6692,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -7247,7 +6729,6 @@
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7267,13 +6748,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7293,13 +6772,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7319,13 +6796,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7345,13 +6820,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -7371,13 +6844,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -7397,13 +6868,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -7423,13 +6892,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7449,13 +6916,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7475,13 +6940,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7501,13 +6964,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7527,13 +6988,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7553,13 +7012,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7579,13 +7036,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Once",
                 "the",
                 "first",
@@ -7603,13 +7058,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "2",
                 "3",
                 "4",
@@ -7619,13 +7072,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Record",
                 "this",
                 "coordinate",
@@ -7685,16 +7136,14 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -7707,19 +7156,19 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
-                "X",
-                "X",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Now",
                 ",",
                 "our",
@@ -7750,10 +7199,9 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -7761,18 +7209,8 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "A",
                 "Blob",
                 "Detection",
@@ -7833,7 +7271,10 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -7855,9 +7296,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -7889,7 +7329,6 @@
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7909,13 +7348,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7935,13 +7372,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7961,13 +7396,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -7987,13 +7420,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8013,13 +7444,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8039,13 +7468,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "1",
                 "1",
@@ -8065,13 +7492,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8091,13 +7516,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8117,13 +7540,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8143,13 +7564,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Currently",
                 "Blob",
                 "is",
@@ -8196,9 +7615,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -8227,19 +7645,16 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
                 "Detection"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8251,10 +7666,9 @@
                 "0"
             ],
             "word_labels": [
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -8265,7 +7679,6 @@
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8285,13 +7698,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8300,23 +7711,7 @@
                 "0",
                 "0",
                 "0",
-                "0"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "0",
                 "A",
                 "Blob",
                 "Detection",
@@ -8338,10 +7733,19 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -8355,7 +7759,6 @@
         },
         {
             "sentence": [
-                "",
                 "Dequeue",
                 "the",
                 "first",
@@ -8427,13 +7830,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Once",
                 "the",
                 "queue",
@@ -8483,10 +7884,9 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -8499,7 +7899,6 @@
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8519,13 +7918,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8545,13 +7942,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8571,13 +7966,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8597,13 +7990,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8623,25 +8014,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8661,13 +8048,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8687,13 +8072,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8713,13 +8096,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8739,24 +8120,13 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "",
                 "0",
                 "0",
@@ -8766,23 +8136,7 @@
                 "0",
                 "0",
                 "0",
-                "0"
-            ],
-            "word_labels": [
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "0",
                 "",
                 "0",
                 "0",
@@ -8797,8 +8151,20 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -8809,7 +8175,6 @@
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8829,13 +8194,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0",
                 "0",
                 "0",
@@ -8844,23 +8207,7 @@
                 "0",
                 "0",
                 "0",
-                "0"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "0",
                 "Blob",
                 "Detection",
                 "using",
@@ -8986,7 +8333,39 @@
             "word_labels": [
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -9001,8 +8380,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -9014,27 +8391,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -9109,7 +8465,6 @@
         },
         {
             "sentence": [
-                "",
                 "The",
                 "parameter",
                 "(",
@@ -9155,24 +8510,13 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Convert",
                 "RGB",
                 "to",
@@ -9328,6 +8672,8 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -9363,9 +8709,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -9473,30 +8819,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Filter",
                 "Unwanted",
                 "Pixels"
@@ -9504,12 +8838,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "X"
+                "O",
+                "O",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Unwanted",
                 "pixels",
                 "can",
@@ -9614,11 +8949,9 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -9643,9 +8976,10 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -9709,7 +9043,6 @@
         },
         {
             "sentence": [
-                "",
                 "The",
                 "lower_bound",
                 "and",
@@ -9741,36 +9074,23 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "Filter",
                 "Unwanted",
                 "Pixels",
@@ -9783,48 +9103,29 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "O",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "SimpleBlobDetector",
                 "(",
-                ")"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
                 "OpenCV",
                 "supplies",
@@ -9844,51 +9145,44 @@
                 ":"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "SimpleBlobDetector",
                 "(",
                 ")",
@@ -9981,8 +9275,12 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -9993,7 +9291,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -10004,8 +9301,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -10013,21 +9308,14 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -10057,13 +9345,21 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O"
@@ -10071,42 +9367,21 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "SimpleBlobDetector",
                 "(",
-                ")"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
                 "Then",
                 "we",
@@ -10160,67 +9435,7 @@
                 "'",
                 ",",
                 "kp_image",
-                ")"
-            ],
-            "word_labels": [
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
                 "To",
                 "extract",
@@ -10232,25 +9447,7 @@
                 "at",
                 "the",
                 "keypoints",
-                "variable"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "variable",
                 "",
                 "Thumrongsak",
                 "Kosiyatrakul"
@@ -10258,23 +9455,84 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "SimpleBlobDetector",
                 "(",
                 ")",
@@ -10294,10 +9552,12 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -10311,42 +9571,21 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "SimpleBlobDetector",
                 "(",
-                ")"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
                 "The",
                 "SimpleBlobDetector",
@@ -10389,23 +9628,19 @@
                 "understand"
             ],
             "word_labels": [
-                "X",
-                "X",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -10420,12 +9655,21 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -10433,24 +9677,10 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
-                "",
-                "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
                 "O",
                 "O"
             ]
@@ -10459,18 +9689,10 @@
             "sentence": [
                 "Blob",
                 "Detection",
+                "Blob",
+                "Detection",
                 "using",
-                "Contour"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Contour",
                 "",
                 "Another",
                 "method",
@@ -10525,104 +9747,85 @@
                 "(",
                 ")",
                 "is",
-                "given"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "given",
                 "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "findContours",
                 "(",
-                ")"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                ")",
                 "",
                 "findContours",
                 "(",
@@ -10740,15 +9943,18 @@
             ],
             "word_labels": [
                 "O",
-                "X",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -10766,9 +9972,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -10783,27 +9986,16 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -10824,7 +10016,23 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -10857,30 +10065,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "drawContours",
                 "(",
                 ")",
@@ -10903,23 +10099,24 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Note",
                 "that",
                 "there",
@@ -10952,22 +10149,21 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
+                "B",
+                "I",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -10975,18 +10171,8 @@
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "findContours",
                 "(",
                 ")",
@@ -11178,17 +10364,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -11204,9 +10386,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -11228,11 +10407,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -11260,10 +10434,24 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -11363,30 +10551,18 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
-                "Detection"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Detection",
                 "drawContours",
                 "(",
                 ")",
@@ -11406,14 +10582,16 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -11421,31 +10599,23 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Blob",
                 "Detection"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         }
     ]
 }

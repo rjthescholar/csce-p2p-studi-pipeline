@@ -1,14 +1,14 @@
-['train_set', 'labeled']|cs1567|lec02
+['train_set', 'labeled_plus_fd']|cs1567|lec02
 -DOCSTART- -X- -X- O
 
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
@@ -21,20 +21,20 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
-ROS _ _ B-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
+ROS _ _ B-Concept
 is _ _ O
 not _ _ O
 an _ _ O
@@ -44,9 +44,9 @@ system _ _ O
 It _ _ O
 is _ _ O
 a _ _ O
-meta-Operating _ _ B-concept
-System _ _ I-concept
-ROS _ _ B-concept
+meta-Operating _ _ O
+System _ _ O
+ROS _ _ B-Concept
 is _ _ O
 running _ _ O
 on _ _ O
@@ -153,23 +153,23 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ O
+Operating _ _ O
+System _ _ O
+( _ _ O
+ROS _ _ O
+) _ _ O
 
 
  _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 is _ _ O
 not _ _ O
 an _ _ O
@@ -184,13 +184,13 @@ as _ _ O
 an _ _ O
 OS _ _ O
 Supply _ _ O
-interprocess _ _ O
-communication _ _ O
-Signal _ _ O
+interprocess _ _ B-Concept
+communication _ _ I-Concept
+Signal _ _ B-Concept
 / _ _ O
-interrupt _ _ O
+interrupt _ _ B-Concept
 to _ _ O
-processes _ _ O
+processes _ _ B-Concept
 
 
  _ _ O
@@ -204,35 +204,35 @@ into _ _ O
 a _ _ O
 number _ _ O
 of _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 Each _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 runs _ _ O
 as _ _ O
 a _ _ O
 separate _ _ O
-process _ _ O
-Nodes _ _ B-concept
+process _ _ B-Concept
+Nodes _ _ B-Concept
 communicate _ _ O
 with _ _ O
 each _ _ O
 other _ _ O
 using _ _ O
-messages _ _ O
+messages _ _ B-Concept
 
 
  _ _ O
 Matchmaking _ _ O
 between _ _ O
-nodes _ _ O
+nodes _ _ B-Concept
 is _ _ O
 done _ _ O
 by _ _ O
 the _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ O
+Master _ _ O
 ( _ _ O
-roscore _ _ B-concept
+roscore _ _ O
 ) _ _ O
 
 
@@ -244,19 +244,19 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ O
+Operating _ _ O
+System _ _ O
+( _ _ O
+ROS _ _ O
+) _ _ O
 
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 
  _ _ O
@@ -271,8 +271,8 @@ main _ _ O
 General _ _ O
 tools _ _ O
 for _ _ O
-distributed _ _ O
-computing _ _ O
+distributed _ _ B-Concept
+computing _ _ I-Concept
 Packaging _ _ O
 Building _ _ O
 tools _ _ O
@@ -305,19 +305,19 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 
  _ _ O
@@ -360,7 +360,7 @@ Developed _ _ O
 and _ _ O
 maintained _ _ O
 by _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 community _ _ O
 The _ _ O
 main _ _ O
@@ -386,34 +386,34 @@ answers.ros.org _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-ROS _ _ B-concept
-Core _ _ I-concept
+ROS _ _ B-Concept
+Core _ _ I-Concept
 
 
  _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ I-Concept
 A _ _ O
 centralized _ _ O
-Remote _ _ O
-Procedure _ _ O
-Call _ _ O
+Remote _ _ B-Concept
+Procedure _ _ I-Concept
+Call _ _ I-Concept
 ( _ _ O
-RPC _ _ O
+RPC _ _ B-Concept
 ) _ _ O
 server _ _ O
 Negotiates _ _ O
 communication _ _ O
 connections _ _ O
 between _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 Registers _ _ O
 names _ _ O
 
@@ -452,18 +452,18 @@ System _ _ O
 ROS _ _ O
 ) _ _ O
 
-ROS _ _ B-concept
+ROS _ _ B-Concept
 Communication _ _ O
 Protocol _ _ O
 
 
  _ _ O
-ROS _ _ B-concept
-Topics _ _ O
+ROS _ _ B-Concept
+Topics _ _ I-Concept
 Asynchronous _ _ O
 communication _ _ O
 ( _ _ O
-stream _ _ O
+stream _ _ B-Concept
 ) _ _ O
 Strongly _ _ O
 Typed _ _ O
@@ -471,7 +471,7 @@ Help _ _ O
 hiding _ _ O
 underly _ _ O
 byte _ _ O
-stream _ _ O
+stream _ _ B-Concept
 Think _ _ O
 about _ _ O
 struct _ _ O
@@ -485,21 +485,21 @@ have _ _ O
 one _ _ O
 or _ _ O
 more _ _ O
-publishers _ _ B-concept
+publishers _ _ B-Concept
 in _ _ O
 the _ _ O
 same _ _ O
-topic _ _ B-concept
+topic _ _ O
 Can _ _ O
 have _ _ O
 one _ _ O
 or _ _ O
 more _ _ O
-subscribers _ _ B-concept
+subscribers _ _ B-Concept
 in _ _ O
 the _ _ O
 same _ _ O
-topic _ _ B-concept
+topic _ _ O
 
 
  _ _ O
@@ -510,27 +510,27 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 How _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 Works _ _ O
 ? _ _ O
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ I-concept
+cmvision _ _ B-Concept
+node _ _ B-Concept
 
 
- _ _ I-concept
-control _ _ B-concept
-node _ _ I-concept
+ _ _ I-Concept
+control _ _ B-Concept
+node _ _ B-Concept
 
 
  _ _ O
@@ -539,8 +539,8 @@ node _ _ I-concept
 
  _ _ O
 3 _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ O
 
 
  _ _ O
@@ -552,13 +552,13 @@ Master _ _ I-concept
 
 
  _ _ O
-camera _ _ B-concept
-node _ _ I-concept
+camera _ _ B-Concept
+node _ _ B-Concept
 
 
  _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ B-Concept
 
 
  _ _ O
@@ -576,29 +576,29 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ O
+Kobuki _ _ B-Concept
 USB _ _ O
 
 
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 How _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 Works _ _ O
 ? _ _ O
 
 
  _ _ O
-camera _ _ B-concept
-node _ _ I-concept
+camera _ _ B-Concept
+node _ _ I-Concept
 Performs _ _ O
 hardware _ _ O
 abstraction _ _ O
@@ -624,21 +624,21 @@ format _ _ O
  _ _ O
 Tells _ _ O
 the _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ I-Concept
 I _ _ O
 wants _ _ O
 to _ _ O
-publish _ _ O
+publish _ _ B-Concept
 images _ _ O
 on _ _ O
-topic _ _ O
-image _ _ O
+topic _ _ B-Concept
+image _ _ I-Concept
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ I-concept
+cmvision _ _ B-Concept
+node _ _ I-Concept
 Performs _ _ O
 objects _ _ O
 detection _ _ O
@@ -703,14 +703,14 @@ ROS _ _ O
 ) _ _ O
 
 How _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 Works _ _ O
 ? _ _ O
 
 
  _ _ O
-control _ _ B-concept
-node _ _ I-concept
+control _ _ B-Concept
+node _ _ I-Concept
 Make _ _ O
 decisions _ _ O
 to _ _ O
@@ -726,33 +726,33 @@ of _ _ O
 coordinates _ _ O
 Tells _ _ O
 the _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ I-Concept
 I _ _ O
 want _ _ O
 to _ _ O
-subscribe _ _ B-concept
+subscribe _ _ B-Concept
 to _ _ O
 receive _ _ O
-blobs _ _ O
+blobs _ _ B-Concept
 from _ _ O
 the _ _ O
-topic _ _ B-concept
-blobs _ _ O
+topic _ _ B-Concept
+blobs _ _ I-Concept
 I _ _ O
 also _ _ O
 want _ _ O
 to _ _ O
-publish _ _ B-concept
+publish _ _ B-Concept
 velocities _ _ O
 on _ _ O
-topic _ _ B-concept
-velocity _ _ O
+topic _ _ B-Concept
+velocity _ _ I-Concept
 
 
  _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 Performs _ _ O
 hardware _ _ O
 abstractions _ _ O
@@ -768,19 +768,19 @@ sensors _ _ O
  _ _ O
 Tells _ _ O
 the _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ I-Concept
 I _ _ O
 want _ _ O
 to _ _ O
-subscribe _ _ B-concept
+subscribe _ _ B-Concept
 to _ _ O
 receive _ _ O
 velocities _ _ O
 from _ _ O
 the _ _ O
-topic _ _ B-concept
-velocity _ _ O
+topic _ _ B-Concept
+velocity _ _ I-Concept
 
 
  _ _ O
@@ -801,46 +801,46 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 How _ _ O
-ROS _ _ B-concept
+ROS _ _ B-Concept
 Works _ _ O
 ? _ _ O
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ I-concept
+cmvision _ _ B-Concept
+node _ _ B-Concept
 
 
- _ _ I-concept
-control _ _ B-concept
-node _ _ I-concept
-
-
- _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ _ _ I-Concept
+control _ _ B-Concept
+node _ _ B-Concept
 
 
  _ _ O
-camera _ _ B-concept
-node _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ B-Concept
 
 
  _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+camera _ _ B-Concept
+node _ _ B-Concept
 
 
  _ _ O
-Camera _ _ O
+kobuki _ _ B-Concept
+node _ _ B-Concept
+
+
+ _ _ O
+Camera _ _ B-Concept
 
 
  _ _ O
@@ -849,18 +849,18 @@ USB _ _ O
 
 
  _ _ O
-Kobuki _ _ O
+Kobuki _ _ B-Concept
 USB _ _ O
 
 
  _ _ O
-ROS _ _ B-concept
-Master _ _ I-concept
+ROS _ _ B-Concept
+Master _ _ I-Concept
 sets _ _ O
 up _ _ O
 communication _ _ O
 among _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 based _ _ O
 on _ _ O
 their _ _ O
@@ -873,23 +873,23 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-ROS _ _ B-concept
-Nodes _ _ I-concept
+ROS _ _ B-Concept
+Nodes _ _ I-Concept
 
 
  _ _ O
 A _ _ O
-node _ _ B-concept
+node _ _ B-Concept
 is _ _ O
 a _ _ O
-process _ _ O
+process _ _ B-Concept
 that _ _ O
 performs _ _ O
 some _ _ O
@@ -906,7 +906,7 @@ into _ _ O
 different _ _ O
 modules _ _ O
 Single _ _ O
-Node _ _ B-concept
+Node _ _ B-Concept
 Color _ _ O
 image _ _ O
 to _ _ O
@@ -920,7 +920,7 @@ program _ _ O
 
  _ _ O
 Multiple _ _ O
-Nodes _ _ B-concept
+Nodes _ _ B-Concept
 : _ _ O
 Color _ _ O
 image _ _ O
@@ -936,7 +936,7 @@ coordinate _ _ O
 
 
  _ _ O
-Nodes _ _ B-concept
+Nodes _ _ B-Concept
 are _ _ O
 combined _ _ O
 together _ _ O
@@ -949,10 +949,10 @@ with _ _ O
 one _ _ O
 another _ _ O
 using _ _ O
-streaming _ _ O
-topics _ _ B-concept
+streaming _ _ B-Concept
+topics _ _ B-Concept
 These _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 are _ _ O
 meant _ _ O
 to _ _ O
@@ -969,7 +969,7 @@ usually _ _ O
 comprise _ _ O
 of _ _ O
 many _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 . _ _ O
 
 
@@ -981,24 +981,24 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-ROS _ _ B-concept
-Node _ _ I-concept
+ROS _ _ B-Concept
+Node _ _ I-Concept
 Examples _ _ O
-gscam _ _ B-concept
-node _ _ I-concept
+gscam _ _ B-Concept
+node _ _ I-Concept
 : _ _ O
 Communicates _ _ O
 with _ _ O
 integrated _ _ O
 web _ _ O
-camera _ _ O
+camera _ _ B-Concept
 at _ _ O
 the _ _ O
 hardware _ _ O
@@ -1006,10 +1006,10 @@ level _ _ O
 Captures _ _ O
 images _ _ O
 and _ _ O
-publishes _ _ O
+publishes _ _ B-Concept
 on _ _ O
-topic _ _ B-concept
-image _ _ O
+topic _ _ B-Concept
+image _ _ I-Concept
 Note _ _ O
 that _ _ O
 a _ _ O
@@ -1023,18 +1023,18 @@ images _ _ O
 
 
  _ _ O
-cmvision _ _ B-concept
-node _ _ I-concept
-: _ _ I-concept
-Subscribes _ _ O
+cmvision _ _ B-Concept
+node _ _ I-Concept
+: _ _ I-Concept
+Subscribes _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
-image _ _ O
+topic _ _ B-Concept
+image _ _ I-Concept
 Tries _ _ O
 to _ _ O
 find _ _ O
-blobs _ _ O
+blobs _ _ B-Concept
 of _ _ O
 specific _ _ O
 color _ _ O
@@ -1042,31 +1042,31 @@ for _ _ O
 every _ _ O
 image _ _ O
 received _ _ O
-Publishes _ _ B-concept
+Publishes _ _ O
 locations _ _ O
 and _ _ O
 sizes _ _ O
 of _ _ O
-blobs _ _ O
+blobs _ _ B-Concept
 on _ _ O
-topic _ _ B-concept
-blobs _ _ O
+topic _ _ B-Concept
+blobs _ _ I-Concept
 
 
  _ _ O
-control _ _ B-concept
-node _ _ I-concept
+control _ _ B-Concept
+node _ _ I-Concept
 : _ _ O
-Subscribes _ _ B-concept
+Subscribes _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
-blob _ _ O
+topic _ _ B-Concept
+blob _ _ I-Concept
 Decides _ _ O
 what _ _ O
 to _ _ O
 do _ _ O
-Publishes _ _ B-concept
+Publishes _ _ B-Concept
 velocities _ _ O
 to _ _ O
 move _ _ O
@@ -1074,17 +1074,17 @@ robot _ _ O
 
 
  _ _ O
-kobuki _ _ B-concept
-node _ _ I-concept
+kobuki _ _ B-Concept
+node _ _ I-Concept
 : _ _ O
-Subscribes _ _ B-concept
+Subscribes _ _ B-Concept
 to _ _ O
 the _ _ O
-topic _ _ B-concept
-velocity _ _ O
+topic _ _ O
+velocity _ _ B-Concept
 Tells _ _ O
-kobuki _ _ O
-robot _ _ O
+kobuki _ _ B-Concept
+robot _ _ I-Concept
 what _ _ O
 to _ _ O
 do _ _ O
@@ -1099,71 +1099,71 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-ROS _ _ B-concept
-Topics _ _ O
+ROS _ _ B-Concept
+Topics _ _ I-Concept
 
 
  _ _ O
-Topics _ _ B-concept
+Topics _ _ B-Concept
 are _ _ O
 named _ _ O
 buses _ _ O
 over _ _ O
 which _ _ O
-nodes _ _ B-concept
+nodes _ _ B-Concept
 exchange _ _ O
-messages _ _ O
+messages _ _ B-Concept
 There _ _ O
 can _ _ O
 be _ _ O
 hundreds _ _ O
 of _ _ O
-topics _ _ B-concept
+topics _ _ B-Concept
 at _ _ O
 a _ _ O
 time _ _ O
 
 
  _ _ O
-Topics _ _ B-concept
+Topics _ _ B-Concept
 have _ _ O
 anonymous _ _ O
-publish _ _ B-concept
+publish _ _ B-Concept
 / _ _ O
-subscribe _ _ B-concept
+subscribe _ _ B-Concept
 semantics _ _ O
 A _ _ O
-subscriber _ _ B-concept
+subscriber _ _ B-Concept
 does _ _ O
 not _ _ O
 care _ _ O
 which _ _ O
-node _ _ B-concept
-published _ _ B-concept
+node _ _ B-Concept
+published _ _ B-Concept
 the _ _ O
 data _ _ O
 it _ _ O
 receives _ _ O
 A _ _ O
-publisher _ _ B-concept
+publisher _ _ B-Concept
 does _ _ O
 not _ _ O
 care _ _ O
 which _ _ O
-node _ _ B-concept
-subscribes _ _ B-concept
+node _ _ B-Concept
+subscribes _ _ B-Concept
 to _ _ O
 the _ _ O
 data _ _ O
 it _ _ O
-publishes _ _ B-concept
+publishes _ _ B-Concept
 . _ _ O
 
 
@@ -1172,21 +1172,21 @@ There _ _ O
 can _ _ O
 be _ _ O
 multiple _ _ O
-publishers _ _ B-concept
+publishers _ _ B-Concept
 and _ _ O
-subscribers _ _ B-concept
+subscribers _ _ B-Concept
 to _ _ O
 a _ _ O
 topic _ _ O
 Each _ _ O
-topic _ _ B-concept
+topic _ _ B-Concept
 is _ _ O
 strongly _ _ O
 typed _ _ O
 by _ _ O
 the _ _ O
-ROS _ _ B-concept
-message _ _ O
+ROS _ _ B-Concept
+message _ _ I-Concept
 it _ _ O
 transports _ _ O
 Transport _ _ O
@@ -1213,40 +1213,40 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
-ROS _ _ B-concept
-Messages _ _ O
-Nodes _ _ B-concept
+ROS _ _ B-Concept
+Messages _ _ I-Concept
+Nodes _ _ B-Concept
 communicate _ _ O
 with _ _ O
 each _ _ O
 other _ _ O
 by _ _ O
-publishing _ _ B-concept
-messages _ _ O
+publishing _ _ B-Concept
+messages _ _ B-Concept
 to _ _ O
-topics _ _ B-concept
-Publishers _ _ B-concept
-publish _ _ B-concept
+topics _ _ B-Concept
+Publishers _ _ B-Concept
+publish _ _ B-Concept
 data _ _ O
 to _ _ O
-topics _ _ B-concept
-Subscribers _ _ B-concept
+topics _ _ B-Concept
+Subscribers _ _ B-Concept
 consume _ _ O
 data _ _ O
 from _ _ O
-topics _ _ B-concept
+topics _ _ B-Concept
 
 
  _ _ O
 A _ _ O
-message _ _ O
+message _ _ B-Concept
 is _ _ O
 a _ _ O
 simple _ _ O
@@ -1264,20 +1264,20 @@ type _ _ O
 in _ _ O
 programming _ _ O
 : _ _ O
-std _ _ O
-msgs _ _ O
+std _ _ B-Concept
+msgs _ _ I-Concept
 / _ _ O
 Int32 _ _ O
-std _ _ O
-msgs _ _ O
+std _ _ B-Concept
+msgs _ _ I-Concept
 / _ _ O
 Float32 _ _ O
-std _ _ O
-msgs _ _ O
+std _ _ B-Concept
+msgs _ _ I-Concept
 / _ _ O
 String _ _ O
-std _ _ O
-msgs _ _ O
+std _ _ B-Concept
+msgs _ _ I-Concept
 / _ _ O
 Empty _ _ O
 
@@ -1294,11 +1294,11 @@ of _ _ O
 bits _ _ O
 Reference _ _ O
 to _ _ O
-standard _ _ O
-messages _ _ O
+standard _ _ B-Concept
+messages _ _ I-Concept
 ( _ _ O
-std _ _ O
-msgs _ _ O
+std _ _ B-Concept
+msgs _ _ I-Concept
 ) _ _ O
 can _ _ O
 be _ _ O
@@ -1321,12 +1321,12 @@ Kosiyatrakul _ _ O
  _ _ O
 Introduction _ _ O
 to _ _ O
-Robot _ _ B-concept
-Operating _ _ I-concept
-System _ _ I-concept
-( _ _ I-concept
-ROS _ _ I-concept
-) _ _ I-concept
+Robot _ _ B-Concept
+Operating _ _ I-Concept
+System _ _ I-Concept
+( _ _ O
+ROS _ _ B-Concept
+) _ _ O
 
 
 

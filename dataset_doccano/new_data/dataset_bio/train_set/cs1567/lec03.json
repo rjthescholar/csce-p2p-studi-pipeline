@@ -1,5 +1,5 @@
 {
-    "segment": "['train_set', 'labeled']",
+    "segment": "['train_set', 'labeled_plus_fd']",
     "course": "cs1567",
     "lec": "lec03",
     "data": [
@@ -12,50 +12,39 @@
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "X",
+                "B",
                 "O",
-                "X",
+                "B",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "Publisher"
             ],
             "word_labels": [
-                "X"
+                "B",
+                "O",
+                "B",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "publisher",
                 "publishes",
@@ -114,26 +103,13 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "X",
-                "O",
-                "X",
+                "B",
+                "B",
                 "O",
                 "O",
+                "B",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -145,9 +121,20 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -165,40 +152,28 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
                 "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py",
                 "#",
                 "!",
@@ -303,8 +278,9 @@
                 "pass"
             ],
             "word_labels": [
-                "X",
+                "B",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -319,13 +295,11 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -335,17 +309,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -398,7 +368,15 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -409,7 +387,6 @@
         },
         {
             "sentence": [
-                "",
                 "Do",
                 "not",
                 "forget",
@@ -457,26 +434,14 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py",
                 "#",
                 "!",
@@ -488,7 +453,10 @@
                 "python"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "O",
+                "B",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -501,7 +469,6 @@
         },
         {
             "sentence": [
-                "",
                 "If",
                 "you",
                 "try",
@@ -545,8 +512,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -579,7 +545,6 @@
         },
         {
             "sentence": [
-                "",
                 "This",
                 "line",
                 "should",
@@ -612,8 +577,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -633,7 +597,6 @@
         },
         {
             "sentence": [
-                "",
                 "We",
                 "are",
                 "going",
@@ -681,26 +644,14 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py",
                 "pub",
                 "=",
@@ -716,11 +667,14 @@
                 ")"
             ],
             "word_labels": [
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -733,7 +687,6 @@
         },
         {
             "sentence": [
-                "",
                 "This",
                 "create",
                 "an",
@@ -815,19 +768,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -838,7 +779,18 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "B",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -849,6 +801,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -859,6 +812,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -866,19 +820,17 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
-                "X",
-                "O",
-                "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -887,7 +839,6 @@
         },
         {
             "sentence": [
-                "",
                 "Initialize",
                 "this",
                 "node",
@@ -904,35 +855,23 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py",
                 "rate",
                 "=",
@@ -944,10 +883,13 @@
                 "10hz"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "B",
                 "O",
-                "X",
+                "B",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -957,7 +899,6 @@
         },
         {
             "sentence": [
-                "",
                 "Create",
                 "an",
                 "object",
@@ -996,7 +937,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -1006,8 +946,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -1025,7 +965,6 @@
         },
         {
             "sentence": [
-                "",
                 "rate.sleep",
                 "(",
                 ")",
@@ -1062,7 +1001,6 @@
             ],
             "word_labels": [
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -1073,7 +1011,7 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -1099,7 +1037,6 @@
         },
         {
             "sentence": [
-                "",
                 "A",
                 "loop",
                 "is",
@@ -1163,6 +1100,7 @@
             ],
             "word_labels": [
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1171,28 +1109,14 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1218,6 +1142,18 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1227,29 +1163,20 @@
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py"
             ],
             "word_labels": [
-                "X"
+                "B",
+                "O",
+                "B",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "hello_str",
                 "=",
                 "\"",
@@ -1275,13 +1202,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Create",
                 "a",
                 "string",
@@ -1323,13 +1248,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Print",
                 "the",
                 "message",
@@ -1367,26 +1290,25 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
+                "B",
                 "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1403,32 +1325,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "talker.py",
                 "pub.publish",
                 "(",
@@ -1436,8 +1345,11 @@
                 ")"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "B",
+                "O",
+                "B",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O"
@@ -1445,7 +1357,6 @@
         },
         {
             "sentence": [
-                "",
                 "Publish",
                 "the",
                 "message",
@@ -1454,18 +1365,16 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
+                "B",
                 "O",
-                "O",
-                "X",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Put",
                 "this",
                 "node",
@@ -1507,9 +1416,7 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1536,7 +1443,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -1547,7 +1455,6 @@
         },
         {
             "sentence": [
-                "",
                 "Interrupt",
                 "may",
                 "be",
@@ -1558,54 +1465,42 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
+                "Subscriber",
                 "Subscriber"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
-                "O",
-                "X"
+                "B",
+                "B"
             ]
         },
         {
             "sentence": [
-                "Subscriber"
-            ],
-            "word_labels": [
-                "X"
-            ]
-        },
-        {
-            "sentence": [
-                "",
                 "A",
                 "subscriber",
                 "subscribes",
@@ -1666,28 +1561,15 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "X",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1699,9 +1581,20 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1719,49 +1612,39 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
                 "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "listener.py"
             ],
             "word_labels": [
-                "X"
+                "B",
+                "O",
+                "B",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "#",
                 "!",
                 "/usr",
@@ -1880,30 +1763,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -1920,14 +1779,36 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Do",
                 "not",
                 "forget",
@@ -1957,38 +1838,24 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "listener.py",
                 "rospy.init_node",
                 "(",
@@ -2000,11 +1867,14 @@
                 ")"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "B",
+                "O",
+                "B",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2013,7 +1883,6 @@
         },
         {
             "sentence": [
-                "",
                 "Initialize",
                 "this",
                 "node",
@@ -2037,16 +1906,15 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2059,7 +1927,6 @@
         },
         {
             "sentence": [
-                "",
                 "Subscribes",
                 "to",
                 "the",
@@ -2100,28 +1967,17 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2136,14 +1992,23 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X"
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Keeps",
                 "the",
                 "node",
@@ -2162,13 +2027,12 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2179,20 +2043,9 @@
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "The",
                 "callback",
                 "(",
@@ -2200,16 +2053,18 @@
                 "Function"
             ],
             "word_labels": [
+                "B",
                 "O",
+                "B",
                 "O",
-                "O",
-                "O",
-                "O"
+                "B",
+                "I",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "This",
                 "callback",
                 "(",
@@ -2253,6 +2108,10 @@
             ],
             "word_labels": [
                 "O",
+                "B",
+                "I",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2261,15 +2120,10 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2297,7 +2151,6 @@
         },
         {
             "sentence": [
-                "",
                 "The",
                 "argument",
                 "data",
@@ -2345,13 +2198,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "To",
                 "access",
                 "the",
@@ -2377,47 +2228,35 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "messenger.py"
             ],
             "word_labels": [
+                "B",
+                "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Sometimes",
                 "your",
                 "ROS",
@@ -2448,36 +2287,34 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "X",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "B",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X"
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Example",
                 ":",
                 "Blob",
@@ -2523,16 +2360,12 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2545,6 +2378,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2556,18 +2390,19 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "This",
                 "type",
                 "of",
@@ -2601,62 +2436,48 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
                 "O",
                 "O",
-                "X",
                 "O",
-                "O",
-                "X",
+                "B",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "B",
+                "O",
+                "O",
+                "B",
+                "O",
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "messenger.py",
                 "#",
                 "!",
@@ -2753,7 +2574,9 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2770,7 +2593,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -2798,7 +2620,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -2816,7 +2637,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -2825,9 +2645,13 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2851,32 +2675,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "Notes",
                 "about",
                 "Distributed",
@@ -2933,18 +2744,13 @@
                 "."
             ],
             "word_labels": [
+                "B",
+                "O",
+                "B",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2957,6 +2763,18 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2974,11 +2792,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2991,7 +2805,6 @@
         },
         {
             "sentence": [
-                "",
                 "Generally",
                 ",",
                 "if",
@@ -3051,6 +2864,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3063,9 +2877,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3083,7 +2895,6 @@
         },
         {
             "sentence": [
-                "",
                 "Use",
                 "rospy.spin",
                 "(",
@@ -3104,10 +2915,9 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3125,32 +2935,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "Loop",
                 "vs",
                 "rospy.spin",
@@ -3158,16 +2955,18 @@
                 ")"
             ],
             "word_labels": [
-                "X",
                 "O",
-                "X",
-                "X",
-                "X"
+                "O",
+                "O",
+                "B",
+                "O",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "You",
                 "should",
                 "use",
@@ -3213,13 +3012,11 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3228,8 +3025,8 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3241,8 +3038,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3253,7 +3051,6 @@
         },
         {
             "sentence": [
-                "",
                 "Use",
                 "rospy.spin",
                 "(",
@@ -3296,11 +3093,9 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3321,13 +3116,14 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "B",
                 "O",
                 "O",
-                "X",
+                "B",
                 "O",
                 "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3339,7 +3135,6 @@
         },
         {
             "sentence": [
-                "",
                 "Often",
                 "time",
                 ",",
@@ -3363,12 +3158,11 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3377,32 +3171,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "Cleanup",
                 "A",
                 "process",
@@ -3454,18 +3235,14 @@
                 "non-stop"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "O",
+                "B",
+                "B",
                 "O",
                 "O",
                 "O",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3479,9 +3256,16 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3507,7 +3291,6 @@
         },
         {
             "sentence": [
-                "",
                 "Cleanup",
                 "can",
                 "be",
@@ -3532,34 +3315,32 @@
                 ")"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "When",
                 "the",
                 "program",
@@ -3611,16 +3392,15 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -3639,32 +3419,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "About",
                 "Callback",
                 "Functions",
@@ -3754,13 +3521,15 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
+                "B",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -3798,19 +3567,15 @@
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -3819,9 +3584,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -3838,14 +3600,21 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "function",
                 "callback",
@@ -3869,20 +3638,19 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3891,32 +3659,19 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "About",
                 "Callback",
                 "Functions",
@@ -4021,6 +3776,19 @@
                 "Kosiyatrakul"
             ],
             "word_labels": [
+                "B",
+                "O",
+                "B",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4049,20 +3817,10 @@
                 "O",
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -4127,20 +3885,9 @@
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "rostopic",
                 "rostopic",
                 "is",
@@ -4192,65 +3939,7 @@
                 "of",
                 "a",
                 "specific",
-                "topic"
-            ],
-            "word_labels": [
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X"
-            ]
-        },
-        {
-            "sentence": [
+                "topic",
                 "",
                 "Suppose",
                 "we",
@@ -4279,16 +3968,20 @@
                 "listener.py"
             ],
             "word_labels": [
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -4298,58 +3991,98 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
-                "X",
-                "X",
                 "O",
-                "X"
+                "O",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "B",
+                "I",
+                "I",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
-                "X",
                 "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "rostopic",
                 "Use",
                 "rostopic",
                 "list"
             ],
             "word_labels": [
-                "X",
-                "X",
-                "X",
-                "X"
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "to",
                 "list",
                 "the",
@@ -4369,10 +4102,9 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4383,7 +4115,6 @@
         },
         {
             "sentence": [
-                "",
                 "Use",
                 "rostopic",
                 "echo",
@@ -4391,15 +4122,13 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "to",
                 "show",
                 "messages",
@@ -4440,37 +4169,36 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "X",
-                "X",
-                "X",
-                "X",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
-                "X",
+                "B",
+                "I",
+                "B",
+                "I",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -4479,20 +4207,9 @@
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "rostopic",
                 "Use",
                 "rostopic",
@@ -4500,16 +4217,18 @@
                 "chatter"
             ],
             "word_labels": [
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
+                "I",
+                "O",
+                "B",
+                "I",
+                "B",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "to",
                 "show",
                 "information",
@@ -4556,18 +4275,17 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -4595,7 +4313,6 @@
         },
         {
             "sentence": [
-                "",
                 "Use",
                 "rostopic",
                 "type",
@@ -4603,15 +4320,13 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "to",
                 "show",
                 "the",
@@ -4631,9 +4346,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -4641,7 +4355,6 @@
         },
         {
             "sentence": [
-                "",
                 "To",
                 "publish",
                 "the",
@@ -4683,9 +4396,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4701,31 +4413,22 @@
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
-                "Subscriber"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Subscriber",
                 "Workspace",
                 "Directory"
             ],
             "word_labels": [
-                "O",
-                "O"
+                "B",
+                "I",
+                "B",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Your",
                 "workspace",
                 "directory",
@@ -4744,9 +4447,8 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -4763,7 +4465,6 @@
         },
         {
             "sentence": [
-                "",
                 "All",
                 "Python",
                 "program",
@@ -4803,13 +4504,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "or",
                 "any",
                 "subdirectory",
@@ -4861,13 +4560,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "where",
                 "[",
                 "Tab",
@@ -4893,39 +4590,30 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Publisher",
                 "and",
                 "Subscriber"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
-                "O",
-                "X"
+                "B"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         }
     ]
 }

@@ -24,6 +24,7 @@ if __name__=="__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-f", "--file", help = "File Input", type=Path)
 	parser.add_argument("-o", "--out", help = "BIO JSON Output", type=Path)
+	parser.add_argument("-n", "--nosplit", help = "For doccano outputs that have not been split", action='store_true')
 	args = parser.parse_args(sys.argv[1:])
 	
 	bio_list = []
@@ -31,16 +32,19 @@ if __name__=="__main__":
 		with open(args.file, 'r') as f:
 			text = f.read()
 			line_text=text.split('\n')
-			segment, course, lec = line_text[0].split('|')
+			if not args.nosplit:
+				segment, course, lec = line_text[0].split('|')
 			prev_row = 'x'
-			for row in line_text[1:]:
+			for i, row in enumerate(line_text):
+				if i == 0 and not args.nosplit:
+					continue
 				if row == '':
 					continue
 				srow = row.split(' ')
 				if srow[0] == '-DOCSTART-':
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
-				if '\f' in srow[0]:
+				if row == ' _ _ O' and not args.nosplit:
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
 				bio_list[-1]['sentence'].append(srow[0])
@@ -50,5 +54,8 @@ if __name__=="__main__":
 	
 	if args.out:
 		with open(args.out, 'w') as f2:
-			f2.write(json.dumps({'segment': segment, 'course': course, 'lec': lec, 'data': bio_list}, indent=4))
+			if args.nosplit:
+				f2.write(json.dumps(bio_list, indent=4))
+			else:
+				f2.write(json.dumps({'segment': segment, 'course': course, 'lec': lec, 'data': bio_list}, indent=4))
 	

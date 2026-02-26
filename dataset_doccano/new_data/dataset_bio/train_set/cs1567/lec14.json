@@ -1,5 +1,5 @@
 {
-    "segment": "['train_set', 'labeled']",
+    "segment": "['train_set', 'labeled_plus_fd']",
     "course": "cs1567",
     "lec": "lec14",
     "data": [
@@ -12,8 +12,8 @@
                 "tkosiyat@cs.pitt.edu"
             ],
             "word_labels": [
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O"
@@ -21,7 +21,6 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -29,37 +28,27 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Tracking",
                 "an",
                 "Object"
             ],
             "word_labels": [
-                "X",
-                "O",
-                "O"
+                "B",
+                "I",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Imagine",
                 "that",
                 "there",
@@ -85,25 +74,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Camera",
                 "Field\u2212of\u2212View"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "How",
                 "to",
                 "turn",
@@ -133,13 +118,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -147,24 +130,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Tracking",
                 "an",
                 "Object",
@@ -174,7 +146,9 @@
                 "view"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "I",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -185,19 +159,16 @@
         },
         {
             "sentence": [
-                "",
                 "Camera",
                 "Field\u2212of\u2212View"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Here",
                 "is",
                 "from",
@@ -211,13 +182,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "object",
                 "detection",
@@ -240,10 +209,9 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -263,18 +231,8 @@
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Tracking",
                 "an",
                 "Object",
@@ -297,9 +255,11 @@
                 "object"
             ],
             "word_labels": [
-                "X",
                 "O",
                 "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -321,7 +281,6 @@
         },
         {
             "sentence": [
-                "",
                 "Here",
                 "is",
                 "from",
@@ -335,13 +294,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "object",
                 "detection",
@@ -364,10 +321,9 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -387,31 +343,22 @@
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Tracking",
                 "an",
                 "Object"
             ],
             "word_labels": [
-                "X",
                 "O",
-                "O"
+                "O",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "simplified",
                 "goal",
@@ -515,13 +462,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "If",
                 "x-coordinate",
                 "of",
@@ -593,13 +538,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "If",
                 "x-coordinate",
                 "of",
@@ -671,13 +614,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -685,24 +626,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Tracking",
                 "an",
                 "Object",
@@ -728,7 +658,11 @@
                 "slowly"
             ],
             "word_labels": [
-                "X",
+                "B",
+                "I",
+                "B",
+                "I",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -736,8 +670,6 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -755,7 +687,6 @@
         },
         {
             "sentence": [
-                "",
                 "If",
                 "an",
                 "object",
@@ -817,8 +748,7 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -835,7 +765,6 @@
         },
         {
             "sentence": [
-                "",
                 "At",
                 "speed",
                 "exactly",
@@ -902,8 +831,7 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -921,7 +849,6 @@
         },
         {
             "sentence": [
-                "",
                 "At",
                 "speed",
                 "less",
@@ -1007,13 +934,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1021,35 +946,25 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Control",
                 "System"
             ],
             "word_labels": [
-                "X",
-                "X"
+                "B",
+                "I",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "A",
                 "control",
                 "system",
@@ -1117,10 +1032,8 @@
             ],
             "word_labels": [
                 "O",
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1149,8 +1062,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1185,7 +1099,6 @@
         },
         {
             "sentence": [
-                "",
                 "Type",
                 "of",
                 "Control",
@@ -1223,13 +1136,11 @@
             "word_labels": [
                 "O",
                 "O",
+                "B",
+                "I",
                 "O",
-                "X",
-                "X",
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1239,9 +1150,9 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1254,12 +1165,12 @@
                 "O",
                 "O",
                 "O",
-                "O"
+                "O",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1267,37 +1178,27 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Open",
                 "Loop",
                 "Examples"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "B",
+                "I",
+                "B",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Project",
                 "1",
                 "(",
@@ -1345,33 +1246,27 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0.5"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "0.5"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1379,54 +1274,38 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "1.0"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "1.5"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
-                "Distance"
-            ],
-            "word_labels": [
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Distance",
                 "Open",
                 "Loop",
                 "Examples",
@@ -1454,8 +1333,9 @@
                 "315"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1483,61 +1363,50 @@
         },
         {
             "sentence": [
-                "",
                 "480"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.5"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "325"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.0"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "640"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -1545,36 +1414,23 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control"
             ],
             "word_labels": [
                 "O",
-                "X",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
-                "\u22120.5"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "\u22120.5",
                 "Open",
                 "Loop",
                 "Examples",
@@ -1605,8 +1461,10 @@
                 "315"
             ],
             "word_labels": [
-                "X",
-                "X",
+                "O",
+                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1637,75 +1495,62 @@
         },
         {
             "sentence": [
-                "",
                 "480"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.8"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.5"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.3"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "325"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.0"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "640",
                 "Thumrongsak",
                 "Kosiyatrakul",
@@ -1715,60 +1560,43 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "\u22120.3"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "\u22120.5"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
-                "\u22120.8"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "\u22120.8",
                 "Open",
                 "Loop",
                 "Examples",
@@ -1797,15 +1625,10 @@
                 "315"
             ],
             "word_labels": [
-                "X",
-                "X",
                 "O",
                 "O",
-                "O",
-                "O",
-                "X",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -1817,6 +1640,13 @@
                 "O",
                 "O",
                 "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -1827,17 +1657,14 @@
         },
         {
             "sentence": [
-                "",
                 "480"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "(",
                 "315",
@@ -1855,45 +1682,37 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "325"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "0.0"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "640"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "center",
                 "is",
                 "the",
@@ -1921,25 +1740,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O"
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "angular.z",
                 "(",
                 "315",
@@ -1947,22 +1762,7 @@
                 "center",
                 ")",
                 "*",
-                "delta"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "delta",
                 "Problems",
                 "with",
                 "Open",
@@ -1972,14 +1772,21 @@
             "word_labels": [
                 "O",
                 "O",
-                "X",
-                "X",
-                "O"
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Problem",
                 "with",
                 "object",
@@ -2019,7 +1826,11 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2038,12 +1849,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2053,7 +1859,6 @@
         },
         {
             "sentence": [
-                "",
                 "Lost",
                 "track",
                 ":",
@@ -2075,13 +1880,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Overcompensate",
                 ":",
                 "Over",
@@ -2094,6 +1897,7 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2101,15 +1905,12 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -2117,93 +1918,73 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Closed",
                 "Loop",
                 "Control"
             ],
             "word_labels": [
-                "X",
-                "X",
-                "O"
+                "B",
+                "I",
+                "B",
+                "I",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Closed",
                 "Loop",
                 "Control",
                 "Input"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "X",
-                "O",
+                "B",
+                "I",
+                "I",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Controller"
             ],
             "word_labels": [
-                "O",
-                "O"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Output"
             ],
             "word_labels": [
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Error"
             ],
             "word_labels": [
-                "O",
-                "O"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Feedback"
             ],
             "word_labels": [
-                "O",
-                "O"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "goal",
                 "is",
@@ -2269,8 +2050,7 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2317,7 +2097,6 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -2325,35 +2104,25 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
-                "",
-                "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
                 "O"
             ]
         },
         {
             "sentence": [
                 "PID",
+                "Control",
+                "PID",
                 "Control"
             ],
             "word_labels": [
-                "X",
-                "O"
+                "O",
+                "O",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Proportional-Integral-Derivative",
                 "(",
                 "PID",
@@ -2426,13 +2195,11 @@
                 "coefficients"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
-                "X",
-                "X",
-                "X",
+                "B",
                 "O",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2445,8 +2212,8 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -2465,6 +2232,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2501,7 +2269,6 @@
         },
         {
             "sentence": [
-                "",
                 "Z",
                 "t",
                 "z",
@@ -2531,13 +2298,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "e",
                 "(",
                 "t",
@@ -2555,25 +2320,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "de",
                 "dt"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "meaning",
                 "of",
@@ -2625,13 +2386,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -2639,47 +2398,35 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
-                "",
-                "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
                 "O"
             ]
         },
         {
             "sentence": [
                 "PID",
+                "Control",
+                "PID",
                 "Control"
             ],
             "word_labels": [
-                "X",
-                "O"
+                "O",
+                "O",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 ":"
             ],
             "word_labels": [
-                "O",
-                "X",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Z",
                 "t",
                 "z",
@@ -2709,13 +2456,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "e",
                 "(",
                 "t",
@@ -2733,25 +2478,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "de",
                 "dt"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "From",
                 "the",
                 "above",
@@ -2789,13 +2530,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Proportional",
                 ":",
                 "magnitude",
@@ -2837,21 +2576,12 @@
                 ")"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -2868,7 +2598,15 @@
                 "O",
                 "O",
                 "O",
-                "X",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
+                "O",
                 "O",
                 "O",
                 "O",
@@ -2881,7 +2619,6 @@
         },
         {
             "sentence": [
-                "",
                 "Specify",
                 "values",
                 "of",
@@ -2929,13 +2666,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -2943,33 +2678,23 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Proportional"
             ],
             "word_labels": [
-                "X"
+                "O",
+                "O",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Proportional",
                 "portion",
                 "of",
@@ -3021,12 +2746,10 @@
                 ")"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
                 "O",
-                "O",
-                "X",
-                "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3046,6 +2769,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3075,7 +2799,6 @@
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -3083,24 +2806,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Differential",
                 "Differential",
                 "portion",
@@ -3109,29 +2821,28 @@
                 "Kd"
             ],
             "word_labels": [
-                "X",
-                "X",
                 "O",
                 "O",
-                "X",
+                "B",
+                "B",
+                "O",
+                "O",
+                "B",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "de",
                 "dt"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "de",
                 "is",
                 "the",
@@ -3183,13 +2894,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "If",
                 "the",
                 "robot",
@@ -3251,6 +2960,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3271,8 +2981,6 @@
                 "O",
                 "O",
                 "O",
-                "X",
-                "X",
                 "O",
                 "O",
                 "O",
@@ -3287,7 +2995,6 @@
         },
         {
             "sentence": [
-                "",
                 "This",
                 "also",
                 "help",
@@ -3361,35 +3068,25 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
-                "",
-                "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
                 "O"
             ]
         },
         {
             "sentence": [
                 "PID",
+                "Control",
+                "PID",
                 "Control"
             ],
             "word_labels": [
-                "X",
-                "O"
+                "O",
+                "O",
+                "B",
+                "I"
             ]
         },
         {
             "sentence": [
-                "",
                 "Sometime",
                 "P",
                 "and",
@@ -3471,13 +3168,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Balancing",
                 "application",
                 "(",
@@ -3531,13 +3226,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -3545,33 +3238,23 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Integral"
             ],
             "word_labels": [
-                "X"
+                "B",
+                "I",
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Integral",
                 "portion",
                 "of",
@@ -3581,11 +3264,10 @@
                 "Ki"
             ],
             "word_labels": [
+                "B",
                 "O",
-                "X",
                 "O",
-                "O",
-                "X",
+                "B",
                 "O",
                 "O",
                 "O"
@@ -3593,7 +3275,6 @@
         },
         {
             "sentence": [
-                "",
                 "e",
                 "(",
                 "t",
@@ -3607,13 +3288,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "This",
                 "is",
                 "the",
@@ -3641,6 +3320,7 @@
                 "O",
                 "O",
                 "O",
+                "B",
                 "O",
                 "O",
                 "O",
@@ -3654,14 +3334,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "O",
-                "O"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -3669,24 +3346,13 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
-                "Control"
-            ],
-            "word_labels": [
-                "O",
-                "X",
-                "O"
-            ]
-        },
-        {
-            "sentence": [
+                "Control",
                 "Find",
                 "the",
                 "values",
@@ -3699,6 +3365,8 @@
                 "Kd"
             ],
             "word_labels": [
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3713,7 +3381,6 @@
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control",
                 "Z",
@@ -3732,9 +3399,8 @@
                 "Ki"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O",
+                "B",
+                "I",
                 "O",
                 "O",
                 "O",
@@ -3753,7 +3419,6 @@
         },
         {
             "sentence": [
-                "",
                 "e",
                 "(",
                 "t",
@@ -3771,25 +3436,21 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "de",
                 "dt"
             ],
             "word_labels": [
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "The",
                 "values",
                 "of",
@@ -3841,13 +3502,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "First",
                 ",",
                 "find",
@@ -3887,13 +3546,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Second",
                 ",",
                 "fix",
@@ -3937,13 +3594,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
-                "X"
+                "B"
             ]
         },
         {
             "sentence": [
-                "",
                 "Then",
                 ",",
                 "adjusting",
@@ -3955,13 +3610,11 @@
                 "O",
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "Thumrongsak",
                 "Kosiyatrakul",
                 "tkosiyat@cs.pitt.edu"
@@ -3969,25 +3622,18 @@
             "word_labels": [
                 "O",
                 "O",
-                "O",
                 "O"
             ]
         },
         {
             "sentence": [
-                "",
                 "PID",
                 "Control"
             ],
             "word_labels": [
-                "O",
-                "X",
-                "O"
+                "B",
+                "I"
             ]
-        },
-        {
-            "sentence": [],
-            "word_labels": []
         }
     ]
 }
