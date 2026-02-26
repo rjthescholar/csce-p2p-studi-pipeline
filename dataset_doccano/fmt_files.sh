@@ -18,11 +18,11 @@ for dir in */; do
                 # mkdir ../../dataset_bio/distant/$course -p
                 cd "$course"
                 for file in *.jsonl; do
-                    #../../../../to_conll.py -f $file -o ../../../dataset_conll/$dir$course"${file%.*}".conll
-                    #../../../../to_bio_json.py -f "../../../dataset_conll/$dir$course${file%.*}".conll -o ../../../dataset_bio/$dir$course"${file%.*}".json
+                    ../../../../to_conll.py -f $file -o ../../../dataset_conll/$dir$course"${file%.*}".conll
+                    ../../../../to_bio_json.py -f "../../../dataset_conll/$dir$course${file%.*}".conll -o ../../../dataset_bio/$dir$course"${file%.*}".json
                     ../../../../concept_scripts/extract_concepts.py -f "../../../dataset_bio/$dir$course${file%.*}".json -o ../../../concepts_bio/$dir$course"${file%.*}".txt
-                    #../../../../concept_scripts/extract_concepts_tagged.py -f "../../../dataset_bio/$dir$course${file%.*}".json -o ../../../tagged_concepts_bio/$dir$course"${file%.*}".txt
-                    #../../../../concept_scripts/distant_label.py -f "../../../dataset_bio/unlabeled/$course${file%.*}".json -o "../../../dataset_bio/distant/$dir$course${file%.*}".json -d ../../../concepts/distant/$course"${file%.*}".json
+                    ../../../../concept_scripts/extract_concepts_tagged.py -f "../../../dataset_bio/$dir$course${file%.*}".json -o ../../../tagged_concepts_bio/$dir$course"${file%.*}".txt
+                    ../../../../concept_scripts/distant_label.py -f "../../../dataset_bio/unlabeled/$course${file%.*}".json -o "../../../dataset_bio/distant/$dir$course${file%.*}".json -d ../../../concepts/distant/$course"${file%.*}".json
                 done
             fi
             cd ..
