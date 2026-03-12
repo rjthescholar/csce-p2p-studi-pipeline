@@ -1,33 +1,33 @@
-5
-block cache
-actuator
-directory
-flash file system
-track
-raid
-system dump
-file
-parity rotates through disks
-platter
-0
-caching
-sector
-redundant array of inexpensive disks
-
-4
-i-node
-1
-duplicate block in free list
-duplicate block in two files
-number
-head
-defense in depth
-lfs
-spare sectors
-cylinder
-striped with parity
-disk log
-spindle
-ecc
 mirrored copies
 stripe
+lfs
+duplicate block in free list
+4
+sector
+block cache
+i-node
+5
+striped with parity
+0
+platter
+head
+raid
+system dump
+directory
+duplicate block in two files
+caching
+flash file system
+track
+actuator
+file
+disk log
+
+cylinder
+1
+ecc
+spare sectors
+redundant array of inexpensive disks
+parity rotates through disks
+number
+spindle
+defense in depth

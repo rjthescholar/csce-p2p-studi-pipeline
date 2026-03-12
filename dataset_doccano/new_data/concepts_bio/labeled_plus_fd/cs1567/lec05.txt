@@ -1,23 +1,23 @@
-joystick
-type twist
-axis
+buttons
 joy_node node
-axes
-command.angular.z
 topic joy
-robot
-topic
-twist
-button
+simulator
+header
+type joy
+kobuki robot
+command.angular.z
+joy node
+type twist
+axes
 ros
 command.linear.x
-message
-type joy
-header
-kobuki robot
-joy node
-simulator
-buttons
-rviz
-joy
+joystick
+topic
 kobuki
+message
+twist
+joy
+robot
+axis
+button
+rviz
