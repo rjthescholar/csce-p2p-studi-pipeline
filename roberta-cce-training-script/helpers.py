@@ -3,7 +3,7 @@ import numpy as np
 import torch
 from torch import cuda
 from sklearn.metrics import ConfusionMatrixDisplay
-from transformers import XLNetTokenizer
+from transformers import RobertaTokenizer
 from pylatexenc.latexencode import UnicodeToLatexEncoder
 
 u = UnicodeToLatexEncoder(unknown_char_policy='unihex', replacement_latex_protection='none', non_ascii_only=True)
@@ -12,7 +12,7 @@ import copy
 
 device = 'cuda' if cuda.is_available() else 'cpu'
 
-tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased')
+tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
 
 def tokenize_and_preserve_labels(sentence, text_labels, tokenizer):
 	"""

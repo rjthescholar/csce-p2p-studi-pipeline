@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/p2p-cce-training-script/main.py --labeled-path /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/dataset_doccano/new_data/dataset_bio/labeled_plus_fd/ --val-path /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/dataset_doccano/new_data/dataset_bio/dev_set/ \
+ --self-label-1-path /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/dataset_doccano/new_data/dataset_bio/self_training_1/ --self-label-2-path /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/dataset_doccano/new_data/dataset_bio/self_training_2/ -o /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/models/ &> /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/experiments/new_anno_course_level_eval/xlnet_no_distant_l1o_train_results.txt

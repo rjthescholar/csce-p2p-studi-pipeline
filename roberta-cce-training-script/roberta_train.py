@@ -6,14 +6,14 @@ import sklearn.metrics as sklmet
 from sklearn.dummy import DummyClassifier
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import XLNetTokenizer, XLNetConfig, XLNetForTokenClassification
+from transformers import RobertaTokenizer, RobertaConfig, RobertaForTokenClassification
 from transformers import BertTokenizer, BertConfig, BertForTokenClassification
 from torch import cuda
 device = 'cuda' if cuda.is_available() else 'cpu'
 
 from helpers import *
 
-# Defining the training function on the 80% of the dataset for tuning the xlnet model
+# Defining the training function on the 80% of the dataset for tuning the Roberta model
 def train(model, optimizer, loader, epoch, gold=True):
     tr_loss, tr_accuracy = 0, 0
     nb_tr_examples, nb_tr_steps = 0, 0
