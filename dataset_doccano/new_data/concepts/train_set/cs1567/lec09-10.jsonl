@@ -24,197 +24,165 @@ luminance
 chrominance
 RGB
 YUV
+Blob Detection
 
 Problems wit
-If we have two
-etect
-tecte
-s color
-
-s may no
-e sam
- the 
+Blob Detection
+blobs
+blobs
+Lighting
+Filtered
+blobs
+blobs
 
 Increas
-rroundin
+range of color
+lighting
+Blob Detection
 
 Applications
-ion and Tracking:
-Soccer: Ball 
+Object Recognition and Tracking
 
 Integrated W
-Camera
-To detect blob
-an im
-amera of your given 
-d anoth
-e com
-unicate wi
-cam
-Capture video 
-ge_raw
-
-To start gsca
- the follo
-h
-
-A 
- as
-follows:
-ro
+eb Camera
+blobs
+integrated Web camera
+web cam
+gscam
+gscam node
+integrated Web cam
+/v4l/camera/image_raw
+gscam
+image_view node
+Blob Detection
 
 Image Messag
-mages publish
-d by g
-type
-senso
-e mes
-onsists of th
+gscam node
+Image message
 
 View Image f
-enCV
-W
-reate 
-om camera us
-enCV
-F
-e need
-sage into OpenCV
-fo
-hen, s
+Camera
+OpenCV
+image viewer
+camera
+OpenCV
+color image message
+OpenCV
+Blob Detection
 
 View Image f
-enCV
-C
-mple (
+OpenCV
+Blob Detection
 
 cmvision Nod
 cmvision node
-etects blobs 
- from
-ubscribes to 
-your choic
-ected
-pic /
-mvision pack
-e also s
- user to
-d wit
-rongsak K
+blobs
+Image message
+type Image
+/v4l/camera/image_raw
+blobs
+blobs
+topic /blobs
+cmvision
+colorgui
+range of colors
+blobs
+threshold
+Blob Detection
 
 colorgui
 
 Be
-e runnin
-make sure you
-am is r
-g
-To 
-he follo
-ui image
-=/v4l/ca
-ra/image_raw is
-published b
-indows will
-gsak K
+colorgui node
+roscore
+gscam
+colorgui
+cmvision
+colorgui
+topic /v4l/camera/image_raw
+gscam node
+camera
+Blob Detection
 
 colorgui
 
 Af
- clickin
-t ar
-e t
+blob
+YUV
 
 colorgui Exa
-e
-First 
+Blob Detection
 
 colorgui Exa
-e
-Couple
 
 colorgui Exa
-e
-Couple
-umr
-k K
+RGB
+YUV
+Blob Detection
 
 colors.txt
 F
-cmvision n
-color informa
-lor file c
-ists of two
-shown belo
-1:163, 85:
-an be used to
-lors]
-(150
-1:163, 85:
+cmvision node
+color file
+thresholds
+thresholds
+cmvision node 
+thresholds
+thresholds
 
 colors.txt
 C
-ider the f
-lors]
-(150
-1:163, 85:
-0000
-be u
-sak K
+thresholds
+blob
+blob
+blobs
+Blob Detection
 
 colors.txt
 
 
-sider the 
-lors]
-(150
-1:163, 85:
-sists of t
-rom
+thresholds
+thresholds
+YUV
 colorgui
 
-that the
- so on
-
-Th
+thresholds
 
 cmvision.lau
 
 Parameters of 
-eded to 
-ifferent d
-ning
-val
-e the ar
+cmvision
+colors.txt 
+cmvision
+cmvision
+cmvision.launch
 
 Your cmvision.
- should look li
+launch
+Blob Detection
 
 Blobs.msgs
 
 
-ision node
-ublishes a me
-n, import 
-e of 
-of va
- arra
- of d
-b (w
-s) i
+cmvision node
+type Blobs
+Blobs
+Blobs
+blobs
+Blob
+Blob
+Blob Detection
 
 Blob.msgs
 Bl
-msgs stor
-s informa
-y
-cm
-ust be explic
-messa
- of 
-f va
-ring)
-red: 
+ob.msgs 
+blob
+cmvision node
+Blobs
+Blob
+type Blob
+colors.txt
+Blob Detection
 
 Blob.msgs
 (0
@@ -225,97 +193,74 @@ left
 r
 
 Problem Solv
-ronmen
-e sam
-e sam
-e from
-ra?
-
-
+filter
+blobs
+blobs
+filter
+noise
+Blob Detection
 
 Visualize Bl
-nCV
-
-
-es we 
-ut bl
-s that
-too s
-s that
-outsi
+OpenCV
+process blobs
+Filter
+blobs
+Filter
+blobs
+blobs
 
 
 We 
- libra
+OpenCV
+Computer Vision
 
 Visualize Bl
-nCV
-#
-in/env
+OpenCV
+Blob Detection
 
 Visualize Bl
-nCV
-
-
-n():
-g
+OpenCV
+Blob Detection
 
 Visualize Bl
-nCV
-d
-():
-:
-
+obs
+OpenCV
 
 Blob Detecti
-Algorithm
-
-Given an imag
-to r
-t all
-pixels
+on Algorithm
+Blur
+noise
+Filter
+Blob Detection
 
 Gaussian Blu
-One of the mo
-is c
-3x3
-5x5
-7x7
-
-he 
-rou
+Gaussian blur
+RGB
+RGB
 
 Filter
 Filte
-an be 
-one ba
-ll 
- cm
-UV
-
-Once
-ter
-ed, we
-le
-(
+RGB
+YUV
+cmvision
+YUV
+filter
+blob
 
 A Blob Detec
-Algorithm
-First, we need
-a ne
-t an
-lcul
-1, 1
+tion Algorithm
+blob
+blob
+blob
+blob
+Blob Detection
 
 A Blob Detec
-Algorithm
-Next
-y
-Ad
-Algorithm
-Repeat until t
-7)
-0
+tion Algorithm
+blob
+Blob
+Blob Detection Algorithm
+blob
 
 0
 0
@@ -324,105 +269,81 @@ Repeat until t
 0
 0
 0
-using OpenCV
-F
-e need
-sing
-function
-The f
-and d
+Blob Detection
+OpenCV
+blur
+GaussianBlur()
+blurs
+Blob Detection
 
 Convert RGB 
-CV 
-lie
- the c
+YUV
+OpenCV
+cvtColor()
+Blob Detection
 
 Filter Unwan
- Pixel
-ing the 
+filtered
+Blob Detection
 
 Filter Unwan
- Pixel
+Masked Image
 Thumrongsak 
+Blob Detection
 
 SimpleBlobDe
-tor()
-
-OpenCV suppli
- the S
-tor() function
-which
-a giv
+OpenCV
+SimpleBlobDetector()
+blobs
+Blob Detection
 
 SimpleBlobDe
-tor() Parameters
-Firs
 
 SimpleBlobDe
-tor()
-
-Then we can u
-ed im
-ypoints = de
-rray([]),
-image)
-
-T
-on, s
-ble
-
-Thum
+blobs
+masked image
+keypoints
+keypoints
+Keypoints
+keypoint
 
 SimpleBlobDe
-tor()
-Result from th
 
 SimpleBlobDe
-tor()
-
-The SimpleBlo
-tor() function is go
-how 
-ters are
+SimpleBlobDetector()
+blob
+keypoint
 
 Blob Detecti
-using Contour
-
-r metho
-ked imag
-contour is a
-rve joi
-useful t
-ction 
-is given
-
-Thu
+Contour
+contours
+masked image
+contour
+contours
+OpenCV
+findContours()
 
 findContours
 
 findContours(
-example:
-def m
 
 drawContours
-Use the drawCo
-to draw all co
-he
-origi
- other c
-d boundi
-r each conto
-minate 
-re insid
+drawContours()
+contours
+contours
+contours
+bounding box
+contour
+contours
+Blob Detection
 
 findContours
-ith hierarchy
- conto
-in():
-co
+contours
+Blob Detection
 
 drawContours
-After filterin
-ose that
+filtering
+contours
+Blob Detection
 
 

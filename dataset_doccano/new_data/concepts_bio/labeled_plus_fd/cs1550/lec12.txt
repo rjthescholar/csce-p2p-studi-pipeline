@@ -1,49 +1,49 @@
-dynamic priorities
-running state
-shortest-job-first scheduling
-non-preemptive
-sjf
 round-robin scheduling
-user mode
-average response time
-fairness
+short-term scheduler
+priorities
+nonpreemptive
+dispatcher
 scheduling algorithms
-selection function
-process synchronization
+turnaround time
+first-come,first-served scheduling
+time,
 ready state
 multilevel queue scheduling
-ready queue
-re-entrant locks
-long jobs
-multilevel feedback queue scheduling
-nonpreemptive
-spn
-first-come,first-served scheduling
-
-turnaround time
-futex
-throughput
-decision mode
-atomic
-time,
-shortest process next
-response time
-preemptive
-convoy effect
-arrival time
+service time
 barriers
-system-oriented criteria
+ready queue
 switching context
+cpu burst
+decision mode
+convoy effect
+spn
+average response time
+cpu-i/o cycle
+
+dispatch latency
+shortest-job-first scheduling
+atomic
+non-preemptive
+futex
+user mode
+sjf
+multilevel feedback queue scheduling
+system-oriented criteria
+throughput
 priority scheduling
+selection function
+dynamic priorities
+arrival time
+running state
+response time
+fairness
+re-entrant locks
+cpu scheduling
+user-oriented criteria
+process synchronization
 processor utilization
 fcfs
-service time
-cpu-i/o cycle
-cpu scheduling
-dispatcher
-dispatch latency
+long jobs
+shortest process next
 message passing
-user-oriented criteria
-priorities
-short-term scheduler
-cpu burst
+preemptive

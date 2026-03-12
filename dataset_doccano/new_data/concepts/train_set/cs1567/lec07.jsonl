@@ -108,39 +108,21 @@ Kobuki
 yaw
 yaw
 yaw
-arc
-ode
-
-180
-𝜋
-
-Odomet
-Often ti
- odometry to 0
-Thi
-sage to
-/mobi
-ase/commands/reset_odometry
-
-You mus
-de
-
-Odomet
-Topic: /
-pose:
-om
-as follo
-of the r
-of the r
-n).
-
-Thumr
-de
-
-odom
-#
-sr/b
-from tf.
-de
-
-
+yaw
+Kobuki Node
+Kobuki
+Odometry
+reset the odometry
+ Empty message
+/mobile_base/commands/reset_odometry
+Kobuki Node
+Odometry
+/odom
+topic /odom
+position
+position
+quaternion
+Kobuki Node
+odom
+Odometry
+Kobuki Node

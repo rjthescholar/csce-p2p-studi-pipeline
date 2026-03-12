@@ -1624,41 +1624,41 @@ Node _ _ O
 𝜋 _ _ O
 
 Reset _ _ O
-Kobuki _ _ O
+Kobuki _ _ B-Concept
 ’s _ _ O
 Odometry _ _ B-Concept
-Often _ _ B-Concept
-time _ _ I-Concept
+Often _ _ O
+time _ _ O
 , _ _ O
 we _ _ O
 may _ _ O
 want _ _ O
 to _ _ O
-reset _ _ O
-the _ _ O
-odometry _ _ B-Concept
-to _ _ I-Concept
-0 _ _ I-Concept
-This _ _ I-Concept
+reset _ _ B-Concept
+the _ _ I-Concept
+odometry _ _ I-Concept
+to _ _ O
+0 _ _ O
+This _ _ O
 can _ _ O
 be _ _ O
 done _ _ O
 by _ _ O
 publishing _ _ O
 an _ _ O
-Empty _ _ O
-message _ _ B-Concept
-to _ _ I-Concept
-/mobile_base _ _ I-Concept
-/ _ _ B-Concept
+Empty _ _ B-Concept
+message _ _ I-Concept
+to _ _ O
+/mobile_base _ _ B-Concept
+/ _ _ I-Concept
 commands _ _ I-Concept
 / _ _ I-Concept
 reset_odometry _ _ I-Concept
 
 
- _ _ I-Concept
-You _ _ I-Concept
-must _ _ I-Concept
+ _ _ O
+You _ _ O
+must _ _ O
 make _ _ O
 sure _ _ O
 that _ _ O
@@ -1760,15 +1760,15 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ O
-Node _ _ O
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-Odometry _ _ O
-Topic _ _ B-Concept
-: _ _ I-Concept
-/odom _ _ I-Concept
-Purpose _ _ B-Concept
-: _ _ I-Concept
+Odometry _ _ B-Concept
+Topic _ _ O
+: _ _ O
+/odom _ _ B-Concept
+Purpose _ _ O
+: _ _ O
 Information _ _ O
 about _ _ O
 robot _ _ O
@@ -1798,10 +1798,10 @@ receive _ _ O
 message _ _ O
 from _ _ O
 the _ _ O
-topic _ _ O
-/odom _ _ B-Concept
-as _ _ I-Concept
-follows _ _ I-Concept
+topic _ _ B-Concept
+/odom _ _ I-Concept
+as _ _ O
+follows _ _ O
 : _ _ O
 def _ _ O
 odomCallback _ _ O
@@ -1815,10 +1815,10 @@ data _ _ O
 data.pose.pose.position.x _ _ O
 is _ _ O
 the _ _ O
-position _ _ O
-of _ _ B-Concept
-the _ _ I-Concept
-robot _ _ I-Concept
+position _ _ B-Concept
+of _ _ O
+the _ _ O
+robot _ _ O
 from _ _ O
 the _ _ O
 origin _ _ O
@@ -1828,10 +1828,10 @@ x-axis _ _ O
 data.pose.pose.position.y _ _ O
 is _ _ O
 the _ _ O
-position _ _ O
-of _ _ B-Concept
-the _ _ I-Concept
-robot _ _ I-Concept
+position _ _ B-Concept
+of _ _ O
+the _ _ O
+robot _ _ O
 from _ _ O
 the _ _ O
 origin _ _ O
@@ -1852,25 +1852,25 @@ is _ _ O
 facing _ _ O
 ( _ _ O
 quaternion _ _ B-Concept
-) _ _ I-Concept
-. _ _ I-Concept
+) _ _ O
+. _ _ O
 
 
- _ _ I-Concept
-Thumrongsak _ _ I-Concept
+ _ _ O
+Thumrongsak _ _ O
 Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ O
-Node _ _ O
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
-odom _ _ O
+odom _ _ B-Concept
 # _ _ O
 ! _ _ O
-/usr _ _ B-Concept
-/ _ _ I-Concept
-bin _ _ I-Concept
+/usr _ _ O
+/ _ _ O
+bin _ _ O
 / _ _ O
 env _ _ O
 python _ _ O
@@ -1881,9 +1881,9 @@ math _ _ O
 from _ _ O
 nav_msgs.msg _ _ O
 import _ _ O
-Odometry _ _ O
-from _ _ B-Concept
-tf.transformations _ _ I-Concept
+Odometry _ _ B-Concept
+from _ _ O
+tf.transformations _ _ O
 import _ _ O
 euler_from_quaternion _ _ O
 def _ _ O
@@ -2022,8 +2022,8 @@ Kosiyatrakul _ _ O
 
 
  _ _ O
-Kobuki _ _ O
-Node _ _ O
+Kobuki _ _ B-Concept
+Node _ _ I-Concept
 
 
 

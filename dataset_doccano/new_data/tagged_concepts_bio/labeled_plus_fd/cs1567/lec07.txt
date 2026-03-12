@@ -106,16 +106,18 @@ pitch
 yaw
 kobuki
 yaw
+kobuki
 odometry
-often time
-odometry to 0 this
-message to /mobile_base
-/commands/reset_odometryyou must
-topic:/odom
-purpose:
-/odom as follows
-of the robot
-of the robot
-quaternion).thumrongsak
-/usr/bin
-from tf.transformations
+reset the odometry
+empty message
+/mobile_base/commands/reset_odometry
+kobuki node
+odometry
+/odom
+topic /odom
+position
+position
+quaternion
+kobuki node
+odom
+odometry
