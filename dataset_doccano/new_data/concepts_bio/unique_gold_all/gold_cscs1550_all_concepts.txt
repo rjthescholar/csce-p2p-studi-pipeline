@@ -1,277 +1,268 @@
-shared circular-array buffer
-free block tracking
-hardware interrupt
-owner
-cpu-i/o cycle
-xv6
-semaphore-based
-capability
-starvation
-not recently used
-direct memory access
-producer
-current=avail
-lock-
-donewrite
-init
-acquire
-backing up an instruction
-no preemption
-device drivers
-mmu
-spindle
-nextcount--
-interrupt
-exec ()
-release
-futex
-current
-mutual exclusion
-wait ()
-short-term scheduler
-system-oriented criteria
-scheduling algorithms
-disk
-graph
-wait
-address translation
-spinlock
-decision mode
-solution
-shared memory
-counting semaphore
-mutex.up
-memory hierarchy
-page size
-protection
-operating system
-condition variables
-cooperating processes
-ready queue
-page table
-block index
-next.down
-user-level i/o software
-interrupt service procedure
-hold and wait
-switching context
-fork
-degree of multiprogramming
-first-come,first-served scheduling
-lock
-orphan process
-optimal
-priority inheritance
-long jobs
-reference string
-max file size
-priority inversion
-next
-database queries
-not frequently used
-cryptographically protected capability
-arrival time
-string
-vm
-producers-consumers problem
-up
-smp
-spooling?
-interrupt handler
-rr
-shared variables
-convoy effect
-message passing
-access control matrix
-avoidance algorithms
-user-oriented criteria
-indexed allocation
-bitmap
-read
-non-volatile storage
-abort ()
-enterwrite
-platter
-selection function
-polling
-directory
-local allocation
-dma
-process synchronization
-cache
-directory contents
-avail
-nextcount-
-ready state
-avoidance
-nextcount++
-re-entrant locks
-non-resource deadlocks
-distance
-condition variable-based
-rate
-priority scheduling
-multiprogramming
-i-node
-quantum
-error detection
-copy-and-write
-multilevel feedback queue scheduling
-down
-fork ()
-cpu burst
-kill ()
-last reader
-readers-writers problem
-dram
-frame number
-mutex
-process
-fcfs
-goal
-page replacement
-separating policy and mechanism
-journaling file system
-solution using mutex and condition variables
-clock
-2 phase locking
-broadcast
-os
-global allocation
-interrupt controller
-shortest-job-first scheduling
-non-preemptive
-defense in depth
-want
-detection
-hold
-consumer
-interrupts
-preemptive
-domain
-spooling
-signal
-nfu
-barriers
-first-in,first out
-critical section
-round robin
-nextcount
-large page table problem
-minimum memory allocation to a process
-optimal page replacement algorithm
-opt
-cpu utilization
-delete
-writer process
-ostrich algorithm
-track
-file linking
-wsclock
-round-robin scheduling
-write
-processor utilization
-condition variable
-user mode
-detection algorithms
-context
-page fault
-busy waiting
-tracing
-nru
-user-land file system
-head
-matrix
-sleepy barbers problem
-atomic
-non-critical section
-cpu scheduling
-finished
-memory management
-physical memory
-multiple resource instances
-fifo
-resource trajectory
-linked list of free blocks
-nonpreemptive
-circular wait
-parent process
-response time
-bounded buffer
-actuator
-stack algorithm
-disk arm scheduling
-aclprocess termination
-pte
-spinning
-child process
-much
-virtualization
-page frame number
-sector
-dispatcher
-reader process
-running state
-algorithm
-file allocation table
-lru
-deadlock
-prevention
-fairness
-throughput
-victim page
-turnaround time
-time quantum
-least recently used
-memory barrier
-thrashing
-disk block
-interrupt-driven i/o
-blocking
-size
-swap
-mutex.down
-producers consumers problem
-semaphore
-dining philosophers
-multilevel queue scheduling
-main memory
-average response time
-i/o wait
-fat
-disk write
-readers & writers
-next.up
-linux kernel
-second chance
-testandset
-on-disk journal
-cylinder
-service time
-mesa semantics
-sjf
-max
-sram
-dispatch latency
-critical region
-wakeup
-time slice
-kernel
-l3 cache
-banker's algorithm
-memory manager
-system call
-__sync_synchronize ()
-problem
-cv
-working set
-enterread
-doneread
-shortest process next
-aging
-multi-thread programs
-atomic instruction
-first come first serve
-exit ()
-unlock
-i/o
+shared circular array buffer 
+goal 
+init 
+i node 
+spinning 
+vm 
+convoy effect 
+much 
+acquire 
+frame number 
+thrashing 
+2 phase locking 
+cache 
+shared variable 
+process synchronization 
+protection 
+read 
+spindle 
+nonpreemptive 
+down 
+cylinder 
+interrupt handler 
+message passing 
+semaphore 
+ready queue 
+enterwrite 
+non critical section 
+disk arm scheduling 
+current 
+switching context 
+optimal 
+wait 
+first in first out 
+detection algorithm 
+busy waiting 
+i o wait 
+file allocation table 
+capability 
+disk 
+linked list of free blocks 
+head 
+linux kernel 
+priority scheduling 
+fat 
+sector 
+string 
+user land file system 
+throughput 
+service time 
+up 
+page fault 
+shared memory 
+response time 
+spinlock 
+user mode 
+parent proces 
+operating system 
+priority inversion 
+o 
+__sync_synchronize 
+i o 
+exec 
+page size 
+indexed allocation 
+backing up an instruction 
+multilevel feedback queue scheduling 
+nextcount 
+time quantum 
+orphan proces 
+detection 
+re entrant lock 
+non volatile storage 
+file linking 
+blocking 
+wakeup 
+dispatch latency 
+avoidance 
+memory barrier 
+decision mode 
+current avail 
+deadlock 
+mutex 
+user oriented criterion 
+round robin 
+prevention 
+last reader 
+reference string 
+sjf 
+directory 
+average response time 
+cpu burst 
+page frame number 
+rate 
+counting semaphore 
+delete 
+physical memory 
+abort 
+enterread 
+copy and write 
+readers writers problem 
+not frequently used 
+domain 
+bounded buffer 
+acl
+global allocation 
+platter 
+xv6 
+hold 
+testandset 
+swap 
+minimum memory allocation to a process 
+starvation 
+algorithm 
+turnaround time 
+condition variable 
+hold and wait 
+polling 
+signal 
+next 
+problem 
+address translation 
+process termination 
+page table 
+finished 
+main memory 
+memory manager 
+opt 
+shortest job first scheduling 
+selection function 
+readers writer 
+actuator 
+local allocation 
+clock 
+proces 
+direct memory acces 
+round robin scheduling 
+producers consumers problem 
+multiple resource instance 
+donewrite 
+multilevel queue scheduling 
+defense in depth 
+solution using mutex and condition variable 
+atomic 
+kernel 
+disk block 
+mutex up 
+ready state 
+directory content 
+quantum 
+hardware interrupt 
+on disk journal 
+interrupt controller 
+page replacement 
+arrival time 
+pte 
+access control matrix 
+banker s algorithm 
+l3 cache 
+tracing 
+interrupt driven i o 
+dining philosopher 
+condition variable based 
+avoidance algorithm 
+atomic instruction 
+wsclock 
+producer 
+long job 
+nfu 
+system call 
+fifo 
+block index 
+memory management 
+distance 
+fcf 
+priority inheritance 
+consumer 
+doneread 
+mmu 
+mutex down 
+ostrich algorithm 
+resource trajectory 
+futex 
+size 
+optimal page replacement algorithm 
+not recently used 
+write 
+next up 
+max file size 
+cpu i o cycle 
+want 
+fairnes 
+cryptographically protected capability 
+next down 
+database query 
+cv 
+multiprogramming 
+barrier 
+system oriented criterion 
+semaphore based 
+reader proces 
+kill 
+processor utilization 
+spooling 
+cpu utilization 
+lock 
+short term scheduler 
+non resource deadlock 
+release 
+first come first serve 
+critical section 
+journaling file system 
+child proces 
+scheduling algorithm 
+memory hierarchy 
+solution 
+interrupt service procedure 
+least recently used 
+preemptive 
+degree of multiprogramming 
+interrupt 
+critical region 
+smp 
+victim page 
+dispatcher 
+circular wait 
+working set 
+exit 
+fork 
+no preemption 
+mesa semantic 
+dram 
+lru 
+track 
+rr 
+owner 
+max 
+running state 
+time slice 
+nru 
+device driver 
+graph 
+non preemptive 
+context 
+multi thread program 
+second chance 
+separating policy and mechanism 
+bitmap 
+free block tracking 
+virtualization 
+shortest process next 
+cooperating process 
+first come first served scheduling 
+sleepy barbers problem 
+matrix 
+broadcast 
+disk write 
+mutual exclusion 
+writer proces 
+stack algorithm 
+large page table problem 
+unlock 
+error detection 
+dma 
+aging 
+user level i o software 
+sram 
+avail 
+cpu scheduling 

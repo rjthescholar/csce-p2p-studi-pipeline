@@ -1,242 +1,217 @@
-<node>
-control
-ros core
-sounds
-open loop control
-interrupt
-axis
-oscillations
-colorgui
-parameters of cmvision
-joy node
-launch file execute
-loop
-with
-orientation.z
-topic velocity
-to the
-bumper switches
-rgb
-contours
-open loop
-web camera
-workspace directory
-odometry
-topic
-topic image
-rostopic list
-kobuki
-topics in ros
-callback function
-position.y
-gscam node
-rospy.publisher
-position.x
-robot operating system
-messenger node
-callback ()
-process blobs
-control node
-color file
-error
-publishes
-ros nodes
-type bumperevent
-gaussianblur ()
-remote procedure call
-yaw
-blob detection
-type twist
-luminance
-publishing
-range of color
-detect connected regions
-roscore
-subscribe
-rostopic use
-topics show
-pid
-controller
-ros message
-cleanup
-communicate
-callback functions
-differential
-image message
-rostopic echo
-topic blobs
-odometry message
-ros node
-velocity
-cmvision node:
-proportional-integral-derivative
-rostopic info
-odom
-/odom
-robot
-type led
-findcontours ()
-rgb format
-comment
-type joy
-publish to a
-integrated web camera
-messages
-master
-ros topics
-topic on screen
-gaussian blur
-object detection node
-leds
-proportional
-drifting
-detection algorithm
-rospy.rate
-signal
-/mobile_base/commands/reset_odometry
-processes
-rpc
-filter
-publish a message
-feedback
-subscriber
-command.linear.x
-published
-command.angular.z
-clean up
-sound
-pid control
-ros messages
-process
-camera
-twist
-control systems
-type sound
-topic show
-blob
-<node> tag
-callback () function
-yuv format
-publisher
-led1
-standard messages
-/v4l/camera/image_raw
-kobuki node communicates
-blur
-cvtcolor ()
-roll
-stream
-simpleblobdetector ()
-gscam
-closed loop control
-launch file
-bumperevent
-pitch
-control system
-filtered
-subscribes
-thresholds
-subscribers
-reset the odometry
-button
-shutdown hooks
-oscillating
-bumper
-kobuki_node
-oscillate
-led2
-log file
-node
-cleanup ()
-web cam
-yuv
-image viewer
-distributed computing
-leftright
-rostopic pub
-publisher and
-anonymous
-launch directory
-is a
-oscillation
-topics on the
-control value
-simulator
-motors
-blob detection algorithm
-integral
-callback
-rostopic type
-position
-publishers
-rospy.spin ()
-rostopic rostopic
-computer vision
-masked image
-chrominance
-orientation
-object recognition and tracking
-topicsuppose
-opencv
-cmvision node
-<launch>
-topics
-increase
-ros
-blob.msgs stores
-contour
-closed loop
-topic /odom
-bounding box
-quaternion
-noise
-messages published
-<launch> tag
-pose
-integrated web cam
-keypoints
-blurs
-camera node
-joy_node node
-led
-streaming
-std msgs
-drawcontours ()
-buttonevent
-topic joy
-using
-include
-publish
-topic blob
-header
-type buttonevent
-bumpers
-keypoint
-ros master
-joy
-image_view node
-overcompensate
-filtering
-(
-axes
-kobuki node
-rospy.init_node
-topic chatter
-tracking an object
-cmvision
-joystick
-<include> tag
-message
-rviz
-blobs
-empty message
-kobuki robot
-color image message
-buttons
-lighting
-cmvision node can
-environment
-nodes
-cmvision.launch
-interprocess communication
-colorgui node
+controller 
+rostopic info 
+feedback 
+lighting 
+type led 
+cleanup 
+differential 
+button 
+roll 
+filtered 
+control value 
+simpleblobdetector 
+robot operating system 
+publish 
+rgb format 
+to the 
+blob detection 
+topic on the 
+publishing 
+ros message 
+ros topic 
+environment 
+yuv 
+std msg 
+led1 
+robot 
+ro 
+cmvision 
+process 
+twist 
+node 
+shutdown hook 
+quaternion 
+topic 
+ros master 
+yuv format 
+simulator 
+standard message 
+messenger node 
+streaming 
+computer vision 
+masked image 
+distributed computing 
+odometry 
+process blob 
+topics show 
+roscore 
+topic blob 
+topic show 
+rospy spin 
+header 
+kobuki 
+web camera 
+yaw 
+axe 
+type twist 
+subscribe 
+integrated web camera 
+opencv 
+ include tag 
+callback 
+integral 
+colorgui node 
+blur 
+topic chatter 
+color image message 
+topic joy 
+image message 
+ odom 
+publish a message 
+rostopic pub 
+rostopic type 
+colorgui 
+integrated web cam 
+closed loop 
+joy 
+type buttonevent 
+cvtcolor 
+cmvision node can 
+rpc 
+signal 
+gaussianblur 
+comment 
+publish to a 
+ node 
+oscillating 
+object detection node 
+publisher 
+rgb 
+oscillation 
+overcompensate 
+bumper switch 
+chrominance 
+led 
+error 
+findcontours 
+kobuki_node 
+axi 
+led2 
+rostopic echo 
+rostopic rostopic 
+odometry message 
+gscam node 
+rviz 
+filter 
+contour 
+proportional 
+motor 
+publisher and 
+drifting 
+control system 
+topic image 
+remote procedure call 
+ v4l camera image_raw 
+bumper 
+communicate 
+rospy rate 
+type sound 
+log file 
+proportional integral derivative 
+sound 
+kobuki node 
+topic on screen 
+buttonevent 
+ 
+leftright 
+rospy publisher 
+command angular z 
+using 
+pid 
+topicsuppose 
+odom 
+ros node 
+callback function 
+kobuki node communicate 
+rospy init_node 
+stream 
+increase 
+ mobile_base commands reset_odometry 
+camera 
+interprocess communication 
+open loop 
+ros core 
+position 
+proces 
+with 
+keypoint 
+ launch 
+cmvision launch 
+parameter of cmvision 
+drawcontours 
+blob msgs store 
+kobuki robot 
+include 
+empty message 
+luminance 
+bounding box 
+ node tag 
+open loop control 
+pose 
+type joy 
+is a 
+loop 
+detect connected region 
+gaussian blur 
+command linear x 
+messages published 
+workspace directory 
+range of color 
+launch file 
+web cam 
+gscam 
+anonymou 
+interrupt 
+pid control 
+launch file execute 
+image viewer 
+filtering 
+topic in ros 
+object recognition and tracking 
+launch directory 
+cmvision node 
+image_view node 
+topic velocity 
+oscillate 
+control node 
+closed loop control 
+camera node 
+rostopic list 
+control 
+ launch tag 
+blob detection algorithm 
+tracking an object 
+velocity 
+orientation 
+type bumperevent 
+joy_node node 
+orientation z 
+blob 
+published 
+master 
+rostopic use 
+color file 
+noise 
+bumperevent 
+threshold 
+detection algorithm 
+subscriber 
+message 
+topic odom 
+position y 
+pitch 
+reset the odometry 
+joy node 
+position x 
+joystick 
+clean up 

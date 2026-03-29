@@ -40,7 +40,7 @@ def extract_concepts(dataset, gold=False):
         concept = []
         extracting = False
       if id2label[processed[field][i].item()] == "B":
-        if extracting and tokenizer.convert_ids_to_tokens(processed['ids'][i].item()).startswith("▁"):
+        if extracting and not tokenizer.convert_ids_to_tokens(processed['ids'][i].item()).startswith("##"):
           concepts.add(tokenizer.decode(concept))
           concept = []
         extracting = True
