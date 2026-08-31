@@ -15,3 +15,7 @@ WARNING: There is no autosave, so save regularly or risk losing data.
 To enter in the Metadata for the lecture, simply press the "Enter Metadata" button. This includes the segments of the dataset the lecture belongs to (if unknown, the default is 'labeled'), the course number, and the lecture. To display this metadata, simply press the "Display Metadata" button.
 
 To save your annotations, simply hit the "Save BIO" button. If you have not entered the metadata, it will prompt you to do so before saving the file.
+
+### Auto-annotation
+
+To enable or disable auto-annotation, use the check box in the bottom right. Your annotations will propagate when you begin marking a new concept. If you decide a concept is actually multiple, smaller concepts, and split it, that will also propagate. Hit done annotating if you wish to manually propogate the last edited concept.
