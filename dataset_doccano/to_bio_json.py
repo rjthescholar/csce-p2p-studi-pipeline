@@ -7,6 +7,7 @@ import json
 import argparse
 import csv
 import sys
+import ast
 
 def word_tokenize(tokens):
 	return [token.replace("''", '"').replace("``", '"') for token in nltk.word_tokenize(tokens)]
@@ -34,6 +35,10 @@ if __name__=="__main__":
 			line_text=text.split('\n')
 			if not args.nosplit:
 				segment, course, lec = line_text[0].split('|')
+				segment = ast.literal_eval(segment)
+				if type(segment) is list:
+					if len(segment) == 1:
+						segment = segment[0]
 			prev_row = 'x'
 			for i, row in enumerate(line_text):
 				if i == 0 and not args.nosplit:
@@ -44,7 +49,7 @@ if __name__=="__main__":
 				if srow[0] == '-DOCSTART-':
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
-				if row == ' _ _ O' and not args.nosplit:
+				if (row == ' _ _ O' or row == '\f') and not args.nosplit:
 					bio_list.append({"sentence": [], 'word_labels': []})
 					continue
 				bio_list[-1]['sentence'].append(srow[0])
