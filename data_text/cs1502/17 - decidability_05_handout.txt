@@ -1,0 +1,239 @@
+Decidability 05
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+An Undecidable Language
+Theorem 4.11
+Let ATM = {hM, wi | M is a TM and M accepts w}. ATM is an
+undecidable language.
+Assume that ATM is decidable
+Thus, there exists a Turing machine (decider) H that decides
+ATM
+Given a TM M and a string w in the form hM, wi, H can
+decide whether hM, wi ∈ ATM or not
+
+Let H(hM, wi) represents running TM H on input hM, wi
+Since H is a decider for ATM , we have
+(
+accept
+H(hM, wi) =
+reject
+
+if hM, wi ∈ ATM
+if hM, wi 6∈ ATM
+
+M accepts w
+M does not accept w
+
+where M is a TM and w is a string
+Note that H always halts since it is a decider
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+An Undecidable Language
+
+Note that an encoding of a machine M denoted by hM i is
+simply a string
+Therefore, we can run M on input hM i if we want to
+
+Suppose we want to know whether M accepts hM i
+We cannot simply run M on input hM i
+M may loop indefinitely on input hM i and we may not know
+
+But now we have TM H (a decider for ATM
+Simply run H on input hM, hM ii
+If H accepts hM, hM ii, M accepts hM i
+If H rejects hM, hM ii, M does not accept hM i
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+An Undecidable Language
+
+Now, create a machine D as follows:
+D = “On input hM i, where M is a TM:
+1
+2
+
+Run H on input hM, hM ii.
+Output the opposite of what H outputs. That is, if H accepts,
+reject; and if H rejects, accept.”
+
+That is
+(
+D(hM i) =
+
+accept
+reject
+
+if H(hM, hM ii) = reject
+if H(hM, hM ii) = accept
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+M does not accept hM i
+M accepts hM i
+
+An Undecidable Language
+Note that an encoding of a machine D denoted by hDi is also
+a string
+Therefore, we can run D on input hDi
+
+Let’s substitute M by D in the definite of TM D on the
+previous slide
+D(hDi) =
+
+(
+accept
+reject
+
+if H(hD, hDii) = reject
+if H(hD, hDii) = accept
+
+D does not accept hDi
+D accepts hDi
+
+The above equation says the following:
+TM D accepts hDi if D does not accept hDi
+TM D rejects hDi if D accepts hDi
+
+which is contradict to itself
+Therefore, ATM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Unrecognizable Language
+
+Consider a recognizable language A
+Since A is recognizable, there exists a machine MA that
+accepts every string s ∈ A
+If s 6∈ A, MA may reject or loop indefinitely on input s
+
+Consider a recognizable language A (the complement of A)
+Since A is recognizable, there exists a machine MA that
+accepts every string s ∈ A
+If s 6∈ A, MA may reject or loop indefinitely on input s
+
+Both A and A are recognizable, is A decidable?
+To show that A is decidable, we have to perform the following:
+Construct a TM M 0 that we think it is a decider for A
+Show that M 0 accepts all strings in A
+Show that M 0 rejects all strings not in A
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Unrecognizable Language
+The following is an example of the TM M 0 :
+M 0 = “On input s:
+1
+2
+
+Run both MA and MA on input s in parallel.
+If MA accepts s, accept; if MA accepts s, reject.”
+
+Case 1: Assume that s ∈ A. Since s ∈ A and MA recognizes
+A, by running MA on input s, MA will accept s. Since s 6∈ A
+and MA recognizes A, by running MA on input s, MA will
+not accept s. Since MA accepts s, M 0 accepts s.
+Case 2: Assume that s 6∈ A. Since s 6∈ A and MA recognizes
+A, by running MA on input s, MA will not accept s. Since
+s ∈ A and MA recognizes A, by running MA on input s, MA
+will accept s. Since MA accepts s, M 0 rejects s.
+This show that M 0 is a decider for A
+Therefore, A is decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Unrecognizable Language
+Now we just prove the following statement:
+If a language A is recognizable and its complement A is
+recognizable, A is decidable
+Let
+P ≡ A is recognizable
+Q ≡ A is recognizable
+R ≡ A is decidable
+
+The above statement is simply (P ∧ Q) → R
+From boolean algebra:
+(P ∧ Q) → R ≡ ¬(P ∧ Q) ∨ R
+≡ (¬P ∨ ¬Q) ∨ R
+≡ (¬P ∨ R) ∨ ¬Q
+≡ ¬(P ∧ ¬R) ∨ ¬Q
+≡ (P ∧ ¬R) → ¬Q
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Unrecognizable Language
+
+From previous slide, we have
+(P ∧ Q) → R ≡ (P ∧ ¬R) → ¬Q
+By replacing P , Q, and R on the right side, we have the
+following statement:
+If A is recognizable and A is undecidable, A is unrecognizable
+Recall the following:
+ATM is recognizable
+ATM is undecidable
+
+From the above statement, ATM is unrecognizable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Conclusions
+To show that a language A is decidable:
+Construct a TM M 0 that you think will decide A
+Show that M 0 accepts all strings in A
+Show that M 0 rejects all strings not in A
+
+The following TMs can be used as helper machines:
+TM M that decides ADFA
+ADFA = {hB, wi | B is a DFA that accepts w}
+TM N that decides ANFA
+ANFA = {hB, wi | B is a NFA that accepts w}
+TM P that decides AREX
+AREX = {hR, wi | R is a regular expression that generates w}
+TM T that decides EDFA
+EDFA = {hBi | B is a DFA and L(B) = ∅}
+TM F that decides EQDFA
+EQDFA = {hA, Bi | A and B are DFAs and L(A) = L(B)}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+Conclusions
+To show that two sets have the same size, simply show a
+correspondence between two sets
+A correspondence must be one-to-one and onto
+Can be a definition of a function
+Can be represented by a table (skip duplicate)
+
+To show that an infinite set is countable, simply show a
+correspondence with the set of natural number N
+To show that an infinite set is uncountable:
+Diagonalization: if all elements in the set is somehow infinite
+Show a correspondence with a known uncountable set
+
+ATM = {hM, wi | M is a TM that accepts w} is undecidable
+Given a TM M and a string w, there is no algorithm that can
+check whether M accepts w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 05
+
+

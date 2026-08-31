@@ -1,0 +1,496 @@
+Reducibility 04
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+Undecidability Proofs
+
+So far, we have only one undecidable language:
+ATM = {hM, wi | M is a TM that accepts w}
+This is a fact since we already prove it
+Given a language A, how to prove that it is undecidable?
+First, we are going to use the proof by contradiction
+Assume that A is decidable
+Show that since A is decidable, ATM is decidable
+Contradict with the fact that ATM is undecidable
+A is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+Halting Problem
+From a programmer point of view:
+Given a method foo and an input x, there is no algorithm that
+can check whether foo will halt on input x
+For some methods, you may be able to spot that it will halt or
+will not halt but not all
+But there are infinite number of methods and infinite number
+of inputs
+
+From the computation theory point of view:
+Given a Turing machine M and input string w, there is no
+algorithm that can check whether M will halt on input w
+Formally,
+HALT TM = {hM, wi | M is a TM that halts on input w}
+
+To prove halting problem, we just need to show that
+HALT TM is undecidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+First, assume that HALT TM is decidable
+Next, we need to show that since HALT TM is decidable ATM
+is decidable
+We need to take the advantage of HALT TM being decidable
+to help us decide ATM
+
+What does it mean when HALT TM is decidable?
+There exists a TM R that decides HALT TM
+
+What TM R (a decider for HALT TM ) can do?
+If we run R on input hM, wi where M is a TM and w is a
+string, R will either accept or reject hM, wi
+If R accepts hM, wi
+
+hM, wi ∈ HALT TM
+M halts on input w
+hM, wi 6∈ HALT TM
+If R rejects hM, wi
+M does not halts on input w
+
+Can R loops in definitely on input hM, wi?
+No because R is a decider
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+When HALT TM is decidable, given a TM M 0 and a string w0 ,
+we know whether M 0 halts on input w0
+By running R on input hM 0 , w0 i
+If R accepts hM 0 , w0 i
+hM 0 , w0 i ∈ HALT TM
+M 0 halts on input w0
+0
+0
+If R rejects hM , w i
+hM 0 , w0 i 6∈ HALT TM
+0
+M does not halt on input w0
+
+We need to use TM R to help us decide ATM
+But what does it mean when ATM is undecidable?
+Given a TM M and a string w, we have no idea whether
+M accepts w or
+M does not accepts w
+
+If we can distinguish between M accepts w and M does not
+accept w, ATM is decidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+What if we can construct TM M 0 and w0 (from the TM M
+and the string w) such that
+If M accepts w, M 0 halts on input w0
+If M does not accept w, M 0 does not halt on input w0
+
+and give hM 0 , w0 i to TM R?
+By running R on the above input hM 0 , w0 i:
+If R accepts hM 0 , w0 i:
+R accepts hM 0 , w0 i
+hM 0 , w0 i ∈ HALT TM
+0
+0
+hM , w i ∈ HALT TM
+M 0 halts on input w0
+0
+0
+M halts on input w
+M accepts w
+M accepts w
+hM, wi ∈ ATM
+
+If R rejects hM 0 , w0 i:
+R rejects hM 0 , w0 i
+hM 0 , w0 i 6∈ HALT TM
+0
+0
+hM , w i 6∈ HALT TM
+M 0 does not halt on input w0
+M 0 does not halt on input w0
+M does not accept w
+M does not accept w
+hM, wi 6∈ ATM
+
+This gives us the conclusion that ATM is decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+
+Again, we need to construct TM M 0 and w0 (from the TM M
+and the string w) such that
+If M accepts w, M 0 halts on input w0
+If M does not accept w, M 0 does not halt on input w0
+
+Here is an example of TM M 0 :
+M 0 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+Note that there are infinite number of TMs that satisfy the
+above specification
+Let’s analyze the behavior of the above TM M 0 case-by-case
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+
+The TM M 0 :
+M 0 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+What if M accepts w (hM, wi ∈ ATM )?
+M accepts w
+M 0 accepts all input strings
+0
+M 0 halts on all input strings
+M accepts all input strings
+0
+M halts on all input strings
+M 0 halts on ε
+0
+0
+hM , εi ∈ HALT TM
+M halts on ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+
+The TM M 0 :
+M 0 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+What if M rejects w (hM, wi 6∈ ATM )?
+M rejects w
+M 0 enters infinite loop on all input strings
+0
+M 0 does not halt
+M enters infinite loop on all input strings
+on all input strings
+M 0 does not halt on ε
+M 0 does not halt on all input strings
+0
+0
+hM , εi 6∈ HALT TM
+M does not halt on ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+
+The TM M 0 :
+M 0 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+What if M loops indefinitely on w (hM, wi 6∈ ATM )?
+M 0 loops indefinitely (in step 1)
+M loops indefinitely on w
+on all input strings
+M 0 does not halt
+M 0 loops indefinitely on all input strings
+on all input strings
+M 0 does not halt on all input strings
+M 0 does not halt on ε
+0
+0
+hM , εi 6∈ HALT TM
+M does not halt on ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+
+Again, we just construct TM M 0 and w0 = ε from a TM M
+and a string w such that
+If hM, wi ∈ ATM , hM 0 , εi ∈ HALT TM
+If hM, wi 6∈ ATM , hM 0 , εi 6∈ HALT TM
+
+Now, we can simply run TM R (a decider for HALT TM to
+check whether hM 0 , εi is in HALT TM
+If R accepts hM 0 , εi
+If R rejects hM 0 , εi
+
+hM 0 , εi ∈ HALT TM
+hM 0 , εi 6∈ HALT TM
+
+hM, wi ∈ ATM
+hM, wi 6∈ ATM
+
+Let’s see the whole proof where we construct a TM S that
+decides ATM where
+S constructs TM M 0 as we discussed earlier and
+uses R as a helper machine to help decide ATM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+HALT TM
+Prove that HALT TM = {hM, wi | M is a TM that halts in input w} is undecidable.
+Proof: Assume that HALT TM is decidable. Since HALT TM is decidable, there exists
+a TM R that decides HALT TM . Let construct a TM S (to decide ATM ) as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1 Construct TM M 0 as follows:
+M 0 = “On input x:
+1 Run M on input w
+2 If M accepts w, accept. If M rejects w, enter infinite loop.”
+2 Run R on input hM 0 , εi
+3 If R accepts hM 0 , εi, accept. If R rejects hM 0 , εi, reject.”
+Next, we need to prove that TM S is a decider for ATM .
+Prove that if hM, wi ∈ ATM , S accepts hM, wi: Assume that hM, wi ∈ ATM .
+Since hM, wi ∈ ATM , M is a TM that accepts w. Since M accepts w, from the
+definition of TM M 0 , M 0 halts on all strings including ε. Since M 0 halts on ε,
+hM 0 , εi ∈ HALT TM . Since R is a decider for HALT TM , by running R on input
+hM 0 , εi, R will accept hM 0 , εi. Since R accepts hM 0 , εi, S accepts hM, wi.
+Prove that if hM, wi 6∈ ATM , S rejects hM, wi: Assume that hM, wi 6∈ ATM .
+Since hM, wi 6∈ ATM , M is a TM that does not accept w. Since M does not
+accept w, from the definition of TM M 0 , M 0 does not halt on all strings
+including ε. Since M 0 does not halt on ε, hM 0 , εi 6∈ HALT TM . Since R is a
+decider for HALT TM , by running R on input hM 0 , εi, R will reject hM 0 , εi.
+Since R rejects hM 0 , εi, S rejects hM, wi.
+This show that TM S is a decider for ATM . Therefore, ATM is decidable
+contradiction. Therefore, HALT TM is undecidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+Undecidability
+
+Let’s recap and make some notes
+To prove that a language A is undecidable:
+Assume that A is decidable
+Since A is decidable, there exists a TM R that decides A
+Next, we try to decide ATM using R as a helper machine
+To decide ATM , we need to know whether hM, wi ∈ ATM
+In other words, we need to know whether M accepts w
+
+Since R is a decider for the language A, R can tell you
+whether a string s is in A
+
+So, we need to construct a string s such that whether s is in
+A depending on whether M accepts w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+Undecidability
+
+To construct a string s such that whether s is in A depending
+on whether M accepts w, there are two choices:
+1
+
+Choice #1:
+If M accepts w, s ∈ A
+If M does not accept w, s 6∈ A
+
+2
+
+Choice #2:
+If M accepts w, s 6∈ A
+If M does not accept w, s ∈ A
+
+Which one?
+It depends on the problem
+For some problems, either choices will work
+For some problems, only one of those choices will work
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+Undecidability
+
+From the previous example, we have two choices as well:
+1
+
+Choice #1:
+If M accepts w, hM 0 , w0 i ∈ HALT TM
+If M does not accept w, hM 0 , w0 i 6∈ HALT TM
+
+2
+
+Choice #2:
+If M accepts w, hM 0 , w0 i 6∈ HALT TM
+If M does not accept w, hM 0 , w0 i ∈ HALT TM
+
+We picked the first choice
+If you try, you will see that you cannot construct a TM M 0
+that satisfies the second choice
+The hard part is when M loops indefinitely on input w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+ETM
+
+Problem: Given a TM M , how to check whether L(M ) = ∅?
+Unfortunately, we cannot
+Note that a TM may have a path from the start state to its
+accept state but it accepts no string
+
+Formally:
+ETM = {hM i | M is a TM and L(M ) = ∅}
+To show that there is no algorithm that can solve the above
+problem, we need to show that ETM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+ETM
+Again, for the sake of contradiction, assume that ETM is
+decidable
+We need to show that if ETM is decidable, ATM is decidable
+
+Since ETM is decidable, there exists a TM R that decides
+ETM
+Again, in plain English, given a TM M 0 , we know whether
+L(M 0 ) = ∅ by simply run R on input hM 0 i
+If R accepts hM 0 i
+If R rejects hM 0 i
+
+hM 0 i ∈ ETM
+hM 0 i 6∈ ETM
+
+L(M 0 ) = ∅
+L(M 0 ) 6= ∅
+
+We are going to use the same method as in previous example:
+Since we are trying to decide ATM , we need to know whether
+M accepts w
+We are going to construct a TM M 0 from a given TM M and
+a string w such that L(M 0 ) (whether it is empty or not)
+depends on whether M accepts w
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+ETM
+
+Specification: Construct a TM M 0 from a given TM M and
+a string w such that L(M 0 ) (whether it is empty or not)
+depends on whether M accepts w
+According to the above specification, we have two choices:
+1
+
+Choice #1:
+If M accepts w, L(M 0 ) = ∅
+If M does not accept w, L(M 0 ) 6= ∅
+
+2
+
+Choice #2:
+If M accepts w, L(M 0 ) 6= ∅
+If M does not accept w, L(M 0 ) = ∅
+
+In this case, we will not be able to construct TM M 0 that
+satisfies the first choice
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+ETM
+Here is an example of TM M 0 (constructed from a TM M
+and a string w) that satisfies:
+If M accepts w, L(M 0 ) 6= ∅
+If M does not accept w, L(M 0 ) = ∅
+
+TM M 0 :
+M 0 = “On input x:
+1
+2
+
+Run M on input w
+If M accepts w, accept. If M rejects w, reject.”
+
+From the above TM M 0 :
+If M accepts w, M 0 accepts all strings (L(M 0 ) 6= ∅)
+If M does not accepts w:
+If M rejects w, M 0 rejects all strings (L(M 0 ) = ∅)
+If M loops indefinitely on input w, M 0 loops indefinitely on all
+strings (L(M 0 ) = ∅)
+
+Now, let’s see the whole proof
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+ETM
+Prove that ETM = {hM i | M is a TM and L(M ) = ∅} is undecidable.
+Proof: Assume that ETM is decidable. Since ETM is decidable, there exists a TM R
+that decides ETM . Let construct a TM S (to decide ATM ) as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1 Construct TM M 0 as follows:
+M 0 = “On input x:
+1 Run M on input w
+2 If M accepts w, accept. If M rejects w, reject.”
+2 Run R on input hM 0 i
+3 If R accepts hM 0 i, reject. If R rejects hM 0 i, accept.”
+Next, we need to prove that TM S is a decider for ATM .
+Prove that if hM, wi ∈ ATM , S accepts hM, wi: Assume that hM, wi ∈ ATM .
+Since hM, wi ∈ ATM , M is a TM that accepts w. Since M accepts w, from the
+definition of TM M 0 , M 0 accepts all strings. In other words, L(M 0 ) 6= ∅. Since
+L(M 0 ) 6= ∅, hM 0 i 6∈ ETM . Since R is a decider for ETM , by running R on
+input hM 0 i, R will reject hM 0 i. Since R rejects hM 0 i, S accepts hM, wi.
+Prove that if hM, wi 6∈ ATM , S rejects hM, wi: Assume that hM, wi 6∈ ATM .
+Since hM, wi 6∈ ATM , M is a TM that does not accept w. Since M does not
+accept w, from the definition of TM M 0 , M 0 accepts no strings. In other words,
+L(M 0 ) = ∅. Since L(M 0 ) = ∅, hM 0 i ∈ ETM . Since R is a decider for ETM , by
+running R on input hM 0 i, R will accept hM 0 i. Since R accepts hM 0 i, S rejects
+hM, wi.
+This show that TM S is a decider for ATM . Therefore, ATM is decidable
+contradiction. Therefore, ETM is undecidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 04
+
+

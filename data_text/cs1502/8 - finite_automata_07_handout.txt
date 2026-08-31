@@ -1,0 +1,245 @@
+Finite Automata 07
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+
+Show that C = {w | w has an equal number of 0s and 1s} is not
+regular.
+Assume that C is regular
+Since C is regular, the Pumping lemma says that for any
+string s ∈ C of length at least p, s can be divided into
+s = xyz satisfying the following conditions:
+1
+2
+3
+
+xy i z ∈ C for any i ≥ 0
+|y| > 0
+|xy| ≤ p
+
+Let s = (01)p
+s ∈ C — good
+|s| = 2p ≥ p — good
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+Show that C = {w | w has an equal number of 0s and 1s} is not
+regular.
+s = (01)p
+Let x = ε, y = 01, and z = (01)p−1 and check all three
+conditions:
+1
+
+ε(01)i (01)p−1 ∈ C for any i ≥ 0
+
+2
+
+|01| = 2 > 0
+|ε01| = 2 ≤ p
+
+Every time you insert a y, you add equal number of 0 and 1
+3
+
+All three condition can be true (no contradiction)
+Important: No contradiction means nothing
+You also cannot conclude that C is regular
+
+But if we pick s = 0p 1p , we will get a contradiction
+Same kind of proof as in previous example but focus on the
+number of 0s and 1s (no pattern)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Show that C = {w | w has an equal number of 0s and 1s}
+is not regular
+Assume that C is regular. Since C is regular, the Pumping lemma says that for any
+string s ∈ C of length at least p, s can be divided into s = xyz satisfying the following
+conditions:
+1
+
+xy i z ∈ C for any i ≥ 0
+
+2
+
+|y| > 0
+
+3
+
+|xy| ≤ p
+
+Let s = 0p 1p . Since s starts with p 0s, to satisfy the third condition, x and y are
+strings that contain nothing but 0s. In other words, x = 0j for any j ≥ 0, and y = 0k
+for any k > 0. Note that k must be greater than 0 because |y| = |0k | = k, and the
+condition 2 says that |y| > 0. Since x = 0j and y = 0k , z = 0p−(j+k) 1p . Let i = 2.
+We have
+xy i z = xy 2 z
+= xyyz
+= 0j 0k 0k 0p−(j+k) 1p
+= 0p+k 1p
+For the string 0p+k 1p to be in C, the number of 0s must be equal to the number of
+1s. In other words, p + k must be equal to p. This requires k to be 0. But since k
+must be greater than 0, xy 2 z 6∈ B — contradiction. Therefore, C is not regular.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+Show that D = {w | w has more number of 0s than number of 1s}
+is not regular.
+As usual, assume that D is regular and followed by the
+statement from the Pumping lemma
+If you pick s = 02p 1p , you will not get a contradiction
+x = 0j for any j ≥ 0
+y = 0k for any k > 0
+z = 02p−(j+k) 1p
+For i ≥ 2 in xy i z, you add more 0s which makes the result
+string still have more 0s than 1s
+For i = 0
+xy 0 z = xz = 0j 02p−(j+k) 1p = 02p−k 1p
+If k is 1, 2p − 1 > p (the number of 0s is greater than the
+number of 1s) — no contradiction
+If k is p − 1, 2p − (p − 1) = p + 1 > p — no contradiction
+Note that 0 < k ≤ p from (2) and (3)
+If there is a k that works, no contradiction
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+Let’s try s = 1p 02p . Note that s ∈ D and |s| ≥ p.
+Again, to satisfy (2) and (3), we have
+x = 1j for any j ≥ 0
+y = 1k for any k > 0
+z = 1p−(j+k) 02p
+
+We have xy i z = 1j (1k )i 1p−(j+k) 02p = 1p+ki−k 02p
+If we increase i, we increase the number of 1s
+To get a contradiction, we need the number of 1s to be
+greater than or equal to the number of 0s
+In other words, p + ki − k ≥ 2p
+p + ki − k ≥ 2p
+ki − k ≥ p
+k(i − 1) ≥ p
+i − 1 ≥ p/k
+i ≥ (p/k) + 1
+xy (p/k)+1 z = 12p 02p 6∈ D — contradiction
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Show that
+D = {w | w has more number of 0s than number of 1s} is
+not regular
+Assume that D is regular. Since D is regular, the Pumping lemma says that for any
+string s ∈ D of length at least p, s can be divided into s = xyz satisfying the
+following conditions:
+1 xy i z ∈ D for any i ≥ 0
+2 |y| > 0
+3 |xy| ≤ p
+Let s = 1p 0p+1 . Since s starts with p 1s, to satisfy the third condition, x and y are
+strings that contain nothing but 1s. In other words, x = 1j for any j ≥ 0, and y = 1k
+for any k > 0. Note that k must be greater than 0 because |y| = |1k | = k, and the
+condition 2 says that |y| > 0. Since x = 1j and y = 1k , z = 1p−(j+k) 0p+1 . Let
+i = 2. We have
+xy i z = xy 2 z = xyyz
+= 1j 1k 1k 1p−(j+k) 0p+1
+= 1p+k 0p+1
+For the string 1p+k 0p+1 to be in D, the number of 0s must be greater than the
+number of 1s. In other words, p + 1 must be greater than p + k. This requires k to be
+0. But since k must be greater than 0, xy 2 z 6∈ D — contradiction. Therefore, D is
+not regular.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Rule of Thumb
+
+If a condition of the language is about inequality (<, ≤, >,
+≥), pick a string that is right at the border line to break the
+condition
+D = {w | w has more number of 0s than number of 1s}
+1p 0p+1 needs xy 2 z to add at least one 1
+0p 1p−1 needs xy 0 z to take out at least one 0
+No need to find a large value of i
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+2
+
+Show that E = {0(i ) | i ≥ 0} is not regular.
+Let’s try to understand this language first
+2
+
+If i = 0, 0(0 ) = 00 = ε
+2
+If i = 1, 0(1 ) = 01 = 0
+2
+If i = 2, 0(2 ) = 04 = 0000
+2
+If i = 3, 0(3 ) = 09 = 000000000, and so on
+
+Thus, we have
+E = {w | w contains nothing but 0s and
+the number of 0s is i2 for some i ≥ 0}
+Important: You cannot pick s = 0p
+There is nothing to guarantee that p = i2 for some i ≥ 0
+2
+We need to pick s = 0(p )
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+
+2
+
+Show that E = {0i | i ≥ 0} is not regular.
+As usual, assume that E is regular and followed by the
+statement from the Pumping lemma
+2
+
+Let s = 0(p )
+Note that s ∈ E and
+|s| = p2 ≥ p.
+
+From the second and third conditions (|y| > 0 and |xy| ≤ p),
+we have
+0 < |y| ≤ p
+Note that since s = xyz and |s| = p2 , |xyz| = p2 .
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+Example
+
+Let’s do some analysis about xy 2 z
+p2 = |xyz|
+|xyz| < |xy 2 z| = |xyyz| because |y| > 0
+|xyyz| = |xyz| + |y| = p2 + |y|
+p2 + |y| ≤ p2 + p because |y| ≤ p
+p2 + p < p2 + 2p + 1 = (p + 1)2
+
+Note that the string xy 2 z can in E if |xy 2 z| = q 2 for some q
+Above analysis shows that p2 < |xy 2 z| < (p + 1)2
+But there is no q such that p2 < q 2 < (p + 1)2
+Thus, xy 2 z 6∈ E — contradiction
+E is not regular
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 07
+
+

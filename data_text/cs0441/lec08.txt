@@ -1,0 +1,526 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #8: Sets
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+Introduction to set theory
+l What is a set?
+l Set notation
+l Basic set operations
+
+What is a set?
+Definition: A set is an unordered collection of objects
+Examples:
+
+Sets can contain items of
+mixed types
+
+l A = {1, 2, 3, 4}
+l B = {Cooper, Dougie, Mr. C}
+l C = {motorcycle, 3.14159, Socrates}
+l E = {{1, 2, 3}, {6, 7, 8}, {23, 42}}
+
+Sets can contain other sets
+
+Informally: Sets are really just a precise way of
+grouping a “bunch of stuff”
+
+A set is made up of elements
+Definition: The objects making up a set are called
+elements of that set.
+
+Examples:
+l 3 is an element of {1, 2, 3}
+l Bob is an element of {Alice, Bob, Charlie, Daniel}
+
+We can express the above examples in a more precise
+manner as follows:
+l 3 ∈ {1, 2, 3}
+l Bob ∈ {Alice, Bob, Charlie, Daniel}
+
+Question: Is 5 ∈ {1, 2, 3, {4, 5}}?
+
+NO!
+
+There are many different ways to describe a set
+Explicit enumeration:
+l A = {1, 2, 3, 4}
+
+Using ellipses if the general pattern is obvious:
+l E = {2, 4, 6, …, 98}
+
+Set builder notation (aka, set comprehensions):
+l M = {y | y = 3k for some integer k}
+The set M contains…
+… all elements y…
+… such that…
+… y = 3k for some integer k
+
+There are a number of sets that are so important to
+mathematics that they get their own symbol
+N = {0, 1, 2, 3, …}
+Z = {…, -2, -1, 0, 1, 2, …}
+Z+ = {1, 2, …}
+Q = {p/q | p,q ∈ Z, q≠0}
+R
+∅ = {}
+
+Natural numbers
+Integers
+Positive integers
+Rational numbers
+Real numbers
+Empty set
+
+Note: This notation differs from book to book
+l Some authors write these sets as ℕ, ℤ, ℤ+, ℚ, and ℝ
+➣ I’ll do so in handwriting (“blackboard bold”)
+
+l Some authors do not include zero in the natural numbers
+➣ I like the above because it makes N≠Z+ (more expressive)
+
+Be careful when reading other books or researching on the
+Web, as things may be slightly different!
+
+You’ve actually been using sets implicitly all along!
+
+F(x,y) ≡ x and y are friends
+Domain: “All people”
+
+Mathematics
+Function min(int x, int y) : int
+if x < y then
+return x
+else
+return y
+endif
+end function
+
+Programming language
+data types
+
+∀x ∃y F(x,y)
+
+Domains of propositional
+functions
+
+Set equality
+Definition: Two sets are equal if and only if they
+contain exactly the same elements.
+
+Mathematically: A = B iff ∀x (x ∈ A ⇔ x ∈ B)
+Example: Are the following sets equal?
+l {1, 2, 3, 4} and {1, 2, 3, 4}
+l {1, 2, 3, 4} and {4, 1, 3, 2}
+l {a, b, c, d, e} and {a, a, c, b, e, d}
+l {a, e, i, o} and {a, e, i, o, u}
+
+Yes!
+Yes!
+Yes!
+No!
+
+We can use Venn diagrams to graphically
+represent sets
+U is the “universe” of all elements
+
+U
+•a
+•e
+
+•i
+•o
+
+V
+•u
+
+The set V of all vowels is contained within the
+universe of “all letters”
+Sometimes, we add points for the elements of a set
+
+Sets can be contained within one another
+Definition: Some set A is a subset of another set B iff every element
+of A is an element in the set B. We denote this fact as A ⊆ B, and
+call B a superset of A.
+
+Graphically:
+
+B
+
+U
+A
+
+Mathematically: A ⊆ B iff ∀x (x ∈ A → x ∈ B)
+Definition: We say that A is a proper subset of B iff A ⊆ B, but A ≠ B.
+We denote this by A ⊂ B. More precisely:
+A ⊂ B iff ∀x (x ∈ A → x ∈ B) ∧ ∃y (y ∈ B ∧ y ∉ A)
+
+Properties of subsets
+Property 1: For all sets S, we have that ∅ ⊆ S
+
+Proof: The set ∅ contains no elements. So, trivially,
+every element of the set ∅ is contained in any other
+set S. ❏
+Property 2: For any set S, S ⊆ S.
+Property 3: If S1 = S2, then S1 ⊆ S2 and S2 ⊆ S1.
+
+In-class exercises
+Problem 1: Come up with two ways to represent each
+of the following sets:
+l The even integers
+l Negative integers between -1 and -10, inclusive
+l The positive integers
+
+Problem 2: Draw a Venn diagram representing the
+sets {1, 2, 3} and {3, 4, 5}.
+Problem 3: On Top Hat
+
+We can create a new set by combining two or
+more existing sets
+Definition: The union of two sets A and B contains every element
+that is either in A or in B. We denote the union of the sets A and
+B as A ∪ B.
+
+Graphically:
+
+B
+
+A
+
+U
+
+Mathematically: A ∪ B = {x | x ∈ A ∨ x ∈ B}
+Example: {1, 2, 3} ∪ {6, 7, 8} = {1, 2, 3, 6, 7, 8}
+
+We can take the union of any number of sets
+Example: A ∪ B ∪ C
+Graphically:
+
+B
+
+A
+
+U
+
+C
+
+In general, we can express the union S1 ∪ S2 ∪ … ∪ Sn
+using the following notation:
+n
+[
+
+Si
+
+i=1
+
+This is just like summation
+notation!
+
+Sometimes we’re interested in the elements
+that are in more than one set
+Definition: The intersection of two sets A and B contains every
+element that is in A and also in B. We denote the intersection of
+the sets A and B as A ∩ B.
+
+Graphically:
+
+B
+
+A
+
+U
+
+Mathematically: A ∩ B = {x | x ∈ A ∧ x ∈ B}
+Examples:
+l {1, 2, 3, 7, 8} ∩ {6, 7, 8} = {7, 8}
+l {1, 2, 3} ∩ {6, 7, 8} = ∅
+
+We say that two sets A and B
+are disjoint if A ∩ B = ∅
+
+We can take the intersection of any number of sets
+
+Example: A ∩ B ∩ C
+Graphically:
+
+B
+
+A
+
+U
+
+C
+
+As with the union operation, we can express the
+intersection S1 ∩ S2 ∩ … ∩ Sn as:
+n
+\
+
+Si
+
+i=1
+
+Set differences
+Definition: The difference of two sets A and B, denoted by A – B,
+contains every element that is in A, but not in B.
+
+Graphically:
+
+B
+
+A
+
+U
+
+Mathematically: A - B = {x | x ∈ A ∧ x ∉ B}
+Example: {1, 2, 3, 4, 5} – {4, 5, 6, 7, 8} = {1, 2, 3}
+Be careful: Some authors use the notation A \ B to denote the set
+difference A – B.
+
+If we have specified a universe U, we can determine
+the complement of a set
+Definition: The complement of a set A, denoted by A, contains
+every element that is in U, but not in A.
+
+Graphically:
+
+A
+
+Mathematically: A = {x | x ∈ U ∧ x ∉ A}
+Examples: Assume that U = {1, 2, …, 10}
+l {1, 2, 3, 4, 5} = {6, 7, 8, 9, 10}
+l {2, 4, 6, 8, 10} = {1, 3, 5, 7, 9}
+
+U
+
+Cardinality is the measure of a set’s size
+Definition: Let S be a set. If there are exactly n
+elements in S, where n is a nonnegative integer, then S
+is a finite set whose cardinality is n. The cardinality of S
+is denoted by |S|.
+
+Example: If S = {a, e, i, o, u}, then |S| = 5.
+Useful facts: If A and B are finite sets, then
+l |A ∪ B| = |A| + |B| – |A ∩ B|
+l |A – B| = |A| – |A ∩ B|
+
+Aside: We’ll talk about the cardinality of infinite sets
+later in the course.
+
+Power set
+Definition: Given a set S, its power set is the set
+containing all subsets of S. We denote the power set
+of S as P(S).
+
+Examples:
+l P({1}) = {∅, {1}}
+l P({1, 2, 3}) = {∅, {1}, {2}, {3}, {1,2}, {1,3}, {2, 3}, {1, 2, 3}}
+
+Note:
+l The set ∅ is in the power set of any set S: ∀S(∅ ∈P(S))
+l The set S is in its own power set: ∀S(S∈P(S))
+l |P(S)| = 2|S|
+l Some authors use the notation 2S to represent the power
+set of S
+
+How do we represent ordered collections?
+Definition: The ordered n-tuple (a1, a2, …, an) is the ordered
+collection that has a1 as its first element, a2 as its second
+element, …, and an as its nth element.
+
+Note: (a1, a2, …, an) = (b1, b2, …, bn) iff ai = bi for i = 1, …, n.
+Special case: Ordered pairs of the form (x ∈ Z, y ∈ Z) are the
+basis of the Cartesian plane!
+l (a, b) = (c, d) iff a = c and b = d
+l (a, b) = (b, a) iff a = b
+
+How can we construct and describe ordered n-tuples?
+
+We use the Cartesian product operator to
+construct ordered n-tuples
+Definition: If A and B are sets, the Cartesian product of A
+and B, which is denoted A× B, is the set of all ordered
+pairs (a, b) such that a ∈ A and b ∈ B.
+
+Mathematically: A× B = {(a, b) | a ∈ A ∧ b ∈ B}
+Examples: Let A = {1, 2} and B = {y, z}
+l What is A× B?
+l B× A?
+l Are A× B and B× A equivalent?
+
+{(1, y), (1, z), (2, y), (2, z)}
+{(y, 1), (z, 1), (y, 2), (z, 2)}
+
+NO!!
+
+Cartesian products can be made from more than
+two sets
+Example: Let
+l S = {x | x is enrolled in CS 441}
+l G = {x | x ∈ R ∧ 0 ≤ x ≤ 100}
+l Y = {freshman, sophomore, junior, senior}
+
+The set S× Y× G consists of all possible (CS441
+student, year, grade) combinations.
+Note: My grades database is a subset of S× Y× G that
+defines a relation between students in the class,
+their year at Pitt, and their grade!
+We will study the properties of relations towards the
+end of this course.
+
+Sets and Cartesian products can be used to
+represent trees and graphs
+Dave
+
+Charlie
+Alice
+
+Let:
+
+Elise
+
+Bob
+
+Node
+
+Becky
+
+l N = All names
+l F = N× N
+
+Edge
+
+Frank
+Sarah
+
+Tommy
+
+A social network can be represented as a graph (V, E) in which
+the set V denotes the people in the network and the set E
+denotes the set of “friendship” links: (V, E) ∈ P(N)× P(F)
+In the above network:
+l V = {Alice, Bob, …, Tommy} ⊆ N
+l E = {(Alice, Bob), (Alice, Dave), …, (Sarah, Tommy)} ⊆ N×N
+
+Set notation allows us to make quantified
+statements more precise
+We can use set notation to make the domain of a
+quantified statement explicit.
+
+Example: ∀x∈R (x2 ≥ 0)
+l The square of any real number is at least zero
+
+Example: ∀n∈Z ∃j,k∈Z [(3n+2 = 2j+1)→(n = 2k+1)]
+l If n is an integer and 3n + 2 is odd, then n is odd.
+
+Note: This notation is far less ambiguous than simply
+stating the domains of propositional functions. In the
+remainder of the course, we will use this notation
+whenever possible.
+
+Truth sets describe when a predicate is true
+Definition: Given a predicate P and its corresponding
+domain D the truth set of P enumerates all elements in
+D that make the predicate P true.
+
+Examples: What are the truth sets of the following
+predicates, given that their domain is the set Z?
+l P(x) ≡ |x| = 1
+l Q(x) ≡ x2 > 0
+l R(x) ≡ x5 = 1049
+
+{-1, 1}
+{x | x∈Z±∧ x≠0} -or- Z–{0}
+∅
+
+Note:
+l ∀x P(x) is true iff the truth set of P is the entire domain D
+l ∃x P(x) is true iff the truth set of P is non-empty
+
+How do computers represent and manipulate
+finite sets?
+Observation: Representing sets as unordered
+collections of elements (e.g., arrays of Java Object
+data types) can be inefficient.
+As a result, sets are usually represented using either
+hash maps or bitmaps.
+You’ll learn about these in 1501, so today we’ll focus on bitmap
+representations.
+
+This is probably best explained through an example…
+
+Playing with the set S={x | x∈N, x<10}
+To represent a set as a bitmap, we must first agree on
+an ordering for the set. In the case of S, let’s use the
+natural ordering of the numbers.
+Now, any subset of S can be represented using |S|=10
+bits. For example:
+l {1, 3, 5, 7, 9} = 0101 0101 01
+l {1, 1, 1, 4, 5} = 0100 1100 00
+
+What subsets of S do the following bitmaps represent?
+l 0101 1010 11
+l 1111 0000 10
+
+{1, 3, 4, 6, 8, 9}
+{0, 1, 2, 3, 8}
+
+Set operations can be carried out very
+efficiently as bitwise operations
+Example: {1, 3, 7} ∪ {2, 3, 8}
+0101 0001 00
+∨ 0011 0000 10
+0111 0001 10 = {1, 2, 3, 7, 8}
+
+Example: {1, 3, 7} ∩ {2, 3, 8}
+0101 0001 00
+∧ 0011 0000 10
+0001 0000 00 = {3}
+Note: These operations are much faster than searching
+through unordered lists!
+
+Set operations can be carried out very
+efficiently as bitwise operations
+Example: {1, 3, 7}
+¬0101 0001 00
+1010 1110 11 = {0, 2, 4, 5, 6, 8, 9}
+Since the set difference A – B can be written as A ∩ (A ∩ B),
+we can calculate it as A ∧ ¬(A ∧ B).
+
+Although set difference is more complicated than the basic
+operations, it is still much faster to calculate set differences
+using a bitmap approach as opposed to an unordered search.
+
+In-class exercises
+Problem 4: Let A = {1, 2, 3, 4}, B = {3, 5, 7, 9}, and C
+= {7, 8, 9, 10}. Calculate the following:
+lA∩B
+lA∪B∪C
+lB∩C
+lA∩B∩C
+
+Problem 5: Come up with a bitmap representation of
+the sets A = {a, c, d, f} and B = {a, b, c}. Use this to
+calculate the following:
+lA∪B
+lA∩B
+
+Final thoughts
+n Sets are one of the most basic data structures used
+in computer science
+n Today, we looked at:
+l How to define sets
+l Basic set operations
+l How computers represent sets
+
+n Next time:
+l Set identities (Section 2.2)
+l Functions (Section 2.3)
+
+

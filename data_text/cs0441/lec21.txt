@@ -1,0 +1,501 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #21: Probability Theory
+
+Based on materials developed by Dr. Adam Lee
+
+Not all events are equally likely to occur…
+
+Sporting events
+
+Games of strategy
+
+Nature
+
+Investments
+
+We can model these types of real-life situations
+by relaxing our model of probability
+As before, let S be our sample space. Unlike before,
+we will allow S to be either finite or countable.
+We will require that the following conditions hold:
+1. 0 ≤ p(s) ≤ 1 for each s ∈ S
+2.
+
+No event can have a negative likelihood of
+occurrence, or more than a 100% chance
+of occurence
+
+In any given experiment, some event will
+occur
+
+The function p : S → [0,1] is called a probability
+distribution
+
+Recap our formulas for the probability of
+combinations of events
+Property 1: p(E) = 1 – p(E)
+
+S=
+
+E
+
+l Recall that S = E ∪ E for any event E
+l Further, ∑!∈# 𝑝 𝑠 = 1
+l So, p(S) = p(E) + p(E) = 1
+l Thus, p(E) = 1 – p(E)
+
+E
+
+Property 2: p(E1 ∪ E2) = p(E1) + p(E2) – p(E1 ∩ E2)
+l Recall that 𝑝 𝐸 = ∑!∈$ 𝑝 𝑠
+S=
+l Let x be some outcome in E1 ∪ E2
+l If x is in one of E1 or E2, then p(x) is counted
+once on the RHS of the equation
+l If x is in both E1 or E2, then p(x) is counted
+1 + 1 – 1 = 1 times on the RHS of the equation
+
+E1
+
+E2
+
+A formula for the probability of pairwise disjoint events
+Theorem: If E1, E2, …, En is a sequence of pairwise disjoint events in
+a sample space S, then we have:
+$
+
+$
+
+𝑝 # 𝐸! = & 𝑝 𝐸!
+!"#
+
+!"#
+
+Recall: E1, E2, …, En are pairwise disjoint iff Ei ∩ Ej = ∅ for 1 ≤ i,j ≤ n
+S=
+E1
+
+E2
+
+…
+
+En
+
+We can prove this theorem using mathematical induction!
+
+How can we incorporate prior knowledge?
+Sometimes we want to know the probability of some event given
+that another event has occurred.
+
+Example: A fair coin is flipped three times. The first flip turns
+up tails. Given this information, what is the probability that an
+odd number of tails appear in the three flips?
+
+Solution:
+l Let F = “the first flip of three comes up tails”
+l Let E = “tails comes up an odd number of times in three flips”
+l Since F has happened, S is reduced to {THH, THT, TTH, TTT}
+l We know:
+l p(E) = |E|/|S|
+l
+= |{THH, TTT}| / |{THH, THT, TTH, TTT}|
+l
+= 2/4
+l
+= 1/2
+
+Conditional Probability
+Definition: Let E and F be events with p(F) > 0. The conditional
+probability of E given F, denoted p(E | F), is defined as:
+
+𝑝 𝐸∩𝐹
+𝑝 𝐸 𝐹 =
+𝑝 𝐹
+
+Intuition:
+l Think of the event F as reducing the sample space that can be considered
+l The numerator looks at the likelihood of the outcomes in E that overlap
+those in F
+l The denominator accounts for the reduction in sample size indicated by our
+prior knowledge that F has occurred
+
+Bit strings
+Example: Suppose that a bit string of length 4 is generated at
+random so that each of the 16 possible 4-bit strings is equally
+likely to occur. What is the probability that it contains at least
+two consecutive 0s, given that the first bit in the string is a 0?
+
+Solution:
+l Let E = “A 4-bit string has at least two consecutive zeros”
+l Let F = “The first bit of a 4-bit string is a zero”
+l Want to calculate p(E | F) = p(E ∩ F)/p(F)
+l E ∩ F = {0000, 0001, 0010, 0011, 0100}
+l So, p(E ∩ F) = 5/16
+l Since each bit string is equally likely to occur,
+p(F) = 8/16 = 1/2
+l So p(E | F) = (5/16)/(1/2) = 10/16 = 5/8
+
+Kids
+Example: What is the conditional probability that a family with
+two kids has two boys, given that they have at least one boy?
+Assume that each of the possibilities BB, BG, GB, GG is equally
+likely to occur.
+Boy is older
+
+Solution:
+l Let E = “A family with 2 kids has 2 boys”
+l E = {BB}
+l Let F = “A family with 2 kids has at least 1 boy”
+l F = {BB, BG, GB}
+l E ∩ F = {BB}
+l So p(E | F) = p(E ∩ F)/p(F)
+l
+l
+
+= (1/4) / (3/4)
+= 1/3
+
+Girl is older
+
+Does prior knowledge always help us?
+Example: Suppose a fair coin is flipped twice. Does knowing that
+the coin comes up tails on the first flip help you predict whether
+the coin will be tails on the second flip?
+
+Solution:
+l S = {HH, HT, TH, TT}
+l F = “Coin was tails on the first flip” = {TH, TT}
+l E = “Coin is tails on the second flip” = {TT, HT}
+l p(E) = 2/4 = 1/2
+l p(E | F) = p(E ∩ F)/p(F)
+l
+= (1/4) / (2/4)
+l
+= 1/2
+l Knowing the first flip does not help you guess the second flip!
+
+Independent Events
+Definition: We say that events E and F are independent if and
+only if p(E ∩ F) = p(E)p(F).
+
+Recall: In our last example…
+l S = {HH, HT, TH, TT}
+l F = {TH, TT}
+l E = {HT, TT}
+l E ∩ F = {TT}
+
+So:
+l p(E ∩ F) = |E ∩ F|/|S|
+l
+= 1/4
+l p(E)p(F) = 1/2 × 1/2
+l
+= 1/4
+
+This checks out!
+
+Example: Bit Strings
+Example: Suppose that E is the event that a randomly generated
+bit string of length four begins with a 1, and F is the event that
+this bit string contains an even number of 1s. Are E and F
+independent if all 4-bit strings are equally likely to occur?
+
+Solution:
+l By the product rule, |S| = 24 = 16
+l E = {1111, 1110, 1101, 1011, 1100, 1010, 1001, 1000}
+l F = {0000, 0011, 0101, 0110, 1001, 1010, 1100, 1111}
+l So p(E) = p(F) = 8/16 = 1/2
+l p(E)p(F) = 1/4
+l E ∩ F = {1111, 1100, 1010, 1001}
+l p(E ∩ F) = 4/16 = 1/4
+l Since p(E ∩ F) = p(E)p(F), E and F are independent events
+
+Example: Distribution of kids
+Example: Assume that each of the four ways that a family can
+have two children are equally likely. Are the events E that a
+family with two children has two boys, and F that a family with
+two children has at least one boy independent?
+
+Solution:
+l E = {BB}
+l F = {BB, BG, GB}
+l p(E) = 1/4
+l p(F) = 3/4
+l p(E)p(F) = 3/16
+l E ∩ F = {BB}
+l p(E ∩ F) = 1/4
+l Since 1/4 ≠ 3/16, E and F are not independent
+
+If probabilities are independent, we can use the product rule to
+determine the probabilities of combinations of events
+Example: What is the probability of flipping heads 4 times in a
+row using a fair coin?
+
+Answer: p(H) = 1/2, so p(HHHH) = (1/2)4 = 1/16
+
+Example: What is the probability of rolling the same number 3
+times in a row using an unbiased 6-sided die?
+
+Answer:
+l
+l
+l
+l
+
+First roll agrees with itself with probability 1
+2nd roll agrees with first with probability 1/6
+3rd roll agrees with first two with probability 1/6
+So probability of rolling the same number 3 times is 1 × 1/6 × 1/6 = 1/36
+
+In-class exercises
+Top Hat
+
+Many experiments only have two outcomes
+
+P(x)
+Coin flips: Heads or tails?
+
+Bit strings: 0 or 1?
+
+Predicates: T or F?
+
+These types of experiments are called Bernoulli trials
+Two outcomes:
+l Success
+l Failure
+
+Probability p
+Probability q = 1 – p
+
+Many problems can be solved by examining the probability of k
+successes in an experiment consisting of mutuallyindependent Bernoulli trials
+
+Example: Coin flips
+Example: A coin is biased so that the probability of heads is 2/3.
+What is the probability that exactly four heads come up when the
+coin is flipped seven times, assuming that each flip is independent?
+
+Solution:
+l 27 = 128 possible outcomes for seven flips
+l There are C(7,4) ways that heads can be flipped four times
+l Since each flip is independent, the probability of each of these outcomes is
+(2/3)4(1/3)3
+l So, the probability of exactly 4 heads occurring in 7 flips of this biased coin
+is C(7,4)(2/3)4(1/3)3 = 560/2187
+
+7 Choose 4 outcomes
+to make heads
+
+Probability of each tails
+combined using product rule
+Probability of each heads
+combined using product rule
+
+This general reasoning provides us with a nice formula…
+Theorem: The probability of exactly k successes in n independent
+Bernoulli trials, with probability of success p and probability of
+failure q = 1-p, is C(n,k)pkqn-k.
+
+Proof:
+l The outcome of n Bernoulli trials is an n-tuple (t1, t2, …, tn)
+l Each ti is either S (for success) or F (for failure)
+l C(n,k) ways to choose k tis to label S
+l Since each trial is independent, the probability of each outcome with k
+successes and n-k failures is pkqn-k
+l So, the probability of exactly k successes is C(n,k)pkqn-k. ❏
+
+Notation: We denote the probability of k successes in n independent
+Bernoulli trials with probability of success p as b(k; n, p).
+
+Bits (Again)
+Example: Suppose that the probability that a 0 bit is generated is
+0.9, that the probability that a 1 bit is generated is 0.1, and that
+bits are generated independently. What is the probability that
+exactly eight 0 bits are generated when ten random bits are
+generated?
+
+Solution:
+l Number of trials
+l Number of successes
+l Probability of success
+l Probability of failure
+l Want to compute b(k; 10, 0.9)
+l
+= C(10, 8)0.980.12
+l
+= 0.1937102445
+
+n = 10
+k=8
+p = 0.9
+q = 1 – 0.9 = 0.1
+
+Many probability questions are concerned with some
+numerical value associated with an experiment
+
+Number of boys in a family
+Number of 1 bits generated
+
+Beats per minute of a heart
+
+Longevity of a chicken
+
+Number of “heads” flips
+
+What is a random variable?
+Definition: A random variable is a function X from the sample
+space of an experiment to the set of real numbers R. That is, a
+random variable assigns a real number to each possible outcome.
+
+Note: Despite the name, X is not a variable,
+and is not random. X is a function!
+
+Example: Suppose that a coin is flipped three times. Let X(s) be
+the random variable that equals the numbers of heads that
+appear when s is the outcome. Then X(s) takes the following
+values:
+l X(HHH) = 3
+l X(HHT) = X(HTH) = X(THH) = 2
+l X(TTH) = X(THT) = X(HTT) = 1
+l X(TTT) = 0
+
+Random variables and distributions
+Definition: The distribution of a random variable X on a sample
+space S is the set of pairs (r, p(X=r)) for all r ∈ X(S), where p(X=r)
+is the probability that X takes the value r.
+Note: A distribution is usually described by specifying p(X=r) for
+each r ∈ X(S)
+
+Example: Assume that our coin flips from the previous slide were
+all equally likely to occur. We then get the following distribution
+for the random variable X:
+l p(X=0) = 1/8
+l p(X=1) = 3/8
+l p(X=2) = 3/8
+l p(X=3) = 1/8
+
+Example: Rolling dice
+Let X be the sum of the numbers that appear when a pair of fair dice
+is rolled. What are the values of this random variable for the 36
+possible outcomes (i, j) where i and j are the numbers that appear on
+the first and second die, respectively?
+
+Answer:
+l X(1,1) = 2
+l X(1,2) = X(2, 1) = 3
+l X(1,3) = X(2,2) = X(3,1) = 4
+l X(1,4) = X(2,3) = X(3,2) = X(4,1) = 5
+l X(1,5) = X(2,4) = X(3,3) = X(4,2) = X(5,1) = 6
+l X(1,6) = X(2,5) = X(3,4) = X(4,3) = X(5,2) = X(6,1) = 7
+l X(2,6) = X(3,5) = X(4,4) = X(5,3) = X(6,2) = 8
+l X(3,6) = X(4,5) = X(5,4) = X(6,3) = 9
+l X(4,6) = X(5,5) = X(6,4) = 10
+l X(5,6) = X(6,5) = 11
+l X(6,6) = 12
+
+p(X=2) = 1/36
+p(X=3) = 2/36
+p(X=4) = 3/36
+p(X=5) = 4/36
+p(X=6) = 5/36
+p(X=7) = 6/36
+p(X=8) = 5/36
+p(X=9) = 4/36
+p(X=10) = 3/36
+p(X=11) = 2/36
+p(X=12) = 1/36
+
+Sometimes probabilistic reasoning can lead us to some
+interesting and unexpected conclusions…
+Question: How many people need to be in the same room so that
+the probability of two people sharing the same birthday is greater
+than 1/2?
+
+Assumptions:
+1. There are 366 possible birthdays
+2. All birthdays are equally likely to occur
+3. Birthdays are independent
+
+Solution tactic:
+l Find the probability pn that the n people in a room all have
+different birthdays
+l Then compute 1-pn, which is the probability that at least two
+people share the same birthday
+
+Let’s figure this out…
+Let’s assess probabilities as people enter the room
+l Person 1 clearly doesn’t have the same birthday as anyone else in the
+room
+l P2 has a different birthday than P1 with probability 365/366
+l P3 has a different birthday than P1 and P2 with probability 364/366
+l …
+
+In general, Pj has a different birthday than P1, P2, …, Pj-1 with
+probability [366-(j-1)]/366 = (367-j)/366
+Recall that pn is the probability that n people in the room all have
+different birthdays. Using our above observations, this means:
+
+But we’re interested in 1-pn …
+
+To check the minimum number of people need in the room to
+ensure that pn > 1/2, we’ll use trial and error:
+l If n = 22, then 1 – pn ≈ 0.475
+l If n = 23, then 1 – pn ≈ 0.506
+
+So, you need only 23 people in a room to have a better than 50%
+chance that two people share the same birthday!
+
+In-class exercises
+Problem 3: What is the probability that exactly 2 heads occur
+when a fair coin is flipped 7 times?
+Problem 4: Consider a game between Alice and Bob. Over time,
+Alice has been shown to win this game (against Bob) 75% of the
+time. If Alice and Bob play 6 games in a row, what is the
+probability that Alice wins every game?
+Problem 5: Consider generating a uniformly-random 4-character
+bit string. Also consider R, a random variable that measures the
+longest run of 1 bits in the generated string. Determine the
+distribution of R.
+
+Final Thoughts
+n Today we covered
+l Conditional probability
+l Independence
+l Bernoulli trials
+l Random variables
+l Probabilistic analysis
+
+n Next time:
+l Bayes’ Theorem (Section 7.3)
+
+The proof…
+P(n) ≡ 𝑝 ⋃$!"# 𝐸! = ∑$!"# 𝑝 𝐸!
+Base case: P(2): Let E1, E2 be disjoint events.
+By definition, p(E1 ∪ E2) = p(E1) + p(E2) – p(E1 ∩ E2).
+Since E1 ∩ E2 = ∅, p(E1 ∪ E2) = p(E1) + p(E2)
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n Consider E = E1 ∪ E2 ∪ … ∪ Ek ∪ Ek+1
+n Let J = E1 ∪ E2 ∪ … ∪ Ek, so E = J ∪ Ek+1
+n p(E) = p(J ∪ Ek+1)
+n
+= p(J) ∪ p(Ek+1)
+n
+= p(E1 ∪ E2 ∪ … ∪ Ek) ∪ p(Ek+1)
+n
+= p(E1) ∪ p(E2) ∪ … ∪ p(Ek) ∪ p(Ek+1)
+
+by definition of E
+by I.H.
+by definition of J
+by I.H.
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+

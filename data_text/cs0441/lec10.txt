@@ -1,0 +1,263 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #10: Sequences and Summations
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+Sequences and Summations
+l Specifying and recognizing sequences
+l Summation notation
+l Closed forms of summations
+l Cardinality of infinite sets
+
+Sequences are ordered lists of elements
+Definition: A sequence is a function from a subset of
+the set of integers to a set S. We use the notation an
+to denote the image of the integer n. an is called a
+term of the sequence.
+
+Examples:
+l 1, 3, 5, 7, 9, 11
+l 1, 1/2, 1/3, 1/4, 1/5, …
+
+A sequence with 6 terms
+An infinite sequence
+
+Note: The second example can be described as the
+sequence {an} where an = 1/n
+
+What makes sequences so special?
+Question: Aren’t sequences just sets?
+Answer: The elements of a sequence are members of a
+set, but a sequence is ordered, a set is not.
+
+Question: How are sequences different from ordered
+n-tuples?
+Answer: An ordered n-tuple is ordered, but always
+contains n elements. Sequences can be infinite!
+
+Some special sequences
+Geometric progressions are sequences of the form
+{arn} where a and r are real numbers
+
+Examples:
+l 1, 1/2, 1/4, 1/8, 1/16, …
+l 1, -1, 1, -1, 1, -1, …
+
+a = 1, r = ½
+a = 1, r = -1
+
+Arithmetic progressions are sequences of the form
+{a + nd} where a and d are real numbers.
+
+Examples:
+l 2, 4, 6, 8, 10, …
+l -10, -15, -20, -25, …
+
+a = 2, d = 2
+a = -10, d = -5
+
+Sometimes we need to figure out the formula for a
+sequence given only a few terms
+Questions to ask yourself:
+1. Are there runs of the same value?
+2. Are terms obtained by multiplying the previous value by a
+particular amount? (Possible geometric sequence)
+3. Are terms obtained by adding a particular amount to the
+previous value? (Possible arithmetic sequence)
+4. Are terms obtained by combining previous terms in a
+certain way?
+5. Are there cycles amongst terms?
+
+What are the formulas for these sequences?
+Problem 1: 1, 5, 9, 13, 17, …
+l Arithmetic sequence with a = 1, d = 4
+
+Problem 2: 1, 3, 9, 27, 81, …
+l Geometric sequence with a = 1, r = 3
+
+Problem 3: 2, 3, 3, 5, 5, 5, 7, 7, 7, 7, 11, 11, 11, 11, 11, …
+l Sequence in which the nth prime number is listed n times
+
+Problem 4: 1, 1, 2, 3, 5, 8, 13, 21, 34, …
+l Each term is the sum of the two previous terms
+This is called the Fibonacci sequence.
+
+Sometimes we want to find the sum of the terms
+in a sequence
+Summation notation lets us compactly
+represent the sum of terms am + am+1 + … + an
+Upper limit
+
+Index of summation
+
+Lower limit
+
+Example: ∑1≤i≤5 i2 = 1 + 4 + 9 + 16 + 25 = 55
+
+The usual laws of arithmetic still apply
+$
+
+$
+
+$
+
+$
+
+! 𝑎𝑥! + 𝑏𝑦! − 𝑐𝑧! = 𝑎 ! 𝑥! + 𝑏 ! 𝑦! − 𝑐 ! 𝑧!
+!"#
+
+!"#
+
+!"#
+
+!"#
+
+Constant factors can be pulled out of the
+summation
+A summation over a sum (or difference) can be split into a
+sum (or difference) of smaller summations
+
+Example:
+l ∑1≤j≤3 (4j + j2) = (4+1) + (8+4) + (12+9) = 38
+l 4∑1≤j≤3 j + ∑1≤j≤3 j2 = 4(1+2+3) + (1+4+9) = 38
+
+Example sums
+Example: Express the sum of the first 50 terms of the
+sequence 1/n2 for n = 1, 2, 3, …
+Answer:
+
+Example: What is the value of
+Answer:
+
+We can also compute the summation of the
+elements of some set
+Example: Compute
+Answer: (0 + 2) + (2 + 2) + (4 + 2) + (6 + 2) = 20
+
+Example: Let f(x) = x3 + 1. Compute
+Answer: f(1) + f(3) + f(5) + f(7) = 2 + 28 + 126 + 344 = 500
+
+Sometimes it is helpful to shift the index of a
+summation
+This is particularly useful when combining two or more
+summations. For example:
+Let j = k - 1
+
+Need to add 1
+to each j
+
+Summations can be nested within one another
+Often, you’ll see this when analyzing nested loops
+within a program (i.e., CS 1501/1502)
+Expand inner sum
+
+Example: Compute
+Solution:
+Simplify if possible
+
+Expand outer sum
+
+In-class exercises
+On Top Hat
+
+Computing the sum of a geometric series by
+hand is time consuming…
+Would you really want to calculate
+
+by hand?
+
+Fortunately, we have a closed-form solution for
+computing the sum of a geometric series:
+
+So,
+
+Why?
+
+Proof of geometric series closed form
+
+There are other closed form summations that
+you should know
+Sum
+
+Closed Form
+
+We can use the notion of sequences to analyze
+the cardinality of infinite sets
+Definition: Two sets A and B have the same cardinality
+if and only if there is a one-to-one correspondence (a
+bijection) from A to B.
+
+Definition: A finite set or a set that has the same
+cardinality as the natural numbers (or the positive
+integers) is called countable. A set that is not
+countable is called uncountable.
+Implication: Any sequence {an} ranging over the natural
+numbers is countable.
+
+Show that the set of even positive integers is countable
+
+Proof #1 (Graphical): We have the following 1-to-1
+correspondence between the positive integers and the
+even positive integers:
+1 2 3 4 5 6 7 8 9 10 …
+2 4 6 8 10 12 14 16 18 20 …
+So, the even positive integers are countable. ❏
+
+Proof #2: We can define the even positive integers as
+the sequence {2k} for all k ∈ Z+, so it has the same
+cardinality as Z+, and is thus countable. ❏
+
+Is the set of all rational numbers countable?
+Perhaps surprisingly, yes!
+
+This yields the sequence 1/1, 1/2, 2/1, 3/1, 1/3, …, so the
+set of rational numbers is countable. ❏
+
+Is the set of real numbers countable?
+No, it is not. We can prove this using a proof method called
+diagonalization, invented by Georg Cantor.
+
+Proof: Assume that the set of real numbers is countable. Then
+the subset of real numbers between 0 and 1 is also countable, by
+definition. This implies that the real numbers can be listed in
+some order, say, r1, r2, r3 ….
+Let the decimal representation these numbers be:
+r1 = 0.d11d12d13d14…
+r2 = 0.d21d22d23d24…
+r3 = 0.d31d32d33d34…
+…
+Where dij ∈ {0,1,2,3,4,5,6,7,8,9} ∀i,j
+
+Proof (continued)
+Now, form a new decimal number r=0.d1d2d3… where di = 0 if dii =
+1, and di=1 otherwise.
+Example:
+r1 = 0.123456…
+r2 = 0.234524…
+r3 = 0.631234…
+…
+r = 0.010…
+Note that the ith decimal place of r differs from the ith decimal
+place of each ri, by construction. Thus r is not included in the list
+of all real numbers between 0 and 1. This is a contradiction of
+the assumption that all real numbers between 0 and 1 could be
+listed. Thus, not all real numbers can be listed, and R is
+uncountable. ❏
+
+Final thoughts
+n Sequences allow us to represent (potentially
+infinite) ordered lists of elements
+n Summation notation is a compact representation for
+adding together the elements of a sequence
+n We can use sequences to help us compare the
+cardinality of infinite sets
+n Next time:
+l Integers and division (Section 4.1)
+
+

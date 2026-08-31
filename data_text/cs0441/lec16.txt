@@ -1,0 +1,317 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #16: Counting Basics
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+n Introduction to combinatorics
+n Product rule
+n Sum rule
+
+What is combinatorics?
+Combinatorics is the study of arrangements of discrete
+objects.
+We can think of this as a fancy
+word for “counting”
+
+Many applications throughout computer science:
+l Algorithm complexity analysis
+l Resource allocation & scheduling
+l Security analysis
+l…
+
+Today, we will learn the basics of counting. More
+advanced topics will be covered in later lectures.
+
+A motivating example…
+To access most computer systems, you need to login
+with a user name and a password.
+
+Suppose that for a certain system
+l Passwords must contain either 6, 7, or 8 characters
+l Each character must be an uppercase letter or a digit
+l Every password must contain at least one digit
+
+How many valid passwords are there?
+
+Solving these types of problems requires that we learn
+how to count complex objects
+Fortunately, we can solve many types of combinatorial
+problems using two simple rules:
+
+The product rule
+
+The sum rule
+
+Product rule applies when a counting problem
+can be broken into multiple tasks
+The Product Rule: Suppose a procedure can be broken
+into a sequence t1, t2, …, tk of tasks. Further, let there
+be n1, n2, …, nk ways to complete each task. Then there
+are n1× n2× …× nk ways to complete the procedure.
+To apply the product rule, do the following:
+1. Identify each task t1, …, tk
+2. For each task ti, determine the ni, the number of possible
+ways to complete ti
+3. Compute n1× n2× …× nk
+
+Let’s look at a few examples…
+
+An example: Assigning offices
+Example: It is Sherif and Bill’s first day of work at Pitt.
+If there are 10 unused offices in their department, how
+many ways can Sherif and Bill be assigned an office?
+
+Step 1: Determine tasks
+1. Give Sherif an office
+2. Give Bill an office
+
+Step 2: Count possible completions
+1. Can give any one of 10 offices to Sherif
+2. Can give any one of the remaining 9 offices to Bill
+
+Step 3: Compute the product
+l
+
+Sherif and Bill can be assigned offices in 10× 9 = 90 ways!
+
+Auditorium Seating
+Example: The chairs in an auditorium are to be labeled
+using an upper case letter and a positive number not
+exceeding 100 (e.g., B23). What is the maximum
+number of seats that can be placed in the auditorium?
+
+Solution:
+l Task 1: Count the letters that can be used
+(26)
+l Task 2: Count the numbers that can be used
+(100)
+l So, the auditorium can hold 26× 100 = 2600 chairs.
+
+Counting Bit Strings
+Example: How many bit strings of length 5 are there?
+Solution:
+l Task 1: Choose first bit
+l Task 2: Choose second bit
+l Task 3: Choose third bit
+l Task 4: Choose fourth bit
+l Task 5: Choose fifth bit
+
+(2)
+(2)
+(2)
+(2)
+(2)
+
+l So, there are 2× 2× 2× 2× 2 = 25 = 32 bit strings of length 5
+
+Counting 1-to-1 Functions
+Example: How many 1-to-1 functions are there
+mapping a set A containing m elements to another set
+B containing n elements (assuming that m ≤ n)?
+
+Solution:
+l Task 1: Map first element of A to B
+l Task 2: Map second element of A to B
+l Task 3: Map third element of A to B
+l …
+l Task m: Map last element of A to B
+
+(n)
+(n-1)
+(n-2)
+(n-m+1)
+
+l So, there are a total of n ×(n-1) ×… ×(n-m+1) 1-to-1
+functions from A to B
+
+License Plates
+Example: Suppose that in some state, license plates
+consist of three letters followed by three decimal
+digits. How many valid license plates are there?
+
+A B C 1 2 3
+26 choices for each
+
+10 choices for each
+
+Solution: There are 263×103 = 17,576,000 possible
+valid license plates
+
+In-class exercises
+Top Hat
+
+The sum rule applies when a single task can be
+completed using several different approaches
+The Sum Rule: Suppose that a single task can be
+completed in either one of n1 ways, one of n2 ways, …,
+or one of nk ways. Then the task can be completed in n1
++ n2 + … + nk different ways.
+Note: We can break the set of all possible solutions to
+the problem into disjoint subsets. E.g., if we have k
+“classes” of solutions, then S = S1 ∪ S2 ∪ … ∪ Sk
+l |S| = |S1 ∪ S2 ∪ … ∪ Sk|
+l
+= |S1| + |S2| + … + |Sk|
+l
+= n1 + n2 + … + nk
+
+Since S1, …, SK are disjoint
+
+University Committees
+Example: Suppose that either a CS professor or a CS
+graduate student can be nominated to serve on the CS
+Day Committee. If there are 21 CS professors and 101
+CS graduate students, how many ways can this seat on
+the committee be chosen?
+
+Solution:
+l Let
+➣ P be the set of professors
+➣ G be the set of graduate students
+➣ S be the solution set, with S = P ∪ G
+
+l Then there are |S| = |P ∪ G| = |P| + |G| = 21 + 101 = 122
+ways to fill the empty seat on the committee.
+
+Travel Choices
+Example: Jane wants to travel from Pittsburgh to New
+York City. If she flies, she can leave at any one of 12
+departure times. If she takes the bus, she can leave at
+any one of 6 departure times. If she takes the train, she
+can leave at any one of 4 departure times. How many
+different departure times can Jane choose from?
+
+Solution:
+l S = F ∪ B ∪ T, so
+l |S| = |F ∪ B ∪ T|
+l
+l
+l
+
+= |F| + |B| + |T|
+= 12 + 6 + 4
+= 22 departure times
+
+The product and sum rules are kind of boring…
+Most interesting counting problems cannot
+be solved using the product rule or the
+sum rule alone…
+
+… but many interesting problems can be
+solved by combining these two approaches!
+
+Let’s revisit our password example…
+
+Passwords revisited…
+To access most computer systems, you need to login
+with a user name and a password.
+Use the product rule to count
+passwords of each possible
+length!
+
+Choices: Sum rule!
+
+Suppose that for a certain system
+l Passwords must contain either 6, 7, or 8 characters
+l Each character must be an uppercase letter or a digit
+l Every password must contain at least one digit
+
+How many valid passwords are there?
+
+First, we’ll apply the sum rule
+Let:
+l P6 = Set of passwords of length 6
+l P7 = Set of passwords of length 7
+l P8 = Set of passwords of length 8
+l S = P6 ∪ P7 ∪ P8
+
+Note: |S| = |P6| + |P7| + |P8|
+Since each element of P6, P7, and P8 is made up of
+independent choices of letters and numbers, we can
+apply the product rule to determine |P6|, |P7|, and
+|P8|
+
+Recall: a password must contain at least one number!
+
+Observation: To figure out the number of 6-character
+passwords containing at least one number, it is easier
+for us to count all 6-character passwords and then
+subtract away those passwords not containing a
+number.
+Note: there are
+l (26 + 10)6 = 366 6-character passwords
+l 266 6-character passwords not containing a digit
+
+So, |P6| = 366 – 266 = 1,867,866,560
+
+Wrapping it all up…
+We can compute
+l |P6| = 366 – 266 = 1,867,866,560
+l |P7| = 367 – 267 = 70,332,353,920
+l |P8| = 368 – 268 = 2,612,282,842,880
+
+By leveraging our earlier observation that |S| = |P6| + |P7|
++ |P8|, we can conclude that there are
+2,684,483,063,360 valid passwords for our target
+system.
+
+IP Addresses
+An IP address (in IPv4) is a 32-bit string that is used to
+identify a computer that is connected to the Internet.
+
+There are three categories of IP addresses that can be
+assigned to computers:
+1. Class A addresses consist of the prefix “0” followed by a 7bit network ID and a 24-bit host ID
+2. Class B addresses consist of the prefix “10” followed by a
+14-bit network ID and a 16-bit host ID
+3. Class C addresses consist of the prefix “110” followed by a
+21-bit network ID and an 8-bit host ID
+
+So how many valid IP addresses are there?
+Note: IP addresses are subject to restrictions:
+l 1111111 cannot be used as the network ID of a Class A IP
+l Host IDs consisting of only 1s or only 0s cannot be used
+
+To count IP addresses, we will use the sum rule and
+the product rule. So S = SA ∪ SB ∪ SC, so |S| = |SA|
++ |SB| + |SC|
+Compute SA:
+l 27 – 1 network IDs since 1111111 can’t be used
+l 224 – 2 host IDs for each network ID
+l Total of 2,130,706,178 Class A IP addresses
+
+So how many valid IP addresses are there? (cont.)
+Compute SB:
+l 214 network IDs
+l 216 – 2 host IDs for each network ID
+l Total of 1,073,709,056 Class B IP addresses
+
+Compute SC:
+l 221 network IDs
+l 28 – 2 host IDs for each network ID
+l Total of 532,676,608 Class C IP addresses
+
+Since |S| = |SA| + |SB| + |SC|, there are
+3,737,091,842 IP addresses that can be assigned to
+computers connected to the Internet!
+
+In-class exercises
+Top Hat
+
+Final Thoughts
+n Combinatorics is just a fancy word for counting!
+n There are many uses of combinatorics throughout
+computer science
+n We can solve a variety of interesting problems using
+simple rules like the product rule and the sum rule
+n Next time:
+l Inclusion/Exclusion principle (Section 6.1)
+l The pigeonhole principle (Section 6.2)
+
+

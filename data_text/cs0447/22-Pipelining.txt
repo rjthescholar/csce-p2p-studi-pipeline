@@ -1,0 +1,1461 @@
+#16
+CS 0447
+Introduction to
+Computer Programming
+
+Pipelining
+
+Luís Oliveira
+
+Fall 2020
+
+Announcements
+● OMETS!!!!!!!!11!!!!!!!!!1!!!1eleven!!!!
+
+2
+
+How can we make the CPU
+more efficient? …
+
+P
+
+3
+
+Doing the laundry
+Luis (me), Artur, Stephen, and Ray have one load of clothes to
+o Wash
+Washer takes 60 minutes
+
+o Dry
+o Fold
+
+Dryer takes 60 minutes
+
+Folding takes 60 minutes
+
+Where we live, we can only do laundry Saturday from 9:00 to 18:00!
+4
+
+Sequential laundry
+● We have four loads of laundry to do (Luis, Artur, Stephen, and Ray)
+
+First, I wash
+
+9:00
+
+10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00
+
+Then, I dry
+
+Finally, I fold
+
+It took me 3:00, we
+still have three
+loads remaining!
+Yikes!
+
+It’s 15:00, we still
+have two loads to go
+
+It’s 18:00, and Ray
+cannot do his laundry!
+5
+
+How can we solve this?
+● Buy more machines!!!
+
+● Or…
+6
+
+Pipelined laundry
+● We have four loads of laundry to do (Luis, Artur, Stephen, and Ray)
+9:00
+
+10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00
+
+But did the time it
+takes to wash the
+clothes change?
+
+The washer is now
+free!!
+
+We can start the
+next load!
+
+Everyone can do
+their laundry
+
+Rinse and
+repeat
+7
+
+Upgrading the multi-cycle CPU
+Let’s apply the same concept to a multi-cycle CPU!
+Keep the same clock
+● Reuse resources with …
+
+Time
+
+0
+
+1
+
+add t2,t2,t3
+
+Mem
+
+Reg
+
+lw t0,0(t1)
+
+2
+
+3
+
+4
+
+5
+
+Mem
+
+Reg
+
+6
+
+7
+
+Reg
+
+Mem
+
+Reg
+
+8
+
+Lighting up the silicon (animated)
+Executing instructions in a pipeline
+F
+D
+
+X
+
+M
+
+Memory
+
+Control
+
+sub
+add
+sw
+Register
+File
+
+Memory
+again
+
+W
+Uses
+memory
+
+Uses decoder/registers
+
+Uses ALU
+
+Uses
+memory
+9
+
+Pipeline vs Multi-cycle
+Pipelining doesn’t help latency of a single instruction!
+It helps throughput of the entire workload!
+Different tasks operating different resources
+can execute simultaneously
+More stages, more potential speedup (too many stages is not good!)
+Time
+
+0
+
+1
+
+add t2,t2,t3
+
+Mem
+
+Reg
+
+lw t0,0(t1)
+
+Mem
+
+2
+
+3
+
+4
+
+5
+
+Mem
+
+Reg
+
+6
+
+7
+
+Reg
+
+Reg
+
+10
+
+So how did we improve performance?
+● Did we make any individual instruction faster?
+o No, the add still took 4 cycles… the lw took 5 cycles
+● But the whole thing finished faster. right?
+Yes, by overlapping the instructions,
+we increased the throughput.
+In any given clock cycle, we're
+now doing more work.
+With this we can get the CPI
+down closer to 1.
+11
+
+The average CPI
+● It’s the average number of Cycles Per Instruction
+o For any program, we count the # of cycles
+▪ and divide by the # of instructions
+Time
+
+0
+
+1
+
+add t0,t1,t2
+
+Mem
+
+Reg
+
+add t3,t4,t5
+
+Mem
+
+2
+
+3
+
+Reg
+
+5
+
+6
+
+7
+
+CPI = 7 ÷ 4
+= 1.75
+
+Reg
+
+Reg
+
+Mem
+
+Reg
+
+What
+happens when we have an
+add s3,s4,s5
+infinite number of instructions?
+
+Mem
+
+add s0,s1,s2
+
+4
+
+Reg
+
+Reg
+
+Reg
+
+12
+
+Pipeline (real-world) issues
+
+13
+
+Instructions are co-dependent 
+● Sometimes, the next instruction cannot execute in the next cycle
+o We call those pipeline hazards.
+● Hazards happen when for any reason an instruction is unable to advance
+(execute) in the pipeline
+● We’ll look at three types of hazards
+o Structural hazards
+o Data hazards
+o Control hazards
+
+14
+
+Structural hazards
+Attempting to use the same resource two different ways simultaneously. E.g.:
+● You get home soaking wet and need to dry your clothes while someone is
+using the dryer
+In a CPU with a single memory:
+● Can we fetch a new instruction while reading a word from memory?
+o NOPe: structural hazard
+
+15
+
+Structural hazards
+● Two instructions using the same hardware at the same time
+Time
+
+0
+
+1
+
+lw t0,0($0)
+
+Mem
+
+Reg
+
+lw t1,4($0)
+
+lw t2,8($0)
+
+lw t3,12($0)
+
+Mem
+
+2
+
+3
+
+4
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+6
+
+7
+
+Reg
+
+Mem
+
+Reg
+
+Mem
+
+5
+
+Reg
+
+Mem
+
+Reg
+
+16
+
+Structural hazards – What can I do???
+● Structural hazards arise from lack of resources
+● So… We can eliminate the hazard by adding more resources!
+o Add a second memory?
+▪ The Harvard architecture!
+● Another solution:
+o Stall the instruction until the resource is available
+Time
+
+lw t3,12($0)
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+17
+
+Structural hazards – What can I do???
+● You may need more than one stall!
+Time
+
+0
+
+1
+
+lw t0,0($0)
+
+Mem
+
+Reg
+
+lw t1,4($0)
+
+lw t2,8($0)
+
+lw t3,12($0)
+
+Mem
+
+2
+
+3
+
+4
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+5
+
+6
+
+7
+
+Reg
+
+Mem
+
+Reg
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+NOP
+
+NOP
+NOP
+
+NOP
+
+NOP
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+NOP
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+18
+
+Data hazards
+Attempting to use an item before it is ready. E.g.:
+● Only one sock of a pair is found during folding
+● It’s in the dryer! Folding has to wait!
+
+In a CPU:
+● Instruction depends on result of prior instruction still in the pipeline
+add s0, t0, t1
+sub t2, t2, s0
+
+s0 must be produced before it can
+be used
+
+19
+
+Data hazards – What can I do???
+● Are these common?
+o Yup! You bet!
+i=i+1
+array[i]
+
+● Solution 1: Stall until value is written back to the register file
+o Penalty is high with this solution.
+Time
+
+0
+
+1
+
+add s0,t0,t1
+
+Mem
+
+Reg
+
+sub t2,t2,s0
+
+NOP
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Reg
+
+NOP
+
+Mem
+
+Reg
+
+Reg
+20
+
+Data hazards – What can I do???
+● Solution 2: What if we improve the register file?
+
+Write to the register on
+the falling edge
+
+Time
+
+0
+
+1
+
+add s0,t0,t1
+
+Mem
+
+Reg
+
+sub t2,t2,s0
+
+NOP
+
+2
+
+Read register during
+the second half
+
+Register
+File
+
+3
+
+4
+
+5
+
+6
+
+7
+
+W
+Reg
+
+Mem
+
+RegR
+
+Reg
+21
+
+Data hazards – What can I do???
+● Solution 3: Can we forward the ALU output?
+o Add path from ALU output to one of its inputs
+Forwarding: Passing the result from a
+later stage to an earlier one
+
+Time
+
+0
+
+1
+
+add s0,t0,t1
+
+Mem
+
+Reg
+
+sub t2,t2,s0
+
+Mem
+
+2
+
+3
+
+4
+
+Reg
+
+Reg
+
+Reg
+
+5
+
+6
+
+7
+
+The value needed by the
+sub isn’t read from the reg
+file - it comes directly from
+the result output from
+doing the add operation
+22
+
+Control hazards
+Attempting to make a decision before condition is evaluated
+● If the dirty clothes are not clean after washing!
+● Then I must wash them again
+In a CPU:
+● Branches
+blt s0, s1, DONE
+add t0, t1, t2
+or t0, t1, t2
+DONE:
+sub t0, t1, t2
+
+Which path will the
+program take?
+Which instruction do
+we fetch next?
+
+23
+
+Control hazards
+Attempting to make a decision before condition is evaluated
+● If the dirty clothes are not clean after washing!
+● Then I must wash them again
+In a CPU:
+● Branches
+if s0 < s1 goto DONE
+add t0, t1, t2
+or t0, t1, t2
+DONE:
+sub t0, t1, t2
+
+Which path will the
+program take?
+Which instruction do
+we fetch next?
+
+24
+
+Control hazards – What can I do???
+● We can stall… until the outcome is known!
+Time
+
+0
+
+1
+
+blt s0,s1,DONE
+
+Mem
+
+Reg
+
+sub t0,t1,t2
+
+NOP
+
+2
+
+3
+
+4
+
+NOP
+
+Mem
+
+Reg
+
+5
+
+6
+
+7
+
+Reg
+
+● This is a bit wasteful! We really don’t like stalls! ☺
+● We want the pipeline always full and doing useful work!
+25
+
+Control hazards – What can I do???
+● Sooo… we can predict that the branch is never taken! (naïve)
+Time
+
+0
+
+1
+
+blt s0,s1,DONE
+
+Mem
+
+Reg
+
+add t0,t1,t2
+
+Mem
+
+2
+
+Reg
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Reg
+
+● We attempt to execute the next sequential instruction!
+● It is a gamble! that the branch will never be taken.
+● But if we are right, there is no stall!!! ☺
+26
+
+Control hazards – What if we are wrong?????!!!
+● Ok, what if we are wrong???!!
+Time
+
+0
+
+1
+
+blt s0,s1,DONE
+
+Mem
+
+Reg
+
+add t0,t1,t2
+
+or t0,t1,t2
+
+sub t0,t1,t2
+
+Mem
+
+2
+
+3
+
+4
+
+Reg
+
+NOP
+
+NOP
+
+Mem
+
+NOP
+
+NOP
+
+Mem
+
+Reg
+
+5
+
+6
+
+7
+
+NOP
+
+Reg
+
+● Just abort (stall the remaining steps) to fix it! Nothing was actually changed!
+● Read the correct instruction!
+
+27
+
+Fun facts!
+● How often do you think a (less-naïve) branch predictor is correct?
+Using 128 Bytes all these predictors
+have an accuracy of >90%!!!
+
+McFarling, Scott. Combining branch predictors. Vol. 49. Technical
+Report TN-36, Digital Western Research Laboratory, 1993.
+
+28
+
+What to know more?
+● CS 1541 – Introduction to Computer Architecture
+o Learn more about hazards.
+o Learn more about branch predictors.
+o Learn about memory hierarchies.
+o And more…
+
+29
+
+Performance and
+The Law of Diminishing Returns
+
+30
+
+Don't waste your time...
+● suppose you're trying to get better at time management
+● you got an app that lets you time how long you do stuff
+if you wanted to get
+more free time by
+halving the amount of
+time it takes to do one
+task, which task would
+you choose?
+
+Commuting
+
+Hygiene
+
+Watching
+Youtube
+
+Meals
+
+Working
+31
+
+If you cut Youtube by half...
+● look at all the extra free time you have!
+Hygiene
+Commuting
+
+Free time!
+
+Meals
+
+Watching
+Youtube
+
+Working
+
+32
+
+If you cut commuting by half...
+● look at ... all the extra free time... you have.
+Free time!
+Hygiene
+Commuting
+
+Watching
+Youtube
+
+Meals
+
+Working
+
+33
+
+The tale of two multipliers
+● The tale starts with a simple program
+li
+
+$1, 100
+
+lw
+lw
+mult
+mflo
+sw
+addi
+bne
+
+$2, A[i]
+$3, B[i]
+$3, $2
+$4
+$4, C[i]
+$1, $1, -1
+$1, $0, L0
+
+L0:
+; pseudo-code to load A[i]
+; pseudo-code to load B[i]
+
+; pseudo-code to store C[i]
+
+● How many times does the loop execute?
+
+Runs 100 times
+
+34
+
+The tale of two multipliers
+● You measure how long it takes to execute.
+o It took 102010ns
+li
+
+$1, 100
+
+10ns
+
+L0:
+lw
+lw
+mult
+mflo
+sw
+addi
+bne
+
+That’s too long!
+
+$2, A[i]
+$3, B[i]
+$3, $2
+$4
+$4, C[i]
+$1, $1, -1
+$1, $0, L0
+
+10ns
+10ns
+960ns
+10ns
+10ns
+10ns
+10ns
+
+I need to improve this,
+what should I do?
+
+Let me check what is
+going on here!
+
+96000ns!!!
+𝑡𝑖𝑚𝑒 = 1 × 10𝑛𝑠 +
+6 × 100 × 10𝑛𝑠 +
+1 × 100 × 960𝑛𝑠 = 102010𝑛𝑠
+35
+
+The tale of two multipliers
+● It seems this CPU implements a slow multiplier
+o It needs to execute 3 distinct steps:
+(1) add, (2) shift left, and (3) shift right
+o Multiplication takes 32-bit numbers
+▪ The ALU and the adder are 64-bits!
+o The 64-bit addition takes 10ns
+o Shifts also take 10ns
+o The multiplication takes 96 steps → 3 × 32bits
+
+What if I used another
+multiplier design?
+
+▪ total = 96 steps × 10𝑛𝑠 = 960𝑛𝑠
+
+36
+
+The tale of two multipliers
+● I know, let’s use a Fast multiplier design I have
+1. It combines some registers
+2. And we can make it do the 3 steps simultaneously
+3. And the ALU only needs to be 32-bits!
+
+o Assuming a linear relationship between bits and adder speed:
+▪ The 32-bit addition takes 5ns
+o The multiplication takes 32 steps → 1(𝑐𝑜𝑚𝑏𝑖𝑛𝑒𝑑) × 32bits
+▪ total = 32 steps × 5𝑛𝑠 = 160𝑛𝑠
+Cool! That’s a lot
+faster!!
+
+37
+
+The tale of two multipliers
+● Let’s calculate how much faster it is:
+o Let’s calculate the speedup ratio:
+▪ The factor by which the new version is faster than the old one
+
+slow multiplier time 960𝑛𝑠
+speedup =
+=
+=6×
+𝑓𝑎𝑠𝑡 𝑚𝑢𝑙𝑡𝑖𝑝𝑙𝑖𝑒𝑟 𝑡𝑖𝑚𝑒 160𝑛𝑠
+But will the program
+improve that much?
+
+38
+
+The tale of two multipliers
+𝑡𝑖𝑚𝑒 = 1 × 10𝑛𝑠 +
+6 × 100 × 10𝑛𝑠 +
+1 × 100 × 160𝑛𝑠 = 22010𝑛𝑠
+
+slow program 102010𝑛𝑠
+𝐬𝐩𝐞𝐞𝐝𝐮𝐩 =
+=
+𝑓𝑎𝑠𝑡 𝑝𝑟𝑜𝑔𝑟𝑎𝑚
+22010𝑛𝑠
+= 𝟒. 𝟔𝟑 ×
+
+It still an improvement!
+But not 6x. Why?
+
+● The multiplier is only used once!
+
+39
+
+The tale of two multipliers
+● What happens if we decrease the proportion of execution time?
+Suppose 101 instructions: 100 non-multiply, 1 multiply
+𝑡𝑖𝑚𝑒 𝑠𝑙𝑜𝑤 = 100 × 10𝑛𝑠 + 960𝑛𝑠 = 1960𝑛𝑠
+𝑡𝑖𝑚𝑒 𝑓𝑎𝑠𝑡 = 100 × 10𝑛𝑠 + 160𝑛𝑠 = 1160𝑛𝑠
+1960𝑛𝑠
+𝑠𝑝𝑒𝑒𝑑𝑢𝑝 =
+= 1.7 ×
+1160𝑛𝑠
+Suppose 1001 instructions: 1000 non-multiply, 1 multiply
+𝑡𝑖𝑚𝑒 𝑠𝑙𝑜𝑤 = 1000 × 10𝑛𝑠 + 960𝑛𝑠 = 10960𝑛𝑠
+𝑡𝑖𝑚𝑒 𝑓𝑎𝑠𝑡 = 1000 × 10𝑛𝑠 + 160𝑛𝑠 = 10160𝑛𝑠
+10960𝑛𝑠
+𝑠𝑝𝑒𝑒𝑑𝑢𝑝 =
+= 1.08 ×
+10160𝑛𝑠
+
+40
+
+Decreasing gains
+● 6 ×→ 4.63 ×→ 1.7 ×→ 1.08 ×
+
+● What happened?
+o Proportion of time spent multiplying was not enough to have gains
+● Optimization is a balancing act.
+o As you solve a bottleneck, a new one will appear.
+o Improve things to a point, then there are diminishing returns!
+5s
+
+4s
+
+3s
+
+2s
+
+4s
+
+3s
+
+2s
+
+3s
+
+3s
+41
+
+What about pipelining?
+● How much faster (and why) is a pipelined implementation of MIPS?
+● As we saw last class, we compute the speedup for this:
+
+slow time
+speedup =
+𝑓𝑎𝑠𝑡 𝑡𝑖𝑚𝑒
+● And how do we compute “time”?
+CPU time = 𝑛 × 𝐶𝑃𝐼 × 𝑡 seconds
+
+42
+
+Average Instruction CPI
+● What is an “average instruction” CPI?
+o Remember how we calculated the average CPI of a program?
+● Given a program, how many cycles does an instruction typically take?
+o It depends on the program!
+o How many instructions, and what types?
+▪ E.g.: all adds vs. all loads for multi-cycle implementation
+
+● The average instruction CPI is the average cycle count per instruction
+
+43
+
+Instruction Mix
+● Instruction mix: Is the % total instruction count (n) corresponding to each
+instruction class
+● Program A: 100 adds, 100 subtracts, 50 loads, 25 stores, 50 branches, and 10
+jumps. Total 335 instructions.
+
+● What is the mix?
+Arithmetic
+
+(100+100) / 335 =
+
+0.597 =
+
+59.7%
+
+Load
+
+50 / 335 =
+
+0.149 =
+
+14.9%
+
+Store
+
+25/335 =
+
+0.075 =
+
+7.5%
+
+Branch
+
+50/335 =
+
+0.149 =
+
+14.9%
+
+Jump
+
+10/335 =
+
+0.03 =
+
+3.0%
+
+44
+
+CPI – Multi-cycle
+● Given this mix, what is the Average Cycles Per Instruction (CPI)?
+o E.g., with a multi-cycle CPU.
+● We compute the weighted average
+CPI= Σ𝑎𝑙𝑙 𝑐𝑙𝑎𝑠𝑠𝑒𝑠 𝑓𝑟𝑒𝑞 × 𝑐𝑦𝑐𝑙𝑒𝑠
+Class
+
+Frequency
+
+Cycles
+
+Contribution
+
+Arithmetic
+
+59.7%
+
+4
+
+2.388
+
+Load
+
+14.9%
+
+5
+
+0.745
+
+Store
+
+7.5%
+
+4
+
+0.3
+
+Branch
+
+14.9%
+
+3
+
+0.447
+
+Jump
+
+3.0%
+
+3
+
+0.09
+
+Total
+
+3.97 CPI
+45
+
+CPU time
+● And now we can calculate the CPU time
+o Assuming a cycle length of 2ns
+CPU time = 335 × 3.97 × 2𝑛𝑠
+= 2660𝑛𝑠
+Class
+
+Frequency
+
+Cycles
+
+Contribution
+
+Arithmetic
+
+59.7%
+
+4
+
+2.388
+
+Load
+
+14.9%
+
+5
+
+0.745
+
+Store
+
+7.5%
+
+4
+
+0.3
+
+Branch
+
+14.9%
+
+3
+
+0.447
+
+Jump
+
+3.0%
+
+3
+
+0.09
+
+Total
+
+3.97 CPI
+46
+
+What about in the pipeline implementation?
+● In the best case, what is the CPI?
+o How many instructions are we starting every clock cycle?
+● What about the typical case, what is the CPI?
+o We have to consider hazards.
+o Say, 20% of branches are predicted correctly.
+o 60% of loads do not conflict with other memory accesses.
+
+● Assume the same program and clock cycle.
+
+47
+
+Instruction Mix – Pipeline
+● Instruction mix: Treat the delayed load and branch instructions as a separate
+class
+Class
+Arithmetic
+
+Frequency
+
+Cycles
+
+59.7%
+
+1
+
+0.6*14.9%=8.94%
+
+1
+
+Load – delay
+
+5.96%
+
+2
+
+Store
+
+7.5%
+
+1
+
+0.2*14.9%=2.98%
+
+1
+
+11.92%
+
+3
+
+3.0%
+
+1
+
+Load – no delay
+
+Branch predicted
+Branch not predicted
+Jump
+
+48
+
+CPI – Pipeline
+● We compute the weighted average
+CPI= Σ𝑎𝑙𝑙 𝑐𝑙𝑎𝑠𝑠𝑒𝑠 𝑓𝑟𝑒𝑞 × 𝑐𝑦𝑐𝑙𝑒𝑠
+Class
+
+Cycles
+
+Contribution
+
+59.7%
+
+1
+
+0.597
+
+0.6*14.9%=8.94%
+
+1
+
+0.0894
+
+Load – delay
+
+5.96%
+
+2
+
+0.1192
+
+Store
+
+7.5%
+
+1
+
+.075
+
+0.2*14.9%=2.98%
+
+1
+
+.0298
+
+11.92%
+
+3
+
+0.3576
+
+3.0%
+
+1
+
+0.03
+
+Arithmetic
+Load – no delay
+
+Branch predicted
+Branch not predicted
+Jump
+
+Frequency
+
+Total
+
+1.30 CPI
+
+49
+
+The speedup
+● Compute CPU execution time of pipelined implementation
+o Every value except CPI is the same as in the multi-cycle
+▪ n – is a property of the program
+
+Pipeline CPU time = 335 × 1.30 × 2𝑛𝑠
+= 871𝑛𝑠
+
+2660𝑛𝑠
+speedup =
+= 3.05 ×
+871𝑛𝑠
+
+50
+
+

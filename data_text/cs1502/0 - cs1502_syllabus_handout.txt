@@ -1,0 +1,545 @@
+CS1502
+Formal Methods in Computer Science
+Syllabus
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Please see updated information on the Canvas
+1/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Instructor
+Name: Thumrongsak Kosiyatrakul
+Feel free to call me Tan, Dr. Tan, or Professor Tan
+
+Email: tkosiyat@pitt.edu
+Please start the subject line with [CS1502]...
+
+Office Location: 6215 SENSQ
+Office Hours: (TuTh) 9:30 AM to 11:30 AM (EST)
+Office Hours URL: Check Canvas for the updated URL
+2/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Teaching Assistant
+
+Name: TBA
+Email: TBA
+Office Location: TBA
+Office Hours: TBA
+Office Hours URL: TBA
+
+3/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Meeting Information
+
+Lecture:
+Date/Time: According to your section
+Location (URL): Check Canvas for the updated URL
+
+For Spring 2021:
+Pre-recorded lectures will be provided
+Almost like the flip classroom style
+Watch them in advance is recommended
+All slides are provided with the lecture
+Available under Modules
+
+Lecture sessions will be used for summaries, quick overview,
+practice questions, and Q&A
+Available under Panopto
+
+4/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Textbook
+Authors: Michael Sipser
+Name: Introduction to the Theory of Computation
+Edition: 2nd or 3rd edition
+
+5/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Outcome Measurement
+
+Exams: 62% (2 exams 31% each)
+Assignments: 31% (≈ 7 – 8 written assignments)
+No late submissions will be accepted
+Upload your assignment to the Canvas
+.pdf format is preferred
+Handwritten, take pictures, and convert them into a single
+pdf file is okay
+
+Take-Home Quizzes: 5% (≈ 10 – 12 quizzes)
+Assessment Tests: 2% (2 tests)
+≥ 95%
+A+
+
+≥ 90%
+A
+
+≥ 89%
+A-
+
+≥ 88%
+B+
+
+≥ 80%
+B
+
+≥ 79%
+B-
+
+≥ 78%
+C+
+
+≥ 70%
+C
+
+6/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Course Web Site
+
+Canvas will be our LMS
+Slides
+Recorded lectures
+Exams
+Assignments
+Take-home quizzes
+Assessment Tests
+
+Always start from the Canvas front page for updated URLs
+
+7/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Outline Schedule
+
+Chapter 1: Finite Automata
+Chapter 3: Turing Machines
+Midterm Exam
+Chapter 4: Decidability
+Chapter 5: Reducibility
+Chapter 7: Time Complexity
+Final Exam (last day of lecture)
+
+8/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Other Information
+
+Academic Integrity
+Disability Services
+Statement on Classroom Recording
+
+9/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Introduction to CS1502
+
+There are some problems that cannot be solved
+Given a polynomial with multiple variables:
+6x3 yz 2 + 3xy 2 − x3 − 10
+Does it has an integral root?
+Given a set of dominoes:
+(      
+)
+a
+ca
+abc
+b
+,
+,
+,
+ca
+ab
+a
+c
+Is it possible to make a horizontal line of one or more
+dominoes, with duplicates allowed, so that the string obtained
+by reading across the top halves matches the one obtained by
+reading across the bottom?
+Post Correspondence Problem
+
+10/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Introduction to CS1502
+There are infinite number of algorithms
+How to prove that none of them can be used to solve a
+problem?
+
+Problem
+No mathematical representation that can be used to express all
+algorithms
+
+Computational Models:
+Finite Automata:
+Capture a subset of algorithms
+
+Turing Machine:
+Capture all algorithms
+
+Learn about limitations of computational models (limitations
+of algorithms) and how to formally verify their limitations
+
+11/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Introduction to CS1502
+There are some problem that take too long to solve
+Unrealistically solvable
+
+Modified Travel Salesman Problem
+Shortest path to visit 1000 cities?
+There are 1000! possible path
+1000! ≈ 4 × 102567
+Suppose you can check the distance of each path in 1 ns, it
+will take ≈ 4 × 102558 seconds
+≈ 4 × 102556 minutes
+≈ 4 × 102554 hours
+≈ 4 × 102552 days
+≈ 4 × 102549 years
+
+Do we have a faster algorithm?
+Maybe not
+
+Need to learn how to spot these kind of problems in advance
+12/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proofs
+
+To prove that a given statement is true is to demonstrate the
+truth of the given statement
+A typical step in a Proof is to derive a true statement using
+principles of logical reasoning from one of the following:
+Assumptions
+Hyptheses
+Statements that have been derived previously
+General accepted facts
+Definitions
+
+13/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 1
+Let Z = {. . . , −2, −1, 0, 1, 2, . . . }
+Definition (simple one): An integer is a number in Z
+Formally: n is an integer if an only if n ∈ Z
+Let P (n) be “n is an integer”
+Let Q(n) be “n ∈ Z”
+The above statement is P (n) ↔ Q(n)
+
+Prove that “5 is an integer”
+The statement “5 is an integer” is P (5)
+We need to show that P (5) is true
+Since P (5) ↔ Q(5), if Q(5) is true, P (5) is true
+So, we need to show that Q(5) is true
+Q(5) is “5 ∈ Z”
+Since 5 ∈ Z, Q(5) is true
+Therefore, the statement “5 is an integer” is true
+14/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 2
+
+Definition: An even number n is an integer of the form
+n = 2k where k is an integer
+Formally: n is even if an only if n is an integer and n = 2k
+and k is an integer
+Prove that “12 is even”
+We need to show the following:
+12 is an integer (done)
+12 = 2k
+k=6
+6 is an integer (done)
+
+Therefore, “12 is even is true”
+
+Definition: An odd number n is an integer of the form
+n = 2k + 1 where k is an integer
+
+15/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 3
+Prove
+For every two integers a and b, if a and b are odd, then a × b is
+odd.
+The above statement is in the form P → Q where
+P is “a and b are odd”
+Q is “a × b is odd”
+
+Recall the truth table of P → Q
+P Q P →Q
+T T
+T
+T F
+F
+F T
+T
+F F
+T
+So, to show that P → Q is true, we need to show that if P is
+true, Q must be true
+Need to assume P to be true and show that Q is also true
+16/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 3
+Prove
+For every two integers a and b, if a and b are odd, then a × b is
+odd.
+Initial Assumptions:
+a and b are integers.
+a and b are odd.
+Note: a and b can be any integers that are odd.
+
+Statement to Derive:
+a × b is odd.
+
+Fact:
+If x is an integer that is odd, there exists an integer k such
+that x = 2k + 1.
+
+From the initial assumptions that a and b are odd integers, we
+can derive:
+There exists two integers i and j such that a = 2i + 1 and
+b = 2j + 1.
+17/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 3
+Prove
+For every two integers a and b, if a and b are odd, then a × b is
+odd.
+Let a = 2i + 1 and b = 2j + 1:
+a × b = (2i + 1) × (2j + 1)
+= 4ij + 2i + 2j + 1
+= 2(2ij + i + j) + 1
+Thus, a × b is an odd integer since there exists an integer k
+(2ij + i + j) such that a × b = 2k + 1.
+Note: By showing a couple of test cases is not a proof. In the
+above proof, we assume that a and b can be any odd integers.
+18/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proof by Contradiction
+
+A statement P is logically equivalent to ¬P → False
+P
+¬P
+¬P → False
+False True
+False
+True False
+True
+Thus, to show that the statement P is True, we can show
+that the statement ¬P → False is true.
+In other words, assume that P is False and derive a statement
+that contradict with an initial assumption, an hypotheses, a
+statement that have been derived previously, or another
+generally accepted fact.
+
+19/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 4
+Prove
+For every integer p, if p2 is even, p is even.
+Formally: “p2 is even” → “p is even”
+Assume that the above statement is false
+Recall that
+¬(p2 is even → p is even) ≡ ¬(¬(p2 is even) ∨ p is even)
+≡ p2 is even ∧ ¬(p is even)
+≡ p2 is even ∧ p is odd
+Note that
+The statement “p is odd” is either true or false
+If “p is odd” is false, the above statement is false
+If “p is odd” is true, “p2 is even” is false
+In other word, the above statement implies false
+
+Therefore, “if p2 is even, p is even” is true
+20/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Example 5
+
+−3
+Definition: A rational number is a number such as
+that
+7
+p
+can be expressed as the quotient or fraction of two integers,
+q
+a numerator p and a non-zero denominator q
+Every rational number may be expressed in a unique way as
+a
+an irreducible fraction , where a and b are coprime integers
+b
+and b > 0
+No common integer factor greater than 1 between a and b
+Canonical form
+
+21/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proof by Contradiction
+Prove
+√
+2 is an irrational number.
+Fact: An irrational number is any real number that cannot be
+expressed as a ratio of integers.
+In other words, there is not exists two integers m and n such
+m √
+that
+= 2.
+n
+√
+
+Let P be the statement ” 2 is an irrational number”.
+√
+Thus ¬P is ” 2 is a rational number”.
+
+In other words, there exists two integers m and n such that
+m √
+= 2.
+n
+
+m
+m
+p
+we can obtain
+= for some
+n
+n
+q
+positive integers p and q with no common factors.
+Fact: For any ration
+
+22/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proof by Contradiction
+Prove
+√
+2 is an irrational number.
+p √
+Let = 2 for some positive integers p and q with no
+q
+common factor.
+√
+Note that the above statement says that
+number
+
+2 is a rational
+
+Let’s try to derive some statements
+p √
+= 2
+q
+ 2
+√
+p
+= ( 2)2
+q
+p2
+=2
+q2
+p2 = 2q 2
+23/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proof by Contradiction
+Prove
+√
+2 is an irrational number.
+Since p2 = 2q 2 , p2 is an even number.
+In other words, p is an even number or there exists an integer
+r such that p = 2r.
+
+Keep deriving:
+p2 = 2q 2
+(2r)2 = 2q 2
+4r2 = 2q 2
+2r2 = q 2
+Since q 2 = 2r2 , q 2 is an even number (q is an even number)
+24/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+Proof by Contradiction
+
+Prove
+√
+2 is an irrational number.
+p √
+= 2 for some positive integers p
+q
+and q with no common factor.
+√
+But we show that if 2 is a rational number both p and q are
+even.
+Earlier we stated that
+
+Therefore p and q have a common factor which is False
+according to our assumption.
+So, we get ¬P → False which is equivalent to P .
+√
+Thus, 2 is an irrational number.
+
+25/25
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+CS1502 Formal Methods in Computer Science Syllabus
+
+

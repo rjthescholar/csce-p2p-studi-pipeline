@@ -1,0 +1,771 @@
+Liveness and
+Register Allocation
+CS 1622
+Jarrett Billingsley
+
+Class Announcements
+● uhhhhhh exam Wednesday! woo!
+● keep in mind this stuff from today, while interesting, is not likely to
+be covered in-depth on the exam for obvious practical reasons
+● also I should acknowledge Stephen Chong of Harvard’s CS
+department as I would not have understood this stuff myself nearly
+as well without the slides from his compilers course
+
+2
+
+The liveness algorithm
+
+3
+
+Backwards Analyses
+● it sounds silly, but some analyses make more sense to do backwards.
+out-state
+before-state
+inst1
+inst2
+inst3
+inst4
+inst5
+if x bb2 else bb3
+
+in-state
+after-state
+join(s1, s2)
+
+a backwards analysis works exactly the same
+way, but in the opposite direction: state flows
+from the successors into the join function.
+
+the terms "in-state" and "out-state" take on
+different meanings, so it can get confusing…
+so I'm going to use before and after
+instead of in and out.
+
+in forward, state goes before → after;
+in backward, state goes after → before.
+4
+
+States and transfer function
+● let's just focus on one variable x for now.
+● x can be in one of two states: DEAD or LIVE.
+o DEAD is also the initial value, so the whole CFG is filled with it.
+o DEAD is also pulling triple duty as the "unvisited/unknown" value.
+● the transfer function works like this:
+x = LIVE
+println_i(x)
+
+x = DEAD
+x = 5
+
+if an instruction
+uses x, then x is
+LIVE before it.
+
+else, if an instruction
+defs x, then x is
+DEAD before it.
+
+x = DEAD
+y = 5
+x = DEAD
+
+x = LIVE
+y = 5
+x = LIVE
+
+else, before = after
+(just copy the state).
+
+(in x = x + 1, the first rule takes
+precedence, so x is LIVE before it.)
+5
+
+The join function
+● the join function is pretty simple.
+if x is LIVE at the beginning
+of any successor, then x is
+LIVE at the end of this block.
+LIVE
+DEAD
+s1
+
+else, x is DEAD at the
+end of this block.
+
+DEAD
+LIVE
+s2
+
+DEAD
+s3
+
+DEAD
+s1
+
+DEAD
+s2
+
+DEAD
+s3
+
+(yeah, in our IR, BBs can have at most 2 successors,
+but this rule works for any number of successors.)
+6
+
+Trying it out (animated)
+● let's try it on this simple, one-BB function.
+we initialize it by setting x
+to DEAD everywhere.
+
+then we run the transfer
+function on each instruction.
+
+x
+DEAD
+DEAD
+LIVE
+DEAD
+LIVE
+DEAD
+DEAD
+
+x = arg + 10
+
+defs x…
+
+println_i(x) uses x…
+$t0 = x
+
+uses x…
+
+return doesn't touch x…
+
+and there we go!
+notice how on the last
+step (the first instruction),
+x was marked dead before
+it, so we didn't have to
+change that state.
+and? why's that matter?
+7
+
+It matters for termination
+● we have a finite number of states (2)…
+● and the states only change monotonically:
+o every location starts as DEAD.
+o a location's DEAD can become LIVE, but not the other way around.
+o "changing" DEAD to DEAD like in that last step is not breaking the
+rule, because you're not changing anything!
+● so we've satisfied the conditions for termination!
+o let's try it on some more complex functions to convince ourselves.
+
+8
+
+One with a diamond (animated)
+● a diamond shape will force us to visit some nodes twice.
+just a def here,
+no change.
+
+DEAD
+x = 10
+
+DEAD
+LIVE
+if arg bb1 else bb2
+
+join DEAD with
+DEAD, get DEAD.
+
+join DEAD with
+LIVE, get LIVE!
+
+DEAD
+LIVE
+LIVE
+DEAD
+
+DEAD
+
+print_s("x = ")
+
+println_s("argh!")
+
+LIVE
+DEAD
+
+DEAD
+
+println_i(x)
+
+ooh, a use!
+
+DEAD
+
+let's go left..
+
+we start at the
+return node.
+
+DEAD
+
+wait, we have
+this other path.
+
+return
+
+DEAD
+
+9
+
+One with a loop (animated)
+● this should be interesting…
+println_s("start!")
+
+DEAD x = 0
+LIVE i = 0
+
+LIVE
+DEAD
+DEAD $t1 = i < 10
+LIVE
+if $t1 bb2 else bb3
+
+follow the
+loop back…
+
+LIVE
+println_i(x)
+i = i + 1
+
+oh that's
+interesting!
+
+the liveness changes in
+the middle of this BB.
+
+join DEAD
+with DEAD,
+things
+are different
+the
+gettime
+DEAD.
+second
+around!
+
+DEAD
+$t0 = 5
+return
+
+x isn't mentioned, so it's
+dead before this BB.
+10
+
+Wait, is that right…?
+● these might look wrong at first, but the liveness algorithm is telling
+you something important about x.
+fn f(a: int) {
+let x = 10;
+let x = whatever();
+
+x = 20;
+println_i(a);
+println_i(x);
+}
+
+x is always dead??
+yeah, the code never used x.
+maybe the compiler would
+report a warning/error here.
+
+x is only live for one instruction??
+the code never uses the first
+value assigned to x. maybe a
+warning/error again!
+11
+
+Some implementation thoughts
+● there are only two states.
+o so we could store the state of one variable with one bit. efficient!
+● therefore, to track n variables' states, we'd need n bits per location.
+o e.g. if we have 3 variables x, y, z…
+▪ then 000 would mean all 3 are dead
+▪ and 010 would mean y is live and x/z are dead.
+● this places liveness into a special class of analysis problems called bit
+vector problems, and you can guess why they're called that.
+o bitwise operations are fast, and bits are tiny!
+o think about the join function: if any of the successors are live (1)…
+▪ that means just ORing together all the successors.
+● okay. enough about liveness. how do we allocate registers?
+
+12
+
+Register Allocation
+time check ≤ 27
+
+13
+
+State of the art circa 1980
+● currently, our compiler places all locals (including args) in memory.
+o so, accessing them requires loads and stores.
+x = y + z;
+
+lw s0, -12(fp)
+lw s1, -16(fp)
+add s0, s0, s1
+sw s0, -20(fp)
+
+this is definitely correct (our main goal),
+but it has serious performance problems.
+in, say, 1980, the memory in your
+computer was faster than the CPU.
+so loads, stores, and adds all took the
+same amount of time.
+
+that is absolutely not the case anymore.
+
+in the absolute worst case, a load or store can
+take around 100 times longer than an add.
+14
+
+Not all doom and gloom
+● due to Reasons You Learn In 1541™, that's just the worst case
+performance. some memory accesses are as fast as an add!
+● but memory accesses still cause issues for the CPU's pipeline.
+● and it's still, like, more instructions. cause what if our variables lived in
+registers instead?
+x = y + z;
+
+add s0, s1, s2
+
+this is one of the reasons RISC ISAs like
+MIPS have so many registers to begin with:
+so you can use them for stuff like this.
+
+more values in registers
+means fewer in memory
+means fewer loads/stores
+means higher performance.
+15
+
+Real ABIs use registers
+● as you learned in 447, the real MIPS ABI has four main kinds:
+o a registers, for passing arguments (which we aren't using)
+o v registers, for returning values
+o t registers, for temporaries which do not cross jals
+o s registers, for temporaries which do cross jals
+● our compiler isn't even using a or t registers! how wasteful.
+● register allocation algorithms allow us to set up constraints to say
+"hey, this value must go in a0" or similar, so that we can generate
+code that follows these real ABIs.
+
+16
+
+Under pressure
+● the core idea of register allocation is simple:
+o a function has v variables, and the CPU has r registers.
+o if v ≤ r, it's easy: assign each variable to a register. done!
+o if v > r, put (v - r) variables in memory, and the rest in registers.
+● but this is too simplistic, even for simple functions.
+o our IR creates a lot of temporary variables.
+o this increases register pressure: the number of values we "want"
+to keep in registers at any given time.
+● some optimization passes also increase register pressure!
+o e.g. function inlining can really blow up the number of locals.
+● so, we need something that tells us which variables are "in use" at
+any given time, and assign registers based on that.
+o…
+o …oh right, that's liveness :)
+17
+
+The Register
+Interference Graph
+time check ≤ 40
+
+18
+
+Oh boy, more graphs! Whee!
+● the Register Interference Graph (RIG) is the data structure used for
+register allocation. it is an undirected graph with:
+o one node for each local in the function; and
+o an edge between any two locals which are live at the same time.
+● here is a small function and its RIG.
+fn riggy(a: int): int {
+let x = a + 10;
+println_i(x);
+let y = "---";
+a
+println_s(y);
+return a;
+}
+x
+
+these two edges indicate that a
+and x are live at the same time,
+and so are a and y, but x and y
+are not live at the same time.
+y
+
+clearly, "live at the same
+time" is derived directly from
+the liveness we computed!
+19
+
+Building the RIG (animated)
+● after you've computed liveness, it's really straightforward.
+● you start with a graph with no edges.
+at every point in the function, if two locals are
+live at that point, add an edge between them.
+n
+
+obj
+
+i
+
+obj
+
+i
+
+val
+
+found
+n
+val
+l
+
+l
+
+found
+
+fn has(l: List, val: int): bool {
+let n = l.length();
+let found = false;
+for i in 0, n {
+let obj = l.get(i);
+if obj.value() == val {
+found = true;
+}
+}
+return found;
+}
+20
+
+Ok but what's it mean and why is it a graph
+● it's the register interference graph: an edge between two nodes
+means that those two locals cannot go in the same register!
+o but the absence of an edge means they can go in the same register.
+● as for "why a graph," well, lots of things reduce to graph algorithms.
+l
+val
+
+n
+
+obj
+
+i
+found
+
+this is graph coloring: we assign each
+node a color such that no two nodes of
+the same color share an edge (touch).
+the "color" is just an arbitrary label or set:
+for our purposes, "color" will mean the
+register used to store the variable.
+
+here, n and obj are the same color,
+so they can use the same register!
+21
+
+Graph Coloring
+time check ≤ 56
+
+22
+
+Colorability and chromatic number
+● because our "colors" represent the registers on the target CPU…
+o we have a fixed number of colors to use.
+● we say a graph is k-colorable if it can be colored with k colors.
+a
+
+x
+
+a
+
+y
+
+x
+
+a
+
+y
+
+we could color this
+graph with 3 colors…
+
+x
+
+y
+
+or just 2. but 2 is
+the minimum.
+
+the chromatic number of a graph is the
+minimum number of colors needed to color it.
+if we have r registers, we'd really like the
+chromatic number of the RIG to be ≤ r!
+
+23
+
+You didn't think it would be THAT easy, did you
+● unfortunately, determining k-colorability is NP-complete.
+o (and determining the chromatic number is NP-hard!)
+
+● so, what do we do?
+o sometimes, an imperfect solution is good enough.
+● we're going to use a heuristic to figure out a coloring order that is
+likely to lead to a successful coloring.
+o and if that fails, we can tweak the graph a bit and try it again.
+● this leads to an iterative solution that is near-linear for most
+common cases.
+o yeah we might not find the perfect register allocation, but
+perfection is the enemy of good.
+
+24
+
+The coloring heuristic (animated)
+● let's say r = 5 (where r = number of CPU registers).
+● if the RIG has a node with < r neighbors, and you remove that node…
+o and the resulting graph is r-colorable…
+o then the original graph is r-colorable.
+Stack
+we'll repeatedly remove
+l
+nodes with < 5 neighbors
+(edges), and put them in
+val
+n
+this stack as we do so.
+
+obj
+
+i
+found
+25
+
+Pop'n'color (animated)
+● now we pop the nodes off the stack, and as we do so, color them
+according to what their neighbors are.
+Stack
+i
+
+n
+
+val
+
+l has red and green neighbors,
+so blue it is.
+l
+n has no colored neighbors,
+so let's make it red too.
+n
+
+found
+
+val needs to be a fourth color…
+
+l
+
+and obj needs to be a fifth.
+
+val
+
+obj
+
+obj
+
+i
+found
+
+i has no colored neighbors,
+so let's make it red.
+
+found has two red neighbors,
+so let's make it green.
+
+26
+
+This works??
+● it's a little mind-blowing, but it does work, because that heuristic
+actually goes both ways: it's an "if and only if."
+o because we were able to 5-color each sub-graph of the RIG as we
+built it back up by popping…
+o then the whole RIG was 5-colorable.
+● BUT: it doesn't always work. if the RIG is not actually r-colorable, we
+will run into one of two things:
+o no nodes with < r neighbors on the removal phase; or:
+o impossible-to-color nodes in the popping phase!
+
+27
+
+Failure to color
+● let's see what happens on the same RIG if r = 4 instead.
+o we have to remove nodes with < 4 neighbors now.
+Stack
+l
+
+found
+obj
+
+val
+
+aaaand we're stuck.
+we can't color l!
+n
+
+uh oh. everyone has ≥ 4
+neighbors. let's just remove
+one and move on anyway.
+
+val
+i
+l
+n
+
+obj
+
+i
+found
+28
+
+Spilling
+time check ≤ 85
+
+29
+
+So what do we do??
+● a failure to color the RIG means that there are more values being
+used at one time than will fit into the CPU's registers.
+o it's a setback, but it's not catastrophic, right? we can use memory.
+● so in this case we turn to spilling: picking one or more locals to live
+on the stack instead of in registers.
+● ideally, we’d like to pick some local that isn’t used very often to be
+placed into memory instead of a register… but which one?
+o if we pick poorly, we could slow down our program a lot by
+causing a bunch of excess loads and stores…
+
+30
+
+Stop interfering with me!
+
+obj
+
+i
+
+found
+n
+val
+l
+
+● picking which local to spill is, again, something we can’t do perfectly.
+● so we can again use heuristics to pick a likely candidate. maybe some
+variable that interferes with a lot of others but isn’t used much…
+locals with long live ranges
+
+fn has(l: List, val: int): bool {
+tend to interfere a lot.
+let n = l.length();
+let found = false;
+we also have to consider
+for i in 0, n {
+things like loops – how many
+let obj = l.get(i);
+accesses to the local will
+if obj.value() == val {
+found = true;
+happen because of the loop?
+}
+can we estimate that?
+}
+return found;
+found seems like a good
+}
+
+spilling candidate here.
+
+31
+
+So how does it work?
+● if we get stuck when removing nodes from the RIG…
+o we pick a local to maybe spill. but we don’t spill it yet.
+o we push that node on the stack, along with a note that says,
+“maybe spill this?”
+● then, when we pop-and-color…
+o if we get to a maybe-spill entry on the stack...
+o AND that node cannot be colored…
+o then we know that we have to spill it, and we rewrite the code!
+● why do we wait to rewrite until the pop-and-color phase?
+o because we’re just using heuristics here. it’s entirely possible that
+the graph is colorable when we remove a node with ≥ r neighbors!
+so, we have to be conservative.
+
+32
+
+How the code is rewritten
+● in our IR, we might add new instructions to represent loads/stores.
+● then, each use and def of the spilled variable is replaced with loads
+and stores to the stack.
+found = false
+
+found_1 = false
+Store(fp-12, found_1)
+
+found = true
+
+found_2 = true
+Store(fp-12, found_2)
+
+$t0 = found
+
+found_3 = Load(fp-12)
+$t0 = found_3
+
+we also rename the spilled local at each use location with a
+unique name. each of these new locals has a very short live range!
+33
+
+Then what?
+● then… we start all over again! compute liveness, build the RIG…
+● this is the iterative register allocation algorithm in a nutshell:
+Rewrite
+spill
+Liveness
+and RIG
+
+Remove
+nodes
+
+Pop and
+color
+
+Done!
+
+Pick spill
+candidate
+
+34
+
+And it keeps going…
+● this is just the basic shape of the algorithm.
+● there are several more features, such as:
+o coalescing pairs of nodes that are likely to end up in the same
+register anyway
+▪ e.g. in a = b where their liveness doesn’t overlap
+o pre-coloring some nodes to indicate they must be in certain
+registers. this is used for:
+▪ argument and return value registers (MIPS “a” and “v” registers)
+▪ saved temporary registers (MIPS “s” registers)
+o and more…
+
+35
+
+

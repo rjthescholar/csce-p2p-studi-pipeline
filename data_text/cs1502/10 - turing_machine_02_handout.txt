@@ -1,0 +1,725 @@
+Turing Machine 02
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Turing Machine Example
+
+Design a Turing machine that recognizes the language B
+where
+B = {w#w | w ∈ Σ∗ }
+On input string w:
+1
+
+2
+
+Zig-zag across the tape to corresponding positions on either
+side of the # symbol to check whether those positions contain
+the same symbol. If they do not, or if no # is found, reject.
+Cross off symbols as they are checked to keep track of which
+symbols correspond.
+When all symbols to the left of the # have been crossed off,
+check for any remaining symbols to the right of the #. If any
+symbols remain, reject; otherwise, accept.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Turing Machine M1
+A Turing machine that decides B = {w#w | w ∈ Σ∗ }.
+
+1
+
+x,
+R
+
+q1
+
+0
+
+R
+x,
+
+→
+
+→
+
+#→R
+
+0, 1 → R
+
+q2
+#→R
+
+x→R
+
+x→R
+
+q8
+t
+
+q4
+
+→R
+
+#→R
+
+qaccept
+
+q5
+
+1
+
+L
+x,
+
+→
+
+→
+
+x,
+
+L
+
+0
+
+0, 1, x → L
+
+q6
+#→L
+x→R
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+q7
+
+0, 1 → R
+
+q3
+
+0, 1 → L
+
+Turing Machine 02
+
+x→R
+
+Turing Machine M1
+Σ = {0, 1, #}
+Γ = {0, 1, #, x, t}
+1 → x, R
+Read 1, write x, and move the tape head to the right direction
+
+#→R
+A shorthand notation for # → #, R
+Read #, write #, and move the tape head to the right direction
+
+0, 1 → L
+A shorthand notation representing two transitions:
+0 → L which is 0 → 0, L
+1 → L which is 1 → 1, L
+
+qreject is omitted
+All missing exiting arrows go to qreject
+Assume that it moves the tape head to the right direction
+before entering qreject without writing a symbol (writing the
+same symbol it read)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Turing Machine M1
+Computing 01#01
+
+1
+
+x,
+R
+
+q1
+
+0, 1 → R
+
+R
+
+0
+
+x,
+
+→
+
+→
+
+#→R
+
+q2
+#→R
+
+x→R
+
+x→R
+
+q8
+t
+
+q4
+
+0, 1 → R
+
+q3
+
+→R
+
+#→R
+
+qaccept
+
+q5
+
+1
+
+L
+x,
+
+→
+
+→
+
+x,
+L
+
+0
+
+0, 1, x → L
+
+q6
+#→L
+x→R
+
+q7
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0, 1 → L
+
+Turing Machine 02
+
+x→R
+
+q1 01#01
+xq2 1#01
+x1q2 #01
+x1#q4 01
+x1q6 #x1
+xq7 1#x1
+q7 x1#x1
+xq1 1#x1
+xxq3 #x1
+xx#q5 x1
+xx#xq5 1
+xx#q6 xx
+xxq6 #xx
+xq7 x#xx
+xxq1 #xx
+xx#q8 xx
+xx#xq8 x
+xx#xxq8 t
+xx#xxtqaccept
+
+Turing Machine M1
+Computing 01#10
+
+1
+
+x,
+R
+
+q1
+
+0, 1 → R
+
+R
+
+0
+
+x,
+
+→
+
+→
+
+#→R
+
+q2
+#→R
+
+x→R
+
+x→R
+
+q8
+t
+
+q4
+
+0, 1 → R
+
+q3
+
+→R
+
+#→R
+
+qaccept
+
+q5
+
+1
+
+L
+x,
+
+→
+
+→
+
+x,
+L
+
+0
+
+0, 1, x → L
+
+q6
+#→L
+x→R
+
+q7
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0, 1 → L
+
+Turing Machine 02
+
+x→R
+
+q1 01#10
+xq2 1#10
+x1q2 #10
+x1#q4 10
+x1#1qreject 0
+
+Turing Machine M1
+Computing 01 (no # symbol)
+
+1
+
+x,
+R
+
+q1
+
+0, 1 → R
+
+R
+
+0
+
+x,
+
+→
+
+→
+
+#→R
+
+q2
+#→R
+
+x→R
+
+x→R
+
+q8
+t
+
+q4
+
+0, 1 → R
+
+q3
+
+→R
+
+#→R
+
+qaccept
+
+q5
+
+1
+
+L
+x,
+
+→
+
+→
+
+x,
+L
+
+0
+
+0, 1, x → L
+
+q6
+#→L
+x→R
+
+q7
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+0, 1 → L
+
+Turing Machine 02
+
+x→R
+
+q1 01
+xq2 1
+x1q2 t
+x1tqreject
+
+Turing Machine Example
+
+Design a Turing machine that recognizes the language A
+where
+n
+A = {02 | n ≥ 0}
+On input string w:
+1
+2
+3
+
+4
+5
+
+Sweep left to right across the tape, crossing off every other 0
+If in stage 1 the tape contained a single 0, accept
+If in stage 1 the tape contained more than a single 0 and the
+number of 0s was odd, reject
+Return the head to the left-hand end of the tape
+Go to stage 1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Moving the Tape Head Back
+Suppose we want to move the tape head back to the left most
+end of the tape
+Need a state to do that
+0, 1, x → L
+
+This will result in an infinite loop
+
+Recall that if the tape head is at the left-most square and the
+transition is L, it will stay at the same place
+There is no signal telling a TM that its tape head is currently
+at the left-most square
+
+The trick is to mark the left-most symbol (depending on Γ)
+Turn 0 or 1 to t
+Turn 0 to 0̇ or x
+Turn 1 to 1̇ or t
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Turing Machine M2
+n
+
+A Turing machine that decides A = {02 | n ≥ 0}.
+0→L
+x→L
+
+→
+t
+
+→R
+x→R
+
+0 → x, R
+
+t
+
+t
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+→R
+
+q3
+
+0→R
+
+qaccept
+
+t
+
+x→R
+
+L
+
+q2
+
+0 → t, R
+
+qreject
+
+→
+
+x→R
+q1
+
+t
+
+R
+
+q5
+
+→R
+
+Turing Machine 02
+
+0 → x, R
+
+q4
+
+x→R
+
+Turing Machine M2
+Computing 0000
+q1 0000
+q2 000
+txq3 00
+tx0q4 0
+tx0xq3 t
+tx0q5 x
+txq5 0x
+tq5 x0x
+q5 tx0x
+tq2 x0x
+txq2 0x
+txxq3 x
+txxxq3 t
+txxq5 x
+txq5 xx
+tq5 xxx
+q5 txxx
+tq2 xxx
+txq2 xx
+txxq2 x
+txxxq2 t
+txxxtqaccept
+t
+
+0→L
+x→L
+
+→
+t
+
+→R
+x→R
+
+→R
+
+qaccept
+
+t
+
+q3
+
+0 → x, R
+
+t
+
+x→R
+
+L
+
+q2
+
+0 → t, R
+
+t
+
+qreject
+
+→
+
+x→R
+q1
+
+t
+
+R
+
+q5
+
+0→R
+
+0 → x, R
+
+q4
+
+x→R
+
+→R
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Turing Machine M2
+
+Computing 000
+0→L
+x→L
+
+→
+t
+
+→R
+x→R
+
+→R
+
+qaccept
+
+t
+
+q3
+
+0 → x, R
+
+t
+
+x→R
+
+L
+
+q2
+
+0 → t, R
+
+t
+
+qreject
+
+→
+
+x→R
+q1
+
+t
+
+R
+
+q5
+
+0→R
+
+0 → x, R
+
+q4
+
+x→R
+
+→R
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+q1 000
+q2 00
+txq3 0
+tx0q4 t
+tx0tqreject
+t
+
+Turing Machine 02
+
+Designing a TM
+Designing a TM in a form of a state diagram is hard
+Need to keep in mind out the content of the tape
+Need to worry about moving tape head
+
+But for a simple problem, it is not that bad
+Let’s create a TM that shift all symbols on the tape to the
+right by one square by inserting the blank symbol at the
+left-most square and move the tape head back to the
+left-most square
+Let Σ = {0, 1} and Γ = {0, 1, t}
+Here are some input/output (on the tape)
+Input
+Output
+01101 t01101
+0
+t0
+111
+t111
+ε
+ε
+Note that this TM always accepts all strings over Σ
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+Designing a TM
+Solution
+0→R
+
+q1
+0 → t, R
+1 → 0, R
+
+0 → 1, R
+
+q0
+
+t
+
+1 → t, R
+
+→ 0, L
+0, 1 → L
+
+q3
+t
+
+→ 1, L
+
+t
+
+→L
+qaccept
+
+q2
+
+1→R
+t
+
+→L
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Turing Machine 02
+
+

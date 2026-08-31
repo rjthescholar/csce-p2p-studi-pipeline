@@ -1,0 +1,694 @@
+#C
+CS 0447
+Introduction to
+Computer Programming
+
+Logic Basics
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+Luís Oliveira
+
+Fall 2020
+
+What's electricity?
+(EE-ish section)
+
+2
+
+In your orbit
+here's a proton. it has
+a positive charge
+
++
+p
+
+here's an electron. it has
+a negative charge
+e-
+
+it kinda goes
+around
+the proton
+in an orbit*
+
+protons sit still while electrons can move around
+
+*it actually doesn’t… it’s way more complex than that!
+Waves, teleportation and other black magic!
+
+3
+
+Opposites attract…
+
+two of the same
+charge repel
+
+p+
+
+p+
+
+e-
+
+opposite charges
+attract
+
+but protons are
+kinda stuck, so…
+
+here's electricity.
+here it is
+
+e-
+
+4
+
+Lots of fish electrons in the sea
+here's a solid piece of metal
+the atoms are in a fixed structure
+but some of the electrons are free to move around
+
+right now, the charges are
+balanced: same number of
+positive and negative
+let's knock it out of whack
+
+5
+
+Two moles is company, three's a crowd
+let's shove more electrons in
+packing more
+electrons in leads
+to two things:
+1. this metal is now
+negatively charged
+
+2. the electrons are
+now closer together
+meaning they're less
+happy
+
+aaa
+
+noo
+6
+
+Carousel of unhappiness
+if we shove some down a wire
+
+wire
+we'd like to get off
+mister bones wild ride
+
+and then give them a
+(difficult) way out
+
+and then have something which will
+squeeze them back together again
+well now you have electricity
+
+7
+
+Watch em go
+voltage measures
+electron unhappiness
+
+current measures how
+many electrons per second
+are moving past a point
+
+low
+low
+
+high
+and that's electricity
+
+high
+
+8
+
+Logic Basics
+
+9
+
+Valves (or tubes) – more fun?
+● Why is a vacuum tube called like that?
+● They are also called thermionic valves (or simply valves)
+
+https://en.wikipedia.org/wiki/Vacuum_tube
+
+10
+
+Transistors
+● a transistor is like a little valve
+
+There are multiple
+types of transistors
+
+common
+
+output
+
+input
+
+input
+
+output
+
+output
+
+common
+
+MOSFET
+
+BJT
+
+common
+
+input
+Can be used many
+different ways!
+11
+
+Transistors
+● The ones we’ll focus on MOSFET transistors
+o Metal-Oxide Semiconductor Field-Effect Transistor
+o Commonly used just as switches (digital electronics)
+
+The positive
+terminal (e.g. 9V)
+
+9V
+
+D
+G
+
+D
+G
+
+S
+The negative/ground
+terminal (0V)
+
+S
+0V
+12
+
+Transistors
+● Used as an electrically controlled switch
+o The input is connected to G (Gate)
+▪ controls the switch state
+o The output is D (drain) is connected to S (source)
+● The voltages represent bits! (maybe 9V = 1, 0V = 0)
+
+D
+Input
+
+G
+
+Output
+S
+13
+
+Transistors
+● MOSFETs come in two varieties:
+
+ON
+
+OFF
+
+ON
+
+D
+
+S
+G=1 G=0
+
+G
+
+OFF
+
+S
+
+G
+This means
+inverted
+
+G=0
+
+G=1
+
+D
+
+“N” Type
+
+“P” Type
+
+Work when connected to 0
+
+Work when connected to 1
+
+14
+
+Transistors – Overly simplified
+The current
+must flow!!
+D
+0
+1G
+S
+
+“N” Type
+
+S
+0
+1G
+
+D
+
+“P” Type
+
+15
+
+Transistors
+Now just put 3 billion
+of them together! who
+said EE was hard?
+
+16
+
+Gates
+● We can combine transistors in interesting ways to make gates
+● A gate implements one of the basic boolean logic functions
+● Let's start with the simplest: the NOT gate
+Q is the output
+A is the input
+
+A
+
+Q
+this little bubble
+means "invert"
+
+17
+
+Time to bundle up
+● if we want to, say, NOT a 32-bit value, we can draw it like:
+
+32
+
+32
+
+● it's a lot nicer than drawing 32 wires with 32 NOT gates
+● Logisim calls these wire bundles
+o it doesn't draw the slashes and numbers though…
+
+18
+
+NOT with MOSFETs
+A=0
+
+A=1
+
+1
+
+0
+
+A
+
+Q
+
+“P” Type
+
+A
+
+Q
+
+A Q
+0 1
+1 0
+
+“N” Type
+
+19
+
+NAND with MOSFETs
+A
+B
+
+B
+
+A
+
+Q
+A
+
+B
+
+Q
+
+A
+0
+0
+1
+1
+
+B Q
+0 1
+1 1
+0 1
+1 0
+20
+
+AND with MOSFETs
+A
+B
+
+B
+
+A
+
+Q
+A
+
+B
+
+Q
+
+A
+0
+0
+1
+1
+
+B Q
+0 0
+1 0
+0 0
+1 1
+21
+
+NOR with MOSFETs
+A
+B
+
+A
+B
+Q
+A
+
+Q
+
+B
+
+A
+0
+0
+1
+1
+
+B Q
+0 1
+1 0
+0 0
+1 0
+22
+
+OR with MOSFETs
+A
+B
+
+A
+B
+
+Q
+A
+
+Q
+
+B
+
+A
+0
+0
+1
+1
+
+B Q
+0 0
+1 1
+0 1
+1 1
+23
+
+AND, OR, and… XOR?
+● we know about AND and OR, but what's XOR?
+
+A
+
+Q
+
+B
+AND gate
+
+A
+0
+0
+1
+1
+
+B Q
+0 0
+1 0
+0 0
+1 1
+AB
+
+A
+
+Q
+
+B
+
+A
+
+Q
+
+B
+
+OR gate
+
+XOR gate
+
+A
+0
+0
+1
+1
+
+A
+0
+0
+1
+1
+
+B Q
+0 0
+1 1
+0 1
+1 1
+A+B
+
+B Q
+0 0 eXclusive OR
+means "one or
+1 1 the other, but
+0 1 NOT BOTH."
+1 0
+A⊕B
+
+24
+
+AND (multiple inputs)
+● If you have more than 2 inputs…
+you can just concatenate:
+
+A
+
+Q’
+
+B
+AND gate
+
+Q’
+
+Q
+
+C
+AND gate
+
+A
+0
+1
+0
+1
+0
+1
+0
+1
+
+B
+0
+0
+1
+1
+0
+0
+1
+1
+
+C
+0
+0
+0
+0
+1
+1
+1
+1
+
+Q
+0
+0
+0
+0
+0
+0
+0
+1
+
+25
+
+AND and/or OR
+● Combining logic is just a matter of
+combining logic gates:
+● Look at the truth entries on the truth-table
+o when Q is “1”
+● AND each entry variable
+● Then, OR each entry:
+● In English:
+
+ABC + ABC
+
+It’s truth when
+“A is false” and “B is true” and “C is false”
+OR
+“A is false” and “B is true” and “C is true”
+
+A
+0
+1
+0
+1
+0
+1
+0
+1
+
+B
+0
+0
+1
+1
+0
+0
+1
+1
+
+C
+0
+0
+0
+0
+1
+1
+1
+1
+
+Q
+0
+0
+1
+0
+0
+0
+1
+0
+
+26
+
+AND and/or OR
+
+ABC + ABC
+A
+Q
+B
+
+C
+
+A
+0
+1
+0
+1
+0
+1
+0
+1
+
+B
+0
+0
+1
+1
+0
+0
+1
+1
+
+C
+0
+0
+0
+0
+1
+1
+1
+1
+
+Q
+0
+0
+1
+0
+0
+0
+1
+0
+
+27
+
+If you give an electrical engineer a NAND gate…
+● if you stick a NOT gate after an AND gate, you get a NAND gate
+
+● this kind of gate has a cool property: it's universal
+o in other words, you can build an entire computer with NANDs
+● but this isn't how real circuits are designed, at least anymore
+● digital logic courses use them cause NAND gate chips are cheap
+● but in Logisim, we have infinite gates for free :D
+● use the kind of gate you need for the situation at hand
+
+28
+
+

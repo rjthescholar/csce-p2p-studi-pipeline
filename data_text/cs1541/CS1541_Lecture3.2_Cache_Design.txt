@@ -1,0 +1,1066 @@
+Cache Design
+CS 1541
+Wonsun Ahn
+
+Oracle Cache
+● CPU Cycles = CPU Compute Cycles + Memory Stall Cycles
+
+● Oracle cache: a cache that never misses
+o In effect, Memory Stall Cycles == 0
+o Impossible, since even with infinite capacity, there are still cold misses
+o But useful to set bounds on performance
+● Real caches may approach performance of oracle caches but can’t exceed
+
+● What metric can we use to compare and evaluate real cache designs?
+o AMAT (Average Memory Access Time)
+
+2
+
+AMAT (Average Memory Access Time)
+● AMAT (Average Memory Access Time) is defined as follows:
+o AMAT = hit time + (miss rate × miss penalty)
+o Hit time: time to get the data from cache when we hit
+o Miss rate: what percentage of cache accesses we miss
+o Miss penalty: time to get the data from lower memory when we miss
+o Shouldn’t it be hit rate × hit time?
+▪ Hit time is incurred regardless of hit or miss
+▪ It is more aptly called access time (the time to search for the data)
+
+● Hit time, miss rate, miss penalty are the 3 components of a cache design
+o When evaluating a cache design, we need to consider all 3
+o Cache designs trade-off one for the other
+▪ E.g. a large cache trade-offs longer hit time for smaller miss rate
+▪ Whether trade-off is beneficial depends on the resulting AMAT
+3
+
+Cache Design Parameter 1:
+Number of Levels
+
+4
+
+AMAT for Multi-level Caches
+● For a single-level cache (L1 cache):
+o AMAT(L1) = L1 hit time + (L1 miss rate × DRAM access time)
+Miss! Hit!
+
+L1 Cache
+
+Hit!
+
+DRAM Memory
+
+L1 hit time
+L1 miss rate × DRAM access time
+
+● For a multi-level cache (L1, L2 caches):
+o AMAT(L2) = L1 hit time + (L1 miss rate × L1 miss penalty)
+o L1 miss penalty = L2 hit time + (L2 miss rate × DRAM access time)
+o AMAT(L2) = L1 hit time + L1 miss rate × L2 hit time
++ L1 miss rate × L2 miss rate × DRAM access time
+Miss! Miss! Hit!
+
+L1 Cache
+
+L1 hit time
+
+Miss!
+
+L2 Cache
+
+L1 miss rate × L2 hit time
+
+Hit!
+
+Hit!
+
+DRAM Memory
+
+L1 miss rate × L2 miss rate × DRAM access time
+5
+
+AMAT for Multi-level Caches
+● For L2 Cache to be worth it, AMAT(L1) > AMAT(L2) needs to be true.
+L1 Cache
+
+DRAM Memory
+
+L1 hit time
+L1 miss rate × DRAM access time
+
+>?
+L1 Cache
+
+L1 hit time
+
+L2 Cache
+
+L1 miss rate × L2 hit time
+
+DRAM Memory
+
+L1 miss rate × L2 miss rate × DRAM access time
+
+● AMAT(L1) – AMAT(L2)
+= (L1 miss rate – L1 miss rate × L2 miss rate) × DRAM access time
+– L1 miss rate × L2 hit time
+= L1 miss rate × ((1 – L2 miss rate) × DRAM access time – L2 hit time) > 0
+→ (1 – L2 miss rate) × DRAM access time > L2 hit time
+→ Benefit from reduced DRAM accesses > Penalty from L2 accesses
+6
+
+AMAT for Multi-level Caches
+● (1 – L2 miss rate) × DRAM access time > L2 hit time
+o Let’s assume L2 miss rate = 0.9 and DRAM access time = 100 cycles:
+(1 − 0.9) × 100 > L2 hit time
+L2 hit time < 10
+o If L2 hit time can be kept below 10 cycles, worth it to install L2 cache
+● So, should we install the L2 cache, or not? That depends on the program!
+o Locality in program determines cache capacity required for 0.9 miss rate
+o If we can design a cache with hit time < 10 for that capacity, go for it
+● Again, shows design decisions are heavily impacted by needs of software
+
+7
+
+Cache Design Parameter 2:
+Cache Size
+
+8
+
+Impact of Cache Size (a.k.a. Capacity) on AMAT
+● AMAT = hit time + (miss rate × miss penalty)
+
+● Larger caches are good for miss rates
+o More capacity means you can keep around cache blocks for longer
+o Means you can leverage more of the pre-existing temporal locality
+o If entire working set can fit into the cache, no capacity misses!
+● But larger caches are bad for hit times
+o Longer wires and larger decoders mean longer access time
+● Exactly why there are multiple levels of caches
+o Frequently accessed data where hit time is important stays in L1 cache
+o Rarely accessed data which is part of a larger working set stays in L3
+
+9
+
+What cache size(s) should I choose?
+● How should each cache level be sized?
+
+● That depends on the application
+o Working set sizes of the application at various levels. E.g.:
+▪ Small set of data accessed very frequently (typically stack variables)
+▪ Medium set of data accessed often (currently accessed data structure)
+▪ Large set of data accessed rarely (rest of program data)
+o Ideally, cache levels and sizes would reflect working set sizes.
+● Simulate multiple cache levels and sizes and choose one with lowest AMAT
+o Simulate on the applications that you care about
+o In the end, it must be a compromise (giving best average AMAT)
+
+10
+
+Cache Design Parameter 3:
+Cache Block Size
+
+11
+
+Impact of Cache Block Size on AMAT
+● AMAT = hit time + (miss rate × miss penalty)
+
+● Cache block (a.k.a. cache line)
+o Unit of transfer for cache data (typically 32 or 64 bytes)
+o If program accesses any byte in cache block, entire block is brought in
+o Each level of a multi-level cache can have a different cache block size
+● Impact of larger cache block size on miss rate
+o Maybe smaller miss rate due to better leveraging of spatial locality
+o Maybe bigger miss rate due to worse leveraging of temporal locality
+(Bringing in more data at a time may push out other useful data)
+● Impact of larger cache block size on miss penalty
+o With a limited bus width, may take multiple transfers for a large block
+o E.g. DDR 4 DRAM bus width is 8 bytes, so 8 transfers for 64-byte block
+o Could lead to increase in miss penalty
+12
+
+Cache Block Size and Miss Penalty
+● On a miss, the data must come from lower memory
+● Besides memory access time, there’s transfer time
+● What things impact how long that takes?
+o The size of the cache block (words/block)
+o The width of the memory bus (words/cycle)
+o The speed of the memory bus (cycles/second)
+● So the transfer time will be:
+
+seconds
+𝟏
+words
+=
+×
+cycles words block
+block
+×
+second cycle block size
+bus speed
+
+Cache
+
+Memory
+
+bus width
+13
+
+What cache block size should I choose?
+● Again, that depends on the application
+o How much spatial and temporal locality the application has
+● Simulate multiple cache block sizes and choose one with lowest AMAT
+o Simulate on benchmarks that you care about and choose best average
+o You may have to simulate different combinations for multi-level caches
+
+14
+
+Cache Design Parameter 4:
+Cache Associativity
+
+15
+
+Mapping blocks from memory to caches
+● Cache size is much smaller compared to the entire memory space
+o Must map all the blocks in memory to limited CPU cache
+● Does this sound familiar? Remember branch prediction?
+o Had similar problem of mapping PCs to a limited BHT
+o What did we do then?
+▪ We hashed PC to an entry in the BHT
+▪ On a hash conflict, we replaced old entry with more recent one
+
+● We will use a similar idea with caches
+o Hash memory addresses to entries in cache
+o On a conflict:
+▪ Replace old cache block with more recent one
+▪ Or, chain multiple cache blocks on to same hash entry
+16
+
+Impact of Cache Associativity on AMAT
+● Depending on hash function and chaining, a cache is either:
+o Direct-mapped (no chaining allowed)
+o Set-associative (some chaining allowed)
+o Fully-associative (limitless chaining allowed)
+
+● Impact of more associativity on miss rate
+o Smaller miss rate due to less misses due to hash conflicts
+o Misses due to hash conflicts are called conflict misses
+▪ A third category of misses besides cold and capacity misses
+● Impact of more associativity on hit time
+o Longer hit time due to need to search through long chain
+
+17
+
+Direct-mapped Caches
+
+18
+
+Assumptions
+● Let’s assume for the sake of concise explanations
+o 8-bit memory addresses
+o 4-byte (one word) cache block sizes
+● Of course these are not typical values. Typical values are:
+o 32-bit or 64-bit memory addresses (32-bit or 64-bit CPU)
+o 32-byte or 64-byte cache blocks sizes (for spatial locality)
+o But too many bits in addresses are going to give you a headache
+● According to our assumption, here’s a breakdown of address bits
+Upper 6 bits: Offset of cache
+block within main memory
+
+Lower 2 bits: Byte offset
+within 4-byte cache block
+
+o When I refer to addresses, I will sometimes omit the lower 2 bits
+(When we talk about cache block transfer, that part is irrelevant)
+19
+
+Direct-mapped Cache Hash Function
+● Each memory address maps to one cache block
+● No chaining allowed so no need to search
+● Implementing this is relatively simple
+Hash function:
+For this 8-entry cache, to
+find cache block index,
+take the lowest 3 cache
+block offset bits in address.
+
+But if our program
+accesses 001000, then
+000000, how do we tell
+them apart?
+Tags!
+
+Cache
+000
+001
+010
+011
+
+100
+101
+110
+111
+
+Memory
+000000
+000001
+000010
+000011
+000100
+
+000101
+000110
+000111
+001000
+001001
+001010
+001011
+
+001100
+001101
+001110
+001111
+20
+
+Tags help differentiate between conflicting blocks
+Tag: part of address excluding cache block index
+● On allocation of 001000: tag = 001
+Tag
+000
+001
+010
+011
+
+100
+101
+110
+111
+
+001
+
+Cache
+
+Data
+
+Memory
+000000
+000001
+000010
+000011
+000100
+
+000101
+000110
+000111
+001000
+001001
+001010
+001011
+
+001100
+001101
+001110
+001111
+21
+
+Tags help differentiate between conflicting blocks
+Tag: part of address excluding cache block index
+● On allocation of 001000: tag = 001
+● On allocation of 000000: tag = 000
+Tag
+000
+001
+010
+011
+
+100
+101
+110
+111
+
+000
+
+Cache
+
+Data
+
+Memory
+000000
+000001
+000010
+000011
+000100
+
+000101
+000110
+000111
+001000
+001001
+001010
+001011
+
+001100
+001101
+001110
+001111
+22
+
+Valid bit indicates that block contains valid data
+Valid bit: indicates that the block is valid
+● Set to 0 initially when cache block is empty
+● Set to 1 when a cache block is allocated
+V
+
+Tag
+
+000 1
+
+000
+
+Cache
+
+Data
+
+001 0
+010 0
+011 0
+
+100 0
+101 0
+110 0
+111 0
+
+● Cache hit: V == 1 &&
+CacheBlock.Tag == MemoryBlock.Tag
+
+Memory
+000000
+000001
+000010
+000011
+000100
+
+000101
+000110
+000111
+001000
+001001
+001010
+001011
+
+001100
+001101
+001110
+001111
+23
+
+Quiz: Address Bits Breakdown
+● Now with the following parameters:
+o 8-bit memory addresses
+o 4-byte cache block sizes
+o 8-block cache
+● How would we breakdown the memory address bits?
+Tag
+
+Block index
+
+Offset within
+cache block
+
+o First, the correct cache block is accessed using the block index
+o Then, the tag is compared to the cache block tag
+o If matched, offset is used to access specific byte within block
+
+24
+
+Example: A Direct-mapped Cache
+● When the program first starts, we set all the valid bits to 0.
+o Signals all cache lines are empty
+V
+Tag
+Data
+● Now let's try a sequence of reads...
+000
+0
+1
+000 something
+010
+do these hit or miss? How do the
+001
+0
+cache contents change?
+000000 miss
+100101 miss
+100100 miss
+100101 hit
+010000 miss
+000000 miss
+
+Cold misses
+
+Cold miss
+Capacity miss?
+
+010
+
+0
+
+011
+
+0
+
+100
+
+0
+1
+
+100
+
+something
+
+101
+
+1
+0
+
+100
+
+something
+
+110
+
+0
+
+111
+
+0
+
+25
+
+Conflict Misses
+● What should we call 2nd miss on 000000?
+o Awkward to call it a capacity miss
+(It’s not like capacity was lacking)
+000
+o Let’s call it a conflict miss
+
+V
+
+Tag
+
+Data
+
+0
+1
+
+000
+010
+
+something
+
+001
+
+0
+
+010
+
+0
+
+011
+
+0
+
+100
+
+0
+1
+
+100
+
+something
+
+101
+
+1
+0
+
+100
+
+something
+
+110
+
+0
+
+111
+
+0
+
+000000 miss
+100101 miss
+100100 miss
+100101 hit
+010000 miss
+000000 miss
+
+Cold misses
+
+Cold miss
+Capacitymiss!
+Conflict
+miss?
+
+26
+
+Types of Cache Misses (Revised)
+● Besides cold misses and capacity misses, there are conflict misses
+
+● Cold miss (a.k.a. compulsory miss)
+o Miss suffered when data is accessed for the first time by program
+● Capacity miss
+o Miss on a repeat access suffered due to a lack of capacity
+o When the program's working set is larger than can fit in the cache
+● Conflict miss
+o Miss on a repeat access suffered due to a lack of associativity
+o Associativity: degree of freedom in associating cache block with an index
+o Direct mapped caches have no associativity
+▪ Since cache blocks are directly mapped to a particular block index
+27
+
+Associative caches
+
+28
+
+Flexible block placement
+● Direct-mapped caches can have lots of conflicts
+o Multiple memory locations "fight" for the same cache line
+● Suppose we had a 4-block direct-mapped cache
+V Tag Data
+o As before, 4-byte per cache block
+00
+0 0000
+1
+0001
+0011
+0010
+o Memory addresses are 8 bits.
+01
+0
+● The following locations are accessed in a loop:
+10
+0
+o 0, 16, 32, 48, 0, 16, 32, 48...
+11
+0
+o or 000000, 000100, 001000, 001100, …
+● What would happen?
+o They will all land on the same block index, and all conflict miss!
+o Those other 3 blocks are not even getting used!
+o What if we used the space to chain conflicting blocks?
+
+29
+
+Full associativity
+● Let's make our 4-block cache 4-way set-associative.
+V
+
+Tag
+
+1
+0 000000
+
+D
+
+V
+
+Tag
+
+*0
+
+1 001100
+0
+
+D
+
+V
+
+Tag
+
+*48
+
+1
+0 000100
+
+D
+
+V
+
+Tag
+
+*16
+
+0
+1 001000
+
+D
+*32
+
+● What's the difference?
+o Now a hashed location can be associated with any of the 4 blocks
+o Analogous to having a hash conflict chain 4-entries long
+o The 4 cache blocks are said to be part of a cache set
+o When set size == cache size, it is said to be fully associative
+● Let's do that sequence of reads again: 0, 16, 32, 48, 0, 16, 32, 48...
+● Notice tag is now bigger, since there are no block index bits
+o Or set index bits in this context (just one set, so none needed)
+● Now cache holds the entire working set: no more misses!
+30
+
+Example: A 2-way Set-Associative Cache
+● 16-block 2-way set-associative cache
+● Let’s try the same stream of accesses as direct-mapped cache
+● Yay! 2nd access to 000000 is no longer a conflict miss!
+
+000000 miss
+100101 miss
+100100 miss
+100101 hit
+010000 miss
+000000 hit
+
+Set
+
+V
+
+Tag
+
+Data
+
+V
+
+Tag
+
+Data
+
+000
+
+0
+1
+
+000
+
+something
+
+0
+1
+
+010
+
+something
+
+001
+
+0
+
+0
+
+010
+
+0
+
+0
+
+011
+
+0
+
+0
+
+100
+
+0
+1
+
+100
+
+something
+
+0
+
+101
+
+1
+0
+
+100
+
+something
+
+0
+
+110
+
+0
+
+0
+
+111
+
+0
+
+0
+31
+
+Address Bits Breakdown
+● A fully associative cache (doesn’t matter how many blocks):
+Tag
+
+● With 16-block 4-way set-associative cache:
+Tag
+
+Set index
+
+Offset within
+cache block
+
+Offset
+
+o 16 / 4 = 4 sets in cache. So, 2 bits required for set index.
+● With 64-block 8-way set-associative cache:
+Tag
+
+Set index
+
+Offset
+
+o 64 / 8 = 8 sets in cache. So, 3 bits required for set index.
+32
+
+Want More Examples?
+● Try out the Cache Visualizer on the course github:
+o https://github.com/wonsunahn/CS1541_Spring2022/tree/main/re
+sources/cache_demo
+o Courtesy of Jarrett Billingsley
+
+● Visualizes cache organization for various parameters
+o Cache block size
+o Number of blocks in cache (capacity)
+o Cache associativity
+
+33
+
+Associativity is Costly
+● Associativity requires complex circuitry and may increase hit time
+● Full associativity is only used for very small caches
+o And where a cache miss is extremely costly
+● Usually caches are 2-, 4-, or maybe 8- way set-associative
+Bottom bit selects set (row)
+
+V
+
+Tag
+
+D
+
+V
+
+1
+
+10010
+
+-2
+
+0
+
+V
+
+Tag
+
+D
+
+1
+
+01010
+
+64
+
+000110?
+
+00011
+
+Address
+
+Remaining tag bits
+Share comparators across all rows
+
+Tag
+
+D
+
+V
+
+Tag
+
+D
+
+1
+
+11111
+
+9999
+
+=
+
+=
+OR
+34
+
+Access/cycle time as a function of associativity
+
+Thoziyoor, Shyamkumar & Muralimanohar,
+Naveen & Ahn, Jung Ho & Jouppi, Norman.
+(2008). CACTI 5.1.
+
+35
+
+Cache Design Parameter 5:
+Cache Replacement Policy
+
+36
+
+Cache Replacement
+● If we have a cache miss and no empty blocks, what then?
+V
+
+Tag
+
+1
+0 000000
+
+D
+
+V
+
+Tag
+
+*0
+
+1 001100
+0
+
+D
+
+V
+
+Tag
+
+*48
+
+000001
+1
+0 000100
+
+D
+
+V
+
+Tag
+
+*4
+*16
+
+0
+1 001000
+
+D
+*32
+
+● Let's read memory address 4 (00000100).
+o Uh oh. That's a miss. Where do we put it?
+● With associative caches, you must have a replacement scheme.
+o Which block to evict (kick out) when you're out of empty slots?
+● The simplest replacement scheme is random.
+o Just pick one. Doesn't matter which.
+● What would make more sense?
+o How about taking temporal locality into account?
+37
+
+LRU (Least-Recently-Used) Replacement
+● When you need to evict a block, kick out the oldest one.
+V
+
+Tag
+
+000001
+1
+0 000000
+
+D
+
+V
+
+*4
+*0
+
+1 001100
+0
+
+4 reads old
+
+Tag
+
+D
+
+V
+
+*48
+
+1
+0 000100
+
+1 read old
+
+Tag
+
+D
+
+V
+
+*16
+
+0
+1 001000
+
+3 reads old
+
+Tag
+
+D
+*32
+
+2 reads old
+
+● Our read history looked like 0, 16, 32, 48. How old are the blocks?
+● Now we want to read address 4. Which block should we replace?
+● But now we must maintain the age of the blocks
+o Easy to say. How do we keep track of this in hardware?
+● Have a saturating counter for each cache block indicating age
+o When accessing a set, increment counter for each block in set
+o On a cache hit, reset counter to 0 (most recently used)
+
+38
+
+Impact of LRU on AMAT
+● AMAT = hit time + (miss rate × miss penalty)
+
+● Impact of LRU on miss rate
+o Smaller miss rate due to better leveraging of temporal locality
+(Recently used cache lines more likely to be used again)
+● Saturating counter for LRU uses bits and adds to amount of metadata
+o Cache tag, the valid bit, the saturating counter are all metadata
+o Every bit you spend on metadata is a bit you don’t spend on real data
+o Spending many bits on counter may reduce capacity for real data
+o This may lead to a larger miss rate, if LRU is not very effective
+
+39
+
+

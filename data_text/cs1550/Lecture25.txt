@@ -1,0 +1,589 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Homework 12: due on 4/25
+• Lab 5: due on 5/2
+• Project 4 and Quiz 4: due on 5/2
+• Bonus Opportunities
+• Bonus Homework: due on 5/2
+• Course Post-Test: due on 5/2
+• Bonus point for all when OMET response rate >= 80%
+•
+
+Currently at 25-28%
+
+•
+
+Deadline is Sunday 4/24
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous Lecture …
+• Disk arm scheduling
+• FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOk
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Muddiest Points
+•
+
+Just need to study the material more to be honest.
+
+•
+
+DMA and CPU memory competition
+
+•
+
+hardware view of interrupt
+
+•
+
+Thanks for bringing in coffee and snacks for the final! It is much
+appreciated
+
+•
+
+online vs offline problem
+
+•
+
+What sort of questions about this material will be on the exam?
+
+•
+
+In Sharing file, if the directory A is owner of file "a_file" and then this
+file is shared by directory B, Then we delete directory A, Are all files
+even shared files will be deleted and not more accessible, or we
+have one copy of "a_file " in directory of B?
+
+•
+
+Can you please go over File Linking again?
+
+•
+
+How do you read in the blocks from the disk file for project 4? I know
+to use fseek and fread but I don't know where to go from there.
+
+•
+
+Can you explain the difference between CSCAN and CLOOK?
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Journaling File System
+• In a regular file system, changes to files and
+directories result in multiple separate writes to disk
+• prone to power failures
+
+• Write changes twice
+• first to an on-disk journal
+• for efficiency, journal can be put on SSD or NVRAM
+• data may or may not be written to the journal
+
+• second to main file system
+
+• Examples
+• Windows NTFS
+• Linux ext3, ext4
+CS 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Journaling File System
+• Interaction of disk arm scheduling?
+• out-of-order writes
+• ext3 and ext4 force disk to flush its cache at certain points
+(barriers)
+
+• Journaling vs. Log-structured file system
+• Journaling is not needed in LSFS
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+File Linking (left) vs. File Copying (right)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Max Partition Size
+Block size
+
+FAT-12
+
+FAT-16
+
+0.5 KB
+
+2 MB
+
+1 KB
+
+4 MB
+
+2 KB
+
+8 MB
+
+128 MB
+
+4 KB
+
+16 MB
+
+256 MB
+
+1 TB
+
+8 KB
+
+512 MB
+
+2 TB
+
+16 KB
+
+1024 MB
+
+2 TB
+
+32 KB
+
+2048 MB
+
+2 TB
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+FAT-32
+
+8
+
+Max Partition Size
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+File-related kernel structures:
+open file tables and disk quotas
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+HW 10: Q 2-4
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+HW 10: Q 10-13
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+Effective Disk Access Time
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+13
+
+Minimum and Maximum Seek Time
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+14
+
+Average Rotational Delay
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+15
+
+Buffering device input
+User
+space
+
+User
+space
+
+User
+space
+
+User
+space
+
+Kernel
+space
+
+Kernel
+space
+
+Kernel 2
+space
+
+Kernel 2
+space
+
+1
+
+Unbuffered
+input
+
+Buffering in
+user space
+
+Buffer in kernel
+Copy to user space
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+1
+
+3
+
+Double buffer
+in kernel
+16
+
+I/O Buffering
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+17
+
+Problem of the Day: Protection
+• Protection is about controlling access of programs,
+processes, or users to the system resources (e.g.,
+memory pages, files, devices, CPUs)
+• How to decide who can access what?
+• Specifications must be
+• Correct
+• Efficient
+• Easy to use (or nobody will use them!)
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+18
+
+•
+
+•
+
+•
+
+Protection domains
+A process operates within a protection domain
+•
+
+resources accessible by the process
+
+•
+
+each domain lists objects with permitted operations
+
+Domains can share objects & permissions
+•
+
+Objects can have different permissions in different domains
+
+•
+
+There need be no overlap between object permissions in different
+domains
+
+How can this arrangement be specified more formally?
+
+File1 [R]
+File2 [RW]
+
+Domain 1
+
+File3 [R]
+File4 [RWX] Printer [W]
+File5 [RW]
+
+Domain 2
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+File3 [W]
+Screen1 [W]
+Mouse [R]
+
+Domain 3
+19
+
+Protection matrix
+File1
+
+Domain1 Read
+
+File2
+
+File3
+
+File4
+
+File5
+
+Printer1
+
+Read
+Write
+
+Domain2
+
+Read
+
+Domain3
+
+Write
+
+Read
+Write
+Execute
+
+Read
+Write
+
+Write
+
+Write
+
+•
+
+Each domain has a row in the matrix
+
+•
+
+Each object (resource) has a column in the matrix
+
+•
+
+Entry for <object, column> has the permissions
+
+•
+
+Who’s allowed to modify the protection matrix?
+•
+
+•
+
+Camera
+
+Read
+
+What changes can they make?
+
+How is this implemented efficiently?
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+20
+
+Domains as objects in the protection matrix
+Domain
+
+•
+
+•
+
+File1
+
+File2
+
+1 Read
+
+Read
+Write
+
+File3
+
+File4
+
+File5
+
+Printer1
+
+Camera
+
+Dom1
+
+Dom2
+
+Dom3
+
+Modify
+
+2
+
+Read
+
+3
+
+Write
+
+Read
+Write
+Execute
+
+Read
+Write
+
+Write
+
+Write
+
+Modify
+
+Read
+
+Enter
+
+Specify permitted operations on domains in the matrix
+•
+
+Domains may (or may not) be able to modify themselves
+
+•
+
+Domains can modify other domains
+
+•
+
+Some domain transfers (switching) permitted, others not
+
+Doing this allows flexibility in specifying domain permissions
+•
+
+Retains ability to restrict modification of domain policies
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+21
+
+Representing the protection matrix
+• Need to find an efficient representation of the
+protection matrix (also called the access matrix)
+• Most entries in the matrix are empty!
+• Compress the matrix by:
+• Associating permissions with each object: access control
+list
+• Associating permissions with each domain: capabilities
+
+• How is this done, and what are the tradeoffs?
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+22
+
+Access control lists (ACLs)
+• Each object has a list
+attached to it
+• List has
+•
+
+File2
+
+elm: <R,W>
+znm: <R>
+root: <R,W,X>
+
+elm: <R,X>
+uber: <R,W>
+root: <R,W>
+all: <R>
+
+Protection domain (User
+name, Group of users, Other)
+
+•
+
+File1
+
+Access rights (Read, Write,
+Execute, Others)
+
+• No entry for domain => no
+rights for that domain
+• Operating system checks
+permissions when access
+is needed
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+23
+
+•
+
+•
+
+Access control lists in the real world
+Unix file system
+•
+
+•
+
+Access list for each file has exactly three domains on it
+•
+
+User (owner)
+
+•
+
+Group
+
+•
+
+Others
+
+Rights include read, write, execute: interpreted differently for directories
+and files
+
+AFS
+•
+
+Access lists only apply to directories: files inherit rights from the directory
+they’re in
+
+•
+
+Access list may have many entries on it with possible rights:
+•
+
+read, write, lock (for files in the directory)
+
+•
+
+lookup, insert, delete (for the directories themselves),
+
+•
+
+administer (ability to add or remove rights from the ACL)
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+24
+
+ACL in UNIX
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+25
+
+

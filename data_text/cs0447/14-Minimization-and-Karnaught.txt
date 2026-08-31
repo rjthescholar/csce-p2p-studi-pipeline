@@ -1,0 +1,2090 @@
+#E
+
+Minimization and
+K-maps
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+● Check the schedule
+o I’ll post examples of circuits and suggestions of exercises
+● Labs will be submitted via Gradescope
+
+2
+
+How ICs are made in 3 slides
+(another For Fun™ section)
+
+3
+
+How ICs (integrated circuits) are made
+● silicon is purified and grown into a
+monolithic crystal (extremely expensive)
+● this is sliced thinly to make wafers
+
+o gooey caramel is put between them to make stroopwafel
+
+● a series of complicated photochemical
+processes do things like:
+o change its electrical properties
+o make wires to connect things
+o make inert insulating layers
+
+4
+
+How ICs (integrated circuits) are made
+● many ICs are printed on one wafer
+● the wafers are diced (chopped up)
+● the ICs are tested
+● the ICs are mounted in a package ->
+● they're tested again
+● then they're ready to sell
+
+5
+
+Manufacturing yield
+● ICs are tiny and complex
+● silicon crystals can have defects
+● a tiny speck of dust during production can ruin an entire chip
+● the yield is the percentage of usable chips
+o bigger chips have smaller yields: more opportunities for mistakes!
+● the size of the silicon is the biggest factor in the price of an IC
+o huge ICs (several cm on each side!), such as very high-resolution camera
+sensors, can cost tens of thousands of dollars!
+● manufacturers can also bin resulting chips
+o bug-free ones can be sold as Core i7s for lotsa money
+o slightly malformed ones can be sold as Core i5s and i3s
+o the ones they sweep off the floor are the Celerons
+
+6
+
+Logic Minimization
+
+7
+
+Silicon is expensive, rocks are slow
+● Logic minimization means using the smallest number of gates/transistors
+possible to implement a boolean function
+o a boolean function is anything we've talked about
+o it has boolean inputs, and boolean outputs
+▪ Less inputs can also improve speed
+● Fewer transistors means:
+o smaller area:
+▪ cheaper chips!
+▪ more stuff on one chip!
+▪ smaller chance of manufacturing defects!
+o less gate delay:
+▪ faster circuits!
+
+8
+
+Minimizing Booleans
+● How do we minimize Boolean functions?
+o Logical adjacency!
+● If in two Boolean terms being ORed only one of the variables changes then it
+can be removed
+
+ഥ + 𝐀𝐁 = 𝐀 𝑩
+ഥ +𝑩 =𝑨
+o 𝑸 = 𝐀𝑩
+ഥ = 𝑨𝑩
+ഥ = 𝑨𝑩
+ഥ 𝑪 + 𝑨𝑩
+ഥ𝑪
+ഥ 𝑪+𝑪
+ഥ
+o 𝑸 = 𝑨𝑩
+● To minimize a Boolean expression
+o Find the terms where only one variable changes
+o Eliminate that variable
+
+9
+
+A first try
+● The truth table for a two-input 1-bit
+multiplexer.
+
+A
+
+A
+Q
+
+B
+
+Q
+
+B
+S=0
+
+S=1
+
+S Q
+
+S A B Q
+
+0 A
+
+0 0 0 0
+
+0 A
+
+0 0 1 0
+
+0 A
+
+0 1 0 1
+
+0 A
+
+0 1 1 1
+
+1 B
+
+1 0 0 0
+
+1 B
+
+1 0 1 1
+
+1 B
+
+1 1 0 0
+
+1 B
+
+1 1 1 1
+10
+
+A first try
+● The truth table for a two-input 1-bit multiplexer.
+
+S A B Q
+0 0 0 0
+0 0 1 0
+
+ഥ 0 1 0 1
+𝐒ത𝐀𝑩
+𝐒ത𝐀𝐁 0 1 1 1
+1 0 0 0
+
+ഥ𝐁 1 0 1 1
+𝐒𝑨
+1 1 0 0
+
+𝐒𝐀𝐁 1 1 1 1
+
+ഥ + 𝐒ത𝐀𝐁 + 𝐒𝑨
+ഥ 𝐁 + 𝐒𝐀𝐁
+𝑸 = 𝐒ത𝐀𝑩
+Are there any adjacencies?
+Well… I guess we don’t need
+those variables
+
+𝑸 = 𝐒ത𝐀 + 𝐒ത𝐀 + 𝐒𝐁 + 𝐒𝐁
+This seems easy…
+
+𝑸 = 𝐒ത𝐀 + 𝐒𝐁
+11
+
+It makes sense, right?
+● We know that if S=0 then the output is A
+● We know that if S=1 then the output is B
+o We don’t care about one of the variables
+● So, let’s solve this truth table
+1. find all rows with an output of 1
+2. for each one, write an AND of all the inputs,
+with NOTs on the 0s
+3. eliminate duplicate terms
+4. OR the remaining terms together
+
+ത + 𝐒𝐁
+𝐐 = 𝐒𝐀
+
+● Getting the sum-of-products
+o an OR of multiple ANDed terms
+
+S A B Q
+0 0 X 0
+
+0 0 X 0
+
+𝐒ത𝐀 0 1 X 1
+𝐒ത𝐀 0 1 X 1
+1 X 0 0
+
+𝐒𝐁 1 X 1 1
+1 X 0 0
+
+𝐒𝐁 1 X 1 1
+12
+
+Turning that expression into gates
+● making 𝐐 = 𝐒ത𝐀 + 𝐒𝐁 into gates is pretty straightforward:
+
+S
+
+A
+Q
+B
+
+13
+
+Minimization using Boolean
+Algebra
+
+14
+
+Boolean algebra
+● Idempotent
+o 𝑎. 𝑎 = 𝑎 + 𝑎 = 𝑎
+● Commutative
+o 𝑎. 𝑏 = 𝑏. 𝑎
+o 𝑎+𝑏 =𝑏+𝑎
+● Associative
+o 𝑎. 𝑏. 𝑐 = 𝑎. 𝑏 . 𝑐
+o 𝑎+ 𝑏+𝑐 = 𝑎+𝑏 +𝑐
+● Distributive
+o 𝑎. 𝑏 + 𝑐 = 𝑎. 𝑏 + 𝑎. 𝑐
+o 𝑎 + 𝑏. 𝑐 = 𝑎 + 𝑏 . (𝑎 + 𝑐)
+
+● De Morgan’s laws
+o 𝑎. 𝑏 = 𝑎ത + 𝑏ത
+o 𝑎 + 𝑏 = 𝑎.
+ത 𝑏ത
+● Other
+o 𝑎 + 𝑎. 𝑏 = 𝑎
+o 𝑎. 𝑎 + 𝑏 = 𝑎
+o 𝑎ത = 𝑎
+o 𝑎 + 𝑎ത = 1
+o 𝑎. 𝑎ത = 0
+
+15
+
+What if the function is more complex?
+● if we use that method on the Cout of a full adder:
+
+A
+0
+0
+0
+0
+1
+1
+1
+1
+
+B
+0
+0
+1
+1
+0
+0
+1
+1
+
+ഥ 𝐁𝐂𝐢𝐧 + 𝐀𝑩
+ഥ 𝐂𝐢𝐧 + 𝐀𝐁𝐂𝐢𝐧 + 𝐀𝐁𝐂𝐢𝐧
+Cin Cout 𝐂𝐨𝐮𝐭 = 𝐀
+0
+0
+● It feels too complex, somehow
+1
+0
+● each NOT gate uses 2 transistors
+0
+0
+● each AND/OR gate uses 6
+ഥ 𝐁𝐂𝐢𝐧 ● this will use 72 transistors
+1
+1 𝐀
+o just for the carry
+0
+0
+ഥ 𝐂𝐢𝐧 o of one one-bit addition
+1
+1 𝐀𝑩
+0
+1 𝐀𝐁𝐂𝐢𝐧
+1
+1 𝐀𝐁𝐂𝐢𝐧
+16
+
+Minimizing equations –WHYYYYY!!
+𝑨𝑩𝑪 + 𝑨𝑩𝑪 + 𝑨𝑩𝑪 + 𝑨𝑩𝑪
+Using distributivity 𝐴𝐵 + 𝐴𝐶 = 𝐴(𝐵 + 𝐶) :
+𝐴𝐵 𝐶 + 𝐶 + 𝐴𝐵𝐶 + 𝐴𝐵𝐶
+
+72 transistors
+
+Adjacency #1 tackled:
+𝐴𝐵 + 𝐴𝐵𝐶 + 𝐴𝐵𝐶
+What about now? Two variables change 
+
+17
+
+Minimizing equations –WHYYYYY!!
+𝑨𝑩𝑪 + 𝑨𝑩𝑪 + 𝑨𝑩𝑪 + 𝑨𝑩𝑪
+Adding (ORing) the same term multiple times is ok:
+𝐴𝐵 + 𝐴𝐵𝐶 + 𝐴𝐵𝐶 + 𝐴𝐵𝐶 + 𝐴𝐵𝐶
+Note the two adjacencies :D
+𝐴𝐵 + 𝐴𝐶 𝐵 + 𝐵 + 𝐵𝐶 𝐴 + 𝐴
+Adjacency #2 and #3 tackled:
+𝑨𝑩 + 𝑪𝑨 + 𝑪𝑩
+30 transistors
+18
+
+It’s hard!
+
+If only we had a better tool to help us
+
+19
+
+Karnaugh Maps
+
+20
+
+Gray Code
+● Gray code is a way of encoding binary where
+only one bit changes on each step
+● How can we construct it?
+● Let’s revisit our binary number table:
+o Start by creating the first two 1-bit entries
+o Mirror them and complete the next column
+o Repeat!
+● See how only one bit changes from the
+last to the first number!
+● We’ll only be using 2-bit code.
+
+000
+001
+011
+010
+110
+111
+101
+100
+
+21
+
+Karnaugh Maps (K-maps) – Setting up
+● Karnaugh Maps are a tool for minimizing boolean functions
+● It helps us finding adjacencies
+o let's start with a function that has two inputs
+Truth Table
+
+K-map
+
+A
+0
+0
+1
+1
+
+0
+
+B
+0
+1
+0
+1
+
+Q
+1
+0
+1
+1
+
+ഥ
+𝐁
+
+ഥ
+0 𝐀
+
+1
+
+𝐁
+
+1 0
+1 𝐀 1 1
+
+1. Karnaugh maps are
+represented as a table
+2. write input values in Gray
+code along axes.
+o (there's only one input on
+each side here, it's easy)
+3. Fill in cells from truth table.
+
+22
+
+Karnaugh Maps (K-maps) – Finding rects
+K-map
+
+ഥ
+𝐁
+
+ഥ
+𝐀
+
+𝐁
+
+1 0
+𝐀 1 1
+
+3. find rectangles of 1s with these rules:
+o width and height can only be 1, 2, or 4
+▪ NEVER 3
+o overlapping is totally fine! it's good!
+o use the biggest rectangles possible
+o use the fewest rectangles possible
+
+23
+
+Karnaugh Maps (K-maps) – Interpreting rects
+K-map
+
+ഥ
+𝐁
+
+𝐁
+
+ഥ
+𝐀
+
+1 0
+𝐀 1 1
+ഥ
+Red: 𝐁
+
+Blue: 𝐀
+
+ഥ
+𝐐=𝐀+𝐁
+
+4. for each rectangle, look at the values of
+the variables along the axes. some
+variables change, and others don't.
+o which variable changes in the red
+rectangle? which doesn't?
+o what about the blue rectangle?
+5. each rectangle is an AND minterm
+o write the variables that stay the same
+for that rect (keeping the NOT bars)
+o ignore the variables that change
+6. OR all the terms together
+7. WHEW!
+24
+
+I'd like to place an order for the carry-out bit
+● With more than 2 variables, put two along one axis (GRAY CODE!)
+try to make the rectangles as big as
+C A B Co
+possible. overlap is goooood.
+
+0
+0
+0
+0
+1
+1
+1
+1
+
+0
+0
+1
+1
+0
+0
+1
+1
+
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+0
+0
+1
+0
+1
+1
+1
+
+00
+
+01
+
+11
+
+10
+
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ Red: 𝐀𝑪
+𝐀
+0 𝐂ത
+
+0 0 1 0
+1 𝐂 0 1 1 1
+
+Green: 𝐀𝐁
+Blue: 𝐁𝐂
+
+𝐂𝐨 = 𝐀𝑪 + 𝐀𝐁 + 𝐁𝑪
+25
+
+I'd like to place an order for the carry-out bit
+● With more than 2 variables, put two along one axis (GRAY CODE!)
+try to make the rectangles as big as
+C A B Co
+possible. overlap is goooood.
+
+0
+0
+0
+0
+1
+1
+1
+1
+
+0
+0
+1
+1
+0
+0
+1
+1
+
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+0
+0
+1
+0
+1
+1
+1
+
+00
+
+01
+
+11
+
+10
+
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ
+𝐀
+0 𝐂ത
+
+0 0 1 0
+1 𝐂 0 1 1 1
+Did you notice this? 𝐴𝐵𝐶
+This is the term we needed to add multiple times :D
+26
+
+Just like a 2D RPG world map…
+● rectangles on K-maps can wrap around (left-right AND top-bottom!)
+
+00
+
+01
+
+11
+
+10
+
+ഥ𝐘
+ഥ 𝐗
+ഥ𝐘 𝐗𝐘 𝐗𝐘
+ഥ
+𝐗
+ത
+0 𝐙
+
+1 1 0 1
+1 𝐙 1 0 0 1
+
+ഥ
+Red: 𝐘
+ഥ𝐙ത
+Blue: 𝐗
+
+ഥ+𝐗
+ഥ𝐙ത
+𝐐=𝐘
+
+this is really a 2x2 rectangle.
+it's just… doing its best.
+27
+
+Okay, maybe it's not perfect.
+● let's try the Sum output of a full adder
+
+00
+
+01
+
+11
+
+10
+
+a 1x1 rectangle
+becomes a term that
+uses all the variables
+
+ഥ𝑩
+ഥ𝑪
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ Red: 𝐀
+𝐀
+
+ഥ𝐢
+0 𝐂
+
+0 1 0 1
+1 𝐂𝐢 1 0 1 0
+
+ഥ
+ഥ 𝐁𝑪
+Green: 𝐀
+Blue: 𝐀𝐁𝐂𝐢
+ഥ
+ഥ𝑪
+Purple: 𝐀𝐁
+
+ഥ + 𝐀𝐁𝑪 + 𝐀𝐁
+ഥ
+ഥ𝑩
+ഥ𝑪 + 𝐀
+ഥ 𝐁𝑪
+ഥ𝑪
+𝐒𝐮𝐦 = 𝐀
+wait, can’t we do that as:
+
+𝐒𝐮𝐦 = 𝐀⨁𝐁⨁𝑪 (that's xor!)
+28
+
+Tradeoffs, tradeoffs
+● there are extensions to K-maps to detect XORs
+● but…
+o XOR gates are slower than AND/OR gates
+o if area is a concern, an XOR make sense
+o if speed is a concern, AND/OR gates make sense
+● what do real hardware designers do?
+o they use programs to do this stuff for them lol
+o things like GALs, CPLDs, and FPGAs are reconfigurable hardware which
+usually use "sum-of-products" to do logic, so ANDs and ORs are all you've
+got
+
+29
+
+Some more examples
+● Can you solve this?
+
+00
+
+01
+
+11
+
+10
+
+● In AB: A is both {0,1}
+● In CD: D is both {0,1}
+
+0
+ഥ𝑫 0
+01 𝑪
+11 𝑪𝑫 0
+ഥ 0
+10 𝑪𝑫
+
+0
+0
+1
+1
+
+0
+0
+1
+1
+
+0
+0
+0
+0
+
+● Eliminate both A,D
+● We get
+𝐶𝐵
+
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ
+𝐀
+ഥ𝑫
+ഥ
+00 𝑪
+
+30
+
+Some more examples
+● Can you solve this?
+
+00
+
+01
+
+11
+
+10
+
+● In AB: Both have {0,1}
+● In CD: C is both {0,1}
+
+0
+ഥ𝑫 1
+01 𝑪
+11 𝑪𝑫 1
+ഥ 0
+10 𝑪𝑫
+
+0
+1
+1
+0
+
+0
+1
+1
+0
+
+0
+1
+1
+0
+
+● Eliminate both A, B, C
+● We get
+
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ
+𝐀
+ഥ𝑫
+ഥ
+00 𝑪
+
+𝐷
+
+31
+
+Some more examples
+● Can you solve this?
+
+00
+
+01
+
+11
+
+10
+
+● In AB: A has both {0,1}
+● In CD: C is both {0,1}
+
+1
+ഥ𝑫 0
+01 𝑪
+11 𝑪𝑫 0
+ഥ 1
+10 𝑪𝑫
+
+0
+0
+0
+0
+
+0
+0
+0
+0
+
+1
+0
+0
+1
+
+● Eliminate both A, C
+● We get
+
+ഥ𝐁
+ഥ 𝐀
+ഥ 𝐁 𝐀𝐁 𝐀𝐁
+ഥ
+𝐀
+ഥ𝑫
+ഥ
+00 𝑪
+
+ഥ𝐷
+ഥ
+B
+
+this is still a 2x2 rectangle!
+32
+
+7 segment LED display
+● This is a 7 segment LED display
+o It displays numbers
+o It has 8 LEDs (one for the decimal point)
+● Problem
+o Given a 4-bit number, draw the
+corresponding numeral.
+o E.g. 0000 is “0”; 1001 is “9”.
+o Ignore the dot
+● Solution
+o Create a Boolean function for each
+segment.
+
+d2
+
+d1
+
+d3
+d0
+
+d7
+
+d5
+d6
+
+d4
+
+33
+
+7 segment LED display
+Number 0
+01110111
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+34
+
+7 segment LED display
+Number 1
+00010100
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+35
+
+7 segment LED display
+Number 2
+10110011
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+36
+
+7 segment LED display
+Number 3
+10110110
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+37
+
+7 segment LED display
+Number 4
+11010100
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+38
+
+7 segment LED display
+Number 5
+11100110
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+39
+
+7 segment LED display
+Number 6
+11100111
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+40
+
+7 segment LED display
+Number 7
+00110100
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+41
+
+7 segment LED display
+Number 8
+11110111
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+42
+
+7 segment LED display
+Number 9
+11110110
+
+d2
+
+d1
+
+d0
+
+d7
+
+d3
+d0
+
+d7
+
+d5
+
+d6
+
+d4
+
+Hex Digit LED
+7 segments, 1 decimal point
+Turn each segment on/off
+State: 0=OFF, 1=ON
+“Draw” numbers 0 to 9
+43
+
+7 segment LED display
+How to approach this?
+● Create a truth table
+o Inputs are i0 to i3 (4 bits)
+o Outputs are numbered d0, to d7, corresponding to segments
+
+● Minimize the circuit using a K-map
+o Create the table
+o Follow the rules!
+● Draw the numerals by setting d0 to d7 to 1s or 0s
+o Build the circuit!
+
+44
+
+7 segment LED display
+i3
+
+i2
+
+i1
+
+i0
+
+d0
+
+d1
+
+d2
+
+d3
+
+d4
+
+d5
+
+d6
+
+d7
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+0
+
+0
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+0
+
+1
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+1
+
+0
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+1
+
+1
+
+0
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+1
+
+0
+
+0
+
+0
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+1
+
+0
+
+0
+
+1
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+1
+
+0
+
+1
+
+0
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+45
+
+7 segment LED display
+i3
+
+i2
+
+i1
+
+i0
+
+d0
+
+d1
+
+d2
+
+d3
+
+d4
+
+d5
+
+d6
+
+d7
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+0
+
+1 It can
+1
+…
+…
+only
+0
+1
+…
+…
+display
+
+…
+
+…
+
+0
+
+1
+
+0
+
+1 numbers
+1
+…up …
+
+0
+
+1
+
+1
+
+0
+
+1to 9!…
+
+…
+
+…
+
+…
+
+0
+
+1
+
+1
+
+1
+
+0
+
+…
+
+…
+
+…
+
+1
+
+0
+
+0
+
+0
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+1
+
+0
+
+0
+
+1
+
+1
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+1
+
+0
+
+1
+
+0
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+So we “don’t
+…
+…
+…
+care” about
+…
+…
+…
+…
+the outputs
+…
+…
+…
+…
+for larger
+…
+…
+…
+…
+numbers
+
+46
+
+7 segment LED display
+● Now use a K-map for each output
+function d0-d7 - Let’s start with d0
+
+00
+
+01
+
+11
+
+10
+
+𝒊ഥ𝟏 𝒊ഥ𝟎 𝒊ഥ𝟏 𝒊𝟎 𝒊𝟏 𝒊𝟎 𝒊𝟏 𝒊ഥ𝟎
+00 𝒊ഥ𝟑 𝒊ഥ𝟐
+
+0
+01 𝒊ഥ𝟑 𝒊𝟐 1
+11 𝒊𝟑 𝒊𝟐 X
+10 𝒊𝟑 𝒊ഥ𝟐 1
+
+0
+1
+X
+1
+
+1
+0
+X
+X
+
+1
+1
+X
+X
+
+i3
+
+i2
+
+i1
+
+i0
+
+d0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+X
+
+…
+
+…
+
+…
+
+…
+
+…
+
+47
+
+7 segment LED display
+● Now use a K-map for each output function d0-d7
+● Let’s start with d0
+
+00
+
+01
+
+11
+
+10
+
+0
+01 𝒊ഥ𝟑 𝒊𝟐 1
+11 𝒊𝟑 𝒊𝟐 X
+10 𝒊𝟑 𝒊ഥ𝟐 1
+
+0
+1
+X
+1
+
+1
+0
+X
+X
+
+1
+1
+X
+X
+
+𝒊ഥ𝟏 𝒊ഥ𝟎 𝒊ഥ𝟏 𝒊𝟎 𝒊𝟏 𝒊𝟎 𝒊𝟏 𝒊ഥ𝟎
+00 𝒊ഥ𝟑 𝒊ഥ𝟐
+
+Output
+“don’t cares”
+can be
+whatever we
+need them to
+be ☺
+
+48
+
+7 segment LED display
+00
+
+01
+
+11
+
+10
+
+𝒊ഥ𝟏 𝒊ഥ𝟎 𝒊ഥ𝟏 𝒊𝟎 𝒊𝟏 𝒊𝟎 𝒊𝟏 𝒊ഥ𝟎
+00 𝒊ഥ𝟑 𝒊ഥ𝟐
+
+0
+01 𝒊ഥ𝟑 𝒊𝟐 1
+11 𝒊𝟑 𝒊𝟐 X
+10 𝒊𝟑 𝒊ഥ𝟐 1
+
+0
+1
+X
+1
+
+1
+0
+X
+X
+
+1
+1
+X
+X
+
+● Four minterms:
+
+o 𝒊𝟑
+o 𝒊𝟐 𝒊𝟏
+o 𝒊𝟏 𝒊𝟐
+o 𝒊𝟏 𝒊𝟎
+
+𝒅𝟎 = 𝒊𝟑 + 𝒊𝟐 𝒊𝟏 + 𝒊𝟏 𝒊𝟐 + 𝒊𝟏 𝒊𝟎
+
+49
+
+On your own
+● Try making a circuit in Logisim using the 7 segment LED display
+o Find it in input/output
+● Connect the logic you just solved into d0 (top-left pin) and test it
+
+● Solve for the remaining segments
+o It’s fun and practice
+
+50
+
+

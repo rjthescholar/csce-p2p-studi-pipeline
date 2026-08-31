@@ -1,0 +1,762 @@
+#A
+CS 0447
+Introduction to
+Computer Programming
+
+Fractions and
+Floating Point
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce Childers,
+David Wilkinson
+
+Luís Oliveira
+
+Fall 2020
+
+Announcements
+● Don’t forget the points for discussing your project solution with your TA are expiring
+
+2
+
+Fractional Binary
+
+3
+
+Fractional numbers
+● Up to this point we have been working with integer numbers.
+o Unsigned and signed!
+
+2019
+2 0 1 9.320
+
+● However, Real world numbers are… Real numbers. Like so:
+
+● That create new challenges!
+o Let’s start by taking a look at them.
+
+4
+
+Just a fraction of a number
+● The numbers we use are written positionally: the position of a digit within the
+number has a meaning.
+● What about when the numbers go over the decimal point?
+
+?
+2 0 1 9. 3 2 0
+
+1000s
+
+100s
+
+10s
+
+1s
+
+10ths 100ths 1000ths
+
+103
+
+102
+
+101
+
+100
+
+10-1
+
+10-2
+
+10-3
+
+5
+
+A fraction of a bit?
+● Binary is the same!
+● Just replace 10s with 2s.
+
+0 1 1 0 .1 1 0 1
+23
+8s
+
+22
+4s
+
+21
+2s
+
+20
+1s
+
+2-1
+2ths
+
+?
+
+2-2
+4ths
+
+2-3
+8ths
+
+2-4
+16ths
+
+6
+
+To convert into decimal, just add stuff
+
+0 1 1 0 .1 1 0 1=
+23
+
+22
+
+21
+
+20
+
+0×8+
+1×4+
+1×2+
+0×1+
+1 × .5 +
+1 × .25 +
+0 × .125 +
+1 × .0625
+
+2-1
+
+2-2
+
+2-3
+
+2-4
+
+= 6.812510
+
+7
+
+From decimal to binary? Tricky?
+
+6÷210 = 3R0
+
+6.8125 10
+
+3÷210 = 1R1
+
+1 1 0. 1101
+
+0.812510
+x
+2
+1.6250
+
+MSB
+
+0.625010
+x
+2
+1.2500
+0.250010
+x
+2
+0.5000
+0.500010
+x
+2
+1.0000
+
+LSB
+8
+
+So, it’s easy right? Well…
+
+What about: 0.1 10
+
+0.110
+x 2
+0.2
+0.210
+x2
+0.4
+
+0. 0001
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+9
+
+So, it’s easy right? Well……
+
+What about: 0.1 10
+
+0. 0001
+
+1001
+
+0.610
+x 2
+1.2
+
+0.110
+x 2
+0.2
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+10
+
+So, it’s easy right? Well………
+
+What about: 0.1 10
+
+0. 0001
+1001
+10
+0
+1
+...
+
+0.610
+x 2
+1.2
+
+0.610
+x 2
+1.2
+
+0.110
+x 2
+0.2
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.210
+x2
+0.4
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.410
+x 2
+0.8
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+
+0.810
+x 2
+1.6
+11
+
+How much is it worth?
+
+•Well, it depends on where you stop!
+
+0.0001 2
+
+= 0.0625
+
+0.00011001 2
+
+= 0.0976…
+
+0.000110011001 2 = 0.0998…
+12
+
+Limited space!
+● How much should we store?
+o We have 32-bit registers, so 32-bits?
+▪ Let’s say we do!
+● How many bits are used to store the integer part?
+● How many bits are used to store the fractional part?
+
+● What are the tradeoffs?
+
+13
+
+A rising tide
+● Maybe half-and-half? 16.16 number looks like this:
+
+0011 0000 0101 1010.1000 0000 1111 1111
+binary point
+the largest (signed) value we
+the smallest fraction we can
+can represent is +32767.999
+represent is 1/65536
+What if we place the binary point to the left…
+
+0011.0000 0101 1010 1000 0000 1111 1111
+…we can get much higher accuracy near 0…
+
+…but if we place the binary point to the right…
+
+0011 0000 0101 1010 1000 0000.1111 1111
+…then we trade off accuracy for range further away from 0.
+
+14
+
+Mind the point
+● In this representation we assume that the lowest n digits are the decimal places.
+
+$12.34
++$10.81
+$23.15
+
+1234
++1081
+2315
+
+this is called fixed-point
+representation
+And it’s a bitfield :D
+
+15
+
+Move the point
+● What if we could float the point around?
+o Enter scientific notation: The number -0.0039 can be represented:
+
+-0.39
+-3.9
+
+× 10-2
+× 10-3
+
+● These are both representing the same number, but we need to move the decimal
+point according to the power of ten represented.
+
+● The bottom example is in normalized scientific notation.
+o There is only one non-zero digit to the left of the point
+● Because the decimal point can be moved, we call this representation
+
+Floating point
+
+16
+
+Floating-point number
+representation
+
+17
+
+This could be a whole unit itself...
+● floating-point arithmetic is COMPLEX STUFF
+
+● However...
+o it's good to have an understanding of why limitations exist
+o it's good to have an appreciation of how complex this is... and how much better
+things are now than they were in the 1970s and 1980s
+o It’s good to know things do not behave as expected when using float and double!
+
+18
+
+Binary numbers using IEEE 754
+● est'd 1985, updated as recently as 2008
+● standard for floating-point representation and arithmetic that virtually every CPU
+now uses
+● floating-point representation is based around scientific notation
+
+1348 = +1.348 × 10+3
+-0.0039 = -3.9
+× 10-3
+-1440000 = -1.44 × 10+6
+sign significand
+
+exponent
+
+19
+
+Binary Scientific Notation
+● scientific notation works equally well in any other base!
+o (below uses base-10 exponents for clarity)
+
++1001 0101 = +1.001 0101 × 2+7
+-0.001 010 = -1.010
+× 2-3
+-1001 0000 0000 0000 = -1.001
+× 2+15
+what do you notice about the digit
+before the binary point using
+normalized representation?
+
+(-1)s x 1.f × 2exp s – sign
+f – fraction
+1.f – significand
+exp – exponent
+
+20
+
+IEEE 754 Single-precision
+● Known as float in C/C++/Java etc., 32-bit float format
+● 1 bit for sign, 8 bits for the exponent, 23 bits for the fraction
+
+● Tradeoff:
+o More accuracy ➔ More fraction bits
+o More range ➔ More exponent bits
+● Every design has tradeoffs ¯\_(ツ)_/¯
+
+illustration from user Stannered on Wikimedia Commons
+
+21
+
+IEEE 754 Single-precision
+● Known as float in C/C++/Java etc., 32-bit float format
+● 1 bit for sign, 8 bits for the exponent, 23 bits for the fraction
+
+● The fraction field only stores the digits after the binary point
+● The 1 before the binary point is implicit!
+o This is called normalized representation
+o In effect this gives us a 24-bit significand
+● The significand of floating-point numbers is in sign-magnitude!
+o Do you remember the downside(s)?
+
+illustration from user Stannered on Wikimedia Commons
+
+22
+
+The exponent field
+● the exponent field is 8 bits, and can hold positive or negative exponents, but... it
+doesn't use S-M, 1's, or 2's complement.
+● it uses something called biased notation.
+o biased representation = exponent + bias constant
+o single-precision floats use a bias constant of 127
+
+exp + 127 => Biased
+
+-127 + 127 => 0
+-10 + 127 => 117
+34 + 127 => 161
+
+● the exponent can range from -126 to +127 (1 to 254 biased)
+o 0 and 255 are reserved!
+● why'd they do this?
+o You can sort floats with integer comparisons!
+23
+
+Binary Scientific Notation (revisited)
+● Our previous numbers are actually
+
+bias = 127
+
++1.001 0101 × 2+7
+
+sign = 0 (positive number!)
+Biased exponent = exp + 127 = 7 + 127 = 134
+= 10000110
+fraction = 0010101 (ignore the “1.”)
+s
+
+E
+
+f
+
+0 10000110 00101010000000000…000
+(-1)0 x 1.001 0101 × 2134-127
+
+24
+
+Binary Scientific Notation (revisited)
+● Our previous numbers are actually
+
+bias = 127
+
+-1.010 × 2-3 =
+
+sign = 1 (negative number!)
+Biased exponent = exp + 127 = -3 + 127 = 124
+= 01111100
+fraction = 010 (ignore the “1.”)
+s
+
+E
+
+f
+
+1 01111100 01000000000000000…000
+(-1)1 x 1.010
+
+× 2124-127
+
+25
+
+Binary Scientific Notation (revisited)
+● Our previous numbers are actually
+
+bias = 127
+
+-1.001 × 2+15=
+sign = ?
+Biased exponent = ?
+fraction = ?
+s
+
+E
+
+f
+
+?
+
+?
+
+?
+26
+
+Check it on C++ (there are online tools for this!)
+#include <iostream>
+#include<bitset>
+int main() {
+// This is the number from the previous slide
+float x {-0b1001000000000000};
+// C++ does not shift floats :(
+// This is C++-whispering: it allows me to shift the bits :)
+int num {*(int*)&x};
+// Extract the fields!
+std::bitset <1> sign = (num >> 31) & 0x1 ;
+std::bitset <8> biased_exp = (num >> 23) & 0xFF;
+std::bitset <23> frac = (num >> 0) & 0x7FFFFF;
+
+}
+
+// Now let’s print
+std::cout << "sign: " << sign << std::endl;
+std::cout << "biased exponent: " << biased_exp << std::endl;
+std::cout << "frac: " << frac << std::endl;
+return 0;
+
+Try it in: https://repl.it/languages/cpp
+
+27
+
+Encoding a number as a float
+You have an number, like -12.5937510
+1. Convert it to binary.
+Integer part: 11002
+Fractional part: 0.100112
+2. Write it in scientific notation:
+1100.100112 x 20
+3. Normalize it:
+1.100100112 x 23
+
+0.5937510
+x
+2
+1.18750
+
+MSB
+
+0.1875010
+x
+2
+0.37500
+
+0.3750010
+x
+2
+0.75000
+0.7500010
+x
+2
+1.50000
+0.5000010
+x
+2
+1.00000
+
+LSB
+
+28
+
+Encoding a number as a float
+You have an number, like -12.5937510
+1. Convert it to binary.
+Integer part: 11002
+Fractional part: 0.100112
+2. Write it in scientific notation:
+1100.100112 x 20
+3. Normalize it:
+1.100100112 x 23
+4. Calculate biased exponent
++3 + 127 = 13010 = 100000102
+
+0xC1498000
+
+s
+
+exponent
+
+fraction
+
+1 10000010 10010011000000000…000
+29
+
+Adding floating point numbers
+
+1.11 × 20 + 1.00 × 2-2
+● Step 1 – Make both exponents the same
+
+1.11 × 20 + 0.01 × 20
+
+● Step 2 – Add the significands
+
+1.11 × 20 + 0.01 × 20 = 10.00 × 20
+
+● Step 3 – Normalize the result
+
+10.00 × 20 = 1.000 × 21
+30
+
+Multiply floating point numbers
+
+1.11 × 20 x 1.01 × 2-2
+● Step 1 – Add the exponents
+
+0 + (-2) = [0+127]+[-2+127] =
+[127] + [125] – 127 = [125] = -2
+● Step 2 – Multiply the significands
+
+1.11 x 1.01 = 10.0011
+● Step 3 – Normalize the result
+
+10.0011 × 2-2 = 1.00011 × 2-1
+31
+
+Divide floating point numbers
+
+1.001 × 20 / 1.1 × 2-2
+● Step 1 – Subtract the exponents
+
+0 - (-2) = [0+127]-[-2+127] =
+[127] - [125] + 127 = [129] = 2
+
+● Step 2 – Divide the significands
+
+1.001 / 1.1 = 0.11
+● Step 3 – Normalize the result
+
+0.11 × 22 = 1.1 × 21
+32
+
+Other formats
+● the most common other format is double-precision (C/C++/Java double), which uses
+an 11-bit exponent and 52-bit fraction
+
+● GPUs have driven the creation of a half-precision 16-bit floatingpoint format. it's adorable
+
+1023 bias
+15 bias
+
+both illustrations from user Codekaizen on Wikimedia Commons
+
+33
+
+Special cases
+● IEEE 754 can represent data outside of the norm.
+o Zero! How do you do that with normalized numbers?
+o +/- Infinity
+o NaN (Not a number). E.g. when you divide zero by zero.
+o Other denormalized number: Squeeze the most out of our bits!
+▪ E.g.: 0.00000000000000000000001 x 2-127
+Single precision
+
+Double precision
+
+Meaning
+
+Exponent
+
+Fraction
+
+Exponent
+
+Fraction
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+!=0
+
+0
+
+!=0
+
+Number is denormalized
+
+255
+
+0
+
+2047
+
+0
+
+Infinity (sign-bit defines + or -)
+
+255
+
+!=0
+
+2047
+
+!=0
+
+NaN (Not a Number)
+34
+
+Check out this cool thing in MARS
+● go to Tools > Floating Point Representation
+● Try it out!
+
+35
+
+

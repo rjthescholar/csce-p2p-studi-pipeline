@@ -1,0 +1,447 @@
+Time Complexity 04
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+NP-COMPLETENESS
+
+NP-Complete is a class of problems discovered by Cook and
+Levin
+Complexity of these problems are closely related
+If a polynomial time algorithm exists for a problem in this
+class, problems of entire class can be solved in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Polynomial Time Reducibility
+Definition 7.28
+A function f : Σ∗ → Σ∗ is a polynomial time computable
+function if some polynomial time Turing machine M exists that
+halts with just f (w) on its tape, when started on any input w.
+Definition 7.29
+Language A is polynomial time mapping reducible, or simply
+polynomial time reducible, to language B, written A ≤p B, if a
+polynomial time computable function f : Σ∗ → Σ∗ exists, where
+for every w,
+w ∈ A ↔ f (w) ∈ B.
+The function f is called the polynomial time reduction of A to
+B.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Polynomial Time Reducibility
+
+Recall the property from previous slide:
+w ∈ A ↔ f (w) ∈ B
+This is exactly the same as mapping reducibility property
+Recall that if A ≤m B and B is decidable, A is decidable
+A ≤p B gives you exactly the same as A ≤m B with one
+extra property that the reduction f runs in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Polynomial Time Reducibility
+
+Theorem 7.31
+If A ≤p B and B ∈ P , then A ∈ P .
+If you can convert an instance of a problem A into an
+instance of a problem B in polynomial time
+If the problem B can be solved in polynomial time
+The problem A can be solved in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Polynomial Time Reducibility
+Theorem 7.31
+If A ≤p B and B ∈ P , then A ∈ P .
+Proof:
+Assume that A ≤p B
+There exists a polynomial time reduction f satisfying:
+w ∈ A ↔ f (w) ∈ B
+
+Assume that B ∈ P
+There exists a TM MB that decides B
+MB runs in polynomial time
+
+We need to show that we can decide A in polynomial time
+Need a TM MA that decides A in polynomial time
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Polynomial Time Reducibility
+
+This TM MA decides A:
+MA = “On input w:
+1
+
+2
+3
+
+Compute f (w) where f is a polynomial time reduction from A
+to B.
+Run MB (a decider of B) on f (w).
+If MB accepts f (w), accept. If MB rejects f (w), reject.”
+
+Prove that MA is a decider for A:
+w∈A
+w 6∈ A
+
+f (w) ∈ B
+f (w) 6∈ B
+
+MB accepts f (w)
+MB rejects f (w)
+
+MA accepts w
+MA rejects w
+
+Since f runs in polynomial time and MB can decide B in
+polynomial time, MA runs in polynomial time
+Since MA decides A in polynomial time, A ∈ P
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Satisfiability Problem
+
+A formula φ can be construed from boolean variables and
+boolean operators (∧, ∨, and ¬)
+Sometimes we use x instead of ¬x for a boolean variable x
+For simplicity, this textbook uses 1 for true and 0 for false
+
+For example, φ = (x ∧ y) ∨ (x ∧ z)
+A formula is satisfiable if there exists an assignment of 0s
+and 1s to the variables which makes the formula evaluate to 1
+In the above example, φ is 1 when x = 0, y = 1, and z = 0.
+
+The satisfiability problem is defined formally as follows:
+SAT = {hφi | φ is a satisfiable Boolean formula}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Conjunctive Normal Form (CNF)
+We will use a special form of boolean formula called
+Conjunctive Normal Form (cnf)
+A literal is a Boolean variable or a negation of a boolean
+variable, as in x or x
+A clause is several literals connected with ∨s
+(x1 ∨ x2 ∨ x3 ∨ x4 )
+A cnf-formula comprises several clauses connected with ∧s
+(x1 ∨ x2 ∨ x3 ∨ x4 ) ∧ (x3 ∨ x5 ∨ x6 ) ∧ (x3 ∨ x6 )
+A 3cnf-formula is a cnf-formula where all the clauses have
+exactly three literals, as in
+(x1 ∨ x2 ∨ x3 ) ∧ (x3 ∨ x5 ∨ x6 ) ∧ (x3 ∨ x6 ∨ x4 ) ∧ (x4 ∨ x5 ∨ x6 )
+Let 3SAT = {hφi | φ is a satisfiable 3cnf-formula}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT ≤p CLIQUE
+
+Is 3SAT ≤p CLIQUE ?
+We need to create a polynomial time reduction
+f : Σ∗ → Σ∗ such that
+w ∈ 3SAT ↔ f (w) ∈ CLIQUE
+Recall 3SAT and CLIQUE :
+3SAT = {hφi | φ is a satisfiable 3cnf-formula}
+CLIQUE = {hG, ki | G is an undirected graph with a k-clique}
+
+These are two totally different problems
+We need to convert hφi to hG, ki such that φ is satisfiable if
+and only if graph G contains k-clique for some k
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT ≤p CLIQUE
+A 3cnf-formula is of the form φ = c1 ∧ c2 ∧ . . . cn for some
+n≥1
+φ is evaluated to 1 if ci = 1 for every 1 ≤ i ≤ n
+Every clause ci in φ depends on other clauses cj in φ to be 1
+to make φ evaluated to 1
+Each clause c in a 3cnf-formula is of the form
+c = (xp ∨ xq ∨ xr )
+for literals xp , xq , and xr
+The clause c is evaluated to 1 if one of its literal is 1
+If a literal in a clause is 1, for φ to be evaluated to 1, it
+depends on at least one literal in other clauses to be 1
+Note that it cannot depend on its negation literals
+It does not depend on the other two literals in its clause since
+its clause is already evaluated to 1
+
+This create relations among n literals (one from each clause)
+which can be represented using edges in an indirected graph
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT ≤p CLIQUE
+Let φ be a formula with k clauses as
+φ = (a1 ∨ b1 ∨ c1 ) ∧ (a2 ∨ b2 ∨ c2 ) ∧ · · · ∧ (ak ∨ bk ∨ ck )
+Nodes in G are organized in k groups of tree nodes each call
+triples
+Each triple corresponds to one of the clauses in φ
+Each node in a triple corresponds to a literal in its associated
+clause
+Edges connect every two nodes in G except the following:
+No edge among nodes in the same triple
+No edge is present between two nodes with contradictory
+labels, as in x2 and x2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT ≤p CLIQUE
+x1
+
+x2
+
+x2
+
+x1
+
+x1
+
+x1
+
+x2
+
+x2
+
+x2
+
+φ = (x1 ∨ x1 ∨ x2 ) ∧ (x1 ∨ x2 ∨ x2 ) ∧ (x1 ∨ x2 ∨ x2 )
+3SAT ≤p CLIQUE
+If a boolean 3cnf formular φ with k clauses is satisfiable, the
+graph converted from φ will contain k clique
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT ≤p CLIQUE
+If φ is satisfiable, there exists an assignment that makes φ = 1
+For each clause, select exactly one true literal based on the
+assignment
+If there are k clauses, selected literals form k-clique
+
+If graph G has a k-clique
+Each node in k-clique corresponds to a node (literal) in a triple
+(clause)
+Assign true to those literals
+
+Recall the theorem 7.31:
+If A ≤p B and B ∈ P , then A ∈ P
+If we can solve CLIQUE in polynomial time, we can solve
+3SAT in polynomial time by simply convert hφi to hG, ki (in
+polynomial time) and then solve it
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+NP-Completeness
+
+Recall that NP-Complete is a class of problems that are
+closely related
+If you can solve one problem in this class in polynomial time,
+all problems in this class can be solved in polynomial time
+Definition 7.34
+A language B is NP-Complete if it satisfies two conditions:
+1
+
+B is in NP , and
+
+2
+
+Every language A in NP is polynomial time reducible to B.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+NP-Completeness
+
+In other words, to show that a language B is NP-Complete
+we need to show the following:
+1
+
+Show that B is in NP which can be done by one of the
+following:
+1
+2
+
+2
+
+Show a polynomial time verifier V for B, or
+Show a NTM N that decide B in polynomial time
+
+Show that every language A in NP is polynomial time
+reducible to B
+Show an polynomial time reduction f : Σ∗ → Σ∗ satisfying
+w ∈ A ↔ f (w) ∈ B
+for every language A ∈ NP
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+SAT is NP-Complete
+So, to show that SAT is NP-Complete, we need to show the
+following:
+1
+
+SAT ∈ NP
+Simply construct a NTM that generates all possible
+assignments
+If one of them evaluated to 1, accept
+
+2
+
+Show that a every language A in NP is polynomial time
+reducible to SAT
+Unfortunately, there are a lot of languages in NP
+But if we have an NP-Complete language B
+B is in NP
+Every language A ∈ NP , A ≤p B
+If we can show that B ≤p SAT , every language A ∈ NP ,
+A ≤p SAT
+But we do not have an NP-Complete problem yet
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+SAT is NP-Complete
+
+Suppose a language A is in NP
+There exists a NTM M that decides A in polynomial time
+
+Note that we do not specify what is the language A and what
+is the description of NTM M
+The language A can be any language that is in NP and M is
+an NTM that decides A in polynomial time
+
+What we need is to show that A ≤p SAT?
+Since we do not know what is the language A, we cannot
+simply use the description of A
+Even though we do not have the description of NTM M but
+we know the following:
+M is a nondeterministic Turing machine
+NTM M is a decider for the language A
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+SAT is NP-Complete
+About NTM M that decides A
+w∈A
+the accepting computation
+If M accepts w
+history for M on input w exists
+If M rejects w
+w 6∈ A
+the accepting computation history
+for M on input w does not exists
+
+This is an NTM, there can be multiple computation histories
+We need to use reduction via computation histories
+Convert computation histories of M on input w to a formula φ
+such that
+If the accepting computation history for M on input w exists,
+φ is satisfiable (φ ∈ SAT)
+If the accepting computation history for M on input w does
+not exists, φ is not satisfiable (φ 6∈ SAT)
+
+Cook-Levin Theorem shows the method describe above and
+conclude that SAT is NP-Complete.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+3SAT is NP-Complete
+
+Since we already know that SAT is NP-Complete, to show
+that 3SAT is NP-Complete, we need to show the following:
+1
+
+3SAT ∈ NP :
+Construct an NTM that generates all possible assignments
+If one of them evaluate to 1, accept
+
+2
+
+SAT ≤p 3SAT :
+Convert the formula φ into a 3cnf f (φ) satisfying
+φ ∈ SAT ↔ f (φ) ∈ 3SAT
+where f is a polynomial time reduction from SAT to 3SAT
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+From SAT to 3SAT
+
+If a clause has less than three literal, add one or two literals
+from the same clause
+x1
+(x1 ∨ x1 ∨ x1 )
+(x1 ∨ x2 )
+(x1 ∨ x1 ∨ x2 )
+(x1 ∨ x2 )
+(x1 ∨ x2 ∨ x2 )
+These results are logically equivalent with their original clauses
+
+If a clause has more than tree literals, split it into a number of
+clauses of three literals each.
+(x1 ∨ x2 ∨ x3 ∨ x4 )
+
+(x1 ∨ x2 ∨ z) ∧ (z ∨ x3 ∨ x4 )
+
+This is not logically equivalent
+It is equivalent in terms of satisfiability
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+Additional NP-Complete Problems
+
+CLIQUE is NP-Complete
+We already show that 3SAT ≤p CLIQUE
+
+VERTEX −COVER is NP-Complete where
+VERTEX −COVER = {hG, ki | G is an undirected graph that
+has a k-node vertex cover}
+Textbook shows that 3SAT ≤p VERTEX −COVER
+
+HAMPATH is NP-Complete
+Textbook shows that 3SAT ≤p HAMPATH
+
+SUBSET −SUM is NP-Complete
+Textbook shows that 3SAT ≤p SUBSET −SUM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 04
+
+

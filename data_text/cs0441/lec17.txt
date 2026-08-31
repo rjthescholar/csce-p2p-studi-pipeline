@@ -1,0 +1,244 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #17: Inclusion/Exclusion, Pigeonhole Principle
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+n Inclusion/exclusion principle
+n The pigeonhole principle
+
+Sometimes when counting a set, we count the
+same item more than once
+For instance, if something can be done n1 ways or n2
+ways, but some of the n1 ways are the same as some of
+the n2 ways.
+In this case n1 + n2 is an overcount of the ways to
+complete the task!
+What we really want to do is count the n1 + n2 ways to
+complete the task and then subtract out the common
+solutions.
+This is called the inclusion/exclusion principle.
+
+We can formulate this concept using set theory
+Suppose that a task T can be completed using a
+solution drawn from one of two classes: A1 and A2
+As in the sum rule, we can define the solution set for
+the task T as S = A1 ∪ A2
+Then |S| = |A1 ∪ A2|
+= |A1| + |A2| - |A1 ∩ A2|
+
+A1
+
+Do you remember this from earlier this semester?
+
+A2
+
+Counting Bit Strings
+Example: How many bit strings of length 8 start with
+a 1 or end with 00?
+
+Solution:
+l 27 = 128 8-bit strings start with a 1
+l 26 = 64 8-bit strings end with 00
+l 25 = 32 8-bit strings start with a 1 and end with 00
+
+So, we have 128 + 64 – 32 = 160 ways to construct an
+8-bit string that starts with a 1 or ends with 00.
+
+Job Applications
+Example: A company receives 350 applications.
+Suppose 220 of these people majored in CS, 147 majored
+in business, and 51 were CS/business double-majors.
+How many applicants majored in neither CS nor business?
+
+Solution:
+l Let C be the set of CS majors, B be the set of business majors
+l |C ∪ B| = |C| + |B| - |C ∩ B|
+l
+= 220 + 147 – 51
+l
+= 316
+
+So of the 350 applications, 350 – 316 = 34 applications
+neither majored in CS nor business.
+
+The pigeonhole principle is an incredibly simple
+concept that is extremely useful!
+The pigeonhole principle: If k is a positive integer and
+k+1 objects are placed in k boxes, then at least one
+box contains at least two objects.
+
+Example: k = 4
+
+The pigeonhole principle is also easy to prove
+The pigeonhole principle: If k is a positive integer and
+k+1 objects are placed in k boxes, then at least one
+box contains at least two objects.
+
+Proof: Assume that each of the k boxes contains at
+most 1 item. This means that there are at most k
+items, which is a contradiction of our assumption that
+we have k+1 items, so at least one box must contain
+more than one item. ❏
+
+Examples
+Example: Among any group of 367
+people there are at least two with the
+same birthday, since there are only 366
+possible birthdays.
+
+Example: Among any 27 English
+words, at least two will start with
+the same letter.
+
+The pigeonhole principle can be used to prove a
+number of interesting results
+Claim: Every integer n has a multiple whose decimal
+representation contains only 1s and 0s
+
+Proof:
+
+This number has n+1 ones
+
+l Let n be a positive integer
+l Consider the set of n+1 integers S = {1, 11, 111, …, 111…1}
+l Note that when any integer x is divided by n, there are n
+possible remainders (0 through n-1)
+l Since S contains n+1 elements, at least two elements of S
+have the same remainder when divided by n (call them x
+and y, with x > y)
+l Since x ≡ y (mod n), n | (x – y), and thus na = (x – y)
+l Finally, we note that x – y contains only 0s and 1s ❏
+
+In-class exercises
+Top Hat
+
+There is a more general form of the pigeonhole
+principle that is even more useful
+The generalized pigeonhole principle: If N objects are
+placed into k boxes, then there is at least one box
+containing at least ⌈N/k⌉ items.
+
+Proof:
+l Assume that no box contains more than ⌈N/k⌉ - 1 objects
+l Note that ⌈N/k⌉ < (N/k) + 1
+l So, k (⌈N/k⌉ - 1) < k((N/k + 1) – 1) = N
+l This contradicts our assumption that we had N objects ❏
+
+Example
+What is the minimum number of students needed to
+guarantee that at least six students receive the same
+grade, if possible grades are A, B, C, D, and F?
+
+Solution:
+l Need the smallest integer N such that ⌈N/5⌉ = 6
+l With 25 students, it would be possible (though maybe
+unlikely) to have 5 students get each possible grade
+l By adding a 26th student, we guarantee that at least 6
+students get one possible grade
+l So, the smallest such N is 5 × 5 + 1 = 26 ❏
+
+From the casino…
+How many cards must be drawn from a standard 52card deck to guarantee that three cards of the same
+suit are drawn?
+
+Solution:
+l Let’s make 4 piles: one for each suit
+l We want to have ⌈N/4⌉ ≥ 3
+l We can do this using 4 × 2 + 1 = 9 cards
+
+Note: We don’t need 9 cards to end up with three
+from the same suit—if we did, we could never get a
+flush in poker!
+
+We can’t always use the pigeonhole principle directly
+How many cards would we need to draw to ensure
+that we picked at least three hearts?
+
+In the worst case, we would need to draw every club,
+spade, and diamond before getting three hearts…
+So, to guarantee three hearts, we need to draw 3 ×
+13 + 3 = 42 cards!
+
+Ma Bell…
+What is the least number of area codes needed to
+guarantee that the 25 million phones in some state can
+be assigned distinct 10-digit phone numbers of the
+form NXX-NXX-XXXX?
+
+Solution:
+l The product rule tells us that there are 8 million phone
+numbers of the form NXX-XXXX
+l Think of phones as objects and phone numbers as boxes
+l By the generalized pigeonhole principle, we know that
+some “box” contains at least ⌈25,000,000/8,000,000⌉ = 4
+“objects”
+l This means that we need 4 area codes to ensure that each
+phone gets a unique 10-digit number ❏
+
+This has been easy so far, right?
+Unfortunately, life isn’t always easy!
+Sometimes, we need to be clever when we are
+defining our “boxes” or assigning objects to
+them
+
+For example…
+
+Sports!
+During a month with 30 days, a baseball team plays at
+least one game per day, but no more than 45 games total.
+Show that there must be some period of consecutive days
+in which exactly 14 games are played.
+
+Solution:
+l Let aj be the number of games played on or before the jth day of
+the month. Note that the sequence {aj} is strictly increasing.
+l Note also that {aj + 14} is also an increasing sequence
+l Now, consider a1, a2, …, a30, a1 + 14, a2 + 14, …, a30 + 14
+l There are 60 terms in this sequence, all ≤ (45 + 14) = 59
+l By the pigeonhole principle, at least two terms are equal
+l Note: Each aj for j = 1, 2, …, 30 is distinct, as is each aj + 14
+l This means there exists some ai that is equal to some aj + 14, so
+14 games were played from day j + 1 to day i ❏
+
+Number theory
+Show that among any n+1 positive integers not
+exceeding 2n, there must be an integer that divides
+one of the other integers.
+
+Proof:
+l Call our 𝑛 + 1 positive integers 𝑎! , 𝑎" , … , 𝑎#$!
+l Write each 𝑎% as 2&! 𝑞% , where 𝑞% is an odd positive integer
+and 𝑘% is non-negative (i.e., 𝑘% might be zero)
+l Note that there are 𝑛 odd positive integers less than 2𝑛
+l By the pigeonhole principle, at least two of 𝑞! , 𝑞" , … , 𝑞#$!
+must be equal
+l This means we have some 𝑎% = 2&! 𝑞% and some 𝑎' = 2&" 𝑞%
+l If 𝑘% < 𝑘' , then 𝑎% ∣ 𝑎' . If 𝑘% > 𝑘' , then 𝑎' ∣ 𝑎% ❏
+
+In-class exercises
+Problem 4: Top Hat
+Problem 5: A drawer contains a dozen brown socks and a
+dozen black socks, all unmatched. How many socks must be
+drawn to find a matching pair? How many socks must be
+drawn to find a pair of black socks?
+Problem 6: Let A be some subset of {1, 2, …, 50} where
+|A|=10. Show that there are at least three subsets of A that
+have the same sum. (This question appeared on a previous
+final exam.)
+
+Final Thoughts
+n The inclusion/exclusion principle is useful when we
+need to avoid overcounting
+n The pigeonhole principle and its generalized form
+are useful for solving many types of counting
+problems
+n Next time:
+l Permutations and combinations (Section 6.3)
+
+

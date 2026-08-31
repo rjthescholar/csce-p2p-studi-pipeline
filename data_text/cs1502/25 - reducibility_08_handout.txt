@@ -1,0 +1,432 @@
+Reducibility 08
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Mapping Reducibility
+Definition 5.20
+Language A is mapping reducible to language B, written
+A ≤m B, if there is a computable function f : Σ∗ → Σ∗ , where for
+every w,
+w ∈ A ↔ f (w) ∈ B.
+The function f is called the reduction from A to B.
+
+A
+
+B
+f
+
+f
+
+Function f reducing A to B
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Reductions
+Crucial Features in a Reduction:
+1
+
+For every instance w of the first problem that we start with,
+we must be able to obtain the instance f (w) of the second
+problem algorithmically
+In our discussion, this reduction f : Σ∗ → Σ∗ will be a TM
+that produces an output string
+
+2
+
+The answer to the second question for the instance f (w) must
+be the same as the answer to the original question for w
+w ∈ A ↔ f (w) ∈ B.
+In other words, for every w,
+If f (w) ∈ B, w must be in A
+If f (w) 6∈ B, w must not be in A
+
+3
+
+The reduction does not have to be one-to-one or onto as long
+as it satisfies the above property
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Mapping Reducibility
+
+Theorem 5.22
+If A ≤m B and B is decidable, then A is decidable.
+Proof:
+Assume that A ≤m B and B is decidable
+Since A ≤m B, there exists a reduction in the form of a TM
+F satisfying
+w ∈ A ↔ F (w) ∈ B
+Since B is decidable, there exists a TM MB that decides B
+We just need to use the same method as in Chapter 4 to show
+that A is decidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Mapping Reducibility
+Construct a decider N (to decide A) as follows:
+N =“On input w:
+1
+2
+3
+
+Run TM F (a reduction from A to B) on w to produce F (w).
+Run MB (a decider for B) on F (w)
+If MB accepts F (w), accept. If MB rejects F (w), reject.”
+
+Prove that if w ∈ A, N accepts w:
+Assume that w ∈ A. Since w ∈ A, from the property of the reduction F ,
+F (w) ∈ B. Since F (w) ∈ B and MB is a decider for B, by running MB on
+input F (w), MB will accept F (w). Since MB accepts F (w), N accepts w.
+
+Prove that if w 6∈ A, N rejects w:
+Assume that w 6∈ A. Since w 6∈ A, from the property of the reduction F ,
+F (w) 6∈ B. Since F (w) 6∈ B and MB is a decider for B, by running MB on
+input F (w), MB will reject F (w). Since MB rejects F (w), N rejects w.
+
+This shows that N is a decider for A
+Therefore A is decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Mapping Reducibility
+
+Theorem 5.22
+If A ≤m B and B is decidable, then A is decidable.
+Let the following:
+P ≡ A ≤m B
+Q ≡ B is decidable
+R ≡ A is decidable
+
+Since (P ∧ Q) → R ≡ (P ∧ ¬R) → ¬Q, we have
+Corollary 5.23
+If A ≤m B and A is undecidable, then B is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Mapping Reducibility
+Corollary 5.23
+If A ≤m B and A is undecidable, then B is undecidable.
+We already know from the fact that ATM is undecidable
+Because of the above Corollary, to show that a language B is
+undecidable, we just need to show that ATM ≤m B
+ATM can be replaced by other undecidable language such as
+ETM
+To show that ATM ≤m B, we need to construct a TM F that
+behaves like a reduction from ATM to B satisfying
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ B
+Also need to prove that F actually satisfies the above property
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+HALT TM is undecidable
+ATM and HALTTM
+ATM = {hM, wi | M is a TM and M accepts w}
+HALT TM = {hM, wi | M is a TM and M halts on input w}
+To use mapping reducibility to show that HALT TM is
+undecidable:
+We need to show that ATM is mapping reducible to HALT TM
+(ATM ≤m HALT TM )
+Since ATM ≤m HALT TM and ATM is undecidable, from
+Corollary 5.23, HALT TM is undecidable
+
+To show that ATM ≤m HALT TM , we need a computable
+function F : Σ∗ → Σ∗ (TM F ) such that
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ HALT TM
+Note that F (hM, wi) must be in the form of hM 0 , w0 i (the
+format of HALT TM )
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+HALT TM is undecidable
+
+A computable function F where F (hM, wi) = hM 0 , w0 i is a
+TM
+A TM that takes hM, wi as its input on its tape and produces
+the output hM 0 , w0 i on its tape after it is halted
+
+Note that TM F must be a reduction from ATM to HALT TM :
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ HALT TM
+where F (hM, wi) = hM 0 , w0 i
+hM, wi ∈ ATM → F (hM, wi) ∈ HALT TM
+M accepts w → M 0 halts on input w0
+hM, wi 6∈ ATM → F (hM, wi) 6∈ HALT TM
+M does not accept w → M 0 does not halt on input w0
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+HALT TM is Undecidable
+Machine F computes a reduction f :
+F =“On input hM, wi where M is a TM and w is a string:
+1
+
+Construct the following machine M 0 :
+M 0 =“On input x:
+1
+2
+
+2
+
+Run M on w.
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+Output hM 0 , εi.”
+
+Next, we need to check whether TM F satisfies
+hM, wi ∈ ATM ↔ hM 0 , w0 i ∈ HALT TM
+where hM 0 , εi = F (hM, wi) (the output of TM F )
+To do so, we need to show the following:
+1
+2
+
+If hM, wi ∈ ATM , hM 0 , εi ∈ HALT TM
+If hM, wi 6∈ ATM , hM 0 , εi 6∈ HALT TM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+HALT TM is Undecidable
+Show that
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ HALT TM
+where F (hM, wi) = hM 0 , εi
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a
+TM that accepts w. Since M accepts w, from the definition of
+TM M 0 , M 0 halts (accepts) on all strings including ε. Since
+M 0 halts on ε, hM 0 , εi ∈ HALT TM . Since
+hM 0 , εi = F (hM, wi), F (hM, wi) ∈ HALT TM .
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a
+TM that does not accept w. Since M does not accept w, from
+the definition of TM M 0 , M 0 does not halt on all strings
+including ε. Since M 0 does not halt on ε, hM 0 , εi 6∈ HALT TM .
+Since hM 0 , εi = F (hM, wi), F (hM, wi) 6∈ HALT TM .
+
+This show that TM F is a reduction from ATM to HALT TM
+In other words, ATM ≤m HALT TM
+Since ATM is undecidable, HALT TM is undecidable (Corollary
+5.23)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+HALT TM is Undecidable
+Let’s compare two methods:
+Method #1: We construct a TM S to decide ATM as follows:
+S = “On input hM, wi where M is a TM and w is a string:
+1
+
+Construct a TM M 0 as follows:
+M 0 = “On input x:
+1
+2
+
+2
+3
+
+Run M on input w.
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+Run R (a decider for HALT TM ) on input hM 0 , εi.
+If R accepts hM 0 , εi, accept. If R rejects hM 0 , εi, reject.”
+
+Method #2: Construct a reduction F from ATM to
+HALT TM as follows:
+F = “On input hM, wi where M is a TM and w is a string:
+1
+
+Construct a TM M 0 as follows:
+M 0 = “On input x:
+1
+2
+
+2
+
+Run M on input w.
+If M accepts w, accept. If M rejects w, enter infinite loop.”
+
+Output hM 0 , εi.”
+
+Did you see the similarity?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+ETM is Undecidable
+To show that ETM is undecidable using the mapping
+reducibility, we need to show that ATM ≤m ETM
+In other word, we need to find a computable function
+F : Σ∗ → Σ∗ (TM F ) such that
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ ETM
+Suppose we construct the following TM F :
+F = “On input hM, wi where M is a TM and w is a string:
+1
+
+Construct TM M 0 as follows:
+M 0 = “On input x:
+1
+2
+
+2
+
+Run M on input w.
+If M accepts w, accept. If M rejects w, reject.”
+
+Output hM 0 i.”
+
+The above TM F does not satisfy the above property
+It satisfies
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ ETM
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+ETM is Undecidable
+
+TM F is a reduction from ATM to ETM
+This shows that ATM ≤m ETM
+By Corollary 5.23, since ATM is undecidable, ETM is
+undecidable
+Note that if ETM is decidable, ETM is decidable
+We discussed this toward the end of Chapter 4
+
+Therefore, ETM is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+REGULAR TM is Undecidable
+Use the mapping reducibility to show that
+REGULAR TM = {hM i | M is a TM and L(M ) is regular} is undecidable.
+Solution: We need to construct a reduction F from ATM to REGULAR TM satisfying
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ REGULAR TM
+Construct a TM F as follows:
+F = “On input hM, wi where M is a TM and w is a string:
+1
+
+Construct a TM M 0 as follows:
+M 0 = “On input x:
+1
+2
+
+If x is in the form of 0n 1n , accept.
+If x is not in the form of 0n 1n , run M on input w. If M accepts w,
+accept; otherwise, reject.”
+
+2
+
+Output hM 0 i.”
+
+Next we need to show that the above TM F satisfies the property:
+hM, wi ∈ ATM ↔ hM 0 i ∈ REGULAR TM
+where hM 0 i = F (hM, wi) (output of TM F ):
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+REGULAR TM is Undecidable
+Continue:
+If hM, wi ∈ ATM , F (hM, wi) ∈ REGULAR TM :
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a TM that accepts w.
+Since M accepts w, from the definition of TM M 0 , L(M 0 ) = Σ∗ . Since
+L(M 0 ) = Σ∗ , L(M 0 ) is regular. Since L(M 0 ) is regular,
+hM 0 i ∈ REGULAR TM . Since F (hM, wi) = hM 0 i,
+F (hM, wi) ∈ REGULAR TM .
+If hM, wi 6∈ ATM , F (hM, wi) 6∈ REGULAR TM :
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a TM that does not
+accept w. Since M does not accept w, from the definition of TM M 0 ,
+L(M 0 ) = {0n 1n | n ≥ 0}. Since L(M 0 ) = {0n 1n | n ≥ 0}, L(M 0 ) is not
+regular. Since L(M 0 ) is not regular, hM 0 i 6∈ REGULAR TM . Since
+F (hM, wi) = hM 0 i, F (hM, wi) 6∈ REGULAR TM .
+This show that TM F is a reduction from ATM to REGULAR TM . Therefore
+ATM ≤m REGULAR TM . Since ATM is undecidable, by Corollary 5.23,
+REGULAR TM is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+EQ TM is Undecidable
+We need to show that ETM ≤m EQ TM
+We need to find a computable function F : Σ∗ → Σ∗ such
+that
+hM i ∈ ETM ↔ F (hM i) ∈ EQ TM .
+where F (hM i) = hM1 , M2 i for some TMs M1 and M2
+Here is the TM F :
+F = “On input hM i where M is a TM:
+1
+
+Construct a TM ME as follows:
+ME = “On input x:
+
+2
+
+Output hM, ME i.”
+
+1
+
+reject.”
+
+After proofs, we can make a conclusion that F is a reduction
+from ETM to EQ TM
+Therefore, ETM ≤m EQTM
+Since ETM is undecidable, by Corollary 5.23, EQ TM is
+undecidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Undecidability of the Post Correspondence Problem
+Earlier, we construct an instance P 0 of MPCP that has a
+match if and only if M accepts w
+Formally,
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ MPCP
+where F (hM, wi) = P 0
+This shows that ATM ≤m MPCP
+Since ATM is undecidable, MPCP is undecidable
+
+Then we construct an instance P of PCP that has a match if
+and only if P 0 has a matchFormally,
+P 0 ∈ MPCP ↔ F 0 (P 0 ) ∈ PCP .
+where F 0 (P 0 ) = P
+This shows that MPCP ≤m PCP
+Since MPCP is undecidable, PCP is undecidable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+Conclusion
+The mapping reducibility can be used to show that a
+language is undecidable
+Corollary 5.23
+If A ≤m B and A is undecidable, then B is undecidable
+Since ATM is undecidable, to show that a language B is
+undecidable, simply show that ATM ≤m B
+Need to show that a reduction F satisfying
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ B
+exists
+Instead of ATM , other known undecidable language can be
+used
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Reducibility 08
+
+

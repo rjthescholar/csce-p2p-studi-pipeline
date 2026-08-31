@@ -1,0 +1,274 @@
+Review
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+PSUBSETDFA
+
+Question
+Prove that
+PSUBSETDFA = {hA, Bi|A and B are DFAs and L(A) ⊂ L(B)}
+is decidable.
+Recall that you need to perform two tasks:
+1
+2
+
+Construct a TM that you think it decides PSUBSETDFA
+Prove that your TM is actually a decider for PSUBSETDFA
+
+Recall L(A) ⊂ L(B) (proper subset)
+L(A) 6= L(B) and L(A) is a subset of L(B)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+PSUBSETDFA is Decidable
+
+Solution: Construct a TM M 0 to decide PSUBSETDFA as follows:
+M 0 =“On input hA, Bi where A and B are DFAs:
+1
+
+Run TM F on input hA, Bi
+
+2
+
+If F accepts hA, Bi, reject.
+
+3
+
+Construct a DFA C such that L(C) = L(A) ∩ L(B)
+
+4
+
+Run TM T on input hCi
+
+5
+
+If T accepts hCi, accept. If T rejects hCi, reject.”
+
+Next, we need to prove that the above TM M 0 is a decider for PSUBSETDFA .
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+PSUBSETTM is Decidable
+To show that TM M 0 is a decider for PSUBSETDFA , we need to perform the
+following:
+Show that if hA, Bi ∈ PSUBSETDFA , M 0 will accept hA, Bi.
+Assume that hA, Bi ∈ PSUBSETDFA . Since hA, Bi ∈ PSUBSETDFA , A and B
+are DFAs and L(A) is a proper subset of L(B). In other words, L(A) is not
+equal to L(B) and L(A) is a subset of L(B). Since L(A) is not equal to L(B),
+hA, Bi 6∈ EQDFA . Since F is a decider for EQDFA , by running F on input hA, Bi,
+F will reject hA, Bi. Since L(A) is a subset of L(B), L(C) will be empty. Since
+L(C) is empty, hCi ∈ EDFA . Since T is a decider for EDFA , by running T on
+input hCi, T will accept hCi. Since T accepts hCi, M 0 accepts hA, Bi.
+Show that if hA, Bi 6∈ PSUBSETTM , M 0 will reject hA, Bi.
+Assume that hA, Bi 6∈ PSUBSETDFA . Since hA, Bi 6∈ PSUBSETDFA , A and B
+are DFAs and L(A) is not a proper subset of L(B). In other words,
+L(A) = L(B) or L(A) is not a subset of L(B).
+Suppose L(A) = L(B). Since L(A) = L(B), hA, Bi ∈ EQDFA . Since F is a
+decider for EQDFA , by running F on input hA, Bi, F will accept hA, Bi. Since
+F accepts hA, Bi, M 0 rejects hA, Bi.
+Suppose L(A) is not a subset of L(B). Since L(A) is not a subset of L(B),
+L(C) will not be empty. Since L(C) is not empty, hCi 6∈ EDFA . Since T is a
+decider for EDFA , by running T on input hCi, T will reject hCi. Since T rejects
+hCi, M 0 rejects hA, Bi.
+This shows that M 0 is a decider for PSUBSETDFA DFA. Therefore, PSUBSETDFA is
+decidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+ALLBUTONETM
+
+Question
+Prove that
+ALLBUTONETM = {hM i|M is a TM that accepts all but one string}
+
+is undecidable. Note that if TM M accepts all but one string,
+L(M ) = Σ∗ − {w} for a string w.
+Recall that there are two methods:
+1
+2
+
+Show that if ALLBUTONETM is decidable, ATM is decidable
+Use mapping reducibility to show that
+ATM ≤m ALLBUTONETM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+ALLBUTONETM is Undecidable (Method 1)
+
+Assume that ALLBUTONETM is decidable. Since ALLBUTONETM is decidable, there
+exists a TM R that decides ALLBUTONETM . Construct a TM S to decide ATM as
+follows:
+S =“On input hM, wi where M is a TM and w is a string:
+1
+
+Construct a TM M 0 as follows:
+M 0 =“On input x:
+1
+2
+3
+
+If x == ε, reject.
+Run M on input w.
+If M accepts w, accept. If M rejects w, reject.”
+
+2
+
+Run TM R on input hM 0 i.
+
+3
+
+If R accepts hM 0 i, accept. If R rejects hM 0 i, reject.”
+
+Next, we need to show that the above TM S is a decider for ATM .
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+ALLBUTONETM is Undecidable (Method 1)
+To show that TM M 0 is a decider for ALLBUTONETM , we need to perform the
+following:
+If hM, wi ∈ ATM , S will accept hM, wi.
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a TM that accepts w.
+Since M accepts w, from the description of TM M 0 , L(M 0 ) = Σ∗ − {ε}. Since
+L(M 0 ) = Σ∗ − {ε}, hM 0 i ∈ ALLBUTONETM . Since R is a decider for
+ALLBUTONETM , by running R on input ALLBUTONETM , R will accept hM 0 i.
+Since R accepts hM 0 i, S accepts hM, wi.
+If hM, wi 6∈ ATM , S will reject hM, wi.
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a TM that does not
+accept w. Since M does not accept w, from the description of TM M 0 ,
+L(M 0 ) = ∅. Since L(M 0 ) = ∅, L(M 0 ) 6= Σ∗ − {w} for a string w. In other
+words, hM 0 i 6∈ ALLBUTONETM . Since R is a decider for ALLBUTONETM , by
+running R on input ALLBUTONETM , R will reject hM 0 i. Since R rejects hM 0 i,
+S rejects hM, wi.
+This shows that S is a decider for ATM . In other words ATM is decidable. This
+contradicts with the fact that ATM is undecidable. Therefore, ALLBUTONETM is
+undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+ALLBUTONETM is Undecidable (Method 2)
+Need to show that ATM ≤m ALLBUTONETM . Construct a TM F as follows:
+F =“On input hM, wi where M is a TM and w is a string:
+1
+
+Construct a TM M 0 as follows:
+M 0 =“On input x:
+1
+2
+3
+
+2
+
+If x == ε, reject.
+Run M on input w.
+If M accepts w, accept. If M rejects w, reject.”
+
+Output hM 0 i.
+
+Next, we need to show that the above TM F is a reduction from ATM to
+ALLBUTONETM . In other word, we have to show that it satisfies:
+hM, wi ∈ ATM ↔ F (hM, wi) ∈ ALLBUTONETM
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+ALLBUTONETM is Undecidable (Method 2)
+
+To show that TM F is a reduction from ATM to ALLBUTONETM , we need to perform
+the following:
+If hM, wi ∈ ATM , F (hM, wi) ∈ ALLBUTONETM .
+Assume that hM, wi ∈ ATM . Since hM, wi ∈ ATM , M is a TM that accepts w.
+Since M accepts w, from the description of TM M 0 , L(M 0 ) = Σ∗ − {ε}. Since
+L(M 0 ) = Σ∗ − {ε}, hM 0 i ∈ ALLBUTONETM . Since F (hM, wi) = hM 0 i,
+F (hM, wi) ∈ ALLBUTONETM .
+If hM, wi 6∈ ATM , F (hM, wi) 6∈ ALLBUTONETM .
+Assume that hM, wi 6∈ ATM . Since hM, wi 6∈ ATM , M is a TM that does not
+accept w. Since M does not accept w, from the description of TM M 0 ,
+L(M 0 ) = ∅. Since L(M 0 ) = ∅, L(M 0 ) 6= Σ∗ − {w} for a string w. In other
+words, hM 0 i 6∈ ALLBUTONETM . Since F (hM, wi) = hM 0 i,
+F (hM, wi) 6∈ ALLBUTONETM .
+This shows that F is a reduction from ATM to ALLBUTONETM . Since ATM is
+undecidable, ALLBUTONETM is undecidable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+NOTPRIME
+
+Question
+Consider the following language
+NOTPRIME = {hni|n is a natural number and n is not a prime number}
+
+Perform the following:
+1
+
+Construct a verifier for the language NOTPRIME
+
+2
+
+Construct an NTM that decides NOTPRIME
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+A Verifier of NOTPRIME
+Given a language A, a verifier V of the language A is a TM
+satisfying
+A = {w | V accepts hw, ci for some c}
+From the above description
+Given a string w ∈ A, V must accept hw, ci for some c
+Given a string w 6∈ A, V must reject hw, ci for all c
+
+A verifier for NOTPRIME must satisfies
+NOTPRIME = {hni | V accepts hn, ci for some c}
+An example of a verifier for the language NOTPRIME:
+V =“On input hn, ci where n and c are natural numbers:
+1
+2
+
+If c == 1 or c ≥ n, reject.
+If n mod c == 0, accept.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+An NTM that decides NOTPRIME
+
+Think about how brute force algorithm should work
+Generate all possible strings between 2 and n − 1 (inclusive)
+If n is divisible by one of them, n is not a prime number
+
+An example of an NTM that decides the language
+NOTPRIME:
+N =“On input hni where n is a natural numbers:
+1
+
+2
+
+Select a number c where c is nondeterministically selected
+between 2 and n − 1 (inclusive)
+If n mod c == 0, accept.”
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Review
+
+

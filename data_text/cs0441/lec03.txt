@@ -1,0 +1,453 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #3: Logic Puzzles and Propositional
+Equivalence
+Based on materials developed by Dr. Adam Lee
+
+Today’s topics
+n Logic puzzles
+n Propositional equivalences
+
+A technical support conundrum
+Alice and Bob are technical support agents. If an agent
+is having a bad day, he or she will always lie to you. If
+an agent is having a good day, he or she will always
+tell you the truth. Alice tells you that Bob is having a
+bad day. Bob tells you that he and Alice are both
+having the same type of day. Can you trust the advice
+you receive from Alice during your call?
+
+Solving logic puzzles is easy!
+
+Step 1: Identify rules
+and constraints
+
+Step 2: Assign propositions
+to key concepts
+
+Step 3: Make assumptions
+and reason logically!
+
+Technical support revisited
+Alice and Bob are technical support agents. If an agent is having a
+bad day, he or she will always lie to you. If an agent is having a
+good day, he or she will always tell you the truth. Alice tells you
+that Bob is having a bad day. Bob tells you that he and Alice are
+both having the same type of day. Can you trust the advice you
+receive from Alice during your call?
+
+Step 1: Identify the rules of the puzzle
+l Good day = tell the truth
+l Bad day = lie!
+
+Step 2: Assign propositions to the key concepts in the puzzle
+l a º “Alice is having a good day”
+l b º “Bob is having a good day”
+
+Step 3: Make assumptions and reason logically
+
+Another example
+Consider a group of friends: Frank, Anna, and Chris. If
+Frank is not the oldest, then Anna is. If Anna is not the
+youngest, then Chris is the oldest. Determine the
+relative ages of Frank, Anna, and Chris.
+Propositions:
+l
+l
+l
+l
+
+f = “Frank is the oldest”
+a = “Anna is the oldest”
+a’ = “Anna is the youngest”
+c = “Chris is the oldest”
+
+Rules:
+1. ¬f ® a
+2. ¬a’ ® c
+
+Step 3: Make assumptions and reason logically
+
+Sometimes no solution is a solution!
+Alice and Bob are technical support agents. Alice says
+“I am having a good day.” Bob says “I am having a good
+day.” Can you trust either Alice or Bob?
+
+Step 1: Identify rules
+l Good day = tell the truth
+l Bad day = lie
+
+Step 2: Assign propositions
+l a = Alice is having a good day
+l b = Bob is having a good day
+
+Step 3: Make assumptions and reason logically
+
+In-class exercises
+Problem 1: Alice and Bob are technical support agents
+working to fix your computer. Alice tells you that Bob
+is having a bad day today and that you should expect a
+long wait before your computer is fixed. Bob tells you
+not to worry, Alice is just having a bad day—your
+computer will be ready in no time.
+
+Question: Can you draw any conclusions about when
+your computer will be fixed? If so, what
+can you learn?
+
+Propositional equivalences: preliminaries
+Definition: A tautology is a compound proposition that is
+always true, regardless of the truth values of
+the propositions occurring within it.
+Definition: A contradiction is a compound proposition
+that is always false, regardless of the truth
+values of the propositions occurring within it.
+Definition: A contingency is a compound proposition
+whose truth value is dependent on the
+propositions occurring within it.
+
+Examples
+Are the following compound propositions tautologies,
+contradictions, or contingencies?
+p
+¬p
+p Ú ¬p
+n p Ú ¬p
+
+tautology
+
+n ¬p Ù p
+
+contradiction
+
+npÚq
+
+contingency
+
+T
+
+F
+
+T
+
+F
+
+T
+
+T
+
+p
+
+¬p
+
+p Ù ¬p
+
+T
+
+F
+
+F
+
+F
+
+T
+
+F
+
+p
+
+q
+
+pÚq
+
+T
+
+T
+
+T
+
+T
+
+F
+
+T
+
+F
+
+T
+
+T
+
+F
+
+F
+
+F
+
+What are logical equivalences and why are they
+useful?
+Definition: Compound propositions p and q are
+logically equivalent if p « q is a tautology.
+The notation p º q means that p and q are
+logically equivalent.
+Logical equivalences are extremely useful!
+l Aid in the construction of proofs
+l Allow us to simplify compound propositions
+
+Example: p ® q º ¬p Ú q
+
+How do we
+prove this type
+of statement?
+
+It is easy to prove propositional equivalences
+We can prove simple logical equivalences using our
+good friend the truth table!
+Prove: p ® q º ¬p Ú q
+p
+
+q
+
+¬p
+
+¬p Ú q
+
+p®q
+
+T
+
+T
+
+F
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+F
+
+F
+
+T
+
+T
+
+T
+
+T
+
+F
+
+F
+
+T
+
+T
+
+T
+
+DeMorgan’s laws allow us to distribute negation
+over compound propositions
+If “p or q” isn’t true, then
+neither p nor q is true
+
+Two laws:
+l ¬(p Ú q) º ¬p Ù ¬q
+l ¬(p Ù q) º ¬p Ú ¬q
+
+If “p and q” isn’t true, then at
+least one of p or q is false
+
+Prove: ¬(p Ú q) º ¬p Ù ¬q
+p
+
+q
+
+pÚq
+
+¬(p Ú q)
+
+¬p
+
+¬q
+
+¬p Ù ¬q
+
+T
+
+T
+
+T
+
+F
+
+F
+
+F
+
+F
+
+T
+
+F
+
+T
+
+F
+
+F
+
+T
+
+F
+
+F
+
+T
+
+T
+
+F
+
+T
+
+F
+
+F
+
+F
+
+F
+
+F
+
+T
+
+T
+
+T
+
+T
+
+Using DeMorgan’s laws
+Use DeMorgan’s laws to negate the following expressions:
+n “Bob is wearing blue pants and a sweatshirt”
+lb Ù s
+l ¬(b Ù s) º ¬b Ú ¬s
+l Bob is not wearing blue pants or is not wearing a
+sweatshirt
+n “I will drive or I will walk”
+ld Ú w
+l ¬(d Ú w) º ¬d Ù ¬w
+l I will not drive and I will not walk
+
+In-class exercises
+Problem 2: Prove that ¬(p Ù q) and ¬p Ú ¬q are
+logically equivalent, i.e., ¬(p Ù q) º ¬p Ú ¬q. This is
+the second DeMorgan’s law.
+Problem 3: Use DeMorgan’s laws to negate the
+following propositions:
+l Today I will go running or ride my bike
+l Tom likes both pizza and beer
+
+Sometimes using truth tables to prove logical
+equivalencies can become cumbersome
+Recall that for an equivalence with n propositions, we
+need to build a truth table with 2n rows
+l Fine for tables with n = 2, 3, or 4
+l Consider n = 30—we would need 1,073,741,824 rows in the
+truth table!
+
+Another option: Direct manipulation
+of compound propositions using
+known logical equivalencies
+
+There are many useful logical equivalences
+Equivalence
+
+Name
+
+pÙTºp
+pÚFºp
+
+Identity laws
+
+pÙFºF
+pÚTºT
+
+Domination laws
+
+pÙpºp
+pÚpºp
+
+Idempotent laws
+
+¬(¬p) º p
+
+Double negation law
+
+pÚqºqÚp
+pÙqºqÙp
+
+Commutative laws
+
+More useful logical equivalences
+Equivalence
+
+Name
+
+(p Ù q) Ù r º p Ù (q Ù r)
+(p Ú q) Ú r º p Ú (q Ú r)
+
+Associative laws
+
+p Ù (q Ú r) º (p Ù q) Ú (p Ù r)
+p Ú (q Ù r) º (p Ú q) Ù (p Ú r)
+
+Distributive laws
+
+¬(p Ú q) º ¬p Ù ¬q
+¬(p Ù q) º ¬p Ú ¬q
+
+DeMorgan’s laws
+
+p Ú (p Ù q) º p
+p Ù (p Ú q) º p
+
+Absorption laws
+
+p Ú ¬p º T
+p Ù ¬p º F
+
+Negation laws
+
+More equivalencies in the book!
+
+Prove that (p Ù q) ® (p Ú q) is a tautology
+
+Prove: (p ® q) Ú (p ® r) º p ® (q Ú r)
+
+Final Thoughts
+n Logic can help us solve real world problems and play
+challenging games
+n Logical equivalences help us simplify complex
+propositions and construct proofs
+l More on proofs later in the course
+
+n Next:
+l Predicate logic and quantification
+l Please read section 1.4
+
+

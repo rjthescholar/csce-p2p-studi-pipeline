@@ -1,0 +1,915 @@
+6
+
+Memory
+Management
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+Our Story So Far
+You Hear a Voice Whisper: “The Memory Layout is a Lie”
+
+2
+
+Reallocating our thoughts
+• A program has several sections:
+• Code
+• Static data
+• Stack
+• Heap
+
+• Today, we take a deeper dive at how dynamic
+memory is allocated in the heap.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+3
+
+Reallocating our thoughts
+• We have looked at
+
+and
+
+.
+
+• They stake out space in the heap and return an
+address.
+• Right now, we live in a nice ideal world.
+• No other programs are running.
+• We have access to all of the memory.
+• Muhahahaha!!
+
+• The OS is lying to our program.
+• This memory is… virtual... reality.
+• We will investigate this lie later in the course.
+
+Potential Layout
+(32-bit addresses)
+
+stack
+currently unused but
+available memory
+
+heap
+static data
+
+code
+4
+
+The World of Allocation
+It is a puzzle without any optimal solution. Welcome to computers!
+
+5
+
+A heap of possibilities
+• Stack access often does not deviate much.
+
+Potential Layout
+(32-bit addresses)
+
+• We allocate a little bit at a time.
+• We allocate and free the memory VERY often.
+
+stack
+• Heap allocations have many access patterns that are
+possible.
+• You might allocate a lot at a time and keep it around for a
+long time. Or a short time.
+• You might allocate a lot of small things, instead.
+• Maybe you do a little bit of everything?
+
+• Often, such patterns are not easy to predict.
+• Do you get a big file as input? A small file?
+
+currently unused but
+available memory
+
+heap
+static data
+
+code
+6
+
+A heaping helping of good luck
+• Allocations could happen in a nice order.
+• When something is allocated, it can be allocated
+after everything else.
+
+stack
+
+available memory
+available memory
+available memory
+
+• When freed, it makes room for new things.
+
+• IF ONLY.
+• I mean, it’s possible… but like…
+• the heap and stack are different things for a reason.
+
+heap
+static data
+code
+7
+
+Digital potholes… as annoying as real ones
+• Small allocations interfere with large ones.
+• When small gaps interfere with allocation, this is
+called fragmentation.
+
+stack
+available memory
+available memory
+available
+available memory
+memory
+available memory
+
+Next
+Allocation
+
+Ugh
+
+?
+if we had omniscience of future
+allocations, we could avoid this…
+but we can’t know ahead of time!
+
+heap
+static data
+code
+8
+
+The worst case
+stack
+
+• When you allocate a lot of small things…
+• Free every other one…
+• And then attempt to allocate a bigger thing…
+
+• Even though there is technically enough memory…
+• There is no continuous space.
+• Therefore, our naïve
+will fail.
+
+• We have to come up with some strategy.
+
+???
+
+heap
+static data
+code
+9
+
+Moving is never easy
+stack
+
+• Why not move things around??
+• A defragmentation process/algorithm
+
+• Moving around something in the heap is hard!
+• Any pointers referring to data within a block must be updated.
+• Finding these pointers automatically is effectively as difficult
+as garbage collection.
+
+• Because of this, moving blocks around is discouraged.
+(Easier to solve it another way.)
+???
+
+heap
+static data
+code
+10
+
+Moving is NEVER easy
+stack
+available memory
+
+• When blocks move, pointers
+to anything within them must be updated.
+• This is hard to keep track of!
+• C does not check validity of pointers after
+
+heap
+static data
+code
+11
+
+Stressing it out
+• If we allocate a large array it will be allocated on the
+heap somewhere.
+• Other allocations can also happen, and they go “above”
+that array.
+
+stack
+
+available memory
+
+int arr[200]
+
+• What happens when you need to append a 101st
+element to this array?
+• Uh oh!
+old
+data:
+int arr[100]
+int
+arr[100]
+
+• You will need to allocate more space.
+• And then copy the array contents.
+• Free the old array.
+• How long does that take?
+
+fragmentation
+
+heap
+12
+
+Stressing it out: Big Arrays
+• This happens in very practical situations!
+• Reallocating means getting rid of a small thing
+• And replacing it with a larger thing.
+• You could have TiBs of memory and this will be a problem.
+
+stack
+
+available memory
+
+• This affects performance: (in terms of writes:)
+• Appending item arr[0]: 𝑂 1
+• Appending item arr[1]: 𝑂 1
+• …
+• Appending item arr[99]: 𝑂 1
+• Appending item arr[100]: 𝑂 𝑛 + 1 oh no!
+
+• When you would overflow the buffer…
+• You then need to copy all previous values as well.
+
+old
+data:
+int arr[100]
+int
+arr[100]
+
+heap
+13
+
+Stressing it out: Performance Consistency
+• Big arrays want to be continuous.
+• Ensuring continuous space is difficult when you do not know
+how much you will ultimately need.
+
+• This is exactly why linked lists exist!
+
+stack
+
+available memory
+
+• Since a linked list allocates on every append.
+• Each append takes the same amount of time.
+
+• However, everything is a trade-off.
+• Dang it!!!
+• One cost is extra overhead for metadata.
+• Linked list traversal can stress memory caches.
+• It means traversing the array is slower.
+• However, we will mostly ignore this for now.
+
+old
+data:
+int arr[100]
+int
+arr[100]
+
+heap
+14
+
+The Linked List
+A story about trade-offs.
+
+15
+
+What is a linked list?
+• A linked list is a non-continuous data structure representing an ordered list.
+• Each item in the linked list is represented by metadata called a node.
+• This metadata indirectly refers to the actual data.
+• Furthermore, it indirectly refers to at least one other item in the list.
+
+Node
+
+“struct” required since
+Node is not technically
+defined until after it is
+defined!
+
+16
+
+Keeping ahead of the list.
+• Creation of a list occurs when one allocates a single node and tracks it in a
+pointer. This is the head of our list (first element.)
+
+Node
+
+17
+
+Adding some links to our chain
+• If we want to append an item, we can add a node anywhere!
+
+“tail”
+
+“node”
+
+Remember the
+‘\0’ sentinel!
+
+18
+
+We can add them anywhere!!
+• Consider what happens if we update our append to take any Node:
+
+“curNode”
+
+“node”
+
+Tail
+
+19
+
+We can add them anywhere!!
+• This function has very consistent performance (constant time):
+
+• The append always allocates the same amount.
+• It always copies the same amount.
+• Compare to a big array where you may have to copy the entire thing to
+append something new!
+
+Traversal… on the other hand…
+• Accessing an array element is generally very simple.
+•
+is the same as
+because its location is very well-known!
+• This is because array items are continuous in memory. Not true for linked lists!
+
+• Here is a function that performs the equivalent for linked lists:
+
+Q: How many times is memory accessed relative to the requested index?
+
+21
+
+Removing… on the other, other hand!
+• One nice thing about linked lists
+is their flexibility to changing
+shape.
+• I used to be able to bend a lot
+better, too, when I was in my 20s.
+Alas.
+Can’t find item at index.
+We are deleting the head.
+
+• Since we don’t have a way to go
+“backward”
+• We first find the node we want to
+delete (
+)
+• Keeping track of the node of
+– (
+)
+• Rewire
+to cut out
+.
+
+Returns new head (or old head if unchanged).
+
+22
+
+Removing… on the other, other hand!
+• This looks complex, but it really is
+a simple traversal.
+• So it takes 𝑂 𝑛 to find the item.
+• And it performs a simple update
+and deallocation. (quick to do)
+
+• A big array, on the other hand.
+• It can find the element to remove
+immediately.
+• However, removing it means
+shifting over every item after it left.
+• That can be an expensive update!
+(Memory is slow!!)
+23
+
+On your own!
+
+Think about the code you would need to do any of the following:
+• Delete/free the entire linked list.
+• Sort a linked list.
+• Append a linked list to an existing one.
+• Copy a subset of a linked list to a new list.
+Often, operations can be abstracted in such a way that all of these can be written relatively
+simply.
+Consider the performance of these operations compared to an Array.
+24
+
+Linked lists … link you … to the world!
+• Consider how much cleaner you can make certain operations if you tracked the
+previous node as well.
+• This is a doubly linked list.
+• This is typically “double-ended” as well: keeping track of both head and tail.
+
+Node
+
+Node
+
+Node
+
+25
+
+Seeing the trees through the forest
+• A binary tree can be represented by the same nodes as a linked list.
+• In this case, you have a left and right child node instead of next and prev.
+Node
+
+• The operations are
+very different, though.
+
+Node
+
+Node
+
+Node
+
+26
+
+De-Stressing it out: Linked Lists
+• We know big arrays want to be continuous.
+• However, ensuring continuous space is difficult when you do
+not know how much you will ultimately need.
+
+• Linked lists allocate very small chunks of metadata.
+• These chunks can be allocated easily on-demand.
+• And then deallocated without creating wide gaps.
+
+stack
+
+available memory
+
+• This reduces fragmentation.
+• Deallocating always leaves a small amount of room.
+• It is always the exact amount needed to append!
+• However, it is all at the expense of complexity!
+• And traversal can be expensive (but we can find ways to deal
+with that.)
+
+some other data
+
+heap
+27
+
+Implementing Malloc
+It really sounds like some kind of He-Man or She-Ra villain of the week.
+
+28
+
+The malloc essentials
+• The
+following:
+
+stack
+
+function does the
+
+• Allocates memory of at least
+bytes.
+• Returns the address to that block of memory (or
+error)
+
+on
+
+available memory
+
+• Essentially, your program has a potentially large chunk of
+memory.
+• The
+function tears off a piece of the chunk.
+• Also
+must then allow that chunk to be reused.
+• The job of
+is to do so in the “best” way to reduce
+fragmentation.
+We want to avoid fragmentation
+29
+
+Choosing where to allocate
+• Our first problem is, when
+we tear off a chunk?
+
+is called, where do
+
+• We can do a few simple things:
+• First-Fit: start at lowest address, find first available section.
+
+stack
+available memory
+
+• Fast, but small blocks clog up the works.
+
+• Next-fit: Do “First-Fit” but start where we last allocated.
+• Fast and spreads small blocks around a little better.
+
+• Best-Fit: laboriously look for the smallest available section to
+divide up.
+
+Last Allocated
+
+• Slow, but limits fragmentation.
+
+???
+30
+
+Managing that metadata!
+• You have a whole section of memory to divide up.
+• You need to keep track of what is allocated and what is free.
+• One of the least complicated ways of doing so is to use… hmm…
+• A linked list! (or two!) We know how to do this!!
+
+• We can treat each allocated block (and each empty space) as a node in a linked
+list.
+• Allocating memory is just appending a node to our list.
+
+• The trick is to think about how we want to split up the nodes representing
+available memory.
+
+31
+
+Tracking memory: Our fresh new world.
+• Let’s orient our memory visually horizontally.
+• We have control over EVERY byte of it. We can place metadata ANYWHERE.
+
+• Every
+
+is responsible for allocating a block of memory.
+
+• How, then, do we manage where things are allocated and where is empty space?
+• We can have “allocation” reduce to creating a new node in a linked list.
+
+available memory
+
+We have the power to write data ANYWHERE!
+So where do linked list nodes go?
+
+32
+
+Linked lists are our friend, here
+• We will augment our normal doubly linked list to be useful for tracking the size of
+the block it represents. (an explicit list allocator)
+• Here, we will maintain a single linked lists of all allocated or free blocks.
+• The size field denotes how big the block is (how much is used/available.)
+• We need to know when a block represents allocated space or if it is free.
+• Hmm… we could use a single bit to denote that. Or… negativity!
+• The
+
+is NEVER
+
+. In fact,
+
+fails when requesting size of
+
+.
+
+AllocNode
+
+We can make other clever
+space optimizations, but we
+will start with this.
+
+Signed! Negative number
+means a free block.
+
+33
+
+Tracking memory: High level metadata
+• We can keep track of used/empty spaces cheaply by having linked list nodes
+at the beginning of them. The nodes track the size of the space.
+• Here we have an allocated block followed by a free and then allocated block.
+• The metadata for the linked list is just smashed into the block itself.
+
+available memory
+
+Q: What happens when we write over the block boundary?
+
+34
+
+Implementing
+• To allocate some amount of space, we find a free block that is at least that
+size + metadata size. (Which one? Well, first-fit and friends apply!)
+• Then we will want to split that free block.
+x
+
+x
+
+x
+
+available memory
+
+35
+
+Implementing
+Carefully negate size
+
+• Allocating means finding a free
+block big enough.
+• Including the metadata size.
+
+• Then splitting it into a used block
+and a smaller free block.
+Linked list traversal; 𝑂(𝑛)
+
+• This is incomplete. (Why?)
+
+Linked list append; 𝑂(1)
+
+• (you don’t always split)
+
+Recall that we made size
+negative for a free block.
+Positive means non-free.
+is negative.
+Think about it!
+Q: This is first-fit. What should be added to implement next-fit? Best-fit?
+36
+
+Implementing
+• When freeing the middle block, you will create empty space.
+• Consider allocations… it’s somewhat difficult to see the empty space.
+• You have “false fragmentation,” so you will want to merge adjacent free blocks.
+
+available memory
+
+37
+
+Implementing
+• So, when we free blocks, we look to the left. We look to the right.
+• We coalesce the newly free block with ANY adjacent free blocks.
+• First one…
+• Then the other. (And it is linked list node removal; a constant time operation!)
+
+available memory
+
+38
+
+Implementing
+Header is just before ptr
+
+• Finding the header metadata
+node is simple.
+• Look at our
+
+•
+
+’s
+
+.
+
+is slightly less complex.
+• It does not have to search.
+
+• Where
+•
+
+Resembles linked list
+delete; 𝑂(1)
+
+splits nodes
+merges them.
+
+• Whenever a block is freed next
+to an existing one…
+• It should merge them!
+
+However it subtracts from size
+(which makes reflect a larger space)
+
+• Consider how much a doubly
+linked list helped.
+Q: Are any changes required here for best-fit?
+
+39
+
+Thinking about next-fit
+
+• With a typical first-fit version of the malloc function…
+• We can now consider simple improvements.
+• Traversing the list is expensive! 𝑂 𝑛 !
+
+• Next-fit helps because we start from the last allocated item.
+• Generally, what do you think comes after the last allocated item.
+• Consider the normal operation…
+• It splits the node and creates free space.
+
+• Therefore, seems likely free space will exist near the last allocation.
+• Perhaps causing the average case for malloc to bias itself toward 𝑂(1)
+• However, all strategies have their own worst-case!!
+• Think about what that might be.
+
+40
+
+Thinking about best-fit
+• Best-fit, on the other hand, is not about avoiding traversal.
+• Instead, we focus on fragmentation.
+
+• Allocating anywhere means worst-case behavior splits nodes poorly.
+• If we find a PERFECT fit, we remove fragmentation.
+
+• Traversal is still bad… and we brute force the search...
+• But, hey, solve one problem, cause another. That’s systems!
+• Fragmentation may indeed be a major issue on small memory systems.
+
+• What is the best of both worlds? Next-fit + Best-fit?
+• Hmm.
+• Works best if you keep large areas open.
+CS/COE 0449 – Spring 2019/2020
+
+41
+
+Other thoughts
+• Don’t need
+pointers since adding size to the block’s address will also
+move there. (unusually, the linked list is always ordered!)
+• You don’t need to keep the used blocks in the list.
+• More complex to understand but removes implementation complexity.
+• Free nodes point to the next and previous free nodes. Used nodes point to their
+neighbors. Traversal is improved since it only visits free nodes; still 𝑂(𝑛)
+
+• The idea is to only keep track of necessary metadata.
+• You only coalesce when free blocks are adjacent.
+• With a list of only free blocks, you can easily tell when that condition is met…
+• just see if
+
+is the same address as
+
+• The only other concern is getting from a used block you want to free to its
+neighboring free block. So those have normal pointers.
+
+42
+
+Explicit free lists: giving you VIP access
+• When you allocate, you go through the free list.
+• You don’t care about allocated nodes.
+
+• When you free, you only care about coalescing neighbors.
+
+available memory
+
+Q: Do free nodes need a
+
+pointer?
+
+43
+
+Trees are your buddy
+
+• Recall that we easily took the ideas around linked lists and made binary trees.
+• You can manage memory with a binary tree as well.
+
+• This is called a buddy allocator.
+
+45
+
+Divide and conquer
+• Buddy allocators divide memory into halves that are powers of two.
+• Can cause internal fragmentation
+
+▪ The total memory,
+, is a
+power of two.
+▪ Each split is, then, also a
+power of two.
+
+Allocation is not a power of two: internal fragmentation
+
+46
+
+Allocating with trees
+• Assuming
+
+is
+
+, and we allocate 242MiB:
+
+• We travel left until we find a block
+that fits.
+
+▪ We travel back up when we can’t go
+further left and go right.
+▪ When we find a
+unsplit node that
+fits, we allocate
+there.
+
+47
+
+Burying the hatchet: Chopping the trees
+• Let’s allocate 64MiB. So nice, we will allocate it twice.
+• Again a depth-first search to find
+the first unsplit node that fits us.
+
+▪ This node is fine! Allocate that!
+▪ Do it again!
+▪ When we find a
+unsplit node that is
+too big, we split in
+half and keep going.
+
+CS/COE 0449 – Spring 2019/2020
+
+48
+
+Coalescing friendships (animated)
+• Coalescing happens because every block has a buddy!
+• When both sides of a split node
+are free, coalesce them!
+
+▪ If this keeps happening, it will
+coalesce larger spaces.
+▪ Repeating as
+much as
+necessary.
+
+x
+
+x
+
+x
+49
+
+Thinking like an arborist (but only if you are feeling listless)
+• How does a tree-based
+allocation system deal with
+fragmentation?
+• What are some immediate
+drawbacks from using a
+tree scheme?
+
+available
+memory
+
+• Can you imagine a
+possibility of using a
+hybrid approach?
+50
+
+Lies and Damned Lies!
+• Does your program actually own all of memory?
+• On modern systems, absolutely heckin not.
+
+• Your program still has to request memory allocations from the OS.
+• Generally,
+takes on this responsibility behind the scenes.
+• In Linux, you request pages in the normal heap in LIFO order with
+• Or, you request specific virtual memory pages with
+.
+
+.
+
+• What is a segmentation fault.
+• Segments are the “code”, “data”, “heap” separation. You fault by doing something
+the segment does not allow. (write to read-only memory)
+• A historic misnomer since we actually have paging, not segmented memory.
+
+• What is a “page”? Virtual memory??
+• It replaced segments and is part of the much grander lie about sharing memory
+with multiple applications at the same time. More on this later!
+
+51
+
+I want to know MORE
+• If you find this topic interesting, it is a WIDE area of research.
+• Malloc is generally more complex or specialized these days than the options
+here.
+• Or some kind of hybrid, as the need arises.
+
+• The Linux kernel makes use of a Slab Allocator
+• https://en.wikipedia.org/wiki/Slab_allocation
+
+• Modern C (glibc) uses a hybrid malloc:
+• https://www.gnu.org/software/libc/manual/html_node/The-GNU-Allocator.html
+
+• Professor Knuth has written about several classic algorithms.
+• Buddy Allocation comes from the 60s. Groovy.
+52
+
+

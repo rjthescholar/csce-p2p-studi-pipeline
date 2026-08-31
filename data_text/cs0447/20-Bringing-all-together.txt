@@ -1,0 +1,2226 @@
+#14
+CS 0447
+Introduction to
+Computer Programming
+
+The single-cycle CPU
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+● OMETs don’t forget them!
+
+2
+
+The single-cycle machine
+● we’ve been talking about a single-cycle machine and building one for project 3
+● this means each instruction takes one clock cycle to execute
+
+add t0, t1, t2
+
+sb t0, 4(s0)
+
+store sum in t0
+do the addition...
+
+calculate the
+address...
+
+store value
+in memory
+
+In this example each instruction ends on the rising edge of the clock
+
+since that's when the registers store their values
+
+3
+
+A global view
+0
+M
+u
+x
+ALU
+Add result
+
++
+
+4
+
+4
+
+immediate
+(jump target) PCSrc
+
+PC
+
+31-26
+
+Add
+
+25-21
+
+PC
+Instruction [31 26]
+
+Instruction 32
+Memory
+
+Read
+address
+
+Control
+
+15-11
+10-6
+
+Instruction [25 21]
+
+5-0
+
+Instruction [20 16]
+
+15-0
+
+Instruction
+[31– 0]
+Instruction
+memory
+
+20-16
+
+25-0
+M
+0
+
+Instruction [15 11]
+
+u
+x
+1
+
+opcode
+
+Shift
+left 2
+
+RegDst
+Branch
+rs
+MemRead
+MemtoReg
+
+PCSrc
+
+rt
+
+ALUOp
+MemWrite
+rd
+ALUSrc
+RegWrite
+
+Data
+
+RegWrite
+
+shamt
+
+MemWrite
+
+Data
+Memory
+
+Read
+funct1
+register
+
+Read
+data 1
+Read
+immediate
+register
+2
+Registers Read
+Write
+data 2
+target
+register
+
+ALU ALU
+Register
+0
+result
+M File
+
+Write
+data
+
+u
+x
+1
+
+\
+Instruction [15 0]
+
+1
+
+16
+
+Address
+Zero
+
+ALU
+
+Write
+data
+
+RegDataSrc
+32
+
+Sign
+extend
+
+ALU field
+imm
+control
+
+Read
+data
+
+Address
+
+ALUSrc
+
+Data
+memory
+
+1
+M
+u
+x
+0
+
+ALUOp
+
+Instruction [5 0]
+
+4
+
+A global view
+How big was an
+instruction in MIPS?
+
+0
+M
+u
+x
+ALU
+Add result
+
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+PC-in
+instruction-out
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+Bit Fields being
+decoded
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+5
+
+A global view
+0
+
+The brain!
+
+M
+u
+x
+ALU
+Add result
+
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Why is this?
+
+Zero
+ALU ALU
+result
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Instruction [5 0]
+
+Sign
+extend
+
+Read
+data
+
+Address
+
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Separate ALU
+control, why?
+6
+
+A global view
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Immediates are
+Instruction [5 0]
+signed
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+7
+
+A global view
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+
+Recognise this?
+
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+8
+
+A global view
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+Handling those
+branches!
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+9
+
+Executing an r-type instruction
+
+10
+
+Executing an r-type
+0
+
+The instruction is read
+and PC is incremented
+
+M
+u
+x
+ALU
+Add result
+
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+11
+
+Executing an r-type
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+Two registers (rs, rt) are read, and the
+control unit determines the signals
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+12
+
+Executing an r-type
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The ALU performs the operation
+according to the lower 6-bits of the
+instruction (func)
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+13
+
+Executing an r-type
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The result is written back to the
+register file (rd)
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+14
+
+Executing a lw instruction
+
+15
+
+Executing an i-type : e.g., lw
+0
+
+The instruction is read
+and PC is incremented
+
+M
+u
+x
+ALU
+Add result
+
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+16
+
+Executing an i-type : e.g., lw
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+One register (rs) is read, and the
+control unit determines the signals
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+17
+
+Executing an i-type : e.g., lw
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The ALU adds the register value with
+the immediate (offset) extended to
+32-bits.
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+18
+
+Executing an i-type : e.g., lw
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The ALU result is the address we want
+to read. The memory is read in that
+address.
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+19
+
+Executing an i-type : e.g., lw
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The memory data is stored in the
+register (rt)
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+20
+
+Executing a beq instruction
+
+21
+
+Executing an i-type : e.g., beq
+0
+
+The instruction is read
+and PC is incremented
+
+M
+u
+x
+ALU
+Add result
+
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+22
+
+Executing an i-type : e.g., beq
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+Two registers (rs, rt) are read, and the
+control unit determines the signals. The
+immediate is shifted and added to PC+4
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+23
+
+Executing an i-type : e.g., beq
+0
+M
+u
+x
+ALU
+Add result
+Add
+
+Instruction [31 26]
+
+Control
+
+Instruction [25 21]
+PC
+
+Read
+address
+
+Instruction
+memory
+
+Instruction [15 11]
+
+PCSrc
+
+ALUOp
+MemWrite
+ALUSrc
+RegWrite
+Read
+register 1
+
+Instruction [20 16]
+Instruction
+[31– 0]
+
+Shift
+left 2
+
+RegDst
+Branch
+MemRead
+MemtoReg
+
+4
+
+1
+
+0
+M
+u
+x
+1
+
+Read
+data 1
+Read
+register 2
+Registers Read
+Write
+data 2
+register
+
+0
+M
+u
+x
+1
+
+Write
+data
+
+Zero
+ALU ALU
+result
+
+Address
+
+Write
+data
+Instruction [15 0]
+
+The ALU subtracts the contents of
+both registers. Depending on the
+result, the value of PC is set.
+
+16
+
+Sign
+extend
+
+Read
+data
+Data
+memory
+
+1
+M
+u
+x
+0
+
+32
+ALU
+control
+
+Instruction [5 0]
+
+24
+
+Executing a jump instruction
+
+25
+
+Extending the CPU
+
+26
+
+Executing an j-type
+
+The instruction is read and PC is
+incremented
+27
+
+Executing an j-type
+
+The new PC value is obtained by shifting
+the target field of the instruction left by 2.
+28
+
+Real-world clocking issues
+
+29
+
+Remember the Critical Path?
+● the critical path is the path through a circuit that requires the longest series of
+sequential operations
+o they depend on each other and can't be done in parallel!
+
+30
+
+How fast can we clock it?
+● what's the thing that limits the clock speed?
+o the critical path. in our case it happens to be...
+o and here is the Achilles' heel of a single-cycle datapath:
+
+Memory is
+SLOW.
+A.
+F.
+
+rd
+rs
+rt
+
+Data
+Data
+Memory
+
+Address
+Register
+File
+
+ALU
+
+imm field
+
+31
+
+Single-cycle CPU
+Any instruction executes during a single clock cycle
+Length of the clock cycle must accommodate the longest instruction
+● Faster instructions waste cycle time
+
+Clock cycle
+
+lw t0,0(t1)
+
+add t2,t2,t3
+
+0
+
+Mem
+
+Reg
+
+1
+
+Mem
+
+Reg
+
+Mem
+
+Reg
+
+Reg
+
+32
+
+It's bad.
+● typical access times for modern DDR4 RAM is 12-15 ns
+o that's our single-cycle CPU's critical path time
+● the inverse of that is... 66-83 MHz
+o YEESH
+● the lw and sw instructions are holding us back
+● all the other instructions are gonna be WAY faster
+
+add
+or
+
+beq
+lw/sw
+
+33
+
+

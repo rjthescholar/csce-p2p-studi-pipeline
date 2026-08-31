@@ -1,0 +1,704 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines:
+• Homework 11: due on 4/18
+• Project 3: Late due date on 4/13
+• Late penalty waived
+
+•
+•
+•
+•
+•
+•
+
+Lab 4: due on 4/15
+Quiz 3: due on 4/15
+Homework 12: due on 4/25
+Lab 5: due on 5/2
+Project 4 and Quiz 4: due on 5/2
+Bonus Opportunities
+• Bonus Homework: due on 5/2
+• Course Post-Test: due on 5/2
+• Bonus point for all when OMET response rate >= 80%
+CS 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Previous lecture …
+• How do device drivers program I/O devices?
+
+• Answer: three methods
+• polling
+• Interrupts
+• DMA
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+3
+
+•
+
+Muddiest Points (1/2)
+RAIDs
+•
+
+Difference between RAID 4 and 5
+
+•
+
+So is the log-structured file system the same as journaling, or is that
+different? If it is the same, does that mean all journaling systems
+also track file version histories?
+
+•
+
+Interrupt driven I/O
+
+•
+
+polling
+
+•
+
+Other situations like that bug/feature example? Seems interesting.
+
+•
+
+In file block cache data structures slide, how do you track hash table
+collisions to make the chains?
+
+•
+
+voltage about 0/1 on solid state disk
+
+•
+
+Can you explain again why SSDs degrade over time?
+
+•
+
+Single bus versus dual-bus
+
+•
+
+What tradeoff exists having larger disk caches?
+
+•
+
+memory mapped and separate io spaces
+CS 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Muddiest Points (2/2)
+
+• can you please release final preparation material a bit
+earlier? i’m nervous for the final and want to start
+studying ahead of time
+• not about the lecture specifically but in general: are
+we allowed to work with each other on midterm exam
+corrections or should they be done alone?
+
+• Are we really going to having 8am final?
+• Everything was clear
+• Nothing good. Need to review myself
+
+• All good this lecture, though things went a bit fast
+CS 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Polling
+
+copy_from_user (buffer, p, count); // copy into kernel buffer
+for (j = 0; j < count; j++) {
+// loop for each char
+while (*printer_status_reg != READY)
+;
+// wait for printer to be ready
+*printer_data_reg = p[j]; // output a single character
+}
+return_to_user();
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Hardware’s view of interrupts
+
+Bus
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Interrupt-driven I/O
+copy_from_user (buffer, p, count);
+j = 0;
+enable_interrupts();
+while (*printer_status_reg != READY)
+;
+*printer_data_reg = p[0];
+scheduler(); // and block user
+if (count == 0) {
+unblock_user();
+} else {
+j++;
+*printer_data_reg = p[j];
+count--;
+}
+acknowledge_interrupt();
+return_from_interrupt();
+
+Code run by system call
+
+Code run at interrupt time
+(Interrupt handler)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+8
+
+What happens on an interrupt
+• Set up stack for interrupt service procedure
+• Ack interrupt controller, reenable interrupts
+
+• Copy registers from where saved
+• Run service procedure
+• (optional) Pick a new process to run next
+• Set up MMU context for process to run next
+• Load new process' registers
+• Start running the new process
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+9
+
+Direct Memory Access (DMA) operation
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+10
+
+DMA
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+11
+
+I/O using DMA
+copy_from_user (buffer, p, count);
+set_up_DMA_controller();
+scheduler(); // and block user
+
+Code run by system call
+
+acknowledge_interrupt();
+unblock_user();
+return_from_interrupt();
+
+Code run at interrupt time
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+12
+
+Disk drive structure
+• Data stored on surfaces
+•
+
+Up to two surfaces per platter
+
+•
+
+One or more platters per disk
+
+head
+
+sector
+
+• Data in concentric tracks
+•
+•
+
+Tracks broken into sectors
+
+platter
+
+• 256B-1KB per sector
+
+track
+
+Cylinder: corresponding tracks
+on all surfaces
+
+cylinder
+
+• Data read and written by
+heads
+•
+•
+
+Actuator moves heads
+
+surfaces
+
+spindle
+
+Heads move in unison
+CS 1550 – Operating Systems – Sherif Khattab
+
+actuator
+13
+
+•
+
+•
+
+Disk scheduling algorithms
+Schedule disk requests to minimize disk seek time
+•
+
+Seek time increases as distance increases (though
+not linearly)
+
+•
+
+Minimize seek distance -> minimize seek time
+
+Disk seek algorithm examples assume a request
+queue & head position (disk has 200 cylinders)
+•
+
+Queue = 100, 175, 51, 133, 8, 140, 73, 77
+
+•
+
+Head position = 63
+
+Outside edge
+8
+
+Inside edge
+51
+
+73
+77
+
+read/write head position
+
+100
+
+133
+140
+
+175
+
+disk requests
+(cylinder in which block resides)
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+14
+
+Disk Arm Scheduling
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+15
+
+First-Come-First Served (FCFS)
+• Requests serviced in the order in which they arrived
+•
+•
+
+Easy to implement!
+May involve lots of unnecessary seek distance
+
+• Seek order = 100, 175, 51, 133, 8, 140, 73, 77
+• Seek distance = (100-63) + (175-100) + (175-51) + (133-51) +
+(133-8) + (140-8) + (140-73) + (77-73) = 646 cylinders
+read/write head start
+
+100
+175
+
+51
+133
+8
+140
+73
+77
+CS 1550 – Operating Systems – Sherif Khattab
+
+16
+
+FCFS Example 2
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+17
+
+•
+
+Shortest Seek Time First (SSTF)
+Service the request with the shortest seek time from the current
+head position
+•
+•
+
+Form of SJF scheduling
+May starve some requests
+
+•
+
+Seek order = 73, 77, 100, 133, 140, 175, 51, 8
+
+•
+
+Seek distance = 10 + 4 + 23 + 33 + 7 + 35 + 124 + 43 = 279
+cylinders
+
+read/write head start
+
+73
+77
+
+51
+8
+
+100
+
+133
+
+140
+CS 1550 – Operating Systems – Sherif Khattab
+
+175
+18
+
+SSTF Example 2
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+19
+
+•
+
+SCAN (elevator algorithm)
+Disk arm starts at one end of the disk and moves towards the other
+end, servicing requests as it goes
+•
+•
+
+Reverses direction when it gets to end of the disk
+Also known as elevator algorithm
+
+•
+
+Seek order = 51, 8, 0 , 73, 77, 100, 133, 140, 175
+
+•
+
+Seek distance = 12 + 43 + 8 + 73 + 4 + 23 + 33 + 7 + 35 = 238 cyls
+
+read/write head start
+51
+8
+73
+77
+
+100
+133
+140
+CS 1550 – Operating Systems – Sherif Khattab
+
+175
+20
+
+SCAN Example 2
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+21
+
+C-SCAN
+• Identical to SCAN, except head returns to cylinder 0 when it
+reaches the end of the disk
+•
+•
+
+Treats cylinder list as a circular list that wraps around the disk
+Waiting time is more uniform for cylinders near the edge of the disk
+
+• Seek order = 73, 77, 100, 133, 140, 175, 199, 0, 8, 51
+• Distance = 10 + 4 + 23 + 33 + 7 + 35 + 24 + 199 + 8 + 43 = 386
+cyls
+read/write head start
+73
+77
+100
+
+133
+140
+8
+
+175
+
+51
+CS 1550 – Operating Systems – Sherif Khattab
+
+22
+
+C-LOOK
+• Identical to C-SCAN, except head only travels as far as
+the last request in each direction
+•
+
+Saves seek time from last sector to end of disk
+
+• Seek order = 73, 77, 100, 133, 140, 175, 8, 51
+• Distance = 10 + 4 + 23 + 33 + 7 + 35 + 167 + 43 = 322
+cylinders
+read/write head start
+73
+77
+100
+
+133
+140
+8
+
+175
+
+51
+CS 1550 – Operating Systems – Sherif Khattab
+
+23
+
+C-LOOK Example 2
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+24
+
+Two-level directory system
+• Solves naming problem: each user has her own
+directory
+• Multiple users can use the same file name
+• By default, users access files in their own directories
+• Extension: allow users to access files in others’
+Root
+directories
+directory
+
+A
+
+A
+foo
+
+B
+
+A
+bar
+
+B
+foo
+
+C
+
+B
+baz
+
+C
+bar
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+C
+foo
+
+C
+blah
+
+25
+
+Hierarchical directory system
+Root
+directory
+A
+
+B
+
+A
+Papers
+
+A
+foo
+
+A
+Photos
+
+B
+foo
+
+B
+Papers
+
+A
+os.tex
+
+A
+sunset
+
+A
+Family
+
+B
+foo.tex
+
+B
+foo.ps
+
+A
+sunset
+
+A
+kids
+
+A
+Mom
+
+C
+
+C
+bar
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+C
+foo
+
+C
+blah
+
+26
+
+Unix directory tree
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+27
+
+Project 4: Directory Traversal
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+28
+
+Project 4 Hint
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+29
+
+Sharing files
+Root
+directory
+A
+
+B
+
+A
+Papers
+
+A
+foo
+
+A
+Photos
+
+A
+os.tex
+
+A
+sunset
+
+A
+Family
+
+A
+sunset
+
+A
+kids
+
+B
+foo
+
+B
+Photos
+
+C
+
+C
+bar
+
+C
+foo
+
+C
+blah
+
+B
+lake
+
+?
+???
+CS 1550 – Operating Systems – Sherif Khattab
+
+30
+
+Solution: use links
+• A creates a file, and inserts into her directory
+
+• B shares the file by creating a link to it
+• A unlinks the file
+• B still links to the file
+• Owner is still A (unless B explicitly changes it)
+A
+
+a.tex
+
+Owner: A
+Count: 1
+
+A
+
+B
+
+B
+
+b.tex
+
+b.tex
+
+a.tex
+
+Owner: A
+Count: 2
+CS 1550 – Operating Systems – Sherif Khattab
+
+Owner: A
+Count: 1
+31
+
+

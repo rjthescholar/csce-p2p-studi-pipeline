@@ -1,0 +1,822 @@
+#0
+
+Welcome!
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce Childers, David
+Wilkinson
+
+Fall 2020
+
+What do I need to know now!
+The classes will be recorded!
+● You will be able to access the videos online
+o They are for your personal use only!
+o Do not distribute them!
+
+● You don’t need to turn on your camera
+o If you do, you may be recorded
+● You can ask questions via text!
+o Chat is great for that. If I don’t stop and read your questions, ask them
+again
+o But feel free to interrupt me at any point.
+
+2
+
+Welcome!
+● My name is Luis (pronounced Loo-eesh, but I don’t really care ☺ )
+● I’m not from these parts as you can tell from my accent
+o I come from Portugal
+i before e except after c…
+and this guy’s name!
+
+● course site: cs.pitt.edu/~loliveira or
+luisfnqoliveira.github.io/CS447
+o all the stuff I talk about today is on the course site
+● email: loliveira@pitt.edu
+● office: 5421 SENSQ (haha – more like Zoom) (check site)
+● office Hours: TBD (check the site)
+3
+
+Textbook
+
+• Computer Organization & Design (Patterson
+& Hennessy)
+
+• Not mandatory!
+
+o Get it if you really want
+o No readings, no exercises
+o May reference it once in a while
+
+• gets into a lot of detail
+
+o fun read if you pick this stuff up easily
+
+4
+
+Grading
+● There will be no attendance
+o But you should come to classes!
+o Sometimes the slides alone may not be clear enough
+▪ Even from seasoned professors! (I know, I’ve been there!)
+● labs: 20%
+o there'll be around 12? (~one a week)
+o lowest 2 lab grades are dropped
+● 3 projects: 40%
+o two in MIPS assembly language, one in Logisim
+o 15% two highest grades, 10% lowest grade
+● 2 exams: 40%
+o 1 midterms, 1 (semi-cumulative) final
+o Lowest grade 15%; highest is 25%
+5
+
+Expectations
+● Religious absences are excused: contact me ASAP
+
+● Students with disabilities should contact the Office of Disability Resources
+and Services (DRS) if you haven’t already
+o 216 William Pitt Union; 412-648-7890; TTY:412-383-7355
+● Please, no comments about sex, gender, race, ethnicity, religion, etc..
+o Anywhere!
+o Just be nice!
+● Cheating: Don’t!
+o 0 on assignment first time,
+o fail the course second time.
+o Do not publish your work in public palaces (no github!)
+o you can also talk about labs, but still no sharing stuff
+6
+
+DO NOT CHEAT!
+● If you're confused, don't cheat, ask me for help?
+o Hot tips for not cheating:
+1. Don’t!
+2. Do not!
+o You have LOTS of resources
+▪ Me! and the TAs
+▪ Undergraduate Helpdesk (CRC)
+● People can tell when you cheat
+o It is usually quite obvious!
+o So don’t do it, it’s not worth it!
+o The university is quite strict about it.
+7
+
+Teaching
+● No questions are dumb!
+● Are you confused?
+o Surprise, surprise, surprise! IT’S EXPECTED!
+o You are learning a bunch of new stuff!
+o So ASK QUESTIONS!
+o DON’T STRUGGLE IN SILENCE ON YOUR PROJECTS/LABS!!!!!!!
+● Regret #1 of my students:
+o I should have started earlier ;)
+● Come to lectures synchronously if you can!
+o You have access to me, we can interact
+o You can ask questions, and get the answers promptly!
+o Please… be interactive ☺
+8
+
+No recitations this first week.
+● My suggestion!
+o You take this link, and meet your fellow recitation mates!
+Topic: Recitation get together
+Time: Aug 20, 2020 03:25 PM Eastern Time (US and Canada)
+https://pitt.zoom.us/j/95693091291
+Meeting ID: 956 9309 1291
+Passcode: 447meet
+o Or this link, and meet your fellow recitation mates!
+Topic: Recitation get together
+Time: Aug 21, 2020 12:00 PM Eastern Time (US and Canada)
+https://pitt.zoom.us/j/98887922292
+Meeting ID: 988 8792 2292
+Passcode: 447meet
+o I won’t be there, so you can speak freely ☺
+9
+
+FLEXing @ Pitt
+
+10
+
+IDK you tell me
+● Let’s discuss some things:
+o What were your experiences last semester with remote teaching?
+▪ Good/bad/ugly
+o If the university authorizes, do you want to attend classes physically?
+▪ Why? (I really want to know your reasons!)
+▪ Note the question is not do you prefer
+(cause, ya know, we all preferred no CoViD pandemic)
+▪ My opinion: There is no benefit in coming that overweighs your health.
+o Who has timezone restrictions?
+▪ How should I distribute my office hours?
+o Anything else?
+
+11
+
+What I know!
+o Lectures will be synchronous! And online! ALWAYS!
+▪ But video will be available!
+▪ If you can, attend synchronously!
+o You can attend lectures asynchronously
+▪ Have a job? some scheduling problem? Idk?
+o Recitations are ALL remote!
+o IF we go back to the classroom
+▪ First lecture, I’ll be in the classroom, you will be at home. Why?
+– If technical issues come, I’ll just relocate to teach remotely
+– You can experience how it feels (teacher in classroom, students remote)
+
+o EVERYONE WILL FOLLOW THE RULES (distance, mask, etc.!)
+▪ https://www.coronavirus.pitt.edu/
+▪ NO EXCEPTION (class will be dismissed)
+
+12
+
+Introduction and Context
+
+13
+
+Goals of this course
+● Why should I take it?
+o Looking under the hood (car analogy)…
+o How do you understand complex modern architectures?
+▪ Learning the basics (here)
+
+● Topics covered
+o Data representation
+o Assembly language
+o Program execution
+● Learning important fundamental skills:
+o Representing numbers in different bases (binary, hexadecimal, …)
+o Logical operations: The binary revolution
+o Logic design: Making circuits without knowing EE :sad:
+o Programming an assembly language – FUN! (your mileage may vary)
+14
+
+Where does this material fit in with CS and EE?
+Computational Theory
+Algorithm Design
+Applications
+Operating Systems
+Logic Design
+Electrical Design
+
+Physics
+
+more concrete
+
+ISA
+
+more abstract
+
+● The “hardware-software interface”
+o where CS and EE overlap
+● Each layer affects/is affected by
+layers above and below
+● ISA: Instruction Set Architecture
+o Programmer's interface to
+the computer hardware
+● logic design
+o how we make 0’s and 1’s do stuff
+o How do we build a CPU
+
+15
+
+More goals
+● Let’s learn Assembly!
+● Let’s unlearn High-level languages (Java, C)
+o Datatypes/structures? Nope!
+o Infinite number of variables? Nope!
+● “Learning assembly is like a car mechanic learning how an engine runs”
+o Normal people don’t want to, but it’s fun to take things apart!!!
+▪ Also putting them back together and (hopefully) see them work!
+o And we are not normal people!
+
+16
+
+FAQ
+● Maybe the answer for my question is in the next slide. Should I ask?
+o Yes! I’ll let you know if that’s the case
+● I’m sure I should know this. I shouldn’t ask!
+o NO! Probably you should not know that yet! So just ASK!
+o NO! Maybe you should know, BUT you don’t… So ASK!
+● I’m embarrassed I don’t want to ask
+o That’s fine! But don’t be! Others will have the same question! I assure you!
+o But if you want, write the question down, send it to me privately!
+o BUT ASK!!!! (later)
+● Should I ask?
+o YES! Interrupt me at any time!!!
+o Like now? INTERRUPT ME!!!
+
+17
+
+Computers
+
+18
+
+They are old!
+
+The Antikythera
+Mechanism
+• Thousands of years old
+▪ Late second/early first century BC
+▪ That’s like -100 ish
+
+• Used for astronomy
+▪ Eclipses
+▪ Astronomical positions
+
+19
+
+They are not (ALL) war machines
+
+Jacquard machine
+• Mechanical loom (1804)
+▪ Programmed using perforated cards
+▪ Used to produce complex patterns
+
+Woven in silk
+using 24k punch
+cards!
+
+20
+
+The pre-history of computers
+
+The Differential
+Engine
+• Designed by Charles Babbage
+▪ 1792-1871
+
+• Ermmm… Designed… right!
+▪ It was intended as a programmable
+calculator
+▪ A multipurpose calculator!
+
+21
+
+The pre-history of computers
+● The Differential Engine
+o Devised by J.H. Müller in the Hessian army (1784)
+o Designed by Charles Babbage (1819-ish)
+o Built at Science Museum library in London (1980s)
+o Outputs to a table that can be used for printing
+▪ Copying was a source of error
+▪ It still is nowadays
+▪ So never copy results manually if you can avoid it
+
+22
+
+The pre-history of computers
+
+The Analytical
+Engine
+• Designed by Charles Babbage
+▪ YES! Designed… again!
+
+• Mechanical general-purpose
+computer
+▪ Which had many modern
+characteristics
+
+No actual picture because… it was never built
+23
+
+“The Enchantress of Numbers” - the first programmer
+● Augusta Ada King, Countess of Lovelace
+o Wrote algorithms for this computer →
+▪ Yeah, that one!
+▪ But they probably would have worked
+o Translating a paper, she added notes
+o A LOT of notes
+▪ More than the actual paper
+o Including instructions on how to calculate
+a number series
+▪ Note G
+o Studied the relation between maths and music
+
+24
+
+Part of note G
+
+The Analytical Engine has no pretensions
+(…) to originate anything. It can do
+whatever we know how to order it to
+perform.
+It can follow analysis; but it has no
+power of anticipating any analytical
+relations or truths.
+25
+
+The pre-history of computers
+(replica)
+
+Hollerith Electric
+Tabulating System
+• Census happen every 10 years
+▪ Hey, they just did!
+
+• It took people 8 years to count
+responses (in 1880)
+▪ It would soon take more than 10!
+▪ 7,000 cards a day using this system
+
+• Company would become IBM
+▪ After a merge with others
+
+https://www.computerhistory.org/revoluti
+on/punched-cards/2/2/5
+
+26
+
+Bubbles
+
+• Check what Bubbles has to say about it ☺
+▪ https://www.youtube.com/watch?v=L7jAOcc9kBU
+27
+
+Driven by the need for complex calculations
+https://computerhistory.org/blog/first-steps-lectures-from-the-dawn-of● George Stibitz (Bell Labs)
+computing/
+o Day-job: Electrical engineer
+o Model K – binary addition with relays (Boolean algebra)
+o Complex Number Computer – used remotely via telegraph lines!!
+o Art with Amiga (1990s) - http://stibitz.denison.edu/art.html
+● Konrad Zuse (Germany)
+o Day-job: Aircraft designer (civil engineer)
+o World's first programmable computer
+o Several computers used for military calculations
+● John Atanasoff (Iowa State)
+o Day-job: Physics professor
+o Built the ABC (Atanasoff-Berry Computer)
+▪ solved 30 equations in 30 unknowns
+
+28
+
+The first “modern” computers
+
+ENIAC (Electronic Numerical Integrator and Computer)
+• 1946 – ENIAC
+▪ University of Pennsylvania
+▪ Developed during WWII to calculate
+balistic missile trajectories
+▪ Designed by :
+• John Mauchly
+• J. Presper Eckert
+
+▪ Joined by a huge team!
+▪ Modular and reconfigurable
+• Flipping switches and connecting cables
+U. S. Army Photo
+
+29
+
+ENIAC (Electronic Numerical Integrator and Computer)
+● Some numbers:
+o 18000 valves (tubes)
+o 1500 relays
+o 30 tons
+o 175 kW
+o 5000 additions / s
+o 357 multiplications / s
+o 40 divisions / s
+o Programs "hardwired"
+
+U. S. Army Photo
+30
+
+The first “modern” computers
+
+EDVAC (Electronic Discrete Variable Automatic Computer)
+• 1947 – EDVAC
+▪ University of Pennsylvania
+▪ The ENIAC team joined by John Von Neumann
+▪ A computer with a new concept:
+• "Memory Stored Program" – same as data
+
+▪ Became operational in 1951
+
+U. S. Army Photo
+
+31
+
+The first “modern” computers
+
+EDSAC (Electronic Delay Storage Automatic Calculator)
+• 1949 – EDSAC
+▪ Cambridge University
+▪ Designed by Maurice Wilkes
+▪ Based on the first EDVAC draft
+• Not to be better, but to be used!
+• accessible and practical vs. push technology
+
+• Was completed before the EDVAC!
+
+▪ Used for scientific research
+• Chemistry, Medicine, Physics
+https://en.wikipedia.org/wiki/EDSAC
+
+https://www.tnmoc.org/edsac
+
+32
+
+The first “modern” computers
+
+UNIVAC (Universal Automatic Computer)
+• 1951 – UNIVAC
+▪ First commercial computer!
+• Sold 46! Units
+• Used to predict the 1952 presidential election
+
+▪ Used MERCURY!! memory (as did the EDSAC)
+Delay
+Storage
+
+https://en.wikipedia.org/wiki/Delay_line_memory
+
+33
+
+Then came the transistor
+
+• The symbol for a transistor
+▪ Photo taken in the university
+where I did my master degree
+
+• They were tiny
+▪ Didn’t get HOT!
+▪ Didn’t break as often
+
+https://en.wikipedia.org/wiki/Transistor
+
+34
+
+Then came the Integrated circuit
+
+2300 of these
+in there
+
+• Things became tiny
+▪ More transistors could be fitted
+▪ Cheaper circuits
+▪ More affordable
+
+35
+
+Extremely brief story of Intel CPUs
+● 1971 – Intel 4004
+o 4-bit microprocessor
+o with 2300! Transistors
+
+● 2004 – Pentium 4
+o x86 32-bit
+o 125 Million transistors
+● 2017 – Kaby Lake
+o x86_64 64-bit
+o >1000 Million! (undisclosed?)
+36
+
+Moore’s Law
+
+82944 processors
+from a supercomputer
+Where used to simulate
+1s of human brain activity
+In 40m
+
+Illustration:
+https://www.wired.com/2013/05
+/neurologist-markam-humanbrain/
+
+37
+
+All different but all (mostly) the
+same
+
+38
+
+Classes of computers: Embedded (Microcontrollers)
+● 8/16-bit architectures are still common
+o What does this mean?
+● As little as 32 BYTES of memory!
+o almost always run one, built-in program
+● Focus on ultra-low power, cost, and size
+o becoming more common every day
+o “Internet of Things” (IoT)
+o now your fridge can crash,
+your TV can crash,
+your dishwasher can crash,
+everything can crash!
+
+39
+
+Some are small and cheap
+
+• They run a single program
+▪ E.g your refrigerator
+
+• Are used by hobbyists
+▪ For small projects
+
+40
+
+Classes of computers: Consumer-grade (PC/Mobile)
+● 1-8 cores, 32/64-bit architectures, MB-GB of
+memory, GB-TB of persistent storage
+● multitasking operating systems
+● similar capabilities, different design goals
+● focus is real-time user interaction:
+productivity, media, browsing, games
+● Energy consumption is still relevant
+o Mobile
+
+41
+
+Some are small, cheap, and powerful
+
+• The Raspberry Pi
+▪ Affordable, yet powerful
+▪ ~$35
+▪ Can be used for A LOT of projects
+• Home automation
+• Affordable PC
+• Great to learn how to program
+on a budget
+
+42
+
+Some are small, expensive, and powerful
+
+• My Moto G3 
+▪ I sacrificed it for you!
+• (battery was bloated, it had to go)
+
+▪ Had to rip some parts :D
+▪ Mobility is important (~1 day)
+▪ Portability is important
+▪ But it runs beefy apps!
+
+43
+
+We hold them in our laps (does anyone do that often?)
+
+• Power and mobility
+▪ Battery life is important
+• We want to fly with them 
+
+▪ Weight is important
+▪ Run demanding programs!
+
+44
+
+We have them at home
+
+My computer
+
+• Desktop computers
+▪ Wide range of prices ($300 to +$5k)
+▪ Energy consumption not important
+• Beyond cost and heat generation
+
+▪ Performance
+• Games
+• Browsers!!
+• Word?
+
+That’s a
+Raspberry Pi
+
+45
+
+Classes of computers: Servers and Mainframes
+● from high end desktops to much more powerful machines or groups of
+machines
+● dozens of cores, 32GB+ of RAM, massive storage systems, very high-speed
+networking
+● focus on real-time data delivery - either from storage or after processing
+● redundancy and hot-swappability
+● goal is 100% uptime
+● power and cooling become huge concerns
+
+46
+
+We have them in warehouses
+
+• Server on a “drawer” (rack)
+▪ Don’t have monitors
+• People don’t “use them” directly
+• Non-interactive
+
+▪ Crunch numbers and return results
+• Webpages
+• Remote storage (e.g., box)
+
+47
+
+Classes of computers: Supercomputers
+● cluster of hundreds to thousands of CPUs
+● focus on crunching ENORMOUS datasets non-interactively
+● science, research, design, and simulation
+o and now, stock trading and "cryptocurrencies"…
+
+48
+
+All looking pretty much the same
+
+The Internet
+49
+
+General computer organization
+
+Persistent
+Storage
+
+Registers
+
+Control
+
+Memory
+Datapath
+
+Processor
+
+Other
+Peripherals
+
+Other
+Computers
+
+Input/Output
+Devices
+
+Network
+50
+
+Assembly
+
+51
+
+Different language levels
+
+x=x+1
+High-level language
+Written by humans → Abstracted
+lw
+$t0, x
+addi $t0, $t0, 1
+sw
+$t0, x
+
+Easier to
+read
+
+Closer to the
+hardware
+
+Assembly language
+Written by humans→ No abstraction
+
+10011101100110011001111101111001
+11011110110010111011101001111001
+10011100100110110001101111111011
+
+Random numbers ☺
+
+Machine language
+Spoken by the CPU→ Binary
+
+52
+
+So what exactly is assembly?
+
+• Assembly: Human-readable representation of machine code
+• Machine code: Machine code is what a CPU actually runs
+• Essentially it's the "atoms" that make up a program
+
+o CPUs are actually pretty simple in concept
+▪ (oh wait, we still have a whole semester about it… huh)
+• Each CPU has its own machine language and therefore its own assembly
+language
+• We’ll be using MIPS:
+o Not that common (why then?)
+o Yet, often found in surprising places. (Nintendo 64, PS1/2, FPGAs)
+o Very influential, and most common assembly looks like it.
+▪ ARM and RISC-V are similar-ish ISA
+seeing much more usage
+53
+
+Different language levels
+x=x+1
+High-level language
+→ Same for different CPUs
+lea x, %eax
+mov 0(%eax), %ecx
+inc
+%ecx
+mov %ecx, 0(%eax)
+
+lw
+$t0, x
+addi $t0, $t0, 1
+sw
+$t0, x
+
+Assembly language
+→ Different for different CPUs
+
+010011110111100100011
+011001011100111101100
+Random numbers ☺
+101110011010110100111
+101111001000110110010
+1110
+
+1001110110011001100
+1111101111001110111
+1011001011101110100
+Random numbers ☺
+1111001100111001001
+1011000110111111101
+1
+
+Machine language
+→ Different for different CPUs
+
+54
+
+is assembly language useful today?
+
+• Short answer: YES
+• Assembly is “fast”, so we should use it for everything!
+
+--- NO!!! --• No type-checking, no control structures, very few abstractions
+o Probably you can be fairly fast using compiler optimizations
+--- Fairly impractical for large things --• Tied to a particular CPU.
+o So, large programs have to be rewritten (usually) to work on new things.
+• Yet: good for specialized stuff.
+o Critical paths and “boot” code in Kernels / Operating Systems
+o HPC (simulators, supercomputer stuff)
+o Real-time programs (video games; tho increasingly less / abstracted away)
+o And…
+55
+
+Embedded systems
+● You’d be amazed at how many consumer devices have CPUs.
+● Many are programmed largely/entirely in assembly (or C)
+
+56
+
+and next time we'll start
+• Data representations
+• How does a CPU look at numbers, letters, etc.
+• Learn about number bases:
+o Decimal (that’s what we use!)
+o Binary
+o Octal
+o Hexadecimal
+
+57
+
+

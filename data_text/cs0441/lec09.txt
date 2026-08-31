@@ -1,0 +1,783 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #9: Set Identities and Functions
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+Set identities
+l Methods of proof
+l Relationships to logical equivalences
+
+Functions
+l Important definitions
+l Relationships to sets, relations
+l Specific functions of particular importance
+
+Set identities help us manipulate complex
+expressions
+Recall from last lecture that set operations bear a
+striking resemblance to logical operations
+l Disjunction (∨) and set union (∪)
+l Conjunction (∧) and set intersection (∩)
+l Negation (¬) and complement ( )
+
+Just as logical equivalences helped us manipulate
+logical expressions, set identities help us simplify and
+understand complex set definitions.
+
+Some important set identities
+Identity
+
+Name
+
+A∪∅=A
+A∩U=A
+
+Identity laws
+
+A∪U=U
+A∩∅=∅
+
+Domination laws
+
+A∪A=A
+A∩A=A
+
+Idempotent laws
+Complementation law
+
+A=A
+A∪B=B∪A
+A∩B=B∩A
+
+Commutative laws
+
+A ∪ (B ∪ C) = (A ∪ B) ∪ C
+A ∩ (B ∩ C) = (A ∩ B) ∩ C
+
+Associative laws
+
+We don’t have commutative or associative laws for
+set difference!
+
+Some important set identities
+Identity
+
+Name
+
+A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+
+Distributive laws
+DeMorgan’s laws
+
+A∪B=A∩B
+A∩B=A∪B
+A ∪ (A ∩ B) = A
+A ∩ (A ∪ B) = A
+
+Absorption laws
+Complement laws
+
+A∪A=U
+A∩A=∅
+
+There are many ways to prove set identities
+Today, we’ll discuss four common methods:
+1.
+2.
+3.
+4.
+
+Membership tables
+Logical argument
+Using set builder notation
+Applying other known set identities
+
+Membership tables allow us to write proofs like
+we did using truth tables!
+The membership table for an expression has columns
+for sub-expressions and rows to indicate the ways in
+which an arbitrary element may or may not be
+included.
+
+Example: A membership table for set intersection
+A
+
+B
+
+A∩B
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+An element is in A ∩ B iff it is in both A and B
+
+Prove that A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+A
+
+B
+
+C
+
+B∪C
+
+A ∩ (B ∪ C)
+
+A∩B
+
+A∩C
+
+(A ∩ B) ∪ (A ∩ C)
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+Since the appropriate columns of the membership table
+are the same, we can conclude that A ∩ (B ∪ C) = (A ∩ B)
+∪ (A ∩ C). ❏
+
+Sometimes, it’s easier to make a logical
+argument about a set identity
+Recall: A = B iff A ⊆ B and B ⊆ A
+As a result, we can prove a set identity by arguing that
+each side of the equality is a subset of the other.
+
+Example: Prove that A ∩ B = A ∪ B
+1.First prove that A ∩ B ⊆ A ∪ B
+2.Then prove that A ∪ B ⊆ A ∩ B
+Let’s see how this is done…
+
+Prove that A ∩ B = A ∪ B
+First show A ∩ B ⊆ A ∪ B
+l Let x be an arbitrary element of A ∩ B
+l By def'n of complement, x ∉ A ∩ B
+l By def'n of ∉, ¬(x ∈ A ∩ B)
+l By def'n of intersection, ¬(x ∈ A ∧ x ∈ B)
+l By DeMorgan's, ¬(x ∈ A) ∨ ¬(x ∈ B)
+l By def'n of ∉, x ∉ A ∨ x ∉ B
+l By def'n of complement, x ∈ A ∨ x ∈ B
+l By def'n of union, x ∈ A ∪ B
+l Therefore, A ∩ B ⊆ A ∪ B
+
+Prove that A ∩ B = A ∪ B
+Next show A ∪ B ⊆ A ∩ B
+l Let x be an arbitrary element of A ∪ B
+l By def'n of union, x ∈ A ∨ x ∈ B
+l By def'n of complement, x ∉ A ∨ x ∉ B
+l By def'n of ∉, ¬(x ∈ A) ∨ ¬(x ∈ B)
+l By DeMorgan's, ¬(x ∈ A ∧ x ∈ B)
+l By def'n of intersection, ¬(x ∈ A ∩ B)
+l By def'n of ∉, x ∉ A ∩ B
+l By def'n of complement, x ∈ A ∩ B
+l Therefore, A ∪ B ⊆ A ∩ B
+Since we have shown A ∩ B ⊆ A ∪ B and A ∪ B ⊆ A ∩ B, we have
+shown that A ∩ B = A ∪ B
+
+We can use set builder notation and logical
+definition to make very precise proofs
+Example: Prove that A ∩ B = A ∪ B
+Proof:
+1. A ∩ B = {x | x ∉ A ∩ B}
+2.
+= {x | ¬(x ∈ (A ∩ B))}
+3.
+= {x | ¬(x ∈ A ∧ x ∈ B)}
+4.
+= {x | ¬(x ∈ A) ∨ ¬(x ∈ B)}
+5.
+= {x | x ∉ A ∨ x ∉ B}
+6.
+= {x | x ∈ A ∨ x ∈ B}
+7.
+= {x | x ∈ A ∪ B}
+8.
+=A∪B
+
+Def’n of complement
+Def’n of ∉
+Def’n of ∩
+DeMorgan’s law
+Def’n of ∉
+Def’n of complement
+Def’n of ∪
+Set builder notation
+
+❏
+
+Note: Differences between ⊆ and ∈
+Recall that A ⊆ B if A is a subset of B, whereas a ∈ A means
+that a is an element of A.
+
+Examples:
+l Is {1} ∈ {1, 2, 3}?
+l Is {1} ⊆ {1, 2, 3}?
+l Is 1 ∈ {1, 2, 3}?
+l Is {2, 3} ⊆ {1, {2, 3}, {4, 5}}?
+l Is {2, 3} ∈ {1, {2, 3}, {4, 5}}?
+l Is ∅ ∈ {1, 2, 3}?
+l Is ∅ ⊆ {1, 2, 3}?
+
+No!
+Yes!
+Yes!
+No! But {{2, 3}} is…
+Yes!
+No!
+Yes! ∅ is a subset of every set
+
+Be careful when computing power sets
+Question: What is P({1, 2, {1, 2}})?
+Note: The set {1, 2, {1, 2}} has three elements
+l 1
+l 2
+l {1, 2}
+
+So, we need all combinations of those elements:
+l ∅
+l {1}
+l {2}
+l {{1,2}}
+l {1, 2}
+l {1, {1,2}}
+l {2, {1,2}}
+l {1, 2, {1, 2}}
+
+∴ P({1, 2, {1,2}}) = {∅, {1}, {2}, {{1,2}},
+{1, 2}, {1, {1,2}},
+{2, {1,2}},
+{1, 2, {1,2} } }
+This power set has 23 = 8 elements.
+
+We can also construct proofs by repeatedly
+applying known set identities
+Example: Prove that A ∪ (B ∩ C) = (C ∪ B) ∩ A
+Proof:
+1. A ∪ (B ∩ C) = A ∩ (B ∩ C)
+2.
+= A ∩ (B ∪ C)
+3.
+= (B ∪ C) ∩ A
+4.
+= (C ∪ B) ∩ A
+
+DeMorgan’s law
+DeMorgan’s law
+Commutative law
+Commutative law
+
+❏
+Note how similar this process is to that of proving logical equivalences
+using known logical equivalences.
+
+In-class exercises
+Problem 1: Prove DeMorgan’s law for complement
+over intersection using a membership table.
+Problem 2: Prove the complementation law using set
+builder notation.
+
+Sets give us a way to formalize the concept of a
+function
+Definition: Let A and B be nonempty sets. A function,
+f, is an assignment of exactly one element of set B to
+each element of set A.
+Note: We write f : A → B to denote that f is a function
+from A to B
+Note: We say that f(a) = b if the element a ∈ A is
+mapped to the unique element b ∈ B by the function f
+f
+
+A
+a●
+
+f(a) = b
+
+B
+●b
+
+Functions can be defined in a number of ways
+1. Explicitly
+l
+l
+
+f:Z→Z
+f(x) = x2 + 2x + 1
+
+2. Using a programming language
+l
+
+int min(int x, int y) = { x < y ? return x : return y; }
+
+3. Using a relation
+l
+l
+
+Let S = {Anna, Brian, Christine}
+Let G = {A, B, C, D, F}
+
+f:S→G
+Anna ●
+
+●A
+
+Brian ●
+
+●B
+
+Christine ●
+
+●C
+●D
+●F
+
+More terminology
+The domain of a function is the set that the function maps from, while
+the codomain is the set that is mapped to
+If f(a) = b, b is called the image of a, and a is called the preimage of b
+The range of a function f : A → B is the set of all images of elements of A
+Domain = S = {Anna, Brian, Christine}
+
+Codomain = G = {A,
+B, C, D, F}
+
+f:S→G
+Anna ●
+
+●A
+
+Brian ●
+
+●B
+
+Christine ●
+
+●C
+●D
+●F
+
+Range = {A, C}
+
+What are the domain, codomain, and range of
+the following functions?
+1. f : Z → Z, f(x) = x3
+l Domain: Integers
+l Codomain: Integers
+l Range: Perfect cubes
+
+2. g : R → R, g(x) = x - 2
+l Domain: Real numbers
+l Codomain: Real numbers
+l Range: Real numbers
+
+3.
+
+int foo(int x, int y) = { return (x*y)%2; }
+l Domain: All (x, y) ∈ Z×Z
+l Codomain: Integers
+l Range: {0, 1}
+
+A one-to-one function never assigns the same
+image to two different elements
+Definition: A function f : A → B is one-to-one, or
+injective, iff ∀x,y∈A [(f(x) = f(y)) → (x = y)]
+Are the following functions injections?
+l f : R → R, f(x) = x + 1
+l f : Z → Z, f(x) = x2
+l f : R+ → R+, f(x) = √x
+l f:S→G
+
+Yes
+No
+Yes
+No
+f:S→G
+
+Anna ●
+Brian ●
+Christine ●
+
+●A
+●B
+●C
+●D
+●E
+
+An onto function “uses” every element of its
+codomain
+Definition: We call a function f : A → B onto, or
+
+surjective, iff for every element b ∈ B, there is some
+element a ∈ A such that f(a) = b.
+Think about an onto function as “covering” the entirety of
+its codomain.
+
+The following function is a surjection:
+f:A→B
+a●
+b●
+c●
+d●
+
+●1
+●2
+●3
+
+Are the following functions one-to-one, onto,
+both, or neither?
+f:A→B
+a●
+b●
+c●
+d●
+
+f:A→B
+●1
+●2
+●3
+
+a●
+b●
+c●
+d●
+
+One-to-one and onto
+(Aside: Functions that are both one-to-one
+and onto are called bijections)
+
+Neither!
+
+f:A→B
+a●
+b●
+c●
+d●
+
+One-to-one
+
+●1
+●2
+●3
+●4
+
+●1
+●2
+●3
+●4
+●5
+
+f:A→B
+a●
+b●
+c●
+d●
+
+●1
+●2
+●3
+
+Onto
+
+Bijections have inverses
+Definition: If f : A → B is a bijection, the inverse of
+f is the function f-1 : B → A that assigns to each b ∈
+B the unique value a ∈ A such that f(a) = b. That is,
+f-1(b) = a iff f(a) = b.
+f
+
+Graphically:
+
+A
+a●
+
+f(a) = b
+
+B
+●b
+
+f-1(b) = a
+
+Note: Only a bijection can have an inverse. (Why?)
+
+Do the following functions have inverses?
+1. f : R → R, f(x) = x2
+l No, since this function is not onto
+
+2. g : Z → Z, g(x) = x + 1
+l Yes, g-1(x) = x – 1
+
+3. h : A → B
+l Yes
+h:A→B
+a●
+b●
+c●
+d●
+
+h-1 : B → A
+●1
+●2
+●3
+●4
+
+1●
+2●
+3●
+4●
+
+●a
+●b
+●c
+●d
+
+Functions can be composed with one another
+Given functions g : A → B and f : B → C, the composition
+of f and g, denoted f◦g, is defined as (f◦g)(x) = f(g(x)).
+g
+
+A
+a●
+
+g(a) = b
+
+f
+
+B
+● g(a)
+
+f(g(a)) = c
+
+C
+●c
+
+f◦g
+
+Note: For f◦g to exist, the codomain of g must be a
+subset of the domain of f.
+Definition: If g : A → B and f : D → C and B ⊆ D, f◦g is
+a function A → C where (f◦g)(x) = f(g(x))
+
+Can the following functions be composed? If so,
+what is their composition?
+Let f : A → A such that f(a) = b, f(b) = c, f(c) = a
+g : B → A such that g(1) = b, g(4) = a
+1. (f ◦ g)(x)?
+2. (g ◦ f)(x)?
+
+Yes! f(g(1)) = c, f(g(4)) = b
+No! A ⊄ B
+
+Let f : Z → Z, f(x) = 2x + 1
+g : Z → Z, g(x) = x2
+1. (f ◦ g)(x)?
+2. (g ◦ f)(x)?
+
+Yes! (f ◦ g)(x) = 2x2 + 1
+Yes! (g ◦ f)(x) = 4x2 + 4x + 1
+
+Note: There is not a guarantee that (f ◦ g)(x) = (g ◦ f)(x).
+
+Important functions
+Definition: The floor function maps a real number x
+to the largest integer y that is not greater than x. The
+floor of x is denoted ⌊x⌋.
+
+Definition: The ceiling function maps a real number x
+to the smallest integer y that is not less than x. The
+ceiling of x is denoted ⌈x⌉.
+
+Examples:
+l ⌊1.2⌋ = 1
+l ⌊7.0⌋ = 7
+l ⌊-42.24⌋ = -43
+
+l ⌈1.2⌉ = 2
+l ⌈7.0⌉ = 7
+l ⌈-42.24⌉ = -42
+
+We actually use floor and ceiling quite a bit in
+computer science…
+Example: A byte, which holds 8 bits, is typically the
+smallest amount of memory that can be allocated on
+most systems. How many bytes are needed to store
+123 bits of data?
+Answer: We need ⌈123/8⌉ = ⌈15.375⌉ = 16 bytes
+
+Example: How many 1400 byte packets can be
+transmitted over a 14.4 kbps modem in one minute?
+Answer: A 14.4 kbps modem can transmit 14,400*60 =
+864,000 bits per minute. Therefore, we can transmit
+⌊864,000/(1400*8)⌋ = ⌊77.1428571⌋ = 77 packets.
+
+In-class exercises
+Problem 3: Find the domain and range of each of the
+following functions.
+a. The function that determines the number of zeros in some
+bit string
+b. The function that maps an English word to its two
+rightmost letters
+c. The function that assigns to an integer the sum of its
+individual digits
+
+Problem 4: On Top Hat
+
+Final thoughts
+n Set identities are useful tools!
+n We can prove set identities in a number of
+(equivalent) ways
+n Sets are the basis of functions, which are used
+throughout computer science and mathematics
+n Next time:
+l Summations (Section 2.4)
+
+

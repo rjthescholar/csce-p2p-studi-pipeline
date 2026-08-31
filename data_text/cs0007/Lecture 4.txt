@@ -1,0 +1,396 @@
+CS 0007: Introduction to Java
+Lecture 4
+Nathan Ong
+University of Pittsburgh
+September 12, 2016
+
+boolean
+• Two values only:
+– true
+– false
+
+• We can also assign the variable an
+expression to be evaluated.
+
+boolean Operators
+&&
+||
+!
+
+– Logical AND
+– Logical OR
+– Logical NOT
+
+boolean needUmb = rain || cloud;
+Parentheses can be used as a way to
+group
+
+Truth Tables
+A B
+
+A&&B
+
+T T
+
+T
+
+T F
+
+F
+
+F T
+
+F
+
+F F
+
+F
+
+Truth Tables
+A B
+
+A||B
+
+T T
+
+T
+
+T F
+
+T
+
+F T
+
+T
+
+F F
+
+F
+
+Truth Tables
+A
+
+!A
+
+T
+
+F
+
+F
+
+T
+
+Order of Operators
+1.
+2.
+3.
+
+!
+&&
+||
+
+– Logical NOT
+– Logical AND
+– Logical OR
+
+boolean needUmb = rain || !sun;
+
+Conditional Logic
+• “If … then …”
+• Does not have an operator in Java
+
+A B
+
+AB
+
+T T
+
+T
+
+T F
+
+F
+
+F T
+
+T
+
+F F
+
+T
+
+Conditional Logic
+• We can use an equivalent statement to
+get the result we want.
+
+A B
+
+AB
+
+T T
+
+T
+
+T F
+
+F
+
+F T
+
+T
+
+F F
+
+T
+
+Conditional Logic
+• We can use an equivalent statement to
+get the result we want.
+
+A B
+
+AB
+
+T T
+
+T
+
+T F
+
+F
+
+F T
+
+T
+
+F F
+
+T
+
+Conditional Logic
+• We can use an equivalent statement to
+get the result we want.
+
+A B
+
+!A||B
+
+T T
+
+T
+
+T F
+
+F
+
+F T
+
+T
+
+F F
+
+T
+
+Order of Operators
+1.
+2.
+3.
+4.
+
+equality
+
+==/!=
+
+– Equality/Non-
+
+!
+&&
+||
+
+– Logical NOT
+– Logical AND
+– Logical OR
+
+boolean same = bool1 == bool2;
+
+Bad Coding Practice
+boolean isTrue = bool1 == true;
+
+int
+• Integers
+• We can also assign the variable an
+expression to be evaluated.
+
+int Operators
++
+– Addition
+–
+– Subtraction
+*
+– Multiplication
+/
+– (Integer) Division
+%
+– Modular Operation
+Follows normal rules of order of
+operation (PEMDAS)
+
+Integer Division
+Removes (truncates) the Mantissa
+(numbers after the decimal point)
+5/22
+20 / 3  6
+
+Modular Arithmetic
+Remember back to grade school division:
+5 divided by 2 equals 2 remainder 1
+5%21
+20 divided by 3 equals 6 remainder 2
+20 % 3  2
+
+Integer Division + Modular
+Arithmetic
+They fit nicely together:
+5 divided by 2 equals 2 remainder 1
+5/22
+5%21
+20 divided by 3 equals 6 remainder 2
+20 / 3  6
+20 % 3  2
+
+More int Operators
+Special operators convert two ints into a
+boolean by comparing them
+==
+– Equality
+!=
+– Non-Equality
+> – Greater than
+>=
+– Greater than or equal to
+< – Less than
+<=
+– Less than or equal to
+Evaluated AFTER PEMDAS
+
+More int Operators
+5 == 0?
+6 > 7?
+4 <= 4?
+!(8 < 3)?
+(3 / 2 > 9 % 3) && (10 <= 5*3)?
+
+double
+• Decimal numbers
+• Cannot trust this for calculations that
+require precision due to representation
+limits
+• All int operations can be applied to
+doubles, except modular arithmetic (%)
+• Division is regular
+
+Mixing Types with Division
+5/22
+5.0 / 2.0  2.5
+5.0 / 2  ?
+5 / 2.0  ?
+
+char
+• Single characters
+• CANNOT use + to combine two
+characters together.
+• Internally represented as a very small
+number in American Standard Code for
+Information Interchange (ASCII)
+representation.
+
+ASCII Table
+
+char Operators
+Special operators convert two chars into
+a boolean by comparing them
+==
+– Equality
+>
+– Greater than*
+>=
+– Greater than or equal to*
+<
+– Less than*
+<=
+– Less than or equal to*
+*(based on ASCII value)
+
+Expression?
+• How do you express the sum of 2 and 3?
+• No, not the answer, the expression
+• 2+3
+• Hmm, will int x = 2 + 3; work?
+• Let's test it
+
+How do you test that?
+• Write a valid program
+• You can do one of two things:
+– Print the expected value and the value you
+actually retrieved
+– Compare the two values and print the
+boolean value
+
+• Why would you choose one over the
+other?
+• Depends on what you want/need
+
+Test 1
+public class Test
+{
+public static void main(String[]
+{
+int x = 2 + 3;
+System.out.println("Value
+expected: 5, Actual
+value: " + x);
+}//end method main
+}//End class Test
+What is the expected output?
+
+args)
+
+They're the same, YAAAAAYYYYYY!!!
+
+Test 2
+public class Test
+{
+public static void main(String[]
+{
+int x = 2 + 3;
+System.out.println("x == 5 is"
+5));
+}//end method main
+}//End class Test
+What is the expected output?
+
+args)
+
++ (x ==
+
+It's true, YAAAAAYYYYYY!!!
+
+Expressions
+• All primitives allow you to
+declare/replace
+• boolean b = (x == 5);
+• b = (x == 6);
+• double d = 2.0/3.5;
+
+WARNING
+• The caret (^) does NOT indicate
+exponentiation.
+• In other words, in Java, 2^3 does not
+equal 8
+• There is another way to do
+exponentiation, but we'll come back to
+this.
+
+Questions?
+
+

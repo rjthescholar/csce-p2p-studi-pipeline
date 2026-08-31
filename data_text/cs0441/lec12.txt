@@ -1,0 +1,412 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #12: Primes, GCDs, and Representations
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+Primes & Greatest Common Divisors
+l Prime representations
+l Important theorems about primality
+l Greatest Common Divisors
+l Least Common Multiples
+l Euclid’s algorithm
+
+Once and for all, what are prime numbers?
+Definition: A prime number is a positive integer p that is
+divisible by only 1 and itself. If a number is not prime, it is called
+a composite number.
+
+Mathematically: p is prime ⇔ ∀ x∈Z+ [(x≠1 ∧ x≠p) → x /| p]
+Examples: Are the following numbers prime or composite?
+l 23
+l 42
+
+Prime
+Composite, 42 = 2× 3× 7
+
+l 17
+l 3
+l 9
+
+Prime
+Prime
+Composite, 9 = 32
+
+Any positive integer can be represented as a
+unique product of prime numbers!
+Theorem (The Fundamental Theorem of Arithmetic): Every
+positive integer greater than 1 can be written uniquely as a prime
+or the product of two or more primes where the prime factors are
+written in order of non-decreasing size.
+
+Examples:
+l 100 = 2× 2× 5× 5 = 22× 52
+l 641 = 641
+l 999 = 3× 3× 3× 37 = 33× 37
+l 1024 = 2× 2× 2× 2× 2× 2× 2× 2× 2× 2 = 210
+
+Note: Proving the fundamental theorem of arithmetic requires
+some mathematical tools that we have not yet learned.
+
+This leads to a related theorem…
+Theorem: If n is a composite integer, then n has a
+prime divisor less than or equal to √n.
+
+Proof:
+l If n is composite, then it has a positive integer factor a with
+1 < a < n by definition. This means that n = ab, where b is
+an integer greater than 1.
+l Assume a > √n and b > √n. Then ab > √n√n = n, which is a
+contradiction. So either a ≤ √n or b ≤ √n.
+l Thus, n has a divisor less than or equal to √n.
+l By the fundamental theorem of arithmetic, this divisor is
+either prime, or is a product of primes. In either case, n
+has a prime divisor less than or equal to √n. ❏
+
+Applying contraposition leads to a naive
+primality test
+Corollary: If n is a positive integer that does not have
+a prime divisor less than or equal to √n, then n is
+prime.
+
+Example: Is 101 prime?
+l The primes less than or equal to √101 are 2, 3, 5, and 7
+l Since 101 is not divisible by 2, 3, 5, or 7, it must be prime
+
+Example: Is 1147 prime?
+l The primes less than or equal to √1147 are 2, 3, 5, 7, 11,
+13, 17, 23, 29, and 31
+l 1147 = 31× 37, so 1147 must be composite
+
+This approach can be generalized
+The Sieve of Eratosthenes is a brute-force algorithm for finding all
+prime numbers less than some value n
+Step 1: List the numbers less than n
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+245
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+Step 2: If the next available number is less than √n, cross out all
+of its multiples
+Step 3: Repeat until the next available number is > √n
+Step 4: All remaining numbers are prime
+
+How many primes are there?
+Theorem: There are infinitely many prime numbers.
+Proof: By contradiction
+l Assume that there are only a finite number of primes p1, …, pn
+l Let Q = p1 × p2 × … × pn + 1
+l By the fundamental theorem of arithmetic, Q can be written as
+the product of two or more primes.
+l Note that no pj divides Q, for if pj | Q, then pj also divides Q – p1
+× p2 × … × pn = 1.
+l Therefore, there must be some prime number not in our list. This
+prime number is either Q (if Q is prime) or a prime factor of Q (if
+Q is composite).
+l This is a contradiction since we assumed that all primes were
+listed. Therefore, there are infinitely many primes. ❏
+
+This is a non-constructive existence proof!
+
+In-class exercises
+Problem 1: What is the prime factorization of 984?
+Problem 2: Is 157 prime? Is 97 prime?
+Problem 3: Is the set of all prime numbers countable
+or uncountable? If it is countable, show a 1-to-1
+correspondence between the prime numbers and
+the natural numbers.
+
+Greatest common divisors
+Definition: Let a and b be integers, not both zero.
+The largest integer d such that d | a and d | b is called
+the greatest common divisor of a and b, denoted by
+gcd(a, b).
+Note: We can (naively) find GCDs by comparing the
+common divisors of two numbers.
+
+Example: What is the GCD of 24 and 36?
+l Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24
+l Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36
+l ∴ gcd(24, 36) = 12
+
+Sometimes, the GCD of two numbers is 1
+Example: What is gcd(17, 22)?
+l Factors of 17: 1, 17
+l Factors of 22: 1, 2, 11, 22
+l ∴ gcd(17, 22) = 1
+
+Definition: If gcd(a, b) = 1, we say that a and b are
+relatively prime, or coprime. We say that a1, a2, …,
+an are pairwise relatively prime if gcd(ai, aj) = 1
+∀i,j.
+
+Example: Are 10, 17, and 21 pairwise coprime?
+l Factors of 10: 1, 2, 5, 10
+l Factors of 17: 1, 17
+l Factors of 21: 1, 3, 7, 21
+
+Yes!
+
+We can leverage the fundamental theorem of
+arithmetic to develop a better algorithm
+Let:
+Then:
+
+Greatest multiple of p1 in both
+a and b
+
+and
+
+Greatest multiple of p2 in both
+a and b
+
+Example: Compute gcd(120, 500)
+l 120 = 23× 3× 5
+l 500 = 22× 53
+l So gcd(120, 500) = 22× 30× 5 = 20
+
+Better still is Euclid’s algorithm
+Observation: If a = bq + r, then gcd(a, b) = gcd(b, r)
+
+Proved in section 4.3 of the book
+
+So, let r0 = a and r1 = b. Then:
+l r0 = r1q1 + r2
+l r1 = r2q2 + r3
+l…
+l rn-2 = rn-1qn-1 + rn
+l rn-1 = rnqn
+
+gcd(a, b) = rn
+
+0 ≤ r2 < r1
+0 ≤ r3 < r2
+0 ≤ rn < rn-1
+
+Examples of Euclid’s algorithm
+Example: Compute gcd(414, 662)
+l 662 = 414 × 1 + 248
+l 414 = 248 × 1 + 166
+l 248 = 166 × 1 + 82
+l 166 = 82 × 2 + 2
+l 82 = 2 × 41
+
+gcd(414, 662) = 2
+
+Example: Compute gcd(9888, 6060)
+l 9888 = 6060 × 1 + 3828
+l 6060 = 3828 × 1 + 2232
+l 3828 = 2232 × 1 + 1596
+l 2232 = 1596 × 1 + 636
+l 1596 = 636 × 2 + 324
+l 636 = 324 × 1 + 312
+l 324 = 312 × 1 + 12
+l 312 = 12 × 26
+
+gcd(9888, 6060) = 12
+
+Least common multiples
+Definition: The least common multiple of the integers
+a and b is the smallest positive integer that is divisible
+by both a and b. The least common multiple of a and
+b is denoted lcm(a, b).
+
+Example: What is lcm(3,12)?
+l Multiples of 3: 3, 6, 9, 12, 15, …
+l Multiples of 12: 12, 24, 36, …
+l So lcm(3,12) = 12
+
+Note: lcm(a, b) is guaranteed to exist, since a
+common multiple exists (i.e., ab).
+
+We can leverage the fundamental theorem of
+arithmetic to develop a better algorithm
+Let:
+Then:
+
+Greatest multiple of p1 in either
+a or b
+
+and
+
+Greatest multiple of p2 in
+either a or b
+
+Example: Compute lcm(120, 500)
+l 120 = 23× 3× 5
+l 500 = 22× 53
+l So lcm(120, 500) = 23× 3× 53 = 3000 << 120× 500 =
+60,000
+
+LCMs are closely tied to GCDs
+Note: ab = lcm(a, b)× gcd(a, b)
+
+Example: a = 120 = 23 × 3 × 5, b = 500 = 22 × 53
+l 120 = 23× 3× 5
+l 500 = 22× 53
+l lcm(120, 500) = 23× 3× 53 = 3000
+l gcd(120, 500) = 22× 30× 5 = 20
+l lcm(120, 500)× gcd(120, 500)
+= 23× 3× 53× 22× 30× 5
+= 25× 3× 54
+= 60,000 = 120× 500
+
+✔
+
+In-class exercises
+Problem 4: Use Euclid’s algorithm to compute
+gcd(92928, 123552).
+Problem 5: Compute gcd(24, 36) and lcm(24, 36). Verify
+that gcd(24, 36)× lcm(24, 36) = 24× 36.
+
+Final Thoughts
+n Prime numbers play an important role in number
+theory
+n There are an infinite number of prime numbers
+n Any number can be represented as a product of
+prime numbers; this has implications when
+computing GCDs and LCMs
+n Next time: Proof by Induction
+
+

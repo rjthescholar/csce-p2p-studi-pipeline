@@ -1,0 +1,371 @@
+Decidability 01
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidability
+
+A language is decidable if there is a decider decides it
+A language is a set of strings
+A decider is a Turing machine that halts on all inputs
+A Turing machine halts when it enters either the accept state
+(qaccept ) or the reject state (qreject )
+To show that a language A is decidable:
+Construct a TM M that you think it decides the language A
+and prove that
+1
+2
+
+For every s ∈ A, M must accept s and
+For every s 6∈ A, M must reject s
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidability
+
+We constructed M and proved that
+1
+2
+
+For every s ∈ A, M must accept s and
+For every s 6∈ A, M must reject s
+
+This allows us to conclude the following:
+1
+
+L(M ) = A
+M accepts all strings in A and does not accept all strings not
+in A
+
+2
+
+M is a decider (always halts)
+Given a string s, it is either in A or not in A
+If s ∈ A, M accepts s (halts)
+If s 6∈ A, M rejects s (halts)
+
+3
+
+A is decidable
+The decider M decides A
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+
+Problem
+The problem of determining whether a DFA accepts a string.
+Let hxi be a string representation of the object x
+The above problem can be converted into a membership
+problem (language) ADFA
+ADFA = {hB, wi | B is a DFA that accepts input string w}
+Now, the problem whether DFA B accepts the string w
+becomes the problem whether hB, wi is in ADFA
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+The language ADFA
+ADFA = {hB, wi | B is a DFA that accepts input string w}
+About the above language:
+If F is a DFA and it accepts 01101, hF, 01101i is in ADFA
+hF, 01101i can be the formal definition of DFA F , followed by
+#, and followed by 01101
+hF, 01101i = "({q0 , . . . }, {0, 1}, . . . )#01101"
+
+If G is a DFA and it rejects ε, hG, εi is not in ADFA
+
+Recall a set definition defined by a predicate:
+What can we conclude if hB, wi ∈ ADFA ?
+B is a DFA that accepts input string w
+
+What can we conclude if hB, wi 6∈ ADFA ?
+B is not a DFA,
+w is not a string, or
+B is a DFA that rejects input string w
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+
+The language ADFA
+ADFA = {hB, wi | B is a DFA that accepts input string w}
+To show that ADFA is decidable, we must show that there
+exists a decider M that decides ADFA
+Construct a TM M that we think it decides A and prove that
+1
+
+2
+
+If hB, wi ∈ ADFA (DFA B accepts the string w), M accepts
+hB, wi
+If hB, wi 6∈ ADFA (DFA B rejects the string w), M rejects
+hB, wi
+
+We learn an algorithm how to simulate a DFA on an input
+string in Chapter 1
+Turing machine can do the same
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+The language ADFA
+ADFA = {hB, wi | B is a DFA that accepts input string w}
+An example of a Turing machine M is as follows:
+M =“On input hB, wi, where B is a DFA and w is a string:
+1
+2
+
+Simulate B on input w.
+If the simulation ends in an accept state, accept. If it ends in a
+nonaccepting state, reject.”
+
+Notes about the above TM
+Input format hB, wi is the same as format of strings in ADFA
+The where clause filters out the following cases:
+B is not a DFA
+w is not a string
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+
+An example of a Turing machine M is as follows:
+M =“On input hB, wi, where B is a DFA and w is a string:
+1
+2
+
+Simulate B on input w.
+If the simulation ends in an accept state, accept. If it ends in a
+nonaccepting state, reject.”
+
+We do not know whether M is a decider for ADFA yet
+We need to show that M is a decider for the language ADFA
+by proving that
+1
+2
+
+If hB, wi ∈ ADFA , M accepts hB, wi
+If hB, wi 6∈ ADFA , M rejects hB, wi
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Is M a Decider for the Language ADFA
+Again, to show that the Turing machine M is a decider for
+the language ADFA , we have to show that
+1
+2
+
+If hB, wi ∈ ADFA , M accepts w
+If hB, wi 6∈ ADFA , M rejects w
+
+Proofs:
+Case 1: Assume that hB, wi ∈ ADFA . Since hB, wi ∈ ADFA ,
+by the definition of ADFA , B is a DFA that accepts the string
+w. Since B accepts w, by simulating B on input w in step 1,
+the simulation will end in an accept state. Since the simulation
+ends in an accept state, M accepts hB, wi.
+Case 2: Assume that hB, wi 6∈ ADFA . Since hB, wi 6∈ ADFA ,
+by the definition of ADFA , B is a DFA that rejects the string
+w. Since B rejects w, by simulating B on input w in step 1,
+the simulation will end in a non-accept state. Since the
+simulation ends in a non-accept state, M rejects hB, wi.
+
+We just show that M accepts all strings in ADFA and rejects
+all strings not in ADFA
+M is a decider for ADFA . Therefore, ADFA is decidable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Prove that ADFA is Decidable
+Prove that
+ADFA = {hB, wi | B is a DFA that accepts w}
+is decidable.
+Solution: Construct a TM M as follows:
+M =“On input hB, wi, where B is a DFA and w is a string:
+1
+
+Simulate B on input w.
+
+2
+
+If the simulation ends in an accept state, accept. If it ends in a nonaccepting
+state, reject.”
+
+Next, we need to prove that M decides ADFA :
+Case 1: Assume that hB, wi ∈ ADFA . Since hB, wi ∈ ADFA , by the definition
+of ADFA , B is a DFA that accepts the string w. Since B accepts w, by
+simulating B on input w in step 1, the simulation will end in an accept state.
+Since the simulation ends in an accept state, M accepts hB, wi.
+Case 2: Assume that hB, wi 6∈ ADFA . Since hB, wi 6∈ ADFA , by the definition
+of ADFA , B is a DFA that rejects the string w. Since B rejects w, by
+simulating B on input w in step 1, the simulation will end in a non-accept state.
+Since the simulation ends in a non-accept state, M rejects hB, wi.
+This shows that M is a decider for ADFA . Therefore, ADFA is decidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+ANFA
+Let ANFA = {hB, wi | B is an NFA that accepts input string w}.
+Show that ANFA is decidable.
+Again, to show that ANFA is decidable, we need to construct
+a TM N and prove the following:
+1
+2
+
+If hB, wi ∈ ANFA , N accepts hB, wi
+If hB, wi 6∈ ANFA , N rejects hB, wi
+
+As discussed earlier in Chapter 1, there is an algorithm that
+allows us convert an NFA B into an equivalent DFA C
+Since there is an algorithm, a Turing machine that convert an
+NFA B into a equivalent DFA C where L(B) = L(C)
+If NFA B accepts w, DFA C also accepts w
+If DFA C accepts w, hC, wi ∈ ADFA
+If hC, wi ∈ ADFA , TM M (decider for ADFA ) accept hC, wi
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Languages
+TM N can be constructed as follows:
+N =“On input hB, wi, where B is a NFA and w is a string:
+1
+
+2
+3
+
+Convert NFA B to an equivalent DFA C, using the procedure
+for this conversion given in Theorem 1.39.
+Run TM M from Theorem 4.1 on input hC, wi.
+If M accepts, accept; otherwise, reject.”
+
+Notes about TM N
+Recall that the language of TM M is ADFA :
+ADFA = {hB, wi | B is a DFA that accepts w}
+TM N runs TM M on input hC, wi where
+C is a DFA that it just constructed from NFA B
+w is a string
+M will accept or reject hC, wi depending on whether hC, wi
+in ADFA
+
+TM N runs TM M on input hB, wi, M will always reject the
+input since B is an NFA
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Prove that ANFA is Decidable
+Prove that ANFA = {hB, wi | B is an NFA that accepts w} is decidable.
+Solution: Construct a TM N as follows:
+N =“On input hB, wi, where B is a NFA and w is a string:
+1
+
+Convert NFA B to an equivalent DFA C, using the procedure for this conversion
+given in Theorem 1.39.
+
+2
+
+Run TM M from Theorem 4.1 on input hC, wi.
+
+3
+
+If M accepts hC, wi, accept; otherwise, reject.”
+
+Next, we need to prove that N decides ANFA :
+1
+
+Case 1: Assume that hB, wi ∈ ANFA . Since hB, wi ∈ ANFA , by the definition
+of the language ANFA , B is an NFA that accepts the string w. By converting
+the NFA B into an equivalent DFA C (L(B) = L(C)), C also accepts the string
+w. Since C is a DFA that accepts the string w, hC, wi ∈ ADFA . Since M is a
+decider for ADFA , by running M on input hC, wi, M will accept hC, wi which
+will cause N to accept hB, wi.
+
+2
+
+Case 2: Assume that hB, wi 6∈ ANFA , Since hB, wi 6∈ ANFA , by the definition
+of the language ANFA , B is an NFA that rejects the string w. By converting
+the NFA B into an equivalent DFA C (L(B) = L(C)), C also rejects the string
+w. Since C is a DFA that rejects the string w, hC, wi 6∈ ADFA . Since M is a
+decider for ADFA , by running M on input hC, wi, M will reject hC, wi which
+will cause N to reject hB, wi.
+
+This shows that TM N is a decider for ANFA . Therefore, ANFA is decidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Decidable Language
+AREX
+Let
+AREX = {hR, wi | R is a regular expression that generates string w}.
+
+Show that AREX is decidable.
+Again, to show that AREX is decidable, we need to construct
+a TM P and prove the following:
+1
+2
+
+If hR, wi ∈ AREX , P accepts hR, wi
+If hR, wi 6∈ AREX , P rejects hR, wi
+
+Recall that we have an algorithm that generates an NFA A
+from a regular expression R where the language of A is
+expressed by R
+Again, since there is an algorithm, we can have a Turing
+machine that convert a regular expression R into an equivalent
+NFA A
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+Prove that AREX is Decidable
+Prove that AREX = {hR, wi | R is a regular expression that generates string w} is
+decidable.
+Solution: Construct a TM P as follows:
+P =“On input hR, wi, where R is a regular express and w is a string:
+1 Convert regular expression R to an equivalent NFA A by using the procedure for
+this conversion given in Theorem 1.54.
+2 Run TM N from Theorem 4.2 on input hA, wi.
+3 If N accepts hA, wi, accept; if N rejects hA, wi, reject.”
+Next, we need to prove that P decides AREX :
+1 Case 1: Assume that hR, wi ∈ AREX . Since hR, wi ∈ AREX , from the
+definition of AREX , R is a regular expression that generates the string w. Since
+R is a regular expression that generates w, by converting R into an equivalent
+NFA A, A accepts w. Since NFA A accepts w, hA, wi ∈ ANFA . Since TM N is
+a decider for ANFA , by running N on input hA, wi, N will accept hA, wi which
+causes P to accept hR, wi.
+2 Case 2: Assume that hR, wi 6∈ AREX . Since hR, wi 6∈ AREX , from the
+definition of AREX , R is a regular expression that does not generate the string
+w. Since R is a regular expression that does not generate w, by converting R
+into an equivalent NFA A, A rejects w. Since NFA A rejects w,
+hA, wi 6∈ ANFA . Since TM N is a decider for ANFA , by running N on input
+hA, wi, N will reject hA, wi which causes P to reject hR, wi.
+This shows that TM P is a decider for AREX . Therefore, AREX is decidable.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 01
+
+

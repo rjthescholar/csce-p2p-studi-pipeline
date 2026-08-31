@@ -1,0 +1,1170 @@
+VLIW Processors
+CS 1541
+Wonsun Ahn
+
+Limits on Deep Pipelining
+● Ideally, CycleTimePipelined = CycleTimeSingleCycle / Number of Stages
+o In theory, can indefinitely improve performance with more stages
+● Limitation 1: Cycle time does not improve indefinitely
+o With shorter stages, delay due to latches become significant
+o With many stages, hard to keep stage lengths perfectly balanced
+o Manufacturing variability exacerbates the stage length unbalance
+● Limitation 2: CPI tends to increase with deep pipelines
+o Penalty due to branch misprediction increases
+o Stalls due to data hazards cause more bubbles
+● Limitation 3: Power consumption increases with deep pipelines
+o Wires for data forwarding increase quadratically with depth
+● Is there another way to improve performance?
+2
+
+What if we improve CPI?
+● Remember the three components of performance?
+instructions
+X
+program
+
+cycles
+instruction
+
+X
+
+seconds
+cycle
+
+● Pipelining focused on seconds / cycle, or cycle time
+● Can we improve cycles / instruction, or CPI?
+o But the best we can get is CPI = 1, right?
+o How can an instruction be executed in less than a cycle?
+
+3
+
+Wide Issue Processors
+
+4
+
+From CPI to IPC
+● How about if we fetch two instructions each cycle?
+o Maybe, fetch one ALU instruction and one load/store instruction
+
+● Then, IPC (Instructions per Cycle) = 2
+o And by extension, CPI = 1 / IPC = 0.5 !
+● Wide-issue processors can execute multiple instructions per cycle
+5
+
+Pipeline design for previous example
+● One pipeline for ALU/Branches and one for loads and stores
+
+I-Mem
+
+Ins. Decoder
+
+ALU
+Pipeline
+Register
+File
+
+Memory
+Pipeline
+
+ALU
+
++
+
+D-Mem
+
+● This introduces new structural hazards that we didn’t have before!
+6
+
+Structural Hazard in Storage Locations (Solved)
+
+I-Mem
+
+Ins. Decoder
+
+● Two instructions must be fetched from instruction memory
+→ Add extra read ports to the instruction memory
+● Two ALUs must read from the register file at the same time
+→ Add extra read ports to the register file
+● Two instructions must write to register file at WB stage (not shown)
+→ Add extra write ports to the register file
+
+Register
+File
+
+ALU
+
++
+
+D-Mem
+7
+
+Structural Hazard in Functional Units (Still Remaining)
+
+I-Mem
+
+Ins. Decoder
+
+● Structural hazard on EX units
+o Top ALU can handle all arithmetic ( +, -, *, /)
+o Bottom ALU can only handle +, needed for address calculation
+● Structural hazard on MEM unit
+o ALU pipeline does not have a MEM unit to access memory
+
+Register
+File
+
+ALU
+
++
+
+D-Mem
+8
+
+Structural Hazard in Functional Units: Example
+● Code on the left will result in a timeline on the right
+o If it were not for the bubbles, we could have finished in 4 cycles!
+
+lw
+$t0, 0($s1)
+lw
+$t1, -4($s1)
+addi $t2, $t2, -8
+add $t3, $t0, $s1
+add $t4, $s1, $s1
+sw
+$t5, 8($t3)
+sw
+$t6, 4($s1)
+
+CC
+
+ALU Pipeline
+
+1
+
+lw t0
+
+2
+
+addi t2
+
+3
+
+add t3
+
+4
+
+add t4
+
+5
+
+Mem Pipeline
+
+lw t1
+sw t5
+sw t6
+
+9
+
+Structural Hazard Solution: Reordering
+● Of course we can come up with a better schedule
+o While still adhering to the data dependencies
+
+lw
+$t0, 0($s1)
+lw
+$t1, -4($s1)
+addi $t2, $t2, -8
+add $t3, $t0, $s1
+add $t4, $s1, $s1
+sw
+$t5, 8($t3)
+sw
+$t6, 4($s1)
+
+CC
+
+ALU Pipeline
+
+1
+
+lw t0
+
+2
+
+addi t2
+
+3
+
+add t3
+
+4
+
+add t4
+
+5
+
+Mem Pipeline
+
+lw t1
+sw t5
+sw t6
+
+10
+
+Why not just duplicate all resources?
+● Why not have two full ALUs, have MEM units at both pipelines?
+o That way, we can avoid those structural hazards in the first place
+o But that leads to low utilization
+§ ALU/Branch type instructions will not use the MEM unit
+§ Load/Store instructions will not need the full ALU
+● Most processors have specialized pipelines for different instructions
+o Integer ALU pipeline, FP ALU pipeline, Load/Store pipeline, …
+o With scheduling, can achieve high utilization and performance
+● Who does the scheduling? Well, we talked about this already:
+o Static scheduling → Compiler
+o Dynamic scheduling → Processor
+11
+
+VLIW vs. Superscalar
+● There are two types of wide-issue processors
+● If the compiler does static scheduling, the processor is called:
+o VLIW (Very Long Instruction Word) processor
+o This is what we will learn this chapter
+● If the processor does dynamic scheduling, the processor is called:
+o Superscalar processor
+o This is what we will learn next chapter
+
+12
+
+VLIW Processors
+
+13
+
+VLIW Processor Overview
+● What does Very Long Instruction Word mean anyway?
+o It means one instruction is very long!
+o Why? Because it contains multiple operations in one instruction
+● A (64 bits long) VLIW instruction for our example architecture:
+ALU/Branch Operation (32 bits)
+
+Load/Store Operation (32 bits)
+
+● An example instruction could be:
+addi $t2, $t0, -8
+
+lw $t1, -4($s1)
+
+● Or another example could be:
+nop
+
+lw $t1, -4($s1)
+14
+
+A VLIW instruction is one instruction
+
+Ins. Decoder
+
+I-Mem
+
+Load/Store Op
+
+ALU Op
+
+● For all purposes, a VLIW instruction acts like one instruction
+o It moves as a unit through the pipeline
+
+Register
+File
+
+ALU
+
++
+
+D-Mem
+
+15
+
+VLIW instruction encoding for example
+nop
+lw
+$t0, 0($s1)
+addi $t2, $t2, -8
+lw
+$t1, -4($s1)
+add $t3, $t0, $s1
+nop
+add $t4, $s1, $s1
+sw
+$t5, 8($t3)
+nop
+sw
+$t6, 4($s1)
+
+Inst
+
+ALU Op
+
+Load/Store Op
+
+1
+
+nop
+
+lw t0
+
+2
+
+addi t2
+
+lw t1
+
+3
+
+add t3
+
+nop
+
+4
+
+add t4
+
+sw t5
+
+5
+
+nop
+
+sw t6
+
+•
+•
+
+Each square is an instruction.
+(There are 5 instructions.)
+Nops are inserted by the compiler.
+16
+
+VLIW instruction encoding (after reordering)
+add $t4, $s1, $s1
+lw
+$t0, 0($s1)
+addi $t2, $t2, -8
+lw
+$t1, -4($s1)
+add $t3, $t0, $s1
+sw
+$t6, 4($s1)
+nop
+sw
+$t5, 8($t3)
+
+Inst
+
+ALU Op
+
+Load/Store Op
+
+1
+
+add t4
+
+lw t0
+
+2
+
+addi t2
+
+lw t1
+
+3
+
+add t3
+
+sw t6
+
+4
+
+nop
+
+sw t5
+
+•
+
+Same program with 4 instructions!
+
+17
+
+VLIW Architectures are (Very) Power Efficient
+● All scheduling is done by the compiler offline
+● No need for the Hazard Detection Unit
+o Nops are inserted by the compiler when necessary
+● No need for a dynamic scheduler
+o Which can be even more power hungry than the HDU
+● Even no need for the Forwarding Unit
+o If compiler is good enough and fill all bubbles with instructions
+o Or, may have cheap compiler-controlled forwarding in ISA
+
+18
+
+Challenges of VLIW
+● All the challenges of static scheduling apply here X 2
+● Review: what were the limitations?
+o Compiler must make assumptions about the pipeline
+→ ISA now becomes much more than instruction set + registers
+→ ISA restricts modification of pipeline in future generations
+o Compiler must do scheduling without runtime information
+→ Length of MEM stage is hard to predict (due to Memory Wall)
+→ Data dependencies are hard (must do pointer analysis)
+● These limitations are exacerbated with VLIW
+19
+
+Not Portable due to Assumptions About Pipeline
+● VLIW ties ISA to a particular processor design
+o One that is 2-wide and has an ALU op and a Load/Store op
+o What if future processors are wider or contain different ops?
+● Code must be recompiled repeatedly for future processors
+o Not suitable for releasing general purpose software
+o Reason VLIW is most often used for embedded software
+(Because embedded software is not expected to be portable)
+● Is there any way to get around this problem?
+
+20
+
+Making VLIW Software Portable
+● There are mainly two ways VLIW software can become portable
+1. Allow CPU to exploit parallelism according to capability
+o Analogy: multithreaded software does not specify number of cores
+§ SW: Makes parallelism explicit by coding using threads
+§ CPU: Exploits parallelism to the extent it has number of cores
+o Portable VLIW: ISA does not specify number of ops in instruction
+§ SW: Makes parallelism explicit by using bundles
+– Bundle: a group of ops that can execute together
+– Wider processors fetch several bundles to form one instruction
+– A “stop bit” tells processor to stop fetching the next bundle
+§ Intel Itanium EPIC(Explicitly Parallel Instruction Computing)
+– A general-purpose ISA that uses bundles
+21
+
+Making VLIW Software Portable
+● There are mainly two ways VLIW software can become portable
+2. Binary translation
+o Have firmware translate binary to new VLIW ISA on the fly
+o Very similar to how Apple Rosetta converts x86 to ARM ISA
+o Doesn’t this go against the power efficiency of VLIWs?
+§ Yes, but if SW runs for long time, one-time translation is nothing
+§ Translation can be cached in file system for next run
+o Transmeta Crusoe converted x86 to an ultra low-power VLIW
+
+22
+
+Scheduling without Runtime Information
+● Up to the compiler to create schedule with minimal nops
+o Use reordering to fill nops with useful operations
+● All the challenges of static scheduling remain
+o Length of MEM stage is hard to predict (due to Memory Wall)
+o Data dependencies are hard to figure out (due to pointer analysis)
+● But these challenges become especially acute for VLIW
+o For 4-wide VLIW, need to find 4 operations to fill “one” bubble!
+o Operations in one instruction must be data independent
+§ Data forwarding will not work within one instruction
+(Obviously because they are executing on the same cycle)
+
+23
+
+Predicates Help in Compiler Scheduling
+● Use of predicates can be a big help in finding useful operations
+o Reordering cannot happen across control dependencies
+lw $t1, 0($s0)
+addi $t1, $t1, 1
+bne $s1, $s2, else
+then:
+li $t0, 1
+
+Can only reorder within this block
+
+else:
+li $t0, 0
+
+o Predicates can convert if-then-else code into one big block
+pne $p1, $s1, $s2
+lw $t1, 0($s0)
+li.p $t0, 1, !$p1
+li.p $t0, 0, $p1
+addi $t1, $t1, 1
+
+Can reorder within a larger window!
+
+24
+
+But Predicates Cannot Remove Loopback Branches
+● Loops are particularly challenging to the compiler. Why?
+o Scheduling is limited to within the loop
+o For tight loops, not much compiler can do with a handful of insts
+loop:
+lw $s0, 0($t1)
+addi $s0, $s0, 10
+addi $t1, $t1, 1
+bne $s0, $s1, loop
+
+Can only reorder within this block
+
+…
+
+This block is off limits!
+
+25
+
+Compiler Scheduling of a Loop
+● Suppose we had this example loop (in MIPS):
+
+Loop:
+lw
+$t0, 0($s1)
+add $t0, $t0, $s2
+sw
+$t0, 0($s1)
+addi $s1, $s1, -4
+bne $s1, $zero, Loop
+
+// $t0 = array[$s1]
+// $t0 = $t0 + $s2
+// array[$s1] = $t0
+// $s1++
+// loopback if $s1 != 0
+
+● Loop iterates over an array adding $s2 to each element
+
+26
+
+Compiler Scheduling of a Loop
+● Let’s first reschedule to hide the use-after-load hazard
+
+Loop:
+lw
+$t0, 0($s1)
+add $t0, $t0, $s2
+sw
+$t0, 0($s1)
+addi $s1, $s1, -4
+bne $s1, $zero, Loop
+
+Loop:
+lw
+$t0, 0($s1)
+addi $s1, $s1, -4
+add $t0, $t0, $s2
+sw
+$t0, 4($s1)
+bne $s1, $zero, Loop
+
+● Now dependence on $t0 is further away
+● Note we broke a WAR (Write-After-Read) dependence on $s1
+o Now $s1 in sw $t0, 0($s1) is result of addi $s1, $s1, -4
+
+● We must compensate by changing the sw offset by +4:
+o sw $t0, 0($s1) → sw $t0, 4($s1)
+
+27
+
+Compiler Scheduling of a Loop
+● Below is the VLIW representation of the rescheduled MIPS code:
+Loop:
+ALU/Branch Op
+Load/Store Op
+lw
+$t0, 0($s1)
+Loop: addi $s1, $s1, -4 lw $t0, 0($s1)
+addi $s1, $s1, -4
+nop
+nop
+add $t0, $t0, $s2
+add $t0, $t0, $s2
+nop
+sw
+$t0, 4($s1)
+bne $s1, $0, Loop sw $t0, 4($s1)
+bne $s1, $zero, Loop
+
+● We can’t fill any further nops due to data hazards
+● In terms of MIPS instructions, IPC = 5 / 4 = 1.25
+o Ideally, IPC can reach 2 so we are not doing very well here
+● Is there a way compiler can expand the “window” for scheduling?
+o Idea: use multiple iterations of the loop for scheduling!
+
+28
+
+Loop unrolling
+
+29
+
+What is Loop Unrolling?
+● Loop unrolling : a compiler technique to enlarge loop body
+o By duplicating loop body for an X number of iterations
+
+for(i = 0; i < 100; i++)
+Unrolled loop (2X)
+a[i] = b[i] + c[i];
+for(i = 0; i < 100; i += 2){
+Original loop
+a[i] = b[i] + c[i];
+a[i+1] = b[i+1] + c[i+1];
+}
+● What does this buy us?
+o More instructions inside loop to reorder and hide bubbles
+o And less instructions to execute as a whole
+§ Less frequent loop branches
+§ Two i++ are merged into one i+= 2
+30
+
+Let’s try unrolling our example code
+Loop:
+lw
+$t0, 0($s1)
+addi $s1, $s1, -4
+add $t0, $t0, $s2
+sw
+$t0, 4($s1)
+bne $s1, $zero, Loop
+
+Loop:
+lw
+$t0, 0($s1)
+Unroll 2X
+addi $s1, $s1, -4
+add $t0, $t0, $s2
+sw
+$t0, 4($s1)
+lw
+$t1, -4($s1)
+addi $s1, $s1, -4
+add $t1, $t1, $s2
+sw
+$t1, 4($s1)
+bne
+
+$s1, $zero, Loop
+
+● Instructions are duplicated but using $t1 instead of $t0
+● This is intentional to minimize false dependencies during reordering
+31
+
+Now time to reorder the code!
+Loop:
+lw
+lw
+
+$t0, 0($s1)
+$t1, -4($s1)
+
+addi $s1, $s1, -4
+addi $s1, $s1, -4
+add
+add
+
+$t0, $t0, $s2
+$t1, $t1, $s2
+
+sw
+sw
+
+$t0, 8($s1)
+$t1, 4($s1)
+
+bne
+
+$s1, $zero, Loop
+
+Reorder!
+
+Loop:
+lw
+$t0, 0($s1)
+addi $s1, $s1, -4
+add $t0, $t0, $s2
+sw
+$t0, 4($s1)
+lw
+$t1, -4($s1)
+addi $s1, $s1, -4
+add $t1, $t1, $s2
+sw
+$t1, 4($s1)
+bne
+
+$s1, $zero, Loop
+
+● Interleaving iterations spaces out dependencies (2X = unroll factor)
+32
+
+Merge induction variable increment
+Loop:
+lw
+lw
+
+$t0, 0($s1)
+$t1, -4($s1)
+
+addi $s1, $s1, -4
+addi $s1, $s1, -4
+add
+add
+sw
+sw
+bne
+
+$t0, $t0, $s2
+$t1, $t1, $s2
+$t0, 8($s1)
+$t1, 4($s1)
+
+Merge
+
+Loop:
+lw
+lw
+
+$t0, 0($s1)
+$t1, -4($s1)
+
+addi $s1, $s1, -8
+add
+add
+
+$t0, $t0, $s2
+$t1, $t1, $s2
+
+sw
+sw
+
+$t0, 8($s1)
+$t1, 4($s1)
+
+bne
+
+$s1, $zero, Loop
+
+$s1, $zero, Loop
+
+● Two addi $s1, $s1, -4 are merged into addi $s1, $s1, -8
+33
+
+Scheduling unrolled loop onto VLIW
+Loop:
+lw
+$t0, 0($s1)
+ALU/Branch Op
+Load/Store Op
+lw
+$t1, -4($s1)
+Loop:
+nop
+lw $t0, 0($s1)
+addi $s1, $s1, -8
+add $t0, $t0, $s2
+addi $s1, $s1, -8 lw $t1, -4($s1)
+add $t1, $t1, $s2
+add $t0, $t0, $s2 nop
+sw
+$t0, 8($s1)
+add $t1, $t1, $s2 sw $t0, 8($s1)
+sw
+$t1, 4($s1)
+bne $s1, $0, Loop sw $t1, 4($s1)
+bne $s1, $zero, Loop
+
+● Now we spend 5 cycles for 2 iterations of the loop
+o So, 5 / 2 = 2.5 cycles per iteration
+o Much better than the previous 4 cycles for 1 iteration!
+
+34
+
+Let’s try unrolling our example code 4X
+● 4X Unrolled loop converted to VLIW:
+ALU/Branch Op
+Loop: addi $s1, $s1, -16
+nop
+add $t0, $t0, $s2
+add $t1, $t1, $s2
+add $t2, $t1, $s2
+add $t3, $t1, $s2
+nop
+bne $s1, $0, Loop
+
+Load/Store Op
+lw $t0, 0($s1)
+lw $t1, 12($s1)
+lw $t2, 8($s1)
+lw $t3, 4($s1)
+sw $t0, 16($s1)
+sw $t1, 12($s1)
+sw $t2, 8($s1)
+sw $t3, 4($s1)
+
+Inst
+1
+2
+3
+4
+5
+6
+7
+8
+
+● Now we spend 8 cycles for 4 iterations of the loop
+o So, 8 / 4 = 2 cycles per iteration
+o Even better 2.5 cycles per iteration for 2X unrolling
+35
+
+What happens when you unroll 8X?
+● 8X Unrolled loop converted to VLIW:
+ALU/Branch Op
+Loop: addi $s1, $s1, -32
+nop
+…
+add $t1, $t1, $s2
+add $t2, $t1, $s2
+add $t3, $t1, $s2
+…
+bne $s1, $0, Loop
+
+Load/Store Op
+lw $t0, 0($s1)
+lw $t1, 28($s1)
+…
+lw $t7, 4($s1)
+sw $t0, 32($s1)
+sw $t1, 28($s1)
+…
+sw $t7, 4($s1)
+
+Inst
+1
+2
+…
+8
+9
+10
+…
+16
+
+● Now we spend 16 cycles for 8 iterations of the loop
+o So, 16 / 8 = 2 cycles per iteration (no improvement over 4X)
+o 2 is minimum because you need one lw and one sw per iteration
+36
+
+When should the compiler stop unrolling?
+● Obviously when there is no longer a benefit as we saw just now
+● But there are other constraints that can prevent unrolling
+1. Limitation in number of registers
+o More unrolling uses more registers $t0, $t1, $t2, …
+o For this reason, VLIW ISAs have many more registers than MIPS
+§ Intel Itanium has 256 registers!
+2. Limitation in code space
+o More unrolling means more code bloat
+o Embedded processors don’t have lots of code memory
+o Matters even for general purpose processors because of caching
+(Code that overflows i-cache can lead to lots of cache misses)
+37
+
+List Scheduling
+
+38
+
+How does the compiler schedule instructions?
+● Compiler will first expand the instruction window that it looks at
+o Instruction window: block of code without branches
+o Compiler uses predication and loop unrolling
+● Once compiler has a sizable window, it will construct the schedule
+● A popular scheduling algorithm is list scheduling
+o Idea: list instructions in some order of priority and schedule
+o Instructions on the critical path should be prioritized
+● List scheduling can be used with any statically scheduled processor
+o Simple single-issue statically scheduled processor (not just VLIW)
+o GPUs are also statically scheduled using list scheduling
+39
+
+Critical Path in Code
+● At below is a data dependence graph for a code with 7 instructions
+o Nodes are instructions
+o Arrows are data dependencies annotated with required delay
+● Q: How long is the critical path in this code?
+3
+2
+
+1
+
+1
+2
+
+1
+1
+
+1
+
+2
+
+2
+
+That means, at minimum,
+this code will take 7
+cycles, period. Regardless
+of how wide your
+processor is or how well
+you do your scheduling.
+
+total 7 cycles
+
+40
+
+Instruction Level Parallelism (ILP)
+● The 7 cycles is achievable only through instruction level parallelism
+o That is, parallel execution of instructions
+o The nodes marked in red can execute in parallel with blue nodes
+● This tell us that this code is where a VLIW processor can shine
+3
+2
+
+1
+
+1
+2
+
+1
+1
+
+1
+
+2
+
+2
+
+total 7 cycles
+
+41
+
+Maximizing Instruction Level Parallelism (ILP)
+● The more ILP code has, the more VLIW will shine
+● So before list scheduling, compiler maximizes ILP in code
+o What constrains ILP? Data dependencies!
+o Some data dependencies can be removed by the compiler
+● There are 3 types of data dependencies actually:
+o RAW (Read-After-Write): cannot be removed
+o WAR (Write-After-Read): can be removed
+o WAW (Write-After-Write): can also be removed
+● How about Read-After-Read? Not a data dependency.
+
+42
+
+Read-After-Write (RAW) Dependency
+● RAW dependencies are also called true dependencies
+o In the sense that other dependencies are not “real” dependencies
+● Suppose we reorder this snippet of code:
+RAW!
+
+lw t0, 0(s0)
+addi t1, t0, 4
+
+Reorder
+
+addi t1, t0, 4
+lw t0, 0(s0)
+
+● The code is incorrect because now t1 has a wrong value
+o No amount of compiler tinkering will allow this reordering
+o Value must be loaded into t0 before being used to compute t1
+
+43
+
+Write-After-Read (WAR) Dependency
+● WAR dependencies are also called anti-dependencies
+o In the sense that they are the opposite of true dependencies
+● Suppose we reorder this snippet of code:
+WAR!
+
+lw t0, 0(s0)
+addi t1, t0, 4
+lw t0, 0(s1)
+
+Reorder
+
+lw t0, 0(s0)
+lw t0, 0(s1)
+addi t1, t0, 4
+
+● The code is again incorrect because t1 has the wrong value
+o addi should not read t0 produced by lw t0, 0(s1)
+● Q: Is there a way for addi to not use that value?
+o t0 and t0 contain different values. Why use the same register?
+o Just rename register t0 to some other register!
+44
+
+Removing WAR with SSA
+● Static Single Assignment: Renaming registers with different values
+o A register is assigned a value only a single time (never reused)
+● Reordering after converting to SSA form:
+NO WAR!
+
+lw t0, 0(s0)
+addi t1, t0, 4
+lw t2, 0(s1)
+
+Reorder
+
+lw t0, 0(s0)
+lw t2, 0(s1)
+addi t1, t0, 4
+
+● Note how destination registers always use a new register
+o Yes, if you do this, you will need lots of registers
+o But, no more WAR dependencies!
+
+45
+
+Write-After-Write (WAW) Dependency
+● WAW dependencies are also called false dependencies
+o In the sense that they are not real dependencies
+● Suppose we reorder this snippet of code:
+WAW!
+
+lw t0, 0(s0)
+lw t0, 0(s1)
+addi t1, t0, 4
+
+Reorder
+
+lw t0, 0(s1)
+lw t0, 0(s0)
+addi t1, t0, 4
+
+● The code is again incorrect because t1 has the wrong value
+o addi should not read t0 produced by lw t0, 0(s0)
+● Q: Is there a way for addi to not use that value?
+o Again, rename register t0 to some other register!
+
+46
+
+Removing WAW with SSA
+● Again, Static Single Assignment (SSA) to the rescue!
+o SSA removes both WAR and WAW dependencies
+● Reordering after converting to SSA form:
+NO WAW!
+
+lw t0, 0(s0)
+lw t1, 0(s1)
+addi t2, t1, 4
+
+Reorder
+
+lw t1, 0(s1)
+lw t0, 0(s0)
+addi t2, t1, 4
+
+● SSA form is now the norm in all mature compilers
+o Clang / LLVM (“Apple” Compiler)
+o GCC (GNU C Compiler)
+o Java Hotspot / OpenJDK Compiler
+o Chrome JavaScript Compiler
+47
+
+List scheduling guarantees < 2X of optimal cycles
+● Back to our original example.
+● The critical path length is 7 cycles but that is not always achievable
+o If processor is not wide enough for the available parallelism
+o If compiler does a bad job at scheduling instructions
+→ List scheduling guarantees compiler is within 2X of optimal
+3
+2
+
+1
+
+1
+2
+
+1
+1
+
+1
+
+2
+
+Q: Can the graph be cyclic?
+2
+
+total 7 cycles
+
+48
+
+List Scheduling is a Greedy Algorithm
+● Idea: Greedily prioritize instructions on the critical path
+● Steps:
+1. Create a data dependence graph
+2. Assign a priority to each node (instruction)
+§ Priority = critical path length starting from that node
+3. Schedule nodes one by one starting from ready instructions
+§ Ready = all dependencies have been fulfilled
+(Initially, only roots of dependency chains are ready)
+§ When there are multiple nodes that are ready
+→ Choose the node with the highest priority
+● 2 – 2/(n+1) X of optimal schedule, where n = processor width
+
+o Graham, Ronald L.. “Bounds on Multiprocessing Timing Anomalies.” SIAM
+Journal of Applied Mathematics 17 (1969): 416-429.
+49
+
+List Scheduling Example
+● Assume all edges have a delay of 1
+o Red dashed lines indicate priority levels
+n insertions +
+n removals.
+If using priority heap
+= O(nlogn)
+
+6
+Ready instructions List
+
+5
+4
+
+Operation 1
+
+3
+
+Operation 2
+
+2
+1
+50
+
+List Scheduling Example
+● This will result in the following schedule:
+Operation 1
+1
+2
+3
+4
+6
+8
+10
+12
+13
+
+Operation 2
+6
+
+5
+7
+9
+11
+
+● 9 cycles. We couldn’t achieve 7 cycles!
+o But could’ve if we had a wider processor
+
+5
+4
+3
+2
+1
+51
+
+

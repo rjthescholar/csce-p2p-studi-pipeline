@@ -1,0 +1,1316 @@
+Intro to Systems
+Software
+
+Midterm Review
+
+CS/COE 0449
+Introduction to
+Systems Software
+
+Luis Oliveira
+(with content borrowed from wilkie and Vinicius Petrucci)
+
+1
+
+Topics for the Midterm
+• Data Representation
+• 2’s complement, Floating point, Bitwise operations,
+Endianness
+
+• C Programming
+• Pointers, Arrays, Strings, Memory Management
+
+• Machine-level Representation (x86-64)
+• Assembly Basics, Control Flow, Calling Conventions, Buffer
+Overflow
+
+• Executables
+• Compilers, Assemblers, Linkers, Loaders
+2
+
+Data representation
+
+Encoding Integers
+Two’s Complement
+
+Unsigned
+
+B2U(X ) =
+
+w−1
+
+ xi 2
+
+B2T (X ) = − xw−1 2
+
+i
+
+w−1
+
+Sign Bit
+
+• Two’s Complement Examples (w = 5)
+10 =
+
+-10 =
+
+8
+
+4
+
+2
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+-16
+
+8
+
+4
+
+2
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
++  xi 2
+i=0
+
+i=0
+
+-16
+
+w−2
+
+8+2 = 10
+
+-16+4+2 = -10
+
+i
+
+Unsigned & Signed Numeric Values
+X
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
+B2U(X)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+B2T(X)
+0
+1
+2
+3
+4
+5
+6
+7
+–8
+–7
+–6
+–5
+–4
+–3
+–2
+–1
+
+• Equivalence
+• Same encodings for
+nonnegative values
+
+• Uniqueness
+• Every bit pattern represents
+unique integer value
+• Each representable integer has
+unique bit encoding
+• Expression containing signed
+and unsigned int:
+int is cast to unsigned
+
+Important: Numeric Ranges
+
+• Unsigned Values
+• UMin =
+
+• Two’s Complement Values
+• TMin
+=
+–2w–1
+
+0
+
+• 000…0
+
+• UMax
+
+=
+
+• 100…0
+
+• TMax
+
+2w – 1
+
+• 111…1
+
+=
+
+• 011…1
+
+• Minus 1
+• 111…1
+Values for W = 16
+UMax
+TMax
+TMin
+-1
+0
+
+Decimal
+65535
+32767
+-32768
+-1
+0
+
+Hex
+FF FF
+7F FF
+80 00
+FF FF
+00 00
+
+Binary
+11111111 11111111
+01111111 11111111
+10000000 00000000
+11111111 11111111
+00000000 00000000
+
+2w–1 – 1
+
+Three “kinds” of floating point numbers
+s exp
+1
+
+00…00
+
+denormalized
+
+frac
+e-bits
+
+f-bits
+
+exp ≠ 0 and exp ≠ 11…11
+
+normalized
+
+11…11
+
+special
+
+“Normalized” Values
+
+• When: exp ≠ 000…0 and exp ≠ 111…1
+• Exponent coded as a biased value: E = exp – Bias
+• exp: unsigned value of exp field
+• Bias = 2k-1 - 1, where k is number of exponent bits
+• Single precision: 127 (exp: 1…254, E: -126…127)
+• Double precision: 1023 (exp: 1…2046, E: -1022…1023)
+
+• Significand coded with implied leading 1: M = 1.xxx…x2
+• xxx…x: bits of frac field
+• Minimum when frac=000…0 (M = 1.0)
+• Maximum when frac=111…1 (M = 2.0 – ε)
+• Get extra leading bit for “free”
+
+v = (–1)s M 2E
+
+Denormalized Values
+
+• Condition: exp = 000…0
+• Exponent value: E = 1 – Bias (instead of exp – Bias) (why?)
+• Significand coded with implied leading 0: M = 0.xxx…x2
+• xxx…x: bits of frac
+
+• Cases
+• exp = 000…0, frac = 000…0
+• Represents zero value
+• Note distinct values: +0 and –0 (why?)
+
+• exp = 000…0, frac ≠ 000…0
+• Numbers closest to 0.0
+• Equispaced
+
+v = (–1)s M 2E
+E = 1 – Bias
+
+Special Values
+
+• Condition: exp = 111…1
+• Case: exp = 111…1, frac = 000…0
+• Represents value  (infinity)
+• Operation that overflows
+• Both positive and negative
+• E.g., 1.0/0.0 = −1.0/−0.0 = +, 1.0/−0.0 = −
+
+• Case: exp = 111…1, frac ≠ 000…0
+• Not-a-Number (NaN)
+
+• Represents case when no numeric value can be determined
+• E.g., sqrt(–1),  − ,   0
+
+Casting floats to ints and vice versa
+• (int) floating_point_expression
+• Coerces and converts it to the nearest integer
+(C uses truncation)
+i = (int) (3.14159 * f);
+
+• (float) integer_expression
+• Converts integer to nearest floating point
+f = f + (float) i;
+
+float → int → float
+if (f == (float)((int) f)) {
+printf(“true”);
+}
+• Does it always print “true”?
+• No, small floating point numbers (< 1) don’t have integer
+representations
+
+• For other numbers, often will be rounding errors
+
+int → float → int
+if (i == (int)((float) i)) {
+printf(“true”);
+}
+• Does it always print “true”?
+• No, many large values of integers don’t have exact floating
+point representations
+
+• What about double?
+• Yes, significand is now 52 bits, which can hold all of 32-bit
+integer, so will always print “true”
+
+Bitwise Operations
+• Write a C expression that will yield a word consisting of the
+least significant byte of x and the remaining bytes of y
+• For operands x = 0x89ABCDEF and y =
+0x76543210, this would give 0x765432EF
+
+Hint: use masking and bit manipulation
+
+20
+
+Bitwise Operations
+• Write a C expression that will yield a word consisting of the
+least significant byte of x and the remaining bytes of y
+• For operands x = 0x89ABCDEF and y =
+0x76543210, this would give 0x765432EF
+
+1) How to extract the upper 3 bytes of x?
+
+(x & 0xFF)
+
+2) How to extract the lower 1 byte of y?
+
+(y & ~0xFF)
+
+3) How to combine them?
+
+(x & 0xFF) | (y & ~0xFF)
+
+21
+
+Bitwise Operations
+• How to perform the operation below using shifts/adders only?
+
+a * 7
+(a << 3) - a
+long m12(long x)
+{
+return x*12;
+}
+
+Converted to x86-64 by compiler:
+leaq (%rdi,%rdi,2), %rax
+salq $2, %rax
+
+# t = x+2*x
+# return t<<2
+
+22
+
+Bitwise Operations
+• Suppose we number the bytes in a w-bit word from 0 (least significant) to w/8 – 1
+(most significant)
+• Write code for the following C function, which will return an unsigned value in
+which byte i of argument x has been replaced by byte b:
+
+unsigned replace_byte (unsigned x, int i, unsigned char b);
+
+replace_byte(0x12345678, 2, 0xAB) --> 0x12AB5678
+replace_byte(0x12345678, 0, 0xAB) --> 0x123456AB
+
+23
+
+Bitwise Operations
+• Write code for the following C function, which will return an unsigned value in
+which byte i of argument x has been replaced by byte b:
+
+unsigned replace_byte (unsigned x, int i, unsigned char b) {
+int itimes8 = i << 3;
+
+unsigned mask = 0xFF << itimes8;
+return (x & ~mask) | (b << itimes8);
+}
+
+24
+
+Byte Ordering
+• Example
+• Variable x has 4-byte value of 0x01234567
+• Address given by &x is 0x100
+Big Endian
+
+0x100 0x101 0x102 0x103
+
+01
+01
+
+Little Endian
+
+23
+23
+
+45
+45
+
+67
+67
+
+0x100 0x101 0x102 0x103
+
+67
+67
+
+45
+45
+
+23
+23
+
+01
+01
+
+C Programming
+
+C Memory Layout Analysis
+
+s1[0] → ??
+
+s2[0] → ??
+
+27
+
+C Programming
+• What is wrong with the C code below?
+int* pi = malloc(314*sizeof(int));
+if(!raspberry) {
+pi = malloc(1 *sizeof(int));
+}
+return pi;
+There’s a memory leak if raspberry is false as the original value of pi will be
+unreachable
+28
+
+C programming
+Consider the following code snippet which allocates an array and
+sets the values:
+1
+2
+3
+4
+5
+6
+7
+8
+
+int main(int argc, char** argv) {
+int *a = (int*) malloc(213 * sizeof(int));
+for (int i=0; i<213; i++) {
+if (a[i] == 0) a[i]=i;
+else a[i]=-i;
+}
+return 0;
+}
+
+Which lines have a problem and how can you fix it?
+
+C programming
+
+1
+2
+
+3
+4
+5
+6
+7
+8
+
+int main(int argc, char** argv) {
+int *a = (int*) malloc(213 * sizeof(int));
+if (a == NULL) return 0;
+for (int i=0; i<213; i++) {
+if (a[i] == 0) a[i]=i;
+else a[i]=-i;
+}
+return 0;
+}
+
+malloc can fail!
+
+C programming
+1
+2
+3
+4
+5
+6
+7
+8
+
+int main(int argc, char** argv) {
+int *a = (int*) calloc(213, sizeof(int));
+if (a == NULL) return 0;
+for (int i=0; i<213; i++) {
+if (a[i] == 0) a[i]=i;
+else a[i]=-i;
+}
+return 0;
+}
+
+Allocated memory is not initialized!
+
+C programming
+1
+2
+3
+4
+5
+6
+
+7
+8
+
+int main(int argc, char** argv) {
+int *a = (int*) calloc(213, sizeof(int));
+if (a == NULL) return 0;
+for (int i=0; i<213; i++) {
+if (a[i] == 0) a[i]=i;
+else a[i]=-i;
+}
+free(a);
+return 0;
+}
+
+All allocated memory must be freed!
+
+C programming
+What lines make safe_int_malloc not so safe?
+1
+2
+3
+4
+5
+
+int *safe_int_malloc(int *pointer) {
+pointer = malloc(sizeof(int));
+if (pointer == NULL) exit(-1);
+return &pointer;
+}
+
+pointer is a local copy of the pointer! Modifying *pointer only changes the value
+within the scope of this function not outside
+
+C programming
+Passing in an int** let’s us change the value of int* pointer
+
+1
+2
+3
+4
+5
+
+int *safe_int_malloc(int **pointer) {
+*pointer = malloc(sizeof(int));
+if (pointer == NULL) exit(-1);
+return &pointer;
+}
+
+What’s STILL wrong?
+
+C programming
+The address of something on the stack will be invalid after the
+function’s execution
+
+1
+2
+3
+4
+5
+
+int *safe_int_malloc(int **pointer) {
+*pointer = malloc(sizeof(int));
+if (pointer == NULL) exit(-1);
+return &pointer;
+}
+
+&pointer is a location on the stack in
+safe_int_malloc’s frame!
+
+C programming
+
+1
+2
+3
+4
+5
+
+int **safe_int_malloc(int **pointer) {
+*pointer = malloc(sizeof(int));
+if (pointer == NULL) exit(-1);
+return pointer;
+}
+
+Pointers
+• Pointer: stores address of some value in memory
+• Example:
+• Let us have a pointer a where int* a = 0x100
+
+*a = accesses value stored at location 0x100
+a + i = 0x100 + sizeof(*a) * i
+• Dereferencing a NULL pointer or any other invalid memory
+address causes segmentation fault
+
+x86 programming
+
+x86-64: Stack Manipulation
+We execute:
+
+mov $0x449, %rax
+pushq %rax
+For each of the following instructions, determine if they will result in
+the value 0x449 being placed in %rcx?
+
+1) mov (%rsp), %rcx
+2) mov 0x8(%rsp), %rcx
+3) mov %rsp, %rcx
+4) popq %rcx
+
+x86-64: Stack is memory
+We execute:
+mov $0x449, %rax
+pushq %rax
+popq %rax
+If we now execute: mov -0x8(%rsp), %rcx
+what value is in %rcx?
+1) 0x0 / NULL
+2) Seg fault
+3) Unknown
+4) 0x449
+
+x86-64: Sometimes arguments are implicit
+* How many arguments does “rsr” take?
+* How many registers are changed before the function call?
+(Note, %sil is the lower 1 byte of %rsi)
+0x0400596 <+0>:
+0x040059a <+4>:
+0x040059c <+6>:
+0x04005a0 <+10>:
+0x04005a4 <+14>:
+0x04005a9 <+19>:
+0x04005ad <+23>:
+0x04005ae <+24>:
+0x04005b0 <+26>:
+
+cmp
+je
+sub
+sub
+callq
+add
+retq
+mov
+retq
+
+%sil,(%rdi,%rdx,1)
+0x4005ae <rsr+24>
+$0x8,%rsp
+$0x1,%rdx
+0x400596 <rsr>
+$0x8,%rsp
+%edx,%eax
+
+x86-64: Arguments can already be “correct”
+rsr does not modify s and t, so the arguments in those
+registers are always correct
+
+int rsr(char* s, char t, size_t pos)
+{
+if (s[pos] == t) return pos;
+return rsr(s, t, pos - 1);
+}
+
+Example: Reverse-engineer Assembly to C
+mystery(long, long, long):
+leaq (%rdi,%rsi), %rax
+addq %rdx, %rax
+cmpq $3, %rdi
+jg .L2
+cmpq %rdx, %rsi
+jge .L3
+movq %rdi, %rax
+imulq %rsi, %rax
+ret
+.L3:
+movq %rsi, %rax
+imulq %rdx, %rax
+ret
+.L2:
+cmpq $10, %rdi
+jle .L1
+movq %rdi, %rax
+imulq %rdx, %rax
+.L1:
+ret
+
+long mystery(long x, long y, long z)
+{
+long val = _______________;
+if (__________) {
+if (_________) {
+val = ___________;
+} else {
+val = ____________;
+
+}
+} else if (___________) {
+val = __________;
+}
+
+return ________;
+}
+
+43
+
+Example: increment
+
+long increment(long *p, long val) {
+long x = *p;
+long y = x + val;
+*p = y;
+return x;
+}
+
+increment:
+movq
+(%rdi), %rax
+addq
+%rax, %rsi
+movq
+%rsi, (%rdi)
+ret
+44
+
+Register
+
+Use(s)
+
+%rdi
+
+1st arg (p)
+
+%rsi
+
+2nd arg (val), y
+
+%rax
+
+x, return value
+
+Procedure Call Example (initial state)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Initial Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+⟵%rsp
+
+• Return address on stack is the
+address of instruction
+immediately following the call to
+“call_incr”
+• Shown here as main, but could be
+anything)
+• Pushed onto stack by call
+call_incr
+
+Procedure Call Example (step 1)
+Stack Structure
+
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+•••
+
+Return addr <main+8>
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+Allocate space
+for local vars
+
+449
+Unused
+
+⟵old %rsp
+⟵%rsp+8
+⟵%rsp
+
+• Setup space for local variables
+• Only v1 needs space on the stack
+
+• Compiler allocated extra space
+• Often does this for a variety of
+reasons, including alignment
+
+Procedure Call Example (step 2)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+449
+Unused
+
+Set up parameters for call
+to increment
+
+Aside: movl is used because 100 is a small positive value that fits
+in 32 bits. High order bits of rsi get set to zero automatically. It
+takes one less byte to encode a movl than a movq.
+
+⟵%rsp+8
+⟵%rsp
+
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+100
+
+Procedure Call Example (step 3)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+increment:
+movq
+(%rdi), %rax
+addq
+%rax, %rsi
+movq
+%rsi, (%rdi)
+ret
+
+449
+Unused
+Return addr <call_incr+?>
+
+• State while inside increment
+
+⟵%rsp
+
+• Return address on top of stack is address of
+the addq instruction immediately following
+call to increment
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+100
+
+%rax
+
+48
+
+Procedure Call Example (step 4)
+Stack Structure
+
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+549
+Unused
+Return addr <call_incr+?>
+
+⟵%rsp
+
+• State while inside increment
+• After code in body has been executed
+
+increment:
+movq
+(%rdi), %rax # x = *p
+addq
+%rax, %rsi
+# y = x + 100
+movq
+%rsi, (%rdi) # *p = y
+ret
+
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+449
+
+49
+
+Procedure Call Example (step 5)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+549
+
+⟵%rsp+8
+
+Unused
+
+⟵%rsp
+
+• After returning from call to increment
+• Registers and memory have been modified and
+return address has been popped off stack
+
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+449
+
+Procedure Call Example (step 6)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+549
+
+⟵%rsp+8
+
+Unused
+
+⟵%rsp
+
+Update %rax to contain v1+v2
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+549+449
+
+Procedure Call Example (step 7)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+
+Stack Structure
+•••
+Return addr <main+8>
+
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+549
+Unused
+
+⟵%rsp
+⟵old %rsp
+
+De-allocate space for local vars
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+998
+
+Procedure Call Example (step 8)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+Stack Structure
+•••
+Return addr <main+8>
+
+⟵%rsp
+
+• State just before returning from
+call to call_incr
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+998
+
+Procedure Call Example (step 9)
+long call_incr() {
+long v1 = 449;
+long v2 = increment(&v1, 100);
+return v1 + v2;
+}
+call_incr:
+subq
+$16, %rsp
+movq
+$449, 8(%rsp)
+movl
+$100, %esi
+leaq
+8(%rsp), %rdi
+call
+increment
+addq
+8(%rsp), %rax
+addq
+$16, %rsp
+ret
+
+Final Stack Structure
+•••
+⟵%rsp
+
+• State immediately after returning from
+call to call_incr
+• Return addr has been popped off stack
+• Control has returned to the instruction
+immediately following the call to
+call_incr (not shown here)
+
+Register
+
+Use(s)
+
+%rdi
+
+&v1
+
+%rsi
+
+549
+
+%rax
+
+998
+
+

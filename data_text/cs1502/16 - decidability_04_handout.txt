@@ -1,0 +1,608 @@
+Decidability 04
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+The Set of Real Numbers is Uncountable
+A real number R is a number with decimal representation
+π = 3.14159265 . . .
+345 = 345.000 . . .
+1.23 = 1.23000 . . .
+
+To show that a set R is not countable, we generally use proof
+by contradiction
+Assume that R is countable
+R is countable, there is a correspondence between N and R
+Since there is a correspondence between N and R, there are
+infinitely many correspondence between N and R
+This allows us to fill the right column of the correspondence
+table any way we want (no duplicate):
+n∈N
+1
+2
+3
+..
+.
+
+f (n) ∈ R
+?
+?
+?
+..
+.
+
+n∈N
+1
+2
+3
+..
+.
+
+f (n) ∈ R
+1.000 . . .
+2.000 . . .
+3.000 . . .
+..
+.
+
+n∈N
+1
+2
+3
+..
+.
+
+Always results in a valid correspondence
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+f (n) ∈ R
+1.414 . . .
+3.141 . . .
+2.222 . . .
+..
+.
+
+Diagonalization
+Consider an assignment of the function f : N → R as shown
+below:
+n∈N
+f (n) ∈ R
+1
+3.141592 . . .
+2
+55.555555 . . .
+3
+0.123456 . . .
+4
+0.500000 . . .
+5
+1.414213 . . .
+..
+..
+.
+.
+This is one of infinitely many valid correspondences
+We need to find an element x ∈ R where f (n) 6= x for any
+n∈N
+If we can find such x, the above table is not a valid
+correspondence (not onto)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Diagonalization
+Consider an assignment of the function f : N → R as shown
+below:
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ R
+3. 1 41592 . . .
+55.5 5 5555 . . .
+0.12 3 456 . . .
+0.500 0 00 . . .
+1.4142 1 3 . . .
+..
+.
+
+From the above table:
+We choose the 1st digit after the decimal point of the real
+number that corresponds with 1
+We choose the 2nd digit after the decimal point of the real
+number that corresponds with 2
+We choose the 3rd digit after the decimal point of the real
+number that corresponds with 3
+And so on
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Diagonalization
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ R
+3. 1 41592 . . .
+55.5 5 5555 . . .
+0.12 3 456 . . .
+0.500 0 00 . . .
+1.4142 1 3 . . .
+..
+.
+
+x = 0.26412 . . . ∈ R
+
+Constructing x ∈ R starting from the first digit after the
+decimal point:
+The 1st digit after the decimal point of f (1) is 1
+The 2nd digit after the decimal point of f (2) is 5
+The 3rd digit after the decimal point of f (3) is 3
+The 4th digit after the decimal point of f (4) is 0
+The 5th digit after the decimal point of f (4) is 0
+And so on
+
+Obviously, x is a real number (x ∈ R)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+pick 2
+pick 6
+pick 4
+pick 1
+pick 2
+
+Diagonalization
+
+Let’s recap how we constructed x:
+If the nth digit after the decimal point of f (n) is y, pick a
+number that is not equal to y
+We use that number (not equal to y) as the nth digit after the
+decimal point of x
+
+Claim: No n ∈ N such that f (n) = x
+Because the nth digit after the decimal point of x will be
+different that the nth digit after the decimal point of f (n)
+
+The correspondence is not onto
+Not a valid correspondence
+R is uncountable
+
+This method of constructing x is called diagonalization
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Σ∗ is Countable
+Let Σ = {0, 1}
+How to show that Σ∗ is countable
+We need to show a correspondence between N and Σ∗
+Let’s list element of Σ∗ from the shortest one
+
+n∈N
+1
+2
+3
+4
+5
+6
+7
+8
+..
+.
+
+f (n) ∈ Σ∗
+ε
+0
+1
+00
+01
+10
+11
+000
+..
+.
+
+By listing from the shortest, all
+strings will be on the right column
+Thus, one-to-one and onto (a valid
+correspondence)
+Σ∗ is countable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Σ∗ is Countable
+Another way is to explicitly define the function f : N → Σ∗
+Not necessary
+The table from the previous slide is good enough
+
+Example, let Σ = {0, 1}
+f (1) = ε
+f (n) = binary representation of n − 2blog2 (n)c with length
+blog2 (n)c
+N log2 n blog2 nc 2blog2 (n)c n − 2blog2 (n)c Σ∗
+1
+ε
+2
+1
+1
+2
+0
+0
+3
+1.585
+1
+2
+1
+1
+4
+2
+2
+4
+0
+00
+5
+2.322
+2
+4
+1
+01
+6
+2.585
+2
+4
+2
+10
+7
+2.807
+2
+4
+3
+11
+8
+3
+3
+8
+0
+000
+9
+3.169
+3
+8
+1
+001
+
+Σ∗ is countable
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Infinite Binary Sequence is Uncountable
+Let B be a set of infinite binary sequence:
+B = {x1 x2 . . . x∞ | xi = 0 or xi = 1}.
+Show that B is uncountable
+Again, we need to use proof by contradiction and
+diagonalization:
+Assume that B is countable
+Thus, there exists a correspondence f : N → B
+Since there is one, there are infinitely many correspondences
+This is one of infinite many valid correspondences (based on
+the assumption that B is countable):
+n∈N
+f (n) ∈ B
+1
+0100101 . . .
+2
+1101011 . . .
+3
+1010101 . . .
+4
+0010011 . . .
+5
+0001000 . . .
+..
+..
+.
+.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Diagonalization Example for Infinite Binary Sequence
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ B
+0 100101 . . .
+1 1 01011 . . .
+10 1 0101 . . .
+001 0 011 . . .
+0001 0 00 . . .
+..
+.
+
+From the above correspondence:
+Pick the 1st bit (from left) of f (1)
+Pick the 2nd bit (from left) of f (2)
+Pick the 3rd bit (from left) of f (3)
+Pick the 4th bit (from left) of f (4)
+..
+.
+Pick the nth bit (from left) of f (n)
+..
+.
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Diagonalization Example for Infinite Binary Sequence
+n∈N
+1
+2
+3
+4
+5
+..
+.
+
+f (n) ∈ B
+0 100101 . . .
+1 1 01011 . . .
+10 1 0101 . . .
+001 0 011 . . .
+0001 0 00 . . .
+..
+.
+
+x = 10011 . . . ∈ B
+
+Construct x ∈ B starting from the first bit (from left)
+The 1st bit (from left) of f (1) is 0
+The 2nd bit (from left) of f (2) is 1
+The 3rd bit (from left) of f (3) is 1
+The 4th bit (from left) of f (4) is 0
+The 5th bit (from left) of f (4) is 0
+..
+.
+
+pick 1
+pick 0
+pick 0
+pick 1
+pick 1
+
+The nth bit (from left) of f (n) is y
+..
+.
+
+pick ¬y
+
+Obviously, x is an infinite binary sequence
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Diagonalization Example for Infinite Binary Sequence
+
+When we construct x:
+If the nth bit (from left) of f (n) is y, pick a number that is
+not equal to y
+If it is 0, pick 1
+If it is 1, pick 0
+
+We use that number as the nth bit (from left) of x
+
+Claim: No n ∈ N such that f (n) = x
+Because the nth digit bit (from left) of x will be different that
+the nth bit (from left) of f (n)
+
+The correspondence is not onto
+Not a valid correspondence
+The set of all infinite binary sequences (B) is uncountable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+The Set of Turing Machines in Countable
+
+Each Turing machine has its own encoding hM i
+A string representation of TM M
+A string is a finite sequence of symbols over a Σ
+
+hM i for every machine has a finite length
+Similar to Σ∗ , we can list all Turing machines in their
+encoding form starting from the shortest length
+Therefore, the set of Turing Machines is countable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Set of All Languages is Uncountable
+
+Diagonalization works well when all elements are infinite
+We need to pick the nth of something
+The nth digit after the decimal point
+The nth bit (from left)
+
+If all elements are infinite long, it is guaranteed to have the nth
+of something
+
+But some languages are finite and some are infinite
+Diagonalization does not work well for proving that the set of
+all languages is uncountable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+Same Size, Countable, and Uncountable
+
+The following are what we have so far:
+The set of all Turing machine is countable
+The set of all infinite binary sequences is uncountable
+
+We know that an uncountable set is larger than a countable
+set
+We need to show that the set of all languages has the same
+size as the set of all infinite binary sequences
+To show that two sets have the same size, we need to show a
+correspondence
+We need a correspondence between the set of all languages
+and the set of all infinite binary sequences
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+The Set of All Languages is Uncountable
+We can list the set of all strings over Σ = {0, 1} starting from
+the shortest string as follows:
+{ε, 0, 1, 00, 01, 10, 11, 000, 001, . . . }
+Given a language (either finite or infinite), we can also list the
+language starting from the shortest string
+The set of all strings that start with a 1
+{1, 10, 11, 100, 101, 110, 111, 1000, . . . }
+The set of all strings of length 2
+{00, 01, 10, 11}
+
+Note that we use dictionary order for those with the same
+length
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+The Set of All Languages is Uncountable
+
+Given a language, we can always list their strings to align with
+strings in Σ∗
+The set of all strings of length 2
+Σ∗ = { ε, 0, 1, 00, 01, 10,
+A ={
+00, 01, 10,
+The set of all strings that start with a 1
+Σ∗ = { ε, 0, 1, 00, 01, 10,
+A ={
+1,
+10,
+The set of all strings that start with a 0
+Σ∗ = { ε, 0, 1, 00, 01, 10,
+A ={
+0,
+00, 01,
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+11,
+11
+
+000,
+
+001,
+
+...}
+}
+
+11,
+11,
+
+000,
+
+001,
+
+...}
+...}
+
+11,
+
+000,
+000,
+
+001,
+001,
+
+...}
+...}
+
+The Set of All Languages is Uncountable
+When we align them as in previous slide, we can convert the
+alignment into an infinite binary sequence XA :
+Σ∗ = { ε, 0, 1, 00, 01, 10, 11, 000, 001,
+A ={
+0,
+00, 01,
+000, 001,
+XA =
+0 1 0
+1
+1
+0
+0
+1
+1
+XA is the infinite binary sequence that corresponds with the
+language A
+XA is a member of the set of all infinite binary sequences B
+
+The above shows that for every language A, it corresponds to
+XA ∈ B
+The set of all languages has the same size as the set of all
+infinite binary sequences
+Since the set of all infinite binary sequences is uncountable,
+the set of all languages is uncountable
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+...}
+...}
+...
+
+Some Languages are not Turing-recognzable
+
+Recall that
+the set of all Turing machines is countable
+the set of all languages is uncountable
+
+The set of all languages is larger than the set of all Turing
+machine
+Note that one Turing machine only recognizes one language
+Corollary 4.18
+Some languages are not Turing-recognizable.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Decidability 04
+
+

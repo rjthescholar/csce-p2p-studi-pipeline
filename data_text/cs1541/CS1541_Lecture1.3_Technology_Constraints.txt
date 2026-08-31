@@ -1,0 +1,265 @@
+CS 1541 Introduction
+Technology Constraints
+
+Wonsun Ahn
+Department of Computer Science
+School of Computing and Information
+
+Technology Constraints
+
+Technology Constraints
+◼ Constraints in technology push architecture too
+App 1
+
+Technology push
+
+App 2
+
+App 3
+
+Operating System
+
+Software Layer
+
+Instruction Set Architecture
+Processor Organization
+
+Computer
+Architecture
+
+Transistor Implementation
+
+Physical Layer
+
+⚫ Power Wall: Thermal Design Power (TDP) constraint
+⚫ Memory Wall: Constraint in bandwidth to memory
+⚫ Variability: Limits in the precision of manufacturing technology
+
+◼ Processor must be designed to meet all constraints
+
+Power Wall
+◼ PowerCPU = Powerdynamic + Powerleakage
+Powerdynamic ∝ A * N * CFV2
+Powerleakage ∝ f(N, V, Vth) ∝ N * V * e-Vth
+⚫ Leakage power is also called static power
+⚫ This total CPU power cannot exceed TDP
+
+◼ Moore’s Law transistor scaling means two things:
+⚫ N = Number of transistors (∝ 1/transistor size2)  
+⚫ C = Capacitance (∝ transistor size) 
+⚫ Reductions in C does not compensate for increases in N
+
+◼ Architects must use tricks to keep power in check
+⚫ To keep packing more transistors to increase performance
+
+1. Reducing Dynamic Power
+◼ Powerdynamic (∝ A * N * CFV2) + Powerleakage (∝ N * V * e-Vth)
+◼ Reducing A (Activity): Clock gating
+⚫ Disables the clock signal to unused parts of the chip (idle cores)
+⚫ Wake-up is instantaneous (the moment clock signal goes in)
+
+◼ Reducing F (Frequency) and V (Supply Voltage)
+⚫ When F is reduced, V can also be reduced
+(Transistor 101 and water pressure, remember?)
+⚫ Dynamic Voltage Frequency Scaling (DVFS) done on multi-cores
+Slow down low-priority cores, speed up high-priority cores
+
+DVFS and Transistor Speed
+◼ RC Charging Curve of VG
+Vdd1
+VG1
+VG2
+
+Vdd2
+
+Vth
+
+T1 T2
+◼ Vdd1 → Vdd2 saves power, but slows down T1 → T2
+◼ Vdd2 → Vdd1 uses more power, but speeds up T2 → T1
+◼ Vdd ∝ 1/T ∝ F (Vdd is proportional to frequency)
+
+2. Reducing Leakage Power
+◼ Powerdynamic (∝ A * N * CFV2) + Powerleakage (∝ N * V * e-Vth)
+◼ Reducing N (Transistor Number): Power gating
+⚫ Disables power to unused parts of the chip (unused cores)
+⚫ Eliminates dynamic power and leakage power to those parts
+⚫ Drawback: wake-up takes a much longer time than clock gating
+Delay for supply voltage to stabilize
+Delay to backup and restore CPU state to/from memory
+
+◼ Reducing V (Supply Voltage): DVFS also helps here
+
+OS Manages Power
+◼ Who decides which cores to clock gate and power gate?
+◼ Who decides how to apply DVFS to the cores?
+◼ ACPI (Advanced Configuration and Power Interface)
+⚫ OS performs power management using this interface
+OS knows best which threads to prioritize for best user experience
+
+⚫ Open standard interface to system firmware
+Firmware sends signals to processor cores to control them
+
+App 1
+
+App 2
+
+App 3
+
+OS Power Management
+
+Software Layer
+
+System Firmware
+
+Computer
+Architecture
+
+ACPI
+
+Processor Cores
+
+3. Simpler Processor Design
+◼ Plenty of transistors but not enough power
+⚫ Power becomes the ultimate currency in processor design
+
+◼ Complex logic for performance is power hungry
+⚫ Not easy to eke out the last bit of performance out of a program
+⚫ Diminishing returns on performance for power investment
+
+◼ Push towards simpler architectures:
+⚫ Multi-cores: Run multiple programs (threads) on simple cores
+⚫ GPUs: Run each instruction on massively parallel compute units
+⚫ Caches: Memory caches are power efficient (low dynamic power)
+
+Memory Wall
+◼ Refers to both latency (ns) and bandwidth (GB/s)
+⚫ CPU frequency and overall performance increased dramatically
+⚫ Memory (DRAM) latency and bandwidth have lagged far behind
+
+◼ Why?
+⚫ Limit on the number of CPU / DRAM pins that can be soldered on
+
+⚫ DRAM manufacturers have traditionally prioritized capacity
+⚫ DDR1 (1998): 1.6 GB/s → DDR4 (2014): 25.6 GB/s
+(Impressive? Not so much compared to CPU performance)
+
+Memory Wall
+
+Source: SC16 Invited Talk ““Memory Bandwidth and System Balance in HPC Systems” by John D. McCalpin
+
+◼ FLOPS = floating point operations per second (performance)
+
+Memory Wall
+◼ Where did the Memory Wall push architecture?
+◼ Caches: If hit in cache, no need to go to memory
+⚫ Caching reduces both data access latency/bandwidth
+
+◼ 3D-Stacked Memory: Stack CPU on top of memory
+⚫ Drill vias, or holes, through silicon to bond CPU with memory
+⚫ Through silicon vias (TSVs) have low latency / high bandwidth
+
+Variability
+◼ Variability: differences in speed of individual transistors
+⚫ If fab can’t ensure uniformity of transistors, speeds will differ
+⚫ Speed differences mostly come from variations in Vth:
+low Vth → cycle time  but leakage power 
+high Vth → cycle time  but leakage power 
+
+◼ If unlucky and a logic path has lots of slow transistors
+→ CPU may miss clock cycle time if path is exercised
+→ CPU must be discarded, since it malfunctions
+◼ If unlucky and a region has too many fast transistors
+→ Region may generate too much heat due to low Vth
+→ CPU must be discarded, due to overheating
+◼ Leads to low chip yield
+
+Wafer Yield
+
+◼ Lower yield leads to higher production cost
+
+Variability
+◼ Where did Variability push architecture?
+◼ Product binning: Sell slower CPUs at a cheaper “bin”
+⚫ And rate slower CPUs at a lower CPU frequency
+⚫ Instead of discarding them as “malfunctioning”
+
+◼ Multi-cores: Easy to disable one or two buggy cores
+⚫ Compared to single core where subcomponents must be disabled
+⚫ Used when one or two cores are extremely slow
+
+◼ Limited pipelining: pipelining exacerbates variability
+⚫ With long stages, many transistors so tend to even each other out
+⚫ With short stages, few transistors so probable all are slow
+
+Intel i9 Product Binning
+Why the close to
+4X difference?
+Clock difference
+is just 2X!
+
+Produced from
+one wafer
+
+Source: https://www.techspot.com/article/2039-chip-binning/
+* TDP is calculated using the Base Clock frequency at a nominal supply voltage
+
+Opportunities for Speed Improvement
+◼ So Dennard Scaling is dead
+⚫ Free CPU frequency gains are no longer there
+
+◼ And we are walled in by technology constraints
+⚫ Power wall
+⚫ Memory wall
+⚫ Variability
+⚫…
+
+◼ Where do architects go look for performance?
+
+Improving Execution Time
+instructions
+◼ Execution time = program X
+
+◼ Improving
+
+seconds
+cycle
+
+cycles
+seconds
+X
+cycle
+instructions
+
+:
+
+⚫ Pipelining can lead to higher frequencies
+cycles
+◼ Improving instructions :
+
+⚫ Caching can reduce cycles for memory instructions
+⚫ Superscalars can execute multiple instructions per cycle
+⚫ Multi-cores execute multi-instructions from multi-threads
+
+instructions
+◼ Improving program :
+
+⚫ GPUs are SIMD (Single Instruction Multiple Data) processors
+
+What about Other Performance Goals?
+◼ We talked a lot about execution speed
+◼ But there are other performance goals such as:
+⚫ Energy efficiency
+⚫ Reliability
+⚫ Security
+⚫…
+
+◼ In this class, we will mainly focus on speed
+⚫ Not that other goals are not important
+⚫ We will touch upon other goals when relevant
+⚫ Performance will be used synonymously with speed
+
+Textbook Chapters
+◼ Please review Chapter 1 of the textbook.
+
+

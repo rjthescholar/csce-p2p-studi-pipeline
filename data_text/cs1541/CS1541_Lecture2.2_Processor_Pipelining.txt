@@ -1,0 +1,896 @@
+Processor Pipelining
+CS 1541
+Wonsun Ahn
+
+Pipelining Basics
+
+2
+
+Improving Washer / Dryer / Closet Utilization
+
+● If you work on loads of laundry one by one, you only get ~33% utilization
+● If you form an “assembly line”, you achieve ~100% utilization!
+
+3
+
+Multi-cycle instruction execution
+● Let's watch how an instruction flows through the datapath.
+
+add
+Memory
+
+Clock!
+
+ID
+Set all control signals...
+
+Ins. Decoder
+
+IF
+
+Clock!
+
+Register
+File
+
+EX
+
+Clock!
+
+MEM
+
+Add...
+
+ALU
+
+Memory
+
+Clock!
+Data flows back to registers...
+
+WB
+4
+
+Pipelined instruction execution
+● Pipelining allows one instruction to be fetched each cycle!
+
+add
+sub
+sw
+Memory
+
+ID
+Ins. Decoder
+
+IF
+
+Register
+File
+
+EX
+
+ALU
+
+MEM
+
+Memory
+
+WB
+5
+
+Pipelining Timeline
+● This type of parallelism is called pipelined parallelism.
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+add t0,t1,t2
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+add t3,t4,t5
+
+add s0,s1,s2
+
+add s3,s4,s5
+
+6
+
+7
+
+8
+
+WB
+
+6
+
+A Pipelined Implementation is even Faster!
+● Again each instruction takes different number of cycles to complete
+o lw takes 5 cycles: IF/ID/EX/MEM/WB
+o add takes 4 cycles: IF/ID/EX/WB
+● If each stage takes 1 ns each:
+o lw takes 5 ns and add takes 4 ns
+Q) The average instruction execution time (given 100 instructions)?
+A) (99 ns + 5 ns) / 100 = 1.04 ns
+o Assuming last instruction is a lw (a 5-cycle instruction)
+o A ~5X speed up from single cycle!
+
+7
+
+Pipelined vs. Multi-cycle vs. Single-cycle
+● What happened to the three components of performance?
+instructions
+X
+program
+
+cycles
+instruction
+
+Architecture
+
+Instructions
+
+CPI
+
+Cycle Time
+(1/F)
+
+Single-cycle
+
+Same
+
+1
+
+5 ns
+
+Multi-cycle
+
+Same
+
+4~5
+
+1 ns
+
+Pipelined
+
+Same
+
+1
+
+1 ns
+
+X
+
+seconds
+cycle
+
+● Compared to single-cycle, pipelining improves clock cycle time
+o Or in other words CPU clock frequency
+o The deeper the pipeline, the higher the frequency will be
+* Caveat: latch delay and unbalanced stages can increase cycle time
+8
+
+How about the control signals?
+
+Memory
+
+Register
+File
+
+ALU
+
+MEM
+
+WB
+
+EX
+
+MEM/WB
+
+ID
+Ins. Decoder
+
+IF
+
+EX/MEM/WB
+
+● A new instruction is decoded at every cycle!
+● Control signals must be passed along with the data at each stage
+
+Memory
+
+WB
+9
+
+Pipeline Hazards
+
+10
+
+Pipeline Hazards
+● For pipelined CPUs, we said CPI is practically 1
+o But that depends entirely on having the pipeline filled
+o In real life, there are hazards that prevent 100% utilization
+● Pipeline Hazard
+o When the next instruction cannot execute in the following cycle
+o Hazards introduce bubbles (delays) into the pipeline timeline
+● Architects have some tricks up their sleeves to avoid hazards
+● But first let’s briefly talk about the three types of hazards:
+Structural hazard, Data hazard, Control Hazard
+
+11
+
+Structural Hazards
+● Two instructions need to use the same hardware at the same time.
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+lw t0,0($0)
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+lw t1,4($0)
+
+lw t2,8($0)
+
+lw t3,12($0)
+
+6
+
+7
+
+8
+
+WB
+
+12
+
+Data Hazards
+● An instruction depends on the output of a previous one.
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+add t0,t1,t2
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+sub s0,t0,t1
+
+6
+
+7
+
+8
+
+WB
+
+● sub must wait until add's WB phase is over before doing its ID phase
+add t0,t1,t2
+
+sub s0,t0,t1
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+bubble
+
+bubble
+
+bubble
+
+ID
+
+EX
+
+MEM
+13
+
+Control Hazards
+● You don't know the outcome of a conditional branch.
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+beq t0,$0,end
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+EX
+
+MEM
+
+add t0,t1,t2
+
+6
+
+7
+
+8
+
+WB
+
+● add must wait until beq’s EX phase is over before its IF phase
+beq t0,$0,end
+
+add t0,t1,t2
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+bubble
+
+bubble
+
+IF
+
+ID
+
+EX
+
+WB
+14
+
+Dealing with Hazards
+● Pipeline must be controlled so that hazards don’t cause malfunction
+● Who is in charge of that? You have a choice.
+1. Compiler can avoid hazards by inserting nops
+§ Insert a nop where compiler thinks a hazard would happen
+2. CPU can internally avoid hazards using a hazard detection unit
+§ If structural/data hazard, pipeline stalled until resolved
+§ If control hazard, pipeline flushed of wrong path instructions
+
+15
+
+Compiler avoiding a data hazard
+● The nops flow through the pipeline not doing any work
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+add t0,t1,t2
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+IF
+
+ID
+
+EX
+
+MEM
+
+nop
+
+nop
+
+nop
+
+sub s0,t0,t1
+
+6
+
+7
+
+8
+
+16
+
+Compiler avoiding a control hazard
+● The nops give time for condition to resolve before instruction fetch
+Cycle
+
+1
+
+2
+
+3
+
+4
+
+5
+
+beq t0,$0,end
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+bubble
+
+IF
+
+ID
+
+EX
+
+MEM
+
+nop
+
+nop
+
+add t0,t1,t2
+
+6
+
+7
+
+8
+
+WB
+
+17
+
+Hazard Detection Unit
+Creates bubbles by zeroing all control signals,
+thereby creating a nop instruction
+
+Freezes IF and ID until
+hazard is resolved
+18
+
+Hazard Detection Unit avoiding a data hazard
+● Suppose we have an add that depends on an lw.
+
+sub
+add
+lw
+
+ID
+Ins. Decoder
+
+IF
+
+EX
+
+MEM
+
+WAIT!
+
+Memory
+
+Register
+File
+
+ALU
+
+Memory
+
+WB
+19
+
+Structural / Data Hazards cause stalls
+● If HDU detects a structural or data hazard, it does the following:
+o It stops fetching instructions (doesn't update the PC).
+o It stops clocking the pipeline registers for the stalled stages.
+o The stages after the stalled instructions are filled with nops.
+§ Change control signals to 0 using the mux!
+o In this way, all following instructions will be stalled
+● When structural or data hazard is resolved
+o HDU resumes instruction fetching and clocking of stalled stages
+● But what about control hazards?
+o Instructions in wrong path are already in pipeline!
+o Need to flush these instructions
+20
+
+Control Hazard Example
+● Supposed we had this for loop followed by printf(“done”):
+
+for(s0 = 0 .. 10)
+print(s0);
+printf("done");
+By the time s0, 10
+are compared at blt
+EX stage, the CPU
+would have already
+fetched la and jal!
+
+li
+
+s0, 0
+
+top:
+move a0, s0
+jal print
+addi s0, s0, 1
+blt s0, 10, top
+la
+jal
+
+a0, done_msg
+printf
+
+21
+
+What's a flush?
+● A pipeline flush removes all wrong path instructions from pipeline
+Time
+
+0
+
+1
+
+2
+
+3
+
+4
+
+blt s0,10,top
+
+IF
+
+ID
+
+EX
+
+MEM
+
+WB
+
+IF
+
+ID
+
+P OW
+
+IF
+
+BO
+
+la a0,done_msg
+
+jal printf
+s0 < 10...
+OOPS!
+move a0,s0
+
+5
+
+6
+
+7
+
+EX
+
+MEM
+
+WB
+
+OM
+
+IF
+
+ID
+
+22
+
+Hazard Detection Unit avoiding a control hazard
+● Let's watch the previous example.
+
+move
+blt
+jal
+la
+Memory
+
+ID
+nop
+
+Ins. Decoder
+
+IF
+
+EX
+
+MEM
+
+nop
+Register
+File
+
+ALU
+
+Memory
+
+WB
+23
+
+Control Hazards cause flushes
+● If a control hazard is detected due to a branch instruction:
+o Any "newer" instructions (those already in the pipeline)
+→ transformed into nops.
+o Any "older" instructions (those that came BEFORE the branch)
+→ left alone to finish executing as normal.
+
+24
+
+Performance penalty of pipeline stalls
+● Remember the three components of performance:
+instructions
+X
+program
+
+cycles
+instruction
+
+X
+
+seconds
+cycle
+
+Architecture
+
+Instructions
+
+CPI
+
+Cycle Time (1/F)
+
+Single-cycle
+
+Same
+
+1
+
+5 ns
+
+Ideal 5-stage pipeline
+
+Same
+
+1
+
+1 ns
+
+Pipeline w/ stalls
+
+Same
+
+2
+
+1 ns
+
+● Pipelining increases clock frequency proportionate to depth
+● But stalls increase CPI (cycles per instruction)
+o If stalls prevent new instructions from being fetched half the time,
+the CPU will have a CPI of 2 → Only 2.5X speed up (instead of 5X)
+● We’d like to avoid this penalty if possible!
+25
+
+Compiler nops vs. CPU Hazard Detection Unit
+● Limitations of compiler nops
+o Compiler must make assumptions about processor design
+§ That means processor design must become part of ISA
+§ What if that design is no longer ideal in future generations?
+o Length of MEM stage is very hard to predict by the compiler
+§ Until now we assumed MEM takes a uniform one cycle
+§ But remember what we said about the Memory Wall?
+§ MEM isn’t uniform really and sometimes hundreds of cycles
+● But compiler nops is very energy-efficient
+o Hazard Detection Unit can be power hungry
+§ A lot of long wires controlling remote parts of the CPU
+§ Adds to the Power Wall problem
+o Compiler scheduling via nops removes need for HDU
+26
+
+

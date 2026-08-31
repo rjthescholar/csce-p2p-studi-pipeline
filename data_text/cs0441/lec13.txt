@@ -1,0 +1,376 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #13: Proof by Induction
+
+Based on materials developed by Dr. Adam Lee
+
+We’ve learned a lot of proof methods…
+Basic proof methods
+l Direct proof, contradiction, contraposition, cases, …
+
+Proof of quantified statements
+l Existential statements (i.e., ∃x P(x))
+➣ Finding a single example suffices
+
+l Universal statements (i.e., ∀x P(x)) can be harder to prove
+➣
+
+➣
+
+Bottom line: We need new tools!
+
+Mathematical induction lets us prove universally
+quantified statements!
+Goal: Prove ∀x∈N P(x).
+
+Intuition: If P(0) is true, then P(1) is
+true. If P(1) is true, then P(2) is
+true…
+
+Procedure:
+1. Prove P(0)
+2. Show that P(k) → P(k+1) for any arbitrary k
+3. Conclude that P(x) is true ∀x∈N
+
+P(0)
+For arb. k, P(k) → P(k+1)
+∴∀x∈N P(x)
+
+Analogy: Climbing a ladder
+Proving P(0):
+l You can get on the first rung of the ladder
+
+Proving P(k) → P(k+1):
+l If you are on the kth step, you can get to
+the (k+1)th step
+
+∴ ∀x P(x)
+l You can get to any step on the ladder
+
+Analogy: Playing with dominoes
+Proving P(0):
+l The first domino falls
+
+Proving P(k) → P(k+1):
+l If the kth domino falls, then the
+(k+1)th domino will fall
+
+∴ ∀x P(x)
+l All dominoes will fall!
+
+All of your proofs should have the same overall
+structure
+P(x) ≡ Define the property that you are trying to prove
+Base case: Prove the “first step onto the ladder.” Typically,
+but not always, this means proving P(0) or P(1).
+
+Inductive Hypothesis: Assume that P(k) is true for an arbitrary k
+Inductive step: Show that P(k) → P(k + 1). That is, prove that once
+you’re on one step, you can get to the next step. This
+is where many proofs will differ from one another.
+
+Conclusion: Since you’ve proven the base case and
+P(k) → P(k + 1), the claim is true! ❏
+
+Prove that
+P(n) ≡
+Base case: P(1): 1(1+1)/2 = 1
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n 1+2+…+k = k(k+1)/2
+n 1+2+…+k+(k+1) = k(k+1)/2 + (k+1)
+n 1+2+…+k+(k+1) = k(k+1)/2 + 2(k+1)/2
+n 1+2+…+k+(k+1) = (k2 + 3k + 2)/2
+n 1+2+…+k+(k+1) = (k+1)(k+2)/2
+
+by I.H.
+k+1 to both sides
+
+factoring
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Induction cannot give us a formula to prove, but
+can allow us to verify conjectures
+Mathematical induction is not a tool for discovering new
+theorems, but rather a powerful way to prove them
+
+Example: Make a conjecture about the sum of the first n odd
+positive numbers, then prove it.
+l 1=1
+l 1+3=4
+l 1+3+5=9
+l 1 + 3 + 5 + 7 = 16
+l 1 + 3 + 5 + 7 + 9 = 25
+
+The sequence 1, 4, 9, 16, 25, … appears
+to be the sequence {n2}
+
+Conjecture: The sum of the first n odd positive integers is n2
+
+Prove that the sum of the first n positive odd
+integers is n2
+P(n) ≡ The sum of the first n positive odd numbers is n2
+Base case: P(1): 1 = 1
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n 1+3+…+(2k-1) = k2
+n 1+3+…+(2k-1)+(2k+1) = k2+2k+1
+n 1+3+…+(2k-1)+(2k+1) = (k+1)2
+
+by I.H.
+2k+1 to both sides
+factoring
+
+Note: The kth odd integer is 2k-1, the (k+1)th odd integer is
+2k+1
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Prove that the sum 1 + 2 + 22 + … + 2n = 2n+1 - 1 for all
+nonnegative integers n
+P(n) ≡
+Base case: P(0): 20 = 1
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n 1+2+…+2k = 2k+1-1
+n 1+2+…+2k+2k+1 = 2k+1-1+2k+1
+n 1+2+…+2k+2k+1 = 2k+1+2k+1-1
+n 1+2+…+2k+2k+1 = 2×2k+1-1
+n 1+2+…+2k+2k+1 = 2k+2-1
+
+by I.H.
+2k+1 to both sides
+associative law
+def’n of ×
+def’n of exp.
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Why does mathematical induction work?
+This follows from the well ordering axiom
+l i.e., Every set of positive integers has a least element
+
+We can prove that mathematical induction is valid using
+a proof by contradiction.
+l Assume that P(1) holds and P(k) → P(k+1), but ¬∀x P(x)
+l This means that the set S = {x | ¬P(x)} is nonempty
+l By well ordering, S has a least element m with ¬P(m)
+l Since m is the least element of S, P(m-1) is true
+l By P(k) → P(k+1), P(m-1) → P(m)
+l Since we have P(m) ∧ ¬P(m) this is a contradiction!
+
+Result: Mathematical induction is a valid proof method
+
+In-class exercises
+$
+
+$%& − 𝑎
+𝑎𝑟
+if 𝑟 ≠ 1
+Problem 1: Prove that $ 𝑎𝑟 ! =
+𝑟−1
+!"#
+$
+
+𝑛 3𝑛 − 1
+Problem 2: Prove that $ 3𝑗 − 2 =
+2
+!"&
+
+Hint: Be sure to
+1.
+2.
+3.
+4.
+5.
+
+Define P(x)
+Prove the base case
+Make an inductive hypothesis
+Carry out the inductive step
+Draw the final conclusion
+
+Prove the formula for the sum of the first n
+positive squares
+$
+
+P(n) ≡ '
+
+𝑖% =
+
+!"#
+
+𝑛 𝑛 + 1 2𝑛 + 1
+6
+
+Base case: P(1): 1% = #(#'#)(%'#)
+)
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n 1+4+9+…+k2 = k(k+1)(2k+1)/6
+n 1+4+9+...+(k+1)2 = k(k+1)(2k+1)/6 + (k+1)2
+n = k(k+1)(2k+1)/6 + 6(k+1)2/6
+n = (k+1)(2k2+k+6k+6)/6 = (k+1)(2k2+7k+6)/6
+n = (k+1)(k+2)(2k+3)/6
+n = (k+1)((k+1)+1)(2(k+1)+1)/6, ∴P(k+1)
+
+by I.H.
+(k+1)2 to both sides
+common denom.
+factor k+1, mult.
+factor
+proved for k+1
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Induction can also be used to prove properties
+other than summations!
+
+≥<
+∈
+⊆
+Inequalities
+
+≡
+| φ(p)
+
+Divisibility and results from
+number theory
+
+∪
+
+Set theory
+Algorithms and data structures
+
+Prove that 2n < n! for every positive integer n ≥ 4
+Prelude: The expression n! is called the factorial of n.
+
+Definition: n! = n × (n-1) × … × 3 × 2 × 1
+Examples:
+
+Note how quickly the factorial of
+n “grows”
+
+l 4! = 4 × 3 × 2 × 1 = 24
+l 5! = 5 × 4 × 3 × 2 × 1 = 120
+l 6! = 6 × 5 × 4 × 3 × 2 × 1 = 720
+l 7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5,040
+l 8! = 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40,320
+
+Prove that 2n < n! for every positive integer n ≥ 4
+P(n) ≡ 2n < n!
+Base case: P(4): 24 < 4!
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n 2k < k!
+n 2 × 2k < 2 × k!
+n 2k+1 < 2 × k!
+n 2k+1 < (k+1) × k!
+n 2k+1 < (k+1)!
+
+by I.H.
+multiply by 2
+def’n of exp.
+since 2 < (k+1)
+def’n of factorial
+
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Prove that n3 – n is divisible by 3 whenever n is a
+positive integer
+P(n) ≡ 3 | (n3 – n)
+Base case: P(1): 3 | 0
+
+✔
+
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n (k+1)3 – (k+1) = k3 + 3k2 + 3k + 1 – (k+1)
+n
+= k3 + 3k2 + 2k
+n
+= (k3 – k) + (3k2 + 3k)
+n
+= (k3 – k) + 3(k2 + k)
+n Note that 3 | (k3 – k) by the I.H. and 3 | 3(k2 + k) by definition,
+so 3 | [(k+1)3 – (k+1)]
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+In-class exercises
+Problem 3: Prove that 𝑛' + 2𝑛 is divisible by 3 for any
+positive integer 𝑛
+Problem 4: Prove that 6$ − 1 is divisible by 5 for any
+positive integer 𝑛
+
+Hint: Be sure to
+1.
+2.
+3.
+4.
+5.
+
+Define P(x)
+Prove the base case
+Make an inductive hypothesis
+Carry out the inductive step
+Draw the final conclusion
+
+Prove that if S is a finite set with n elements, then S
+has 2n subsets.
+P(n) ≡ Set S with cardinality n has 2n subsets
+Base case: P(0): ∅ has 20 = 1 subsets (i.e., ∅ ⊆ ∅) ✔
+I.H.: Assume that P(k) holds for an arbitrary integer k
+Inductive step: We will now show that P(k) → P(k+1)
+n Let S be a set of size k
+n Assume without loss of generality that x ∉ S
+n Let T = S ∪ {x}, so |T| = k+1
+n ∀s⊆S (s ⊆ T) since T is a superset of S
+n Furthermore, ∀s⊆S (s ∪ {x} ⊆ T) since x ∈ T
+n Since S has 2k subsets by the I.H., T has 2×2k = 2k+1 subsets
+Conclusion: Since we have proved the base case and the inductive
+case, the claim holds by mathematical induction ❏
+
+Final Thoughts
+n Mathematical induction lets us prove universally quantified
+statements using this inference rule:
+
+P(0)
+P(k) → P(k+1)
+∴∀x∈N P(x)
+n Induction is useful for proving:
+l Summations
+l Inequalities
+l Claims about countable sets
+l Theorems from number theory
+l …
+
+n Next time: Strong induction and recursive definitions (Sections
+5.2 & 5.3)
+
+

@@ -1,0 +1,504 @@
+Typing
+CS 1622
+Jarrett Billingsley
+
+Class Announcements
+● I may hold some Extra Office Hours on Friday… what time would be
+best for those of you who think you may need them?
+
+2
+
+A little Type Theory
+
+3
+
+Remember what a type is?
+● a type is:
+o a set of valid values, plus:
+o a set of valid operations on those values
+● think about ints:
+o there's a range of valid values of an int variable
+o and a set of operators and other things you can use on them
+● type theory is a branch of mathematics
+o it might seem kind of abstract and confusing (as most math does)
+o but it has had profound impacts on the design and behaviors of
+programming languages, especially in the past 30 years
+● without rigorous type theory, you get C 😬
+
+4
+
+I'll Curry YOUR Howards, isomorphically
+● remember from the beginning of the term: programs are proofs.
+● type systems are essentially proof justifications.
+these justifications are saying,
+"look, I'm using only valid
+operations on these values!"
+similarly, when you say "this
+variable is an int," the compiler
+uses that information to justify
+the steps of your program.
+if it can't… that's a type error!
+5
+
+Type Safety = Progress + Preservation
+● type safety means that you know exactly what will happen at every
+step of your program, because you know the types of everything.
+progress means that at every step of computation:
+…or there is exactly one
+thing that can happen.
+either the program halts…
+
+int[] a = { 1, 2, 3 };
+a[4] = 10; // halts
+
+int[] a = { 1, 2, 3 };
+a[0] = 10; // assigns
+
+preservation means that you know the type of every value, at
+every step of computation. (you never "leave the walls" of the type system.)
+Java is a type-safe language, so I can't give an example of that.
+but what about the most popular language used for programming our operating
+systems, device drivers, embedded device firmware etc.? 🙃
+
+6
+
+A very unsafe language
+● in C, the type system was an afterthought.
+
+float f = 3.4;
+int a[10];
+a[10] = 0xDEADBEEF;
+printf("%f\n", f);
+
+this line of code violates both
+progress and preservation.
+
+it violates progress because accessing an array out-of-bounds is
+"undefined behavior" (UB), which means "anything could happen."
+it violates preservation because one of the things that could happen
+is that this line overwrites the value in f, violating its type.
+depending on the platform and compilation settings, this printf
+might show 3.4 or -6259853398707798016.000000!
+7
+
+Safety has to be built-in
+● once you step into UB, you cannot guarantee anything.
+o it's like writing a proof with an incorrect step.
+o all the steps after may or may not be invalid!
+o HLLs are a set of abstractions, and type-unsafety lets you ruin
+those abstractions entirely.
+● you can't make C safe. this has big consequences:
+o you can't do automatic memory management, because that
+requires you to know the types of every value in the program.
+o you can't prove that a C program is correct, because there are
+many "correct" programs which actually violate type safety.
+● you can't be superhuman. sorry, but no amount of "just write the
+code correctly" is going to lead to correct C code. mistakes happen.
+o this is why languages like Java and Rust exist!
+8
+
+Decidability
+● decidable means: "can this question be answered in finite time?"
+● type-checking is an algorithm, so it can be undecidable.
+o we can make our type system so powerful that we'd have to solve
+the halting problem to check our program's types!
+▪ which maybe seems like a bad thing, right?
+● there's this other related thing that I think is related to decidability?
+o you can't predict the future.
+o that means sometimes you can't know what type something is
+until runtime, no matter how clever your type system is.
+● so if you want programmers to have that (very useful!) ability, you
+have to design your type system to allow for it in a safe way.
+o we'll see some examples shortly.
+
+9
+
+Type systems
+
+10
+
+The primitive types
+● a language's problem domain is the problems it's designed to solve.
+o most languages try to be "general purpose" and therefore give you
+relatively few, simple primitive types, like int, char, bool, etc.
+● the hardware also dictates what primitives are available.
+o e.g. on GPUs, 4-element vectors and 4x4 matrices are primitives!
+● domain-specific languages (DSLs) are designed to do one job well.
+o these might have many primitive types, including types which don't
+seem very "primitive" at all.
+o for example, a shell scripting language may have primitive types
+like files, processes, and terminal emulators.
+● the set of primitive types is really a product of what problems you
+want your language to be able to solve easily.
+
+11
+
+Static vs. Dynamic typing
+● remember: static ="before runtime;" dynamic = "at runtime."
+statically typed languages
+associate types with variables.
+
+dynamically typed languages
+associate types with values.
+
+let mut a = 10;
+a = 20;
+// ok
+a = "hello"; // bad
+a = a / 2;
+// ok
+
+let a = 10; // JS
+a = 20;
+// ok
+a = "hello"; // ok!
+a = a / 2;
+// bad
+
+in dynamically typed languages, type errors
+cannot be found until you run the program.
+but this is a spectrum: many statically-typed
+languages include dynamically-typed features too!
+12
+
+Dynamic types in static languages
+● sometimes it's useful not to know the type until runtime.
+class A { String toString() { return "A"; } }
+class B { String toString() { return "B"; } }
+
+Object o;
+if(user types A)
+o = new A();
+else
+o = new B();
+o.toString();
+
+this works because of Java's subtyping
+rules and virtual methods.
+
+calling toString() is a valid operation on any
+Object, and every class instance is an Object.
+this is a form of existential polymorphism: we
+don't know what type it is until runtime, but we
+at least know that it will support this operation!
+13
+
+Type coercion ("punning") and conversion
+● type coercion is when the language will let you use the "wrong"
+type and it will automatically turn it into the "right" one.
+● type conversion creates a new value of a different type.
+o some type coercions do a type conversion; some don't!
+implicit conversions like these can
+// Java
+make code shorter and more readable…
+int x = 10;
+but they can be confusing too:
+float f = x;
+// now f == 10.0
+// JavaScript
+int x = 10;
+let x = 10 + "20";
+String s = "x = " + x;
+let y = 10 – "20";
+// now s is "x = 10"
+// x == "1020"
+// y == -10 ?!
+14
+
+Strong vs. Weak typing
+● different people use “strong” and “weak” to mean different things.
+one definition is basically the
+same as type safety: it says
+that weakly-typed languages
+let you “step around” the type
+system, while strongly-typed
+languages keep you in.
+// C
+bool b = true;
+int* p = (int*)&b;
+*p = 700; // wat.
+
+another definition is that weaklytyped languages do lots of
+implicit conversions and almost
+never give type errors, instead
+choosing to “do something else.”
+// JavaScript again
+alert([] + []); // ""
+alert({} + {}); // NaN
+alert({} + []); // 0
+alert([] + {}); // {}
+
+I like to think ”weakly-typed” means “the language doesn’t
+care about types, for some value of ‘doesn’t care’” lol
+
+15
+
+The typing alignment chart
+● if we treat strong/weak and static/dynamic as axes on a spectrum…
+strong
+Python
+Rust Fortran
+Java
+TypeScript
+dynamic
+
+static
+
+C++
+
+JS
+
+PHP
+weak
+
+C
+16
+
+Type inference
+● type inference automatically determines what type something is.
+● you may not know it, but you've been using it for years.
+
+int x = 10;
+int y = x + 5;
+
+the compiler implicitly determines the
+types of the parts of the expressions, and
+which addition operation to do.
+
+imagine having to write this…
+
+int x = 10:int;
+int y = x:int +:int 5:int;
+type inference can go further, too, like variables in Rust!
+
+let x = 10;
+// x: i32
+let y = Some(x); // y: Option<i32>
+17
+
+Defining Type Systems
+
+18
+
+Terms and types
+● a term is a thing that has a value.
+o it's either a value itself, or it can be evaluated to get one.
+▪ (that sounds a lot like an expression…)
+● every value has a type, and therefore every term has a type.
+PL theory writes this relation like so:
+term:Type
+like:
+x:i32
+and now you know why Rust uses this syntax.
+
+19
+
+Inference rules
+● a type system's inference rules explain how to give a type to a term.
+● some rules are axiomatic: they are the "ground truth" of the types.
+● others say how to determine the type of a more complex term.
+here's an axiomatic rule that says all
+integer literals are of type int:
+
+and here's a rule for
+integer addition:
+
+<IntExp>:int
+
+t:int u:int
+t + u :int
+
+(where IntExp is the kind of AST
+node that represents integer literals.)
+
+"if t is an int and u is an int,
+then (t+u) is an int."
+
+our type checking algorithm will be driven by these rules.
+if no rule can be applied, it's a type error!
+20
+
+The type context
+● in addition to the axiomatic rules, we also need some context to
+assign types to some terms, like variables.
+
+int x = 10;
+how do we know what type x is?
+int y = x + 5;
+
+we have to look back to its declaration.
+
+fortunately, name resolution has already
+determined which symbol x refers to!
+the type context is another mapping: it associates
+symbols in the symbol table with types.
+here, int x explicitly associates x with the type int…
+but in languages with type inference, the type of the
+initializer would have to be determined first.
+21
+
+Truss's type system
+● let's examine the type system of this toy language to get familiar
+with how these concepts play out.
+● first, it has a set of four primitive types.
+o int: a signed 32-bit integer
+o bool: a truth value, true or false
+o string: an immutable sequence of 0 or more codepoints
+o (): the absence of a type, called void
+▪ this is only used for function return types.
+● it might not look like it, but we've sort of implicitly defined the sets
+of valid values for each type.
+o there are 232 valid values for int…
+o 2 valid values for bool…
+o and so on.
+22
+
+Function Types
+● any language that has functions will also need a type for them.
+● or to be more accurate, a type constructor for them.
+Truss writes its function types like: fn(A0, A1, …): R,
+where A0, A1 etc. are the arguments and R is the return type.
+functions can have any number of arguments, which is
+why the argument types are written like that.
+
+here are some valid function types:
+fn(): ()
+fn(int): int
+fn(string, string): bool
+fn(fn():()): ()
+
+the last one is a higher
+order function: it takes a
+function as an argument!
+
+Truss also has structs, but we'll come back for those later…
+
+23
+
+Inference rules
+● we need rules for every operation in the language. examples:
+t:int u:int
+for any op in { +, -, *, /, % }
+t op u :int
+t:string u:string
+(this is for string concatenation!)
+t + u :string
+t:int u:int
+for any op in { ==, !=, <, <=, >, >= }
+t op u :bool
+t:bool u:bool
+for any op in { and, or }
+t op u :bool
+f:fn(A𝟎 ,A𝟏 ,… ):R a𝟎 :A𝟎 a𝟏:A𝟏
+f(a𝟎 , a𝟏, …):R
+
+…
+
+this says, "the type of a function call is the function's return type."
+24
+
+What about statements?
+● statements have gotten left out of the discussion, because they
+don't evaluate to a value, and therefore have no type.
+● but statements can interact with the type system nonetheless.
+what type does the condition have to be, in Java?
+
+if(x < 10)
+println("yep");
+
+boolean.
+
+similar things apply for loops, switches (and Rust matches),
+return statements, and so on.
+(we could also say that statements have a type like () or void,
+but it isn't strictly necessary to do this.)
+25
+
+Implementation Details
+
+26
+
+Data structures needed
+● we'll need to represent types in the compiler.
+o this can be as simple as a Rust enum, very similar to how we
+represent the kinds of AST nodes.
+● we'll also need the type context like we said before.
+o we said we needed this to map from symbols to types…
+o but we're going to extend this to all AST nodes that can have
+types, because subsequent compiler passes will need this info.
+o this will get filled in as we do type checking.
+● finally, we need a way to represent the terms…
+o wait, don't we have that already?
+
+27
+
+OH, right, the AST!
+● the AST encodes terms as trees.
+● this implies a relatively straightforward way to check for types:
+1. do a depth-first traversal
+to typecheck the leaves,
+using the axiomatic rules
+and type context;
+2. typecheck the internal
+nodes according to the
+types of their children,
+using the inference rules.
+
+CallExp
+
+callee
+
+args[]
+
+IdentExp
+name
+
+f(y+2)
+:()
+
+AddExp
+
+"f"
+
+lhs
+
+rhs
+
+y+2
+:int
+
+f:fn(int):()
+IdentExp
+name
+
+"y"
+
+y:int
+
+IntExp
+value
+
+2
+
+2:int
+
+28
+
+Implementing the inference rules
+● the inference rules are easier to implement than they might seem.
+● most of the checks boil down to: is this type equal to that type?
+● for instance in this rule:
+t:int u:int
+o
+for any op in { ==, !=, <, <=, >, >= }
+t op u :bool
+● if I am looking at an AST node for a ==, the check goes like this:
+1. check that LHS's type equals int, and give an error if not.
+2. check that RHS's type equals int, and give an error if not.
+3. set this == AST node's type to bool in the type context.
+● that's it. some of the rules are more involved, but it's rarely much
+more complex than just checking type equality.
+
+29
+
+

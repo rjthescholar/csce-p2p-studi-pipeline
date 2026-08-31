@@ -1,0 +1,163 @@
+Introduction to Operating Systems
+CS/COE 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines
+• Homework 3 is due next Monday 2/7
+• Lab 1 is due this Friday 2/4
+• Project 1 due on 2/18
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Previous lecture …
+• Bounded buffer problem
+• semaphore-based solution
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Problem of the Day
+
+It is easy to make mistakes when using semaphores
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Produces Consumers Problem
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Solving Producers Consumers using Semaphores
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Is this sequence feasible?
+n == 3
+for (i=0; i<3; i++){
+Pi arrives
+Pi enters
+Pi leaves
+}
+P3 arrives
+C0 arrives
+C0 enters
+C0 leaves
+P3 enters
+P3 leaves
+CS 1550 – Operating Systems – Sherif Khattab
+
+Some thoughts
+• If we have one producer and one consumer
+• do we need count?
+• do we need the mutex?
+
+• For multiple producers and consumers
+• what benefit do we get if we have one mutex for
+producers and one for consumers?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Let’s make a “small” change
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Let’s make a “small” change
+Semaphore empty(n), full(0);
+Mutex sem(1);
+Consumer
+
+Producer
+
+down(sem)
+
+down(full)
+
+down(empty)
+
+down(sem)
+
+buffer[in] = new item
+
+Item = buffer[out]
+
+in = (in + 1) % n
+
+out = (out + 1) % n
+
+count++
+
+count--
+
+up(empty)
+
+up(sem)
+
+up(sem)
+
+up(full)
+CS 1550 – Operating Systems – Sherif Khattab
+
+Is this sequence feasible?
+n == 3
+for (i=0; i<3; i++){
+Pi arrives
+Pi enters
+Pi leaves
+}
+P3 arrives
+C0 arrives
+C0 enters
+C0 leaves
+P3 enters
+P3 leaves
+CS 1550 – Operating Systems – Sherif Khattab
+
+Solution
+• Condition Variable
+•
+
+Yet another construct (Add to Spinlock and Semaphore)
+
+•
+
+Has 3 operations
+• These 3 operations have to be called while holding a mutex lock
+• wait()
+•
+•
+•
+•
+
+unlock mutex
+block process
+when awake, relock mutex
+when successful, return
+
+• signal()
+•
+
+wakeup one waiting process in the condition variable’s queue if any
+
+• broadcast()
+•
+
+•
+
+wakeup all waiting processes in the condition variable’s queue if any
+
+Not foreign to us at all
+• Every object variable in Java is a Condition Variable
+CS 1550 – Operating Systems – Sherif Khattab
+
+Solving Bounded Buffer Using Condition Variables
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+

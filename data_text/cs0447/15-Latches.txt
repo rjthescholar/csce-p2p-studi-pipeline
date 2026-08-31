@@ -1,0 +1,1462 @@
+#F
+
+Latches
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+Luis Oliveira
+Original slides - wilkie
+(with content borrowed from: Jarrett Billingsley and Bruce Childers)
+
+Fall 2020
+
+1
+
+Announcements
+
+2
+
+The Latch
+
+3
+
+What the heck
+● Time to blow your mind.
+● Let’s look at this circuit.
+o Yes, you can do this.
+
+R
+
+S
+
+Q
+
+Q
+4
+
+What the actual heck
+● What is this in combinational logic??
+
+o Q = R + (S + (R + (S + (R + (… oh gosh. Hmm
+● This makes no sense (from a combinational point of view)
+
+R
+
+S
+
+Q
+
+Q
+5
+
+S/R Latch
+● The feedback behavior allows it to “store” a value.
+
+o “1” on S will set Q to “1”, and “1” or R will reset Q to “0”
+o It becomes stable at that value, hence, it is an S/R Latch.
+o It’s really heckin’ neat.
+
+R
+(reset)
+
+Q
+
+(set)
+S
+
+Q
+6
+
+S/R Latch (animated)
+● Currently, the value is “0”, and we can change it to “1” by sending a “1” on S
+
+R
+(reset)
+
+0
+1
+
+1
+
+0 Q
+
+NOR
+
+Stable Feedback
+
+(set)
+S 1
+
+0
+
+0
+
+0
+
+1 Q
+7
+
+S/R Latch (animated)
+● Currently, the value is “1”, and we can maintain it by having R and S be “0”
+● If the value was “0”, this would also maintain that value.
+● This is the “latch” operation. This is how an S/R Latch can “store” a value.
+
+R
+(reset)
+
+0
+0
+
+1
+
+Q
+
+NOR
+
+Stable Feedback
+
+(set)
+S 0
+
+1
+
+1
+
+0
+
+Q
+8
+
+S/R Latch (animated)
+● Currently, the value is “1”, and we can change it to “0” by sending a “1” on R
+o And having S be “0”
+
+R 1
+(reset)
+
+0
+
+0
+
+1 Q
+
+NOR
+
+Stable Feedback
+
+(set)
+S
+
+1
+0
+
+1
+
+0 Q
+9
+
+S/R Latch (animated)
+● Hmm, let’s set R and S to “1” at the same time.
+● And then let’s set them both to “0” afterward. (That should be stable… right?)
+● Oh no. Oscillation. Q is… both… 0 and 1… ??? Kinda???
+
+R 0
+1
+(reset)
+
+1
+
+1
+0
+
+Q
+
+NOR
+
+Stable Feedback
+(but illogical)
+
+(set)
+S 1
+0
+
+0
+
+0
+
+0
+1
+
+Q
+10
+
+S/R Latch: The Whole Truth
+
+table
+
+● The state of this logic depends on the prior state.
+o Q here is the current value of Q
+o Qnext will be the new value.
+● This is an example of sequential logic.
+o On your own: You can build it out of NANDs
+as well. Try to come up with that.
+
+R
+(reset)
+
+Q
+
+0
+0
+1
+oh no
+
+1
+0
+1
+
+(set)
+S
+
+Q
+
+aaaa
+11
+
+Let’s look at some circuits
+● sr_latch.circ
+
+● Factorio latch
+0eNrtV8GOmzAQ/ZVqzlCB2ZANUvsFPbXHqkIOTJKRjEHGREUR/14bWjYb1iyhP
+WylPYTI2J558948AxfYiwYrRVJDcgHKSllD8v0CNR0lF/aebiuEBEhjAR5IXthRjhnlqP
+ysLPYkuS4VdB6QzPEnJGH3wwOUmjThEK0ftKlsij0qs2CMY/NpLvV1IA+qsjZ7S2n
+Tm3h+5EFr/kKTwmzQqhTpHk/8TGa1WXIgoVE5cJ9J6cbcGVMOK3yFOfTxGlt6eA
+1+SCMxsxhqGyu0l6NClNflUA4JM2tJZQ3pfmh3d503qZjNMTctOPi4eSo5JzVAGb
+K9QMDvmKmZy2kEfSBV63QxIUN5Q+29JpAEdlBUXPUwE/hkNpWNrpp1Yas27el
+OD6osUpImDiQHLmrsHJRbkW4Ij24J955Nx8+nmW3FF4W73RhNhfSALQPB5kG
+4miJa2RTsTTXF5xVNMZrvn7TE1IPeYrO6NWbzGm8coj481VpwIXzBi2oqZjh/ov1J
+PGq3QjouW30ieXxNPTPd1GhSidKeoVo1uJx6FwubEU2BOTWFj8JEU5T5VSnQyQ
+dbfQ7cyvPgABav81z4brl7zLFb6sjdXzjy9gTfzoNgjo7Y3tmqbGyIhVzF81yFgQPY4
+6q3JPYGX5J2y56Hu3XeZO/vSPMd57ZfPO+ox1k7xsv8FQZ3PBHZ//5A3PYsGL777
+6Xk6vPKA8H3aIDCV//bhy9cZydz72w82ZezjYJwE8X213W/ABNorVw=
+12
+
+Let’s look at some circuits
+● Factorio power latch
+0eNrtWM2OmzAQfpVqzlBh8o+0K/XeQ+9VhRyYbCwZGxmTNop4gL5Hn6xPUh
+u6bBrCbyMlhz2EyMb+5ht/M2ObE2x5jqliQkNwAhZJkUHw9QQZexGU2z59TBEC
+YBoTcEDQxLZijFiMyo1ksmWCaqmgcICJGH9AQIpvDqDQTDOs0MrGMRR5skVlBt
+Q41p6mQp8DOZDKzMyVwpo3eO7MgaP9MybMBK0kD7e4pwdmRpshO8Y1qh
+beB6Z0bnpqk9UI9xOUaLl1nHjeOfnKjMDIcsgsFrEPhfG5M8y0DLGIqShnumzauU
+XhNPz1u9at6S75uKgcJoZJzFRFpIS55v5fzNC8i1lNecdUpsOxy1GpAcFmY1tJSlXJ
+MYBnM0PmOs1HYL4oRFHhpsewXOtwp2QSMmFwINhRnmHxH6vt/PN61RTDAd
+9iVUS60fwLtPkwaWcTpfUfR9rfP39NENfqcztp/W5p+7T0L7W8LtZ8lFjeHdLwLGVe
+9fIu5Hp6gExcdMu1bsjhDNTN6TZTR0E/p0usZTfHtvxeTAsZ/6FC5vnu+d2spi0RM
+R8j+XxY2i9r3xKMWZ64yA1lxSI3lRybKvpvaT/NvcvY27QQW03bPO53LCDeTfaOW
+5ejvt3DG3cyWI+Dawu79aTSQd4rx5jUImRoZVmNBhpeeUgPWFuIbN7WLqGcu5
+wmaVs98lpuP6926lCYEAlUHPWeiZe+YDCv8wyNKS7tfUurHIcruWxZBJtPU8qg/z
+hl8P5pMvLysxoWn4RMqmH++4G5b0tpq1LrMVVofU1Fg1x+qwnOPu04wOkWje
+PwRX5H9eEz1dHe9B5QZaVEq5lHFrOl/RXFHz5GPCg=
+13
+
+Keeping Everything In Order
+
+The Clock
+
+14
+
+Propagation Delay (Basics)
+● Ok. Q at t=0 is different than at t=1.
+● How long does it take for a change to occur?
+o (How much time is really between t=0 and t=1)
+● This is bounded by propagation delay.
+
+R
+(reset)
+
+Q
+
+(set)
+S
+
+Q
+15
+
+Propagation Delay
+● Propagation delay is the time it takes for a signal to pass from the inputs
+to the outputs
+● During that delay, the outputs are invalid (they can fluctuate)
+● After that delay, the outputs are valid
+● If you try to use the output while it's invalid, things break
+o stuff like 2 + 2 = 17??
+
+16
+
+The Critical Path
+● The critical path is the path through a circuit that has the longest series of
+sequential operations
+● The longest propagation delay
+o they depend on each other and can't be done in parallel!
+
+17
+
+S/R Latch (animated)
+
+R
+
+S1
+
+S 0
+Q
+
+1
+
+Q 0
+time
+
+0
+1
+
+1
+
+1
+
+Q
+
+0
+0
+
+0
+
+0
+
+Q
+
+1
+0
+
+1
+18
+
+Propagation Delay (Basics)
+● If we have a component after this S/R latch that reacts to the data on Q… we
+need it to synchronize.
+o We need it to wait until the Q value is updated.
+● One method: something that periodically and predictably updates in an
+interval that’s a little longer than the propagation delay.
+
+R
+(reset)
+
+Q
+
+(set)
+S
+
+Q
+19
+
+Tick Tock
+● Sequential logic is based on time, and time is continuous
+● Trying to build sequential circuits without anything to keep
+circuit
+track of time is… possible, but very very difficult
+symbol
+● This is why we use a clock signal: it goes 0, 1, 0, 1, 0, 1…
+o Oscillation… on purpose this time.
+Each period is called a clock cycle.
+o We typically electrocute rocks to do this, as usual. (poor rocks )
+
+1
+High
+
+0
+
+time
+
+Low
+
+we can synchronize our circuits to a clock state:
+when it is high (1) or low (0)
+
+20
+
+Adding a Clock
+● We need to augment our latch to wait for the clock before updating the
+value.
+● We need to account for the clock signal and only transmit a “1” on R or S if
+and only if the clock is high (or low).
+● Which leads us to something like this maybe…
+o But let’s refine it a bit… (btw, how complex is this? How many transistors?)
+
+R
+
+R
+
+Q
+
+C
+S
+
+S
+
+Q
+21
+
+D(ata) Latch
+● If we do something like this, we simplify our S/R Latch into a nicer
+synchronized latch called a D-Latch.
+● “C” is the clock. “D” is the data to latch when the clock is high.
+● Circuit only changes the value when the clock signal is 1…
+o Latches when clock is 0!
+
+C
+
+D
+
+R
+
+S
+
+Q
+
+Q
+22
+
+D Latch
+● When clock is low and D is … don’t care!
+o Nothing changes
+
+C
+
+D
+
+R
+
+S
+
+Q
+
+Q
+
+23
+
+D Latch
+● When clock is high and D is high
+o It’s a set operation
+
+C
+
+D
+
+R
+
+S
+
+Q
+
+Q
+
+24
+
+D Latch
+● When clock is high and D is low
+o It’s a reset operation
+
+C
+
+D
+
+R
+
+S
+
+Q
+
+Q
+
+25
+
+D Latch
+● We can abstract this away and start using this symbol:
+
+D
+
+Q
+
+C
+
+Q
+
+26
+
+D Latch
+● We often omit the “C” for the clock and use a triangle instead:
+o Sometimes you’ll see a square instead. Logisim uses triangles.
+
+D
+
+Q
+D Latch
+Q
+
+27
+
+Tick Tock: D Latch
+● This diagram shows the behavior of the system over time.
+o This is “high” triggered.
+o Note the propagation delay. And how Q depends on D AND clock.
+
+D
+
+1
+
+0
+
+C
+
+1
+
+0
+
+Q
+
+1
+0
+
+time
+
+28
+
+Problems: Owner of a lonely (D) Latch
+● What if we don’t want to change the value of Q.
+o This means we have to constantly recharge the value, that is “D” has to be
+what we want Q to be every tick, limiting the usefulness.
+● We need a way to enable or disable the update.
+
+C
+
+D
+
+Q
+
+Q
+29
+
+Problems: Owner of a lonely (D) Latch
+● We could simply add a signal that we usually keep “0” and only allow the
+latch when that ‘write enable’ (W) signal is “1”
+
+W
+C
+
+Q
+
+D
+
+Q
+30
+
+Let’s look at some circuits
+● Weird behaviour when clock is used in logic!!
+o Note: N-e-v-e-r, never ever, connect logic to a clock port.
+▪ It’s hard to predict the behavior of circuits!
+
+● d_latch.circ
+● broken_latch.circ
+
+31
+
+And The Flip-Flop
+
+32
+
+The New Problem
+● Remember propagation delay? Pesky thing, that.
+● Clocks don’t always help.
+o We sometimes need a clock cycle to compute a value
+o …and then another clock cycle to compute the next thing.
+o …but the next thing needs to be computing the CURRENT thing.
+o …but we would overwrite that input… so it would compute something else
+o …before it was done computing the first thing…
+● AHHHHH!!!!!
+
+33
+
+Waiting for Godata
+● We want to record an intent to store (latch) a value.
+o That is, to delay the latch by around a cycle.
+● (But only actually do it at an idle moment)
+o When do we have an idle moment in the latch???
+▪ When the clock is low!!
+● If we cascade two D-Latches, and cleverly handle the clock…
+o We can create a register! (Specifically, a D Flip-Flop)
+▪ Yes, that’s actually what it is called. ☺
+
+● We will create a component that latches a value on the clock’s falling edge.
+o You can also make a rising edge D Flip-Flop by inverting the clock signal.
+34
+
+The D Flip-Flop
+● While the clock is “1” (high), D’ can be computed while Q remains unaffected.
+o Q is being used, after all, by whatever component is after the flip-flop
+o While D is not immediately known and is being computed by the
+component before the flip-flop
+● Falling clock edge: value is copied from the first latch to the second.
+o This handles data propagation within a sequential circuit.
+
+D
+C
+
+D
+
+Q
+D Latch
+
+Q
+
+D’
+
+D
+D Latch
+
+Q
+
+Q
+
+Q
+
+Q
+35
+
+Tick Tock
+● In this example, we are using the clock edges
+o The circuit only updates its output in the instant the clock changes!
+● During the remaining time, other circuits
+can compute the values
+
+rising edge
+
+1
+
+0
+
+time
+
+falling edge
+
+we can synchronize our circuits to a clock edge:
+when it changes between 0 and 1
+
+36
+
+Tick Tock: Falling Edge D Flip-Flop
+● This diagram shows the behavior of the system over time.
+o This is “falling edge” triggered.
+o Note the propagation delay. And how Q depends on D && clock.
+
+D
+
+1
+
+A Flip-Flop doesn’t race “D”
+
+0
+
+C
+
+1
+0
+
+Q
+
+1
+0
+
+Q remains stable while clock
+remains high and low
+
+time
+
+37
+
+The D Flip-Flop… Abstracted
+● We can of course reduce the flip-flop… it looks the same as the D Latch.
+o This is effectively a 1-bit Register!
+o That is, it is a simple 1-bit volatile memory cell.
+
+D
+
+Q
+D Flip-Flop
+
+Q
+38
+
+Let’s look at some circuits
+● D_flip_flop.circ
+● broken_latch.circ … again
+
+39
+
+Real-world clocking issues
+
+40
+
+Determining clock speed
+
+D
+0ns
+
+Q
+R
+
+2ns
+
+A
+1
+
+B
+
+S
+5ns
+
+time
+
+R is
+clocked
+
+R’s Q
+becomes
+valid
+
+the adder has
+finished; clock
+R to store
+41
+
+Determining clock speed
+● It takes 5ns for a signal to propagate through our circuit
+● How fast can we clock it?
+o if the time between clocks is less than 5ns, we'll clock the register too
+early (while the adder's outputs are invalid)
+o if the time between clocks is more than 5ns, no big deal
+
+𝟏
+𝟗
+=
+𝟎.
+𝟐
+×
+𝟏𝟎
+𝐇𝐳
+−𝟗
+𝟓 × 𝟏𝟎 𝒔
+= 𝟐𝟎𝟎𝐌𝐇𝐳
+
+● The fastest we can clock a sequential circuit is the reciprocal of the
+critical path's propagation delay
+
+42
+
+Clock Skew
+● The clock signal itself isn't immune to propagation delay!
+
+CLK
+
+watch the input as the
+IN
+clock pulse travels down
+12
+??? the wire to B.
+D Q
+D Q
+???
+12
+EN
+EN
+B
+A
+
+● This is a race condition: the data and clock are having a race, and
+the outcome depends on who wins
+o the winner could change based on temperature, power, etc!
+43
+
+Summary
+
+44
+
+The S/R Latch … Abstracted
+● We now know the S/R Latch!
+o Allows you to store a value (1/0) but with a pit fall!
+o It could turn into an oscillator if input an invalid combination
+▪ R=S=1 ➔ R=S=0
+
+R
+
+S
+
+S/R latch
+
+Q
+
+Q
+
+45
+
+The D Latch … Abstracted
+● We improved it by adding some input logic
+o Creating the D Latch
+o But it was transparent (active) during the high clock state
+
+D
+
+Q
+D Latch
+
+Q
+46
+
+The D Flip-Flop… Abstracted
+● Lastly, we saw the heroic D Flip-Flop!
+o This is effectively a 1-bit Register!
+o That is, it is a simple 1-bit volatile memory cell.
+
+D
+
+Q
+
+Q
+
+D
+D Latch
+
+Q
+
+D Flip-Flop
+
+D
+
+Q
+D Latch
+Q
+
+Q
+47
+
+Circuits using Flip-Flops
+
+48
+
+Creating an Adder Circuit
+● Suppose we want to (for 1 bit):
+o Have three 1-bit registers: A, B, C
+o Compute: C = A + B
+● We would need:
+o Three D Flip-flops (for A, B, and C)
+o A 1-bit adder
+o What is the circuit?
+
+49
+
+Register-backed 1-bit Adder
+A Register
+D
+
+Q
+
+D Flip-Flop
+Q
+B Register
+D
+
+(assume clock is connected)
+
+Q
+
+A
+
+S
+
+Half-Adder
+B
+C
+
+C Register
+Q
+
+D Flip-Flop
+Q
+
+D Flip-Flop
+Q
+50
+
+Register-backed 1-bit Adder
+(assume clock is connected)
+
+D
+
+Q
+
+D Flip-Flop
+Q
+
+A Register
+
+B Register
+D
+
+Q
+
+D Flip-Flop
+Q
+
+A
+
+S
+
+Half-Adder
+B
+Co
+● What is the difference here?
+●A=A+B
+● This is fairly conventional
+sequential logic, actually.
+
+51
+
+4-bit Counter
+● Another simple component we can now build is a counter.
+● This is a register that increments every clock tick.
+o On the falling-edge, in this case. (assume clock is connected)
+0
+
+A
+Co
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D
+
+D Flip-Flop
+
+3rd bit
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+2nd bit
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+1st bit
+
+Adder
+
+S
+
+B
+Ci
+
+1
+
+Q
+
+D Flip-Flop
+
+0th bit
+
+52
+
+4-bit Counter: Thoughts
+● Hmm, adding takes some time because it ripples
+● Hmm, how long does our clock cycle have to be?
+o No shorter than the propagation delay.
+o If you assume latches take 2ns and adders take 4ns…
+0
+
+A
+Co
+
+D
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+Adder
+
+S
+
+B
+Ci
+
+1
+
+Q
+
+D Flip-Flop
+
+53
+
+4-bit Counter: Clocking
+
+0ns
+2ns
+
+1
+
+0
+0
+
+A
+Co
+
+D
+
+D B
+
+Adder
+
+S
+
+0
+
+Ci
+
+Q
+
+D Flip-Flop
+
+0
+D
+
+A
+Co
+
+D Latch
+
+Q
+Adder
+
+S
+Q
+
+B
+
+0
+
+D
+
+Q
+
+D Flip-Flop
+
+A
+Co
+
+Ci
+
+D Flip-Flop
+D
+
+0
+
+Q
+
+D Latch
+
+D
+Q
+
+0
+
+Q
+
+B
+
+S
+
+Ci
+
+Co
+
+Q
+
+Q
+
+D
+
+Adder
+
+1
+
+D Flip-Flop
+
+A
+
+Adder
+
+S
+
+0
+
+B
+Ci
+
+1
+
+Q
+
+D Flip-Flop
+54
+
+4-bit Counter: Clocking
+1
+
+12ns
+10ns
+14ns
+18ns
+16ns
+20ns
+2ns
+8ns
+6ns
+
+0
+0
+
+A
+
+0
+
+Co
+
+D
+
+Adder
+
+S
+
+0
+
+0
+
+B
+Ci
+
+Q
+
+D Flip-Flop
+
+0
+
+0
+
+A
+Co
+
+D
+
+Adder
+
+S
+
+0
+
+0
+
+B
+Ci
+
+Q
+
+D Flip-Flop
+
+0
+
+0
+
+A
+Co
+
+D
+
+Adder
+
+S
+
+1
+
+0
+1
+
+B
+Ci
+
+Q
+
+D Flip-Flop
+
+0
+
+1
+
+A
+Co
+
+D
+
+Adder
+
+S
+
+1
+0
+
+0
+
+B
+Ci
+
+1
+
+Q
+
+D Flip-Flop
+55
+
+4-bit Counter: Circuit Delay
+Serialized
+0
+
+A
+Co
+
+D
+
+Adder
+
+S
+
+4ns + 4ns + 4ns + 4ns
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+Parallelized
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+2ns + 2ns
+
+Adder
+
+S
+
+B
+
+0
+
+A
+
+Ci
+
+Co
+
+Q
+
+D
+
+D Flip-Flop
+
+Adder
+
+S
+
+B
+Ci
+
+1
+
+Q
+
+D Flip-Flop
+
+20ns
+
+56
+
+4-bit Counter: Delay Explanation
+● Values of output bits must all be stable.
+o That is, can’t pulse clock until all 4 bits are computed
+● However, the adder is a ripple-carry: Each bit waits for previous.
+o 4ns per adder
+o 4-bit adder
+o Thus: 4 * 4ns = 16ns for the 4-bit adder
+● Flip-Flops
+o Must wait for 1st latch to stabilize Q (2ns in parallel)
+o Must wait for 2nd latch to stabilize Q (2ns also in parallel)
+o Thus: 2ns + 2ns = 4ns
+● Overall delay: 16ns + 4ns = 20ns. Clock pulse is 20ns.
+
+57
+
+Determine Maximum Clock Speed
+● If this operation takes 20ns, this bounds our clock speed.
+● Our clock period must be 20ns.
+o Which means our frequency is once every 20ns: 1s ÷ 20ns
+o What is that frequency in Hz? (Hertz is “cycles per second”)
+
+o This would be the maximum clock speed for our circuit to work.
+
+1𝑠
+= 50,000,000 𝐻𝑧 = 50 𝑀𝐻𝑧
+20𝑛𝑠
+
+58
+
+

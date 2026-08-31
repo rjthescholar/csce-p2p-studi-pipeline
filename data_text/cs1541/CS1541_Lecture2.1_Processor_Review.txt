@@ -1,0 +1,898 @@
+Processor Review
+CS 1541
+Wonsun Ahn
+
+Clocking Review
+Stuff you learned in CS 447
+
+Logic components
+● Do you remember what all these do?
+NOT gate
+
+Multiplexer
+(MUX)
+32
+
+AND gate
+
+32
+Decoder
+
+OR gate
+
+XOR gate
+
+ALU
+
+32
+
+These wires
+carry several
+bits at once.
+
+Blue wires are control signals.
+
+3
+
+Uses of a Decoder
+● Translates a set of input signals to a bunch of output signals.
+o E.g. a binary decoder:
+Truth Table for Decoder
+Q0
+A
+
+Q1
+
+B
+
+Q2
+Q3
+
+A
+
+B
+
+Q0
+
+Q1
+
+Q2
+
+Q3
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+o You can come up with any truth table and make a decoder for it!
+
+4
+
+Uses of a Multiplexer
+● No problem in fanning out one signal to two points
+A
+
++
+
+=
+B
+
+A
+
+B
+
+● Cannot connect two signals to one point
+o Must use a multiplexer to select between the two
++
+
+Path A
+
+=
+
+Path B
+
+Mux control =
+0 for path A
+1 for path B
+
+5
+
+Gates are made of transistors (of course)
+
+• NOT gate
+
+• NAND gate
+
+6
+
+The clock signal
+● The clock is a signal that alternates regularly between 0 and 1:
+
+1
+
+0
+
+time
+
+● Bits are latched on to registers and flip-flops on rising edges
+● In between rising edges, bits propagate through the logic circuit
+o Composed of ALUs, muxes, decoders, etc.
+o Propagation delay: amount of time it takes from input to output
+7
+
+Critical Path
+● Critical path: path in a circuit that has longest propagation delay
+o Determines the overall clock speed.
+5 ns
+
+A
+D Q
+
+EN
+
+B
+D Q
+
+1
+
++
+
+IN
+
+5 ns
+
+OUT
+
+EN
+Select
+
+o The ALU and the multiplexer both have a 5 ns delay
+● How fast can we clock this circuit?
+o Is it 1 / 5 ns (5 × 10-9s) = 200 MHz?
+o Or is it 1 / 10 ns (10 × 10-9s) = 100 MHz?
+
+8
+
+MIPS Review
+Stuff you learned in CS 447
+
+The MIPS ISA - Registers
+● MIPS has 32 32-bit registers, with the following usage conventions
+
+o But really, all are general purpose registers (nothing special about them)
+Name
+$zero
+$at
+$v0-$v1
+$a0-$a3
+$t0-$t7
+$s0-$s7
+$t8-$t9
+$k0-$k1
+$gp
+$sp
+$fp
+$ra
+
+Register number
+Usage
+0
+the constant value 0 (can't be written)
+1
+assembler temporary
+2-3
+values for results and expression evaluation
+4-7
+function arguments
+8-15
+unsaved temporaries
+16-23
+saved temporaries (like program variables)
+24-25
+more unsaved temporaries
+26-27
+reserved for OS kernel
+28
+global pointer
+29
+stack pointer
+30
+frame pointer
+31
+return address
+10
+
+The MIPS ISA - Memory
+● MIPS is a RISC (reduced instruction set computer) architecture
+● It is also a load-store architecture
+o All memory accesses performed by load and store instructions
+● Memory is a giant array of 232 bytes
+Addr
+
+Data
+
+Addr
+
+Data
+
+Addr
+
+Data
+
+0
+
+0x3F
+
+0
+
+0x3F00
+
+0
+
+0x3F002A08
+
+1
+
+0x00
+
+2
+
+0x2A08
+
+4
+
+0x47F426B9
+
+2
+
+0x2A
+
+4
+
+0x47F4
+
+...
+
+...
+
+3
+
+0x08
+
+6
+
+0x26B9
+
+4
+
+0x47
+
+...
+
+...
+
+5
+
+0xF4
+
+6
+
+0x26
+
+7
+
+0xB9
+
+...
+
+...
+
+• The same memory viewed as bytes, 16-bit
+halfwords, and 32-bit words (using big-endian)
+• All addresses are aligned (multiples of data size)
+11
+
+The MIPS ISA - Memory
+
+• Loads move data from
+
+memory into the registers.
+
+lw $t0, 8($s4)
+
+0x0000CAFE
+0x0000BEEF
+
+s4
+
+0x00000004
+
+Registers
+
+registers into memory.
+
+sw $t0, 12($s4)
+
+This is the address, and it
+means "the value of $s4 + 8."
+
+t0
+
+• Stores move data from the
+$t0 is the SOURCE!
+
+0
+
+0x3F002A08
+
+4
+
+0x47F426B9
+
+8
+
+0x00000000
+
+$s4 + 8
+
+12
+
+0x0000BEEF
+
+$s4 + 12
+
+16
+
+0x0000DEAD
+0x0000BEEF
+
+...
+
+...
+
+lw
+
+sw
+
+Memory
+12
+
+The MIPS ISA – Flow control
+● Jump and branch instructions change the flow of execution.
+
+_top:
+# ....
+# lots o' code
+# ....
+j _top
+
+li
+$s0, 10
+_loop:
+# ....
+addi $s0, $s0, -1
+bne $s0, $zero, _loop
+jr
+$ra
+
+j : jumps unconditionally
+• jumps to _top
+
+bne : jumps conditionally
+If $s0 != $zero, jumps to _loop
+If $s0 == $zero, continues to jr
+
+$ra
+
+13
+
+Phases of instruction execution
+● In most architectures, there are five phases:
+1. IF (Instruction Fetch) – get next instruction from memory
+2. ID (Instruction Decode) – figure out what instruction it is
+3. EX (Execute – ALU) – do any arithmetic
+4. MEM (Memory) – read or write data from/to memory
+5. WB (Register Writeback) – write any results to the registers
+
+● Sometimes these phases are chopped into smaller stages
+
+14
+
+A simple single-cycle implementation
+
+Instruction
+Memory
+
+Control
+
+PC
+
+Register
+File
+
+IF
+
+ID
+
+WB
+
+ALU
+
+EX
+
+Data
+Memory
+
+MEM
+
+● An instruction goes through IF/ID/EX/MEM/WB in one cycle
+
+15
+
+"Minimal MIPS"
+
+16
+
+It’s a “subset” of MIPS
+● For pedagogical (teaching) purposes
+
+● Contains only a minimal number of instructions:
+o lw, sw, add, sub, and, or, slt, beq, and j
+o Other instructions in MIPS are variations on these anyway
+● Let's review the Minimal MIPS CPU focusing on the control signals
+o Again, these control signals are decoded from the instruction
+
+17
+
+The Minimal MIPS single-cycle CPU
+● A more detailed view of the 5-phase implementation
+
+Instruction
+Memory
+
+Ins. Decoder
+
+PC
+
+PCSrc
+
++
+
+4
+
++
+
+imm field
+
+dst
+src1
+src2
+
+RegDataSrc
+
+Data
+Memory
+
+Register
+File
+
+RegWrite
+
+imm field
+
+sxt
+
+MemWrite
+
+ALUSrc
+
+ALUOp
+
+18
+
+Control signals
+● Registers
+o RegDataSrc: controls source of a register write (ALU / memory)
+o RegWrite: enables a write to the register file
+o src1, src2, dst: the register number for each respective operand
+● ALU
+o ALUSrc: whether second operand of ALU is a register / immediate
+o ALUOp: controls what the ALU will do (add, sub, and, or etc)
+● Memory
+o MemWrite: enables a write to data memory
+● PC
+o PCSrc: controls source of next PC (PC + 4 / PC + 4 + imm)
+→ All these signals are decoded from the instruction!
+19
+
+How an add/sub/and/or/slt work
+
+Instruction
+Memory
+
+Ins. Decoder
+
+PC
+
+PCSrc
+
++
+
+4
+
+add t0, t3, s0
+
++
+
+imm field
+
+next instruction
+t0 dst
+t3 src1
+s0 src2
+Register
+
+Data
+Memory
+MemWrite
+
+File
+
+RegDataSrc
+from ALU
+
+RegWrite
+enable
+
+imm field
+
+sxt
+
+disable
+
+ALUSrc
+
+from reg
+
+ALUOp
+add
+
+20
+
+How an lw works
+
+Instruction
+Memory
+
+Ins. Decoder
+
+PC
+
+PCSrc
+
++
+
+4
+
+lw s4, 12(s0)
+
++
+
+imm field
+
+next instruction
+s4 dst
+s0src1
+x src2
+Register
+
+Data
+Memory
+MemWrite
+
+File
+
+RegWrite
+RegDataSrc
+enable
+from Mem
+12
+sxt
+imm field
+
+disable
+
+ALUSrc
+
+from imm
+
+ALUOp
+add
+
+21
+
+How an sw works
+
+Instruction
+Memory
+
+Ins. Decoder
+
+PC
+
+PCSrc
+
++
+
+4
+
+sw t3, 8(sp)
+
++
+
+imm field
+
+next instruction
+x dst
+spsrc1
+t3 src2
+Register
+
+Data
+Memory
+MemWrite
+
+File
+
+RegWrite
+RegDataSrc
+disable
+x
+8
+sxt
+imm field
+
+enable
+
+ALUSrc
+
+from imm
+
+ALUOp
+add
+
+22
+
+What about beq?
+● Compares numbers by subtracting and see if result is 0
+o If result is 0, we set PCSrc to use the branch target.
+o Otherwise, we set PCSrc to PC + 4.
+isBEQ
+isZero
+• Instruction decoder outputs isBEQ
+• 1: When instruction is beq
+• 0: When instruction not beq
+
+ALU
+
+PCSrc
+
+• When PCSrc is 1,
+PC = PC + 4+ imm
+(relative branch target)
+• When PCSrc is 0,
+PC = PC + 4
+
+23
+
+How a beq works
+
+beq t0, t1, loop
+
+Instruction
+Memory
+
+Ins. Decoder
+
+PC
+
+PCSrc
+
++
+
+4
+
+Take green PC path when t0 == t1
+Take red PC path when t0 != t1
+
++
+
+imm field
+loop
+
+x dst
+t0 src1
+t1 src2
+
+RegDataSrc
+x
+
+Data
+Memory
+
+Register
+File
+
+RegWrite
+disable
+
+imm field
+
+sxt
+
+MemWrite
+
+disable
+
+ALUSrc
+
+from reg
+
+ALUOp
+sub
+
+24
+
+What about j?
+● We have to add another input to the PCSrc mux.
+
+j
+
+top
+
+PC+4
+PC+4+imm
+jump target
+(now 2 bits)
+
+PCSrc
+25
+
+A Single-cycle Implementation is not Optimal
+
+Instruction
+Memory
+
+Control
+
+PC
+
+Register
+File
+
+IF
+
+ID
+
+WB
+
+ALU
+
+EX
+
+Data
+Memory
+
+MEM
+
+● Why? Since the longest critical path must be chosen for cycle time
+o And there is a wide variation among different instructions
+26
+
+A Single-cycle Implementation is not Optimal
+● In our CPU, the lw instruction has the longest critical path
+o Must go through all 5 stages: IF/ID/EX/MEM/WB
+o Whereas add goes through just 4 stages: IF/ID/EX/WB
+● If each phase takes 1 ns each, cycle time must be 5 ns:
+o Because it needs to be able to handle lw, which takes 5 ns
+o add also takes 5 ns when it could have been done in 4 ns
+
+Q) If lw is 1% and add is 99% of instruction mix,
+what is the average instruction execution time?
+A) Still 5 ns! Even if lw is only 1% of instructions!
+
+27
+
+A Multi-cycle Implementation
+● It takes one cycle for each phase through the use of internal latches
+
+Memory
+
+ID
+Ins. Decoder
+
+IF
+
+Register
+File
+
+EX
+
+ALU
+
+MEM
+
+Memory
+
+WB
+28
+
+A Multi-cycle Implementation is Faster!
+● Now each instruction takes different number of cycles to complete
+o lw takes 5 cycles: IF/ID/EX/MEM/WB
+o add takes 4 cycles: IF/ID/EX/WB
+● If each phase takes 1 ns as before:
+o lw takes 5 ns and add takes 4 ns
+Q) If lw is 1% and add is 99% of instruction mix,
+what is the average instruction execution time?
+A) 0.01 * 5 ns + 0.99 * 4 ns = 4.01 ns (25% faster than single cycle)
+* Caveat: delay due to the added latches not shown, but net win
+29
+
+And we can do even better!
+● Did you notice?
+o When an instruction is on a particular phase (e.g. IF) …
+o … other phases (ID/EX/MEM/WB) are not doing any work!
+● Our CPU is getting chronically underutilized!
+o If CPU is a factory, 80% (4/5) of the workers are idling!
+● Car factories create an assembly line to solve this problem
+o No need to wait until a car is finished before starting on next one
+o Our CPU is going to use a pipeline (similar concept)
+
+30
+
+

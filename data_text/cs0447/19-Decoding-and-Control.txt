@@ -1,0 +1,975 @@
+#13
+
+The Interconnect,
+Control, and
+Instruction
+Decoding
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Fall 2020
+
+Instruction Execution
+
+2
+
+Phases of instruction execution
+
+F
+
+D X M W
+
+1. Fetch (IF or F)
+o use PC to get the next instruction from memory
+2. Decode (ID or D)
+o look at the fetched instruction and set control signals
+3. Execute (EX or X)
+o wait for data to flow through the datapath
+4. Memory Access (MEM or M)
+o if it's a load or store, do that
+5. Write-back (WB or W)
+o if there's a destination register, write the result to it
+often we can do multiple phases "at the same time"
+3
+
+Which parts do what
+
+Memory
+
+Control
+
+PC
+
+Register
+File
+
+F
+
+D
+
+W
+
+ALU
+
+X
+
+Memory
+again
+
+M
+
+How does lw work?
+lw t0, 12(s0)
+
+4
+
+A Thing about memory
+
+5
+
+☢️ Structural Hazards ☢️
+● how many RAMs does your computer have? one or two?
+● if we try to do lw t0, (s0) with one memory in a single cycle…
+
+PC
+
+Instruction
+Address
+
+Load word
+address…?
+
+Instruction
+Control
+
+Memory
+Loaded
+word…??
+what about sw?!?
+
+we can't really do this… memory hardware can't read
+from two addresses at the same time
+6
+
+Von Neumann vs Harvard
+● one way to solve this problem is to have two memories
+this is a Harvard
+Architecture
+
+Instruction
+Memory
+
+Control
+
+PC
+
+Register
+File
+
+ALU
+
+Data
+Memory
+
+a Von Neumann Architecture has one memory for both things
+"Von Neumann" is 2 words for 1 memory…
+"Harvard" is 1 word for 2 memories…
+7
+
+Multi-cycle
+● a Von Neumann machine has one memory, but uses multiple
+clock cycles to execute each instruction
+Cycle 1: Instruction
+Address
+
+PC
+
+lw t0, (s0)
+Instruction
+Control
+
+Memory
+Loaded
+word
+
+Cycle 2:
+Load word
+address
+multi-cycle machines are by
+far the most common today
+
+but they're more complex…
+8
+
+The Interconnect
+
+9
+
+Gotta keep em separated interconnected
+● we've got pieces of a CPU, but they don't operate in isolation
+● we gotta hook em together. but which parts hook to which?
+● the instructions in the ISA tell you what has to connect to what.
+PC that
+can branch
+and jump
+
+ALU
+
+Instruction
+Memory
+
+Register
+File
+
+Data
+Memory
+
+10
+
+Slowly coming together
+● if we look at all the different instructions we want to support, we'll
+start to get an idea of what data goes where
+
+sub v0, t0, t1
+t0
+
+s0
+
+t1
+
+Register
+File
+t3
+
+v0 Register
+
+File
+
+sw s0, 4(t3)
+
+-
+
+ALU
+
+Data
+Data
+Memory
+
++
+
+4
+
+jal move_ball
+address of
+move_ball
+
+PC
+
++ ra
+
+4
+
+ALU?
+
+Register
+File
+
+ALU
+
+Address
+
+how do we make all
+these different things
+happen with one set
+of hardware…?
+11
+
+PC to the left of me, ALU to the right, here I am
+● the interconnect lets the CPU parts combine in many ways
+● it's like the CPU's "circulatory system" – it moves data around
+PC
+
+Instruction
+Memory
+
+jal
+jr
+
+stores
+
+Register
+File
+
+li (immediate)
+
+loads
+
+Data
+Memory
+
+add, sub, etc.
+
+addi, ori etc.
+
+ALU
+
+it's starting to take shape…
+
+12
+
+A little technique: an interconnect matrix
+● you can make a table to keep track of what things connect to what.
+Does the data
+flow from
+here…
+ALU
+
+…to here?
+PC
+
+ALU
+PC
+
+Regs
+IM
+DM
+
+√
+
+√
+√
+
+Regs
+
+√
+√
+√
+√
+
+IM
+
+DM
+
+√
+
+now consider all the
+instructions your CPU
+should support, and mark
+the cells accordingly.
+
+lw sw j beq
+add, sub, and, or
+jr li? jal
+any component (column) with
+multiple things coming
+into it will need a MUX.
+(huh? next slide.)
+
+13
+
+Conjunction junction
+● the interconnect makes choices about which things go where
+only one of these is written
+to the register file
+
+ALU results
+
+so how do we choooooose
+which thing to write?
+
+data from memory
+
+now we have a select pin.
+this is a control signal!
+
+Register
+File
+
+instruction immediates
+
+saved PC for jal
+
+there will be several MUXes in the
+interconnect, and each needs a control signal
+
+2
+
+RegDataSrc
+
+the book calls this "MemToReg“.
+Because in its model the value is 1 when
+the memory is read into a register
+
+14
+
+Interconnected (MIPS, not your project)
+● if we want to make a suuuuper simple version of MIPS, we can
+connect the pieces together into a datapath like this
+Data
+(this version doesn't
+RegWrite
+MemWrite
+Data
+support jal, and …
+Memory
+but that's fiiiine)
+rd
+rs
+rt
+
+Address
+
+Register
+File
+
+ALU
+
+RegDataSrc
+imm field
+
+ALUSrc
+
+ALUOp
+
+how can we use this
+to implement add?
+sub? addi? lw? sw?
+li?
+but now we need
+to, uh, control the
+control signals.
+15
+
+The Forgotten Phase:
+Operand Fetch
+
+16
+
+A little extra step
+● operand fetch is a phase of instruction execution you might see
+● it fetches the values to be operated on
+
+F
+
+D X M W
+
+it happens after the
+instruction is decoded.
+where do values have to be for
+the CPU to operate on them?
+
+in the registers…?
+
+17
+
+Vestigial
+● in MIPS (and your project), operand fetch is super simple:
+this is by design: load-store
+architectures have very simple
+operand fetch phases.
+
+Register
+File
+
+ALU
+
+imm field
+
+why? well…
+
+here it is!
+
+18
+
+Operand Fetch in x86
+● as a CISC, x86 has some… crazy instructions.
+
+inc [eax + ecx*4 + 12]
+this is an effective
+address calculation.
+(the brackets mean "access memory.")
+
+this is operand fetch.
+be very glad you won't have
+to do this for your project.
+
+here's what the CPU has to
+do for this instruction:
+1. multiply ecx by 4
+2. add eax to that
+3. add 12 to that
+4. load a word from
+that address
+5. add 1 to that value
+6. store that value back
+into the address
+19
+
+The Control
+
+20
+
+Feeling nervous
+● the control is what sets the write enables and selects to the
+appropriate values to make each instruction happen
+● it's like the CPU's brain and nervous system
+
+it does this by reading
+the instructions.
+
+c'mon you
+lazy bums
+awwwww we
+don't wannaaaa
+
+sub v0, t0, t1 👀Control
+Register file, read t0 and t1, and write to
+v0. ALU, do subtraction. Interconnect,
+route the data from the two registers into
+the ALU and from the ALU into the register
+file. Data memory, you get to take a break.
+
+ALU
+
+Register
+File
+
+Data
+Memory
+
+yissssss
+
+21
+
+Two kinds of control signals
+● first there are the selects
+o these go into the select pins of
+muxes, demuxes, or decoders
+o they can be any number of bits
+● then there are the write enables
+o these tell registers and memory
+when to store data
+o they're Booleans - 0 or 1
+● they often come in pairs!
+o like RegWrite and RegDataSrc.
+o they decide what to write and
+when to write it.
+
+RegWrite
+rd
+
+5
+
+Register
+File
+
+RegDataSrc
+MemWrite
+
+Data
+Memory
+
+22
+
+Gotta write it down
+● write enables are kind of the basis of "things happening in a CPU"
+● almost every instruction writes something somewhere!
+
+add t0, t1, t2
+writes to t0
+
+beq s0, 10, end
+
+might write to the PC
+
+sw s0, (t0)
+writes to memory
+
+jal func1
+writes to the PC and ra!
+
+if an instruction doesn't write anything, it's a no-op (nop).
+(if an instruction does not change anything, did it ever happen?)
+
+what changes when a conditional branch isn't taken?
+
+23
+
+The control hardware
+
+4
+
++
+
+● we connected the datapath together; now for the control bits
+
+immediate
+(jump target) PCSrc
+
+PC
+
+rt
+
+rd
+
+immediate
+
+address goes in… Instruction
+…instruction
+Memory
+comes out.
+
+PCSrc
+
+rs
+
+Control
+
+RegWrite
+MemWrite
+
+instruction
+goes in…
+…control signals
+come out.
+somehow.
+
+ALUSrc
+ALUOp
+
+RegDataSrc
+
+24
+
+Instruction Decoding
+
+25
+
+Pull 'n' peel
+● the first step is to split the encoded instruction up
+● but which instruction format is it? actually, it doesn't matter.
+
+R opcode
+31
+
+31
+
+26 25
+
+rs
+
+26 25
+
+I opcode
+31
+
+21 20
+
+16 15
+
+rt
+21 20
+
+rs
+
+0
+
+31-26
+
+shamt funct
+
+25-21
+
+0
+
+20-16
+
+11 10
+
+rd
+
+6 5
+
+16 15
+
+rt
+
+immediate
+
+26 25
+
+J opcode
+
+15-11
+0
+
+target
+
+"do everything at once, but
+32
+use only what you need." instruction
+
+10-6
+5-0
+15-0
+25-0
+
+opcode
+rs
+rt
+rd
+shamt
+funct
+immediate
+target
+26
+
+No, really, it's fine, don't worry about it
+● suppose the encoded instruction was addi s0, s0, -1.
+op
+
+put it through
+the splitter and…
+addi s0,s0,-1 32
+
+0x2210FFFF
+
+…out come a
+bunch of values.
+
+31
+
+26 25
+
+21 20
+
+16 15
+
+0
+
+rt
+immediate
+0x08 opcode rs
+rs
+addi is an I-type instruction.
+0x10
+rt
+0x10
+opcode, rs, rt, and immediate
+rd
+will be used.
+0x1F
+shamt
+the rest are bogus and will be
+0x1F
+funct
+ignored. see? it's fiiiiiine
+0x3F
+imm
+0xFFFF
+target
+0x210FFFF
+
+27
+
+Making the control work
+● the control is a boolean function that takes the instruction
+opcode as its input and outputs the control signals.
+● in other words, it's a big fat truth table.
+opcode
+
+PCSrc
+
+RegDataSrc
+
+RegWrite
+
+ALUOp
+
+…
+
+000000
+000001
+000010
+000011
+000100
+000101
+…
+
+0
+0
+0
+1
+1
+0
+…
+
+00
+01
+00
+00
+11
+10
+…
+
+0
+1
+1
+0
+1
+1
+…
+
+000
+110
+010
+011
+000
+010
+…
+
+…
+…
+…
+…
+…
+…
+…
+
+This is not the only way of
+making your control unit.
+it's time-consuming,
+confusing, hard to debug,
+and hard to change.
+you will go insane.
+
+These are made up numbers. Please don't try to use them!
+
+28
+
+A more approachable approach
+● Here's a great use for a decoder: decoding. (huh.)
+opcode
+
+<r-type>
+exactly one of these will
+be on at a time.
+<uhh random crap>
+j
+jal
+now it's just a matter of coming up with
+the logic for each of the control signals.
+beq
+bne
+blez
+for that, it's good to focus on one
+control signal at a time.
+bgtz
+addi
+addiu
+slti
+sltiu
+
+29
+
+<the sound a seal makes>
+● let's say we want to come up with the MemWrite control signal
+● which MIPS instructions write to memory?
+sw
+sh
+
+MemWrite
+
+pretty straightforward, huh?
+
+sb
+what about multi-bit control signals,
+like your ALU operation?
+there are a few approaches…
+
+30
+
+The brute-force approach: the MUXtipede
+● in this approach, you use enormous MUXes to select constants.
+opcode
+ALUOp for opcode 0
+ALUOp for opcode 1
+ALUOp for opcode 2
+ALUOp for opcode 3
+ALUOp for opcode 4
+ALUOp for opcode 5
+ALUOp for opcode 6
+ALUOp for opcode 7
+ALUOp for opcode 8
+ALUOp for opcode 9
+ALUOp for opcode A
+ALUOp for opcode B
+
+it… works, but it's hard to follow.
+it's hard to tell which constant
+is used for which instruction.
+it's also hard to add new
+instructions.
+ALUOp
+we can make this a tiny
+bit MUCH MORE
+elegant!
+31
+
+Priority Encoders
+● a priority encoder is kind of the opposite of a decoder.
+● you give it several 1-bit inputs, and it tells you which one is 1.
+1
+
+0
+
+0
+
+1
+
+0
+
+Pri
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+0
+
+Pri
+
+2
+
+0
+1
+
+Pri
+
+if none of the inputs is 1,
+then it gives you X…
+1
+
+0
+0
+
+0
+
+Pri
+
+X
+
+0
+
+Pri
+
+3
+
+to avoid this, put a constant
+1 as the first input.
+32
+
+Multi-bit control signals
+● let's say we have these instructions, and these ALU operations.
+● for each input, ask: which instructions need this ALU operation?
+
+add
+addi
+sub
+subi
+and
+or
+
+0: &
+1: |
+2: +
+3: -
+
+ALUOp 0 is the default,
+so and is handled.
+
+1
+
+which instruction(s)
+need OR (1)?
+
+or
+
+what about + (2)?
+what about - (3)?
+
+add
+addi
+sub
+subi
+
+Pri
+
+ALUOp
+
+think of it like an
+upside-down if-else-if…
+
+33
+
+

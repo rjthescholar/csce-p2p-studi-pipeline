@@ -1,0 +1,809 @@
+#8
+
+Bitwise Operations
+and Bitfields
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce Childers, David Wilkinson
+Fall 2020
+
+Announcements
+
+2
+
+Logical, right?
+class Main {
+public static void main(String[] args) {
+boolean a = true;
+boolean b = true;
+System.out.println(a||b);
+}
+}
+
+class Main {
+public static void main(String[] args) {
+int a = 4;
+int b = 1;
+System.out.println( a|b );
+}
+}
+
+● What is the output?
+
+true
+
+● What is the output?
+
+5
+3
+
+What are "bitwise" operations?
+● The "numbers" we use on computers aren't really numbers right?
+● It's often useful to treat them instead as a pattern of bits
+● Bitwise operations treat a value as a pattern of bits
+
+0
+1
+
+0
+
+0
+
+0
+4
+
+The simplest operation: NOT (logical negation)
+● If the light is off, turn it on
+● If the light is on, turn it off
+
+A
+
+Q
+
+0
+
+1
+
+1
+
+0
+
+● We can summarize this in a truth table
+ഥ
+● We write NOT as ~A, or ¬A, or A
+
+5
+
+Applying NOT to a whole bunch of bits
+● if we use the not instruction (or ~ in C/Java), this is what happens:
+
+~ 0 0 1 1 1 0 1 0
+
+= 1 1 0 0 0 1 0 1
+we did 8 independent NOT operations
+that's it it's super simple
+only 8 bits shown cause 32 bits on a slide is too much
+
+6
+
+Let's add some switches
+● There are two switches in a row connecting the light to the battery
+● How do we make it light up?
+
+7
+
+AND (Logical product)
+● AND is a binary (two-operand) operation
+● it can be written a number of ways:
+
+o A&B
+
+A∧B
+
+A⋅B
+
+AB
+
+● if we use the and instruction (or & in C/Java):
+
+A B Q
+0 0 0
+
+1 1 1 1 0 0 0 0
+& 0 0 1 1 1 0 1 0
+
+0 1 0
+
+= 0 0 1 1 0 0 0 0
+
+1 1 1
+
+1 0 0
+
+we did 8 independent AND operations
+8
+
+"Switching" things up
+● NOW how can we make it light up?
+
+9
+
+OR (Logical sum…?)
+● we might say "and/or" in English
+● it can be written a number of ways:
+
+o A|B
+
+A∨B
+
+A+B
+
+● if we use the or instruction (or | in C/Java):
+
+A B Q
+0 0 0
+
+1 1 1 1 0 0 0 0
+| 0 0 1 1 1 0 1 0
+
+0 1 1
+
+= 1 1 1 1 1 0 1 0
+
+1 1 1
+
+1 0 1
+
+We did 8 independent OR operations.
+10
+
+lui, ori…
+● If I write li t0, 0xDEADBEEF in MIPS, the assembler turns it into:
+
+lui at, 0xDEAD
+ori t0, at, 0xBEEF
+Never use at!!
+NEVER!!
+
+● at is used by the assembler, sooooo…
+● The reason it splits it up is that there's only enough space in each
+instruction to fit half of 0xDEADBEEF
+o As we’ve seen in the lab, each immediate is 16 bits long
+o We'll learn about instruction encoding later
+● What the heck are these instructions doing tho
+
+11
+
+By your powers combined…
+● lui means load upper immediate. it puts the immediate value into the
+upper 16 bits of the register, and zeroes out the rest
+
+lui at, 0xDEAD
+● then, ori does logical OR of at and its zero-extended immediate
+
+ori t0, at, 0xBEEF
+11011110101011010000000000000000
+| 00000000000000001011111011101111
+
+11011110101011001011111011101111
+
+D
+
+E
+
+A
+
+D
+
+B
+
+E
+
+E
+
+F
+12
+
+Bit shifting
+
+13
+
+Bit shifting
+● besides AND, OR, and NOT, we can move bits around, too.
+1 1 0 0 1 1 1 1 if we shift these
+bits left by 1…
+
+1 1 0 0 1 1 1 1 0 we stick a 0 at the bottom
+1 1 0 0 1 1 1 1 0 0 again!
+
+1 1 0 0 1 1 1 1 0 0 0 AGAIN!
+1 1 0 0 1 1 1 1 0 0 0 0 AGAIN!!!!
+14
+
+Left-shifting in C/Java and MIPS (animated)
+● C and Java use the << operator for left shift
+
+B = A << 4; // B = A shifted left 4 bits
+
+● MIPS has the sll (Shift Left Logical) instruction
+
+sll t2, t0, 4 # t2 = t0 << 4
+● MIPS has the sllv (Shift Left Logical Variable) instruction
+o No, registers are not variables!
+
+sllv t2, t0, t1 # t2 = t0 << t1
+
+● if the bottom 4 bits of the result are now 0s…
+o …what happened to the top 4 bits?
+
+0011 0000 0000 1111 1100 1101 1100 1111
+Bit
+Bucket
+
+the bit bucket is not a real place
+it's a programmer joke ok
+15
+
+<_< >_> <_<
+● we can shift right, too
+0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1 1
+0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1
+0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1
+0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1
+0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0
+
+● C/Java use >>, MIPS uses srl (Shift Right Logical)
+
+16
+
+Numbers they are a-changing
+● let's start with a value like 5 and shift left and see what happens
+
+Binary
+101
+1010
+10100
+101000
+1010000
+
+Decimal
+5
+10
+20
+40
+80
+
+why is this happening
+well uh... what if I gave you
+
+49018853
+
+how do you multiply that by 10?
+by 100?
+by 100000?
+
+something very similar is
+happening here
+
+17
+
+a << n == a * 2n
+● shifting left by n is the same as multiplying by 2n
+o you probably learned this as "moving the decimal point"
+▪ and moving the decimal point right is like shifting the digits left
+● shifting is fast and easy on most CPUs
+o way faster than multiplication in any case
+● hey… if shifting left is the same as multiplying…
+
+18
+
+a >> n == a / 2n, ish
+● You got it
+● Shifting right by n is like dividing by 2n
+o sort of.
+● What’s 510 (01012) shifted right by 1?
+o 102, which is 2…
+▪ It's like doing integer (or flooring) division
+▪ Which is a fancy way of saying we round to the smallest number
+
+● What if the number is signed?
+● What’s -310 (next class: 11012) shifted right by 1?
+o 01102, which is 610???
+▪ Ohhhhh
+
+19
+
+<_< >_> <_<
+● We can do sign-extension on shifts, too!!
+1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1 1
+1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1
+1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1 1
+1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 1
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0
+
+● MIPS uses sra (Shift Right Arithmetic)
+● What’s -310 (11012) shifted right by 1?
+o 11102, which is -210
+▪ Why is this -2????? next class
+
+20
+
+MIPS ISA: Bitwise operations
+● Bitwise logical operators
+
+Instruction
+
+Meaning
+
+not a, b
+
+a = ~b
+
+or a, b, c
+
+a = b|c
+
+ori a, b, imm
+
+a = b|imm
+
+and a, b, c
+
+a = b&c
+
+andi a, b, imm
+
+a = b&imm
+
+21
+
+MIPS ISA: Bitwise shifts
+● Bitwise logical operators
+
+Instruction
+
+Meaning
+
+sll a, b, imm
+
+a = b<<imm
+
+sllv a, b, c
+
+a = b<<c
+
+srl a, b, imm
+
+a = b>>imm (zero extension)
+
+srlv a, b, c
+
+a = b>>c
+
+sra a, b, imm
+
+a = b>>imm (sign extension)
+
+srav a, b, c
+
+a = b>>c
+
+(zero extension)
+
+(sign extension)
+
+22
+
+Bitfields
+
+23
+
+clicky clicky
+● In the LED Keypad plugin in MARS, input works like this:
+input_get_keys returns a value in v0…
+
+0 0 0 0 0 0 0 0 0 0 0 0
+B R L D U
+24
+
+Why do we do this??
+● It lets us cram several booleans into a single value!
+● This technique is known as bit flags
+
+1 0 1 0 0
+B R L D U
+
+0 1 0 1 0
+B R L D U
+25
+
+The masters of meaning
+● well what if we wanted to store multiple integers in one value?
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+
+decimal?
+
+red
+
+green
+
+blue
+
+23
+
+32
+
+19
+
+That's this color, in RGB565.
+
+26
+
+The masters of meaning
+● This bitfield has 3 fields: red, green, and blue
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+red
+
+green
+
+blue
+
+Position 11
+
+Position 5
+
+Position 0
+
+27
+
+Whyyyyy???
+● It's smaller
+o really, that's it
+o but that's super important in a lot of cases
+● Smaller data…
+o Takes up less space in memory
+o Takes up less space in cache
+
+▪ extremely important thing in modern CPUs that we talk about in 1541
+
+o Is faster to move between memory and the CPU
+o Is faster to transfer across the internet and other networks
+o It allows a MIPS instruction to contain references to multiple registers
+
+28
+
+I wanna turn the light on!!
+● I have a sequence of 0s. I wanna turn one of them into a 1.
+● what bitwise operation can I use to do that?
+
+0
+? 1
+1
+
+0
+0
+0
+
+0
+0
+0
+
+0
+0
+0
+
+29
+
+I wanna turn the light off!!
+● I wanna turn one of the 1s into a 0.
+● what bitwise operation can I use to do that?
+
+1
+? 1
+1
+
+0
+1
+0
+
+1
+0
+0
+
+1
+1
+1
+
+30
+
+Turning off the first three, leaving the others alone
+● more bits, but one of the same operations…
+
+1
+? 0
+0
+
+0
+0
+0
+
+1
+0
+0
+
+0
+1
+0
+
+1
+1
+1
+
+1
+1
+1
+
+31
+
+Remember this?
+
+lui at, 0xDEAD
+ori t0, at, 0xBEEF
+11011110101011010000000000000000
+| 00000000000000001011111011101111
+
+11011110101011011011111011101111
+
+D
+
+E
+
+A
+
+D
+
+B
+
+E
+
+E
+
+F
+
+32
+
+How can we assemble on of these bitfields?
+15 14
+
+13
+
+12
+
+11 10
+
+red
+
+1 0 1 1 1
+
+9
+
+8
+
+7
+
+green
+
+6
+
+5 4
+
+3
+
+2
+
+1
+
+0
+
+blue
+
+1 0 1 1 1
+1 0 0 0 0 0
+1 0 0 0 0 0
+1 0 0 1 1
+
+33
+
+…
+● hmm
+
+1 0 1 1 1
+
+0 0 0 0 0 0 0 0 0 0 0
+
+0 0 0 0 0
+0 0 0 0 0
+
+1 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0 0 1 1
+
+1 0 1 1 1
+
+1 0 0 0 0 0 1 0 0 1 1
+
+34
+
+Left-shifting and ORing
+● if you have the values of the fields
+● and you want to put them together into a bitfield
+o shift each value left to the correct bit position
+o OR the shifted values together
+● for RGB565,
+o red is shifted left 11
+o green is shifted left 5
+o blue isn't shifted (shifted left 0…)
+
+color = (red << 11) | (green << 5) | blue;
+
+35
+
+Going the other way
+● let's go from the bitfield to three separate values.
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+let's say we somehow set all the non-red bits to 0.
+
+1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+what value is this?
+it's not 23, that's for sure.
+so how do we fix that?
+
+36
+
+It's the exact opposite
+● we have to shift right to put the field at position 0
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+shift right by 11 and…
+
+0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1
+cool. what about green? shift right by…?
+
+0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0
+uh oh.
+
+37
+
+Masquerade
+● we need to get rid of (zero out) the bits that we don't care about
+● a mask is a specially-constructed value that has:
+o 1s in the bits that we want to keep
+o 0s in the bits that we want to discard
+● which bits do we want to keep? which do we want to discard?
+
+0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0
+&
+
+0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+this is the mask
+
+38
+
+Coming up with the mask value
+● if you want to mask a 3 bit value, the mask is 1112
+● if you want to mask a 4 bit value, the mask is 11112
+● if you want to mask a 5 bit value, it's…?
+
+Size(n) Mask
+1112
+3
+11112
+4
+111112
+5
+
+2n
+8
+16
+32
+
+Mask in
+decimal
+7
+15
+31
+2n-1
+39
+
+Right-shifting and ANDing
+● to extract one or more fields from a bitfield:
+o shift the bitfield right to put the desired field at bit position 0
+o AND that with 2n-1, where n is the number of bits in the field
+● so for RGB565…
+o the red and blue masks are 25-1 = 31 (or 0x1F)
+o the green mask is 26-1 = 63 (or 0x3F)
+
+red = (color >> 11) & 0x1F;
+green = (color >> 5) & 0x3F;
+blue = color & 0x1F;
+
+40
+
+NOW it works
+● let's extract green
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+shift right by 5 and…
+
+0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0
+and then AND with 0x3F…
+
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+
+41
+
+Can't you AND then shift?
+● sure, but…
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1
+AND with 0x7E0 (!)…
+
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+shift right by 5…
+
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+where did I get 0x7E0??
+it's 0x3F << 5.
+
+I feel like that's uglier.
+
+Experience shows me it leads to more mistakes
+So don’t do this: Keep the mask aligned to the right!!!
+42
+
+Exercise!
+● This bitfield represents the following MIPS instruction:
+addi s0, zero, 0x1234
+
+3 30 29 28 27 2 2 24 23 22 2 2 19 18 17 1 1 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+0
+1
+65
+10
+65
+00100000000100000001001000110100
+opcode
+
+rs
+It’s addi!
+
+rt
+zero
+
+imm
+Load into this
+register
+
+This number
+
+● Using these operations: <<, >>, &, |, ~ write expressions to extract the value
+of each field
+o E.g.: ( field << 3 )|( ~0xFFFF )
+43
+
+

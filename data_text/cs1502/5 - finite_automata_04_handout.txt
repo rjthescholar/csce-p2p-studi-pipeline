@@ -1,0 +1,1320 @@
+Finite Automata 04
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions
+A regular expression can be constructed using the following
+rules:
+1
+2
+3
+4
+
+5
+
+6
+
+a is a regular expression for some a in the alphabet Σ,
+ε is a regular expression
+∅ is a regular expression
+If R1 and R2 are regular expressions, R1 ∪ R2 is a regular
+expression
+If R1 and R2 are regular expressions, R1 ◦ R2 or R1 R2 is a
+regular expression
+If R is a regular expression, R∗ is a regular expression
+
+Note that to use rules 4, 5, or 6, you need to have regular
+expressions R1 , R2 , or R first which can only be constructed
+from rules 1, 2, or 3
+This is a recursive definition
+Once you get regular expressions, you can apply rules 4, 5, or 6
+multiple time to obtain more and more regular expressions
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression Examples
+Suppose Σ = {0, 1}
+From rule 1, we have:
+0 is a regular expression
+1 is a regular expression
+
+From rule 2, we have:
+ε is a regular expression
+
+From rule 3, we have:
+∅ is a regular expression
+
+So far, we have four regular expressions, 0, 1, ε, and ∅
+From rule 4, 0 ∪ 1 is a regular expression
+From rule 5, 11 is a regular expression
+From rule 6, 0∗ is a regular expression
+
+We can keep building larger and larger regular expressions by
+applying rules 4, 5, and 6 multiple times
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression Examples
+
+Suppose Σ = {0, 1}
+From rule 1, 0 and 1 are regular expressions
+From rule 4, 0 ∪ 1 is a regular expression
+From rule 6, (0 ∪ 1)∗ is a regular expression
+From rule 5, 01 is a regular expression
+From rule 5, 011 is a regular expression
+From rule 5, (0 ∪ 1)∗ 011 is a regular expression
+From rule 5, (0 ∪ 1)∗ 011(0 ∪ 1)∗ is a regular expression
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions
+In arithmetic, an arithmetic expression can be used to
+represent its object (number)
+5 + 12 is an arithmetic expression
+5 + 12 can be used to represent 17
+We usually write 5 + 12 = 17
+
+In theory of computation, a regular expression can be used to
+express a language
+Let Σ = {0, 1}
+The regular expression 0 = {0}
+The regular expression 1 = {1}
+The regular expression ε = {ε}
+The regular expression ∅ = { }
+Suppose regular expressions R1 = A and R2 = B for
+languages A and B, the regular expression R1 ∪ R2 = A ∪ B
+Suppose regular expressions R1 = A and R2 = B for
+languages A and B, the regular expression R1 R2 = AB
+Suppose the regular expression R = A for a language A,
+R ∗ = A∗
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions (Other Notations)
+
+R+ is a shorthand notation for RR∗ for a regular expression R
+All strings that are 1 or more concatenations of strings from R
+Examples:
+1+ = 11∗
+(0 ∪ 1)+ = (0 ∪ 1)(0 ∪ 1)∗
+
+Rk is a shorthand notation for the concatenation of k R’s
+with each other
+Examples:
+15 = 11111
+(0 ∪ 1)3 = (0 ∪ 1)(0 ∪ 1)(0 ∪ 1)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions (By Examples)
+
+A regular expression expresses a language:
+0∪1
+0 ∪ 1 = {0} ∪ {1} = {0, 1}
+A language that consists of two strings, 0 and 1
+
+0∗
+0∗ = {0}∗
+Recall that A∗ = {x1 x2 . . . xk | k ≥ 0 and each xi ∈ A}
+{0}∗ = {ε, 0, 00, 000, 0000, 00000, . . . }
+0∗ expresses the language that consists of all string that
+contains nothing but 0s including the empty string
+
+(0 ∪ 1)0∗
+(0 ∪ 1)0∗ = {0, 1} ◦ 0∗ = {0, 1} ◦ {ε, 0, 00, 000, . . . }
+Recall that A ◦ B = {xy | x ∈ A and y ∈ B}
+{0, 1}0∗ = {0, 1, 00, 10, 000, 100, 0000, 1000, . . . }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions (By Examples)
+A regular expression expresses a language:
+(0 ∪ 1)∗
+(0 ∪ 1)∗ = {0, 1}∗ = {ε, 0, 1, 00, 01, 10, 11, 000, 001, . . . }
+This is the set of all strings over 0 and 1
+We generally use Σ∗ instead of (0 ∪ 1)∗
+
+0∗ 10∗
+0∗ 10∗ = {0}∗ ◦ {1} ◦ {0}∗
+{0}∗ is a language consisting of all strings containing zero or
+more 0s ({ε, 0, 00, 000, . . . })
+0∗ 10∗ = {w | w contains a single 1}
+
+Σ∗ 1Σ∗
+Σ∗ 1Σ∗ = Σ∗ ◦ {1} ◦ Σ∗
+Σ∗ is the language consisting of all stings over Σ
+Σ∗ 1Σ∗ = {w | w has at least one 1}
+
+Σ∗ 001Σ∗
+Σ∗ 001Σ∗ = Σ∗ ◦ {001} ◦ Σ∗
+Σ∗ 001Σ∗ = {w | w contains the string 001 as a substring}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions (By Examples)
+A regular expression expresses a language:
+1∗ (01+ )∗
+1∗ (01+ )∗ = {1}∗ ◦ (01+ )∗
+{1}∗ is a language consisting of all strings containing zero or
+more 1s ({ε, 1, 11, 111, . . . })
+01+ = {0} ◦ {1}+ = {0} ◦ ({1} ◦ {1}∗ ) = {01, 011, 0111, . . . }
+(01+ )∗ = {01, 011, 0111, . . . }∗ =
+{ε, 01, 0101, 01011, 01101, 011011, . . . }
+1∗ (01+ )∗ = {w | every 0 in w is followed by at least one 1}
+
+(ΣΣ)∗
+ΣΣ = Σ ◦ Σ = {0, 1} ◦ {0, 1} = {00, 01, 10, 11}
+(ΣΣ)∗ = {00, 01, 10, 11}∗
+(ΣΣ)∗ = {w | w is a string of even length}
+
+(ΣΣΣ)∗
+ΣΣΣ = {0, 1} ◦ {0, 1} ◦ {0, 1} =
+{000, 001, 010, 011, 100, 101, 110, 111}
+(ΣΣΣ)∗ = {000, 001, 010, 011, 100, 101, 110, 111}∗
+(ΣΣΣ)∗ = {w | the length of w is a multiple of 3}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions (By Examples)
+A regular expression expresses a language:
+01 ∪ 10
+01 ∪ 10 = ({0} ◦ {1}) ∪ ({1} ◦ {0}) = {01} ∪ {10} = {01, 10}
+
+0Σ∗ 0 ∪ 1Σ∗ 1 ∪ 0 ∪ 1
+0Σ∗ 0 = {0} ◦ Σ∗ ◦ {0} is a set of all string that start and end
+with 0
+1Σ∗ 1 is a set of all string that start and end with 1
+0Σ∗ 0 ∪ 1Σ∗ 1 ∪ 0 ∪ 1 =
+{w | w starts and ends with the same symbol}
+
+(0 ∪ ε)1∗
+0 ∪ ε = {0} ∪ {ε} = {0, ε}
+1∗ = {ε, 1, 11, 111, . . . }
+(0 ∪ ε)1∗ = {0, ε} ◦ {ε, 1, 11, 111, . . . }
+(0 ∪ ε)1∗ = {ε, 0, 01, 011, . . . , 1, 11, 111, . . . }
+(0 ∪ ε)1∗ = 01∗ ∪ 1∗
+
+(0 ∪ ε)(1 ∪ ε) = {0, ε} ◦ {1, ε} = {ε, 0, 1, 01}
+1∗ ∅ = {1}∗ ◦ ∅ = ∅
+∅∗ = {ε}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Operator Precedences and Identities
+Operator Precedences:
+∗
+
+has the highest precedence.
+∪ has the lowest precedence.
+
+Some properties:
+R∪∅=R
+Adding the empty language to any other language will not
+change it
+
+R◦ε=R
+Joining the empty string to any string will not change it
+
+R ∪ {ε} =
+6 R
+If R = {0, 1}, R ∪ {ε} = {0, 1, ε} 6= R
+
+R ◦ ∅ 6= R
+If R = {0, 1}, R ◦ ∅ = {0, 1} ◦ ∅
+{0, 1}◦ = {xy | x ∈ {0, 1} and y ∈ ∅} = ∅
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Example: Regular Expression
+Problem: Write a program to evaluate a string representing a
+floating-point number
+72
+true
+35.9
+true
+20 67
+false
++7.
+true
+71a3
+false
+-.29
+true
+
+Solution
+Create a DFA that recognize a set of all strings that are valid
+floating-point numbers and turn it into a program
+It would be great if there is an easy way to do this
+
+For now, can we create a regular expression that express the
+set of all valid floating-point representations?
+(+ ∪ − ∪ ε)(D+ ∪ D+ .D∗ ∪ D∗ .D+ )
+where D = {0, 1, 2, . . . , 9}
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression and Finite Automata
+
+Now we know that a regular expression can be used to express
+a language
+Question: Is language expressed by a regular expression
+regular?
+Let’s try to prove that a regular expression expresses a regular
+language
+
+Recall a regular expression:
+A regular expression is defined recursively (those 6 rules)
+So, we need to show that a regular expressions constructed
+from those rules expresses a regular language
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Lemma 1.55
+From rule 1: a for some a in the alphabet Σ is a regular
+expression
+We need to show that a language expressed by a regular
+expression generated from this rule is regular
+Given a symbol a ∈ Σ, according to this rule, a is a regular
+expression
+a expresses the language {a}
+Is {a} regular?
+Can we construct a DFA that recognizes the language {a}?
+
+This is an NFA that recognizes {a}
+a
+q1
+
+q2
+
+For every NFA, there is an equivalent DFA
+Thus {a} is a regular language
+Therefore, a expresses a regular language
+
+A regular expression constructed by rule 1 expresses a regular
+language
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Lamma 1.55
+From rule 2: ε is a regular expression
+Again, we need to show that a language expressed by ε is
+regular
+Recall that ε expresses the language {ε}
+Is {ε} regular?
+Can we construct a DFA that recognizes the language {ε}?
+
+This is an NFA that recognizes {ε}
+q1
+
+For every NFA, there is an equivalent DFA
+Thus, {ε} is a regular language
+Therefore, ε expresses a regular language
+
+A regular expression constructed by rule 2 expresses a regular
+language
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Lamma 1.55
+From rule 3: ∅ is a regular expression
+Again, we need to show that a language expressed by ∅ is
+regular
+Recall that ∅ expresses the language { }
+Is { } regular?
+Can we construct a DFA that recognizes the language { }?
+
+This is an NFA that recognizes { }
+q
+
+For every NFA, there is an equivalent DFA
+Thus, ∅ is a regular language
+Therefore, ∅ expresses a regular language
+
+A regular expression constructed by rule 3 expresses a regular
+language
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Lemma 1.55
+Recall that you cannot use rules 4, 5, and 6 to create a new
+regular expressions unless you already have some regular
+expressions created by rules 1, 2, or 3
+We already prove that each regular expression created by rules
+1, 2, or 3 expresses a regular language
+For rule 4:
+R1 and R2 are regular expressions that express regular
+languages (from rules 1, 2, or 3)
+Recall that R1 = A and R2 = B for some languages A and B,
+R1 ∪ R2 = A ∪ B
+We already prove that if A and B are regular languages, A ∪ B
+is regular (regular language is closed under union operation)
+Thus, a regular expression obtain by rule 4 express a regular
+language
+
+Same for rules 5 and 6
+Regular language is closed under concatenation and star
+operations
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Lemma 1.55
+
+Lemma 1.55
+If a language is described by a regular expression, then it is regular.
+We just proved the above lemma
+By proving the above lemma, it gives us a tool to construct
+an NFA that recognizes the language expressed by a regular
+expression
+Based on how we prove that regular language is closed under
+union, concatenation, and star operations
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expressions to NFA
+
+Suppose we want to construct an NFA that recognizes the
+language expressed by the regular expression (ab ∪ a)∗ where
+Σ = {a, b}
+We need to apply those 6 rules to obtain the regular expression
+This will be a guideline step-by-step to construct an NFA
+
+Here are steps to construct the regular expression (ab ∪ a)∗
+1
+2
+3
+4
+5
+
+a is a regular expression (rule 1)
+b is a regular expression (rule 1)
+ab is a regular expression (rule 5 with (1) and (2))
+ab ∪ a is a regular expression (rule 4 with (3) and (1))
+(ab ∪ a)∗ is a regular expression (rule 6 with (4))
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+
+b
+
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+
+b
+
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+b
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+b
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+b
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ab
+
+ab U a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ab
+
+ab U a
+a
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ab
+
+ε
+ab U a
+a
+ε
+
+(ab U a) *
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ε
+
+b
+
+ab
+
+ε
+ab U a
+a
+ε
+
+a
+ε
+(ab U a) *
+a
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ε
+
+b
+
+ab
+
+ε
+ab U a
+a
+ε
+
+a
+ε
+(ab U a) *
+
+ε
+a
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (ab ∪ a)∗ to an NFA.
+a
+a
+b
+b
+a
+
+ε
+
+b
+
+a
+
+ε
+
+b
+
+ab
+
+ε
+ab U a
+a
+ε
+ε
+
+a
+ε
+(ab U a) *
+
+ε
+a
+ε
+
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+b
+
+Regular Expressions to NFA
+
+Suppose we want to construct an NFA that recognizes the
+language expressed by the regular expression (a ∪ b)∗ aba
+where Σ = {a, b}
+Again, we need to apply those 6 rules to get a guideline
+Here are steps to construct the regular expression (a ∪ b)∗ aba
+1
+2
+3
+4
+5
+6
+7
+
+a is a regular expression (rule 1)
+b is a regular expression (rule 1)
+a ∪ b is a regular expression (rule 4 with (1) and (2))
+(a ∪ b)∗ is a regular expression (rule 6 with (3))
+ab is a regular expression (rule 5 with (1) and (2))
+aba is a regular expression (rule 5 with (5) and (1))
+(a ∪ b)∗ aba is a regular expression (rule 5 with (4) and (6))
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+
+b
+
+aUb
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+
+b
+
+aUb
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+
+aUb
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+aUb
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+aUb
+b
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+
+ε
+
+a
+
+aUb
+b
+ε
+
+(a U b) *
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+
+ε
+
+a
+
+aUb
+b
+ε
+
+ε
+
+a
+
+(a U b) *
+b
+ε
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+
+ε
+
+a
+
+ε
+(a U b) *
+b
+ε
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+ε
+
+a
+
+ε
+(a U b) *
+b
+ε
+ε
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+a
+
+ε
+ε
+(a U b) *
+
+b
+ε
+ε
+a
+
+ε
+
+b
+
+ε
+
+a
+
+aba
+
+(a U b) *aba
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+a
+
+ε
+ε
+(a U b) *
+
+b
+ε
+ε
+a
+
+b
+
+ε
+
+ε
+
+a
+
+aba
+
+ε
+ε
+
+a
+
+ε
+(a U b) *aba
+b
+ε
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+a
+
+ε
+ε
+(a U b) *
+
+b
+ε
+ε
+a
+
+ε
+
+b
+
+ε
+
+a
+
+a
+
+ε
+
+b
+
+aba
+
+ε
+ε
+
+a
+
+ε
+(a U b) *aba
+b
+ε
+ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+a
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+a
+
+ε
+ε
+(a U b) *
+
+b
+ε
+ε
+a
+
+b
+
+ε
+
+ε
+
+a
+
+ε
+
+b
+
+aba
+
+ε
+ε
+
+a
+
+ε
+(a U b) *aba
+b
+ε
+
+ε
+ε
+ε
+
+ε
+a
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+a
+
+Regular Expression to NFA
+Convert the regular expression (a ∪ b)∗ aba to an NFA.
+a
+a
+b
+b
+a
+
+ε
+aUb
+
+b
+ε
+ε
+a
+
+ε
+ε
+(a U b) *
+
+b
+ε
+ε
+a
+
+b
+
+ε
+
+ε
+
+a
+
+ε
+
+b
+
+aba
+
+ε
+ε
+
+a
+
+ε
+(a U b) *aba
+b
+ε
+
+ε
+ε
+ε
+
+ε
+a
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+ε
+
+a
+
+Useful Tool
+
+Recall that the set of all valid floating-point representation is
+expressed by a regular expression
+(+ ∪ − ∪ ε)(D+ ∪ D+ .D∗ ∪ D∗ .D+ )
+where
+D = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+Now, we can easily convert the above regular expression into
+an NFA, construct an equivalent DFA, and turn the DFA into
+a program
+This process is done by computer
+Often used in compiler
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+Conclusion
+
+A regular expression expresses a regular language
+We have a tool to convert a regular expression into an
+equivalent NFA
+What is next?
+We still do not know whether every regular language can be
+expressed by a regular expression
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Finite Automata 04
+
+

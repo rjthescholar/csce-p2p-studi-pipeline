@@ -1,0 +1,666 @@
+Introduction to Operating Systems
+CS/COE 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Announcements
+• Upcoming deadlines
+• Homework 3 is due next Monday 2/7
+• Lab 1 is due on 2/4
+• Project 1 due on 2/18
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Previous lecture …
+• How processes (threads) are created and terminated
+
+• Tracing programs with fork() calls
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points (fork)
+• can you clarify copy-and-write? does the memory
+automatically get “passed” down or not?
+• I was confused how fork can be assigned to variable
+and whether its the child or parent that gets assigned
+• Fork tracing example
+• fork tracing!!$
+• How can a child process run a different program than
+their parent?
+• what is exec()
+• What data should you track when fork tracing
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points (wait())
+•
+
+Why can a child process become a zombie for a parent process, but
+not the other way around?
+
+•
+
+Does most of the parent processes invoke wait( )? Is this the system
+software engineers' job to ensure every process will invoke wait( )
+defaultly to avoid creating zombie processes, or is OS's job and it
+can arbitrarily invoke wait( ) or not?
+
+•
+
+does a process actually wait when wait() is called? like stops
+running
+
+•
+
+Zombie vs Orphan processes
+
+•
+
+What are the differences of a zombie and orphan process? The parent
+doesnt invoke wait in either instance?
+
+•
+
+Implementation of how init adopts orphaned processes.
+
+•
+
+Can a process be orphan and zombie at the same time?
+
+•
+
+Orphan versus zombie processes. The difference between when the
+parent process calls exit()
+
+•
+
+In what situation would a child not be a copy of its parent?
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points (Threads)
+• Similarities and differences between forks and threads
+
+• The difference between processes and threads in how
+they're handled by the operating system. Are threads
+and processes treated the same by the OS beyond the
+threads sharing memory? Do threads go through the
+same states and transitions as processes?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Muddiest Points (Process Termination)
+• what does killing a process do, or what is the action the
+kill program takes to kill another?
+• exit vs kill vs abort
+• The differences between the exit(), Abort() and Kill().
+Specifically, the difference between kill() and abort().
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Problem of the Day
+• Bounded Buffer Problem
+• aka Producers Consumers Problem
+
+• A shared circular-array buffer with capacity n
+• A set of producer processes/threads
+• As set of consumer processes/threads
+
+• Requirements:
+• Never exceed the buffer capacity
+• Producers wait if the buffer is full
+• Consumers wait if the buffer is empty
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Produces Consumers Problem
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Producers Consumers Problem is everywhere!
+• Access to User Interface elements in mobile
+applications
+• Main UI thread
+• Background threads
+• e.g., download files, check email on mail server
+
+• Background threads send requests to UI thread to update
+UI elements
+• Requests are stored in a shared bounded buffer
+• Which threads are the producers?
+• Who threads are the consumers?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Producers Consumers Problem is everywhere!
+• Web Server
+• front-end processes/threads that interact with the HTTP
+connection from the client (e.g., browser)
+• Back-end processes/threads that execute database
+queries
+• Queries are inserted by front-end processes into a shared
+buffer
+• Which threads are the producers?
+• Who threads are the consumers?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Solving Producers Consumers using Semaphores
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+How to trace the solution?
+
+Let’s define some events.
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Producer arrives
+Moves as far as possible until the solid line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Producer enters
+Moves as far as possible past the solid line and until the
+dashed line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Producer leaves
+Moves as far as possible until the dotted line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Consumer arrives
+Moves as far as possible until the solid line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Consumer enters
+Moves as far as possible past the solid line and until the
+dashed line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Consumer leaves
+Moves as far as possible past the dashed line and until
+the dotted line
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Tracing
+
+Given a sequence of events, is the sequence feasible?
+If yes, what is the system state at the end of the
+sequence?
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+System State
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Example 1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Initial state
+
+0
+
+3
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+0
+
+2
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 enters
+
+0
+
+2
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P1 arrives
+
+0
+
+1
+1
+-1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P2 arrives
+
+0
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 arrives
+
+-1
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+-1
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+-1
+
+0
+1
+-1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+-1
+
+0
+1
+-1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+0
+
+0
+1
+-1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+1
+-1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Can C0 enter?
+
+0
+
+0
+1
+-2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Example 2
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Initial state
+
+0
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 arrives
+
+0
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 arrives
+
+-1
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-1
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-1
+
+0
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-1
+
+0
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 enters
+
+-1
+
+0
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 enters
+
+-1
+
+0
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+-1
+
+0
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+0
+
+0
+1
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 leaves
+
+0
+
+0
+1
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+1
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Can C0 enter?
+
+0
+
+0
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+0
+
+0
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 leaves
+
+0
+
+0
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 leaves
+
+0
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Example 3
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Initial state
+
+0
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 arrives
+
+0
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 arrives
+
+-1
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C1 arrives
+
+-1
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C1 arrives
+
+-2
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C2 arrives
+
+-2
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C2 arrives
+
+-3
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-3
+
+2
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-3
+
+1
+0
+1
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 arrives
+
+-3
+
+1
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 enters
+
+-3
+
+1
+0
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+P0 enters
+
+-3
+
+1
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+C0 enters
+
+-3
+
+1
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+Can C0 enter?
+
+-3
+
+1
+1
+0
+
+CS 1550 – Operating Systems – Sherif Khattab
+
+

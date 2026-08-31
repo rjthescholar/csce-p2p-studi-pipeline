@@ -1,0 +1,1395 @@
+#10
+
+The Register File
+and Building an
+ALU
+
+CS 0447
+Introduction to
+Computer Programming
+
+Luís Oliveira
+
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+1
+
+Fall 2020
+
+The Register File
+Abstracting out the flip-flops.
+
+2
+
+Remember this?
+
+Program
+
+instruction
+
+Control
+
+3
+
+5
+
+8
+
+Registers
+
++
+
+A
+
+B
+
+C
+
+Memory
+
+Unresolved questions:
+● What's the control?
+● What's the datapath?
+● How does it know what
+instruction to get next?
+● How does it know what
+registers to access?
+● How does it know to add,
+subtract, etc.?
+
+Datapath
+Processor
+
+3
+
+Zooming in
+
+if(add)
+do this
+else if...
+
+fp
+s4
+at
+sp
+eax?
+
+Control
+
+t0
+
+Registers
+
+registers hold the
+values being computed
+
+control signals!
+
+values move
+between them
+
+...oh yeah, memory too
+
+the control tells
+everything else what
+to do, and when
+
++ -÷ ×
+⊕∫ ☃
+
+&
+
+● There are a few major parts of any CPU:
+
+Datapath
+
+the datapath computes
+new values
+4
+
+A bit less abstract
+
+Control
+
+● The registers are grouped together into the register file
+● The ALU (arithmetic and logic unit) is the main part of the datapath
+● The control is doing its thing, somehow…? (we’ll see)
+
+Register
+File
+
+ALU
+
+we can get the values of two
+registers at once
+
+5
+
+It doesn't have to be this way
+CISC CPUs usually have small
+sets of registers, and many have
+special purposes or behaviors
+
+8086
+
+z80
+
+6502
+
+PDP8
+
+ax
+bx
+cx
+dx
+si
+di
+sp
+bp
+
+a f
+b c
+d e
+h l
+ix
+iy
+sp
+
+A
+X
+Y
+
+AC
+
+16 bits
+
+12 bits
+
+RISC CPUs usually have 32* mostlyinterchangeable registers: MIPS,
+RISC, SPARC, ARMv8, RISC-V…
+r0 r1 r2 r3 r4 r5 r6 r7
+r8 r9 r10 r11 r12 r13 r14 r15 32/64
+
+r16 r17 r18 r19 r20 r21 r22 r23 bits
+r24 r25 r26 r27 r28 r29 r30 r31
+
+8 bits
+
+why is this? well, what do you
+remember about the differences
+between RISC and CISC?
+*or 32 at a time
+
+6
+
+Tug-of-war
+● Register file design is constrained by many competing factors
+
+compilers love lots of
+ISA says instructions identical registers! …but there are diminishing returns.
+have 2 operands
+and 1 destination
+fast L1 cache? not as
+…except for this one
+many regs needed
+D
+Q
+instruction that has
+D QQ
+D
+2 destinations.
+multi-issue CPU: need to
+humans like intuitive
+assembly language!
+with lots of registers,
+function calls are faster! …but context switches
+are slower.
+
+read 4 regs and write 2
+
+more registers means
+more silicon…
+7
+
+A word of advice
+● You will see many imperfect designs in your life
+● But in problem-solving, perfection isn't always the goal
+o everyone has to work within the constraints they're given
+● and if everyone does something the same way…
+o there are probably problems/constraints you don't know about
+o don't waste your time reinventing the wheel.
+▪ find out why it's done that way first.
+● When it comes to register files, 32 registers is just a nice number
+o not too many, not too few, a nice middle-ground
+
+● also don't be a judgmental ass about someone else's design because one, it's shitty, and two, they know more about why
+it was designed that way, so you're just being presumptuous
+
+8
+
+Soooo registers… How do we create a register?
+● If we create a 32-bit register out of D Flip-Flops:
+
+D
+
+Q
+
+D
+
+Q
+
+D
+
+Q
+
+D
+
+Q
+
+D Flip-Flop
+
+D Flip-Flop
+
+D Flip-Flop
+
+D Flip-Flop
+
+3rd bit
+
+2nd bit
+
+1st bit
+
+0th bit
+
+We abstract
+away to this:
+
+32
+
+D
+
+Q
+
+32
+
+Register
+
+Thankfully, so does
+Logisim!
+9
+
+Combined into…
+● Then, we can combine many of those together:
+
+Register File
+32
+
+D
+
+Q
+
+32
+
+Register
+
+32
+
+D
+
+Q
+
+32
+
+Register
+
+…
+32
+
+D
+
+Q
+
+32
+
+Register
+10
+
+The MIPS register file
+● In the instruction add t0, t1, t2, how many registers are read?
+o how many are written?
+o how many different registers are accessed?
+
+there's one input or
+write port
+it needs a clock signal.
+what other control
+signals does it need?
+
+Register
+File
+WE
+
+how about a
+write enable?
+
+rd
+
+rs
+
+rt
+
+there are two output
+or read ports
+each port can read a
+different register
+
+and inputs to select
+the registers?
+
+11
+
+Reading from one register
+● You have two registers, and you want to choose one to read
+
+what kind of component chooses?
+D
+
+A WE83
+
+Q
+
+29
+83
+
+B
+
+D
+
+reading from a register is
+technically combinational
+
+Q
+
+29
+
+WE
+
+0
+1
+
+a read port is made of a
+select signal, a MUX, and a
+data output
+12
+
+Writing
+● For the write port, we only want to write to one register at a time
+● We'll have a select signal again…
+
+when should we write to A?
+select = 0
+Do we ALWAYS write to a
+register?
+WE = 1
+How about in
+beq A, 3, top?
+
+D
+
+Q
+
+83
+
+WE
+
+when should we write to B? D
+select = 1
+
+WE = 1
+
+Q
+
+29
+
+WE
+
+A
+B
+13
+
+Close the door
+● when a register's write enable is 0, what happens to the data?
+● so we can hook up the data input to all registers at once.
+
+Data
+
+D
+
+Q
+
+83
+
+WE
+
+A
+only the register with
+WE=1 will store the data
+
+D
+
+Q
+
+29
+
+WE
+
+B
+14
+
+Chekhov's Gun
+● there's a component we haven't seen in a while which only sends an input value to
+one of its outputs (demux)
+D
+
+WE
+0
+WE
+
+1
+0
+
+Q
+
+83
+
+WE
+
+D
+
+WE
+0
+
+a write port is made of a select signal, a data
+input, a write enable, and some kinda logic to
+send the write enable to one register
+
+Q
+
+29
+
+WE
+
+A
+B
+
+15
+
+The Register File
+● And then, we can abstract our subcircuit to the following:
+o This presumes we have 32 registers which are 32-bits in size
+o (like MIPS!)
+
+WriteEnable
+WriteData
+Register1
+Register2
+
+32
+
+32
+5
+5
+
+Register File
+
+32
+
+ReadData1
+ReadData2
+
+5
+
+16
+
+Diving in
+
+Control
+
+● We have a complete register file!
+● Now… let’s look more closely at building an ALU.
+
+Register
+File
+
+ALU
+
+17
+
+Building Out a Basic ALU
+Doing the stuff.
+
+18
+
+Starting small, the one-bit adder
+● Who remembers how to use an adder to subtract?
+
+Carry in
+A
+B
+
++
+
+Result
+
+Carry out
+
+19
+
+Starting small, the one-bit adder
+● Here is a simple ALU. It can Add A and B together.
+o There are a few control signals leading into it and several outputs.
+o Consider how this ALU subcircuit, as it is, can perform “A – B”
+A
+Binvert
+Carry in
+B
+
+0
+1
+
++
+
+Result
+
+Carry out
+
+This is a
+MUX
+20
+
+A basic 1-bit ALU – Addition
+Binvert
+
+Carry in
+
+0
+
+0
+
+Put it in a
+box
+
+A
+
+Result
+B
+
+0
+1
+
++
+Carry out
+21
+
+A basic 1-bit ALU – Subtraction
+2s Complement
+1- Invert
+
+Binvert
+
+Carry in
+
+1
+
+1
+
+2-Add one
+
+A
+
+Result
+B
+
+0
+1
+
++
+Carry out
+22
+
+A basic 1-bit ALU – Expanding the adder
+ALU – Arithmetic and Logic Unit
+● This ALU can perform the
+arithmetic operations add,
+and subtract.
+● And the logic operations
+AND, OR, and NOT
+● Operation is selected by
+the signal Operation:
+
+(2-bits)
+00 – AND; 01 – OR;
+10 – ADD; 11 – SLT
+
+Binvert
+
+Carry in Operation
+2
+
+A
+0
+
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+23
+
+A basic 1-bit ALU – Addition
+Binvert
+
+Carry in Operation
+
+0
+
+0
+
+2 10
+
+A
+
+The other
+outputs are
+being
+calculated.
+
+0
+
+1
+B
+
+0
+1
+
++
+
+Less
+
+2
+
+Result
+
+But not
+propagated
+
+3
+Carry out
+24
+
+A basic 1-bit ALU – Subtraction
+Binvert
+
+Carry in Operation
+
+1
+
+1
+
+2 10
+
+A
+0
+
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+25
+
+A basic 1-bit ALU – AND
+Binvert
+
+Carry in Operation
+
+0
+
+X
+
+2 00
+
+A
+0
+
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+26
+
+A basic 1-bit ALU – OR
+Binvert
+
+Carry in Operation
+
+0
+
+X
+
+2 01
+
+A
+0
+
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+27
+
+A basic 1-bit ALU – NAND and NOR?
+Remember Boolean algebra?
+
+𝐴 + 𝐵 = 𝐴. 𝐵
+
+𝐴𝐵 = 𝐴 + 𝐵
+
+𝐴 𝐵 𝐴 + 𝐵 𝐴 𝐵 𝐴. 𝐵
+0 0 1
+1 1 1
+0 1 0
+1 0 0
+1 0 0
+0 1 0
+1 1 0
+0 0 0
+
+𝐴 𝐵 𝐴𝐵 𝐴 𝐵 𝐴 + 𝐵
+0 0 1 1 1 1
+0 1 1 1 0 1
+1 0 1 0 1 1
+1 1 0 0 0 0
+28
+
+A basic 1-bit ALU – NAND
+We need to
+add another
+inverter and
+mutex
+
+Ainvert Binvert
+1
+
+A
+
+Carry in Operation
+
+1
+
+X
+
+0
+
+2 01
+
+0
+
+1
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+29
+
+A basic 1-bit ALU – NOR
+Ainvert Binvert
+1
+
+A
+
+Carry in Operation
+
+1
+
+X
+
+0
+
+2 00
+
+0
+
+1
+1
+B
+
+0
+1
+
++
+
+Less
+
+Result
+
+2
+
+3
+Carry out
+30
+
+A basic 1-bit ALU, with overflow detection
+● This ALU can detect overflow
+
+Ainvert
+
+● Also allows to perform the SLT operation!
+● Remember the slt instruction?
+blt t0, t1, label
+o It’s equivalent to
+slt at, t0, t1
+bnq at, zero, label
+
+A
+
+Binvert
+
+0
+
+Operation
+2
+0
+
+1
+1
+B
+
+● SLT – Set if Less Then
+
+o “Set” = 1 if a<b
+
+Carry in
+
+0
+1
+
++
+
+Less
+
+2
+3
+
+o “Set” = 0 if a>=b
+
+Result
+
+Set
+
+Overflow
+Carry out
+31
+
+A basic 1-bit ALU, with overflow detection
+● This ALU can detect overflow
+
+Ainvert
+
+● Also allows to perform the SLT operation!
+● Remember the slt instruction?
+blt t0, t1, label
+o It’s equivalent to
+slt at, t0, t1
+bnq at, zero, label
+
+A
+
+Binvert
+
+Operation
+2
+
+0
+
+0
+
+1
+1
+B
+
+● SLT – Set if Less Then
+
+o “Set” = 1 if a<b
+
+Carry in
+
+0
+1
+
++
+
+Result
+
+2
+
+Less
+
+3
+
+o “Set” = 0 if a>=b
+
+Set
+
+● What is the propagation delay?
+Overflow
+Carry out
+Assume: Not: 2ns, Mux: 6ns,
+Adder: 10ns, AND/OR/XOR: 4ns
+
+(26ns)
+
+32
+
+Building it up!
+● Combine multiple 1-bit ALUs
+
+● We can combine the Binvert and
+Carry in signals
+o They are used simultaneously
+for subtractions
+o Otherwise, we don’t care about
+the Carry in
+
+Ainvert Bnegate
+1
+0
+
+Carry in can be
+connected to
+Binvert
+
+A0
+B0
+
+Carry in
+
+Less
+
+Carry out
+
+A1
+B1
+
+Carry in
+
+0
+
+ALU 0
+
+ALU 1
+
+Less
+
+Carry out
+
+A2
+B2
+
+Carry in
+
+0
+
+ALU 2
+
+Less
+
+Carry out
+
+A31
+B31
+
+Carry in
+
+0
+
+Less
+
+ALU 31
+Carry out
+
+2
+
+Operation
+10
+
+Result0
+
+1
+
+Result1
+
+0
+
+Result2
+
+0
+
+Result31
+Set
+
+0
+
+Overflow
+
+1
+
+33
+
+Implementing SLT
+● SLT uses subtraction
+slt at, t0, t1
+t0<t1: t0-t1<0
+o Set is 1
+● Note how Set is connected to
+ALU0’s Less input
+
+Ainvert Bnegate
+1
+0
+A0
+B0
+
+Carry in
+
+Less
+
+Carry out
+
+A1
+B1
+
+Carry in
+
+0
+
+● Could we use Result31 instead?
+o No, note how the output is 0,
+not 1
+
+2
+
+ALU 0
+
+ALU 1
+
+Less
+
+Carry out
+
+A2
+B2
+
+Carry in
+
+0
+
+ALU 2
+
+Less
+
+Carry out
+
+A31
+B31
+
+Carry in
+
+0
+
+Less
+
+ALU 31
+Carry out
+
+Operation
+11
+
+Result0
+
+1
+
+Result1
+
+0
+
+Result2
+
+0
+
+Result31
+Set
+
+0
+
+Overflow
+
+1
+
+34
+
+A 32-bit ALU
+Ainvert Bnegate
+
+4 ALU operation
+A
+
+32
+
+32
+ALU
+
+B
+
+32
+
+2
+
+A0
+B0
+
+Carry in
+
+Less
+
+Carry out
+
+Operation
+
+Result0
+
+ALU 0
+
+Zero detection is so
+common that is usually
+supported by ALUs
+E.g. beq, bne
+
+A1
+B1
+
+Carry in
+
+Result
+Zero
+
+0
+
+Less
+
+Carry out
+
+Overflow
+
+A2
+B2
+
+Carry in
+
+0
+
+Less
+
+A31
+B31
+0
+
+Less
+
+Result1
+
+ALU 1
+
+Zero
+
+Result2
+
+ALU 2
+Carry out
+
+Carry in
+
+ALU 31
+Carry out
+
+Result31
+Set
+
+Overflow
+
+As we saw when we
+talked about overflow.
+It can be detected in
+the MSB
+35
+
+A basic 32-bit ALU?
+● ALUs are many times in the
+real world built as multiple
+1-bit ALUs.
+o Called bit-slicing
+● However, we can happily
+live in our ideal world for a
+bit longer!
+● We can build it much like
+the 1-bit model, but just tell
+Logisim to make the
+components’ “Data Size”
+32-bits.
+o i.e., for your project.
+● Whew!
+
+Ainvert Bnegate
+1
+A
+
+Operation
+
+1
+
+2 00
+
+0
+
+0
+
+1
+1
+B
+
++
+
+0
+1
+
+Result
+
+2
+
+<
+
+3
+
+Carry out
+Overflow
+
+36
+
+Zooming Out Again
+● Now, how to we wire up the Register File with the ALU??
+o How do we know which registers to use?
+o How do we pull in instructions?
+● Tune in next time for…
+o Control and Datapath
+4 ALU operation
+A
+
+WriteEnable
+WriteData
+Register1
+Register2
+WriteRegister
+
+32
+
+32
+
+5
+5
+
+Register File
+
+32
+
+32
+
+32
+ALU
+
+ReadData1
+
+B
+
+32
+
+Result
+Zero
+Overflow
+
+ReadData2
+
+5
+37
+
+

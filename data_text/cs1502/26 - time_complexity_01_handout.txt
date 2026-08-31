@@ -1,0 +1,697 @@
+Time Complexity 01
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Measuring Complexity
+A solvable problem takes time to solve
+Some problems may take too long to solve
+
+We are going to measure the time to solve a problem by an
+algorithm
+An algorithm will be represented by a TM
+Count the maximum number of steps to process an input of
+length n until it halts
+
+Let M be a deterministic Turing machine that halts on all
+inputs
+The running time or time complexity of M is the function
+f : N → N, where f (n) is the maximum number of steps that
+M uses on any input of length n
+If f (n) is the running time of M , M runs in time f (n)
+M is an f (n) time Turing machine
+
+Customarily we use n to represent the length of the input
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Big-O and Small-o Notations
+
+Given a TM M , its running time f (n) may look like the
+following:
+f (n) = 3n3 + 20n2 + 15n + 12
+To eliminate the complexity of a running time of a Turing
+machine, we estimate it
+This is called asymptotic analysis
+Consider only when the Turing machine runs on large input
+Consider only the highest order term
+Discard the coefficient
+
+We generally use Big-O and Small-o notations
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Big-O Definition
+
+Let f and g be functions f, g : N → R+
+We say that f (n) = O(g(n)) or f (n) is O(g(n)) if positive
+integers c and n0 exist such that for every integer n ≥ n0 ,
+f (n) ≤ cg(n)
+When f (n) = O(g(n)):
+g(n) is an upper bound for f (n), or
+More precisely, g(n) is an asymptotic upper bound for f (n)
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Big-O Examples
+Show that f (n) = 6n3 + 2n2 + 20n + 45 is O(n3 )
+Need to find c and n0 such that f (n) ≤ cn3 for n ≥ n0
+We know the following:
+2n2 ≤ 2n3 for n ≥ 1
+20n ≤ 20n3 for n ≥ 1
+45 ≤ 45n3 for n ≥ 1
+
+Thus, we have
+f (n) = 6n3 + 2n2 + 20n + 45 ≤ 6n3 + 2n3 + 20n3 + 45n3
+= (6 + 2 + 20 + 45)n3
+= 73n3 for n ≥ 1
+In other words,
+f (n) ≤ 73n3
+
+for n ≥ 1
+
+From the above equation, what are c and n0 ?
+c = 73
+n0 = 1
+
+Thus, 6n3 + 2n2 + 20 + 45 is O(n3 )
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Big-O Examples
+Show that f (n) = 2n log2 n + 20n + 10 is O(n log2 n)
+Need to find c and n0 such that f (n) ≤ c(n log2 n) for n ≥ n0
+We know the following:
+20n ≤ 20n log2 n for n ≥ 1
+10 ≤ 10n log2 n for n ≥ 1
+
+Thus, we have
+f (n) = 2n log2 n + 20n + 10 ≤ 2n log2 n + 20n log2 n + 10n log2 n
+= (2 + 20 + 10)n log2 n
+= 32n log2 n for n ≥ 1
+In other words,
+f (n) ≤ 32n log2 n for n ≥ 1
+From the above equation, what are c and n0 ?
+c = 32
+n0 = 1
+
+Thus, 2n log2 n + 20n + 10 is O(n log2 n)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Big-O Examples
+
+Upper bounds of the form nc where c > 0 is called
+polynomial bounds
+O(n2 )
+O(n10 )
+O(n log2 n) (bounded by O(n2 ))
+δ
+
+Upper bounds of the form 2(n ) is called exponential bounds
+O(2n )
+O(3n )
+3n = (2log2 3 )n = 2log2 3×n and log2 3 is a constant
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Small-o Notation
+Definition 7.5
+Let f and g be functions f, g : N → R+ . Say that f (n) = o(g(n))
+if
+f (n)
+= 0.
+n→∞ g(n)
+lim
+
+In other words, f (n) = o(g(n)) means that for any real number
+c > 0, a number n0 exists, where f (n) < cg(n) for all n ≥ n0 .
+Simply strictly less than
+√
+
+n = o(n)
+n = o(n log(log n))
+n log(log n) = o(n log n)
+n log n = o(n2 )
+n2 = o(n3 )
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Analyzing Algorithms
+Consider a Turing machine M1 that decides
+A = {0k 1k | k ≥ 0}
+M1 = “On input string w:
+1
+
+2
+3
+4
+
+Scan across the tape and reject if a 0 is found to the right of a
+1.
+Repeat if both 0s and 1s remain on the tape:
+Scan across the tape, crossing off a single 0 and a single 1.
+If 0s still remain after all the 1s have been crossed off, or if 1s
+still remain after all the 0s have been crossed off, reject.
+Otherwise, if neither 0s nor 1s remain on the tape, accept.”
+
+Find f (n), the maximum number of steps for M1 to process a
+string w of length n
+There are multiple input strings of length n
+The number of steps of an input of length n depends on the
+input pattern
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Analyzing Algorithm
+Consider all possible inputs of length 4:
+Input
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
+Step that M1 halts
+4 (0 iterations)
+4 (1 iterations)
+1
+4 (2 iterations)
+1
+1
+1
+4 (1 iterations)
+1
+1
+1
+1
+1
+1
+1
+4 (0 iterations)
+
+The maximum number of steps on an input of length n occurs
+when w = 0k 1k where k = n2
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Analyzing Algorithms
+1
+
+Scan across the tape and reject if a 0 is found to the right of
+a1
+This step requires TM M1 to move its tape head all the way
+to the right until it encounters a blank symbol and move its
+tape head all the way to the left-most square
+This step requires either n or 2n steps
+In other words, this step is O(n)
+
+2
+3
+
+Repeat if both 0s and 1s remain on the tape:
+Scan across the tape, crossing off a single 0 and a single 1.
+Step 3 requires n steps or O(n)
+Cross the first 0, move the tape head n/2 step to the first 1,
+cross it off and move the tape head n/2 step to position on
+top of the first of the remaining 0s
+
+There will be n/2 0s and n/2 1s
+The step 3 is repeated n/2 times
+
+Steps 2 and 3 together is n/2 × O(n) or O(n2 ).
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Analyzing Algorithms
+
+4
+
+If 0s still remain after all the 1s have been crossed off, or if 1s
+still remain after all the 0s have been crossed off, reject.
+Otherwise, if neither 0s nor 1s remain on the tape, accept.
+Simply scan the whole tape looking for a 0 or a 1
+This step can be done in n step
+This step is O(n)
+
+The running time of M1 is
+O(n) + O(n2 ) + O(n) = O(n2 + 2n) = O(n2 )
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Time Complexity Class
+Definition 7.7
+Let t : N → R+ be a function. Define the time complexity class,
+TIME(t(n)), to be the collection of all languages that are
+decidable by an O(t(n)) time Turing machine.
+From the previous language A = {0k 1k | k ≥ 0} with TM M1
+A ∈ TIME(n2 )
+Can we construct a TM M2 such that f (n) = o(n2 )?
+Asymptotically better than O(n2 )
+
+What if we cross off two 0s and two 1s in step 3?
+Practically faster but not asymptotically better
+Step 3 will be repeated n/4 times but n/4 × O(n) = O(n2 )
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Asymptotically Faster for Deciding A
+
+Consider TM M2 that decides A = {0k 1k | k ≥ 0}:
+M2 = “On input string w:
+1
+
+2
+3
+
+4
+
+5
+
+Scan across the tape and reject if a 0 is found to the right of a
+1.
+Repeat as long as some 0s and some 1s remain on the tape.
+Scan across the tape, checking whether the total number of
+0s and 1s remaining is even or odd. If it is odd, reject.
+Scan again across the tape, crossing off every other 0
+starting with the first 0, and then crossing off every
+other 1 starting with the first 1.
+If no 0s and no 1s remain on the tape, accept. Otherwise,
+reject.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Asymptotically Faster for Deciding A
+Step 1 and 5 are O(n) as in M1
+Step 3, to scan and check whether the number of 0s and 1s
+are even or odd is O(n)
+In step 4, to cross off every other 0s and 1s is O(n)
+Every time this step is executed, the number of 0s and 1s are
+cut in half
+If there are n/2 0s and n/2 1s, step 4 needs to be repeated
+1 + log2 (n/2) times
+For example (n = 16), 8 → 4 → 2 → 1 → 0 (cut in half 4
+times) for input 08 18
+
+Steps 2, 3 and 4 all together is
+(1 + log2 (n/2)) × (O(n) + O(n)) = O(n log n)
+Thus, TM M2 run-time is
+O(n) + O(n log n) + O(n) = O(n log n)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Deciding A in Linear Time
+The language A can be decided in O(n)
+But we need the second tape
+
+Two-tape TM M3 decides A in O(n)
+M3 =“On input string w:
+1
+2
+
+3
+
+4
+
+Scan across tape 1 and reject if a 0 is found to the right of a 1.
+Scan across the 0s on tape 1 until the first 1. At the same
+time, copy the 0s onto tape 2.
+Scan across the 1s on tape 1 until the end of the input. For
+each 1 read on tape 1, cross off a 0 on tape 2. If all 0s are
+crossed off before all the 1s are read, reject.
+If all the 0s have now been crossed off, accept. If any 0s
+remain, reject.”
+
+Run-time of each step is O(n)
+TM M3 runs in O(n)
+
+The run-time complexity of the language A depends on the
+model of computation
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Complexity Relationships Among Models
+Theorem 7.8
+Let t(n) be a function where t(n) ≥ n. Then every t(n) time
+multitape Turing machine has an equivalent O(t2 (n)) time
+single-tape Turing machine.
+Suppose we have a language A that can be decided by a
+multitape Turing machine M in t(n) steps where n is the
+length of an input string
+The above theorem says that there exists a single-tape TM
+that can decide A in O(t2 (n))
+t2 (n) = t(n) × t(n)
+
+To prove the above theorem, we simply need to construct a
+single tape TM that decides A in O(t2 (n))
+But what is the language A?
+Since we do not know what the language, let’s try to simply
+simulate multitape TM using single-tape TM
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Complexity Relationships Among Models
+Recall that a multitape TM is a k-tape TM where its input
+appears on tape 1
+0
+
+1
+
+0
+
+a
+
+a
+
+a
+
+b
+
+a
+
+1
+
+0
+
+M
+
+We can simulate multitape TM using a single-tape TM as
+shown below:
+S
+#
+
+0
+
+1
+
+0
+
+1
+
+0
+
+#
+
+a
+
+a
+
+a
+
+#
+
+b
+
+a
+
+#
+
+If TM M halts in t(n) steps, how many step does TM S
+needs in terms of O?
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Proof of Theorem 7.8
+Let M be a k-tape TM for some k ≥ 2 that runs in t(n) on
+input string of length n
+We are going to construct a single-tape TM S that simulate
+multitape TM M
+The first step is for S to copy contents of all M ’s k tapes into
+its tape
+Note that contents of all M ’s k tapes are fixed except the first
+one (input tape)
+Suppose the length of strings on tape 2 to tape k be a
+constant c and the length of input string is n
+It requires S to perform c + n + (k + 1) steps to copy
+The k + 1 steps are from writing # symbols
+
+Since c and k are constant, this step is O(n)
+
+The next step is to simulate M ’s steps
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Proof of Theorem 7.8
+
+For each step of M , first S needs to know symbols under M ’s
+tape heads
+S needs to scan and remember all k-dot symbols
+Since M performs t(n) steps, the maximum length of an
+active portion of each tape is t(n)
+If the length of the content of a tape is t(n) + 1, it requires
+TM M t(n) step to reach the last symbol
+By the time it gets to the last symbol, TM M halts
+
+S needs k × t(n) steps to scan for all k-dot symbols
+Scanning for all dot symbols is O(t(n))
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Proof of Theorem 7.8
+Next S needs to update all k-dot symbol
+Sometime, M may move a tape head to the right over a blank
+symbol
+But for TM S, it will be on the # symbol
+In this case, S needs to shift a portion of its own tape one cell
+to the right
+If it is M ’s first tape head, it requires to shift the content of
+k − 1 tapes
+Require (k − 1) × t(n) steps for S to shift
+where t(n) is the maximum length of an active portion of
+each tape
+If it is M ’s second tape head, it requires to shift the content
+of k − 2 tapes
+Require (k − 2) × t(n) steps for S to shift
+If all need to be shifted, it requires k(k−1)
+× t(n) steps
+2
+
+This step is O(t(n)) since k(k−1)
+is a constant
+2
+
+To simulate one step of M , it is
+scan for dots + update dots = O(t(n)) + O(t(n)) = O(t(n))
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Proof of Theorem 7.8
+Note that M performs t(n) steps
+Thus, for S to simulate M for t(n) steps, it needs to perform
+at most
+t(n) × O(t(n)) = O(t2 (n))
+Therefore, the total run-time is
+O(n) + O(t2 (n)) = O(t2 (n))
+where
+O(n) steps to copying M ’s tape contents, and
+O(t2 (n)) steps to simulate M ’s t(n) steps
+
+If a multitape TM M decides a language A in t(n) steps, we
+can simulate TM M using a single tape TM S which can
+decide A in O(t2 (n))
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Nondeterministic Turing Machine
+Definition 7.9
+Let N be a nondeterministic Turing machine that is a decider. The
+running time of N is the function f : N → N, where f (n) is the
+maximum number of steps that N uses on any branch of its
+computation on any input of length n.
+Deterministic
+
+Nondeterministic
+
+reject
+
+f (n)
+
+f (n)
+
+accept
+
+accept/reject
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+reject
+
+Time Complexity 01
+
+Nondeterministic Turing Machine
+Theorem 7.11
+Let t(n) be a function, where t(n) ≥ n. Then every t(n) time
+nondeterministic single-tape Turing machine has an equivalent
+2O(t(n)) time deterministic single-tape Turing machine.
+Recall the nondeterministic Turing machine
+The computation is a tree
+The machine accepts as soon as one of its branch enter the
+accept state
+The machine rejects if all of its branch are in the reject state
+
+Since we have to consider the maximum number of steps on
+any branch, we have to consider the longest number of steps
+for the machine to accept or reject an input string of length n
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Computation Tree
+The following is an example of a computation tree of a
+nondeterministic Turing machine where at each state, it can
+split to at most two machines.
+
+This can be applied to NTM that splits to at most k copies
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Computation Tree
+We can not simulate one branch at a time
+The computation of each branch may not end (enter infinite
+loop)
+No chance to simulate the next branch
+But NTM may accept the input string because another branch
+enters the accept state
+
+We need to simulate like breadth first search
+
+1
+
+2
+
+3
+
+4
+
+7
+
+15
+
+8
+
+16
+
+17
+
+5
+
+9
+
+18
+
+19
+
+10
+
+20
+
+21
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+6
+
+11
+
+22
+
+23
+
+12
+
+24
+
+25
+
+Time Complexity 01
+
+13
+
+26
+
+27
+
+14
+
+28
+
+29
+
+30
+
+Computation Tree
+
+Recall that this NTM runs in t(n) steps
+The height of its computational tree will be t(n)
+The number of steps to reach is node is at most t(n)
+
+The number of nodes in a full binary tree of height h is 2h − 1
+Since the height of its computational tree is t(n), the number
+of nodes is 2t(n) − 1
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+Computational Tree
+
+Thus, the total run-time is
+t(n) × 2t(n) = 2O(t(n))
+This is the run-time of multitape Turing machine
+For a single tape TM, the run-time is the square of multitape
+TM
+Thus, the run-time is
+(2O(t(n)) )2 = 22O(t(n)) = 2O(2t(n)) = 2O(t(n))
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Time Complexity 01
+
+

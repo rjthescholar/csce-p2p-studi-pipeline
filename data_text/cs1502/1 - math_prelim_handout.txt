@@ -1,0 +1,553 @@
+Mathematics Preliminaries
+Thumrongsak Kosiyatrakul
+tkosiyat@cs.pitt.edu
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Mathematics Preliminaries
+
+You should review the following topics from the Discrete
+Structures for CS (Discrete Mathematics):
+Functions
+Predicates
+
+Sets
+Notations
+Operations
+
+Sequences
+Proofs
+Construction
+Contradiction
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Sets
+
+Set is a group of objects represented as a unit.
+{a, b, c}
+{1, 2, 3, . . . }
+{} or ∅ (the empty set)
+
+Characteristic of Sets
+Unordered
+{a, b, c} = {b, c, a}
+
+No duplicate
+{1, 2, 3, 2} = {1, 2, 3}
+
+Can be finite, infinite, or empty (finite)
+
+Use ∈ or 6∈ to indicate membership status
+1 ∈ {1, 2, 3}
+c 6∈ {a, b}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Functions
+
+Function: f : D → R
+D is a set (domain)
+R is a set (range)
+f associates each element d ∈ D with some element r ∈ R
+Denoted by f (d) = r.
+
+Example: f (x) = (x + 1) mod 3
+D : {1, 2, 3, 4}
+R : {0, 1, 2}
+Associations are as follows:
+f (1) = 2
+f (2) = 0
+f (3) = 1
+f (4) = 2
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Predicates
+
+A predicate is a function where its range is {true, false}
+Example: f : N → {true, false}
+f (x) = x is an even number
+f (3) = false
+f (14) = true
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Predicates and Sets
+A set can be defined using a predicate P
+B = {x | P(x)}
+B is a set that contains all elements x such that P(x) is true
+P(a) = true if and only if a ∈ B
+Example:
+B = {x | x is an even number}
+B = {2, 4, 6, 8, . . . }
+
+Example:
+C = {(x, y) | x, y ∈ N and x + 1 = y}
+C = {(1, 2), (2, 3), (3, 4), . . . }
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Predicates and Sets
+
+Given a set B = {x | P(x)}, recall that
+P(a) = true if and only if a ∈ B
+If y ∈ B, we can conclude that P(y) is true
+Similarly, if P(y) is true, we can conclude that y ∈ B
+If z 6∈ B, we can conclude that P(z) is false
+Similarly, if P(z) is false, we can conclude that z 6∈ B
+
+We will encounter these a lot in our proofs
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Set Operations
+Make sure to review the following set operations:
+Union: ∪
+A ∪ B = {x | x ∈ A or x ∈ B}
+
+Intersection: ∩
+A ∩ B = {x | x ∈ A and x ∈ B}
+
+Complement:
+A = {x | x 6∈ A}
+
+Set Different: − or \
+A − B = {x | x ∈ A and x 6∈ B}
+
+Cartesian Product: ×
+A × B = {(x, y) | x ∈ A and y ∈ B}
+Example:
+{1, 2} × {a, b} = {(1, a), (1, b), (2, a), (2, b)}
+
+If A is a set |A| denotes the number of elements in the set A
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Functions
+With the notion of the Cartesian product, we can define
+functions that take more than one parameters
+Example: f (x, y) = max(x, y)
+f : A × A → A where A = {1, 2, 3}
+The domain is A × A
+The range is A
+Associations:
+
+f (1, 1) = 1
+f (1, 2) = 2
+f (1, 3) = 3
+f (2, 1) = 2
+f (2, 2) = 2
+f (2, 3) = 3
+f (3, 1) = 3
+f (3, 2) = 3
+f (3, 3) = 3
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Sometimes we use
+table to represent
+associations
+f
+1
+2
+3
+
+1
+1
+2
+3
+
+Mathematics Preliminaries
+
+2
+2
+2
+3
+
+3
+3
+3
+3
+
+Big Union
+Suppose we have sets A0 , A1 , . . . An , we can represent the
+following set
+A0 ∪ A1 ∪ · · · ∪ An
+using the Big Union notation as follows:
+n
+[
+
+Ai
+
+i=1
+
+Note that the condition is for every i where 0 ≤ i ≤ n
+Sometimes the condition can be for every element in a set
+Example
+[
+
+δ(r, a) = δ(1, a) ∪ δ(3, a)
+
+r∈{1,3}
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Sequences
+
+A Sequence is a list of objects in some order where duplicate
+is allowed:
+(a, b, c) 6= (b, c, a)
+(a, b, c, b) 6= (a, b, c)
+Finite Sequences are generally called tuples
+A sequence of k elements is a k-tuple
+A 2-tuple usually called an ordered pair
+
+Note: (a, b) = (x, y) if an only if a = x and b = y.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Alphabets and Strings
+An alphabet is a finite set of symbols called Σ (sigma)
+ΣA = {a, b, c, . . . , z}
+ΣB = {0, 1}
+
+A string over Σ is a finite sequence of symbols from Σ
+The length of a string s is the number of symbols it contains,
+denoted by |s|
+Examples:
+Let s1 = (h, e, l, l, o)
+s1 is a string over ΣA
+|s1 | = 5
+For simplicity, s1 = hello
+
+Let s2 = (1, 0, 1, 1, 0, 1)
+s2 is a string over ΣB
+|s2 | is 6
+For simplicity, s2 = 101101
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Alphabets and Strings
+
+A string can be empty
+ε is used to represent the empty string.
+
+Concatenation:
+Let s and t be strings over Σ, st is the string obtained by
+appending string t to the end of string s.
+Example
+Suppose s = 101 and t = 10, st = 10110
+
+A string s is a substring of a string t if there exists strings u
+and v such that t = usv
+Note that u and v can be ε
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Languages
+A language is a set of strings over Σ
+Can be finite, infinite, or empty (∅)
+
+Example:
+Let Σ = {a, b}
+An example of a language B can be
+B = {a, b, aa, ab, ba, bb, aaa, aab}
+
+We generally use shortlex order to list a set of strings
+(shorter strings precede longer string)
+The lexicographic ordering which is dictionary ordering may
+give you a false information
+Consider listing the set of all strings over {a, b}:
+Sortlex Order: {ε, a, b, aa, ab, ba, bb, aaa, aab, . . . }
+Lexicographc Order: {ε, a, aa, aaa, aaaa, aaaaa, . . . }
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Boolean Logic
+A boolean value can be either True (1) or False (0)
+Boolean operators
+p q ¬p p ∧ q
+0 0 1
+0
+0 1 1
+0
+1 0 0
+0
+1 1 0
+1
+
+p∨q
+0
+1
+1
+1
+
+p→q
+1
+1
+0
+1
+
+p↔q
+1
+0
+0
+1
+
+DeMorgan: ¬(p ∧ q) ⇔ ¬p ∨ ¬q
+DeMorgan: ¬(p ∨ q) ⇔ ¬p ∧ ¬q
+Implication: p → q ⇔ ¬p ∨ q
+Equality: p ↔ q ⇔ (p → q) ∧ (q → p)
+Exclusive or: p ⊕ q ⇔ ¬(p ↔ q)
+Distributive: p ∧ (q ∨ r) ⇔ (p ∧ q) ∨ (p ∧ r)
+Distributive: (p ∨ q) ∧ r ⇔ (p ∧ r) ∨ (q ∧ r)
+Distributive: p ∨ (q ∧ r) ⇔ (p ∨ q) ∧ (p ∨ r)
+Distributive: (p ∧ q) ∨ r ⇔ (p ∨ r) ∧ (q ∨ r)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+p⊕q
+0
+1
+1
+0
+
+Proofs
+
+A typical step in a proof is to derive a statement from initial
+assumptions and hypotheses, or from statements that have
+been derived previously, or from other generally accepted
+facts, using principles of logical reasoning
+We will focus on these two types of Proofs
+Prove by Construction
+Prove by Contradiction
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Construction
+Prove
+For every two integers a and b, if a and b are odd, then a × b is
+odd.
+The above statement is in the form of P → Q where
+P = a and b are odd
+Q = a × b is odd
+
+Recall the truth table of P → Q
+P Q P →Q
+T T
+T
+T F
+F
+F T
+T
+F F
+T
+The only chance that P → Q will be false is when P is true
+and Q is false
+So, we need to show that if P is true, Q is also true (cannot
+be false)
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Construction
+Prove
+For every two integers a and b, if a and b are odd, then a × b is
+odd.
+Assume that
+a and b are integers that are ood.
+
+Need to Derive:
+a × b is odd.
+
+Fact:
+If x is an integer that is odd, there exists an integer k such
+that x = 2k + 1.
+
+Since a and b are odd integers, we can derive:
+a = 2i + 1 and b = 2j + 1 for some integers i and j
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Construction
+
+Let a = 2i + 1 and b = 2j + 1, we have
+a × b = (2i + 1) × (2j + 1)
+= 4ij + 2i + 2j + 1
+= 2(2ij + i + j) + 1
+Thus, a × b is an odd integer since there exists an integer
+k = 2ij + i + j such that a × b = 2k + 1.
+Note: By showing a couple of test cases is not a proof
+In the above proof, we assume that a and b can be any odd
+integers
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Contradiction
+
+Consider the statement ¬P → False
+Suppose we can show that ¬P → False is true
+Recall that T → F = F and F → F = T
+Since ¬P → F is true, ¬P must be false
+In other words, P is true.
+
+Thus, to show that the statement P is True, we need to show
+that the statement ¬P → False is true.
+From previous example, we need to assume that ¬P is true (or
+P is false) and try to derive a false statement
+A false statement is a statement that contradict with an
+initial assumption, a hypotheses, a statement that have been
+derived previously, or another generally accepted fact.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Contradiction
+Prove
+√
+2 is an irrational number.
+Fact: An irrational number is any real number that cannot be
+expressed as a ratio of integers.
+√
+In other words, if 2 is an irrational
+number, there are no two
+m √
+= 2.
+integers m and n such that
+√ n
+
+Let P be the statement “ 2 is an irrational number”
+
+√
+Thus, ¬P is the statement “ 2 is a rational number”
+In other words, there exists two integers m and n such that
+m √
+= 2.
+n
+
+m
+m
+p
+we can obtain
+= for some positive
+n
+n
+q
+integers p and q with no common factors greater than 1
+
+For any ration
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Contradiction
+p √
+= 2 for some positive integers p and q with no
+q
+common factor greater than 1
+
+Let
+
+Let’s try to derive some statements
+p √
+= 2
+q
+ 2
+√
+p
+= ( 2)2
+q
+p2
+=2
+q2
+p2 = 2q 2
+Since p2 = 2q 2 , p2 is an even number.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Contradiction
+Since p2 = 2q 2 , p2 is an even number.
+Since p2 is an even number, p is an even number
+Since p is an even number, p = 2r for some integer r
+Keep deriving:
+p2 = 2q 2
+(2r)2 = 2q 2
+4r2 = 2q 2
+2r2 = q 2
+Since q 2 = 2r2 , q 2 is an even number
+Since q 2 is an even number, q is an even number
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proof by Contradiction
+
+p √
+= 2 for some positive integers p
+q
+and q with no common factor greater than 1
+√
+But we show that if 2 is a rational number both p and q are
+even
+Earlier we stated that
+
+Therefore p and q have a common factor greater than 1 which
+is False according to our assumption
+Therefore, P is true
+√
+In other words, 2 is an irrational number.
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+Proofs in CS1502
+
+There will be a lot of proofs in this class (Formal Methods)
+Hardly any mathematical facts or theorems will be used
+The type of proof to use is predictable
+To do this, use prove by construction
+To do that, use prove by contradiction
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Mathematics Preliminaries
+
+

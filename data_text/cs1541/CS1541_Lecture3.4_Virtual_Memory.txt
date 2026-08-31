@@ -1,0 +1,697 @@
+Virtual Memory
+and Caching
+CS 1541
+Wonsun Ahn
+
+Virtual Memory and Caching
+● So what does virtual memory have to do with caching?
+● A lot actually.
+● But first let’s do a quick review of virtual memory
+o To warm up your cache with CS 449 info
+
+2
+
+Virtual Memory Review
+
+3
+
+Virtual Memory: Type of Virtualization
+● Virtualization: hiding the complexities of hardware to software
+● Virtual Memory: hides the fact that physical memory (DRAM) is
+limited and shared by multiple processes
+Physical Memory
+Process 1
+0xFFFF
+
+0xFFFF
+
+Memory
+
+0x8000
+
+Code
+
+...
+
+Process 2
+0xFFFF
+
+Process 1’s
+and
+Process 2’s
+memory?
+
+Memory
+
+0x8000
+
+Code
+
+Clearly this is impossible.
+But programs see this view of memory.
+
+0x8000
+...
+
+4
+
+Virtual Memory: Behind the Scenes
+● Pages of memory are mapped to either physical memory or disk
+o Look familiar? Physical memory acts as a cache for disk storage
+
+Valid
+1
+0
+1
+1
+0
+1
+1
+0
+1
+1
+0
+1
+
+Page table
+
+Physical memory
+
+Virtual memory
+Disk storage
+(swap space)
+
+5
+
+How virtual to physical address translation happens
+1. CPU extracts virtual page number from virtual address
+2. CPU locates page table pointed to by page table register
+3. Page table is indexed using virtual page number
+Page table register
+Virtual address
+
+31 30 29 28 27
+
+15 14 13 12 11 10 9 8
+
+Virtual page number
+Virtual address
+31 30 29 28 27
+
+15 14 13 12 11 10 9 8
+
+Virtual page number
+
+page offset
+
+20
+
+3210
+
+Valid
+
+page offset
+
+3 2 1 0
+
+12
+
+Physical page number
+
+Page table
+29 28 27
+
+15 14 13 12 11 10 9 8
+
+Physical page number
+Physical address
+
+3210
+
+page table
+
+page offset
+If 0 then page is
+not in memory
+29 28 27
+
+18
+
+15 14 13 12 11 10 9 8
+
+Physical page number
+
+3 2 1 0
+
+page offset
+
+Physical address
+
+6
+
+DRAM as Cache
+
+7
+
+Physical Memory as a Cache
+● Relationship between DRAM « Disk is same as Cache « DRAM
+o DRAM is fast but small and expensive
+o Disk is slow but big and cheap
+● If you view DRAM as cache, some design decisions become obvious
+o Size of block: 4 KB pages. Why?
+§ For spatial locality. Capacity is less of a problem for DRAM.
+o Associativity: Fully-associative (can map page anywhere). Why?
+§ A miss (page fault) is expensive. You need to read from disk!
+§ But now page hits become expensive due to lookup cost
+o Block replacement scheme: LRU, or some approximation. Why?
+§ Did I say a page fault is expensive?
+o Write policy: Write-back (a.k.a. page swapping). Why?
+§ Bandwidth for write-through to disk is too much for I/O bus
+8
+
+Physical Memory as a Cache
+● If you treated each page as a cache block, what would be the tag?
+Page offset (12 bits)
+o 32-bit address: Tag (20 bits): page number
+o Fully-associative, so row bits and 4 KB pages, so 12 bits for offset
+● How would the page table for searching physical memory look?
+
+CPU
+(PID 1)
+CPU
+(PID 2)
+.
+.
+.
+
+Access
+
+PID
+
+20-bit tag
+(page number)
+
+1
+
+10110…111
+
+2
+
+10010…001
+
+1
+
+01010…100
+
+…
+
+…
+
+[Page Table]
+
+Physical
+Memory
+[Pages]
+
+Miss
+Disk storage
+(swap space)
+
+[Disk]
+9
+
+Inverted Page Table: tags for physical pages
+● This type of page table is called an inverted page table.
+Associative search
+
+Virtual Page
+Number
+
+PID
+
+20-bit tag
+(page number)
+
+1
+
+Virtual Page 42
+
+2
+
+Virtual Page 100
+
+1
+
+Virtual Page 123
+
+…
+
+…
+
+[Page Table]
+
+Physical
+Memory
+[Pages]
+
+Miss
+Disk storage
+(swap space)
+
+[Disk]
+
+● Called inverted because table contains virtual page numbers
+(Unlike regular page tables which contains physical page numbers)
+● Pro: Page table only as big as physical mem (low space complexity)
+● Con: Associative search of page table (high time complexity)
+→ Often hashing used to direct map pages. Causes conflict misses.
+10
+
+How Often do Lookups Happen?
+● Programs use virtual addresses to refer to code and data
+o E.g. If program has jump to method address, it’s a virtual address
+● DRAM and Caches use physical addresses
+● At every lw or sw MEM stage a lookup needs to happen
+● At FETCH stage of every instruction a lookup needs to happen!
+Process
+
+Virtual
+Memory
+Code
+
+Virtual
+Addresses
+
+?
+CPU ? Cache
+?
+
+Physical
+Addresses
+
+Physical
+Memory
+
+11
+
+Address Lookup Using (Regular) Page Table
+● Lookup is done by indexing page table using virtual page number.
+● Every memory access requires one extra access to read page table.
+Now table must cover entire virtual memory!
+Virtual
+Address
+
+CPU
+
+Valid
+
+Physical Page
+Number (20 bits)
+
+1
+
+Physical Page 42
+
+0
+
+Physical Page 10
+
+0
+
+Physical Page 7
+
+1
+
+Physical Page 1337
+
+…
+
+…
+
+Physical
+Address
+
+DRAM
+
+12
+
+How big is the Page Table?
+● 32-bit addresses with 4KiB (212 B) pages means 220 (1M) PTEs.
+● 64-bit addresses with 4KiB pages means 252 (4 quadrillion) PTEs.
+● We can use hierarchical page tables as a sparse data structure.
+Address
+
+PTR
+
+10 bits (“directory”)
+
+10 bits (“table”)
+
+12 bits (“offset”)
+
+00 0010 11
+
+10 0011 00
+
+0010 0001 0000
+
+index...
+
+index...
+
+V Table Addr
+
+V D R Page Addr
+
+P
+
+…
+
+...
+
+…… …
+
+...
+
+...
+
+1
+
+0004C000
+
+10 1
+
+03BFA000
+
+RX
+
+…
+
+...
+
+…… …
+
+...
+
+...
+
+PA!
+
+13
+
+Page Table Lookup Cost
+● Let’s say we have a lw $t0, 16($s0)
+
+PTR
+
+CPU
+
+V Table Addr
+
+V D R Page Addr
+
+P
+
+…
+
+...
+
+…… …
+
+...
+
+...
+
+1
+
+0004C000
+
+10 1
+
+03BFA000
+
+RX
+
+…
+
+...
+
+…… …
+
+...
+
+...
+
+hit!
+
+PA!
+
+Cache
+
+● Must perform two memory accesses to hierarchical page table
+o May miss in cache and even cause page faults themselves!
+14
+
+The real picture looks more like this
+● Alpha 21264 CPU with 3-level page table:
+
+In the end, the PTE (Page Table Entry)
+is all you need for a translation.
+
+Ptr to level 2
+Ptr to level 3
+
+How can I make access to it faster?
+Where have I heard that before...
+making accesses faster… I wonder…
+
+15
+
+The TLB:
+A Cache for Page Tables
+
+TLB (Translation Lookaside Buffer
+● TLB: A cache that contains frequently accessed page table entries
+● TLB just like other caches
+resides within the CPU
+● On a TLB hit:
+o No need to access page
+table in memory
+● On a TBL miss:
+o Load PTE from page table
+o That means “walking” the
+hierarchical page table
+
+17
+
+Page Table Walking
+● On a TLB miss, the CPU must “walk” the page table:
+● Two options:
+1. Software option
+o Miss raises OS exception
+o OS exception handler
+fills the TLB with PTE
+
+Ptr to level 2
+Ptr to level 3
+
+2. Hardware option
+o CPU has special circuitry
+to walk page table
+(the page table walker)
+→ Faster than SW option
+18
+
+Memory Access Flowchart
+Virtual page
+number
+
+Page offset
+
+TLB
+
+• Page table walk to get the PT
+entry into the TLB (SW or HW)
+• If PT walk indicates page is
+not in memory, then service
+page fault (OS handler)
+
+Physical
+address
+
+Cache
+To memory
+
+Note that there cannot be a
+page fault in case of a TLB hit
+– when page is swapped to
+disk, the TLB is flushed
+
+May need to write
+back a dirty block
+
+or,
+depending
+on being
+write back
+or write
+through
+
+19
+
+Close-up on the TLB
+● The TLB holds PTEs – mappings from VAs to PAs, along with other
+info used for protection and paging.
+
+VA
+
+VA Page (Tag)
+
+V
+
+D
+
+Pres Ref Prot PA Page
+
+00008
+
+1
+
+0
+
+0
+
+1
+
+RX
+
+03BFA
+
+FFFF3
+
+1
+
+1
+
+1
+
+1
+
+RW
+
+19400
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+…
+
+PA
+
+0 valid bit triggers TLB Miss.
+0 present bit triggers Page Fault.
+D-Read, D-Write, or I-Fetch? Exception if invalid!
+20
+
+TLBs in Real Processors
+
+21
+
+Caching Makes Everything Faster
+CPU
+Virtual address from lw/sw instructions or
+from program counter (PC)
+
+VA Page#
+
+page
+page
+
+Page offset
+
+page
+Block of a page
+
+TLB
+
+Physical
+address
+
+Physical
+Memory
+
+Cache
+
+PTE
+
+TLB miss
+PT walker
+
+Page fault
+
+PTE into TLB
+
+Virtual
+Address
+space
+
+HDD/SSD
+
+Page
+table
+
+Oh no!
+
+OS Page Fault Handler
+
+22
+
+Overall Memory System Design
+● Fast memory access is possible through SW / HW collaboration:
+
+Address
+Translation
+(HW / SW)
+
+VA
+
+TLB
+
+Caching
+(HW)
+
+PA
+
+Datapath
+
+PA
+Caches
+
+Words
+/bytes
+
+Paging
+(SW)
+
+DRAM
+
+Blocks
+
+PT
+
+Pages
+
+HDD/SSD
+
+23
+
+

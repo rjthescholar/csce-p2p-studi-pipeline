@@ -1,0 +1,153 @@
+Introduction to Operating Systems
+CS 1550
+Spring 2022
+
+Sherif Khattab
+ksm73@pitt.edu
+(Some slides are from Silberschatz, Galvin and Gagne ©2013)
+
+Course Goal and Objectives
+Continue to demystify a good portion of the magic
+about how computers work so that you can write more
+efficient programs
+The specific objectives are:
+1. Modify and compile the Linux kernel to add system
+calls
+2. Write multi-process/multi-thread programs free
+from race conditions and deadlocks
+3. Simulate page-replacement algorithms for virtual
+memory management
+4. Implement a user-land file system
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+2
+
+Contact Info
+• Course website: http://www.cs.pitt.edu/~skhattab/cs1550/
+• Instructor: Sherif Khattab ksm73@pitt.edu
+
+OH: https://khattab.youcanbook.me
+TuTh: 16:30-19:30 (remote until Jan 26 then in-person/remote)
+F: 16:00-18:00 (remote only for the entire term)
+• 6307 Sennott Square, Virtual Office: https://pitt.zoom.us/my/khattab
+
+• Teaching Team:
+TBD
+
+• Recitations start this week!
+• Communication
+1.
+
+End of week newsletter
+
+2.
+
+Piazza (Please expect a response within 72 hours)
+1.
+
+Email not recommended!
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+3
+
+Textbook
+
+Operating System Concepts (9th Edition)
+
+Silberschatz, Galvin, and Gagne
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+4
+
+Grading
+• 40% on 4 projects
+• System programming using C
+• Posted on Canvas and submitted on Gradescope (autograded)
+
+• 20% on two exams: 12% on higher and 8% on lower
+
+• 18% on weekly homework assignments
+• 14% recitation: 5 labs using MIT’s Xv6 operating
+system and 4 quizzes on the projects
+• 8% in-class Tophat questions and discussions
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+5
+
+Canvas Walkthrough
+• Lectures posted on Tophat by end of each lecture
+day
+• Lecture and recitation recordings under Panopto
+Video
+• Pre- and Post-course test
+
+• Piazza for discussion
+• Gradescope and autograding policies
+• Homework attempts
+• Academic Integrity
+• NameCoach
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+6
+
+Expectations
+• Your continuous feedback is important!
+• Anonymous Qualtrics survey
+• Midterm and Final OMET
+
+• Your engagement is valued and encouraged.
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+7
+
+Lecture structure (mostly)
+Time
+
+Description
+
+~5 min before and
+after class
+~25 min
+
+Informal chat
+
+~40 min
+
+Lecturing
+
+~5 min
+
+Tophat questions and/or activities
+
+~5 minutes
+
+QA and muddiest points/reflections
+
+Announcements, review of
+reflections, and QA on
+projects/labs/homework problems
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+8
+
+Why is this class (notoriously) hard?
+• Lots of concepts
+• Attend lectures and recitations (if you absolutely cannot
+attend live, watch the video recordings)
+• Study often!
+• Put effort into the weekly homework assignments
+
+• Projects are relatively hard
+• Refresh your C programming and GDB debugging skills
+(CS 0449!)
+• Start early and show up to office hours!
+
+CS/COE 1550 – Operating Systems – Sherif Khattab
+
+9
+
+

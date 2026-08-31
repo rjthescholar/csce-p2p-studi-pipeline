@@ -1,0 +1,290 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #11: Integers and Modular Arithmetic
+
+Based on materials developed by Dr. Adam Lee
+
+Today’s Topics
+Integers and division
+l The division algorithm
+l Modular arithmetic
+l Applications of modular arithmetic
+
+What is number theory?
+Number theory is the branch of mathematics that
+explores the integers and their properties.
+Number theory has many applications within computer
+science, including:
+l Organizing data
+l Encrypting sensitive data
+l Developing error correcting codes
+l Generating “random” numbers
+l …
+
+We will only scratch the surface…
+
+The notion of divisibility is one of the most basic
+properties of the integers
+Definition: If a and b are integers and a ≠ 0, we say
+that a divides b if there is an integer c such that b = ac.
+We write a | b to say that a divides b, and a /| b to say
+that a does not divide b.
+
+Mathematically: a | b ⇔ ∃ c∈Z (b = ac)
+Note: If a | b, then
+la is called a factor of b
+lb is called a multiple of a
+
+We’ve been using the notion of divisibility all along!
+lE = {x | x = 2k ∧ k ∈ Z}
+
+Division examples
+Examples:
+l Does 4 | 16?
+l Does 3 | 11?
+l Does 7 | 42?
+
+Yes, 16 = 4 × 4
+No, because 11/3 is not an integer
+Yes, 42 = 7 × 6
+
+Question: Let n and d be two positive integers. How
+many positive integers not exceeding n are divisible by
+d?
+Answer: We want to count the number of integers of the
+form dk that are less than n. That is, we want to know
+the number of integers k with 0 ≤ dk ≤ n, or 0 ≤ k ≤
+n/d. Therefore, there are ⌊n/d⌋ positive integers not
+exceeding n that are divisible by d.
+
+Important properties of divisibility
+Property 1: If a | b and a | c, then a | (b + c)
+
+Property 2: If a | b, then a | bc for all integers c.
+
+Property 3: If a | b and b | c, then a | c.
+
+Division algorithm
+Theorem: Let a be an integer and let d be a positive
+integer. There are unique integers q and r, with
+0 ≤ r < d, such that a = dq + r.
+
+For historical reasons, the above theorem is called the
+division algorithm, even though it isn’t an algorithm!
+
+Terminology: Given a = dq + r
+l a is called the dividend
+l d is called the divisor
+l q is called the quotient
+l r is called the remainder
+l q = a div d
+l r = a mod d
+
+div and mod are operators
+
+Examples
+Question: What are the quotient and remainder when 123 is
+divided by 23?
+Answer: We have that 123 = 23 × 5 + 8. So the quotient is 123
+div 23 = 5, and the remainder is 123 mod 23 = 8.
+Question: What are the quotient and remainder when -11 is
+divided by 3?
+Answer: Since -11 = 3 × -4 + 1, we have that the quotient is -4
+and the remainder is 1.
+Recall that since the remainder must be non-negative, 3 × -3 − 2
+is not a valid use of the division theorem!
+
+Many programming languages use the div and
+mod operations
+For example, in Java, C, and C++
+l / corresponds to div when used on integer arguments
+l % corresponds to mod
+
+Prints out 1
+
+public static void main(String[] args)
+{
+int x = 2;
+Prints out 2, not 2.5!
+int y = 5;
+float z = 2.0;
+System.out.println(y/x);
+System.out.println(y%x);
+System.out.println(y/z);
+
+Prints out 2.5
+
+}
+This can be a source of many errors, so be careful in
+your future classes!
+
+In-class exercises
+Problem 1 & 2: On Top Hat
+Problem 3: Show that if 𝑎 is an integer and 𝑑 is an
+integer greater than 1, then the quotient and remainder
+!
+!
+obtained dividing 𝑎 by 𝑑 are " and 𝑎 − 𝑑 " ,
+respectively.
+
+Sometimes, we care only about the remainder of an
+integer after it is divided by some other integer
+Example: What time will it be 22 hours from now?
+
+Answer: If it is 6am now, it will be (6 + 22) mod 24 =
+28 mod 24 = 4 am in 22 hours.
+
+Since remainders can be so important, they have
+their own special notation!
+Definition: If a and b are integers and m is a positive
+integer, we say that a is congruent to b modulo m if
+m | (a – b). We write this as a ≡ b (mod m).
+Note: a ≡ b (mod m) iff a mod m = b mod m.
+
+Examples:
+l Is 17 congruent to 5 modulo 6?
+l Is 24 congruent to 14 modulo 6?
+
+Yes, since 6 | (17 – 5)
+No, since 6 |
+/ (24 – 14)
+
+Properties of congruencies
+Theorem: Let m be a positive integer. The integers a
+and b are congruent modulo m (a ≡ b (mod m)) iff
+there is an integer k such that a = b + km.
+
+Theorem: Let m be a positive integer. If a ≡ b (mod
+m) and c ≡ d (mod m), then
+l (a + c) ≡ (b + d) (mod m)
+l ac ≡ bd (mod m)
+
+Congruencies have many applications within
+computer science
+Today we’ll look at three:
+1. Hash functions
+2. The generation of pseudorandom numbers
+3. Cryptography
+
+Hash functions allow us to quickly and
+efficiently locate data
+Problem: Given a large collection of records, how can we find the
+one we want quickly?
+Solution: Apply a hash function that determines the storage
+location of the record based on the record’s ID. A common hash
+function is h(k) = k mod n, where n is the number of available
+storage locations.
+
+Memory:
+
+0
+
+42 mod 8 = 2
+ID: 42
+…
+…
+
+1
+
+2
+
+3
+
+4
+
+276 mod 8 = 4
+ID: 276
+…
+…
+
+5
+
+6
+
+7
+
+23 mod 8 = 7
+ID: 23
+…
+…
+
+Many areas of computer science rely on the ability to
+generate pseudorandom numbers
+
+Coding algorithms
+Hardware, software, and
+network simulation
+Security
+
+Network protocols
+
+Congruencies can be used to generate
+pseudorandom sequences
+Step 1: Choose
+l A modulus m
+l A multiplier a
+l An increment c
+l A seed x0
+
+Step 2: Apply the following
+l xn+1 = (axn + c) mod m
+
+Example: m = 9, a = 7, c = 4, x0 = 3
+l x1 = 7x0 + 4 mod 9 = 7×3 + 4 mod 9 = 25 mod 9 = 7
+l x2 = 7x1 + 4 mod 9 = 7×7 + 4 mod 9 = 53 mod 9 = 8
+l x3 = 7x2 + 4 mod 9 = 7×8 + 4 mod 9 = 60 mod 9 = 6
+l x4 = 7x3 + 4 mod 9 = 7×6 + 4 mod 9 = 46 mod 9 = 1
+l x5 = 7x4 + 4 mod 9 = 7×1 + 4 mod 9 = 11 mod 9 = 2
+l…
+
+The field of cryptography makes heavy use of
+number theory and congruencies
+Cryptography is the study of secret messages
+Uses of cryptography:
+l Protecting medical records
+l Storing and transmitting military secrets
+l Secure web browsing
+l…
+
+Congruencies are used in cryptosystems from antiquity, as
+well as in modern-day algorithms
+Since modern algorithms require quite a bit of background to
+discuss, we’ll examine an ancient cryptosystem
+
+The Caesar cipher is based on congruencies
+To encode a message using the Caesar cipher:
+l Choose a shift index s
+l Convert each letter A-Z into a number 0-25
+l Compute f(p) = p + s mod 26
+
+Example: Let s = 9. Encode “ATTACK”.
+l ATTACK = 0 19 19 0 2 10
+l f(0) = 9, f(19) = 2, f(2) = 11, f(10) = 19
+l Encrypted message: 9 2 2 9 11 19 = JCCJLT
+
+Decryption involves using the inverse function
+That is, f-1(p) = p - s mod 26
+
+Example: Assume that s = 3. Decrypt the message
+“UHWUHDW”.
+l UHWUHDW = 20 7 22 20 7 3 22
+l f-1(20) = 17, f-1(7) = 4, f-1(22) = 19, f-1(3) = 0
+l Decrypted result: 17 4 19 17 4 0 19 = RETREAT
+
+In-class exercises
+Problem 4 & 5: On Top Hat
+
+Final thoughts
+n Number theory is the study of integers and their
+properties
+n Divisibility, modular arithmetic, and congruency are
+used throughout computer science
+n Next time:
+l Prime numbers, GCDs, integer representation (Section 4.2
+and 4.3)
+
+

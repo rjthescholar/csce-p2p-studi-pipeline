@@ -1,0 +1,351 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #1: Course Introduction
+
+Based on materials developed by Dr. Adam Lee
+
+Administrivia
+CS 441: Discrete Structures for Computer Science
+Instructor:
+
+TA:
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+OH: TBA, by appt.
+
+TBA
+
+http://cs.pitt.edu/~bill/441
+
+Course meeting times
+n Lecture
+l B: Flex@Pitt, M/W 5:00–6:15
+l C: Flex@Pitt, T/H 4:30–5:45
+
+n Recitations
+l Wednesday or Friday (see website)
+
+n It is important to attend both lecture and your
+assigned recitation section!
+l (No recitations this week)
+
+Grading
+n Overall breakdown:
+l 30% Midterm exam
+l 30% Final exam
+l 20% Homework
+l 10% Recitation exercises
+l 10% Lecture participation (Top Hat)
+l 100%
+
+Recitation
+Recitation exercises
+l Covers the previous week’s material (W–T)
+l Assigned the day before recitation, due the day of your
+recitation at 11:59 PM via Gradescope
+l Late submissions are not accepted—submit early and often
+l Two lowest exercise grades will be dropped
+
+Recitations are collaborative
+l You should try the exercises in advance of recitation
+l You’ll go over much of the solutions in recitations
+l Submit solutions that you understand—don’t just copy what
+your TA writes or copy a friend’s submission
+
+Homework
+Weekly homework assignments
+l Assigned on Friday, due the next Tuesday at 11:59 PM
+l Late homework is not accepted—submit early and often
+l Two lowest homework grades will be dropped
+
+Homework may be discussed with others, but must be
+solved and written up individually
+l Limit discussion to understanding problems and developing
+high-level solution tactics
+l Canvas is a good place to do this
+
+l Identify collaborators on your homework cover sheet
+l No online resources (except Canvas)
+l Failure to comply with this policy is a violation of academic
+integrity (F in the course)
+
+Policies
+n Check the web page and Canvas frequently. Announcements,
+homework, and lecture slides will be posted there
+n We will drop your two lowest homework and recitation scores
+before computing your homework average—no excuses necessary!
+n Regrade requests accepted within 2 weeks of hand-back. Grade
+may increase, decrease, or stay the same.
+n Other policies are on the web page
+l Accommodating students with disabilities
+l Religious observances
+l Etc.
+
+Questions?
+
+Course overview
+n What is discrete mathematics?
+n Why is a math course part of the computer science
+curriculum?
+n Will I really ever use this stuff again?
+n How to succeed in this course
+
+What is discrete mathematics?
+n Discrete mathematics is the study of distinct objects or
+structures and their relationships to one another
+n For example:
+l How many ways can a valid password be chosen?
+l Can traffic flow between two computers in a network?
+l How can we transform messages to hide their contents?
+l How do we parse a given sequence of commands?
+
+n By contrast, continuous mathematics (e.g., calculus)
+studies objects and relationships that vary continuously
+l e.g., position, velocity, and acceleration of a projectile
+
+Why study discrete math?
+Reason 1: Computers do not process continuous data
+
+Sampling and
+discretization
+Analog (continuous) input
+
+Digital (discrete) output
+
+Why study discrete math?
+Reason 2: Computers aren’t actually all that smart, they are
+just deterministic functions that map discrete
+inputs to discrete outputs
+Example: Does a given string contain an odd number of 1s?
+1
+Read
+
+0
+
+No
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+…
+
+Yes
+1
+
+0
+
+Why study discrete math?
+In general: Discrete mathematics allows us to better understand
+computers and algorithms
+
+function fib(int n)
+if(n == 0 || n == 1)
+return 1;
+else
+return fib(n-1) + fib(n-2);
+
+function fib(int n)
+int first = 0;
+int second = 1;
+int tmp;
+for(i = 1 to n)
+tmp = first + second;
+first = second;
+second = tmp;
+end for
+return first;
+
+Tentative Syllabus
+n Logic and proofs
+n Sets
+n Functions
+n Integers and modular arithmetic
+n Counting
+n Probability and expectation
+n Relations
+
+Are these topics really useful?
+
+Logic and proofs
+grant(X, projector) :- role(X, presenter), located(X, 104)
+located(adam, 104)
+role(adam, presenter)
+=> ?grant(adam, projector)
+=> true
+
+Automated reasoning, AI, security
+
+exp()
++
+*
+Verifying data structures
+and hardware
+
+3
+
+3.1415
+4
+
+2
+
+Parsing
+expressions
+
+function fib(int n)
+int first = 0;
+int second = 1;
+int tmp;
+for(i = 1 to n)
+tmp = first + second;
+first = second;
+second = tmp;
+end for
+return first;
+
+Algorithm and
+protocol analysis
+
+Sets
+… and give us a means of
+reasoning about the
+relationships between objects
+
+Sets define collections of
+objects…
+
+Functions
+
+Hardware design
+
+Theory of computation
+Computer graphics
+
+Integers and Modular Arithmetic
+ATTACK AT DAWN
+0111 0101 0110 1011
++ 0101 1001 1110 0001
+1100 1111 0100 1100
+Binary arithmetic and
+bitwise operations
+
+01 20 20 01 03 11 01 20 04 01 23 14
+C = P+ 6 (mod 26)
+
+06 25 25 06 09 16 06 26 10 06 03 20
+
+FYYFIPFZJFCU
+Cryptography
+
+Counting
+
+How many valid
+passwords exist for a
+given set of rules?
+
+How many IP addresses can be
+assigned within a network
+segment? Will we run out?
+
+Probability and Expectation
+
+Spam classification
+
+Hardware, software, and
+network simulation
+
+Risk assessment
+
+Relations
+Name
+
+Age
+
+Phone
+
+Alice
+
+19
+
+555-1234
+
+Danielle
+
+33
+
+555-5353
+
+Zach
+
+27
+
+555-3217
+
+Charlie
+
+21
+
+555-2335
+
+Relational databases
+
+Route
+planning
+
+DHTs, DNS,
+name services
+
+Syllabus, redux
+n Logic and proofs
+n Sets
+n Functions
+n Integers and modular arithmetic
+n Counting
+n Probability and expectation
+n Relations
+
+Are these topics really useful?
+Yes
+
+Mastering discrete mathematics requires practice!
+
+n Succeeding in this class requires practicing the skills
+that we will acquire, thinking critically, and asking
+questions
+n Keys to success:
+l Attend class and take notes
+l Do your homework
+l Work extra problems when you’re unsure
+➣Solutions to odd-numbered exercises provided in textbook
+
+l Go to your recitation every week
+l Take advantage of office hours
+
+Final thoughts
+n Our goal is to prepare you to be stronger computer
+scientists by:
+l Exploring the formal underpinnings of computer science
+l Developing critical thinking skills
+l Articulating ties between theory and practice
+
+n Next: Propositional logic
+
+

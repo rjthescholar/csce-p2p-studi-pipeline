@@ -1,0 +1,915 @@
+#D
+CS 0447
+Introduction to
+Computer Programming
+
+Adding circuits and
+Plexers
+Original slides by: Jarrett Billingsley
+Modified with bits from: Bruce
+Childers, David Wilkinson
+
+Luís Oliveira
+
+Fall 2020
+
+Class announcements
+● none
+
+2
+
+Can I add with transistors?
+
+3
+
+Solving a problem
+● Let’s say we want to create a circuit to add two bits.
+o How do we do that?
+● In 3 very simple steps:
+o Create a truth table that accurately represents the problem
+o Interpret the truth table into a logic function
+o Translate the function into a circuit
+
+4
+
+The Tables of Truth
+● let's try to come up with a truth table for adding two bits
+● each column will hold 1 bit
+let's name the
+
+A B
+0 0
+for the input values, 0 1
+we count up in
+1 0
+binary
+1 1
+let's name the
+inputs A and B
+
+C S
+0 0
+0 1
+0 1
+1 0
+
+outputs C and S,
+for Carry and Sum
+
+now let's fill in the
+output values
+hey, this C column
+looks familiar… so
+does the S column
+great! But
+this is wrong.
+5
+
+Half-truth tables
+● what we just made was a half-adder
+● it has a carry output but not a carry input
+o (which might be useful for the lowest bit)
+
+● to make a full adder, we need 3 input bits
+
+Co C i
+
+00111 110
+A
+1011 0010
+B
++0010 1111
+1110 0001
+S
+
+Ci A B Co S
+0 0 0 0 0
+0
+0
+0
+1
+
+0
+1
+1
+0
+
+1
+0
+1
+0
+
+0 1
+0 1
+1 0
+
+0
+1 0 1 1
+1 1 0 1
+1 1 1 1
+
+1
+0
+0
+1
+6
+
+The logic of it all
+● it looks a little messy, but it kinda makes
+sense if you think of it like this:
+o it counts how many input bits are "1"
+o Co and S are a 2-bit number!
+● if we look at the outputs in isolation:
+o S is 1 if we have an odd number of "1s"
+o Co is 1 if we have 2 or 3 "1s"
+● it's a little weird, but we can build this out of
+AND, OR, and XOR gates
+
+Ci A B Co S
+0 0 0 0 0
+0
+0
+0
+1
+
+0
+1
+1
+0
+
+1
+0
+1
+0
+
+0 1
+0 1
+1 0
+
+0
+1 0 1 1
+1 1 0 1
+1 1 1 1
+
+1
+0
+0
+1
+7
+
+Let’s build the adder Co circuit
+
+A B Ci Co S 𝐂𝐨𝐮𝐭 = 𝐀
+ഥ 𝐁𝐂𝐢𝐧 + 𝐀𝑩
+ഥ 𝐂𝐢𝐧 + 𝐀𝐁𝐂𝐢𝐧 + 𝐀𝐁𝐂𝐢𝐧
+0 0 0 0 0
+0
+0
+0
+1
+
+0
+1
+1
+0
+
+1
+0
+1
+0
+
+0 1
+0 1
+1 0
+
+ഥ 𝐁𝐂𝐢𝐧
+𝐀
+
+1
+0
+0
+1
+
+ഥ 𝐂𝐢𝐧
+𝐀𝑩
+𝐀𝐁𝐂𝐢𝐧
+𝐀𝐁𝐂𝐢𝐧
+
+0
+1 0 1 1
+1 1 0 1
+1 1 1 1
+
+8
+
+Sweeping that under the rug…
+● in programming, we use functions to be able to reuse code
+● in hardware, we can group gates into a component
+● here's the symbol for a one-bit full adder
+
+Co
+A
+B
+the inputs are
+like arguments
+
++
+Ci
+
+the outputs are like
+return values
+
+S
+now we don't have to care how
+it adds, just that it does
+
+9
+
+Adding longer numbers
+
+10
+
+Where do the carries go?
+● when you add one place, you might get a carry out
+● that becomes the carry in for the next higher place
+
+Bit
+Bucket..?
+
+1 0 1 1 0 0 1 0
++0 0 1 0 1 1 1 1
+11
+
+Ripple Carry Adder
+● if we want to add two three-bit numbers, we'll
+need three one-bit adders
+● we chain the carries from each place to the next
+higher place, like we do on paper
+● we have to split the numbers up like so:
+
+A2 A1 A 0
+
++ B2 B1 B0
+S2 S1 S0
+
+A2
+
+B2
+A1
+B1
+A0
+B0
+
++
+
+S2
+
++
+
+S1
+
++
+
+S0
+
+12
+
+Flip side
+● We could come up with a separate subtraction circuit, but…
+● Since algebra tells us that x - y = x + (-y)
+o Negation meaning flip the bits and add 1
+A1
+● Flipping the bits uses NOT gates
+● How do we add 1 without any extra circuitry?
+~B1
+o we use a full adder for the LSB, and when
+we're subtracting, set the "carry in" to 1
+
+A0
+
+~B0
+
++
+
+S1
+
++
+
+S0
+
+1
+
+13
+
+What makes a good word size?
+● can you think of an example of…
+o 100 of something?
+o a million of something? One thousand million?
+o One billion? more?
+● 28 = 256, 216 ≅ 65,000, 232 ≅ 4000 million, 264 ≅ lots-of-a-lot
+● for a given word size, all the circuitry has to be built to support it
+o 64 1-bit adders
+o 128 wires going in
+o 64 wires coming out
+
+14
+
+Gate Delay
+● electrical signals can't move infinitely fast
+● transistors can't turn on and off infinitely fast
+● since each digit must wait for the next smaller digit to
+compute its carry…
+o ripple carry is linear in the number of digits
+● this is a diagram of how the outputs of a 16-bit ripple
+carry adder change over time
+o it's measured in picoseconds! so ~100ps total
+● but if we went to 32 bits, it'd take 200ps
+o and 64 bits, 400ps...
+● there are more efficient ways of adding
+
+(courtesy of Kate Temkin)
+
+15
+
+What about overflow?
+● For unsigned addition, it's easy
+o For an n-bit adder:
+▪ just look at the Co of the MSB
+▪ if it's 1, it's an overflow.
+o what about subtraction?
+● For signed, is a bit strange
+o Compare the last 2 carry bits
+o If they are different
+▪ Then there is overflow
+
+OVF
+A2
+B2
+
+A1
+B1
+A0
+
+B0
+
++
+
+S2
+
++
+
+S1
+
++
+
+S0
+16
+
+But why?
+● When does signed addition overflow?
+o If:
+▪ Both addends have the same sign
+▪ The result has a different sign
+● How can we detect that?
+o Looking at the last bit!
+● Where is the overflow?
+
+There is overflow in signed addition if:
+
+On the last bit, the carry-in and carryout have different bit values.
+
+The last bit:
+Ci A B Co S
+0 0 0 0 0
+
+0
+0
+0
+1
+
+0
+1
+1
+0
+
+1
+0
+1
+0
+
+0 1
+0 1
+1 0
+
+0
+1 0 1 1
+1 1 0 1
+1 1 1 1
+
+1
+0
+0
+1
+
+17
+
+Muxes and demuxes, encoders and
+decoders
+
+18
+
+Hardware that makes decisions
+● a multiplexer (mux) outputs one of its inputs based on a select.
+
+A
+
+A
+
+Q
+
+Q
+
+B
+
+B
+S
+
+A
+
+Q
+
+B
+S=0
+
+S=1
+
+This is the select input.
+
+19
+
+Multiplexer truth table
+● let's make a truth table for a two-input 1-bit multiplexer.
+
+A
+
+0 0 0 0
+
+A
+Q
+
+B
+
+Q
+B
+
+S=0
+
+S A B Q
+
+0 0 1 0
+0 1 0 1
+0 1 1 1
+
+S=1
+
+1 0 0 0
+1 0 1 1
+1 1 0 0
+1 1 1 1
+20
+
+Doing everything and throwing most of it away
+● I want a circuit that does this:
+
+if(select == 1)
+output = A – B
+else
+output = A + B
+
+● let's see what that looks like
+● a mux is like a hardware if-else statement
+● but unlike in software…
+o the "condition" comes at the "end" (the output)
+o instead of doing one or the other, we do both, choose the one that we care
+about, and ignore the rest!
+
+21
+
+Amusing muxes
+● Let’s go to Logisim!
+
+22
+
+What's that enable input?
+● if you don't understand tristate buses or high
+impedance states, do not turn on the enable input.
+● if you ever see blue wires, you are in weird,
+confusing territory.
+● if you know this stuff, fine, but otherwise…
+
+23
+
+Demultipliexers
+● a demux does the opposite: it sends its input to one of its outputs
+● the rest of the outputs are 0s
+
+In
+
+In
+S
+
+In
+S=0
+
+S=1
+
+24
+
+Looking in a mirror
+● it can be confusing if all you see is this:
+
+which is which???
+
+Logisim distinguishes these with names
+I’ll do it with arrows
+
+25
+
+Encoders
+● They encode 2n inputs into n outputs. Specifically…
+● you give it several 1-bit inputs, and it tells you which one is 1.
+
+1
+
+0
+
+0
+
+1
+
+0
+
+2
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+2
+
+3
+
+0
+
+3
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+2
+
+0
+
+3
+
+0
+
+Enc 1
+
+Enc
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+2
+
+1
+
+3
+
+0
+
+Enc 1
+
+Enc
+
+1
+0
+
+0
+
+1
+
+1
+
+1
+
+I0 I1 I2 I3 Out
+1 0 0 0 00
+0 1 0 0 01
+0 0 1 0 10
+0 0 0 1 11
+
+26
+
+Encoder issues
+● That table seems VERY incomplete!!!
+o What about the other entries???
+
+The output is not valid!
+
+0
+
+0
+
+0
+
+1
+
+0
+
+2
+
+0
+
+3
+
+Enc
+
+0
+
+1
+
+valid
+
+???
+
+???
+0
+
+I0
+0
+0
+1
+1
+…
+
+I1
+0
+1
+1
+1
+…
+
+I2
+0
+1
+1
+1
+…
+
+I3 Out Valid
+0 ??
+0
+0 ??
+0
+0 ??
+0
+1 ??
+0
+… …
+…
+27
+
+Enter: Priority Encoders
+● In a priority encoder … you give it several 1-bit inputs, and it tells you the highest
+input with a 1.
+
+1
+
+0
+
+0
+
+1
+
+0
+
+2
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+2
+
+3
+
+0
+
+3
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+2
+
+0
+
+3
+
+0
+
+Pri 1
+
+Pri
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+2
+
+1
+
+3
+
+0
+
+Pri 1
+
+Pri
+
+1
+0
+
+0
+
+1
+
+1
+
+1
+
+I0 I1 I2 I3 Out
+1 0 0 0 00
+X 1 0 0 01
+X X 1 0 10
+X X X 1 11
+What are
+these?
+28
+
+idc
+● we don't even care about the that input
+● we can put X in the inputs we don't care about
+● we call these don't cares
+o yep, really
+● what these mean is:
+o when we make this into a boolean function, we can ignore those inputs
+▪ we won't even need to write em
+
+I0 I1 I2 I3 Out
+1 0 0 0 00
+X 1 0 0 01
+X X 1 0 10
+X X X 1 11
+29
+
+Still…
+● All zeros is still an invalid input :(
+
+if none of the inputs is 1,
+then logisim gives you X…
+These are not don’t cares :’)
+0
+
+0
+
+0
+
+1
+
+0
+
+2
+
+0
+
+3
+
+0
+
+Pri 1
+valid
+
+X
+X
+0
+
+30
+
+Decoders
+● a decoder is like a 1-bit demux whose input is always 1
+● It does pretty much the opposite of an encoder ☺
+
+1
+S
+
+S
+
+exactly one output is 1,
+and the rest are 0s
+31
+
+Uses for encoders, decoders and demuxes
+● uhhhhhhhhhhh
+o Ummmmmmmmm… for now …
+▪ unless you're using tristate (blue) wires, they're not too useful…
+● most of the time, you don't have to "direct" a signal to a location
+o instead, you hook up the inputs to everything that needs them
+● we'll use them more when we get to sequential logic
+
+32
+
+Combinational vs Sequential
+● combinational logic: the outputs of a circuit depend entirely on their current inputs
+o AND, OR, NOT, XOR gates
+o adders
+o muxes, demuxes, encoders, and decoders
+● sequential logic is coming up soon
+o the outputs can depend on the current and previous inputs
+o it remembers
+● logic minimization techniques only work on combinational logic!
+o …or combinational pieces of a larger sequential circuit
+
+33
+
+

@@ -1,0 +1,391 @@
+Discrete Structures for Computer
+Science
+
+William Garrison
+bill@cs.pitt.edu
+6311 Sennott Square
+Lecture #4: Predicates and Quantifiers
+
+Based on materials developed by Dr. Adam Lee
+
+Topics
+n Predicates
+n Quantifiers
+n Logical equivalences in predicate logic
+n Translations using quantifiers
+
+Propositional logic is simple, therefore limited
+Propositional logic cannot represent some classes of
+natural language statements…
+Given: Kody is one
+of my dogs
+
+Given: All of my dogs like peanut butter
+
+Propositional logic gives us no way to draw the
+(obvious) conclusion that Kody likes peanut butter!
+
+Propositional logic also limits the mathematical truths
+that we can express and reason about
+Consider the following:
+l p1 º 2 has no divisors other than 1 and itself
+l p2 º 3 has no divisors other than 1 and itself
+l p3 º 5 has no divisors other than 1 and itself
+l p4 º 7 has no divisors other than 1 and itself
+l p5 º 11 has no divisors other than 1 and itself
+l…
+
+This is an inefficient way to reason about the
+properties of prime numbers!
+General problem: Propositional logic has no way of
+reasoning about instances of general statements.
+
+Historical Context
+The previous examples are called syllogisms
+Aristotle used syllogisms in his Prior
+Analytics to deductively infer new facts
+from existing knowledge
+Major premise
+
+All men are mortal
+Socrates is a man
+Socrates is mortal
+Conclusion
+
+Minor premise
+
+Predicate logic allows us to reason about the properties
+of individual objects and classes of objects
+Predicate logic allows us to use propositional functions
+during our logical reasoning
+
+P(x) º x3 > 0
+variable
+
+predicate
+
+Note: A propositional function P(x) has no truth value
+unless it is evaluated for a given x or set of xs.
+
+Examples
+Assume P(x) º x3 > 0. What are the truth values of the
+following expressions:
+l P(0)
+false
+l P(23)
+true
+l P(-42)
+false
+We can express the prime number property using
+predicate logic:
+l P(x) º “x is prime”
+l D(x) º “x has no divisors other than 1 and itself”
+l P(x) « D(x)
+
+Predicates can also be defined on more than one
+variable
+Let P(x, y) º x + y = 42. What are the truth values of
+the following expressions:
+l P(45, -3)
+true
+l P(23, 23)
+false
+l P(1, 119)
+false
+Let S(x, y, z) º x + y = z. What are the truth values of
+the following expressions:
+true
+l S(1, 1, 2)
+false
+l S(23, 24, 42)
+true
+l S(-9, 18, 9)
+
+Predicates play a central role in program control
+flow and debugging
+If/then statements:
+l if x > 17 then y = 13
+
+Loops:
+l while y <= 14 do
+…
+end while
+
+Debugging in C/C++:
+l assert(strlen(passwd) > 0);
+
+This is a predicate!
+
+Quantifiers allow us to make general statements that
+turn propositional functions into propositions
+In English, we use quantifiers on a regular basis:
+l All students can ride the bus for free
+l Many people like chocolate
+l I enjoy some types of tea
+l At least one person will sleep through their final exam
+
+Quantifiers require us to define a universe of discourse
+(also called a domain) in order for the quantification
+to make sense
+l “Many like chocolate” doesn’t make sense!
+
+What are the universes of discourse for the above
+statements?
+
+Universal quantification allows us to make statements
+about the entire universe of discourse
+Examples:
+l All of my dogs like peanut butter
+l Every even integer is a multiple of two
+l For each positive integer x, 2x > x
+
+Given a propositional function P(x), we express the
+universal quantification of P(x) as "x P(x)
+What is the truth value of "x P(x)?
+l true if P(x) is true for every x in the universe of discourse
+l false if P(x) is false for even one x in the universe of discourse
+
+Examples
+All rational numbers are greater than 42
+l Domain: rational numbers
+l Propositional function: Let G(x) º “x is greater than 42”
+l Statement: "x G(x)
+l Truth value: false (counterexample: ½)
+
+If a natural number is prime, it has no divisors other than 1
+and itself
+l Domain: natural numbers
+l Propositional functions:
+➣Let P(x) º “x is prime”
+➣Let D(x) º “x has no divisors other than 1 and itself”
+
+l Statement: "x [P(x) ® D(x)]
+l Truth value: true (by definition)
+
+Existential quantifiers allow us to make
+statements about some objects
+Examples:
+l Some elephants are scared of mice
+l There exist integers a, b, and c such that the equality
+a2 + b2 = c2 is true
+l There is at least one person who did better than John on the
+midterm
+
+Given a propositional function P(x), we express the
+existential quantification of P(x) as $x P(x)
+What is the truth value of $x P(x)?
+l true if P(x) is true for at least one x in the universe of discourse
+l false if P(x) is false for each x in the universe of discourse
+
+Examples
+The inequality x + 1 < x holds for at least one integer
+l Domain: Integers
+l Propositional function: P(x) º x + 1 < x
+l Statement: $x P(x)
+l Truth value: false
+
+For some integers, the equality a2 + b2 = c2 is true
+l Domain: Integers
+l Propositional function: P(a, b, c) º a2 + b2 = c2
+l Statement: $a,b,c P(a,b,c)
+l Truth value: true
+
+We can restrict the domain of quantification
+The square of every natural number less than 4 is no more
+than 9
+l Domain: natural numbers
+l Statement: "x<4 (x2 ≤ 9)
+l Truth value: true
+
+This is equivalent to writing
+
+"x [(x < 4) ® (x2 ≤ 9)]
+
+Some integers between 0 and 6 are prime
+l Domain: Integers
+l Propositional function: P(x) º “x is prime”
+l Statement: $0≤x≤6 P(x)
+l Truth value: true
+This is equivalent to writing
+
+$x [(0≤x≤6) Ù P(x)]
+
+Precedence of quantifiers
+The universal and existential quantifiers have the
+highest precedence of all logical operators
+For example:
+l "x P(x) Ù Q(x) actually means ("x P(x)) Ù Q(x)
+l $x P(x) ® Q(x) actually means ($x P(x)) ® Q(x)
+
+For the most part, we will use parentheses to
+disambiguate these types of statements
+But you are still responsible
+for understanding precedence!
+
+In-class exercises
+See on Top Hat
+
+We can extend the notion of logical equivalence to
+expressions containing predicates or quantifiers
+
+Definition: Two statements involving predicates and
+quantifiers are logically equivalent iff they take on the
+same truth value regardless of which predicates are
+substituted into these statements and which domains
+of discourse are used.
+
+Prove: $x [P(x) Ú Q(x)] º $x P(x) Ú $x Q(x)
+We must prove each “direction” of the equivalence.
+Assume that P and Q have the same domain.
+First, prove $x [P(x) Ú Q(x)] ® $x P(x) Ú $x Q(x):
+l If $x [P(x) Ú Q(x)] is true, this means that there is some value v in
+the domain such that either P(v) is true or Q(v) is true
+l If P(v) is true, then $x P(x) is true and [$x P(x) Ú $x Q(x)] is true
+l If Q(v) is true, then $x Q(x) is true and [$x P(x) Ú $x Q(x)] is true
+l Thus $x [P(x) Ú Q(x)] ® $x P(x) Ú $x Q(x)
+
+Prove: $x [P(x) Ú Q(x)] º $x P(x) Ú $x Q(x)
+Then, prove $x P(x) Ú $x Q(x) ® $x [P(x) Ú Q(x)]:
+l If $x P(x) Ú $x Q(x) is true, this means that there is some
+value v in the domain such that either P(v) is true or Q(v) is
+true
+l If P(v) is true, then $x [P(x) Ú Q(x)] is true
+l If Q(v) is true, then $x [P(x) Ú Q(x)] is true
+l Thus $x P(x) Ú $x Q(x) ® $x [P(x) Ú Q(x)]
+
+Since $x [P(x) Ú Q(x)] ® $x P(x) Ú $x Q(x) and
+$x P(x) Ú $x Q(x) ® $x [P(x) Ú Q(x)] then
+$x [P(x) Ú Q(x)] º $x P(x) Ú $x Q(x).
+
+We also have DeMorgan’s laws for quantifiers
+Negation over universal quantifier: ¬"x P(x) º $x ¬P(x)
+Intuition: If P(x) is not true for all x, then
+there is at least one x for which P(x) is
+false
+
+Negation over existential quantifier: ¬$x P(x) º "x ¬P(x)
+Intuition: If P(x) is not true for at least
+one value x, then P(x) is false for all x
+
+These are very useful logical equivalences, so let’s prove
+one of them…
+
+Prove: ¬"x P(x) º $x ¬P(x)
+n ¬"x P(x) ® $x ¬P(x)
+l ¬"x P(x) is true if and only if "x P(x) is false
+l "x P(x) is false if and only if there is some v such that ¬P(v)
+is true
+l If ¬P(v) is true, then $x ¬P(x)
+
+n $x ¬P(x) ® ¬"x P(x)
+l $x ¬P(x) is true if and only if there is some v such that ¬P(v)
+is true
+l If ¬P(v) is true, then clearly P(x) does not hold for all
+possible values in the domain and thus we have ¬"x P(x)
+
+Therefore ¬"x P(x) º $x ¬P(x).
+
+Translations from English
+To translate English sentences into logical expressions:
+1. Rewrite the sentence to make it easier to translate
+2. Determine the appropriate quantifiers to use
+3. Look for words that indicate logical operators
+4. Formalize sentence fragments
+5. Put it all together
+
+Example: At least one person in this classroom is named Bill and
+has lived in Pittsburgh for 8 years
+Existential quantifier
+
+Rewrite: There exists at least one person who is in this
+classroom, is named Bill, and has lived in Pittsburgh
+for 8 years
+Conjunction
+
+Formalize:
+l C(x) º “x is in this classroom”
+l N(x) º “x is named Bill”
+l P(x) º “x has lived in Pittsburgh for 8 years”
+
+Final expression: $x [C(x) Ù N(x) Ù P(x)]
+
+Example: If a student is taking CS441, then they have
+taken high school algebra
+Universal quantifier
+
+Rewrite: For all students, if a student is in CS 441,
+then they have taken high school algebra
+
+Formalize:
+
+Implication
+
+l C(x) º “x is taking CS441”
+l H(x) º “x has taken high school algebra”
+
+Final expression: "x [C(x) ® H(x)]
+
+Negate the previous example
+DeMorgan’s law for
+negation over the universal
+quantifier
+
+¬"x [C(x) ® H(x)] º $x ¬[C(x) ® H(x)]
+º $x ¬[¬C(x) Ú H(x)]
+º $x [¬¬C(x) Ù ¬H(x)]
+a ® b º ¬a Ú b
+º $x [C(x) Ù ¬H(x)]
+DeMorgan’s law for
+Double negation law
+
+negation over
+disjunction
+
+Translate back into English:
+l There is a student taking CS441 that has not taken high
+school algebra!
+
+Example: Jane enjoys drinking some types of tea
+Rewrite: There exist some types of tea that Jane
+enjoys drinking
+
+Formalize:
+l T(x) º “x is a type of tea”
+l D(x) º “Jane enjoys drinking x”
+
+Final expression: $x [T(x) Ù D(x)]
+Negate the previous example:
+¬$x [T(x) Ù D(x)] º "x ¬[T(x) Ù D(x)]
+º "x [¬T(x) Ú ¬D(x)]
+º "x [T(x) ® ¬D(x)]
+“For all types of drink, if x is a tea, Jane does not enjoy
+drinking it.”
+
+In-class exercises
+Problem 3: Translate the following sentences into
+logical expressions.
+a) Some cows have black spots
+b) At least one student likes to watch football or ice hockey
+c) Any adult citizen of the US can register to vote if he or
+she is not a convicted felon
+
+Problem 4: Negate the translated expressions from
+problem 3. Translate these back into English.
+
+Final Thoughts
+n The simplicity of propositional logic makes it unsuitable for
+solving certain types of problems
+n Predicate logic makes use of
+l Propositional functions to describe properties of objects
+l The universal quantifier to assert properties of all objects within
+a given domain
+l The existential quantifier to assert properties of some objects
+within a given domain
+
+n Predicate logic can be used to reason about relationships
+between objects and classes of objects
+n Next lecture:
+l Applications of predicate logic and nested quantifiers
+l Please read section 1.5
+
+
