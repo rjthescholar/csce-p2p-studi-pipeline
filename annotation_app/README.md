@@ -4,6 +4,8 @@
 
 The only requirement to run this annotation tool is Python 3.8 or greater. To run the application, either invoke it in the command line with `./annotate.py` in Linux or `.\annotate.py` in Windows, or run it with the python interpreter in the usual manner.
 
+(For macos users install tkmacosx using pip, and use annotata_macos.py instead. There are bugs with tk on MacOS.)
+
 ## Usage
 
 To begin annotating, either press the "Load Text" button to select a textfile (converted from a lecture PDF) or press the "Load BIO" button, if you already have annotated text.
