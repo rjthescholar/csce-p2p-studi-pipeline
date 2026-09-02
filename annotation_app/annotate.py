@@ -218,7 +218,7 @@ class ConceptAnnotator:
 
 		n = len(concept)
 
-		for start in range(search_start, len(self.selectable_tokens) - n + 1):
+		for start in range(search_start, len(self.selectable_tokens) - n - 1):
 
 			candidate = tuple(
 				w.casefold()
@@ -555,7 +555,7 @@ class ConceptAnnotator:
 						self.create_concept(idx + 1, end)
 
 
-			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0:
+			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0 and start != self.last_edited_concept[0]:
 				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 			self.last_edited_concept = (-1, -1)
 			print(self.last_edited_concept)
@@ -621,7 +621,7 @@ class ConceptAnnotator:
 			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0:
 				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 			self.labels[self.token_indices[idx]] = "B-Concept"
-			self.last_edited_concept = (idx, idx)
+			self.last_edited_concept = (idx, idx + 1)
 		self.repair_bio()
 		self.refresh()
 
