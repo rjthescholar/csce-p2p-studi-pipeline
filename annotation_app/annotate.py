@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import tkinter as tk
+import tkmacosx as tkmac
 from tkinter import filedialog, messagebox, ttk, font, simpledialog
 from functools import partial
 import re
@@ -552,6 +553,13 @@ class ConceptAnnotator:
 					if end > idx + 1:
 						print(f"({start}, {idx}, {end})")
 						self.create_concept(idx + 1, end)
+
+
+			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0:
+				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
+			self.last_edited_concept = (-1, -1)
+			print(self.last_edited_concept)
+			
 			self.repair_bio()
 			self.refresh()
 			return
