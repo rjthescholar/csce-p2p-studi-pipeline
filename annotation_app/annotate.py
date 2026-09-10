@@ -853,6 +853,12 @@ class ConceptAnnotator:
 
 		tokens = tokenize(text)
 
+		self.metadata = {
+			"segments": None,
+			"course": None,
+			"lecture": None
+		}
+
 		self.concepts = set()
 		self.last_edited_concept = (-1, -1)
 
