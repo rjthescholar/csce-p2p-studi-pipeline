@@ -6,6 +6,8 @@ The only requirement to run this annotation tool is Python 3.8 or greater. To ru
 
 (For macos users install tkmacosx using pip, and use annotata_macos.py instead. There are bugs with tk on MacOS.)
 
+For an alternative to the tk-built annotate.py, use annotation_qt.py. This requires the installation of pyqt6 via pip. This version is much faster, and uses a more modern interface, but has the same functionality. Recommended for longer files.
+
 ## Usage
 
 To begin annotating, either press the "Load Text" button to select a textfile (converted from a lecture PDF) or press the "Load BIO" button, if you already have annotated text.

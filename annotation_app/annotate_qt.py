@@ -1,80 +1,117 @@
 #!/usr/bin/env python
 
-import tkinter as tk
-import tkmacosx as tkmac
-from tkinter import filedialog, messagebox, ttk, font, simpledialog
 from functools import partial
 import re
 import ast
 import os
 import signal
+from PyQt6.QtWidgets import (
+	QApplication,
+	QMainWindow,
+	QSizePolicy,
+	QWidget,
+	QVBoxLayout,
+	QInputDialog,
+	QFileDialog,
+	QMessageBox,
+	QHBoxLayout,
+	QScrollArea,
+	QPushButton,
+	QCheckBox,
+	QFrame
+)
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
+import sys
 
 NEWLINE_TOKEN = "__NEWLINE__"
 FORMFEED_TOKEN = "__FORMFEED__"
 
 
 def tokenize(text):
-    tokens = []
+	tokens = []
 
-    for chunk in re.split(r'(\n|\f)', text):
+	for chunk in re.split(r'(\n|\f)', text):
 
-        if chunk == "":
-            continue
+		if chunk == "":
+			continue
 
-        if chunk == "\n":
-            tokens.append(NEWLINE_TOKEN)
+		if chunk == "\n":
+			tokens.append(NEWLINE_TOKEN)
 
-        elif chunk == "\f":
-            tokens.append(FORMFEED_TOKEN)
+		elif chunk == "\f":
+			tokens.append(FORMFEED_TOKEN)
 
-        else:
-            tokens.extend(
-                re.findall(
-                    r"\w+|[^\w\s]",
-                    chunk,
-                    re.UNICODE
-                )
-            )
+		else:
+			tokens.extend(
+				re.findall(
+					r"\w+|[^\w\s]",
+					chunk,
+					re.UNICODE
+				)
+			)
 
-    return tokens
+	return tokens
 
-class ConceptAnnotator:
-	def __init__(self, root, tokens):
-		self.root = root
-		self.root.title("BIO Concept Annotator")
+class TokenButton(QPushButton):
+	leftClicked = pyqtSignal(int)
+	rightClicked = pyqtSignal(int)
+
+	def __init__(self, text, index):
+		super().__init__(text)
+		self.index = index
+
+	def mousePressEvent(self, event):
+		if event.button() == Qt.MouseButton.LeftButton:
+			self.leftClicked.emit(self.index)
+		elif event.button() == Qt.MouseButton.RightButton:
+			self.rightClicked.emit(self.index)
+
+		super().mousePressEvent(event)
+
+
+class ConceptAnnotator(QMainWindow):
+
+	def __init__(self, tokens=None):
+		super().__init__()
+
+		self.setWindowTitle("BIO Concept Annotator")
 
 		self.tokens = tokens or []
+		self.labels = ["O"] * len(self.tokens)
 		self.selectable_tokens = []
-		# concept id per token (None = O)
-		self.labels = ['O'] * len(tokens)
 
 		self.concepts = set()
 		self.last_edited_concept = (-1, -1)
 
 		self.buttons = []
 		self.token_indices = []
-		self.token_font = font.Font(
-			family="Lucida Sans Unicode",
-			size=6
-		)
 
-		self.create_ui()
+		self.central = QWidget()
+		self.setCentralWidget(self.central)
+
+		self.main_layout = QVBoxLayout(self.central)
+		self.token_font = QFont("Lucida Sans Unicode", pointSize=10)
+
 		self.metadata = {
 			"segments": None,
 			"course": None,
 			"lecture": None
 		}
+
+		self.create_ui()
+
 		if self.tokens:
 			self.load_tokens(self.tokens)
 
 	def enter_meta(self):
-		segs = simpledialog.askstring("Segments", "Input the segments you want this file to be a part of, separated by commas:", initialvalue="labeled")
-		self.metadata['segments'] = segs.split(',') if segs else ['labeled']
-		self.metadata['course'] = simpledialog.askstring("Course", "Enter the course number (e. g. cs0441)")
-		self.metadata['lecture'] = simpledialog.askstring("Lecture", "Enter the lecture number (e. g. lec01)")
+		segs, ok = QInputDialog.getText(self, "Segments", "Input the segments you want this file to be a part of, separated by commas:", text="labeled")
+		self.metadata['segments'] = segs.split(',') if ok else ['labeled']
+		self.metadata['course'], ok = QInputDialog.getText(self, "Course", "Enter the course number (e. g. cs0441)")
+		self.metadata['lecture'], ok = QInputDialog.getText(self, "Lecture", "Enter the lecture number (e. g. lec01)")
 
 	def display_meta(self):
-		messagebox.showinfo("Metadata", f"Segments: {self.metadata['segments']}\nCourse: {self.metadata['course']}\nLecture: {self.metadata['lecture']}")
+		QMessageBox.information(self,"Metadata", f"Segments: {self.metadata['segments']}\nCourse: {self.metadata['course']}\nLecture: {self.metadata['lecture']}")
 
 	"""def get_concepts(self):
 		concepts = []
@@ -369,143 +406,61 @@ class ConceptAnnotator:
 
 		# ===== Scrollable annotation area =====
 
-		canvas_frame = tk.Frame(self.root)
-		canvas_frame.pack(fill="both", expand=True)
-
-		v_scroll = tk.Scrollbar(canvas_frame, orient="vertical")
-		v_scroll.pack(side="right", fill="y")
-
-		h_scroll = tk.Scrollbar(canvas_frame, orient="horizontal")
-		h_scroll.pack(side="bottom", fill="x")
-
-		self.canvas = tk.Canvas(
-			canvas_frame,
-			yscrollcommand=v_scroll.set,
-			xscrollcommand=h_scroll.set
-		)
-
-		self.canvas.pack(side="left", fill="both", expand=True)
-
-		v_scroll.config(command=self.canvas.yview)
-		h_scroll.config(command=self.canvas.xview)
-
-		# Frame inside canvas
-		self.token_frame = tk.Frame(self.canvas)
-
-		self.canvas_window = self.canvas.create_window(
-			(0, 0),
-			window=self.token_frame,
-			anchor="nw"
-		)
-
-		def configure_scroll_region(event):
-			self.canvas.configure(
-				scrollregion=self.canvas.bbox("all")
-			)
-
-		self.token_frame.bind(
-			"<Configure>",
-			configure_scroll_region
-		)
-
-		# ===== token buttons =====
-
-		row = 0
-		col = 0
-
-		for idx, token in enumerate(self.tokens):
-
-			btn = tkmac.Button(
-				self.token_frame,
-				text=token,
-				width=8,
-				bg="lightgray"
-			)
-
-			btn.bind("<Button-1>", partial(self.left_click, idx))
-			btn.bind("<Button-3>", partial(self.right_click, idx))
-
-			btn.grid(
-				row=row,
-				column=col,
-				padx=2,
-				pady=2,
-				sticky="nsew"
-			)
-
-			self.buttons.append(btn)
-
-			col += 1
-			if col >= 25:
-				row += 1
-				col = 0
-
-		# ===== Mouse wheel scrolling =====
-
-		self.canvas.bind_all(
-			"<MouseWheel>",
-			lambda e: self.canvas.yview_scroll(
-				int(-e.delta / 120),
-				"units"
-			)
-		)
-
-		# ===== Controls =====
-
-		control_frame = tk.Frame(self.root)
-		control_frame.pack(fill="x", pady=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Clear All",
-			command=self.clear_all
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Load Text",
-			command=self.load_text_file
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Load BIO",
-			command=self.load_bio
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Save BIO",
-			command=self.save_bio
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Enter Metadata",
-			command=self.enter_meta
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Display Metadata",
-			command=self.display_meta
-		).pack(side="left", padx=5)
-
-		tkmac.Button(
-			control_frame,
-			text="Done Annotating",
-			command=self.finished
-		).pack(side="left", padx=5)
-
-		self.auto_propagate = tk.BooleanVar(
-			value=True
-		)
 		
-		tk.Checkbutton(
-			control_frame,
-			text="Auto Annotate Matching Concepts",
-			variable=self.auto_propagate
-		).pack(side="left")
+
+		central = QWidget()
+		self.setCentralWidget(central)
+
+		main_layout = QVBoxLayout(central)
+
+		self.scroll_area = QScrollArea()
+		self.scroll_area.setWidgetResizable(True)
+
+		self.token_widget = QWidget()
+		self.token_layout = QVBoxLayout(self.token_widget)
+
+		self.scroll_area.setWidget(self.token_widget)
+
+		main_layout.addWidget(self.scroll_area)
+
+		controls = QHBoxLayout()
+
+		btn = QPushButton("Load Text")
+		btn.clicked.connect(self.load_text_file)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Load BIO")
+		btn.clicked.connect(self.load_bio)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Save BIO")
+		btn.clicked.connect(self.save_bio)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Clear All")
+		btn.clicked.connect(self.clear_all)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Enter Metadata")
+		btn.clicked.connect(self.enter_meta)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Display Metadata")
+		btn.clicked.connect(self.display_meta)
+		controls.addWidget(btn)
+
+		btn = QPushButton("Done Annotating")
+		btn.clicked.connect(self.finished)
+		controls.addWidget(btn)
+
+		self.auto_propagate = QCheckBox(
+			"Auto Annotate Matching Concepts"
+		)
+		self.auto_propagate.setChecked(True)
+
+		controls.addWidget(self.auto_propagate)
+
+		main_layout.addLayout(controls)
 
 	def get_previous_span(self, idx):
 
@@ -539,13 +494,13 @@ class ConceptAnnotator:
 	def finished(self):
 		self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 
-	def left_click(self, idx, event):
+	def left_click(self, idx):
 
 		# Remove label
 		if self.labels[self.token_indices[idx]] != "O":
 			start, end = self.get_span(idx)
 			self.labels[self.token_indices[idx]] = "O"
-			if self.auto_propagate.get():
+			if self.auto_propagate.isChecked():
 				concept = tuple(
 					token.casefold()
 					for token in self.selectable_tokens[start:end]
@@ -560,7 +515,7 @@ class ConceptAnnotator:
 						self.create_concept(idx + 1, end)
 
 
-			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0 and start != self.last_edited_concept[0]:
+			if self.auto_propagate.isChecked() and self.last_edited_concept[0] >= 0 and start != self.last_edited_concept[0]:
 				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 			self.last_edited_concept = (-1, -1)
 			print(self.last_edited_concept)
@@ -585,7 +540,7 @@ class ConceptAnnotator:
 
 		else:
 			self.labels[self.token_indices[idx]] = "B-Concept"
-			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0:
+			if self.auto_propagate.isChecked() and self.last_edited_concept[0] >= 0:
 				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 
 		self.last_edited_concept = self.get_span(idx)
@@ -597,18 +552,18 @@ class ConceptAnnotator:
 
 
 
-	def right_click(self, idx, event):
+	def right_click(self, idx):
 		if self.labels[self.token_indices[idx]] == "B-Concept" and self.labels[self.token_indices[idx - 1]] != 'O':
-			if self.auto_propagate.get():
+			if self.auto_propagate.isChecked():
 				start, end = self.get_span(idx)
 				start_p, end_p = self.get_span(idx-1)
-				if self.auto_propagate.get() and self.last_edited_concept[0] >= 0 and \
+				if self.auto_propagate.isChecked() and self.last_edited_concept[0] >= 0 and \
 					  self.last_edited_concept[0] != start and self.last_edited_concept[0] != start_p:
 					self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 				self.last_edited_concept = (start_p, end)
 			self.labels[self.token_indices[idx]] = "I-Concept"
 		elif self.labels[self.token_indices[idx]] == "I-Concept":
-			if self.auto_propagate.get():
+			if self.auto_propagate.isChecked():
 				start, end = self.get_span(idx)
 				self.labels[self.token_indices[idx]] = "B-Concept"
 
@@ -623,7 +578,7 @@ class ConceptAnnotator:
 				self.create_concept(idx, end)
 
 		else:
-			if self.auto_propagate.get() and self.last_edited_concept[0] >= 0:
+			if self.auto_propagate.isChecked() and self.last_edited_concept[0] >= 0:
 				self.commit_concept(self.last_edited_concept[0], self.last_edited_concept[1])
 			self.labels[self.token_indices[idx]] = "B-Concept"
 			self.last_edited_concept = (idx, idx + 1)
@@ -637,18 +592,39 @@ class ConceptAnnotator:
 		self.refresh()
 
 	def refresh(self):
+
 		for i, btn in enumerate(self.buttons):
 
-			label = self.labels[self.token_indices[i]]
+			label = self.labels[
+				self.token_indices[i]
+			]
 
 			if label == "O":
-				btn.configure(bg="lightgray", fg="black")
+
+				btn.setStyleSheet("""
+					QPushButton {
+						background-color: lightgray;
+						color: black;
+					}
+				""")
 
 			elif label.startswith("B-"):
-				btn.configure(bg="#2ecc71", fg="white")
+
+				btn.setStyleSheet("""
+					QPushButton {
+						background-color: #2ecc71;
+						color: black						;
+					}
+				""")
 
 			elif label.startswith("I-"):
-				btn.configure(bg="#3498db", fg="white")
+
+				btn.setStyleSheet("""
+					QPushButton {
+						background-color: #3498db;
+						color: black;
+					}
+				""")
 
 	def repair_bio(self):
 
@@ -673,8 +649,11 @@ class ConceptAnnotator:
 	def save_bio(self):
 		if self.metadata['segments'] is None:
 			self.enter_meta()
-		filename = filedialog.asksaveasfilename(
-			defaultextension=".conll"
+		filename, _ = QFileDialog.getSaveFileName(
+			self,
+			"Save BIO",
+			"",
+			"CoNLL Files (*.conll)",
 		)
 		if not filename:
 			return
@@ -693,13 +672,11 @@ class ConceptAnnotator:
 
 	def load_bio(self):
 
-		filename = filedialog.askopenfilename(
-			title="Open BIO File",
-			filetypes=[
-				("BIO files", ["*.bio", "*.conll"]),
-				("Text files", "*.txt"),
-				("All files", "*.*")
-			]
+		filename, _ = QFileDialog.getOpenFileName(
+			self,
+			"Open BIO File",
+			"",
+			"BIO Files (*.bio *.conll)"
 		)
 
 		if not filename:
@@ -782,72 +759,108 @@ class ConceptAnnotator:
 
 		except Exception as e:
 
-			messagebox.showerror(
+			QMessageBox.critical(
+				self,
 				"Load Error",
 				str(e)
 			)
-
 
 	def load_tokens(self, tokens):
 
 		self.tokens = tokens
 		self.labels = ["O"] * len(tokens)
 
-		for widget in self.token_frame.winfo_children():
-			widget.destroy()
+		while self.token_layout.count():
+			item = self.token_layout.takeAt(0)
+
+			if item.widget():
+				item.widget().deleteLater()
 
 		self.buttons = []
 		self.token_indices = []
 
-		max_tokens_per_row = 25
-		row_frame = tk.Frame(self.token_frame)
-		row_frame.pack(anchor="w")
+		row_widget = QWidget()
+		row_layout = QHBoxLayout(row_widget)
+		row_layout.setAlignment(Qt.AlignmentFlag.AlignLeft)
+		row_layout.setSpacing(1)
+		row_layout.setContentsMargins(2, 2, 2, 2)
 
-		for idx, token in enumerate(self.tokens):
+		self.token_layout.addWidget(row_widget)
+
+		for idx, token in enumerate(tokens):
 
 			if token == NEWLINE_TOKEN:
-				row_frame = tk.Frame(self.token_frame)
-				row_frame.pack(anchor="w")
+
+				row_widget = QWidget()
+				row_layout = QHBoxLayout(row_widget)
+				row_layout.setAlignment(Qt.AlignmentFlag.AlignLeft)
+				row_layout.setSpacing(1)
+				row_layout.setContentsMargins(2, 2, 2, 2)
+
+				self.token_layout.addWidget(row_widget)
+
 				continue
 
 			if token == FORMFEED_TOKEN:
-				
-				ttk.Separator(
-					self.token_frame,
-					orient="horizontal"
-				).pack(fill="x", pady=10)
 
-				row_frame = tk.Frame(self.token_frame)
-				row_frame.pack(anchor="w")
-				
+				sep = QFrame()
+				sep.setFrameShape(QFrame.Shape.HLine)
+
+				self.token_layout.addWidget(sep)
+
+				row_widget = QWidget()
+				row_layout = QHBoxLayout(row_widget)
+				row_layout.setAlignment(Qt.AlignmentFlag.AlignLeft)
+				row_layout.setSpacing(1)
+				row_layout.setContentsMargins(2, 2, 2, 2)
+
+				self.token_layout.addWidget(row_widget)
+
 				continue
 
-			btn = tkmac.Button(
-				row_frame,
-				text=f"{token}",
-				font=self.token_font,
-				bg="lightgray",
-				padx=2,
-				pady=1
+			button = TokenButton(
+				token,
+				len(self.buttons)
 			)
 
+			button.setFont(self.token_font)
+
+			button.setSizePolicy(
+				QSizePolicy.Policy.Fixed,
+				QSizePolicy.Policy.Fixed
+			)
+
+			button.setStyleSheet("""
+			QPushButton {
+				padding: 1px 3px;
+			}
+			""")
+
+			button.leftClicked.connect(
+				self.left_click
+			)
+
+			button.rightClicked.connect(
+				self.right_click
+			)
+
+			row_layout.addWidget(button)
+
+			self.buttons.append(button)
 			self.token_indices.append(idx)
 
-			btn.bind("<Button-1>", partial(self.left_click, len(self.buttons)))
-			btn.bind("<Button-3>", partial(self.right_click, len(self.buttons)))
+		self.selectable_tokens = [
+			tokens[i]
+			for i in self.token_indices
+		]
 
-			btn.pack(side="left", padx=2, pady=1)
-
-			self.buttons.append(btn)
-
-		self.selectable_tokens = [self.tokens[i] for i in self.token_indices]
 		self.refresh()
-
 	def load_text_file(self):
 
-		filename = filedialog.askopenfilename(
-			title="Select text file",
-			filetypes=[("Text files", "*.txt")],
+		filename, _ = QFileDialog.getOpenFileName(
+			self,
+			"Select text file",
+			"",
 		)
 
 		if not filename:
@@ -871,17 +884,10 @@ class ConceptAnnotator:
 
 if __name__ == "__main__":
 
-	root = tk.Tk()
+	app = QApplication(sys.argv)
 
-	app = ConceptAnnotator(root, [])
-	root.mainloop()
-	try:
-		root.P.kill()
-	except:
-		pass
-	try:
-		root.L.kill()
-	except:
-		pass
-	PID = os.getpid()
-	os.kill(PID, signal.SIGKILL) 
+	window = ConceptAnnotator([])
+	window.resize(1400, 900)
+	window.show()
+
+	sys.exit(app.exec())

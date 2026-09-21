@@ -6,6 +6,8 @@ from tkinter import filedialog, messagebox, ttk, font, simpledialog
 from functools import partial
 import re
 import ast
+import os
+import signal
 
 NEWLINE_TOKEN = "__NEWLINE__"
 FORMFEED_TOKEN = "__FORMFEED__"
@@ -53,7 +55,7 @@ class ConceptAnnotator:
 		self.token_indices = []
 		self.token_font = font.Font(
 			family="Lucida Sans Unicode",
-			size=10
+			size=6
 		)
 
 		self.create_ui()
@@ -236,7 +238,7 @@ class ConceptAnnotator:
 			self.concepts.remove(concept)
 
 		for start in self.find_occurrences(concept, 0):
-			if (start+n+1 < len(self.token_indices) and self.labels[self.token_indices[start+n+1]] != "I-Concept"):
+			if (start+n+1 < len(self.token_indices) and self.labels[self.token_indices[start]] == "B-Concept" and self.labels[self.token_indices[start+n+1]] != "I-Concept"):
 				self.labels[self.token_indices[start]] = "O"
 
 				for i in range(1, n):
@@ -249,6 +251,9 @@ class ConceptAnnotator:
 		for start in self.find_occurrences(concept, app_start):
 
 			tok_start = self.token_indices[start]
+
+			if self.labels[tok_start] == "I-Concept":
+				continue
 
 			self.labels[tok_start] = "B-Concept"
 
@@ -413,7 +418,7 @@ class ConceptAnnotator:
 			btn = tk.Button(
 				self.token_frame,
 				text=token,
-				width=12,
+				width=8,
 				bg="lightgray"
 			)
 
@@ -423,7 +428,7 @@ class ConceptAnnotator:
 			btn.grid(
 				row=row,
 				column=col,
-				padx=2,
+				padx=4,
 				pady=2,
 				sticky="nsew"
 			)
@@ -431,7 +436,7 @@ class ConceptAnnotator:
 			self.buttons.append(btn)
 
 			col += 1
-			if col >= 10:
+			if col >= 25:
 				row += 1
 				col = 0
 
@@ -669,7 +674,7 @@ class ConceptAnnotator:
 		if self.metadata['segments'] is None:
 			self.enter_meta()
 		filename = filedialog.asksaveasfilename(
-		defaultextension=".txt"
+		defaultextension=".conll",
 		)
 		if not filename:
 			return
@@ -794,7 +799,8 @@ class ConceptAnnotator:
 		self.buttons = []
 		self.token_indices = []
 
-		max_tokens_per_row = 20
+		max_tokens_per_row = 50
+		row = 0
 		row_frame = tk.Frame(self.token_frame)
 		row_frame.pack(anchor="w")
 
@@ -803,6 +809,7 @@ class ConceptAnnotator:
 			if token == NEWLINE_TOKEN:
 				row_frame = tk.Frame(self.token_frame)
 				row_frame.pack(anchor="w")
+				row += 1
 				continue
 
 			if token == FORMFEED_TOKEN:
@@ -831,7 +838,7 @@ class ConceptAnnotator:
 			btn.bind("<Button-1>", partial(self.left_click, len(self.buttons)))
 			btn.bind("<Button-3>", partial(self.right_click, len(self.buttons)))
 
-			btn.pack(side="left", padx=2, pady=1)
+			btn.pack(side="left", padx=4, pady=2)
 
 			self.buttons.append(btn)
 
@@ -842,7 +849,7 @@ class ConceptAnnotator:
 
 		filename = filedialog.askopenfilename(
 			title="Select text file",
-			filetypes=[("Text files", "*.txt")]
+			filetypes=[("Text files", "*.txt")],
 		)
 
 		if not filename:
@@ -866,8 +873,18 @@ class ConceptAnnotator:
 
 if __name__ == "__main__":
 
-    root = tk.Tk()
+	root = tk.Tk()
 
-    app = ConceptAnnotator(root, [])
+	app = ConceptAnnotator(root, [])
 
-    root.mainloop()
+	root.mainloop()
+	try:
+		root.P.kill()
+	except:
+		pass
+	try:
+		root.L.kill()
+	except:
+		pass
+	PID = os.getpid()
+	os.kill(PID, signal.SIGKILL) 
