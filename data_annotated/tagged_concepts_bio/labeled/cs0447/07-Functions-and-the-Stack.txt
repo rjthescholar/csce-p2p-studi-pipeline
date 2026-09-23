@@ -1,0 +1,388 @@
+calling conventions
+calling convention
+functions
+arguments
+return values
+function
+caller
+callee
+caller
+callee
+program counter register
+pc
+program counter
+pc
+pc
+flow of control
+caller
+function
+callee
+caller
+callee
+jump and link instruction
+functions
+jal
+jump and link
+jal
+jump and link instruction
+functions
+jal
+jump and link
+pc
+pc
+pc
+ra
+jal
+jal
+ra
+return address
+jump register instruction
+functions
+jr
+jal
+jr
+ra
+jump register instruction
+functions
+jr
+pc
+ra
+return address
+ra
+jr
+ra
+ra
+pc
+pc
+jal
+jr
+ra
+arguments
+return values
+function
+arguments
+return values
+jr
+ra
+v registers
+a0-a3
+argument registers
+v0-v1
+return value registers
+arguments
+arguments
+function
+arguments
+a registers
+jal
+callee
+arguments
+a registers
+functions
+caller
+function
+function
+jal
+arguments
+function
+function
+jr
+ra
+unsaved registers
+function
+jr
+ra
+jal
+jal
+jal
+jal
+functions
+function
+caller
+callee
+caller
+v registers
+calling convention
+function
+functions
+ra
+v0-v1
+function
+a0-a3
+ra
+function
+jal
+jal
+v0-v1
+a0-a3
+jal
+s register
+s register
+jal
+s registers
+pc
+ra
+pc
+ra
+jal
+jal
+jr
+ra
+jal
+jal
+jr
+ra
+jr
+ra
+jr
+ra
+jr
+ra
+jr
+ra
+jr
+ra
+return address register
+stack
+stack
+functions
+stack
+stack
+stack
+stack
+function
+return address
+caller
+stack
+stack pointer
+sp
+stack
+stack pointer
+sp
+push
+stack
+sp
+sp
+sp
+sp
+ra
+stack pointer
+sp
+sp
+ra
+sp
+ra
+sp
+ra
+stack
+sp
+pop
+stack
+ra
+ra
+ra
+sp
+stack pointer
+sp
+sp
+ra
+sp
+sp
+push
+pop
+functions
+push
+ra
+pop
+ra
+push
+ra
+sp
+sp
+ra
+sp
+pop
+ra
+sp
+sp
+sp
+ra
+pseudo-ops
+ra
+sp
+pc
+ra
+jal
+push
+ra
+stack
+jal
+jr
+ra
+pop
+ra
+stack
+jr
+ra
+jr
+ra
+jal
+push
+ra
+jal
+pop
+jr
+ra
+ra
+jr
+ra
+function
+function
+calling conventions
+ra
+stack
+ra
+stack
+push
+ra
+pop
+jr
+ra
+ra
+push
+pop
+function
+calling conventions
+ra
+stack
+stack
+stack
+ra
+stack
+push
+ra
+push
+pop
+pop
+ra
+jr
+ra
+push
+pop
+function
+push
+ra
+functions
+pop
+ra
+jr
+ra
+push
+pop
+s register contract
+s register
+ra
+push
+ra
+push
+pop
+pop
+jr
+ra
+ra
+pop
+push
+function
+push
+pop
+function
+push
+ra
+push
+pop
+pop
+ra
+jr
+ra
+push
+ra
+activation frame
+push
+arguments
+saved registers
+ra
+local variables
+pop
+function prologue
+pop
+ra
+jr
+ra
+function epilogue
+stack
+heap
+stack
+heap
+heap
+dynamic memory
+dynamic memory
+heap
+heap
+functions
+functions
+function
+ra
+function
+ra
+ra
+function
+function
+ra
+ra
+ra
+ra
+jal
+ra
+jr
+ra
+saved registers
+unsaved registers
+functions
+ra
+heap
+heap
+function
+function
+function
+heap
+memory layout
+ra
+ra
+jr
+ra
+dynamic memory
+function
+function
+function
+function
+ra
+stack
+heap
+dynamic memory
+function
+stack
+function
+function
+function
+heap
+dynamic memory
+function
+sp
+stack
+function
+function
+sp
+function
+sp
+stack
+heap

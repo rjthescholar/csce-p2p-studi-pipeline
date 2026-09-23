@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math as mth
 
-filename = 'tagged-concepts-per-course'
+filename = 'tagged-concepts-per-lecture'
 infile = f'./{filename}.txt'
 outfile = f'./{filename}.png'
 

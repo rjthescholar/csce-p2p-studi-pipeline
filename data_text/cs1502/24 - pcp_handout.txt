@@ -6,7 +6,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Reducibility So Far
+
+Reducibility So Far
 
 To prove that ETM is undecidable, we need to show that if
 ETM is decidable, then ATM is decidable.
@@ -33,7 +34,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Mapping Reducibility So Far
+
+Mapping Reducibility So Far
 
 To prove that EQTM is undecidable, we need to show that
 ATM is mapping reducible to EQTM
@@ -57,7 +59,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Reduction via Computation History
+
+Reduction via Computation History
 
 To prove that ELBA is undecidable, we need to show that if
 ELBA is decidable, then ATM is decidable.
@@ -86,7 +89,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Common Theme
+
+Common Theme
 
 All three methods so far share a common process
 Take hM, wi (an instance of ATM )
@@ -107,7 +111,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Post Correspondence Problem (PCP)
+
+Post Correspondence Problem (PCP)
 A Post Correspondence Problem (PCP) is a problem
 concerning string manipulation.
 Consider a domino
@@ -140,7 +145,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Post Correspondence Problem (PCP)
+
+Post Correspondence Problem (PCP)
 
 For this set of dominoes:
 (      
@@ -188,7 +194,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Post Correspondence Problem (PCP)
+
+Post Correspondence Problem (PCP)
 An instance P of PCP
 of dominoes
 (is a collection
@@ -218,7 +225,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Post Correspondence Problem (PCP)
+
+Post Correspondence Problem (PCP)
 To prove that PCP is undecidable, we use the same method
 as what we did for other undecidable languages
 1
@@ -248,7 +256,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Modified Post Correspondence Problem (MPCP)
+
+Modified Post Correspondence Problem (MPCP)
 A Modified Post Correspondence Problem (MPCP) looks
 exactly like PCP but the match is required to start with the
 first domino.
@@ -280,7 +289,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Constructing a Set of Dominoes
+
+Constructing a Set of Dominoes
 
 For simplicity, we are going to pick a specific TM M and a
 string w
@@ -291,7 +301,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 Consider the following TM M :
 0→R
 q0
@@ -321,7 +332,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Computation History
+
+Computation History
 Recall that M accepts w if and only if accepting
 computation history for M on input w exists
 Since M (from previous slide) accepts 00, the accepting
@@ -340,7 +352,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Formal Definition of TM M
+
+Formal Definition of TM M
 
 The formal definition of the previous TM M is as follows:
 Q = {q0 , q1 }
@@ -362,7 +375,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 For the TM M (from earlier slide) and the string 00, let’s
 construct a set of dominoes (an instance of MPCP):
@@ -385,7 +399,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 Consider a configuration
 ucqav
 where u and v are strings, a and c are symbols in Γ, and q is
@@ -405,7 +420,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 For every a, b ∈ Γ and every q, r ∈ Q where q 6= qreject
  
 qa
@@ -441,7 +457,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 This is what we have so far:
 (
@@ -474,7 +491,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 Consider a configuration
 ucqav
 where u and v are strings, c and a are symbols in Γ, and q is
@@ -494,7 +512,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 For every a, b, c ∈ Γ and every q, r ∈ Q where q 6= qreject
 
@@ -524,7 +543,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 This is what we have so far:
 (
@@ -570,7 +590,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 For every a ∈ Γ, put
 
@@ -605,7 +626,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 This is what we have so far:
 (
@@ -667,7 +689,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 
 
 For every a ∈ Γ, put
@@ -723,7 +746,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting a TM and a string to a set of dominoes
+
+Converting a TM and a string to a set of dominoes
 For the TM M and the string 00, we get this set of dominoes:
 (
 
@@ -813,7 +837,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -907,7 +932,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 The top string is shorter than the bottom string:
 
   
@@ -995,7 +1021,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 The set of dominoes
 (
 
@@ -1090,7 +1117,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1190,7 +1218,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1296,7 +1325,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1404,7 +1434,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1516,7 +1547,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1632,7 +1664,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1754,7 +1787,8 @@ qa
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -1878,7 +1912,8 @@ qa #
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -2006,7 +2041,8 @@ qa #
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -2140,7 +2176,8 @@ qa
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -2274,7 +2311,8 @@ qa #
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -2414,147 +2452,8 @@ Post Correspondence Problem
 
 qa
 
-The set of dominoes
-Let’s focus on the set of dominoes that we just constructed:
-(
 
- 
- 
- 
- 
- 
- 
-
-q0 0
-q0 1
-q1 0
-q0 t
-q1 t
-0q1 1
-#
-,
-,
-,
-,
-,
-,
-,
-#q0 00#
-0q1
-1qr
-0qa
-q0 01
-tqr
-tqr
- 
-           
- 
-
-
-tq1 1
-0
-1
-t
-#
-#
-0qa
-1qa
-1q1 1
-,
-,
-,
-,
-,
-,
-,
-,
-,
-t
-q0 11
-q0 t1
-0
-1
-#
-t#
-qa
-qa
-)
-
- 
- 
- 
- 
-
-tqa
-qa 0
-qa 1
-qa t
-qa ##
-,
-,
-,
-,
-qa
-qa
-qa
-qa
-#
-
-#
-
-q0 0
-
-0
-
-#
-
-0
-
-q1 0
-
-#
-
-0
-
-0
-
-qa #
-
-0
-
-qa #
-
-#
-
-q0 0
-
-0
-
-#
-
-0
-
-q1 0
-
-#
-
-0
-
-0
-
-qa #
-
-0
-
-qa #
-
-Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
-
-Post Correspondence Problem
-
-qa #
-
-The set of dominoes
+The set of dominoes
 Let’s focus on the set of dominoes that we just constructed:
 (
 
@@ -2664,6 +2563,147 @@ qa #
 
 qa #
 
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
+Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
+
+Post Correspondence Problem
+
+qa #
+
+
+The set of dominoes
+Let’s focus on the set of dominoes that we just constructed:
+(
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+q0 0
+q0 1
+q1 0
+q0 t
+q1 t
+0q1 1
+#
+,
+,
+,
+,
+,
+,
+,
+#q0 00#
+0q1
+1qr
+0qa
+q0 01
+tqr
+tqr
+ 
+           
+ 
+
+
+tq1 1
+0
+1
+t
+#
+#
+0qa
+1qa
+1q1 1
+,
+,
+,
+,
+,
+,
+,
+,
+,
+t
+q0 11
+q0 t1
+0
+1
+#
+t#
+qa
+qa
+)
+
+ 
+ 
+ 
+ 
+
+tqa
+qa 0
+qa 1
+qa t
+qa ##
+,
+,
+,
+,
+qa
+qa
+qa
+qa
+#
+
+#
+
+q0 0
+
+0
+
+#
+
+0
+
+q1 0
+
+#
+
+0
+
+0
+
+qa #
+
+0
+
+qa #
+
 qa #
 
 #
@@ -2700,7 +2740,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 The set of dominoes
 (
 
@@ -2797,7 +2838,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-The set of dominoes
+
+The set of dominoes
 The set of dominoes
 (
 
@@ -2892,7 +2934,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting P 0 of MPCP to P of PCP
+
+Converting P 0 of MPCP to P of PCP
 Now we have an instance P 0 of MPCP. We need to convert it
 to an instance of PCP.
 We need to enforce that the only match of P must start with
@@ -2915,7 +2958,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Converting P 0 of MPCP to P of PCP
+
+Converting P 0 of MPCP to P of PCP
 If P 0 were the collection
 (     
  )
@@ -2972,7 +3016,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Conclusion
+
+Conclusion
 
 Assume that PCP is decidable. Thus, there exists TM R
 decides PCP.
@@ -2995,7 +3040,8 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-Conclusion
+
+Conclusion
 Show that TM S is a decider for ATM
 1
 
@@ -3021,4 +3067,4 @@ Thumrongsak Kosiyatrakul tkosiyat@cs.pitt.edu
 
 Post Correspondence Problem
 
-
+
