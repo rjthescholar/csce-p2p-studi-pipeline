@@ -1,37 +1,37 @@
-ast
-instruction formats
-shamt
-compilers
-imm
 rs
-register file
-pcsrc
+data segment
 jumps
-rt
-immediate
-compiler
-assemblers
-rd
+instruction fetching
+fixups
+ast
+compilers
 jump target
-object file
-control signal
+rt
+abstract syntax tree
+opcode
 machine code
 pc
-memory alignment
-alu
 funct
-instruction fetching
-data segment
+rd
+control signal
+instruction formats
+alu
 branch offset
-la
-branches
-j-type instruction format
-abstract syntax tree
-assembler
-bitfield
-pc source
+shamt
+compiler
 control flow instructions
-fixups
-opcode
-tokens
+register file
 jalr
+immediate
+assemblers
+imm
+j-type instruction format
+tokens
+la
+pc source
+bitfield
+memory alignment
+branches
+object file
+pcsrc
+assembler

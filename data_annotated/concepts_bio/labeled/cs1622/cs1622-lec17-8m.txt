@@ -1,27 +1,27 @@
-interprocedural optimizations
-function inlining
-cfg
-bbs
-single static assignment form
-global optimization
-dead code elimination
-local optimization
 strength reduction
-single static assignment
+cfg
+ssa
+single assignment form
+common subexpression elimination
+interprocedural optimization
+peephole optimizations
+global optimizations
+bbs
+dce
+ir
+cse
 dead store elimination
 constant folding
+global optimization
 copy propagation
-algebraic simplification
-global optimizations
-interprocedural optimization
-single assignment form
-peephole optimizations
-ssa
-common subexpression elimination
-cse
-local optimizations
+single static assignment
+local optimization
+function inlining
+interprocedural optimizations
 optimization
-ir
+local optimizations
 dead store
+algebraic simplification
+single static assignment form
+dead code elimination
 optimizations
-dce

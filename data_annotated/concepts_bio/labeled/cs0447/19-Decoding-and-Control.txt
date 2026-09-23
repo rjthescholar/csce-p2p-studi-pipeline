@@ -1,33 +1,33 @@
-funct
-interconnect
-select pin
-write-back
-regwrite
-alusrc
-instruction decoding
-pcsrc
-if
-instruction format
-fetch
-memtoreg
-operand fetch
-execute
-harvard architecture
-id
-ex
-memory access
-instruction execution
 write enables
-shamt
-multi-cycle
-regdatasrc
-select pins
-wb
-memwrite
-decode
-structural hazards
+von neumann architecture
+interconnect
+execute
 mem
 control signals
-von neumann architecture
+memwrite
+alusrc
+write-back
 aluop
+regdatasrc
+instruction format
+instruction execution
+structural hazards
+if
+select pins
 interconnect matrix
+select pin
+shamt
+ex
+multi-cycle
+operand fetch
+funct
+decode
+regwrite
+fetch
+harvard architecture
+memtoreg
+wb
+memory access
+pcsrc
+instruction decoding
+id

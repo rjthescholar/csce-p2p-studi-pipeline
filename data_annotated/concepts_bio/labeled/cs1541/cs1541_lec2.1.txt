@@ -1,18 +1,18 @@
-id
-single-cycle implementation
-multiplexer
-multi-cycle implementation
-register writeback
-decoded
 critical path
-clock
-propagation delay
-instruction fetch
-mem
+id
 instruction decode
+mem
+if
+single-cycle implementation
 ex
+decoded
+instruction fetch
 execute
+multiplexer
+register writeback
+clock
+multi-cycle implementation
+propagation delay
+decoder
 minimal mips
 wb
-if
-decoder
