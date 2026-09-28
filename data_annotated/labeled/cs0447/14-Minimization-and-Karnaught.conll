@@ -1,0 +1,6007 @@
+['labeled']|cs0447|lec14
+-DOCSTART- -X- -X- O
+
+# _ _ O
+E _ _ O
+
+
+Minimization _ _ O
+and _ _ O
+
+K _ _ O
+- _ _ O
+maps _ _ O
+
+Original _ _ O
+slides _ _ O
+by _ _ O
+: _ _ O
+Jarrett _ _ O
+Billingsley _ _ O
+
+Modified _ _ O
+with _ _ O
+bits _ _ O
+from _ _ O
+: _ _ O
+Bruce _ _ O
+
+Childers _ _ O
+, _ _ O
+David _ _ O
+Wilkinson _ _ O
+
+
+CS _ _ O
+0447 _ _ O
+
+Introduction _ _ O
+to _ _ O
+
+Computer _ _ O
+Programming _ _ O
+
+
+Luís _ _ O
+Oliveira _ _ O
+
+
+Fall _ _ O
+2020 _ _ O
+
+
+
+Class _ _ O
+announcements _ _ O
+
+● _ _ O
+Check _ _ O
+the _ _ O
+schedule _ _ O
+
+o _ _ O
+I _ _ O
+’ _ _ O
+ll _ _ O
+post _ _ O
+examples _ _ O
+of _ _ O
+circuits _ _ O
+and _ _ O
+suggestions _ _ O
+of _ _ O
+exercises _ _ O
+
+● _ _ O
+Labs _ _ O
+will _ _ O
+be _ _ O
+submitted _ _ O
+via _ _ O
+Gradescope _ _ O
+
+
+2 _ _ O
+
+
+
+How _ _ O
+ICs _ _ O
+are _ _ O
+made _ _ O
+in _ _ O
+3 _ _ O
+slides _ _ O
+
+( _ _ O
+another _ _ O
+For _ _ O
+Fun _ _ O
+™ _ _ O
+section _ _ O
+) _ _ O
+
+
+3 _ _ O
+
+
+
+How _ _ O
+ICs _ _ B-Concept
+( _ _ O
+integrated _ _ B-Concept
+circuits _ _ I-Concept
+) _ _ O
+are _ _ O
+made _ _ O
+
+● _ _ O
+silicon _ _ O
+is _ _ O
+purified _ _ O
+and _ _ O
+grown _ _ O
+into _ _ O
+a _ _ O
+
+monolithic _ _ O
+crystal _ _ O
+( _ _ O
+extremely _ _ O
+expensive _ _ O
+) _ _ O
+
+● _ _ O
+this _ _ O
+is _ _ O
+sliced _ _ O
+thinly _ _ O
+to _ _ O
+make _ _ O
+wafers _ _ B-Concept
+
+
+o _ _ O
+gooey _ _ O
+caramel _ _ O
+is _ _ O
+put _ _ O
+between _ _ O
+them _ _ O
+to _ _ O
+make _ _ O
+stroopwafel _ _ O
+
+
+● _ _ O
+a _ _ O
+series _ _ O
+of _ _ O
+complicated _ _ O
+photochemical _ _ O
+
+processes _ _ O
+do _ _ O
+things _ _ O
+like _ _ O
+: _ _ O
+
+o _ _ O
+change _ _ O
+its _ _ O
+electrical _ _ O
+properties _ _ O
+
+o _ _ O
+make _ _ O
+wires _ _ O
+to _ _ O
+connect _ _ O
+things _ _ O
+
+o _ _ O
+make _ _ O
+inert _ _ O
+insulating _ _ O
+layers _ _ O
+
+
+4 _ _ O
+
+
+
+How _ _ O
+ICs _ _ B-Concept
+( _ _ O
+integrated _ _ B-Concept
+circuits _ _ I-Concept
+) _ _ O
+are _ _ O
+made _ _ O
+
+● _ _ O
+many _ _ O
+ICs _ _ B-Concept
+are _ _ O
+printed _ _ O
+on _ _ O
+one _ _ O
+wafer _ _ O
+
+● _ _ O
+the _ _ O
+wafers _ _ B-Concept
+are _ _ O
+diced _ _ O
+( _ _ O
+chopped _ _ O
+up _ _ O
+) _ _ O
+
+● _ _ O
+the _ _ O
+ICs _ _ B-Concept
+are _ _ O
+tested _ _ O
+
+● _ _ O
+the _ _ O
+ICs _ _ B-Concept
+are _ _ O
+mounted _ _ O
+in _ _ O
+a _ _ O
+package _ _ O
+- _ _ O
+> _ _ O
+
+● _ _ O
+they _ _ O
+' _ _ O
+re _ _ O
+tested _ _ O
+again _ _ O
+
+● _ _ O
+then _ _ O
+they _ _ O
+' _ _ O
+re _ _ O
+ready _ _ O
+to _ _ O
+sell _ _ O
+
+
+5 _ _ O
+
+
+
+Manufacturing _ _ B-Concept
+yield _ _ I-Concept
+
+● _ _ O
+ICs _ _ B-Concept
+are _ _ O
+tiny _ _ O
+and _ _ O
+complex _ _ O
+
+● _ _ O
+silicon _ _ O
+crystals _ _ O
+can _ _ O
+have _ _ O
+defects _ _ O
+
+● _ _ O
+a _ _ O
+tiny _ _ O
+speck _ _ O
+of _ _ O
+dust _ _ O
+during _ _ O
+production _ _ O
+can _ _ O
+ruin _ _ O
+an _ _ O
+entire _ _ O
+chip _ _ O
+
+● _ _ O
+the _ _ O
+yield _ _ B-Concept
+is _ _ O
+the _ _ O
+percentage _ _ O
+of _ _ O
+usable _ _ O
+chips _ _ O
+
+o _ _ O
+bigger _ _ O
+chips _ _ O
+have _ _ O
+smaller _ _ O
+yields _ _ O
+: _ _ O
+more _ _ O
+opportunities _ _ O
+for _ _ O
+mistakes _ _ O
+! _ _ O
+
+● _ _ O
+the _ _ O
+size _ _ O
+of _ _ O
+the _ _ O
+silicon _ _ O
+is _ _ O
+the _ _ O
+biggest _ _ O
+factor _ _ O
+in _ _ O
+the _ _ O
+price _ _ O
+of _ _ O
+an _ _ O
+IC _ _ O
+
+o _ _ O
+huge _ _ O
+ICs _ _ B-Concept
+( _ _ O
+several _ _ O
+cm _ _ O
+on _ _ O
+each _ _ O
+side _ _ O
+! _ _ O
+) _ _ O
+, _ _ O
+such _ _ O
+as _ _ O
+very _ _ O
+high _ _ O
+- _ _ O
+resolution _ _ O
+camera _ _ O
+
+sensors _ _ O
+, _ _ O
+can _ _ O
+cost _ _ O
+tens _ _ O
+of _ _ O
+thousands _ _ O
+of _ _ O
+dollars _ _ O
+! _ _ O
+
+● _ _ O
+manufacturers _ _ O
+can _ _ O
+also _ _ O
+bin _ _ O
+resulting _ _ O
+chips _ _ O
+
+o _ _ O
+bug _ _ O
+- _ _ O
+free _ _ O
+ones _ _ O
+can _ _ O
+be _ _ O
+sold _ _ O
+as _ _ O
+Core _ _ O
+i7s _ _ O
+for _ _ O
+lotsa _ _ O
+money _ _ O
+
+o _ _ O
+slightly _ _ O
+malformed _ _ O
+ones _ _ O
+can _ _ O
+be _ _ O
+sold _ _ O
+as _ _ O
+Core _ _ O
+i5s _ _ O
+and _ _ O
+i3s _ _ O
+
+o _ _ O
+the _ _ O
+ones _ _ O
+they _ _ O
+sweep _ _ O
+off _ _ O
+the _ _ O
+floor _ _ O
+are _ _ O
+the _ _ O
+Celerons _ _ O
+
+
+6 _ _ O
+
+
+
+Logic _ _ B-Concept
+Minimization _ _ I-Concept
+
+
+7 _ _ O
+
+
+
+Silicon _ _ O
+is _ _ O
+expensive _ _ O
+, _ _ O
+rocks _ _ O
+are _ _ O
+slow _ _ O
+
+● _ _ O
+Logic _ _ B-Concept
+minimization _ _ I-Concept
+means _ _ O
+using _ _ O
+the _ _ O
+smallest _ _ O
+number _ _ O
+of _ _ O
+gates _ _ O
+/ _ _ O
+transistors _ _ O
+
+possible _ _ O
+to _ _ O
+implement _ _ O
+a _ _ O
+boolean _ _ B-Concept
+function _ _ I-Concept
+
+o _ _ O
+a _ _ O
+boolean _ _ B-Concept
+function _ _ I-Concept
+is _ _ O
+anything _ _ O
+we _ _ O
+' _ _ O
+ve _ _ O
+talked _ _ O
+about _ _ O
+
+o _ _ O
+it _ _ O
+has _ _ O
+boolean _ _ B-Concept
+inputs _ _ I-Concept
+, _ _ O
+and _ _ O
+boolean _ _ B-Concept
+outputs _ _ I-Concept
+
+▪ _ _ O
+Less _ _ O
+inputs _ _ O
+can _ _ O
+also _ _ O
+improve _ _ O
+speed _ _ O
+
+● _ _ O
+Fewer _ _ O
+transistors _ _ O
+means _ _ O
+: _ _ O
+
+o _ _ O
+smaller _ _ O
+area _ _ O
+: _ _ O
+
+▪ _ _ O
+cheaper _ _ O
+chips _ _ O
+! _ _ O
+
+▪ _ _ O
+more _ _ O
+stuff _ _ O
+on _ _ O
+one _ _ O
+chip _ _ O
+! _ _ O
+
+▪ _ _ O
+smaller _ _ O
+chance _ _ O
+of _ _ O
+manufacturing _ _ O
+defects _ _ O
+! _ _ O
+
+o _ _ O
+less _ _ O
+gate _ _ B-Concept
+delay _ _ I-Concept
+: _ _ O
+
+▪ _ _ O
+faster _ _ O
+circuits _ _ O
+! _ _ O
+
+
+8 _ _ O
+
+
+
+Minimizing _ _ O
+Booleans _ _ O
+
+● _ _ O
+How _ _ O
+do _ _ O
+we _ _ O
+minimize _ _ O
+Boolean _ _ B-Concept
+functions _ _ I-Concept
+? _ _ O
+
+o _ _ O
+Logical _ _ B-Concept
+adjacency _ _ I-Concept
+! _ _ O
+
+● _ _ O
+If _ _ O
+in _ _ O
+two _ _ O
+Boolean _ _ O
+terms _ _ O
+being _ _ O
+ORed _ _ O
+only _ _ O
+one _ _ O
+of _ _ O
+the _ _ O
+variables _ _ O
+changes _ _ O
+then _ _ O
+it _ _ O
+
+can _ _ O
+be _ _ O
+removed _ _ O
+
+
+ഥ _ _ O
++ _ _ O
+𝐀𝐁 _ _ O
+= _ _ O
+𝐀 _ _ O
+𝑩 _ _ O
+
+ഥ _ _ O
++ _ _ O
+𝑩 _ _ O
+= _ _ O
+𝑨 _ _ O
+
+o _ _ O
+𝑸 _ _ O
+= _ _ O
+𝐀𝑩 _ _ O
+
+ഥ _ _ O
+= _ _ O
+𝑨𝑩 _ _ O
+
+ഥ _ _ O
+= _ _ O
+𝑨𝑩 _ _ O
+
+ഥ _ _ O
+𝑪 _ _ O
++ _ _ O
+𝑨𝑩 _ _ O
+
+ഥ𝑪 _ _ O
+
+ഥ _ _ O
+𝑪 _ _ O
++ _ _ O
+𝑪 _ _ O
+
+ഥ _ _ O
+
+o _ _ O
+𝑸 _ _ O
+= _ _ O
+𝑨𝑩 _ _ O
+
+● _ _ O
+To _ _ O
+minimize _ _ O
+a _ _ O
+Boolean _ _ O
+expression _ _ O
+
+o _ _ O
+Find _ _ O
+the _ _ O
+terms _ _ O
+where _ _ O
+only _ _ O
+one _ _ O
+variable _ _ O
+changes _ _ O
+
+o _ _ O
+Eliminate _ _ O
+that _ _ O
+variable _ _ O
+
+
+9 _ _ O
+
+
+
+A _ _ O
+first _ _ O
+try _ _ O
+
+● _ _ O
+The _ _ O
+truth _ _ O
+table _ _ O
+for _ _ O
+a _ _ O
+two _ _ O
+- _ _ O
+input _ _ O
+1 _ _ O
+- _ _ O
+bit _ _ O
+
+multiplexer _ _ B-Concept
+. _ _ O
+
+
+A _ _ O
+
+
+A _ _ O
+
+Q _ _ O
+
+
+B _ _ O
+
+
+Q _ _ O
+
+
+B _ _ O
+
+S _ _ O
+= _ _ O
+0 _ _ O
+
+
+S _ _ O
+= _ _ O
+1 _ _ O
+
+
+S _ _ O
+Q _ _ O
+
+
+S _ _ O
+A _ _ O
+B _ _ O
+Q _ _ O
+
+
+0 _ _ O
+A _ _ O
+
+
+0 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+0 _ _ O
+A _ _ O
+
+
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+0 _ _ O
+A _ _ O
+
+
+0 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+
+
+0 _ _ O
+A _ _ O
+
+
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+1 _ _ O
+B _ _ O
+
+
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+1 _ _ O
+B _ _ O
+
+
+1 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+1 _ _ O
+B _ _ O
+
+
+1 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+1 _ _ O
+B _ _ O
+
+
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+10 _ _ O
+
+
+
+A _ _ O
+first _ _ O
+try _ _ O
+
+● _ _ O
+The _ _ O
+truth _ _ O
+table _ _ O
+for _ _ O
+a _ _ O
+two _ _ O
+- _ _ O
+input _ _ O
+1 _ _ O
+- _ _ O
+bit _ _ O
+multiplexer _ _ B-Concept
+. _ _ O
+
+
+S _ _ O
+A _ _ O
+B _ _ O
+Q _ _ O
+
+0 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ഥ _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+
+𝐒ത𝐀𝑩 _ _ O
+
+𝐒ത𝐀𝐁 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+1 _ _ O
+0 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+ഥ𝐁 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+
+𝐒𝑨 _ _ O
+
+1 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+
+
+𝐒𝐀𝐁 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+ഥ _ _ O
++ _ _ O
+𝐒ത𝐀𝐁 _ _ O
++ _ _ O
+𝐒𝑨 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
++ _ _ O
+𝐒𝐀𝐁 _ _ O
+
+𝑸 _ _ O
+= _ _ O
+𝐒ത𝐀𝑩 _ _ O
+
+Are _ _ O
+there _ _ O
+any _ _ O
+adjacencies _ _ B-Concept
+? _ _ O
+
+Well _ _ O
+… _ _ O
+I _ _ O
+guess _ _ O
+we _ _ O
+don _ _ O
+’ _ _ O
+t _ _ O
+need _ _ O
+
+those _ _ O
+variables _ _ O
+
+
+𝑸 _ _ O
+= _ _ O
+𝐒ത𝐀 _ _ O
++ _ _ O
+𝐒ത𝐀 _ _ O
++ _ _ O
+𝐒𝐁 _ _ O
++ _ _ O
+𝐒𝐁 _ _ O
+
+This _ _ O
+seems _ _ O
+easy _ _ O
+… _ _ O
+
+
+𝑸 _ _ O
+= _ _ O
+𝐒ത𝐀 _ _ O
++ _ _ O
+𝐒𝐁 _ _ O
+
+11 _ _ O
+
+
+
+It _ _ O
+makes _ _ O
+sense _ _ O
+, _ _ O
+right _ _ O
+? _ _ O
+
+● _ _ O
+We _ _ O
+know _ _ O
+that _ _ O
+if _ _ O
+S _ _ O
+= _ _ O
+0 _ _ O
+then _ _ O
+the _ _ O
+output _ _ O
+is _ _ O
+A _ _ O
+
+● _ _ O
+We _ _ O
+know _ _ O
+that _ _ O
+if _ _ O
+S _ _ O
+= _ _ O
+1 _ _ O
+then _ _ O
+the _ _ O
+output _ _ O
+is _ _ O
+B _ _ O
+
+o _ _ O
+We _ _ O
+don _ _ O
+’ _ _ O
+t _ _ O
+care _ _ O
+about _ _ O
+one _ _ O
+of _ _ O
+the _ _ O
+variables _ _ O
+
+● _ _ O
+So _ _ O
+, _ _ O
+let _ _ O
+’ _ _ O
+s _ _ O
+solve _ _ O
+this _ _ O
+truth _ _ O
+table _ _ O
+
+1 _ _ O
+. _ _ O
+find _ _ O
+all _ _ O
+rows _ _ O
+with _ _ O
+an _ _ O
+output _ _ O
+of _ _ O
+1 _ _ O
+
+2 _ _ O
+. _ _ O
+for _ _ O
+each _ _ O
+one _ _ O
+, _ _ O
+write _ _ O
+an _ _ O
+AND _ _ O
+of _ _ O
+all _ _ O
+the _ _ O
+inputs _ _ O
+, _ _ O
+
+with _ _ O
+NOTs _ _ O
+on _ _ O
+the _ _ O
+0s _ _ O
+
+3 _ _ O
+. _ _ O
+eliminate _ _ O
+duplicate _ _ O
+terms _ _ O
+
+4 _ _ O
+. _ _ O
+OR _ _ O
+the _ _ O
+remaining _ _ O
+terms _ _ O
+together _ _ O
+
+
+ത _ _ O
++ _ _ O
+𝐒𝐁 _ _ O
+
+𝐐 _ _ O
+= _ _ O
+𝐒𝐀 _ _ O
+
+
+● _ _ O
+Getting _ _ O
+the _ _ O
+sum _ _ B-Concept
+- _ _ I-Concept
+of _ _ I-Concept
+- _ _ I-Concept
+products _ _ I-Concept
+
+o _ _ O
+an _ _ O
+OR _ _ O
+of _ _ O
+multiple _ _ O
+ANDed _ _ O
+terms _ _ O
+
+
+S _ _ O
+A _ _ O
+B _ _ O
+Q _ _ O
+
+0 _ _ O
+0 _ _ O
+X _ _ O
+0 _ _ O
+
+
+0 _ _ O
+0 _ _ O
+X _ _ O
+0 _ _ O
+
+
+𝐒ത𝐀 _ _ O
+0 _ _ O
+1 _ _ O
+X _ _ O
+1 _ _ O
+
+𝐒ത𝐀 _ _ O
+0 _ _ O
+1 _ _ O
+X _ _ O
+1 _ _ O
+
+1 _ _ O
+X _ _ O
+0 _ _ O
+0 _ _ O
+
+
+𝐒𝐁 _ _ O
+1 _ _ O
+X _ _ O
+1 _ _ O
+1 _ _ O
+
+1 _ _ O
+X _ _ O
+0 _ _ O
+0 _ _ O
+
+
+𝐒𝐁 _ _ O
+1 _ _ O
+X _ _ O
+1 _ _ O
+1 _ _ O
+
+12 _ _ O
+
+
+
+Turning _ _ O
+that _ _ O
+expression _ _ O
+into _ _ O
+gates _ _ O
+
+● _ _ O
+making _ _ O
+𝐐 _ _ O
+= _ _ O
+𝐒ത𝐀 _ _ O
++ _ _ O
+𝐒𝐁 _ _ O
+into _ _ O
+gates _ _ O
+is _ _ O
+pretty _ _ O
+straightforward _ _ O
+: _ _ O
+
+
+S _ _ O
+
+
+A _ _ O
+
+Q _ _ O
+
+B _ _ O
+
+
+13 _ _ O
+
+
+
+Minimization _ _ O
+using _ _ O
+Boolean _ _ B-Concept
+
+Algebra _ _ I-Concept
+
+
+14 _ _ O
+
+
+
+Boolean _ _ B-Concept
+algebra _ _ I-Concept
+
+● _ _ O
+Idempotent _ _ B-Concept
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑎 _ _ O
+= _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑎 _ _ O
+= _ _ O
+𝑎 _ _ O
+
+● _ _ O
+Commutative _ _ B-Concept
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑏 _ _ O
+. _ _ O
+𝑎 _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑏 _ _ O
++ _ _ O
+𝑎 _ _ O
+
+● _ _ O
+Associative _ _ B-Concept
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
+. _ _ O
+𝑐 _ _ O
+= _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
+. _ _ O
+𝑐 _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
++ _ _ O
+𝑐 _ _ O
+= _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
++ _ _ O
+𝑐 _ _ O
+
+● _ _ O
+Distributive _ _ B-Concept
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
++ _ _ O
+𝑐 _ _ O
+= _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
++ _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑐 _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
+. _ _ O
+𝑐 _ _ O
+= _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
+. _ _ O
+( _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑐 _ _ O
+) _ _ O
+
+
+● _ _ O
+De _ _ B-Concept
+Morgan _ _ I-Concept
+’ _ _ I-Concept
+s _ _ I-Concept
+laws _ _ I-Concept
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑎ത _ _ O
++ _ _ O
+𝑏ത _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑎 _ _ O
+. _ _ O
+
+ത _ _ O
+𝑏ത _ _ O
+
+● _ _ O
+Other _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑎 _ _ O
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑏 _ _ O
+= _ _ O
+𝑎 _ _ O
+
+o _ _ O
+𝑎ത _ _ O
+= _ _ O
+𝑎 _ _ O
+
+o _ _ O
+𝑎 _ _ O
++ _ _ O
+𝑎ത _ _ O
+= _ _ O
+1 _ _ O
+
+o _ _ O
+𝑎 _ _ O
+. _ _ O
+𝑎ത _ _ O
+= _ _ O
+0 _ _ O
+
+
+15 _ _ O
+
+
+
+What _ _ O
+if _ _ O
+the _ _ O
+function _ _ O
+is _ _ O
+more _ _ O
+complex _ _ O
+? _ _ O
+
+● _ _ O
+if _ _ O
+we _ _ O
+use _ _ O
+that _ _ O
+method _ _ O
+on _ _ O
+the _ _ O
+Cout _ _ O
+of _ _ O
+a _ _ O
+full _ _ B-Concept
+adder _ _ I-Concept
+: _ _ O
+
+
+A _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+B _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+ഥ _ _ O
+𝐁𝐂𝐢𝐧 _ _ O
++ _ _ O
+𝐀𝑩 _ _ O
+
+ഥ _ _ O
+𝐂𝐢𝐧 _ _ O
++ _ _ O
+𝐀𝐁𝐂𝐢𝐧 _ _ O
++ _ _ O
+𝐀𝐁𝐂𝐢𝐧 _ _ O
+
+Cin _ _ O
+Cout _ _ O
+𝐂𝐨𝐮𝐭 _ _ O
+= _ _ O
+𝐀 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+● _ _ O
+It _ _ O
+feels _ _ O
+too _ _ O
+complex _ _ O
+, _ _ O
+somehow _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+● _ _ O
+each _ _ O
+NOT _ _ O
+gate _ _ O
+uses _ _ O
+2 _ _ O
+transistors _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+● _ _ O
+each _ _ O
+AND _ _ O
+/ _ _ O
+OR _ _ O
+gate _ _ O
+uses _ _ O
+6 _ _ O
+
+ഥ _ _ O
+𝐁𝐂𝐢𝐧 _ _ O
+● _ _ O
+this _ _ O
+will _ _ O
+use _ _ O
+72 _ _ O
+transistors _ _ O
+
+1 _ _ O
+
+1 _ _ O
+𝐀 _ _ O
+
+o _ _ O
+just _ _ O
+for _ _ O
+the _ _ O
+carry _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+ഥ _ _ O
+𝐂𝐢𝐧 _ _ O
+o _ _ O
+of _ _ O
+one _ _ O
+one _ _ O
+- _ _ O
+bit _ _ O
+addition _ _ O
+
+1 _ _ O
+
+1 _ _ O
+𝐀𝑩 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+𝐀𝐁𝐂𝐢𝐧 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+𝐀𝐁𝐂𝐢𝐧 _ _ O
+
+16 _ _ O
+
+
+
+Minimizing _ _ O
+equations _ _ O
+– _ _ O
+WHYYYYY _ _ O
+! _ _ O
+! _ _ O
+
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
+
+Using _ _ O
+distributivity _ _ B-Concept
+𝐴𝐵 _ _ O
++ _ _ O
+𝐴𝐶 _ _ O
+= _ _ O
+𝐴 _ _ O
+( _ _ O
+𝐵 _ _ O
++ _ _ O
+𝐶 _ _ O
+) _ _ O
+: _ _ O
+
+𝐴𝐵 _ _ O
+𝐶 _ _ O
++ _ _ O
+𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
+
+
+72 _ _ O
+transistors _ _ O
+
+
+Adjacency _ _ O
+# _ _ O
+1 _ _ O
+tackled _ _ O
+: _ _ O
+
+𝐴𝐵 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
+
+What _ _ O
+about _ _ O
+now _ _ O
+? _ _ O
+Two _ _ O
+variables _ _ O
+change _ _ O
+ _ _ O
+
+
+17 _ _ O
+
+
+
+Minimizing _ _ O
+equations _ _ O
+– _ _ O
+WHYYYYY _ _ O
+! _ _ O
+! _ _ O
+
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
++ _ _ O
+𝑨𝑩𝑪 _ _ O
+
+Adding _ _ O
+( _ _ O
+ORing _ _ O
+) _ _ O
+the _ _ O
+same _ _ O
+term _ _ O
+multiple _ _ O
+times _ _ O
+is _ _ O
+ok _ _ O
+: _ _ O
+
+𝐴𝐵 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
++ _ _ O
+𝐴𝐵𝐶 _ _ O
+
+Note _ _ O
+the _ _ O
+two _ _ O
+adjacencies _ _ B-Concept
+: _ _ O
+D _ _ O
+
+𝐴𝐵 _ _ O
++ _ _ O
+𝐴𝐶 _ _ O
+𝐵 _ _ O
++ _ _ O
+𝐵 _ _ O
++ _ _ O
+𝐵𝐶 _ _ O
+𝐴 _ _ O
++ _ _ O
+𝐴 _ _ O
+
+Adjacency _ _ O
+# _ _ O
+2 _ _ O
+and _ _ O
+# _ _ O
+3 _ _ O
+tackled _ _ O
+: _ _ O
+
+𝑨𝑩 _ _ O
++ _ _ O
+𝑪𝑨 _ _ O
++ _ _ O
+𝑪𝑩 _ _ O
+
+30 _ _ O
+transistors _ _ O
+
+18 _ _ O
+
+
+
+It _ _ O
+’ _ _ O
+s _ _ O
+hard _ _ O
+! _ _ O
+
+
+If _ _ O
+only _ _ O
+we _ _ O
+had _ _ O
+a _ _ O
+better _ _ O
+tool _ _ O
+to _ _ O
+help _ _ O
+us _ _ O
+
+
+19 _ _ O
+
+
+
+Karnaugh _ _ O
+Maps _ _ O
+
+
+20 _ _ O
+
+
+
+Gray _ _ B-Concept
+Code _ _ I-Concept
+
+● _ _ O
+Gray _ _ B-Concept
+code _ _ I-Concept
+is _ _ O
+a _ _ O
+way _ _ O
+of _ _ O
+encoding _ _ O
+binary _ _ O
+where _ _ O
+
+only _ _ O
+one _ _ O
+bit _ _ O
+changes _ _ O
+on _ _ O
+each _ _ O
+step _ _ O
+
+● _ _ O
+How _ _ O
+can _ _ O
+we _ _ O
+construct _ _ O
+it _ _ O
+? _ _ O
+
+● _ _ O
+Let _ _ O
+’ _ _ O
+s _ _ O
+revisit _ _ O
+our _ _ O
+binary _ _ O
+number _ _ O
+table _ _ O
+: _ _ O
+
+o _ _ O
+Start _ _ O
+by _ _ O
+creating _ _ O
+the _ _ O
+first _ _ O
+two _ _ O
+1 _ _ O
+- _ _ O
+bit _ _ O
+entries _ _ O
+
+o _ _ O
+Mirror _ _ O
+them _ _ O
+and _ _ O
+complete _ _ O
+the _ _ O
+next _ _ O
+column _ _ O
+
+o _ _ O
+Repeat _ _ O
+! _ _ O
+
+● _ _ O
+See _ _ O
+how _ _ O
+only _ _ O
+one _ _ O
+bit _ _ O
+changes _ _ O
+from _ _ O
+the _ _ O
+
+last _ _ O
+to _ _ O
+the _ _ O
+first _ _ O
+number _ _ O
+! _ _ O
+
+● _ _ O
+We _ _ O
+’ _ _ O
+ll _ _ O
+only _ _ O
+be _ _ O
+using _ _ O
+2 _ _ O
+- _ _ O
+bit _ _ O
+code _ _ O
+. _ _ O
+
+
+000 _ _ O
+
+001 _ _ O
+
+011 _ _ O
+
+010 _ _ O
+
+110 _ _ O
+
+111 _ _ O
+
+101 _ _ O
+
+100 _ _ O
+
+
+21 _ _ O
+
+
+
+Karnaugh _ _ B-Concept
+Maps _ _ I-Concept
+( _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+maps _ _ I-Concept
+) _ _ O
+– _ _ O
+Setting _ _ O
+up _ _ O
+
+● _ _ O
+Karnaugh _ _ B-Concept
+Maps _ _ I-Concept
+are _ _ O
+a _ _ O
+tool _ _ O
+for _ _ O
+minimizing _ _ O
+boolean _ _ B-Concept
+functions _ _ I-Concept
+
+● _ _ O
+It _ _ O
+helps _ _ O
+us _ _ O
+finding _ _ O
+adjacencies _ _ B-Concept
+
+o _ _ O
+let _ _ O
+' _ _ O
+s _ _ O
+start _ _ O
+with _ _ O
+a _ _ O
+function _ _ O
+that _ _ O
+has _ _ O
+two _ _ O
+inputs _ _ O
+
+Truth _ _ O
+Table _ _ O
+
+
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+
+
+A _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+B _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+
+Q _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+ഥ _ _ O
+
+𝐁 _ _ O
+
+
+ഥ _ _ O
+
+0 _ _ O
+𝐀 _ _ O
+
+
+1 _ _ O
+
+
+𝐁 _ _ O
+
+
+1 _ _ O
+0 _ _ O
+
+1 _ _ O
+𝐀 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+1 _ _ O
+. _ _ O
+Karnaugh _ _ B-Concept
+maps _ _ I-Concept
+are _ _ O
+
+represented _ _ O
+as _ _ O
+a _ _ O
+table _ _ O
+
+2 _ _ O
+. _ _ O
+write _ _ O
+input _ _ O
+values _ _ O
+in _ _ O
+Gray _ _ B-Concept
+
+code _ _ I-Concept
+along _ _ O
+axes _ _ O
+. _ _ O
+
+o _ _ O
+( _ _ O
+there _ _ O
+' _ _ O
+s _ _ O
+only _ _ O
+one _ _ O
+input _ _ O
+on _ _ O
+
+each _ _ O
+side _ _ O
+here _ _ O
+, _ _ O
+it _ _ O
+' _ _ O
+s _ _ O
+easy _ _ O
+) _ _ O
+
+3 _ _ O
+. _ _ O
+Fill _ _ O
+in _ _ O
+cells _ _ O
+from _ _ O
+truth _ _ O
+table _ _ O
+. _ _ O
+
+
+22 _ _ O
+
+
+
+Karnaugh _ _ B-Concept
+Maps _ _ I-Concept
+( _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+maps _ _ I-Concept
+) _ _ O
+– _ _ O
+Finding _ _ O
+rects _ _ O
+
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+
+
+ഥ _ _ O
+
+𝐁 _ _ O
+
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+
+𝐁 _ _ O
+
+
+1 _ _ O
+0 _ _ O
+
+𝐀 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+3 _ _ O
+. _ _ O
+find _ _ O
+rectangles _ _ O
+of _ _ O
+1s _ _ O
+with _ _ O
+these _ _ O
+rules _ _ O
+: _ _ O
+
+o _ _ O
+width _ _ O
+and _ _ O
+height _ _ O
+can _ _ O
+only _ _ O
+be _ _ O
+1 _ _ O
+, _ _ O
+2 _ _ O
+, _ _ O
+or _ _ O
+4 _ _ O
+
+▪ _ _ O
+NEVER _ _ O
+3 _ _ O
+
+o _ _ O
+overlapping _ _ O
+is _ _ O
+totally _ _ O
+fine _ _ O
+! _ _ O
+it _ _ O
+' _ _ O
+s _ _ O
+good _ _ O
+! _ _ O
+
+o _ _ O
+use _ _ O
+the _ _ O
+biggest _ _ O
+rectangles _ _ O
+possible _ _ O
+
+o _ _ O
+use _ _ O
+the _ _ O
+fewest _ _ O
+rectangles _ _ O
+possible _ _ O
+
+
+23 _ _ O
+
+
+
+Karnaugh _ _ B-Concept
+Maps _ _ I-Concept
+( _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+maps _ _ I-Concept
+) _ _ O
+– _ _ O
+Interpreting _ _ O
+rects _ _ O
+
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+
+
+ഥ _ _ O
+
+𝐁 _ _ O
+
+
+𝐁 _ _ O
+
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+
+1 _ _ O
+0 _ _ O
+
+𝐀 _ _ O
+1 _ _ O
+1 _ _ O
+
+ഥ _ _ O
+
+Red _ _ O
+: _ _ O
+𝐁 _ _ O
+
+
+Blue _ _ O
+: _ _ O
+𝐀 _ _ O
+
+
+ഥ _ _ O
+
+𝐐 _ _ O
+= _ _ O
+𝐀 _ _ O
++ _ _ O
+𝐁 _ _ O
+
+
+4 _ _ O
+. _ _ O
+for _ _ O
+each _ _ O
+rectangle _ _ O
+, _ _ O
+look _ _ O
+at _ _ O
+the _ _ O
+values _ _ O
+of _ _ O
+
+the _ _ O
+variables _ _ O
+along _ _ O
+the _ _ O
+axes _ _ O
+. _ _ O
+some _ _ O
+
+variables _ _ O
+change _ _ O
+, _ _ O
+and _ _ O
+others _ _ O
+don _ _ O
+' _ _ O
+t _ _ O
+. _ _ O
+
+o _ _ O
+which _ _ O
+variable _ _ O
+changes _ _ O
+in _ _ O
+the _ _ O
+red _ _ O
+
+rectangle _ _ O
+? _ _ O
+which _ _ O
+doesn _ _ O
+' _ _ O
+t _ _ O
+? _ _ O
+
+o _ _ O
+what _ _ O
+about _ _ O
+the _ _ O
+blue _ _ O
+rectangle _ _ O
+? _ _ O
+
+5 _ _ O
+. _ _ O
+each _ _ O
+rectangle _ _ O
+is _ _ O
+an _ _ O
+AND _ _ O
+minterm _ _ B-Concept
+
+o _ _ O
+write _ _ O
+the _ _ O
+variables _ _ O
+that _ _ O
+stay _ _ O
+the _ _ O
+same _ _ O
+
+for _ _ O
+that _ _ O
+rect _ _ O
+( _ _ O
+keeping _ _ O
+the _ _ O
+NOT _ _ O
+bars _ _ O
+) _ _ O
+
+o _ _ O
+ignore _ _ O
+the _ _ O
+variables _ _ O
+that _ _ O
+change _ _ O
+
+6 _ _ O
+. _ _ O
+OR _ _ O
+all _ _ O
+the _ _ O
+terms _ _ O
+together _ _ O
+
+7 _ _ O
+. _ _ O
+WHEW _ _ O
+! _ _ O
+
+24 _ _ O
+
+
+
+I _ _ O
+' _ _ O
+d _ _ O
+like _ _ O
+to _ _ O
+place _ _ O
+an _ _ O
+order _ _ O
+for _ _ O
+the _ _ O
+carry _ _ B-Concept
+- _ _ I-Concept
+out _ _ I-Concept
+bit _ _ I-Concept
+
+● _ _ O
+With _ _ O
+more _ _ O
+than _ _ O
+2 _ _ O
+variables _ _ O
+, _ _ O
+put _ _ O
+two _ _ O
+along _ _ O
+one _ _ O
+axis _ _ O
+( _ _ O
+GRAY _ _ B-Concept
+CODE _ _ I-Concept
+! _ _ O
+) _ _ O
+
+try _ _ O
+to _ _ O
+make _ _ O
+the _ _ O
+rectangles _ _ O
+as _ _ O
+big _ _ O
+as _ _ O
+
+C _ _ O
+A _ _ O
+B _ _ O
+Co _ _ O
+
+possible _ _ O
+. _ _ O
+overlap _ _ O
+is _ _ O
+goooood _ _ O
+. _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+Red _ _ O
+: _ _ O
+𝐀𝑪 _ _ O
+
+𝐀 _ _ O
+
+0 _ _ O
+𝐂ത _ _ O
+
+
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+1 _ _ O
+𝐂 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+
+Green _ _ O
+: _ _ O
+𝐀𝐁 _ _ O
+
+Blue _ _ O
+: _ _ O
+𝐁𝐂 _ _ O
+
+
+𝐂𝐨 _ _ O
+= _ _ O
+𝐀𝑪 _ _ O
++ _ _ O
+𝐀𝐁 _ _ O
++ _ _ O
+𝐁𝑪 _ _ O
+
+25 _ _ O
+
+
+
+I _ _ O
+' _ _ O
+d _ _ O
+like _ _ O
+to _ _ O
+place _ _ O
+an _ _ O
+order _ _ O
+for _ _ O
+the _ _ O
+carry _ _ B-Concept
+- _ _ I-Concept
+out _ _ I-Concept
+bit _ _ I-Concept
+
+● _ _ O
+With _ _ O
+more _ _ O
+than _ _ O
+2 _ _ O
+variables _ _ O
+, _ _ O
+put _ _ O
+two _ _ O
+along _ _ O
+one _ _ O
+axis _ _ O
+( _ _ O
+GRAY _ _ B-Concept
+CODE _ _ I-Concept
+! _ _ O
+) _ _ O
+
+try _ _ O
+to _ _ O
+make _ _ O
+the _ _ O
+rectangles _ _ O
+as _ _ O
+big _ _ O
+as _ _ O
+
+C _ _ O
+A _ _ O
+B _ _ O
+Co _ _ O
+
+possible _ _ O
+. _ _ O
+overlap _ _ O
+is _ _ O
+goooood _ _ O
+. _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+0 _ _ O
+𝐂ത _ _ O
+
+
+0 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+1 _ _ O
+𝐂 _ _ O
+0 _ _ O
+1 _ _ O
+1 _ _ O
+1 _ _ O
+
+Did _ _ O
+you _ _ O
+notice _ _ O
+this _ _ O
+? _ _ O
+𝐴𝐵𝐶 _ _ O
+
+This _ _ O
+is _ _ O
+the _ _ O
+term _ _ O
+we _ _ O
+needed _ _ O
+to _ _ O
+add _ _ O
+multiple _ _ O
+times _ _ O
+: _ _ O
+D _ _ O
+
+26 _ _ O
+
+
+
+Just _ _ O
+like _ _ O
+a _ _ O
+2D _ _ O
+RPG _ _ O
+world _ _ O
+map _ _ O
+… _ _ O
+
+● _ _ O
+rectangles _ _ O
+on _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+maps _ _ I-Concept
+can _ _ O
+wrap _ _ O
+around _ _ O
+( _ _ O
+left _ _ O
+- _ _ O
+right _ _ O
+AND _ _ O
+top _ _ O
+- _ _ O
+bottom _ _ O
+! _ _ O
+) _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+ഥ𝐘 _ _ O
+
+ഥ _ _ O
+𝐗 _ _ O
+
+ഥ𝐘 _ _ O
+𝐗𝐘 _ _ O
+𝐗𝐘 _ _ O
+
+ഥ _ _ O
+
+𝐗 _ _ O
+
+ത _ _ O
+
+0 _ _ O
+𝐙 _ _ O
+
+
+1 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+
+1 _ _ O
+𝐙 _ _ O
+1 _ _ O
+0 _ _ O
+0 _ _ O
+1 _ _ O
+
+
+ഥ _ _ O
+
+Red _ _ O
+: _ _ O
+𝐘 _ _ O
+
+ഥ𝐙ത _ _ O
+
+Blue _ _ O
+: _ _ O
+𝐗 _ _ O
+
+
+ഥ _ _ O
++ _ _ O
+𝐗 _ _ O
+
+ഥ𝐙ത _ _ O
+
+𝐐 _ _ O
+= _ _ O
+𝐘 _ _ O
+
+
+this _ _ O
+is _ _ O
+really _ _ O
+a _ _ O
+2x2 _ _ O
+rectangle _ _ O
+. _ _ O
+
+it _ _ O
+' _ _ O
+s _ _ O
+just _ _ O
+… _ _ O
+doing _ _ O
+its _ _ O
+best _ _ O
+. _ _ O
+
+27 _ _ O
+
+
+
+Okay _ _ O
+, _ _ O
+maybe _ _ O
+it _ _ O
+' _ _ O
+s _ _ O
+not _ _ O
+perfect _ _ O
+. _ _ O
+
+● _ _ O
+let _ _ O
+' _ _ O
+s _ _ O
+try _ _ O
+the _ _ O
+Sum _ _ O
+output _ _ O
+of _ _ O
+a _ _ O
+full _ _ B-Concept
+adder _ _ I-Concept
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+a _ _ O
+1x1 _ _ O
+rectangle _ _ O
+
+becomes _ _ O
+a _ _ O
+term _ _ O
+that _ _ O
+
+uses _ _ O
+all _ _ O
+the _ _ O
+variables _ _ O
+
+
+ഥ𝑩 _ _ O
+
+ഥ𝑪 _ _ O
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+Red _ _ O
+: _ _ O
+𝐀 _ _ O
+
+𝐀 _ _ O
+
+
+ഥ𝐢 _ _ O
+
+0 _ _ O
+𝐂 _ _ O
+
+
+0 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+
+1 _ _ O
+𝐂𝐢 _ _ O
+1 _ _ O
+0 _ _ O
+1 _ _ O
+0 _ _ O
+
+
+ഥ _ _ O
+
+ഥ _ _ O
+𝐁𝑪 _ _ O
+
+Green _ _ O
+: _ _ O
+𝐀 _ _ O
+
+Blue _ _ O
+: _ _ O
+𝐀𝐁𝐂𝐢 _ _ O
+
+ഥ _ _ O
+
+ഥ𝑪 _ _ O
+
+Purple _ _ O
+: _ _ O
+𝐀𝐁 _ _ O
+
+
+ഥ _ _ O
++ _ _ O
+𝐀𝐁𝑪 _ _ O
++ _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+
+ഥ𝑩 _ _ O
+
+ഥ𝑪 _ _ O
++ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁𝑪 _ _ O
+
+ഥ𝑪 _ _ O
+
+𝐒𝐮𝐦 _ _ O
+= _ _ O
+𝐀 _ _ O
+
+wait _ _ O
+, _ _ O
+can _ _ O
+’ _ _ O
+t _ _ O
+we _ _ O
+do _ _ O
+that _ _ O
+as _ _ O
+: _ _ O
+
+
+𝐒𝐮𝐦 _ _ O
+= _ _ O
+𝐀 _ _ O
+⨁ _ _ O
+𝐁 _ _ O
+⨁ _ _ O
+𝑪 _ _ O
+( _ _ O
+that _ _ O
+' _ _ O
+s _ _ O
+xor _ _ B-Concept
+! _ _ O
+) _ _ O
+
+28 _ _ O
+
+
+
+Tradeoffs _ _ O
+, _ _ O
+tradeoffs _ _ O
+
+● _ _ O
+there _ _ O
+are _ _ O
+extensions _ _ O
+to _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+maps _ _ I-Concept
+to _ _ O
+detect _ _ O
+XORs _ _ B-Concept
+
+● _ _ O
+but _ _ O
+… _ _ O
+
+o _ _ O
+XOR _ _ B-Concept
+gates _ _ O
+are _ _ O
+slower _ _ O
+than _ _ O
+AND _ _ O
+/ _ _ O
+OR _ _ O
+gates _ _ O
+
+o _ _ O
+if _ _ O
+area _ _ O
+is _ _ O
+a _ _ O
+concern _ _ O
+, _ _ O
+an _ _ O
+XOR _ _ B-Concept
+make _ _ O
+sense _ _ O
+
+o _ _ O
+if _ _ O
+speed _ _ O
+is _ _ O
+a _ _ O
+concern _ _ O
+, _ _ O
+AND _ _ O
+/ _ _ O
+OR _ _ O
+gates _ _ O
+make _ _ O
+sense _ _ O
+
+● _ _ O
+what _ _ O
+do _ _ O
+real _ _ O
+hardware _ _ O
+designers _ _ O
+do _ _ O
+? _ _ O
+
+o _ _ O
+they _ _ O
+use _ _ O
+programs _ _ O
+to _ _ O
+do _ _ O
+this _ _ O
+stuff _ _ O
+for _ _ O
+them _ _ O
+lol _ _ O
+
+o _ _ O
+things _ _ O
+like _ _ O
+GALs _ _ B-Concept
+, _ _ O
+CPLDs _ _ B-Concept
+, _ _ O
+and _ _ O
+FPGAs _ _ B-Concept
+are _ _ O
+reconfigurable _ _ B-Concept
+hardware _ _ I-Concept
+which _ _ O
+
+usually _ _ O
+use _ _ O
+" _ _ O
+sum _ _ B-Concept
+- _ _ I-Concept
+of _ _ I-Concept
+- _ _ I-Concept
+products _ _ I-Concept
+" _ _ O
+to _ _ O
+do _ _ O
+logic _ _ O
+, _ _ O
+so _ _ O
+ANDs _ _ O
+and _ _ O
+ORs _ _ O
+are _ _ O
+all _ _ O
+you _ _ O
+' _ _ O
+ve _ _ O
+
+got _ _ O
+
+
+29 _ _ O
+
+
+
+Some _ _ O
+more _ _ O
+examples _ _ O
+
+● _ _ O
+Can _ _ O
+you _ _ O
+solve _ _ O
+this _ _ O
+? _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+● _ _ O
+In _ _ O
+AB _ _ O
+: _ _ O
+A _ _ O
+is _ _ O
+both _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+● _ _ O
+In _ _ O
+CD _ _ O
+: _ _ O
+D _ _ O
+is _ _ O
+both _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+
+0 _ _ O
+
+ഥ𝑫 _ _ O
+0 _ _ O
+
+01 _ _ O
+𝑪 _ _ O
+
+11 _ _ O
+𝑪𝑫 _ _ O
+0 _ _ O
+
+ഥ _ _ O
+0 _ _ O
+
+10 _ _ O
+𝑪𝑫 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+
+● _ _ O
+Eliminate _ _ O
+both _ _ O
+A _ _ O
+, _ _ O
+D _ _ O
+
+● _ _ O
+We _ _ O
+get _ _ O
+
+𝐶𝐵 _ _ O
+
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+ഥ𝑫 _ _ O
+
+ഥ _ _ O
+
+00 _ _ O
+𝑪 _ _ O
+
+
+30 _ _ O
+
+
+
+Some _ _ O
+more _ _ O
+examples _ _ O
+
+● _ _ O
+Can _ _ O
+you _ _ O
+solve _ _ O
+this _ _ O
+? _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+● _ _ O
+In _ _ O
+AB _ _ O
+: _ _ O
+Both _ _ O
+have _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+● _ _ O
+In _ _ O
+CD _ _ O
+: _ _ O
+C _ _ O
+is _ _ O
+both _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+
+0 _ _ O
+
+ഥ𝑫 _ _ O
+1 _ _ O
+
+01 _ _ O
+𝑪 _ _ O
+
+11 _ _ O
+𝑪𝑫 _ _ O
+1 _ _ O
+
+ഥ _ _ O
+0 _ _ O
+
+10 _ _ O
+𝑪𝑫 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+1 _ _ O
+
+0 _ _ O
+
+
+● _ _ O
+Eliminate _ _ O
+both _ _ O
+A _ _ O
+, _ _ O
+B _ _ O
+, _ _ O
+C _ _ O
+
+● _ _ O
+We _ _ O
+get _ _ O
+
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+ഥ𝑫 _ _ O
+
+ഥ _ _ O
+
+00 _ _ O
+𝑪 _ _ O
+
+
+𝐷 _ _ O
+
+
+31 _ _ O
+
+
+
+Some _ _ O
+more _ _ O
+examples _ _ O
+
+● _ _ O
+Can _ _ O
+you _ _ O
+solve _ _ O
+this _ _ O
+? _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+● _ _ O
+In _ _ O
+AB _ _ O
+: _ _ O
+A _ _ O
+has _ _ O
+both _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+● _ _ O
+In _ _ O
+CD _ _ O
+: _ _ O
+C _ _ O
+is _ _ O
+both _ _ O
+{ _ _ O
+0 _ _ O
+, _ _ O
+1 _ _ O
+} _ _ O
+
+
+1 _ _ O
+
+ഥ𝑫 _ _ O
+0 _ _ O
+
+01 _ _ O
+𝑪 _ _ O
+
+11 _ _ O
+𝑪𝑫 _ _ O
+0 _ _ O
+
+ഥ _ _ O
+1 _ _ O
+
+10 _ _ O
+𝑪𝑫 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+
+1 _ _ O
+
+0 _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+
+● _ _ O
+Eliminate _ _ O
+both _ _ O
+A _ _ O
+, _ _ O
+C _ _ O
+
+● _ _ O
+We _ _ O
+get _ _ O
+
+
+ഥ𝐁 _ _ O
+
+ഥ _ _ O
+𝐀 _ _ O
+
+ഥ _ _ O
+𝐁 _ _ O
+𝐀𝐁 _ _ O
+𝐀𝐁 _ _ O
+
+ഥ _ _ O
+
+𝐀 _ _ O
+
+ഥ𝑫 _ _ O
+
+ഥ _ _ O
+
+00 _ _ O
+𝑪 _ _ O
+
+
+ഥ𝐷 _ _ O
+
+ഥ _ _ O
+
+B _ _ O
+
+
+this _ _ O
+is _ _ O
+still _ _ O
+a _ _ O
+2x2 _ _ O
+rectangle _ _ O
+! _ _ O
+
+32 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+● _ _ O
+This _ _ O
+is _ _ O
+a _ _ O
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+o _ _ O
+It _ _ O
+displays _ _ O
+numbers _ _ O
+
+o _ _ O
+It _ _ O
+has _ _ O
+8 _ _ O
+LEDs _ _ O
+( _ _ O
+one _ _ O
+for _ _ O
+the _ _ O
+decimal _ _ O
+point _ _ O
+) _ _ O
+
+● _ _ O
+Problem _ _ O
+
+o _ _ O
+Given _ _ O
+a _ _ O
+4 _ _ O
+- _ _ O
+bit _ _ O
+number _ _ O
+, _ _ O
+draw _ _ O
+the _ _ O
+
+corresponding _ _ O
+numeral _ _ O
+. _ _ O
+
+o _ _ O
+E _ _ O
+. _ _ O
+g _ _ O
+. _ _ O
+0000 _ _ O
+is _ _ O
+“ _ _ O
+0 _ _ O
+” _ _ O
+; _ _ O
+1001 _ _ O
+is _ _ O
+“ _ _ O
+9 _ _ O
+” _ _ O
+. _ _ O
+
+o _ _ O
+Ignore _ _ O
+the _ _ O
+dot _ _ O
+
+● _ _ O
+Solution _ _ O
+
+o _ _ O
+Create _ _ O
+a _ _ O
+Boolean _ _ B-Concept
+function _ _ I-Concept
+for _ _ O
+each _ _ O
+
+segment _ _ O
+. _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+33 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+0 _ _ O
+
+01110111 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+34 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+1 _ _ O
+
+00010100 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+35 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+2 _ _ O
+
+10110011 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+36 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+3 _ _ O
+
+10110110 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+37 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+4 _ _ O
+
+11010100 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+38 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+5 _ _ O
+
+11100110 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+39 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+6 _ _ O
+
+11100111 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+40 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+7 _ _ O
+
+00110100 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+41 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+8 _ _ O
+
+11110111 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+42 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+Number _ _ O
+9 _ _ O
+
+11110110 _ _ O
+
+
+d2 _ _ O
+
+
+d1 _ _ O
+
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d3 _ _ O
+
+d0 _ _ O
+
+
+d7 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d4 _ _ O
+
+
+Hex _ _ B-Concept
+Digit _ _ I-Concept
+LED _ _ I-Concept
+
+7 _ _ O
+segments _ _ O
+, _ _ O
+1 _ _ O
+decimal _ _ O
+point _ _ O
+
+Turn _ _ O
+each _ _ O
+segment _ _ O
+on _ _ O
+/ _ _ O
+off _ _ O
+
+State _ _ O
+: _ _ O
+0 _ _ O
+= _ _ O
+OFF _ _ O
+, _ _ O
+1 _ _ O
+= _ _ O
+ON _ _ O
+
+“ _ _ O
+Draw _ _ O
+” _ _ O
+numbers _ _ O
+0 _ _ O
+to _ _ O
+9 _ _ O
+
+43 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+How _ _ O
+to _ _ O
+approach _ _ O
+this _ _ O
+? _ _ O
+
+● _ _ O
+Create _ _ O
+a _ _ O
+truth _ _ O
+table _ _ O
+
+o _ _ O
+Inputs _ _ O
+are _ _ O
+i0 _ _ O
+to _ _ O
+i3 _ _ O
+( _ _ O
+4 _ _ O
+bits _ _ O
+) _ _ O
+
+o _ _ O
+Outputs _ _ O
+are _ _ O
+numbered _ _ O
+d0 _ _ O
+, _ _ O
+to _ _ O
+d7 _ _ O
+, _ _ O
+corresponding _ _ O
+to _ _ O
+segments _ _ O
+
+
+● _ _ O
+Minimize _ _ O
+the _ _ O
+circuit _ _ O
+using _ _ O
+a _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+
+o _ _ O
+Create _ _ O
+the _ _ O
+table _ _ O
+
+o _ _ O
+Follow _ _ O
+the _ _ O
+rules _ _ O
+! _ _ O
+
+● _ _ O
+Draw _ _ O
+the _ _ O
+numerals _ _ O
+by _ _ O
+setting _ _ O
+d0 _ _ O
+to _ _ O
+d7 _ _ O
+to _ _ O
+1s _ _ O
+or _ _ O
+0s _ _ O
+
+o _ _ O
+Build _ _ O
+the _ _ O
+circuit _ _ O
+! _ _ O
+
+
+44 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+i3 _ _ O
+
+
+i2 _ _ O
+
+
+i1 _ _ O
+
+
+i0 _ _ O
+
+
+d0 _ _ O
+
+
+d1 _ _ O
+
+
+d2 _ _ O
+
+
+d3 _ _ O
+
+
+d4 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d7 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+45 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+i3 _ _ O
+
+
+i2 _ _ O
+
+
+i1 _ _ O
+
+
+i0 _ _ O
+
+
+d0 _ _ O
+
+
+d1 _ _ O
+
+
+d2 _ _ O
+
+
+d3 _ _ O
+
+
+d4 _ _ O
+
+
+d5 _ _ O
+
+
+d6 _ _ O
+
+
+d7 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+It _ _ O
+can _ _ O
+
+1 _ _ O
+
+… _ _ O
+
+… _ _ O
+
+only _ _ O
+
+0 _ _ O
+
+1 _ _ O
+
+… _ _ O
+
+… _ _ O
+
+display _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+numbers _ _ O
+
+1 _ _ O
+
+… _ _ O
+up _ _ O
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1to _ _ O
+9 _ _ O
+! _ _ O
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+X _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+So _ _ O
+we _ _ O
+“ _ _ O
+don _ _ O
+’ _ _ O
+t _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+care _ _ O
+” _ _ O
+about _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+the _ _ O
+outputs _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+for _ _ O
+larger _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+… _ _ O
+
+numbers _ _ O
+
+
+46 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+● _ _ O
+Now _ _ O
+use _ _ O
+a _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+for _ _ O
+each _ _ O
+output _ _ O
+
+function _ _ O
+d0 _ _ O
+- _ _ O
+d7 _ _ O
+- _ _ O
+Let _ _ O
+’ _ _ O
+s _ _ O
+start _ _ O
+with _ _ O
+d0 _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+𝒊ഥ𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+𝒊ഥ𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+
+00 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+
+
+0 _ _ O
+
+01 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊𝟐 _ _ O
+1 _ _ O
+
+11 _ _ O
+𝒊𝟑 _ _ O
+𝒊𝟐 _ _ O
+X _ _ O
+
+10 _ _ O
+𝒊𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+1 _ _ O
+
+
+1 _ _ O
+
+0 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+1 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+i3 _ _ O
+
+
+i2 _ _ O
+
+
+i1 _ _ O
+
+
+i0 _ _ O
+
+
+d0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+1 _ _ O
+
+
+0 _ _ O
+
+
+X _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+… _ _ O
+
+
+47 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+● _ _ O
+Now _ _ O
+use _ _ O
+a _ _ O
+K _ _ B-Concept
+- _ _ I-Concept
+map _ _ I-Concept
+for _ _ O
+each _ _ O
+output _ _ O
+function _ _ O
+d0 _ _ O
+- _ _ O
+d7 _ _ O
+
+● _ _ O
+Let _ _ O
+’ _ _ O
+s _ _ O
+start _ _ O
+with _ _ O
+d0 _ _ O
+
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+0 _ _ O
+
+01 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊𝟐 _ _ O
+1 _ _ O
+
+11 _ _ O
+𝒊𝟑 _ _ O
+𝒊𝟐 _ _ O
+X _ _ O
+
+10 _ _ O
+𝒊𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+1 _ _ O
+
+
+1 _ _ O
+
+0 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+1 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+𝒊ഥ𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+𝒊ഥ𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+
+00 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+
+
+Output _ _ O
+
+“ _ _ O
+don _ _ O
+’ _ _ O
+t _ _ O
+cares _ _ O
+” _ _ O
+
+can _ _ O
+be _ _ O
+
+whatever _ _ O
+we _ _ O
+
+need _ _ O
+them _ _ O
+to _ _ O
+
+be _ _ O
+☺ _ _ O
+
+
+48 _ _ O
+
+
+
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+00 _ _ O
+
+
+01 _ _ O
+
+
+11 _ _ O
+
+
+10 _ _ O
+
+
+𝒊ഥ𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+𝒊ഥ𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟎 _ _ O
+𝒊𝟏 _ _ O
+𝒊ഥ𝟎 _ _ O
+
+00 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+
+
+0 _ _ O
+
+01 _ _ O
+𝒊ഥ𝟑 _ _ O
+𝒊𝟐 _ _ O
+1 _ _ O
+
+11 _ _ O
+𝒊𝟑 _ _ O
+𝒊𝟐 _ _ O
+X _ _ O
+
+10 _ _ O
+𝒊𝟑 _ _ O
+𝒊ഥ𝟐 _ _ O
+1 _ _ O
+
+
+0 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+1 _ _ O
+
+
+1 _ _ O
+
+0 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+1 _ _ O
+
+1 _ _ O
+
+X _ _ O
+
+X _ _ O
+
+
+● _ _ O
+Four _ _ O
+minterms _ _ B-Concept
+: _ _ O
+
+
+o _ _ O
+𝒊𝟑 _ _ O
+
+o _ _ O
+𝒊𝟐 _ _ O
+𝒊𝟏 _ _ O
+
+o _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟐 _ _ O
+
+o _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟎 _ _ O
+
+
+𝒅𝟎 _ _ O
+= _ _ O
+𝒊𝟑 _ _ O
++ _ _ O
+𝒊𝟐 _ _ O
+𝒊𝟏 _ _ O
++ _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟐 _ _ O
++ _ _ O
+𝒊𝟏 _ _ O
+𝒊𝟎 _ _ O
+
+
+49 _ _ O
+
+
+
+On _ _ O
+your _ _ O
+own _ _ O
+
+● _ _ O
+Try _ _ O
+making _ _ O
+a _ _ O
+circuit _ _ O
+in _ _ O
+Logisim _ _ O
+using _ _ O
+the _ _ O
+7 _ _ B-Concept
+segment _ _ I-Concept
+LED _ _ I-Concept
+display _ _ I-Concept
+
+o _ _ O
+Find _ _ O
+it _ _ O
+in _ _ O
+input _ _ O
+/ _ _ O
+output _ _ O
+
+● _ _ O
+Connect _ _ O
+the _ _ O
+logic _ _ O
+you _ _ O
+just _ _ O
+solved _ _ O
+into _ _ O
+d0 _ _ O
+( _ _ O
+top _ _ O
+- _ _ O
+left _ _ O
+pin _ _ O
+) _ _ O
+and _ _ O
+test _ _ O
+it _ _ O
+
+
+● _ _ O
+Solve _ _ O
+for _ _ O
+the _ _ O
+remaining _ _ O
+segments _ _ O
+
+o _ _ O
+It _ _ O
+’ _ _ O
+s _ _ O
+fun _ _ O
+and _ _ O
+practice _ _ O
+
+
+50 _ _ O
+
+
+

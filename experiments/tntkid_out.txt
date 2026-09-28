@@ -1,0 +1,3127 @@
++ echo 'CS-1502 RES'
+CS-1502 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs1502.txt ./concepts_bio/gold_all/gold_cscs1502_all_concepts.txt
+=== METRICS ===
+true_positives   : 23
+false_positives  : 42
+false_negatives  : 220
+precision        : 0.3538
+recall           : 0.0947
+f1               : 0.1494
+accuracy         : 0.0947
+
+TRUE POSITIVES (23):
+   • algorithm
+   • asymptotic analysi
+   • atm
+   • decidability
+   • decidable language
+   • decider
+   • dfa
+   • finite automata
+   • finite automaton
+   • finite state machine
+   • generalized nondeterministic finite automaton
+   • hamiltonian path
+   • hampath
+   • infinite language
+   • language
+   • nfa
+   • polynomial time reduction
+   • post correspondence problem
+   • reduction
+   • regular expression
+   • regular language
+   • turing machine
+   • undecidable
+
+FALSE POSITIVES (42):
+   • atm decidable
+   • complexity
+   • computational model
+   • decidability 04
+   • deterministic turing machine
+   • directed graph
+   • edfa
+   • finite
+   • formal
+   • formal definition
+   • formal method
+   • graph theory
+   • human computation
+   • is decidable
+   • java method
+   • lady
+   • mathematics preliminaries predicate
+   • method
+   • methods language
+   • palindrome
+   • polynomial
+   • polynomial time algorithm
+   • polynomial time computable
+   • post correspondence
+   • programmer
+   • reducibility 05
+   • reducibility property
+   • reducibility theorem
+   • specific element
+   • split
+   • time computable
+   • tree
+   • turing machine run
+   • type string
+   • valid
+   • zig zag
+   • → r
+   • ↔
+   • ≤m
+   • ⊆
+   • ⊆ x
+   • ⊆ y
+
+FALSE NEGATIVES (220):
+   • 3cnf formula
+   • 3sat
+   • 5 tuple
+   • a0
+   • accept
+   • accept state
+   • accepting computation history
+   • accepting configuration
+   • adfa
+   • alba
+   • allbutonetm
+   • alphabet
+   • alphabet σ
+   • anfa
+   • arex
+   • asymptotic upper bound
+   • big o
+   • big union
+   • bijection
+   • blank symbol
+   • boolean value
+   • breadth first search
+   • cartesian product
+   • certificate
+   • church turing thesi
+   • class np
+   • class p
+   • clique
+   • closed under complement
+   • closed under intersection
+   • closed under operation
+   • closed under operations
+   • closed under union
+   • closure under concatenation
+   • closure under star
+   • closure under union
+   • cnf
+   • compiler
+   • complement
+   • complexity relationship among models
+   • composite
+   • computation history
+   • computational tree
+   • concatenation
+   • configuration
+   • conjunctive normal form
+   • control
+   • correspondence
+   • countable
+   • decidable
+   • decide
+   • deterministic finite automaton
+   • diagonalization
+   • domain
+   • domino
+   • e r
+   • elba
+   • empty language
+   • empty string
+   • eq tm
+   • eq tm is undecidable
+   • equivalence of nfas and dfas
+   • etm
+   • euclidean algorithm
+   • even
+   • exclusive or
+   • exponential bound
+   • exponential time
+   • finite state automaton
+   • formal description
+   • function
+   • gnfa
+   • halt
+   • halt tm
+   • halting configuration
+   • halting problem
+   • high level description
+   • implementation description
+   • implication
+   • infinite long tape
+   • infinite regular language
+   • integer
+   • intersection
+   • irrational number
+   • language of a method
+   • lba
+   • lexicographic ordering
+   • linear bounded automaton
+   • m
+   • mapping reducibility
+   • mapping reducible
+   • modified post correspondence problem
+   • mpcp
+   • multi tape tm
+   • multitape
+   • multitape tm
+   • multitape turing machine
+   • n p
+   • non accept state
+   • non regular
+   • non regular language
+   • nondeterministic finite automaton
+   • nondeterministic polynomial
+   • nondeterministic polynomial time
+   • nondeterministic turing machine
+   • nonregular language
+   • notprime
+   • np
+   • np complete
+   • np completene
+   • ntime
+   • ntm
+   • odd
+   • one dfa
+   • one tape
+   • one tape turing machine
+   • one tm
+   • one tm is undecidable
+   • one to one
+   • onto
+   • operation
+   • ordered pair
+   • p
+   • p q
+   • path
+   • pcp
+   • pcp is undecidable
+   • polynomial bound
+   • polynomial time
+   • polynomial time computable function
+   • polynomial time mapping reducible
+   • polynomial time reducibility
+   • polynomial time reducible
+   • polynomial time verifier
+   • polynomial verifiability
+   • polynomially verifiable
+   • powerset
+   • predicate
+   • proof
+   • proof by construction
+   • proof by contradiction
+   • psubsetdfa
+   • pumped
+   • pumping lemma
+   • pumping length
+   • r
+   • range
+   • rational number
+   • recognise
+   • recognizable
+   • recognize
+   • recursive definition
+   • reducibility
+   • reduction via computation history
+   • reductions via computation history
+   • regular
+   • regular infinite language
+   • regular tm
+   • regular tm is undecidable
+   • reject
+   • reject state
+   • rejecting computation history
+   • rejecting configuration
+   • rejection computation history
+   • relatively prime
+   • relprime
+   • rk
+   • running time
+   • sat
+   • satisfiability problem
+   • satisfiable
+   • sequence
+   • set
+   • set different
+   • set of all languages is uncountable
+   • set of regular languages
+   • set of states
+   • shortlex order
+   • single tape tm
+   • small o
+   • some languages are not turing recognizable
+   • some languages are not turing recognzable
+   • star
+   • start state
+   • starting configuration
+   • starting state
+   • state
+   • state diagram
+   • state transition table
+   • string
+   • subset sum
+   • substring
+   • t
+   • tape
+   • tape head
+   • the regular operation
+   • the set of all languages is uncountable
+   • theorem 1 54
+   • time complexity
+   • time complexity cla
+   • transition function
+   • tuple
+   • turing decidable
+   • turing machines as method
+   • turing recognizable
+   • uncountable
+   • undecidability
+   • undecidability proof
+   • undecidable language
+   • union
+   • universal tm
+   • universal turing machine
+   • unrecognizable language
+   • unrecognizable lanugage
+   • verifier
+   • vertex cover
+   • yield
+   • ε
+   • σ
+   • σ is countable
++ echo 'CS-0441 RES'
+CS-0441 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs0441.txt ./concepts_bio/gold_all/gold_cscs0441_all_concepts.txt
+=== METRICS ===
+true_positives   : 37
+false_positives  : 72
+false_negatives  : 225
+precision        : 0.3394
+recall           : 0.1412
+f1               : 0.1995
+accuracy         : 0.1412
+
+TRUE POSITIVES (37):
+   • base case
+   • cardinality
+   • combination
+   • combinatoric
+   • composite
+   • composite number
+   • conditional probability
+   • direct proof
+   • distribution
+   • divisibility
+   • division algorithm
+   • equivalence
+   • factor
+   • formal proof
+   • inclusion exclusion principle
+   • inductive step
+   • informal proof
+   • logical equivalence
+   • mathematical induction
+   • negation
+   • nested quantifier
+   • number theory
+   • permutation
+   • pigeonhole principle
+   • positive integer
+   • probability
+   • probability distribution
+   • product rule
+   • prolog
+   • proof
+   • proof strategy
+   • propositional logic
+   • r permutation
+   • recursion
+   • strong induction
+   • structural induction
+   • syllogism
+
+FALSE POSITIVES (72):
+   • algorithm
+   • algorithm complexity
+   • applicable proof method
+   • arrangement
+   • associative
+   • baye
+   • builder notation
+   • complete
+   • complex set definition
+   • computer system
+   • contraposition
+   • convergent
+   • count event space
+   • data structure
+   • definition
+   • discrete object
+   • discrete probability
+   • discrete structure
+   • distributive
+   • divisibility property
+   • factorial function
+   • formally
+   • game
+   • genetics algorithm
+   • ground truth
+   • homework
+   • induction
+   • inference
+   • inference l logical equivalence
+   • kth step
+   • learn
+   • likelihood
+   • limit
+   • logic
+   • logic puzzle
+   • logical
+   • logical equivalences function
+   • logical operation
+   • logical reasoning
+   • logically another
+   • logically valid way
+   • material
+   • mathematic
+   • modular arithmetic
+   • negation example
+   • nested quantifiers logic
+   • ordered collection
+   • positive
+   • proof propositional logic
+   • proof technique
+   • propositional equivalence
+   • puzzle
+   • quantifiers propositional logic
+   • race
+   • recitation
+   • recursive object
+   • repetition
+   • risk assessment
+   • security
+   • security example
+   • set builder
+   • set theory
+   • specific function
+   • structure
+   • submission homework
+   • support revisited
+   • tactic
+   • task
+   • the pigeonhole principle
+   • type
+   • video game
+   • web page
+
+FALSE NEGATIVES (225):
+   • False generalization
+   • addition
+   • arithmetic progression
+   • arithmetic sequence
+   • associative law
+   • backward reasoning
+   • base step
+   • basis step
+   • bayes theorem
+   • bayesian spam filter
+   • bernoulli distribution
+   • bernoulli trial
+   • biconditional
+   • bijection
+   • binomial
+   • binomial coefficient
+   • binomial theorem
+   • bitmap
+   • bitwise logical operation
+   • bitwise operation
+   • caesar cipher
+   • cartesian product
+   • ceiling
+   • ceiling function
+   • closed form
+   • codomain
+   • combination with repetition
+   • commutative law
+   • complement
+   • complementary event
+   • composed
+   • composition
+   • concatenation
+   • conclusion
+   • congruency
+   • congruent
+   • conjecture
+   • conjunction
+   • constructive approach
+   • constructive existence proof
+   • contingency
+   • continuous mathematic
+   • contradiction
+   • contrapositive
+   • converse
+   • coprime
+   • countable
+   • counterexample
+   • cryptography
+   • datalog
+   • demorgan s law
+   • diagonalization
+   • discrete math
+   • discrete mathematic
+   • disjoint
+   • disjunction
+   • disjunctive syllogism
+   • distinguishable
+   • div
+   • divide
+   • divided
+   • dividend
+   • divisor
+   • domain
+   • element
+   • empty set
+   • equivalency
+   • euclid s algorithm
+   • event
+   • exclusive or
+   • exhaustive proof
+   • existence proof
+   • existential instantiation
+   • existential quantification
+   • existential quantifier
+   • expectation
+   • expected value
+   • experiment
+   • extended binary tree
+   • fact
+   • factorial
+   • false positive
+   • fibonacci number
+   • fibonacci sequence
+   • finite set
+   • floor
+   • floor function
+   • flush
+   • forward reasoning
+   • four of a kind
+   • full binary tree
+   • full house
+   • function
+   • fundamental theorem of arithmetic
+   • gcd
+   • generalized pigeonhole principle
+   • geometric progression
+   • geometric sequence
+   • geometric series
+   • greatest common divisor
+   • hash function
+   • height
+   • host id
+   • hypothesi
+   • hypothetical syllogism
+   • i h
+   • image
+   • implication
+   • independence
+   • independent
+   • index of summation
+   • indistinguishable
+   • inductive hypothesi
+   • injection
+   • injective
+   • integer
+   • intersection
+   • inverse
+   • ip addre
+   • ip addres
+   • lcm
+   • least common multiple
+   • length
+   • logic programming
+   • logical connective
+   • logical equivalency
+   • logically equivalent
+   • membership table
+   • mod
+   • modus ponen
+   • modus tollen
+   • multiple
+   • n tuple
+   • natural number
+   • network id
+   • non constructive approach
+   • non constructive existence proof
+   • one to one
+   • one to one correspondence
+   • onto
+   • ordered n tuple
+   • ordered pair
+   • pairwise coprime
+   • pairwise disjoint
+   • pairwise relatively prime
+   • partition
+   • pascal s identity
+   • permutation with repetition
+   • power set
+   • precedence
+   • predicate
+   • predicate logic
+   • preimage
+   • premise
+   • prime
+   • prime number
+   • proof by cases
+   • proof by contradiction
+   • proof by contraposition
+   • proof by counterexample
+   • proper subset
+   • proposition
+   • propositional function
+   • pseudorandom sequence
+   • quantifier
+   • query
+   • quotient
+   • r combination
+   • random variable
+   • range
+   • rational number
+   • real number
+   • reason backward
+   • recursive
+   • recursive function
+   • recursive sequence
+   • recursive step
+   • relatively prime
+   • remainder
+   • resolution
+   • rooted tree
+   • rule
+   • rule of inference
+   • sample space
+   • sequence
+   • set
+   • set builder notation
+   • set comprehension
+   • set difference
+   • set equality
+   • set identity
+   • sieve of eratosthenes
+   • simplification
+   • spam
+   • standard deviation
+   • stirling number of the second kind
+   • straight flush
+   • strong mathematical induction
+   • subset
+   • sum rule
+   • summation notation
+   • superset
+   • surjection
+   • surjective
+   • tautology
+   • term
+   • theorem
+   • truth set
+   • truth table
+   • uncountable
+   • uniform distribution
+   • union
+   • uniquene
+   • universal instantiation
+   • universal quantification
+   • universal quantifier
+   • universe
+   • universe of discourse
+   • variance
+   • venn diagram
+   • well formed
+   • well formed formulae
+   • well ordering
+   • well ordering axiom
+   • xor
++ echo 'CS-0007 RES'
+CS-0007 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs0007.txt ./concepts_bio/gold_all/gold_cscs0007_all_concepts.txt
+=== METRICS ===
+true_positives   : 18
+false_positives  : 54
+false_negatives  : 108
+precision        : 0.25
+recall           : 0.1429
+f1               : 0.1818
+accuracy         : 0.1429
+
+TRUE POSITIVES (18):
+   • api
+   • application programming interface
+   • array
+   • boolean expression
+   • character
+   • clas
+   • code
+   • constructor
+   • device driver
+   • exception
+   • function
+   • java
+   • method
+   • object
+   • operating system
+   • primitive value
+   • switch case
+   • virtual machine
+
+FALSE POSITIVES (54):
+   • abstract
+   • analytical engine
+   • bytecode
+   • case
+   • cheating
+   • class relationship
+   • collaboration
+   • component
+   • computer
+   • consistent
+   • context
+   • de java
+   • difference engine
+   • docs api
+   • end constructor
+   • end method
+   • evaluate
+   • event
+   • facebook
+   • fair game
+   • first character
+   • functional responsibility
+   • hardware
+   • harmonic series
+   • history
+   • homework
+   • isolation
+   • language
+   • layer
+   • learn java
+   • listlist
+   • loom
+   • object clas
+   • object oriented programming
+   • objects primitive
+   • order
+   • private
+   • programming language
+   • public car
+   • public clas
+   • punch card
+   • readability
+   • relevant functions method
+   • s constructor
+   • scanner public clas
+   • service quote shop
+   • standard
+   • sumdouble
+   • superclass constructor
+   • system
+   • test
+   • value function
+   • variable card
+   • •
+
+FALSE NEGATIVES (108):
+   • 1d array
+   • 2 d array
+   • application
+   • ascii
+   • assembly
+   • base case
+   • boolean
+   • boolean char double int
+   • boolean condition
+   • bufferedreader
+   • byte
+   • catch
+   • char
+   • checked
+   • cla
+   • class level variable
+   • class method
+   • comment
+   • commented
+   • concatenation
+   • constant
+   • curly bracket
+   • dot operator
+   • double
+   • else
+   • else if
+   • equality
+   • escape character
+   • extend
+   • field
+   • float
+   • for
+   • for loop
+   • function body
+   • function call
+   • function caller
+   • function name
+   • function overloading
+   • functionname
+   • getter
+   • identifier
+   • if statement
+   • import
+   • inheritance
+   • inputstreamreader
+   • instance
+   • instance method
+   • instance variable
+   • int
+   • integer
+   • integer division
+   • ioexception
+   • iteration
+   • long
+   • lowercamelcase
+   • method overloading
+   • modular arithmetic
+   • modular operation
+   • multi dimension array
+   • new
+   • non
+   • non constant
+   • non static
+   • null
+   • object cla
+   • object oriented
+   • overloading constructor
+   • ownership
+   • pa
+   • parameter
+   • parent cla
+   • passing
+   • property
+   • protected
+   • reader
+   • reading
+   • recursion
+   • return type
+   • scanner
+   • scope
+   • semicolon
+   • setter
+   • short
+   • square bracket
+   • static
+   • string
+   • sub
+   • subcla
+   • subclas
+   • substring
+   • subtype
+   • super
+   • super cla
+   • supercla
+   • superclas
+   • throw
+   • thrown
+   • token
+   • tostring
+   • unchecked
+   • uppercamelcase
+   • variable
+   • while
+   • world
+   • wrapper cla
+   • wrapper clas
+   • writer
+   • writing
++ echo 'CS-1567 RES'
+CS-1567 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs1567.txt ./concepts_bio/gold_all/gold_cscs1567_all_concepts.txt
+=== METRICS ===
+true_positives   : 8
+false_positives  : 23
+false_negatives  : 74
+precision        : 0.2581
+recall           : 0.0976
+f1               : 0.1416
+accuracy         : 0.0976
+
+TRUE POSITIVES (8):
+   • camera
+   • debugging
+   • joy node
+   • kobuki node
+   • launch file
+   • publisher
+   • robot operating system
+   • rpc
+
+FALSE POSITIVES (23):
+   • anonymou
+   • blob detection
+   • capability level
+   • computer vision
+   • diagnostic
+   • distributed
+   • distributed computing
+   • forget
+   • kobuki node package
+   • kobuki robot
+   • kosiyatrakul joy node
+   • matchmaking
+   • object detection
+   • operating system
+   • python
+   • robot
+   • robot operating
+   • string
+   • subscriber publisher
+   • synchronization bumper
+   • topic joy note
+   • type publisher
+   • type string
+
+FALSE NEGATIVES (74):
+   • array of floating
+   • bumper
+   • bumperevent
+   • button
+   • buttonevent
+   • callback
+   • callback function
+   • camera node
+   • cleanup
+   • closed loop
+   • cmvision
+   • construct
+   • control
+   • control node
+   • control system
+   • differential
+   • distributed inter proce
+   • environment
+   • filter
+   • gaussian blur
+   • gaussian normal distribution
+   • gscam
+   • gscam node
+   • include tag
+   • integral
+   • integrated web camera
+   • joy_node
+   • kobuki
+   • kobuki_node
+   • loop
+   • main
+   • message
+   • meta operating system
+   • multiple
+   • named bu
+   • node
+   • odometry
+   • open loop
+   • pid
+   • pid kd
+   • pid kp
+   • pitch
+   • pose
+   • proportional
+   • quaternion
+   • quaternion quaternion
+   • rate
+   • rgb
+   • rgb format
+   • ro
+   • roll
+   • ros master
+   • ros message
+   • roscore
+   • rosout
+   • rospy spin
+   • rostopic
+   • simplified method
+   • single node
+   • sound
+   • stream
+   • subscriber
+   • topic
+   • type
+   • type bumperevent
+   • type buttonevent
+   • type led
+   • type sound
+   • universe
+   • web cam
+   • workspace directory
+   • yaw
+   • yuv
+   • yuv format
++ echo 'CS-1622 RES'
+CS-1622 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs1622.txt ./concepts_bio/gold_all/gold_cscs1622_all_concepts.txt
+=== METRICS ===
+true_positives   : 52
+false_positives  : 77
+false_negatives  : 358
+precision        : 0.4031
+recall           : 0.1268
+f1               : 0.1929
+accuracy         : 0.1268
+
+TRUE POSITIVES (52):
+   • ad hoc
+   • application binary interface
+   • ast
+   • bottom up parsing
+   • cfg
+   • code generation
+   • codegen
+   • compiler
+   • context free language
+   • control flow analysi
+   • control flow graph
+   • data flow analysi
+   • deallocation
+   • derivation
+   • dynamic allocation
+   • dynamic memory management
+   • function
+   • global
+   • global optimization
+   • grammar
+   • heterogeneou
+   • join function
+   • language
+   • lexer
+   • liveness algorithm
+   • local optimization
+   • method
+   • name checking
+   • offset
+   • operating system
+   • optimization
+   • order
+   • ownership
+   • parsing
+   • polymorphism
+   • program
+   • register allocation
+   • regular language
+   • runtime
+   • runtime library
+   • rust
+   • scoping
+   • semantic
+   • semantic analysi
+   • source code
+   • symbol table
+   • transfer function
+   • type
+   • type error
+   • type safety
+   • type system
+   • type theory
+
+FALSE POSITIVES (77):
+   • 19 livenes
+   • abstract
+   • algorithm
+   • algorithmically checkable method
+   • architectural
+   • argument
+   • array
+   • arraylist
+   • arraylist clas
+   • assembly code
+   • automated version
+   • backward
+   • boolean
+   • clas
+   • code
+   • code elimination
+   • code generator
+   • code program
+   • compiler design
+   • compiler stuff
+   • complex
+   • correctnes
+   • course
+   • dag
+   • data structure
+   • data variable
+   • dependency graph
+   • device driver
+   • disability
+   • discord hour
+   • dr
+   • embedded device
+   • error
+   • error message
+   • example language
+   • exception
+   • fit
+   • formalized
+   • grade
+   • heterogeneous type
+   • index
+   • iterator
+   • java
+   • java compiler
+   • language feature
+   • lex
+   • lexer strip
+   • lexing 3
+   • lexing grammar
+   • lisp
+   • lw
+   • macro
+   • mapping
+   • mathematician
+   • morph
+   • output machine code
+   • parsing expression
+   • point
+   • positive offset
+   • power
+   • powerpoint
+   • programming language
+   • python
+   • rank
+   • recursive rule
+   • resource utilization
+   • space
+   • structs and class
+   • structured type
+   • stuff
+   • sure
+   • table
+   • time
+   • top down parsing
+   • translation
+   • tree
+   • use email
+
+FALSE NEGATIVES (358):
+   • abi
+   • absolute addres
+   • abstract syntax tree
+   • abstraction
+   • accessing variable
+   • ad hoc polymorphism
+   • ahead of time
+   • algebraic data type
+   • algebraic simplification
+   • algebraic type
+   • aliasing
+   • allocate
+   • allocate register
+   • allocated
+   • allocating array
+   • allocation
+   • alphabet
+   • alternation
+   • ambiguity
+   • aot
+   • aot compiler
+   • architectural abi
+   • arena allocation
+   • array allocation
+   • associativity
+   • ast interpreter
+   • asynchronous message
+   • automatic heap memory management
+   • automatic memory management
+   • back edge
+   • backend
+   • backward analysi
+   • backwards analyse
+   • backwards analysi
+   • basic block
+   • bb
+   • bb s predecessor
+   • bb s successor
+   • binary
+   • binary operator
+   • bit vector problem
+   • bottom type
+   • bottom up
+   • bounded quantification
+   • box
+   • boxed
+   • call graph
+   • call stack
+   • callee
+   • caller
+   • calling convention
+   • cargo
+   • chromatic number
+   • codepoint
+   • collection phase
+   • combining mark
+   • common subexpression elimination
+   • compile
+   • compile time
+   • compound type
+   • concurrent collector
+   • conditional terminator
+   • constant
+   • constant copy propagation
+   • constant folding
+   • constructor
+   • context
+   • context free grammar
+   • context sensitive grammar
+   • control flow
+   • control flow statement
+   • conversion
+   • copy propagation
+   • copying collector
+   • core
+   • crate
+   • cse
+   • csg
+   • dangling invalid pointer
+   • dangling pointer
+   • data flow
+   • data inheritance
+   • data layout
+   • data segment
+   • dataflow analysi
+   • dce
+   • dead code elimination
+   • dead store
+   • dead store elimination
+   • deallocate
+   • deallocated
+   • deallocating
+   • decidability
+   • decidable
+   • declaration
+   • declaration map
+   • declare
+   • decompiler
+   • decoupling
+   • def
+   • dereferencing
+   • derived value
+   • desugar
+   • desugaring
+   • domain specific language
+   • dsl
+   • dynamic
+   • dynamic dispatch
+   • dynamic memory allocation
+   • dynamic scope
+   • dynamically scoped
+   • dynamically typed language
+   • eager
+   • epilogue
+   • error reporting
+   • evaluating expression
+   • evaluation
+   • evaluation rule
+   • evaluation semantic
+   • executable
+   • executable format
+   • existential polymorphism
+   • existential type
+   • forward analysi
+   • forward reference
+   • fp
+   • frame pointer
+   • frame pointer register
+   • function call
+   • function epilogue
+   • function inlining
+   • function overloading
+   • function type
+   • gccp
+   • generational collector
+   • generic
+   • generic type
+   • global constant copy propagation
+   • goto terminator
+   • graph coloring
+   • heap
+   • heap allocated
+   • heap memory management
+   • higher order function
+   • identifier
+   • implicit conversion
+   • implicit type conversion
+   • in
+   • in state
+   • indirect function call
+   • indirection
+   • inference rule
+   • interface
+   • intermediate representation
+   • interprocedural optimization
+   • ir
+   • isa
+   • jit
+   • jit compiler
+   • just in time
+   • k colorability
+   • k colorable
+   • keyword
+   • language abi os abi architectural abi
+   • layout
+   • lazy
+   • lexed
+   • lexical analysi
+   • lexing
+   • library
+   • lifetime
+   • linker
+   • linking
+   • literal
+   • live
+   • livene
+   • liveness range
+   • local variable
+   • lookahead
+   • lowering
+   • manual memory management
+   • mark and sweep
+   • maximal munch
+   • memory
+   • memory addre
+   • memory allocator
+   • memory leak
+   • memory region
+   • memory safe
+   • memory safety
+   • metalanguage
+   • method call
+   • method index
+   • method inheritance
+   • monomorphic
+   • monomorphization
+   • monomorphized
+   • multithreaded collector
+   • mutation phase
+   • mutual reference
+   • name mangling
+   • name resolution
+   • node id
+   • nominal identity
+   • nonterminal
+   • object file
+   • object oriented programming
+   • oop
+   • operator associativity
+   • option
+   • out state
+   • overload
+   • owner
+   • padded
+   • padding
+   • parametric
+   • parametric polymorphism
+   • parametrically polymorphic function
+   • parenthesized expression
+   • parser
+   • partialord
+   • peephole optimization
+   • place
+   • pointer
+   • pointer aliasing
+   • pointer arithmetic
+   • polymorphic
+   • position independent code
+   • postfix operator
+   • postorder
+   • precedence
+   • predecessor
+   • prefixed
+   • prefixed representation
+   • prefixing
+   • primary expression
+   • primitive
+   • primitive type
+   • product type
+   • prologue
+   • punning
+   • r colorable
+   • ra
+   • record type
+   • recursion
+   • recursive call
+   • recursive descent
+   • recursive descent parser
+   • recursive rule structure
+   • reference
+   • reference counting
+   • reference type
+   • reference type variable
+   • referent
+   • register
+   • register interference graph
+   • register pressure
+   • relocation
+   • repetition
+   • result
+   • return terminator
+   • rig
+   • rtti
+   • run time type identification
+   • runtime data representation
+   • runtime error
+   • runtime representation
+   • rustup
+   • scope
+   • scope tree
+   • sequencing
+   • serialize
+   • shadow
+   • shadowing
+   • shared library
+   • side effect
+   • side effect free function
+   • single assignment form
+   • single static assignment
+   • single static assignment form
+   • source
+   • sp
+   • spill
+   • spilling
+   • ssa
+   • stack
+   • stack frame
+   • stack overflow
+   • stack pointer
+   • standard library
+   • state
+   • static
+   • static allocation
+   • static dispatch
+   • static scope
+   • statically determined location
+   • statically typed language
+   • std
+   • stdlib
+   • strength reduction
+   • string
+   • struct
+   • struct padding
+   • struct runtime representation
+   • structural identity
+   • structured
+   • subtype
+   • subtype polymorphism
+   • subtyping
+   • successor
+   • sum type
+   • symbol
+   • symbol id
+   • symbolic linking
+   • syntactic analysi
+   • syntactic structure
+   • syntactic sugar
+   • syntax
+   • syscall
+   • system call
+   • template
+   • temporary
+   • term
+   • terminal
+   • terminator
+   • the runtime
+   • the runtime library
+   • tight coupling
+   • token
+   • tracing garbage collection
+   • trait
+   • tru
+   • truss s mips abi
+   • tuple
+   • type argument
+   • type checking
+   • type coercion
+   • type constructor
+   • type context
+   • type conversion
+   • type inference
+   • typing
+   • typing rule
+   • unary
+   • undecidable
+   • unicode
+   • unk
+   • untyped
+   • use
+   • use map
+   • value
+   • value type
+   • value type variable
+   • virtual method
+   • virtual method call
+   • virtual method table
+   • vtable
+   • weakly typed language
++ echo 'CS-1550 RES'
+CS-1550 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs1550.txt ./concepts_bio/gold_all/gold_cscs1550_all_concepts.txt
+=== METRICS ===
+true_positives   : 18
+false_positives  : 30
+false_negatives  : 410
+precision        : 0.375
+recall           : 0.0421
+f1               : 0.0756
+accuracy         : 0.0421
+
+TRUE POSITIVES (18):
+   • busy waiting
+   • clock algorithm
+   • condition variable
+   • context switching
+   • device driver
+   • interrupt
+   • interrupt vector table
+   • linked allocation
+   • lock
+   • multilevel feedback scheduling
+   • operating system
+   • page fault
+   • raid4
+   • raid5
+   • semaphore
+   • service time
+   • spinlock
+   • thrashing
+
+FALSE POSITIVES (30):
+   • algorithm
+   • bankers algorithm
+   • bonus homework
+   • bonus point
+   • condition variable implementation
+   • dual mode
+   • error detection correction
+   • factor
+   • feedback scheduling
+   • fork tracing
+   • homework
+   • homework 12
+   • homework 2
+   • homework 5
+   • indexing
+   • lecture24
+   • mutex code
+   • operating
+   • process
+   • project
+   • race condition prevention
+   • reader process writer
+   • reader writer problem
+   • replacement algorithm
+   • resource trajectory
+   • resource trajectory graph
+   • scheduler
+   • synchronization
+   • system
+   • wait algorithm
+
+FALSE NEGATIVES (410):
+   • 1 d parity
+   • 2 d parity
+   • access control list
+   • access matrix
+   • access right
+   • acl
+   • actuator
+   • address translation
+   • af
+   • aging
+   • api
+   • application programming interface
+   • atomic
+   • atomic swap
+   • authentication
+   • availability
+   • banker s algorithm
+   • base
+   • base and limit register
+   • behavioral checker
+   • belady s anomaly
+   • bell la padula
+   • bell la padula multilevel security model
+   • biba
+   • biba multilevel integrity model
+   • binary semaphore
+   • biometric
+   • block
+   • block index
+   • blocking
+   • boot block
+   • bounded buffer
+   • bounded buffer problem
+   • broadcast
+   • bu
+   • buffer overflow
+   • buffering
+   • c look
+   • c scan
+   • cache
+   • caching
+   • capability
+   • capability list
+   • child proce
+   • child proces
+   • ciphertext
+   • circular wait
+   • clock
+   • clock interrupt
+   • cloud computing
+   • confidentiality
+   • consumer
+   • context switch
+   • contiguous allocation
+   • controller
+   • convoy effect
+   • copy on write
+   • counting semaphore
+   • covert channel
+   • cpu bound
+   • cpu burst
+   • cpu i o cycle
+   • cpu scheduling
+   • critical region
+   • critical section
+   • cryptography
+   • customer proce
+   • customer proces
+   • cylinder
+   • daemon proces
+   • data confidentiality
+   • data encryption standard
+   • data integrity
+   • de
+   • deadlock
+   • deadlock avoidance
+   • deadlock detection
+   • deadlock detection algorithm
+   • deadlock prevention
+   • decision mode
+   • decryption
+   • decryption key
+   • defense in depth
+   • demand paging
+   • denial of service
+   • device controller
+   • device independence
+   • digital signature
+   • dining philosopher
+   • direct memory acce
+   • direct pointer
+   • directory
+   • dirty bit
+   • dirty page
+   • disk arm scheduling
+   • disk scheduling algorithm
+   • dispatcher
+   • distance
+   • dma
+   • domain
+   • double indirect
+   • down
+   • dual bu
+   • dual mode operation
+   • dump
+   • dumped
+   • dynamic priority
+   • eat
+   • ecc
+   • effective access time
+   • elevator algorithm
+   • encryption
+   • encryption key
+   • error correcting code
+   • error detection
+   • error handling
+   • exception
+   • exponential average
+   • exponential averaging
+   • external pager
+   • fat
+   • fcf
+   • ff
+   • fifo
+   • file allocation table
+   • file linking
+   • file metadatum
+   • file system
+   • first come first served
+   • first in first out
+   • fixed memory partition
+   • fixed partition
+   • fork
+   • forking
+   • frame number
+   • free block tracking
+   • global allocation
+   • hardware interrupt
+   • hardware tlb replacement
+   • hash
+   • hashing
+   • head
+   • hierarchical directory system
+   • hit ratio
+   • i node
+   • i o bound
+   • i o burst
+   • idt
+   • index block
+   • index node
+   • indexed allocation
+   • init proce
+   • inode
+   • integrity
+   • integrity checker
+   • internet worm
+   • interpreted code
+   • interrupt descriptor table
+   • interrupt driven i o
+   • interrupt handler
+   • interrupt service routine
+   • interrupt vector
+   • inverted page table
+   • isr
+   • journal
+   • journaling
+   • journaling file system
+   • kernel mode
+   • key
+   • key logger
+   • least recently used
+   • lf
+   • limit
+   • link
+   • live migration
+   • local allocation
+   • locality of reference
+   • locked page
+   • locking page
+   • log
+   • log structured file system
+   • logical addre
+   • logical addres
+   • logical page number
+   • login spoofing
+   • long job
+   • lru
+   • lsf
+   • magnetic card
+   • main memory
+   • master boot record
+   • mechanism
+   • memory barrier
+   • memory hierarchy
+   • memory management
+   • memory management unit
+   • memory manager
+   • memory mapped i o
+   • memory partition
+   • memory protection
+   • microkernel
+   • mmu
+   • mode bit
+   • monoalphabetic substitution
+   • multi level page table
+   • multilevel feedback queue scheduling
+   • multilevel queue scheduling
+   • multiple feedback queue
+   • multiprogramming
+   • mutex
+   • mutual exclusion
+   • nfu
+   • non preemptive
+   • nonpreemptive
+   • not frequently used
+   • not recently used
+   • nru
+   • o
+   • object
+   • offline cracking
+   • one time pad
+   • one way function
+   • one way hash function
+   • online cracking
+   • opt
+   • optimal
+   • optimal page replacement algorithm
+   • orphan
+   • os kernel
+   • ostrich algorithm
+   • page
+   • page fault rate
+   • page frame
+   • page frame number
+   • page locking
+   • page number
+   • page offset
+   • page replacement
+   • page replacement algorithm
+   • page sharing
+   • page size
+   • page table
+   • page table base register
+   • page table entry
+   • page table length register
+   • paging
+   • parent proce
+   • parity
+   • partition table
+   • password
+   • password cracking
+   • password file
+   • pcb
+   • pgp
+   • physical addre
+   • physical addres
+   • physical page frame
+   • physical page number
+   • plaintext
+   • platter
+   • policy
+   • polling
+   • polymorphic code
+   • polymorphic viru
+   • pre emptive
+   • preamble
+   • preemptive
+   • preemptive scheduling
+   • pretty good privacy
+   • priority
+   • priority inversion
+   • priority scheduling
+   • private key
+   • process control block
+   • producer
+   • producers consumer
+   • producers consumers problem
+   • programmed i o
+   • protection
+   • protection command
+   • protection domain
+   • protection matrix
+   • ptbr
+   • pte
+   • ptlr
+   • public key
+   • public key cryptography
+   • public key encryption
+   • quantum
+   • race condition
+   • raid
+   • raid 0
+   • raid 1
+   • raid 4
+   • raid 5
+   • reader
+   • readers writer
+   • ready queue
+   • redundant array of inexpensive disks
+   • reference bit
+   • reference monitor
+   • reference string
+   • referenced bit
+   • rendezvou
+   • resource allocation graph
+   • response time
+   • rotation time
+   • rotational delay
+   • round robin
+   • rr
+   • salt
+   • sandboxing
+   • scan
+   • second chance
+   • secret key encryption
+   • sector
+   • security
+   • security level
+   • seek distance
+   • seek time
+   • segmentation fault
+   • selection function
+   • separate i o
+   • sharing page
+   • short term scheduler
+   • shortest job first
+   • shortest process next
+   • shortest seek time first
+   • side channel attack
+   • signal
+   • signed code
+   • simple integrity principle
+   • simple security property
+   • single bu
+   • single indirect
+   • sjf
+   • sleep
+   • sleepy barber
+   • smart card
+   • social engineering
+   • software interrupt
+   • software tlb replacement
+   • spindle
+   • spn
+   • spooling
+   • sstf
+   • stack algorithm
+   • starvation
+   • steganography
+   • strip
+   • stripe
+   • super block
+   • surface
+   • swap
+   • symmetric key encryption
+   • syscall
+   • system availability
+   • system call
+   • system call interface
+   • system call table
+   • task_struct
+   • templating
+   • test set
+   • testandset
+   • thread
+   • throughput
+   • time quantum
+   • time slice
+   • tlb
+   • tlb mis
+   • track
+   • transfer time
+   • translation lookaside buffer
+   • trap
+   • triple indirect
+   • trojan horse
+   • trusted computing base
+   • turnaround time
+   • two level directory system
+   • two level page table
+   • type 0 hypervisor
+   • type 1 hypervisor
+   • type 2 hypervisor
+   • uniform naming
+   • unix fast file system
+   • unix file system
+   • up
+   • user authentication
+   • user mode
+   • valid bit
+   • victim page
+   • vigenere cipher
+   • virtual addre
+   • virtual addres
+   • virtual machine
+   • virtual memory
+   • virtual page number
+   • virtualization
+   • viru
+   • vm
+   • vmm
+   • wait
+   • wakeup
+   • wear leveling
+   • worker proce
+   • worker proces
+   • working set
+   • worm
+   • writer
+   • zombie
++ echo 'CS-0447 RES'
+CS-0447 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs0447.txt ./concepts_bio/gold_all/gold_cscs0447_all_concepts.txt
+=== METRICS ===
+true_positives   : 42
+false_positives  : 70
+false_negatives  : 552
+precision        : 0.375
+recall           : 0.0707
+f1               : 0.119
+accuracy         : 0.0707
+
+TRUE POSITIVES (42):
+   • addres
+   • alu
+   • argument
+   • array
+   • bit
+   • bitwise operation
+   • boolean function
+   • carry input
+   • combinational logic
+   • compiler
+   • conditional
+   • control
+   • control flow
+   • datapath
+   • dead code
+   • finite state machine
+   • hex
+   • instruction
+   • label
+   • latch
+   • load store architecture
+   • logic
+   • logical negation
+   • logical product
+   • lw
+   • machine code
+   • machine language
+   • memory
+   • memory addres
+   • multi cycle design
+   • multiplication
+   • partial product
+   • pipelined
+   • program
+   • register
+   • register file
+   • s r latch
+   • single cycle machine
+   • stack
+   • string
+   • von neumann architecture
+   • yield
+
+FALSE POSITIVES (70):
+   • 22 pipelining
+   • adder
+   • address multi cycle machine
+   • algorithm
+   • animated
+   • arbitrarines
+   • architecture
+   • arithmetic and logic unit
+   • boolean
+   • bucket
+   • character
+   • circuit
+   • clas
+   • code
+   • column
+   • component
+   • computer
+   • computer programming
+   • computer programming array
+   • computer programming fraction
+   • computer programming function
+   • computer programming logic
+   • computer programming pipelining
+   • contract
+   • controlling
+   • crystal
+   • datapath processor
+   • datatype
+   • ef
+   • faster circuit
+   • flow
+   • forget the point
+   • grade
+   • input
+   • instruction control
+   • isolation
+   • java
+   • light
+   • logic arithmetic
+   • loop
+   • machine language function
+   • mar
+   • memory access
+   • memory control
+   • midterm
+   • million
+   • multi cycle pipelining
+   • multiplication and division
+   • nor stable feedback
+   • one
+   • operate
+   • operation
+   • price
+   • procrastination
+   • programs instruction
+   • real world
+   • register file alu
+   • reset
+   • right
+   • school algorithm
+   • search a string
+   • semi cumulative
+   • sign extend
+   • super important concept
+   • video
+   • videos online
+   • videos online o
+   • von neumann machine
+   • way
+   • zoom
+
+FALSE NEGATIVES (552):
+   • 0x
+   • 1 bit adder
+   • 1 bit alu
+   • 1 s complement
+   • 2 s complement
+   • 2s complement
+   • 32 bit alu
+   • 32 bit float format
+   • 4 bit counter
+   • 7 segment led display
+   • a register
+   • a0
+   • a0 a3
+   • a3
+   • abstract syntax tree
+   • activation frame
+   • add
+   • adding floating point number
+   • adding in binary
+   • addre
+   • address calculation
+   • adjacency
+   • ainvert
+   • aligned
+   • alignment
+   • aluop
+   • alusrc
+   • amd64
+   • analytical engine
+   • and
+   • and gate
+   • antikythera mechanism
+   • arbitrary precision arithmetic
+   • argument register
+   • arithmetic right shift
+   • ascii
+   • asciiz
+   • asm
+   • assembler
+   • assembly
+   • assembly language
+   • associative
+   • ast
+   • average cpi
+   • average instruction cpi
+   • base 10
+   • base 16
+   • base 2
+   • base 8
+   • basic block
+   • beq
+   • bge
+   • bgez
+   • bgt
+   • bgtz
+   • bi endian
+   • bias constant
+   • biased exponent
+   • biased notation
+   • biased representation
+   • big endian
+   • binary
+   • binary addition
+   • binary arithmetic
+   • binary digit
+   • binary point
+   • binary scientific notation
+   • binvert
+   • bit field
+   • bit flag
+   • bit pattern
+   • bit shifting
+   • bit slicing
+   • bitfield
+   • bitwise logical operator
+   • ble
+   • blez
+   • blt
+   • bltz
+   • blue
+   • bne
+   • bnegate
+   • boolean algebra
+   • boolean input
+   • boolean logic
+   • boolean output
+   • branch
+   • branch if equal
+   • branch offset
+   • branch predictor
+   • byte
+   • byteaddressable machine
+   • callee
+   • caller
+   • calling convention
+   • carry
+   • carry bit
+   • carry in
+   • carry out
+   • carry out bit
+   • carry output
+   • ci
+   • cisc
+   • clock
+   • clock cycle
+   • clock edge
+   • clock period
+   • clock signal
+   • clock skew
+   • clock speed
+   • co
+   • cognitive load
+   • commutative
+   • commutativity
+   • complex instruction set computer
+   • computer organization
+   • conditional branch instruction
+   • control flow instruction
+   • control hazard
+   • control signal
+   • counter
+   • cpi
+   • cpld
+   • cpu
+   • cpu time
+   • critical path
+   • cycle time
+   • cycles per instruction
+   • d flip flop
+   • d latch
+   • data hazard
+   • data representation
+   • data segment
+   • datum
+   • ddr4 ram
+   • de morgan s law
+   • decimal
+   • decimal point
+   • decode
+   • decoder
+   • demux
+   • denormalized number
+   • differential engine
+   • distributive
+   • distributivity
+   • div
+   • divide and conquer
+   • divide floating point number
+   • dividend
+   • division
+   • divisor
+   • don t care
+   • double
+   • double precision
+   • double word
+   • dword
+   • dynamic memory
+   • edsac
+   • edvac
+   • electronic delay storage automatic calculator
+   • electronic discrete variable automatic computer
+   • electronic numerical integrator and computer
+   • else if
+   • embedded system
+   • encoder
+   • endianne
+   • eniac
+   • ex
+   • exabyte
+   • exbibyte
+   • exclusive or
+   • execute
+   • exponent
+   • exponent field
+   • falling edge
+   • fetch
+   • five phase of execution
+   • fixed point representation
+   • fixup
+   • flip flop
+   • float
+   • floating point
+   • floating point arithmetic
+   • floating point number representation
+   • flooring division
+   • flow chart
+   • flow of control
+   • foil
+   • for loop
+   • forwarding
+   • fp
+   • fpga
+   • fraction
+   • fraction field
+   • fractional binary
+   • fractional number
+   • fractional part
+   • fsm
+   • full adder
+   • funct
+   • function
+   • function epilogue
+   • function prologue
+   • gal
+   • gate
+   • gate delay
+   • gibibyte
+   • gigabyte
+   • gp
+   • grade school algorithm
+   • gray code
+   • green
+   • half
+   • half adder
+   • half precision
+   • half word
+   • hardware software interface
+   • harvard architecture
+   • heap
+   • hex digit
+   • hex digit led
+   • hexadecimal
+   • hi
+   • high impedance state
+   • high level language
+   • hll
+   • hollerith electric tabulating system
+   • i type
+   • ic
+   • id
+   • idempotent
+   • ieee 754
+   • if
+   • if else
+   • imm
+   • immediate
+   • increment
+   • infinite loop
+   • infinity
+   • initialization
+   • initialize
+   • input output device
+   • instruction decoding
+   • instruction encoding
+   • instruction execution
+   • instruction fetching
+   • instruction format
+   • instruction mix
+   • instruction set architecture
+   • integer number
+   • integer part
+   • integrated circuit
+   • interconnect
+   • interconnect matrix
+   • internet of things
+   • iot
+   • ipc
+   • isa
+   • j
+   • j type
+   • j type instruction format
+   • jacquard machine
+   • jal
+   • jalr
+   • jr
+   • jump
+   • jump and link
+   • jump and link instruction
+   • jump register instruction
+   • jump target
+   • k map
+   • k0
+   • k1
+   • karnaugh map
+   • kibibyte
+   • kilobyte
+   • la
+   • latency
+   • law of diminishing returns
+   • lb
+   • lbu
+   • left shift
+   • left shifting and oring
+   • lh
+   • li
+   • little endian
+   • lo
+   • load
+   • load addre
+   • load immediate
+   • load upper immediate
+   • local variable
+   • logic design
+   • logic function
+   • logic minimization
+   • logical adjacency
+   • logical and
+   • logical operation
+   • logical or
+   • logical sum
+   • lsb
+   • lui
+   • machine language instruction
+   • mainframe
+   • manufacturing yield
+   • mask
+   • masking
+   • maximum clock speed
+   • mbp
+   • mebibyte
+   • megabit
+   • megabyte
+   • mem
+   • memory acce
+   • memory addre
+   • memory alignment
+   • memory layout
+   • memory stored program
+   • memread
+   • memtoreg
+   • memwrite
+   • mfhi
+   • mflo
+   • microcontroller
+   • microprocessor
+   • minterm
+   • mip
+   • modular arithmetic
+   • modulo
+   • modulus arithmetic
+   • moore s law
+   • mosfet
+   • mosfet transistor
+   • move
+   • msb
+   • mul
+   • mult
+   • multi cycle
+   • multi cycle cpu
+   • multicycle
+   • multicycle datapath
+   • multicycle design
+   • multiplexer
+   • multiplicand
+   • multiplier
+   • multiply floating point number
+   • mux
+   • n bit number
+   • nan
+   • nand
+   • nand gate
+   • negation
+   • negative zero
+   • network
+   • nibble
+   • nop
+   • nor
+   • normalized representation
+   • normalized scientific notation
+   • not
+   • not a number
+   • not gate
+   • number base
+   • number representation
+   • numbers and base
+   • numeric base
+   • nybble
+   • o log n
+   • object file
+   • octal
+   • one bit adder
+   • one bit full adder
+   • one s complement arithmetic
+   • ones complement
+   • opcode
+   • operand fetch
+   • or
+   • or gate
+   • ori
+   • overflow
+   • overflow detection
+   • pattern of bits
+   • pc
+   • pc source
+   • pcsrc
+   • peripheral
+   • persistent storage
+   • pipeline
+   • pipeline hazard
+   • pipelining
+   • pointer
+   • polynomial
+   • pop
+   • positional number system
+   • power of two
+   • priority encoder
+   • processor
+   • product
+   • program counter
+   • program counter register
+   • program execution
+   • propagation delay
+   • pseudo code
+   • pseudo instruction
+   • pseudo op
+   • push
+   • quotient
+   • r
+   • r type
+   • r type instruction
+   • ra
+   • race condition
+   • range of numbers
+   • raspberry pi
+   • rd
+   • read modify write
+   • read port
+   • reconfigurable hardware
+   • red
+   • reduced instruction set computer
+   • regdatasrc
+   • regdst
+   • regwrite
+   • remainder
+   • repeated addition
+   • repeated subtraction
+   • return addre
+   • return address register
+   • return value
+   • return value register
+   • rgb565
+   • right shifting and anding
+   • ripple carry
+   • ripple carry adder
+   • risc
+   • rising edge
+   • rt
+   • s register
+   • s register contract
+   • s0
+   • s1
+   • s2
+   • s3
+   • s4
+   • s7
+   • saved register
+   • sb
+   • scientific notation
+   • select input
+   • select pin
+   • select signal
+   • sequential logic
+   • server
+   • set if less than
+   • sh
+   • shamt
+   • shift left logical
+   • shift left logical variable
+   • shift right arithmetic
+   • shift right logical
+   • shifting
+   • short circuit evaluation
+   • sign
+   • sign bit
+   • sign extension
+   • sign magnitude
+   • sign magnitude arithmetic
+   • sign magnitude representation
+   • signed addition
+   • signed division
+   • signed integer
+   • signed multiplication
+   • signed number
+   • signed overflowing
+   • significand
+   • single cycle
+   • single cycle cpu
+   • single cycle datapath
+   • single precision
+   • sll
+   • sllv
+   • slt
+   • sp
+   • speedup
+   • sra
+   • srav
+   • srl
+   • srlv
+   • srt division
+   • stack pointer
+   • stall
+   • state machine
+   • state transition
+   • state transition diagram
+   • state transition table
+   • store
+   • structural hazard
+   • sub
+   • sum of products
+   • supercomputer
+   • sw
+   • system memory
+   • t0
+   • t1
+   • t7
+   • t8
+   • t9
+   • tebibyte
+   • temporary register
+   • terabyte
+   • text
+   • throughput
+   • token
+   • transistor
+   • tristate bu
+   • truncated division
+   • truncation
+   • truth table
+   • turing machine
+   • two s complement
+   • two s complement negation
+   • unicode
+   • univac
+   • universal automatic computer
+   • unsaved register
+   • unsigned addition
+   • unsigned integer
+   • unsigned overflowing
+   • utf 16
+   • v register
+   • v0
+   • v0 v1
+   • v1
+   • value
+   • variable
+   • wafer
+   • wb
+   • while
+   • word
+   • word size
+   • write back
+   • write enable
+   • write port
+   • x86
+   • x86 64
+   • xor
+   • xor gate
+   • zero
+   • zero detection
+   • zero extended immediate
+   • zero extension
+   • zero terminator
++ echo 'CS-1541 RES'
+CS-1541 RES
++ python /home/awesomerek/UniversityOfPittsburgh/ConceptExtractionPaper/gpt_o3_distant_labelling/calculate_concept_metrics.py ./concepts_bio/tnt-kid/cs1541.txt ./concepts_bio/gold_all/gold_cscs1541_all_concepts.txt
+=== METRICS ===
+true_positives   : 39
+false_positives  : 67
+false_negatives  : 372
+precision        : 0.3679
+recall           : 0.0949
+f1               : 0.1509
+accuracy         : 0.0949
+
+TRUE POSITIVES (39):
+   • bandwidth
+   • branch history table
+   • branch prediction
+   • cache
+   • cache block
+   • cache design
+   • caching
+   • data forwarding
+   • data hazard
+   • datarace
+   • decoder
+   • dvf
+   • gpu
+   • hazard
+   • ilp
+   • index
+   • instruction level parallelism
+   • instruction queue
+   • leakage power
+   • memory hierarchy
+   • multi level cache
+   • multiprocessor
+   • oracle cache
+   • order superscalar
+   • out of order superscalar
+   • pipeline
+   • pipelined
+   • power wall
+   • simd
+   • spatial locality
+   • structural hazard
+   • superscalar
+   • superscalar processor
+   • thermal design power
+   • virtual memory
+   • virtual page number
+   • virtualization
+   • wide issue processor
+   • write back
+
+FALSE POSITIVES (67):
+   • access time
+   • ajax
+   • architecture
+   • benchmark
+   • branch
+   • carbon nanotube
+   • clock cycle
+   • clocking review
+   • code analysi
+   • collaboration
+   • competition collaboration
+   • core
+   • cycle
+   • cycle time
+   • cycletimepipelined
+   • data parallel workload
+   • datapath
+   • deep pipeline
+   • design future
+   • directive
+   • dram memory
+   • ethernet
+   • evaluate
+   • instruction
+   • instruction flow
+   • java thread
+   • lw
+   • memory
+   • metric
+   • miniaturization
+   • mip
+   • mips review
+   • mips translation
+   • mpi
+   • multi core
+   • my classmate
+   • physical memory
+   • physical memory proces
+   • pipelined parallelism
+   • power
+   • power consumption
+   • predict
+   • predicting branch
+   • processor pipelining
+   • processor review
+   • radamson
+   • s law
+   • s memory
+   • semiconductor industry
+   • single instruction
+   • software hardware
+   • stuff
+   • supercomputer
+   • sw change
+   • taken branch prediction
+   • technology
+   • technology constraint
+   • utilization
+   • vector
+   • virtual memory review
+   • web app
+   • window
+   • write
+   • write back cache block
+   • xml
+   • zoom breakout
+   • →
+
+FALSE NEGATIVES (372):
+   • 2 bit bht predictor
+   • 2 bit predictor
+   • 2 bit saturating counter
+   • acpi
+   • activity factor
+   • advanced configuration and power interface
+   • amat
+   • anti dependency
+   • application pull
+   • architectural register
+   • architectural state
+   • arithmetic intensity
+   • associative cache
+   • associativity
+   • average memory access time
+   • bank
+   • banking
+   • basic linear algebra subprogram
+   • bhr
+   • bht
+   • bla
+   • block
+   • block index
+   • blockidx
+   • blocking
+   • blocking cache
+   • branch history shift register
+   • branch target buffer
+   • btb
+   • bubble
+   • cache associativity
+   • cache block index
+   • cache block size
+   • cache block tag
+   • cache blocks size
+   • cache capacity
+   • cache coherence
+   • cache coherence protocol
+   • cache consistency
+   • cache incoherence
+   • cache level
+   • cache line
+   • cache locality
+   • cache pollution
+   • cache set
+   • cache size
+   • capacitance
+   • capacity mi
+   • capacity mis
+   • channel length
+   • chip yield
+   • clock
+   • clock frequency
+   • clock gating
+   • cold mi
+   • cold mis
+   • commit
+   • commit in order
+   • compiler nop
+   • compiler reordering
+   • compulsory mi
+   • compute bound
+   • computer architecture
+   • conflict mi
+   • conflict mis
+   • control
+   • control hazard
+   • correlating predictor
+   • cpi
+   • cpu compute cycle
+   • cpu frequency
+   • critical path
+   • cuda
+   • cudafree
+   • cudamalloc
+   • cudamemcpy
+   • cudamemset
+   • cycles per instruction
+   • d cache
+   • dark silicon
+   • data cache
+   • data dependency
+   • data forwarded
+   • data memory
+   • datum
+   • decoded
+   • delay
+   • delay slot
+   • dennard scaling
+   • dependency
+   • direct mapped
+   • direct mapped cache
+   • direct mapped cache hash function
+   • dirty
+   • dirty bit
+   • dirty block
+   • dram
+   • dynamic branch prediction
+   • dynamic ram
+   • dynamic scheduling
+   • dynamic voltage frequency scaling
+   • ex
+   • exception
+   • exception handler
+   • execute
+   • execution time
+   • false dependency
+   • file
+   • flash
+   • flash memory
+   • floating point operations per second
+   • flop
+   • flush
+   • flushed
+   • forwarding unit
+   • frequency scaling
+   • full associativity
+   • fully associative
+   • fully associative cache
+   • gather
+   • gather scatter
+   • global branch history
+   • gpu kernel
+   • gpu thread
+   • graphical processing unit
+   • hardware exception
+   • hardware prefetching
+   • hazard detection unit
+   • hdd
+   • hdu
+   • hierarchical page table
+   • hit time
+   • i cache
+   • i queue
+   • id
+   • if
+   • in order
+   • in order commit
+   • in order superscalar
+   • instruction decode
+   • instruction fetch
+   • instruction memory
+   • instruction set architecture
+   • instruction window
+   • instructions per cycle
+   • inter processor interrupt
+   • interrupt
+   • invalid
+   • inverted page table
+   • ipc
+   • ipi
+   • isa
+   • kernel
+   • l1
+   • l1 cache
+   • l1 d cache
+   • l1 i cache
+   • l2
+   • l2 cache
+   • l3
+   • l3 cache
+   • lane
+   • leakage
+   • least recently used
+   • list scheduling
+   • local branch history
+   • loop
+   • loop tiling
+   • loop unrolling
+   • lru
+   • mac
+   • mem
+   • memory bandwidth
+   • memory bound
+   • memory consistency model
+   • memory latency
+   • memory renaming
+   • memory stall cycle
+   • memory stall time
+   • memory technology
+   • memory wall
+   • mesi
+   • metal oxide silicon field effect transistor
+   • microarchitecture
+   • miniaturization of transistors
+   • minimal mip
+   • miss penalty
+   • miss rate
+   • modified
+   • modified exclusive shared invalid
+   • modified shared invalid
+   • moore s law
+   • mosfet
+   • msi
+   • multi cycle implementation
+   • multi level caching
+   • multiplexer
+   • multiply accumulate
+   • multiprocessor system
+   • no write allocate
+   • non blocking
+   • non blocking cache
+   • nonvolatile
+   • nop
+   • number of levels
+   • operational intensity
+   • order
+   • out of
+   • out of order
+   • out of order processors
+   • out of order superscalars
+   • page fault
+   • page fault handler
+   • page swapping
+   • page table
+   • page table entry
+   • page table register
+   • page table walk
+   • page table walker
+   • pe
+   • performance monitoring unit
+   • physical register
+   • pipeline flush
+   • pipeline hazard
+   • pipeline stall
+   • pipelined instruction execution
+   • pipelining
+   • pmu
+   • policy
+   • port
+   • power gating
+   • predicate
+   • predicated instruction
+   • predication
+   • predict not taken
+   • predict taken
+   • prefetch
+   • prefetcher
+   • prefetching
+   • private
+   • private cache
+   • processing element
+   • processor organization
+   • product binning
+   • propagation delay
+   • pt walk
+   • pte
+   • raster operations pipeline
+   • rat
+   • raw
+   • read after read
+   • read after write
+   • refresh
+   • register
+   • register alias table
+   • register rename
+   • register renamer
+   • register renaming
+   • register writeback
+   • remote bank
+   • reorder
+   • reordered
+   • reordering
+   • replacement scheme
+   • retirement register file
+   • return stack buffer
+   • roofline
+   • rop
+   • rrf
+   • sc
+   • scatter
+   • sequential consistency
+   • set
+   • set associative
+   • set associative cache
+   • set index
+   • sfu
+   • shared
+   • shared cache
+   • shared memory
+   • shared memory system
+   • simd architecture
+   • simd processor
+   • single cycle implementation
+   • single instruction multiple datum
+   • single level
+   • sm
+   • snoop
+   • snooped
+   • software exception
+   • sp
+   • special function unit
+   • speed of transistors
+   • spinning magnetic disk
+   • split cache
+   • sram
+   • ssa
+   • stall
+   • stalled
+   • static branch prediction
+   • static ram
+   • static scheduling
+   • static single assignment
+   • store queue
+   • streaming multi processor
+   • streaming multiprocessor
+   • streaming processor
+   • stride
+   • stride detection
+   • stride detector
+   • strided
+   • subthreshold leakage
+   • supply voltage
+   • table
+   • tag
+   • tdp
+   • technology push
+   • temporal locality
+   • texture cluster processing cluster
+   • texture processing
+   • thread
+   • thread block
+   • thread level parallelism
+   • threadidx
+   • threads blockidx
+   • threshold voltage
+   • tlb
+   • tlb coherence
+   • tlb shootdown
+   • tlp
+   • tpc
+   • transistor miniaturization
+   • transistor speed
+   • translation lookaside buffer
+   • trap
+   • true dependency
+   • unified cache
+   • unified correlating predictor
+   • unifying cache
+   • unroll
+   • unrolled loop
+   • unrolling
+   • use after load
+   • valid bit
+   • variability
+   • vector instruction
+   • vector register
+   • very long instruction word
+   • vliw
+   • vliw processor
+   • volatile
+   • wafer yield
+   • walk
+   • walk page table
+   • walking
+   • war
+   • war dependency
+   • warp
+   • warp scheduler
+   • warp scheduling
+   • waw
+   • waw dependency
+   • wb
+   • working set
+   • working set overflow
+   • write after read
+   • write after write
+   • write allocate
+   • write back policy
+   • write buffer
+   • write through
+   • write through policy

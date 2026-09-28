@@ -1,0 +1,833 @@
+System Calls
+interrupt
+system call
+system calls
+Operating System
+OS
+Interrupts
+operating system
+Operating
+Interrupt Descriptor Table
+Interrupt
+interrupt service routine
+ISR
+ISRs
+kernel
+interrupt vector
+interrupt vector table
+interrupt descriptor table
+IDT
+Dual mode
+kernel mode
+virtual machine manager
+VMM
+Kernel Mode
+Application Programming Interface
+API
+System Call
+System
+system call interface
+syscall
+Parameter Passing
+parameters
+Parameters
+block
+parameter
+stack
+Block
+IDT table
+Syscall table
+Syscall
+Parameter passing
+UNIX
+Microkernel
+microkernel
+syscall functions
+syscall
+syscall steps
+race conditions
+Race conditions
+Atomic
+Context Switching
+Process Control Block
+PCB
+task control block
+Context Switch
+context switch
+Context switch
+process table
+Context switching
+swtch
+Stack
+Critical regions
+critical regions
+critical region
+Turn
+Spinlocks
+Semaphores
+Spinlock
+critical section
+Test set
+Atomic swap
+Context Switching
+context switches
+spin lock
+critical region
+context switching
+spinlock
+spinning
+busy waiting
+Busy waiting
+Shared Data
+Spinlock
+spinlocks
+Atomic TestAndSet
+TestAndSet
+Symmetric Multi Processing
+SMP
+Single
+Atomic Swap
+Swap
+Spinlocks
+Semaphores
+semaphores
+Semaphore
+semaphore
+block
+Blocking
+Binary semaphores
+Binary semaphore
+Semaphore Implementation
+blocking
+critical section
+context
+semaphores
+spinlocks
+binary semaphore
+spinlock
+semaphore
+Semaphores
+lock
+pseudo code
+mutex
+atomic
+Semaphore
+Mutex
+Deadlock
+Starvation Deadlock
+Starvation
+Semaphore Usage Problem
+Priority Inversion
+Priority inversion
+deadlock
+priority inversion
+priority inheritance
+Deadlock
+mutual exclusion
+semaphore
+spinlock
+Mutex
+mutex
+Priority Inheritance
+Priority Inversion
+semaphores
+Semaphore
+forking
+fork
+PID
+forked
+forks
+child
+Process Lifecycle
+Process States
+Process Creation
+Child process
+copy on write
+Process Termination
+zombie
+orphan
+init
+Orphan
+Zombie
+Orphan Processes
+daemon processes
+init process
+Thread Synchronization Synchronization
+threads
+Threads
+Thread
+threads
+fork
+copy and write
+Fork tracing
+fork tracing
+Zombie
+zombie
+orphan process
+orphan
+Threads
+forks
+Process
+Bounded Buffer Problem
+Producers
+shared buffer
+Semaphores
+Initial state
+Operating
+Operating Systems
+semaphore
+Mutex
+Condition Variable
+Spinlock
+Semaphore
+mutex lock
+mutex block
+relock
+mutex
+condition variable
+queue
+Bounded
+Condition Variables
+semaphores
+Semaphore based
+Semaphore
+mutex
+Writer
+Reader
+Reader process
+Writer process
+Mutex
+Condition Variables
+Semaphore
+Condition Variable
+Semaphores
+reader writer queue
+semaphores
+condition variable
+mutex
+semaphore
+Deadlock
+deadlock
+deadlocked
+Ostrich Algorithm
+Deadlocks
+Deadlock Detection
+Deadlock Prevention
+deadlocks
+Deadlock Avoidance
+CS COE
+Deadlock detection
+Deadlock detection algorithm
+Hold
+Deadlock
+deadlock
+hold
+Deadlock detection
+Want
+Banker s
+Banker s algorithm
+Banker s Algorithm
+Deadlock Avoidance
+Deadlock Prevention
+Worker processes
+Rendezvous
+Semaphores
+semaphores
+rendezvous
+condition variables
+Condition Variables
+Condition Variable
+Lock
+locks
+semaphores
+mutex
+lock
+Semaphore
+Hoare
+condition
+Condition
+Process
+semaphore
+Semaphores
+condition variable
+Condition Variable Implementation
+condition variables
+Hoare
+condition variable
+Hoare semantics
+Process Synchronization
+short term scheduler
+CPU Scheduling
+Turnaround Time
+Short Term Scheduler Dispatcher
+dispatcher
+dispatch latency
+CPU I O Cycle
+I O
+Multilevel Queue
+selection function
+decision mode
+Nonpreemptive
+Preemptive
+Process
+First Come First Served
+FCFS
+Selection function
+non
+Service Time
+Average Response Time
+Convoy
+Convoy Effect
+Round Robin Selection function
+pre emptive
+Round Robin Selection
+clock interrupt
+time slice period
+RR Time
+Quantum
+Quantum Length
+Round Robin
+I O bound
+CPU bound
+First Come First Serve
+Arrival Time
+round robin
+FCFS
+short term scheduler
+Multilevel Feedback Scheduling
+Feedback Queues
+Time Quantum
+quantum time
+time quantum
+Time quantum
+feedback Scheduling
+Process
+Process Arrival
+Time
+SJF
+CPU Burst Estimation
+CPU burst
+exponential averaging
+CPU burst Estimate
+Exponential Average
+Exponentially Decreasing Coefficients
+Exponential averaging
+multi level feedback queue
+multilevel scheduling
+Multilevel feedback scheduling
+Multilevel Feedback Scheduling
+multilevel feedback scheduling
+exponential averaging
+Exponential estimation
+exponential average
+Memory hierarchy
+memory hierarchy
+Cache
+cache
+SRAM
+DRAM
+Disk
+Memory manager
+multiprogramming
+Multiprogramming
+memory management
+Memory Management
+Fixed partitions
+Fixed memory partitions
+memory partition
+Base and
+limit registers
+kernel
+Process partition
+Virtual
+virtual addresses
+MMU
+Virtual addresses
+Memory
+Virtual memory
+VM
+Paging
+page tables
+virtual page number
+page
+virtual page
+Page table entry
+PTE
+virtual memory
+Virtual address
+page table entry
+page table
+logical page number
+Page frame number
+Page frame
+Page table
+Page table base register
+PTBR
+Page table length register
+PTLR
+translation lookaside buffer
+TLB
+Banker s Algorithm
+bankers algorithm
+Bankers algorithm
+banker s algorithm
+deadlock
+bankers
+bankers algorithms
+Deadlock
+deadlock detection
+deadlock avoidance
+Deadlock Prevention
+deadlock prevention
+spooling
+Spooling
+spool
+deadlocks
+phase
+Circular
+CPU Scheduling
+Virtual memory
+Page fault
+Victim page
+Page replacement
+Optimal page replacement
+OPT
+Not recently used
+NRU
+reference
+dirty bit
+dirty
+First In
+FIFO
+Page Replacement
+Second chance page replacement
+Clock
+second
+Least Recently Used
+LRU
+Not Frequently Used
+NFU
+Demand paging
+locality of
+working set
+page faults
+Working set
+pages
+Working Set
+Working set page
+OPT
+FIFO
+Second
+Clock
+Least Recently Used
+NFU
+Not Frequently
+Working Set
+WSClock
+NRU
+clock
+working set replacement
+working set
+page replacement algorithm
+working set page
+clock interrupt
+working set page replacement
+second
+clock replacement
+LRU
+page replacement
+page table
+TLB
+page
+Page
+Belady
+page faults
+Belady s anomaly
+CLOCK Simulation
+Reference
+Page replacement
+page frames
+reference string
+Stack
+stack algorithm
+stack
+page fault rates
+virtual memory
+stack algorithms
+page evictions
+global allocation
+Local allocation
+Global allocation
+Page fault rate
+page fault rate
+page frames
+multiprogramming
+page fault
+Page fault
+Minimum memory allocation
+disk write
+clock
+FIFO
+LRU
+page faults
+stack algorithm
+page
+kernel
+Kernel
+Page fault Fault handler
+Page
+OPT Simulation
+OPT
+Writeup
+page tables
+page table
+PTE
+page
+PTE
+page table
+OPT
+page tables
+Logical memory
+Page table
+Page number
+Page frame number
+Two level page tables
+multi level page tables
+Two level Page Table
+two level page tables
+Two level paging
+2
+2nd level page table
+2 level Page Table
+TLB
+Translation Lookaside Buffer
+logical page number
+page table lookup
+Exception handler
+Hit ratio
+Effective access time
+EAT
+Effective Access Time
+page table size
+virtual page number
+page table architecture
+Page frame
+inverted page table
+Inverted Page Table
+Page Table
+multi level page tables
+inverted page tables
+Inverted
+page tables
+Inertial Page Table
+TLB
+Two level page tables
+Sharing Pages
+Sharing pages
+page frame
+Page Sharing
+paging
+page table
+Page fault
+page fault
+dirty
+Page tables
+Page locking
+Virtual memory
+dirty pages
+disk blocks
+Partition table
+Boot block
+Free space management
+Index
+Super block
+Contiguous allocation
+blocks
+allocation
+Blocks
+Block
+block
+free blocks
+Linked Allocation
+linked allocation
+Directory structure
+Offset Calculation
+File Allocation Table
+FAT
+Links
+page fault
+Page locking
+FAT
+linked allocation
+disk blocks
+File Allocation Table
+i
+block index
+allocation
+file
+Array
+disk block
+Directory
+pointer
+blocks
+Max File Size
+Indexed Allocation
+index block
+Unix Fast File System
+FFS
+directory
+File
+Disk
+pointers
+index nodes
+Free Block Tracking
+bitmap
+Bitmapping
+inode
+block index
+Fast File System
+FFS
+index block
+page fault
+Linked allocation
+partition
+Page Table Allocation
+Device drivers
+Drivers
+Kernel
+Disk driver
+Device independent OS
+kernel
+Device Driver
+Device independence
+Buffering
+Disk drive
+disk
+Cylinder
+Disk Sector
+disk request
+disk block
+Seek time
+Rotational delay
+Average delay
+rotation delay
+transfer time
+Transfer time
+sector
+disk sector
+Preamble
+ECC
+Error Correcting Code
+Parity
+parity
+2 d
+RAIDs
+strip strip
+RAID
+disks
+parity
+ECC
+Disk
+spindle actuator
+RAIDs
+RAID4
+RAID
+Caching
+File block cache
+Log structured file systems
+disk
+LFS
+blocks
+Log Structured File System
+Flash File System
+Wear Leveling
+flash
+Wear leveling
+SSDs
+Disk block
+polling
+Interrupts
+DMA
+Single bus
+shared bus
+Dual bus
+I O
+Memory Mapped
+Memory mapped I O
+memory mapped
+Kernel
+Polling
+kernel
+interrupts
+Interrupt
+Interrupts
+polling
+Interrupt
+interrupt
+Interrupt handler
+interrupt controller
+interrupts
+Direct Memory Access
+DMA
+Disk drive
+Disk scheduling
+disk seek time
+seek time
+Disk seek
+Disk Arm Scheduling
+First Come First Served
+FCFS
+Seek distance
+Shortest Seek Time First
+SSTF
+SJF scheduling
+Seek order
+SCAN
+elevator algorithm
+Disk arm
+disk
+C SCAN
+C LOOK
+Two level directory system
+Hierarchical directory system
+Root
+Unix directory tree
+Directory Traversal
+Journaling File System
+journal
+disk arm
+Log structured file system
+LSFS
+File Linking
+File Copying
+FAT
+kernel
+Effective Disk
+Seek Time
+Average Rotational Delay
+Buffering device
+Kernel
+Buffering
+Buffer
+I O Buffering
+Protection
+Protection domains
+protection domain
+domain
+domains
+Protection matrix
+protection matrix
+access matrix
+access control list
+Access control lists
+ACLs
+Unix file system
+ACL
+ACL
+Protection
+protection matrix
+Domain
+domains
+domain
+capability
+kernel
+access matrix
+Capability
+Reference monitor
+reference monitor
+Kernel
+Trusted
+Bell La Padula
+multilevel security model
+security level
+Biba
+multilevel integrity model
+Bell
+Covert channels
+covert channels
+Covert channel
+file locking
+Locking
+lock
+Covert Channel
+File Locking
+Steganography
+Denial
+User authentication
+authentication
+Password Stealing
+Key
+password hash
+hash
+encryption
+Cryptography
+scrambling
+ciphertext
+Ciphertext
+Secret key encryption
+symmetric key encryption
+Vigenere cipher
+encryption key
+decryption key
+Data Encryption Standard
+DES
+Unbreakable codes
+unbreakable code
+unbreakable
+Public key cryptography
+Digital signatures
+One way hash function
+one way hash function
+Pretty Good Privacy
+PGP
+public key encryption
+public key
+shared key
+Shared key
+Phony login screen
+Trojan horses
+Buffer overflow
+Stack pointer
+Buffer
+stack
+buffer
+Password Attacks
+Password Guessing
+Password Cracking
+Online cracking
+Salt
+Online
+Variation
+TENEX
+side channel
+Magnetic card
+Smart card
+smart
+biometrics
+Viruses
+Worms
+Virus
+virus writer
+virus
+viruses
+dropper
+Decompressor
+Compressor
+polymorphic code
+Decryptor
+Polymorphic viruses
+sandboxing
+sandbox
+interpreted code
+Interpreter
+signed code
+worm
+Virtualization
+Virtual machine
+Templating
+Live migration
+Type
+Type 1 hypervisors
+virtualization
+VMM
+Type 2 hypervisors

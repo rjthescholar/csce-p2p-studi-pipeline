@@ -1,0 +1,844 @@
+zero-sum thinking
+collaboration
+competition
+collaborative learning
+computer architecture
+processor
+CPU
+instruction set architecture
+ISA
+processor organization
+microarchitecture
+transistor implementation
+physical layer
+software layer
+system architecture
+instruction set
+registers
+performance attributes
+speed
+energy efficiency
+reliability
+application pull
+technology push
+latency
+throughput
+redundancy
+floating point units
+memory cache
+
+technology advances
+Moore’s law
+transistor miniaturization
+transistor density
+semiconductor industry roadmap
+SIA
+semiconductor industry association
+ITRS
+international technology roadmap for semiconductors
+IRDS
+international roadmap for devices and systems
+technology node
+CPU performance
+response time
+number of cores
+clock speed
+cache size
+execution time
+clock cycle
+clock frequency
+CPI
+cycles per instruction
+IPC
+instructions per cycle
+instructions per program
+ISA
+instruction set architecture
+processor organization
+transistor implementation
+physical layer
+pipelining
+parallel execution
+value prediction
+speculative execution
+memory caching
+transistor speed
+channel length
+capacitance
+supply voltage
+frequency scaling
+TDP
+thermal design power
+CPU power
+activity factor
+Dennard scaling
+MOSFET
+metal oxide silicon field effect transistor
+Vdd
+CPU supply voltage
+Vth
+threshold voltage
+subthreshold leakage
+leakage current
+dynamic power
+leakage power
+dark silicon
+
+technology constraints
+power wall
+thermal design power
+TDP
+dynamic power
+leakage power
+static power
+transistor scaling
+Moore’s law
+capacitance
+activity
+clock gating
+power gating
+supply voltage
+frequency
+dynamic voltage frequency scaling
+DVFS
+transistor speed
+processor power management
+advanced configuration and power interface
+ACPI
+operating system
+OS
+system firmware
+multi-cores
+GPUs
+caches
+memory wall
+memory latency
+memory bandwidth
+DRAM
+caching
+3D-stacked memory
+through silicon vias
+TSVs
+variability
+transistor speed variation
+cycle time
+logic path
+chip yield
+wafer yield
+product binning
+limited pipelining
+Dennard scaling
+execution time
+pipelining
+superscalars
+single instruction multiple data
+SIMD
+floating point operations per second
+FLOPS
+energy efficiency
+reliability
+security
+
+logic components
+NOT gate
+AND gate
+OR gate
+XOR gate
+NAND gate
+transistor
+decoder
+binary decoder
+truth table
+multiplexer
+MUX
+ALU
+control signal
+clock signal
+rising edge
+register
+flip-flop
+logic circuit
+propagation delay
+critical path
+clock speed
+
+MIPS
+ISA
+MIPS ISA
+general-purpose register
+register usage convention
+RISC
+reduced instruction set computer
+load-store architecture
+memory
+byte
+halfword
+word
+big-endian
+address alignment
+load instruction
+store instruction
+jump instruction
+branch instruction
+instruction execution phase
+IF
+instruction fetch
+ID
+instruction decode
+EX
+execute
+MEM
+memory phase
+WB
+register writeback
+
+single-cycle implementation
+multi-cycle implementation
+cycle time
+instruction mix
+average instruction execution time
+internal latch
+pipeline
+instruction memory
+data memory
+register file
+instruction decoder
+PC
+CPU
+register write
+RegDataSrc
+RegWrite
+ALUSrc
+ALUOp
+MemWrite
+PCSrc
+immediate
+branch target
+jump target
+lw
+sw
+add
+sub
+and
+or
+slt
+beq
+j
+
+pipelining
+multi-cycle instruction execution
+pipelined instruction execution
+pipelined parallelism
+pipeline stage
+pipeline depth
+instruction fetch
+instruction decoding
+control signals
+pipeline hazard
+structural hazard
+data hazard
+control hazard
+bubble
+pipeline stall
+pipeline flush
+wrong-path instruction
+conditional branch
+nop instruction
+compiler scheduling
+hazard detection unit
+HDU
+cycles per instruction
+CPI
+clock cycle time
+clock frequency
+latch delay
+unbalanced stages
+memory wall
+power wall
+
+pipeline hazard
+structural hazard
+resource contention
+stall
+hardware duplication
+instruction memory
+data memory
+instruction cache
+data cache
+i-cache
+d-cache
+ALU
+adder
+memory port
+register read port
+register write port
+register file
+CPI
+cycles per instruction
+IPC
+superscalar processor
+critical path
+data hazard
+data dependency
+data forwarding
+forwarding unit
+use-after-load hazard
+compiler reordering
+static scheduling
+dynamic scheduling
+pointer analysis
+memory wall
+power wall
+control hazard
+branch instruction
+branch direction
+pipeline flush
+pipeline flush penalty
+pipeline depth
+hazard detection unit
+HDU
+no-op
+delay slot
+control dependency
+branch comparison
+comparator
+forwarding path
+
+branch prediction
+branch predictor
+branch outcome
+branch direction
+branch target
+branch misprediction
+pipeline flush
+pipeline bubble
+data hazard
+predict taken
+predict not taken
+static branch prediction
+dynamic branch prediction
+branch history
+branch history table
+BHT
+taken
+T
+not taken
+NT
+branch target buffer
+BTB
+program counter
+PC
+hash table
+combined branch predictor
+1-bit BHT predictor
+2-bit BHT predictor
+2-bit saturating counter
+strongly not taken
+weakly not taken
+weakly taken
+strongly taken
+correlating predictor
+local branch history
+global branch history
+local branch history correlating predictor
+global branch history correlating predictor
+unified correlating predictor
+branch history shift register
+BHR
+indirect branch
+return address
+return stack buffer
+misprediction rate
+pipeline flush penalty
+CPI
+predication
+predicate
+predicated instruction
+conditional execution
+control dependency
+data dependency
+predicate dependency
+data forwarding
+instruction scheduling
+software profiling
+conditional move instruction
+logical mask
+
+pipelining
+deep pipelining
+cycle time
+CPI
+cycles per instruction
+IPC
+instructions per cycle
+pipeline stalls
+branch misprediction
+data hazards
+structural hazards
+wide-issue processors
+instruction scheduling
+static scheduling
+dynamic scheduling
+VLIW
+very long instruction word
+VLIW processor
+VLIW instruction
+instruction encoding
+superscalar processor
+instruction bundle
+stop bit
+EPIC
+explicitly parallel instruction computing
+binary translation
+predicates
+predication
+control dependencies
+loopback branches
+loop unrolling
+unroll factor
+induction variable increment
+instruction window
+list scheduling
+critical path
+data dependence graph
+ILP
+instruction level parallelism
+data dependencies
+RAW
+read-after-write
+true dependencies
+WAR
+write-after-read
+anti-dependencies
+WAW
+write-after-write
+false dependencies
+register renaming
+SSA
+static single assignment
+ready instructions
+greedy algorithm
+
+superscalar processor
+in-order superscalar
+out-of-order superscalar
+wide-issue processor
+dynamic scheduling
+instruction level parallelism
+ILP
+data dependency graph
+instruction window
+scheduling window
+instruction queue
+instruction scheduler
+instruction dispatch
+instruction issue
+instruction reordering
+instruction hazard
+structural hazard
+data hazard
+control hazard
+RAW dependency
+WAR dependency
+WAW dependency
+register renaming
+register renamer
+register alias table
+RAT
+architectural register
+physical register
+physical register file
+architectural register file
+single assignment rule
+instructions per cycle
+IPC
+branch prediction
+branch misprediction
+precise exception
+architectural state
+exception handler
+software exception
+trap
+hardware exception
+interrupt
+page fault
+system call
+in-order commit
+retirement register file
+RRF
+store queue
+load queue
+load/store queue
+memory renaming
+memory dependency
+RAW violation
+instruction flush
+physical register recycling
+cycle time
+energy efficiency
+VLIW
+ARM Cortex-A8
+AMD Opteron X4
+Intel Core i7
+cycles per instruction
+CPI
+
+memory hierarchy
+system memory hierarchy
+memory technologies
+static RAM
+SRAM
+dynamic RAM
+DRAM
+spinning magnetic disks
+HDD
+flash memory
+volatile memory
+nonvolatile memory
+memory density
+access time
+memory cell delay
+address decode delay
+wire delay
+registers
+cache
+caching
+multi-level caching
+L1 cache
+L2 cache
+L3 cache
+cache block
+cache block size
+cache hit
+cache miss
+cache capacity
+cache miss rate
+temporal locality
+spatial locality
+cold miss
+compulsory miss
+capacity miss
+working set
+working set overflow
+cache replacement
+least-recently-used replacement
+LRU
+PLRU
+linked list
+array
+contiguous memory
+memory access pattern
+performance monitoring unit
+PMU
+performance counter
+cycles per instruction
+CPI
+IPC
+memory stalls
+memory stall cycles
+CPU compute cycles
+memory latency
+memory bandwidth
+load
+store
+critical path
+pending store
+write buffer
+structural hazard
+DVFS
+cycle time
+operational intensity
+roofline model
+peak CPU performance
+memory-bound applications
+compute-bound applications
+
+oracle cache
+cache design
+CPU cycles
+CPU compute cycles
+memory stall cycles
+AMAT
+average memory access time
+hit time
+miss rate
+miss penalty
+cache hit
+cache miss
+cache access time
+single-level cache
+multi-level cache
+L1 cache
+L2 cache
+L3 cache
+DRAM access time
+cache size
+cache capacity
+working set
+capacity miss
+temporal locality
+spatial locality
+cache block
+cache line
+cache block size
+cold miss
+compulsory miss
+memory bus
+bus width
+bus speed
+transfer time
+cache associativity
+direct-mapped cache
+set-associative cache
+fully associative cache
+conflict miss
+hash function
+memory address
+cache block index
+set index
+cache set
+tag
+valid bit
+offset within cache block
+cache replacement policy
+random replacement
+LRU
+least-recently-used replacement
+saturating counter
+cache metadata
+
+cache consistency
+write-through
+write-back
+cache block
+cache hit
+cache miss
+read miss
+write hit
+write miss
+no write allocate
+write allocate
+write buffer
+pending write
+memory bandwidth
+dirty block
+clean block
+dirty bit
+valid bit
+cache block metadata
+block eviction
+victim cache
+store latency
+AMAT
+hit time
+miss rate
+miss penalty
+blocking cache
+non-blocking cache
+hit under miss
+miss under miss
+memory level parallelism
+MLP
+instruction level parallelism
+ILP
+miss status handling register
+MSHR
+pending request
+out-of-order execution
+split cache
+unified cache
+i-cache
+d-cache
+structural hazard
+working set
+private cache
+shared cache
+multi-core system
+cache banking
+bank
+cache block interleaving
+read/write port
+prefetching
+compiler-driven prefetching
+hardware-driven prefetching
+prefetch instruction
+prefetcher
+sequential access
+reverse sequential access
+strided sequential access
+stride detection
+stride detector
+linked-list traversal
+pointer chasing
+spatial locality
+temporal locality
+cold miss
+cache pollution
+
+virtualization
+virtual memory
+physical memory
+disk storage
+swap space
+caching
+cache block
+spatial locality
+fully associative cache
+block replacement
+LRU
+write-back
+write-through
+page
+page fault
+page swapping
+virtual address
+physical address
+address translation
+virtual page number
+physical page number
+page offset
+page table
+hierarchical page table
+inverted page table
+page table lookup
+page table walking
+page table walker
+page table entry
+PTE
+translation lookaside buffer
+TLB
+TLB hit
+TLB miss
+associative search
+hashing
+conflict miss
+valid bit
+present bit
+dirty block
+protection
+paging
+page fault handler
+memory access
+memory access hierarchy
+
+distributed memory system
+shared memory system
+multiprocessor system
+message passing interface
+MPI
+asynchronous JavaScript and XML
+Ajax
+Pthreads
+POSIX threads
+Java threads
+OpenMP
+shared data
+data race
+nondeterministic result
+mutex
+data replication
+CPU registers
+private cache
+shared cache
+write-back cache
+cache incoherence
+cache coherence
+cache coherence protocol
+memory consistency model
+invalidation
+out-of-order stores
+out-of-order loads
+cache miss
+branch prediction
+sequential consistency
+SC
+write buffer
+instruction queue
+compiler optimization
+synchronization
+MSI
+modified-shared-invalid
+MESI
+modified-exclusive-shared-invalid
+modified state
+shared state
+invalid state
+snooping
+read miss
+write miss
+read hit
+write hit
+BusRead
+BusReadX
+BusInvalidate
+cache controller FSM
+TLB coherence
+TLB
+PTE
+page table entry
+TLB shootdown
+IPI
+inter-processor interrupt
+
+SIMD
+single instruction multiple data
+SIMD architecture
+data parallel workload
+ISA
+vector instruction
+vector register
+loop unrolling
+processing element
+PE
+vector load-store unit
+striding
+gather-scatter
+sparse data
+sparse format
+convolution
+CNN
+convolutional neural network
+dot product
+GPU
+graphical processing unit
+streaming multi-processor
+SM
+streaming processor
+SP
+GPU global memory
+shared memory
+GPU programming model
+GPU kernel
+thread
+thread block
+warp
+warp scheduler
+warp scheduling
+latency hiding
+thread index
+block index
+global index
+two-dimensional grid
+predication
+predicate mask
+thread level parallelism
+TLP
+instruction level parallelism
+ILP
+thread block layout
+GPU utilization
+memory bandwidth
+memory wall
+cache miss
+capacity miss
+arithmetic intensity
+matrix-vector multiplication
+matrix-matrix multiplication
+BLAS
+basic linear algebra subprograms
+GeMV
+general matrix-vector multiplication
+GeMM
+general matrix multiplication
+loop tiling
+tile
